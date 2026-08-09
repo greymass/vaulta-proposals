@@ -1,0 +1,16 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The proposal documents in this repository (everything under proposals/ and
+standard/, including translations) are licensed under the Creative Commons
+Attribution 4.0 International license. Copyright in each proposal is held by
+the authors listed in its frontmatter; copyright in each translation is held
+by its translator and the original authors.
+
+You are free to share and adapt these documents for any purpose, provided you
+give appropriate credit to the listed authors, link to this license, and
+indicate if changes were made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Code in this repository (scripts, lib, test, template, skills) is licensed
+under the MIT license; see LICENSE.

@@ -1,0 +1,76 @@
+{
+    "generated": "2026-08-09T03:56:13.846Z",
+    "proposals": [
+        {
+            "vp": "VP-0001",
+            "title": "Network RAM Endowment for Account Onboarding",
+            "standard": "VPS-1",
+            "status": "Draft",
+            "authors": [
+                "Aaron Cox (Greymass)"
+            ],
+            "created": "2026-08-02",
+            "accounts": [
+                "ram.vaulta",
+                "admin.grants",
+                "fund.wram",
+                "eosio.wrap",
+                "eosio"
+            ],
+            "msigs": [],
+            "sentiment": [],
+            "requires": [],
+            "slug": "vp-0001-ram-gifting",
+            "path": "proposals/vp-0001-ram-gifting/proposal.md",
+            "updated": null,
+            "translations": [
+                {
+                    "lang": "ko",
+                    "path": "proposals/vp-0001-ram-gifting/proposal.ko.md",
+                    "current": true
+                },
+                {
+                    "lang": "zh",
+                    "path": "proposals/vp-0001-ram-gifting/proposal.zh.md",
+                    "current": true
+                }
+            ]
+        },
+        {
+            "vp": "VP-0002",
+            "title": "Self-Serve Account Creation",
+            "standard": "VPS-1",
+            "status": "Draft",
+            "authors": [
+                "Aaron Cox (Greymass)"
+            ],
+            "created": "2026-02-16",
+            "accounts": [
+                "new.vaulta",
+                "eosio",
+                "eosio.prods",
+                "core.vaulta",
+                "admin.grants",
+                "fund.wram"
+            ],
+            "msigs": [],
+            "sentiment": [],
+            "requires": [],
+            "slug": "vp-0002-account-creation",
+            "path": "proposals/vp-0002-account-creation/proposal.md",
+            "updated": null,
+            "translations": [
+                {
+                    "lang": "ko",
+                    "path": "proposals/vp-0002-account-creation/proposal.ko.md",
+                    "current": true
+                },
+                {
+                    "lang": "zh",
+                    "path": "proposals/vp-0002-account-creation/proposal.zh.md",
+                    "current": true
+                }
+            ]
+        }
+    ]
+}
