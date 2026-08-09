@@ -1,5 +1,5 @@
 {
-    "generated": "2026-08-09T16:02:23.991Z",
+    "generated": "2026-08-09T16:15:11.530Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -22,7 +22,7 @@
             "requires": [],
             "slug": "vp-0001-ram-gifting",
             "path": "proposals/vp-0001-ram-gifting/proposal.md",
-            "updated": "2026-08-08",
+            "updated": "2026-08-09",
             "translations": [
                 {
                     "lang": "ko",
@@ -58,7 +58,7 @@
             "requires": [],
             "slug": "vp-0002-account-creation",
             "path": "proposals/vp-0002-account-creation/proposal.md",
-            "updated": "2026-08-08",
+            "updated": "2026-08-09",
             "translations": [
                 {
                     "lang": "ko",
