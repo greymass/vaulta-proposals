@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: 5b00eea5a2f04771ea6b16235551fe912ab33f0e
+source: 1d939962466f68c254356b2a43f738a487232781
 translator: Claude (agent translation)
 ---
 
@@ -66,10 +66,10 @@ translator: Claude (agent translation)
 
 이는 시스템 컨트랙트 및 Spring 소스 코드로 검증되었습니다.
 
-- `giftram`은 기증자의 권한만 요구하며(`delegate_bandwidth.cpp`), 이는 `eosio.code`를 통해 인라인으로 충족됩니다. 네트워크 계정은 결코 서명하지 않습니다.
+- `giftram`은 기증자의 권한만 요구하며([`delegate_bandwidth.cpp`](https://github.com/VaultaFoundation/system-contracts/blob/9edc8bcfd128f382ae11b88655d958d07f5230d2/contracts/eosio.system/src/delegate_bandwidth.cpp#L164-L165)), 이는 `eosio.code`를 통해 인라인으로 충족됩니다. 네트워크 계정은 결코 서명하지 않습니다.
 - `giftram`은 실행 시점에 수령자가 존재하는지 확인하며, `newaccount`는 같은 트랜잭션에서 먼저 실행됩니다.
 - 컨트랙트는 이 쌍을 강제합니다. `giftacct`는 패킹된 트랜잭션(`read_transaction`)을 읽어, `account`를 생성하는 최상위 `eosio::newaccount`가 없으면 거부합니다. 계정 생성 밖에서는 구조적으로 기증이 불가능합니다.
-- 신규 계정의 RAM 청구는 트랜잭션 종료 시점(Spring `transaction_context::finalize`)에 검증되므로, 인라인 기증이 신규 계정의 사용량을 충당합니다. 이는 고전적인 `newaccount` + `buyrambytes` 패턴이 의존하는 것과 동일한 메커니즘입니다. 계정은 RAM을 보유하게 되는 즉시(기증 자체가 이를 유발함) 시스템의 표준 무료 1,400바이트(`ram_gift_bytes`)도 받으므로, 필요한 기증 크기가 줄어듭니다.
+- 신규 계정의 RAM 청구는 트랜잭션 종료 시점(Spring [`transaction_context::finalize`](https://github.com/AntelopeIO/spring/blob/e6a99f68b67abc4d89fe716755b2e1394a4991f7/libraries/chain/transaction_context.cpp#L386-L409))에 검증되므로, 인라인 기증이 신규 계정의 사용량을 충당합니다. 이는 고전적인 `newaccount` + `buyrambytes` 패턴이 의존하는 것과 동일한 메커니즘입니다. 계정은 RAM을 보유하게 되는 즉시(기증 자체가 이를 유발함) 시스템의 표준 무료 1,400바이트([`ram_gift_bytes`](https://github.com/VaultaFoundation/system-contracts/blob/9edc8bcfd128f382ae11b88655d958d07f5230d2/contracts/eosio.system/include/eosio.system/eosio.system.hpp#L75))도 받으므로, 필요한 기증 크기가 줄어듭니다.
 
 ### 기금 조성
 
@@ -104,4 +104,4 @@ translator: Claude (agent translation)
 
 ## 다음 단계
 
-작동하는 프로토타입이 개발되어 Jungle 4 테스트넷에서 시연되었습니다. 남은 작업으로는 미해결 질문 정리, 컨트랙트의 프로덕션화, MSIG 시퀀스 준비(`ram.vaulta` 생성, 컨트랙트 배포, `eosio.code` 설정, 시드 RAM 이전)가 있습니다. 생성자 승인은 시스템 가동 이후 별도의 MSIG로 진행됩니다.
+작동하는 프로토타입이 개발되어 Jungle 4 테스트넷에서 시연되었으며, 그 소스는 [`contracts/gift`](https://github.com/aaroncox/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/gift)에 공개되어 있습니다. 남은 작업으로는 미해결 질문 정리, 컨트랙트의 프로덕션화, MSIG 시퀀스 준비(`ram.vaulta` 생성, 컨트랙트 배포, `eosio.code` 설정, 시드 RAM 이전)가 있습니다. 생성자 승인은 시스템 가동 이후 별도의 MSIG로 진행됩니다.

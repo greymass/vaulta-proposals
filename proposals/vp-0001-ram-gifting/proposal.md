@@ -79,10 +79,10 @@ A creator creates an account in a single transaction with a single signature:
 
 This is verified against the system contracts and Spring source:
 
-- `giftram` requires only the gifter's authority (`delegate_bandwidth.cpp`), satisfied inline via `eosio.code`. The network account never signs.
+- `giftram` requires only the gifter's authority ([`delegate_bandwidth.cpp`](https://github.com/VaultaFoundation/system-contracts/blob/9edc8bcfd128f382ae11b88655d958d07f5230d2/contracts/eosio.system/src/delegate_bandwidth.cpp#L164-L165)), satisfied inline via `eosio.code`. The network account never signs.
 - `giftram` checks the recipient exists at execution time; `newaccount` runs first in the same transaction.
 - The contract enforces this pairing: `giftacct` reads the packed transaction (`read_transaction`) and rejects unless a top-level `eosio::newaccount` creating `account` is present. Gifts are structurally impossible outside account creation.
-- New-account RAM billing is validated at end of transaction (Spring `transaction_context::finalize`), so the inline gift covers the new account's footprint; this is the same mechanism the classic `newaccount` + `buyrambytes` pattern relies on. Accounts also receive the system's standard 1,400 free bytes (`ram_gift_bytes`) once they hold any RAM, which the gift itself triggers, reducing the gift size needed.
+- New-account RAM billing is validated at end of transaction (Spring [`transaction_context::finalize`](https://github.com/AntelopeIO/spring/blob/e6a99f68b67abc4d89fe716755b2e1394a4991f7/libraries/chain/transaction_context.cpp#L386-L409)), so the inline gift covers the new account's footprint; this is the same mechanism the classic `newaccount` + `buyrambytes` pattern relies on. Accounts also receive the system's standard 1,400 free bytes ([`ram_gift_bytes`](https://github.com/VaultaFoundation/system-contracts/blob/9edc8bcfd128f382ae11b88655d958d07f5230d2/contracts/eosio.system/include/eosio.system/eosio.system.hpp#L75)) once they hold any RAM, which the gift itself triggers, reducing the gift size needed.
 
 ### Endowment
 
@@ -117,4 +117,4 @@ This is verified against the system contracts and Spring source:
 
 ## Next Steps
 
-A working prototype has been developed and demonstrated on the Jungle 4 testnet. Remaining work includes settling the open questions, productionizing the contract, and preparing the MSIG sequence (create `ram.vaulta`, deploy the contract, set `eosio.code`, and transfer the seed RAM). Creator admissions follow as separate MSIGs once the system is live.
+A working prototype has been developed and demonstrated on the Jungle 4 testnet, with its source published at [`contracts/gift`](https://github.com/aaroncox/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/gift). Remaining work includes settling the open questions, productionizing the contract, and preparing the MSIG sequence (create `ram.vaulta`, deploy the contract, set `eosio.code`, and transfer the seed RAM). Creator admissions follow as separate MSIGs once the system is live.

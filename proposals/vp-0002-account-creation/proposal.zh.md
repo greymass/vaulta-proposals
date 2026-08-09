@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: 3ead4670b9d78d54df43782b0e828d8061d3e606
+source: 9a4e947ff63c69a4feb801a364638c8d1ced016c
 translator: Claude (agent translation)
 ---
 
@@ -67,6 +67,7 @@ translator: Claude (agent translation)
 
 ## 后续步骤
 
-- [ ] 将账户创建合约源代码发布到公开提交。
+合约源代码发布于 [`contracts/create`](https://github.com/aaroncox/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/create)。
+
 - [ ] 在提出部署 MSIG 时，于本节记录代码哈希、其构建所依据的提交，以及可复现该哈希的 CDT 版本，以便 BP 自行构建并比对。
 - [ ] 准备 MSIG 流程：创建 `new.vaulta`、以网络持仓为其调拨 RAM、部署已公布哈希的代码、为 `active` 添加 `eosio.code`。

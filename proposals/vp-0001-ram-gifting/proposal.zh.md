@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: 5b00eea5a2f04771ea6b16235551fe912ab33f0e
+source: 1d939962466f68c254356b2a43f738a487232781
 translator: Claude (agent translation)
 ---
 
@@ -66,10 +66,10 @@ translator: Claude (agent translation)
 
 该流程已通过系统合约和 Spring 源码验证：
 
-- `giftram` 仅要求赠送方的权限（`delegate_bandwidth.cpp`），通过 `eosio.code` 以内联方式满足。网络账户本身从不签名。
+- `giftram` 仅要求赠送方的权限（[`delegate_bandwidth.cpp`](https://github.com/VaultaFoundation/system-contracts/blob/9edc8bcfd128f382ae11b88655d958d07f5230d2/contracts/eosio.system/src/delegate_bandwidth.cpp#L164-L165)），通过 `eosio.code` 以内联方式满足。网络账户本身从不签名。
 - `giftram` 在执行时检查接收方是否存在；`newaccount` 在同一交易中先执行。
 - 合约强制这种配对关系：`giftacct` 读取打包的交易（`read_transaction`），若没有创建 `account` 的顶层 `eosio::newaccount`，则拒绝执行。在账户创建之外，赠送在结构上是不可能发生的。
-- 新账户的 RAM 计费在交易结束时验证（Spring 的 `transaction_context::finalize`），因此内联赠送能覆盖新账户的占用；这与经典的 `newaccount` + `buyrambytes` 模式所依赖的机制相同。账户在持有任何 RAM 之后（赠送本身即会触发这一点）还会获得系统标准的 1,400 字节免费额度（`ram_gift_bytes`），从而减少所需的赠送量。
+- 新账户的 RAM 计费在交易结束时验证（Spring 的 [`transaction_context::finalize`](https://github.com/AntelopeIO/spring/blob/e6a99f68b67abc4d89fe716755b2e1394a4991f7/libraries/chain/transaction_context.cpp#L386-L409)），因此内联赠送能覆盖新账户的占用；这与经典的 `newaccount` + `buyrambytes` 模式所依赖的机制相同。账户在持有任何 RAM 之后（赠送本身即会触发这一点）还会获得系统标准的 1,400 字节免费额度（[`ram_gift_bytes`](https://github.com/VaultaFoundation/system-contracts/blob/9edc8bcfd128f382ae11b88655d958d07f5230d2/contracts/eosio.system/include/eosio.system/eosio.system.hpp#L75)），从而减少所需的赠送量。
 
 ### 捐赠资金
 
@@ -104,4 +104,4 @@ translator: Claude (agent translation)
 
 ## 后续步骤
 
-一个可运行的原型已开发完成，并在 Jungle 4 测试网上进行了演示。剩余工作包括解决各项待解决问题、将合约产品化，以及准备 MSIG 流程（创建 `ram.vaulta`、部署合约、设置 `eosio.code`、转入初始注资 RAM）。创建者的准入在系统上线后作为独立的 MSIG 逐一进行。
+一个可运行的原型已开发完成，并在 Jungle 4 测试网上进行了演示，其源代码发布于 [`contracts/gift`](https://github.com/aaroncox/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/gift)。剩余工作包括解决各项待解决问题、将合约产品化，以及准备 MSIG 流程（创建 `ram.vaulta`、部署合约、设置 `eosio.code`、转入初始注资 RAM）。创建者的准入在系统上线后作为独立的 MSIG 逐一进行。

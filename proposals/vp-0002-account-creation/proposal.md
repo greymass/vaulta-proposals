@@ -81,6 +81,7 @@ None.
 
 ## Next Steps
 
-- [ ] Publish the account-creation contract source at a public commit.
+The contract source is published at [`contracts/create`](https://github.com/aaroncox/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/create).
+
 - [ ] When the deployment MSIG is proposed, record in this section the code hash, the commit it builds from, and the CDT version that reproduces it, so BPs can rebuild and compare.
 - [ ] Prepare the MSIG sequence: create `new.vaulta`, fund its RAM from network holdings, deploy the published-hash code, add `eosio.code` to `active`.

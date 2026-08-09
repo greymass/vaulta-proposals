@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: 3ead4670b9d78d54df43782b0e828d8061d3e606
+source: 9a4e947ff63c69a4feb801a364638c8d1ced016c
 translator: Claude (agent translation)
 ---
 
@@ -67,6 +67,7 @@ translator: Claude (agent translation)
 
 ## 다음 단계
 
-- [ ] 계정 생성 컨트랙트 소스를 공개 커밋에 게시
+컨트랙트 소스는 [`contracts/create`](https://github.com/aaroncox/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/create)에 공개되어 있습니다.
+
 - [ ] 배포 MSIG를 제안할 때 코드 해시, 빌드 기준 커밋, 재현 가능한 CDT 버전을 이 섹션에 기록하여 BP가 직접 빌드해 비교할 수 있게 함
 - [ ] MSIG 시퀀스 준비: `new.vaulta` 생성, 네트워크 보유분으로 RAM 조달, 게시된 해시의 코드 배포, `active`에 `eosio.code` 추가
