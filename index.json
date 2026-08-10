@@ -1,5 +1,5 @@
 {
-    "generated": "2026-08-09T16:15:11.530Z",
+    "generated": "2026-08-10T18:17:34.242Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -68,6 +68,48 @@
                 {
                     "lang": "zh",
                     "path": "proposals/vp-0002-account-creation/proposal.zh.md",
+                    "current": true
+                }
+            ]
+        },
+        {
+            "vp": "VP-9999",
+            "title": "Demonstration of the Proposal Rendering System",
+            "standard": "VPS-1",
+            "status": "Proposed",
+            "authors": [
+                "Aaron Cox (Greymass)"
+            ],
+            "created": "2026-08-10",
+            "accounts": [
+                "test.gm"
+            ],
+            "msigs": [
+                {
+                    "proposer": "test.gm",
+                    "proposal": "ugkuddhb2jwp",
+                    "status": "active"
+                }
+            ],
+            "sentiment": [
+                {
+                    "contract": "sentiment.gm",
+                    "topic": "sentiment"
+                }
+            ],
+            "requires": [],
+            "slug": "vp-9999-demo",
+            "path": "proposals/vp-9999-demo/proposal.md",
+            "updated": null,
+            "translations": [
+                {
+                    "lang": "ko",
+                    "path": "proposals/vp-9999-demo/proposal.ko.md",
+                    "current": true
+                },
+                {
+                    "lang": "zh",
+                    "path": "proposals/vp-9999-demo/proposal.zh.md",
                     "current": true
                 }
             ]

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" role="img" aria-label="Rendering pipeline">
+  <rect x="8" y="30" width="180" height="60" rx="8" fill="#e8eaf6" stroke="#3949ab"/>
+  <text x="98" y="65" text-anchor="middle" font-family="sans-serif" font-size="14">vaulta-proposals</text>
+  <path d="M196 60h60" stroke="#3949ab" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="264" y="30" width="140" height="60" rx="8" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="334" y="65" text-anchor="middle" font-family="sans-serif" font-size="14">index.json</text>
+  <path d="M412 60h60" stroke="#2e7d32" stroke-width="2" marker-end="url(#a)"/>
+  <rect x="480" y="30" width="150" height="60" rx="8" fill="#fff3e0" stroke="#ef6c00"/>
+  <text x="555" y="65" text-anchor="middle" font-family="sans-serif" font-size="14">Unicove</text>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0l6 3-6 3z"/></marker></defs>
+</svg>
