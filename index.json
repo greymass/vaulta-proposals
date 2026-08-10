@@ -1,5 +1,5 @@
 {
-    "generated": "2026-08-09T16:15:11.530Z",
+    "generated": "2026-08-10T22:09:36.598Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -23,16 +23,21 @@
             "slug": "vp-0001-ram-gifting",
             "path": "proposals/vp-0001-ram-gifting/proposal.md",
             "updated": "2026-08-09",
+            "excerpt": "A network-owned account (ram.vaulta) holds a RAM endowment sourced from existing network RAM holdings and allows approved creators to gift RAM to newly created accounts. Creators onboard new users (free or paid) without carrying the RAM cost themselves, funding creator sustainability through usage of network RAM rather than its sale. Gifted RAM is permanently sequestered from the RAM market: recipients cannot sell or transfer it, and its only exit is a return to the gifting account. This proposal creates the system only: it launches with no registered creators, and each creator is admitted afterward by its own 15/21 BP MSIG.",
             "translations": [
                 {
                     "lang": "ko",
                     "path": "proposals/vp-0001-ram-gifting/proposal.ko.md",
-                    "current": true
+                    "current": true,
+                    "title": "계정 온보딩을 위한 네트워크 RAM 기금",
+                    "excerpt": "네트워크 소유 계정(ram.vaulta)은 기존 네트워크 RAM 보유분에서 조달한 RAM 기금을 보유하며, 승인된 생성자가 신규 생성 계정에 RAM을 기증할 수 있도록 합니다. 생성자는 무료 또는 유료로 신규 사용자를 온보딩하면서 RAM 비용을 직접 부담하지 않으며, 네트워크 RAM을 판매하는 대신 사용함으로써 생성자의 지속 가능한 운영을 지원합니다. 기증된 RAM은 RAM 시장에서 영구적으로 격리됩니다. 수령자는 이를 판매하거나 전송할 수 없으며, 유일한 반환 경로는 기증 계정으로의 회수뿐입니다. 본 제안은 시스템의 생성만을 다룹니다. 등록된 생성자가 없는 상태로 출범하며, 각 생성자는 이후 별도의 15/21 BP MSIG를 통해 개별적으로 승인됩니다."
                 },
                 {
                     "lang": "zh",
                     "path": "proposals/vp-0001-ram-gifting/proposal.zh.md",
-                    "current": true
+                    "current": true,
+                    "title": "用于账户引导的网络 RAM 捐赠资金",
+                    "excerpt": "一个网络所有的账户（ram.vaulta）持有从现有网络 RAM 持仓中筹集的 RAM 捐赠资金，并允许获批的创建者向新创建的账户赠送 RAM。创建者可以免费或收费方式为新用户开通账户，而无需自行承担 RAM 成本，通过使用网络 RAM（而非出售）来支持创建者的可持续运营。被赠送的 RAM 永久性地从 RAM 市场中隔离：接收方既不能出售也不能转让，唯一的退出方式是返还给赠送账户。本提案仅涉及系统的创建：计划启动时没有任何已注册的创建者，每个创建者此后通过各自独立的 15/21 BP MSIG 获得准入。"
                 }
             ]
         },
@@ -59,16 +64,21 @@
             "slug": "vp-0002-account-creation",
             "path": "proposals/vp-0002-account-creation/proposal.md",
             "updated": "2026-08-09",
+            "excerpt": "new.vaulta is a self-serve, payment-driven account creation contract: a user pays in the network token and the contract creates their account and buys its RAM in a single step, with no operator involved. It is the counterpart to the creator-driven, network-funded path in VP-0001; the two are independent, and a new.vaulta user funds their own account rather than receiving a gift. Deploying the contract under the new.vaulta account requires 15/21 BP approval.",
             "translations": [
                 {
                     "lang": "ko",
                     "path": "proposals/vp-0002-account-creation/proposal.ko.md",
-                    "current": true
+                    "current": true,
+                    "title": "셀프서비스 계정 생성",
+                    "excerpt": "new.vaulta는 셀프서비스, 결제 기반의 계정 생성 컨트랙트입니다. 사용자가 네트워크 토큰으로 비용을 지불하면, 컨트랙트가 운영자 개입 없이 단일 단계로 계정을 생성하고 해당 계정의 RAM을 구매합니다. 이는 VP-0001의 생성자 주도·네트워크 부담 경로에 대응하는 상대편으로, 두 경로는 서로 독립적이며 new.vaulta 사용자는 기증을 받는 대신 자신의 계정을 스스로 부담합니다. 이 컨트랙트를 new.vaulta 계정으로 배포하려면 15/21 BP 승인이 필요합니다."
                 },
                 {
                     "lang": "zh",
                     "path": "proposals/vp-0002-account-creation/proposal.zh.md",
-                    "current": true
+                    "current": true,
+                    "title": "自助式账户创建",
+                    "excerpt": "new.vaulta 是一个自助式、由付款驱动的账户创建合约：用户以网络代币支付，合约便在单一步骤中创建其账户并购买该账户的 RAM，全程无需运营方参与。它是 VP-0001 中创建者主导、由网络承担成本这一路径的对应方；两条路径彼此独立，new.vaulta 用户是自行为账户付费，而非接受赠送。将该合约部署到 new.vaulta 账户下需要 15/21 BP 批准。"
                 }
             ]
         }
