@@ -1,5 +1,6 @@
 import { join } from 'node:path'
 import { ROOT } from '../lib/constants'
+import { extractCardFields } from '../lib/excerpt'
 import { lintRepo } from '../lib/repo'
 import type { IndexEntry } from '../lib/types'
 
@@ -30,11 +31,17 @@ const index: IndexEntry[] = await Promise.all(
         slug: p.slug,
         path: `proposals/${p.slug}/proposal.md`,
         updated: await gitUpdated(p.slug),
-        translations: p.translations.map((t) => ({
-            lang: t.lang,
-            path: `proposals/${p.slug}/proposal.${t.lang}.md`,
-            current: t.current,
-        })),
+        excerpt: extractCardFields(p.body).excerpt,
+        translations: p.translations.map((t) => {
+            const fields = extractCardFields(t.body)
+            return {
+                lang: t.lang,
+                path: `proposals/${p.slug}/proposal.${t.lang}.md`,
+                current: t.current,
+                title: fields.title,
+                excerpt: fields.excerpt,
+            }
+        }),
     })),
 )
 index.sort((a, b) => a.vp.localeCompare(b.vp))

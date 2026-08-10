@@ -60,12 +60,15 @@ export interface TranslationEntry {
     lang: string
     path: string
     current: boolean
+    title: string
+    excerpt: string
 }
 
 export interface IndexEntry extends ProposalFrontmatter {
     slug: string
     path: string
     updated: string | null // git-derived last-modified date for the proposal dir
+    excerpt: string
     translations: TranslationEntry[]
 }
 
