@@ -48,12 +48,14 @@ export interface ProposalFrontmatter {
     replaces?: string[] // "VP-NNNN"
     'superseded-by'?: string[] // "VP-NNNN", non-empty iff status Superseded
     resolution?: string // 64-hex txid, required iff status Executed
+    excerpt?: string
 }
 
 export interface TranslationFrontmatter {
     lang: string // must match filename tag
     source: string // 40-hex git blob hash of the English source
     translator?: string
+    excerpt?: string
 }
 
 export interface TranslationEntry {

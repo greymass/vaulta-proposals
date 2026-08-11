@@ -73,6 +73,47 @@ describe('validateFrontmatter v2', () => {
         const { errors } = validateFrontmatter({ ...valid(), accounts: ['UPPER'] }, SLUG)
         expect(errors.some((e) => e.includes('accounts'))).toBe(true)
     })
+    test('excerpt is optional', () => {
+        const { value, errors } = validateFrontmatter(valid(), SLUG)
+        expect(errors).toEqual([])
+        expect(value?.excerpt).toBeUndefined()
+    })
+    test('accepts a string excerpt', () => {
+        const { value, errors } = validateFrontmatter(
+            { ...valid(), excerpt: 'A short summary.' },
+            SLUG,
+        )
+        expect(errors).toEqual([])
+        expect(value?.excerpt).toBe('A short summary.')
+    })
+    test('rejects a non-string excerpt', () => {
+        const { errors } = validateFrontmatter({ ...valid(), excerpt: 42 }, SLUG)
+        expect(errors.some((e) => e.includes('excerpt must be a string when present'))).toBe(true)
+    })
+    test('accepts an excerpt of exactly 280 code points', () => {
+        const { errors } = validateFrontmatter({ ...valid(), excerpt: 'a'.repeat(280) }, SLUG)
+        expect(errors).toEqual([])
+    })
+    test('rejects an excerpt of 281 code points', () => {
+        const { errors } = validateFrontmatter({ ...valid(), excerpt: 'a'.repeat(281) }, SLUG)
+        expect(errors.some((e) => e.includes('280 characters or fewer (got 281)'))).toBe(true)
+    })
+    test('counts astral characters as one code point each', () => {
+        const excerpt = '\u{1F600}'.repeat(280)
+        const { errors } = validateFrontmatter({ ...valid(), excerpt }, SLUG)
+        expect(errors).toEqual([])
+    })
+    test('rejects an excerpt containing a newline', () => {
+        const { errors } = validateFrontmatter({ ...valid(), excerpt: 'line one\nline two' }, SLUG)
+        expect(errors.some((e) => e.includes('excerpt'))).toBe(true)
+    })
+    test.each(['`code`', 'a [link]', 'array[0]', '{@include}'])(
+        'rejects markup marker in %s',
+        (excerpt) => {
+            const { errors } = validateFrontmatter({ ...valid(), excerpt }, SLUG)
+            expect(errors.some((e) => e.includes('excerpt'))).toBe(true)
+        },
+    )
     test('resolution required iff Executed and must match executed msig txid', () => {
         const txid = 'b'.repeat(64)
         const base = {

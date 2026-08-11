@@ -26,8 +26,11 @@ entry in `LANG_LABELS` (`lib/types.ts`) appears in the nav line as its bare tag.
    whole file including frontmatter, not just the body.
 3. **Write each sibling** `proposal.ko.md` / `proposal.zh.md`:
    - Frontmatter: exactly `lang`, `source` (the hash from step 2), and
-     optionally `translator`. Nothing else: status, bindings, and number
-     live only in the English file.
+     optionally `translator` and `excerpt`. Nothing else: status, bindings,
+     and number live only in the English file. `excerpt` is the translated
+     counterpart of the English `excerpt`, under the same rules: 280
+     characters or fewer counted in Unicode code points, a single
+     paragraph, plain text.
    - Translate the `#` title, keep the language-nav line identical to the
      English file's, and mirror the English `##` sections one-for-one, in
      order, with headings translated.
@@ -46,8 +49,15 @@ entry in `LANG_LABELS` (`lib/types.ts`) appears in the nav line as its bare tag.
    - Frontmatter only (a status transition, a new `msigs` entry): no
      retranslation. The hash covers the whole file, frontmatter included, so
      both translations still go stale. Update `source` in each and stop.
+   - The English `excerpt` was added or changed: each translation SHOULD carry
+     a translated `excerpt` to match. A translation left without one falls back
+     to extracting that language's card excerpt from its own body.
    - Prose changed: retranslate the affected passages only, not the whole file
      blindly, then update `source` in each.
+
+   The restamp rule is the same in every case: the hash covers the whole
+   English file, so adding or editing `excerpt` makes every translation stale
+   and each `source` must be restamped.
 6. **Validate and index**: run `bun run verify` and fix every error until clean,
    then run `bun run index` so `index.json` picks up each translation's path and
    current flag. CI checks the index separately from verify, so skipping this
