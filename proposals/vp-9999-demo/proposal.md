@@ -61,7 +61,15 @@ The same holds for Chinese text.
 
 #### Deep heading
 
-A level-four heading closes out the heading roster.
+Levels five and six continue below, completing the heading roster.
+
+##### Deeper heading
+
+A level-five heading renders smaller than level four at the same weight.
+
+###### 最深标题
+
+A level-six heading uses Chinese text here, so the deepest heading id is non-Latin.
 
 ## Cross-References
 
