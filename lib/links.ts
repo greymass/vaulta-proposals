@@ -5,6 +5,7 @@ const GITHUB_COMMIT_PINNED =
 const CROSS_VP = /^\.\.\/(vp-(\d{4})-[a-z0-9-]+)\/proposal(?:\.[a-z-]+)?\.md(?:#[\w-]+)?$/
 const OWN_ASSET = /^assets\/[\w][\w.-]*$/
 const SIBLING = /^proposal(?:\.[a-z-]+)?\.md$/
+const SAFE_ANCHOR = /^#[\p{L}\p{N}_-]+$/u
 const MD_LINK = /\[([^\]]*)\]\(([^)\s]+)\)/g
 // Case-insensitive scheme and www-autolink coverage: GitHub renders HTTP://, HTTPS://, and www. as live links.
 const URL = /(?:https?:\/\/|www\.)[^\s)\]>"']+/gi
@@ -42,6 +43,12 @@ export function lintLinks(
         if (OWN_ASSET.test(target) || SIBLING.test(target)) {
             if (!opts.fileExists(target)) {
                 errors.push(`relative link does not resolve: ${target}`)
+            }
+            continue
+        }
+        if (target.startsWith('#')) {
+            if (!SAFE_ANCHOR.test(target)) {
+                errors.push(`same-page anchor must match ${SAFE_ANCHOR}: ${target}`)
             }
             continue
         }
