@@ -32,6 +32,7 @@ A proposal body (the markdown after the frontmatter block) is a single `#` title
 The `##` section roster is partially fixed:
 
 - The first `##` section MUST be `Summary`.
+- `Summary`'s first paragraph is extracted as plain text, with inline markdown formatting removed, to serve as the proposal's index-card excerpt. It SHOULD stand alone as a one-to-two-sentence abstract of the proposal.
 - The last two `##` sections MUST be `Open Questions` then `Next Steps`, in that order. Nothing may follow `Next Steps`.
 - `Summary`, `Open Questions`, and `Next Steps` are the only required sections. Each MUST contain at least one non-whitespace line; the literal text "None." satisfies this for a section with nothing to say.
 - Any number of free-form `##` sections may appear between `Summary` and `Open Questions`. `Rationale` (why this is needed) and `Mechanics` (how it works on-chain) are suggested but not required, and may be renamed, reordered, split, or omitted to fit the proposal.

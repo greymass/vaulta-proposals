@@ -56,4 +56,16 @@ describe('lintLinks', () => {
     test('www-prefixed autolink fails', () => {
         expect(lintLinks('# T\n\nGo to www.evil.com now.', opts).length).toBeGreaterThan(0)
     })
+    test('same-page anchor link passes', () => {
+        expect(lintLinks('See [Mechanics](#mechanics).', opts)).toEqual([])
+    })
+    test('empty anchor fails', () => {
+        expect(lintLinks('See [x](#).', opts).length).toBeGreaterThan(0)
+    })
+    test('a target containing a space is not recognised as a link at all', () => {
+        expect(lintLinks('See [x](#foo bar).', opts)).toEqual([])
+    })
+    test('anchor with slash fails', () => {
+        expect(lintLinks('See [x](#foo/bar).', opts).length).toBeGreaterThan(0)
+    })
 })

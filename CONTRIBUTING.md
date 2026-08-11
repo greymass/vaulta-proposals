@@ -19,3 +19,29 @@ Status changes are pull requests too. The git history is the audit trail for how
 ## Review expectations
 
 Maintainers check completeness and technical accuracy; approval happens on-chain. Block producers signal approval by signing the msig, not by reviewing on GitHub.
+
+## Refreshing the demo branch
+
+The `demo` branch carries everything on `master` plus one extra demo proposal, VP-9999. A maintainer refreshes it by merging `master` into `demo` and regenerating the index:
+
+```
+git checkout demo
+git merge master
+```
+
+`index.json` lists a different set of proposals on each branch, so this merge conflicts in `index.json` every time. The conflict is expected. Resolve it by regenerating the file, never by editing the conflict markers by hand:
+
+```
+bun run index
+```
+
+This overwrites `index.json` wholesale with the entries from the merged tree, including VP-9999, and clears the conflict. Confirm the file is clean, then commit and push the refresh:
+
+```
+grep -c '<<<<<<<' index.json         # expect 0
+bun scripts/build-index.ts --check   # expect: index.json is current
+git add index.json
+git commit -m "Merge master into demo and refresh the index"
+git push origin demo
+git checkout master
+```
