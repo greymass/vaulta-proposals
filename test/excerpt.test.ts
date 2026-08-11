@@ -57,6 +57,29 @@ describe('extractCardFields', () => {
     })
 })
 
+describe('extractCardFields CJK line joining', () => {
+    test('wrapped Chinese paragraph joins with no stray space', () => {
+        const body = '# T\n\n## 摘要\n\n各级标题、\n表格样式保持一致。\n'
+        expect(extractCardFields(body).excerpt).toBe('各级标题、表格样式保持一致。')
+    })
+    test('wrapped Korean paragraph joins with no stray space at the break, genuine spaces kept', () => {
+        const body = '# T\n\n## 요약\n\n안녕하세요 반갑\n습니다 감사합니다\n'
+        expect(extractCardFields(body).excerpt).toBe('안녕하세요 반갑습니다 감사합니다')
+    })
+    test('wrapped English paragraph still joins with a space', () => {
+        const body = '# T\n\n## Summary\n\nThis sentence wraps\nacross two lines.\n'
+        expect(extractCardFields(body).excerpt).toBe('This sentence wraps across two lines.')
+    })
+    test('mixed boundary: Latin then CJK joins with no space', () => {
+        const body = '# T\n\n## Summary\n\nSee proposal\n中文版本。\n'
+        expect(extractCardFields(body).excerpt).toBe('See proposal中文版本。')
+    })
+    test('mixed boundary: CJK then Latin joins with no space', () => {
+        const body = '# T\n\n## Summary\n\n请见提案\nEnglish version.\n'
+        expect(extractCardFields(body).excerpt).toBe('请见提案English version.')
+    })
+})
+
 describe('resolveExcerpt', () => {
     test('authored value wins over extraction', () => {
         expect(resolveExcerpt('Authored excerpt.', en)).toBe('Authored excerpt.')

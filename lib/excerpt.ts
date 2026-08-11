@@ -1,3 +1,12 @@
+const CJK = /[ᄀ-ᇿ　-ヿ㄰-㆏㐀-䶿一-鿿가-힣豈-﫿＀-￯]/
+
+const joinBodyLines = (lines: string[]): string =>
+    lines.reduce((joined, line) => {
+        if (joined === '') return line
+        const sep = CJK.test(joined[joined.length - 1]) || CJK.test(line[0]) ? '' : ' '
+        return joined + sep + line
+    }, '')
+
 const stripInline = (text: string): string =>
     text
         .replace(/`([^`]*)`/g, '$1')
@@ -25,7 +34,7 @@ export function extractCardFields(body: string): CardFields {
             paragraph.push(lines[i].trim())
             i++
         }
-        excerpt = stripInline(paragraph.join(' '))
+        excerpt = stripInline(joinBodyLines(paragraph))
     }
     return { title, excerpt }
 }

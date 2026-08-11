@@ -16,6 +16,7 @@ accounts:
 msigs: []
 sentiment: []
 requires: []
+excerpt: "new.vaulta is a self-serve account creation contract: a user pays in the network token and the contract creates the account and buys its RAM in one step, with no operator involved. It is the user-funded counterpart to VP-0001, and deploying it requires 15/21 BP approval."
 ---
 
 # Self-Serve Account Creation

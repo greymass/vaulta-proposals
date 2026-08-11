@@ -1,7 +1,8 @@
 ---
 lang: zh
-source: 9a4e947ff63c69a4feb801a364638c8d1ced016c
+source: 0b3014516205da53f62c40ec361f7d0fbb171121
 translator: Claude (agent translation)
+excerpt: new.vaulta 是一个自助式、由付款驱动的账户创建合约：用户以网络代币支付，合约便在单一步骤中创建其账户并购买该账户的 RAM，全程无需运营方参与。它是 VP-0001 中创建者主导、由网络承担成本这一路径的自行付费对应方。将该合约部署到 new.vaulta 账户下需要 15/21 BP 批准。
 ---
 
 # 自助式账户创建

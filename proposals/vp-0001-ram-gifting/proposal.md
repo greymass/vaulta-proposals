@@ -15,6 +15,7 @@ accounts:
 msigs: []
 sentiment: []
 requires: []
+excerpt: Approved creators draw on a RAM endowment held by the network-owned account ram.vaulta to gift RAM to accounts they create, onboarding users without carrying the RAM cost. The system launches with no registered creators, and each creator is admitted by its own 15/21 BP MSIG.
 ---
 
 # Network RAM Endowment for Account Onboarding

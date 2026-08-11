@@ -1,7 +1,8 @@
 ---
 lang: zh
-source: 1d939962466f68c254356b2a43f738a487232781
+source: e0c5fa728747d0e51f662f38a94d3230ce77c928
 translator: Claude (agent translation)
+excerpt: 网络所有的账户 ram.vaulta 持有一笔 RAM 捐赠资金，获批的创建者可动用它向自己新创建的账户赠送 RAM，从而无需自行承担 RAM 成本即可为新用户开通账户。被赠送的 RAM 永久性地从 RAM 市场中隔离，唯一的退出方式是返还给赠送账户。系统启动时没有任何已注册的创建者，每个创建者此后通过各自的 15/21 BP MSIG 获得准入。
 ---
 
 # 用于账户引导的网络 RAM 捐赠资金
