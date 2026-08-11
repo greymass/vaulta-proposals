@@ -1,10 +1,10 @@
 import { LANG_LABELS } from './constants'
-import { checkUnknownKeys } from './frontmatter'
+import { checkExcerpt, checkUnknownKeys } from './frontmatter'
 import type { TranslationFrontmatter } from './types'
 
 export const TRANSLATION_FILE_PATTERN = /^proposal\.([a-z]{2}(?:-[a-z]+)?)\.md$/
 const BLOB_PATTERN = /^[0-9a-f]{40}$/
-const ALLOWED_KEYS = new Set(['lang', 'source', 'translator'])
+const ALLOWED_KEYS = new Set(['lang', 'source', 'translator', 'excerpt'])
 
 export function gitBlobHash(content: string): string {
     const bytes = new TextEncoder().encode(content)
@@ -36,6 +36,11 @@ export function validateTranslationFrontmatter(
     }
     if (fm.translator !== undefined && typeof fm.translator !== 'string') {
         errors.push('translator must be a string when present')
+    }
+    if (fm.excerpt !== undefined && typeof fm.excerpt !== 'string') {
+        errors.push('excerpt must be a string when present')
+    } else if (typeof fm.excerpt === 'string') {
+        checkExcerpt(fm.excerpt, errors)
     }
     return errors.length ? { errors } : { value: fm as unknown as TranslationFrontmatter, errors }
 }

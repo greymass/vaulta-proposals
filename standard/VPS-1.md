@@ -32,7 +32,7 @@ A proposal body (the markdown after the frontmatter block) is a single `#` title
 The `##` section roster is partially fixed:
 
 - The first `##` section MUST be `Summary`.
-- `Summary`'s first paragraph is extracted as plain text, with inline markdown formatting removed, to serve as the proposal's index-card excerpt. It SHOULD stand alone as a one-to-two-sentence abstract of the proposal.
+- `Summary`'s first paragraph is the fallback source of the proposal's index-card excerpt, used when frontmatter carries no `excerpt` field: it is extracted as plain text, with inline markdown formatting removed. A proposal that relies on this fallback SHOULD write that paragraph to stand alone as a one-to-two-sentence abstract of the proposal.
 - The last two `##` sections MUST be `Open Questions` then `Next Steps`, in that order. Nothing may follow `Next Steps`.
 - `Summary`, `Open Questions`, and `Next Steps` are the only required sections. Each MUST contain at least one non-whitespace line; the literal text "None." satisfies this for a section with nothing to say.
 - Any number of free-form `##` sections may appear between `Summary` and `Open Questions`. `Rationale` (why this is needed) and `Mechanics` (how it works on-chain) are suggested but not required, and may be renamed, reordered, split, or omitted to fit the proposal.
@@ -41,7 +41,7 @@ The `##` section roster is partially fixed:
 
 ## Frontmatter
 
-Every proposal begins with a YAML frontmatter block delimited by `---` lines. The allowed keys are exactly: `vp`, `title`, `standard`, `status`, `authors`, `created`, `accounts`, `msigs`, `sentiment`, `requires`, `replaces`, `superseded-by`, `resolution`. Any other key is an error. There is no `updated` field: a proposal's last-modified date is derived from git history rather than declared.
+Every proposal begins with a YAML frontmatter block delimited by `---` lines. The allowed keys are exactly: `vp`, `title`, `standard`, `status`, `authors`, `created`, `accounts`, `msigs`, `sentiment`, `requires`, `replaces`, `superseded-by`, `resolution`, `excerpt`. Any other key is an error. There is no `updated` field: a proposal's last-modified date is derived from git history rather than declared.
 
 - **`vp`** (required, string): matches `VP-NNNN` (four digits). Must agree with the proposal's directory name: `vp-NNNN-slug` and `VP-NNNN` share the same number.
 - **`title`** (required, non-empty string): the proposal's title; conventionally the same text as the `#` heading (not lint-enforced).
@@ -56,6 +56,7 @@ Every proposal begins with a YAML frontmatter block delimited by `---` lines. Th
 - **`replaces`** (optional, list): `VP-NNNN` identifiers of proposals this one replaces.
 - **`superseded-by`** (optional, list): `VP-NNNN` identifiers of proposals that replace this one. Allowed only when `status` is `Superseded`, and required to be non-empty in that case. `replaces` and `superseded-by` are reciprocal: if A's `replaces` lists B, B's `superseded-by` must list A, and vice versa.
 - **`resolution`** (optional, string): a 64-hex txid. Allowed only when `status` is `Executed`, and required in that case. When the proposal also has `msigs` entries with `status: executed`, `resolution` must match one of their `txid` values.
+- **`excerpt`** (optional, string): supplies the proposal's index-card excerpt directly. It is 280 characters or fewer, counted in Unicode code points; a single paragraph, so any newline is an error; and plain text, so backticks, square brackets, and `{@` are errors. Omit it and the excerpt falls back to the extraction from `Summary`'s first paragraph.
 
 Frontmatter is the canonical source of truth for a proposal's on-chain bindings. Any mention of an account, msig, or transaction in the proposal body is an informative echo of the frontmatter: if body prose and frontmatter ever disagree, frontmatter governs.
 
@@ -63,7 +64,9 @@ Frontmatter is the canonical source of truth for a proposal's on-chain bindings.
 
 English is the canonical language of every proposal; only the English text is normative. Korean (`ko`) and Simplified Chinese (`zh`, the bare tag with no region subtag) are required translations, kept in lockstep with the English source at every merge, starting from a proposal's first `Draft` landing.
 
-Translations live as sibling files in the same proposal directory: `proposal.ko.md`, `proposal.zh.md`, and so on for any additional language. A translation file's own frontmatter has three keys: `lang` (must match the file's language tag), `source` (the 40-hex git blob hash of the English `proposal.md` content the translation was made from), and `translator` (optional). Unknown keys are errors, same as proposal frontmatter.
+Translations live as sibling files in the same proposal directory: `proposal.ko.md`, `proposal.zh.md`, and so on for any additional language. A translation file's own frontmatter has four keys: `lang` (must match the file's language tag), `source` (the 40-hex git blob hash of the English `proposal.md` content the translation was made from), `translator` (optional), and `excerpt` (optional), which holds a translated excerpt under the same rules as the English field: 280 characters or fewer counted in Unicode code points, a single paragraph, plain text. Unknown keys are errors, same as proposal frontmatter.
+
+A translation's `excerpt` supplies that language's card excerpt, falling back to extraction from the translation's own body. Cards are resolved per language, so a translation may carry an `excerpt` where the English proposal does not, and the English may carry one where a translation does not.
 
 A translation is current when its `source` hash matches the current English blob hash, and outdated otherwise. For the required languages (`ko`, `zh`), an outdated translation is a lint error. For any additional, optional language, an outdated translation is a warning only and never blocks a merge.
 

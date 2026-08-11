@@ -29,3 +29,8 @@ export function extractCardFields(body: string): CardFields {
     }
     return { title, excerpt }
 }
+
+export function resolveExcerpt(authored: string | undefined, body: string): string {
+    if (authored) return stripInline(authored)
+    return extractCardFields(body).excerpt
+}

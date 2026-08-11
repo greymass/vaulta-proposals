@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test'
-import { extractCardFields } from '../lib/excerpt'
+import { extractCardFields, resolveExcerpt } from '../lib/excerpt'
 
 const en = `# Network RAM **Endowment** for Onboarding
 [English](proposal.md) | [한국어](proposal.ko.md) | [中文](proposal.zh.md)
@@ -54,5 +54,20 @@ describe('extractCardFields', () => {
     })
     test('missing sections yield empty strings', () => {
         expect(extractCardFields('plain text only')).toEqual({ title: '', excerpt: '' })
+    })
+})
+
+describe('resolveExcerpt', () => {
+    test('authored value wins over extraction', () => {
+        expect(resolveExcerpt('Authored excerpt.', en)).toBe('Authored excerpt.')
+    })
+    test('absent authored value falls back to extraction', () => {
+        expect(resolveExcerpt(undefined, en)).toBe(extractCardFields(en).excerpt)
+    })
+    test('empty-string authored value is treated as absent', () => {
+        expect(resolveExcerpt('', en)).toBe(extractCardFields(en).excerpt)
+    })
+    test('stripInline runs over the authored value', () => {
+        expect(resolveExcerpt('An **authored** excerpt.', en)).toBe('An authored excerpt.')
     })
 })

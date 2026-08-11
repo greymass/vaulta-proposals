@@ -23,10 +23,12 @@ const ALLOWED_KEYS = new Set([
     'replaces',
     'superseded-by',
     'resolution',
+    'excerpt',
 ])
 
 const MSIG_ENTRY_KEYS = new Set(['proposer', 'proposal', 'status', 'txid'])
 const SENTIMENT_ENTRY_KEYS = new Set(['contract', 'topic'])
+const EXCERPT_MARKUP_PATTERN = /[`[\]]|\{@/
 
 export function parseProposal(markdown: string): { frontmatter: unknown; body: string } {
     const match = markdown.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/)
@@ -82,6 +84,19 @@ function isStringArray(value: unknown): value is string[] {
 
 function isVpList(value: unknown): value is string[] {
     return isStringArray(value) && value.every((vp) => VP_PATTERN.test(vp))
+}
+
+export function checkExcerpt(value: string, errors: string[]): void {
+    const length = [...value].length
+    if (length > 280) {
+        errors.push(`excerpt must be 280 characters or fewer (got ${length})`)
+    }
+    if (/[\n\r]/.test(value)) {
+        errors.push('excerpt must be a single paragraph (no newlines)')
+    }
+    if (EXCERPT_MARKUP_PATTERN.test(value)) {
+        errors.push('excerpt must be plain text (no backticks, brackets, or {@ template syntax)')
+    }
 }
 
 function validateMsigs(value: unknown, errors: string[]): value is MsigRef[] {
@@ -211,6 +226,11 @@ export function validateFrontmatter(
         }
     } else if (fm.resolution !== undefined) {
         errors.push('resolution is only allowed when status is Executed')
+    }
+    if (fm.excerpt !== undefined && typeof fm.excerpt !== 'string') {
+        errors.push('excerpt must be a string when present')
+    } else if (typeof fm.excerpt === 'string') {
+        checkExcerpt(fm.excerpt, errors)
     }
 
     return errors.length ? { errors } : { value: fm as unknown as ProposalFrontmatter, errors }
