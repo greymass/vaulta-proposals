@@ -16,6 +16,7 @@ sentiment:
     - contract: sentiment.gm
       topic: sentiment
 requires: []
+excerpt: A demonstration document that exercises the proposal renderer, covering every heading level, tables, code blocks, images, cross-proposal links, non-Latin text, and live on-chain msig and sentiment bindings. It lives on the demo branch and carries no governance weight.
 ---
 
 # Demonstration of the Proposal Rendering System

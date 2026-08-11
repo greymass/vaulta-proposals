@@ -1,5 +1,5 @@
 {
-    "generated": "2026-08-11T01:56:03.123Z",
+    "generated": "2026-08-11T05:36:55.178Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -108,24 +108,24 @@
                 }
             ],
             "requires": [],
+            "excerpt": "A demonstration document that exercises the proposal renderer, covering every heading level, tables, code blocks, images, cross-proposal links, non-Latin text, and live on-chain msig and sentiment bindings. It lives on the demo branch and carries no governance weight.",
             "slug": "vp-9999-demo",
             "path": "proposals/vp-9999-demo/proposal.md",
             "updated": "2026-08-10",
-            "excerpt": "This proposal exists on the demo branch to exercise every feature of the proposal rendering system in one document: headings at every level, tables, code, images, cross-proposal links, non-Latin headings, and live on-chain bindings. It is never merged to master and carries no governance weight.",
             "translations": [
                 {
                     "lang": "ko",
                     "path": "proposals/vp-9999-demo/proposal.ko.md",
                     "current": true,
                     "title": "제안 렌더링 시스템 시연",
-                    "excerpt": "이 제안은 demo 브랜치에 존재하며, 제안 렌더링 시스템의 모든 기능을 하나의 문서에서 시연합니다: 모든 단계의 제목, 표, 코드, 이미지, 제안 간 링크, 비라틴 문자 제목, 그리고 실시간 온체인 바인딩까지 포함합니다. master에는 병합되지 않으며 어떠한 거버넌스 효력도 갖지 않습니다."
+                    "excerpt": "제안 렌더러를 시험하는 시연 문서입니다. 모든 단계의 제목, 표, 코드 블록, 이미지, 제안 간 링크, 비라틴 문자, 그리고 실시간 온체인 msig 및 sentiment 바인딩을 다룹니다. demo 브랜치에 존재하며 어떠한 거버넌스 효력도 갖지 않습니다."
                 },
                 {
                     "lang": "zh",
                     "path": "proposals/vp-9999-demo/proposal.zh.md",
                     "current": true,
                     "title": "提案渲染系统演示",
-                    "excerpt": "本提案存在于 demo 分支，用于在单个文档中演练提案渲染系统的全部功能：各级标题、 表格、代码、图片、跨提案链接、非拉丁文字标题，以及实时链上绑定。它从不合并到 master，也不具备任何治理效力。"
+                    "excerpt": "一份演示文档，用于检验提案渲染器，涵盖各级标题、表格、代码块、图片、跨提案链接、非拉丁文字，以及实时链上 msig 与 sentiment 绑定。它存在于 demo 分支，不具备任何治理效力。"
                 }
             ]
         }
