@@ -1,7 +1,8 @@
 ---
 lang: ko
-source: 9a4e947ff63c69a4feb801a364638c8d1ced016c
+source: 0b3014516205da53f62c40ec361f7d0fbb171121
 translator: Claude (agent translation)
+excerpt: new.vaulta는 셀프서비스, 결제 기반의 계정 생성 컨트랙트입니다. 사용자가 네트워크 토큰으로 비용을 지불하면 컨트랙트가 운영자 개입 없이 단일 단계로 계정을 생성하고 해당 계정의 RAM을 구매합니다. 이는 VP-0001의 생성자 주도·네트워크 부담 경로에 대응하는 사용자 부담 경로이며, 배포에는 15/21 BP 승인이 필요합니다.
 ---
 
 # 셀프서비스 계정 생성
