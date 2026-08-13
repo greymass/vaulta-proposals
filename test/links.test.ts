@@ -124,4 +124,71 @@ describe('lintLinks', () => {
         const body = 'See [x](assets/missing.png "line one\n\nline two").'
         expect(lintLinks(body, opts)).toEqual([])
     })
+    test('balanced parentheses stay in the destination', () => {
+        const errors = lintLinks('See [x](assets/diagram(1).png).', opts)
+        expect(errors).toEqual([
+            'internal link must be ../vp-NNNN-slug/proposal.md, assets/<file>, or a sibling language file: assets/diagram(1).png',
+        ])
+    })
+    test('nested parentheses to depth three stay in the destination', () => {
+        const errors = lintLinks('See [x](assets/a(b(c(d)e)f)g.png).', opts)
+        expect(errors).toEqual([
+            'internal link must be ../vp-NNNN-slug/proposal.md, assets/<file>, or a sibling language file: assets/a(b(c(d)e)f)g.png',
+        ])
+    })
+    test('nesting beyond depth three is not recognised as a link at all', () => {
+        expect(lintLinks('See [x](assets/a(b(c(d(e)f)g)h)i.png).', opts)).toEqual([])
+    })
+    test('an unbalanced close paren still ends the destination', () => {
+        expect(lintLinks('See [chart](assets/chart.png)) trailing.', opts)).toEqual([])
+        const errors = lintLinks('See [x](assets/dia)gram.png).', opts)
+        expect(errors).toEqual(['relative link does not resolve: assets/dia'])
+    })
+    test('a parenthesised destination is validated whole rather than truncated', () => {
+        const pinned = `https://github.com/greymass/vaulta-proposals/blob/${'a'.repeat(40)}/doc(1).md`
+        expect(lintLinks(`See [VPS-1](${pinned}).`, opts)).toEqual([])
+    })
+    test('a reference definition alone is an error', () => {
+        expect(lintLinks('# T\n\n[ref]: ../../README.md\n', opts)).toEqual([
+            'link destination must be written inline, not as a reference definition: [ref]',
+        ])
+    })
+    test('the full reference form is an error', () => {
+        const body = '# T\n\nSee [the readme][ref].\n\n[ref]: ../../README.md\n'
+        expect(lintLinks(body, opts)).toEqual([
+            'link destination must be written inline, not as a reference definition: [ref]',
+            'link destination must be written inline, not as a reference-style link: [ref]',
+        ])
+    })
+    test('the collapsed reference form is an error and names the text as the label', () => {
+        const body = '# T\n\nSee [ref][].\n\n[ref]: ../../README.md\n'
+        expect(lintLinks(body, opts)).toEqual([
+            'link destination must be written inline, not as a reference definition: [ref]',
+            'link destination must be written inline, not as a reference-style link: [ref]',
+        ])
+    })
+    test('the shortcut reference form is an error when a definition matches', () => {
+        const body = '# T\n\nSee [Ref] for details.\n\n[ref]: ../../README.md\n'
+        expect(lintLinks(body, opts)).toEqual([
+            'link destination must be written inline, not as a reference definition: [ref]',
+            'link destination must be written inline, not as a reference-style link: [Ref]',
+        ])
+    })
+    test('a bare bracketed span with no matching definition stays clean', () => {
+        expect(lintLinks('# T\n\nSee [not a link] here.\n', opts)).toEqual([])
+    })
+    test('reference syntax inside a code fence stays clean', () => {
+        const body = '# T\n\n```\nSee [the readme][ref].\n\n[ref]: ../../README.md\n```\n'
+        expect(lintLinks(body, opts)).toEqual([])
+    })
+    test('a relative reference destination that previously escaped is now caught', () => {
+        const body = '# T\n\nSee [the readme][ref].\n\n[ref]: ../../README.md\n'
+        expect(lintLinks(body, opts).length).toBe(2)
+    })
+    test('an inline link is not reported as a shortcut reference', () => {
+        const body = '# T\n\nSee [chart](assets/chart.png).\n\n[chart]: assets/chart.png\n'
+        expect(lintLinks(body, opts)).toEqual([
+            'link destination must be written inline, not as a reference definition: [chart]',
+        ])
+    })
 })

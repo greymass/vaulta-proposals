@@ -99,7 +99,7 @@ A proposal body is plain Markdown, and raw HTML in it is an error. Any tag-shape
 
 Code fences must be balanced. A ```` ``` ```` or `~~~` fence left open at the end of a document is an error, because an unterminated fence hides the remainder of the body from every other content check.
 
-Internal links resolve against two shapes only: a cross-VP link, `../vp-NNNN-slug/proposal.md` (optionally with a `.lang` tag and a `#anchor`), whose link text must be exactly the target's `VP-NNNN`; and an own-directory asset link, `assets/<file>`, which may not reach into subdirectories or escape `assets/`. The language navigation line's own targets (`proposal.md`, `proposal.<lang>.md`) are also legal link targets. Every relative target must resolve to a file that actually exists.
+Internal links resolve against two shapes only: a cross-VP link, `../vp-NNNN-slug/proposal.md` (optionally with a `.lang` tag and a `#anchor`), whose link text must be exactly the target's `VP-NNNN`; and an own-directory asset link, `assets/<file>`, which may not reach into subdirectories or escape `assets/`. The language navigation line's own targets (`proposal.md`, `proposal.<lang>.md`) are also legal link targets. Every relative target must resolve to a file that actually exists. Every link writes its destination inline, in the `[text](destination)` form; a link reference definition (`[label]: destination`) and any reference-style use of one are errors.
 
 When a proposal's prose needs to reference an on-chain fact directly rather than via a link, it does so as plain backticked text: account names as `` `accountname` `` and transaction IDs as the full 64-hex txid in backticks, not truncated and not linked.
 

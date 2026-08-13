@@ -139,7 +139,7 @@ export function checkRevisions(
         if (ref.version !== i + 1) {
             errors.push(`revisions[${i}].version must be ${i + 1} (contiguous, starting at 1)`)
         }
-        // yaml parses an unquoted YYYY-MM-DD scalar as a Date, not a string
+        // the default YAML 1.2 schema gives a string here; a %YAML 1.1 directive or an explicit !!timestamp tag gives a Date
         const date = ref.date instanceof Date ? ref.date.toISOString().slice(0, 10) : ref.date
         if (typeof date !== 'string' || !DATE_PATTERN.test(date)) {
             errors.push(`revisions[${i}].date must be a YYYY-MM-DD date`)
