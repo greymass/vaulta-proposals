@@ -6,7 +6,12 @@ const CROSS_VP = /^\.\.\/(vp-(\d{4})-[a-z0-9-]+)\/proposal(?:\.[a-z-]+)?\.md(?:#
 const OWN_ASSET = /^assets\/[\w][\w.-]*$/
 const SIBLING = /^proposal(?:\.[a-z-]+)?\.md$/
 const SAFE_ANCHOR = /^#[\p{L}\p{N}_-]+$/u
-const MD_LINK = /\[([^\]]*)\]\(([^)\s]+)\)/g
+// A title may span lines but not a blank line (CommonMark 0.31.2 §6.3); the paren form forbids nesting.
+const TITLE = /"(?:[^"\n]|\n(?!\s*\n))*"|'(?:[^'\n]|\n(?!\s*\n))*'|\((?:[^()\n]|\n(?!\s*\n))*\)/
+const MD_LINK = new RegExp(
+    `\\[([^\\]]*)\\]\\(\\s*(?:<([^<>\\n]*)>|([^)\\s]+))(?:\\s+(?:${TITLE.source}))?\\s*\\)`,
+    'g',
+)
 // Case-insensitive scheme and www-autolink coverage: GitHub renders HTTP://, HTTPS://, and www. as live links.
 const URL = /(?:https?:\/\/|www\.)[^\s)\]>"']+/gi
 
@@ -19,7 +24,8 @@ export function lintLinks(
     const linkRanges: [number, number][] = []
 
     for (const match of text.matchAll(MD_LINK)) {
-        const [full, label, target] = match
+        const [full, label, angleTarget, bareTarget] = match
+        const target = angleTarget !== undefined ? angleTarget : bareTarget
         linkRanges.push([match.index, match.index + full.length])
         if (/^https?:/i.test(target)) {
             if (!GITHUB_COMMIT_PINNED.test(target)) {

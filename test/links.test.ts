@@ -68,4 +68,60 @@ describe('lintLinks', () => {
     test('anchor with slash fails', () => {
         expect(lintLinks('See [x](#foo/bar).', opts).length).toBeGreaterThan(0)
     })
+    test('titled commit-pinned github link passes', () => {
+        const body = `See [VPS-1](https://github.com/greymass/vaulta-proposals/blob/${'a'.repeat(40)}/standard/VPS-1.md "the standard").`
+        expect(lintLinks(body, opts)).toEqual([])
+    })
+    test('titled non-allowlisted external fails with exactly one external-link error', () => {
+        const errors = lintLinks('See [docs](https://docs.vaulta.com/thing "the docs").', opts)
+        expect(errors).toEqual([
+            'external link not on the allowlist (commit-pinned github.com only): https://docs.vaulta.com/thing',
+        ])
+    })
+    test('titled relative asset that resolves passes', () => {
+        expect(lintLinks('See [chart](assets/chart.png "T").', opts)).toEqual([])
+    })
+    test('titled relative asset that does not resolve fails', () => {
+        const errors = lintLinks('See [x](assets/missing.png "T").', opts)
+        expect(errors).toEqual(['relative link does not resolve: assets/missing.png'])
+    })
+    test('angle-bracket destination with no spaces, resolving, passes', () => {
+        expect(lintLinks('See [chart](<assets/chart.png>).', opts)).toEqual([])
+    })
+    test('angle-bracket destination containing a space fails as an internal link', () => {
+        const errors = lintLinks('See [x](<assets/my file.png>).', opts)
+        expect(errors).toEqual([
+            'internal link must be ../vp-NNNN-slug/proposal.md, assets/<file>, or a sibling language file: assets/my file.png',
+        ])
+    })
+    test('titled angle-bracket destination validated the same way', () => {
+        expect(lintLinks('See [chart](<assets/chart.png> "T").', opts)).toEqual([])
+        const errors = lintLinks('See [x](<assets/missing.png> "T").', opts)
+        expect(errors).toEqual(['relative link does not resolve: assets/missing.png'])
+    })
+    test('bare-URL scan does not double-report a URL inside a titled link', () => {
+        const errors = lintLinks(
+            'See [x](https://docs.vaulta.com/thing "title") for details.',
+            opts,
+        )
+        expect(errors.length).toBe(1)
+    })
+    test('single-quoted title recognised', () => {
+        expect(lintLinks("See [chart](assets/chart.png 'T').", opts)).toEqual([])
+    })
+    test('parenthesised title recognised', () => {
+        expect(lintLinks('See [chart](assets/chart.png (T)).', opts)).toEqual([])
+    })
+    test('cross-VP link with a title still enforces the VP-NNNN link-text rule', () => {
+        const body =
+            'Depends on [VP-0002](../vp-0002-new-network-accounts/proposal.md "the accounts VP").'
+        expect(lintLinks(body, opts)).toEqual([])
+        const bad =
+            'Depends on [the accounts proposal](../vp-0002-new-network-accounts/proposal.md "the accounts VP").'
+        expect(lintLinks(bad, opts).length).toBeGreaterThan(0)
+    })
+    test('a title containing a blank line is not treated as a link', () => {
+        const body = 'See [x](assets/missing.png "line one\n\nline two").'
+        expect(lintLinks(body, opts)).toEqual([])
+    })
 })
