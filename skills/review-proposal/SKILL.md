@@ -47,7 +47,11 @@ Make each pass separately; do not blend them.
    back-reference citation: `VP-NNNN` plus a commit-pinned GitHub URL, sole
    content of exactly one `msigmessager::message` action, first action of the
    transaction, VP number matching the URL path. A missing citation is
-   advisory, never blocking.
+   advisory, never blocking. If the proposal carries `revisions`, does each
+   entry describe a change a returning reader would notice (a requirement,
+   account, threshold, or scope change), and was it added in the same commit
+   as that change? The linter checks the field's shape, not this judgment;
+   a missing or undeserved entry is advisory, never blocking.
 
 ## Output
 

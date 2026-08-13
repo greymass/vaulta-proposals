@@ -1,7 +1,7 @@
 import { Name } from '@wharfkit/antelope'
 import { parse } from 'yaml'
 import { MSIG_STATUSES, STATUSES } from './constants'
-import type { MsigRef, ProposalFrontmatter } from './types'
+import type { MsigRef, ProposalFrontmatter, RevisionEntry } from './types'
 
 const VP_PATTERN = /^VP-\d{4}$/
 const SLUG_PATTERN = /^vp-\d{4}-[a-z0-9-]+$/
@@ -24,10 +24,12 @@ const ALLOWED_KEYS = new Set([
     'superseded-by',
     'resolution',
     'excerpt',
+    'revisions',
 ])
 
 const MSIG_ENTRY_KEYS = new Set(['proposer', 'proposal', 'status', 'txid'])
 const SENTIMENT_ENTRY_KEYS = new Set(['contract', 'topic'])
+const REVISION_ENTRY_KEYS = new Set(['version', 'date', 'summary'])
 const EXCERPT_MARKUP_PATTERN = /[`[\]]|\{@/
 
 export function parseProposal(markdown: string): { frontmatter: unknown; body: string } {
@@ -97,6 +99,108 @@ export function checkExcerpt(value: string, errors: string[]): void {
     if (EXCERPT_MARKUP_PATTERN.test(value)) {
         errors.push('excerpt must be plain text (no backticks, brackets, or {@ template syntax)')
     }
+}
+
+function checkRevisionSummary(value: string, index: number, errors: string[]): void {
+    const length = [...value].length
+    if (length < 1 || length > 140) {
+        errors.push(`revisions[${index}].summary must be 1-140 characters (got ${length})`)
+    }
+    if (/[\n\r]/.test(value)) {
+        errors.push(`revisions[${index}].summary must be a single line (no newlines)`)
+    }
+    if (EXCERPT_MARKUP_PATTERN.test(value)) {
+        errors.push(
+            `revisions[${index}].summary must be plain text (no backticks, brackets, or {@ template syntax)`,
+        )
+    }
+}
+
+export function checkRevisions(
+    value: unknown,
+    created: string | undefined,
+    errors: string[],
+): void {
+    if (value === undefined) {
+        return
+    }
+    if (!Array.isArray(value) || value.length === 0) {
+        errors.push('revisions must be a non-empty list when present')
+        return
+    }
+    let previousDate: string | undefined
+    value.forEach((entry, i) => {
+        if (typeof entry !== 'object' || entry === null) {
+            errors.push(`revisions[${i}] must be a mapping`)
+            return
+        }
+        const ref = entry as Record<string, unknown>
+        checkUnknownKeys(ref, REVISION_ENTRY_KEYS, errors, `revisions[${i}]`)
+        if (ref.version !== i + 1) {
+            errors.push(`revisions[${i}].version must be ${i + 1} (contiguous, starting at 1)`)
+        }
+        // yaml parses an unquoted YYYY-MM-DD scalar as a Date, not a string
+        const date = ref.date instanceof Date ? ref.date.toISOString().slice(0, 10) : ref.date
+        if (typeof date !== 'string' || !DATE_PATTERN.test(date)) {
+            errors.push(`revisions[${i}].date must be a YYYY-MM-DD date`)
+        } else {
+            ref.date = date
+            if (previousDate !== undefined && date < previousDate) {
+                errors.push(`revisions[${i}].date must not be earlier than the previous entry`)
+            }
+            if (created !== undefined && date < created) {
+                errors.push(`revisions[${i}].date must not be earlier than created (${created})`)
+            }
+            previousDate = date
+        }
+        if (typeof ref.summary !== 'string') {
+            errors.push(`revisions[${i}].summary must be a string`)
+        } else {
+            checkRevisionSummary(ref.summary, i, errors)
+        }
+    })
+}
+
+export function resolveUpdated(
+    revisions: RevisionEntry[] | undefined,
+    gitUpdated: string | null,
+): string | null {
+    if (!revisions || revisions.length === 0) return gitUpdated
+    return revisions.reduce(
+        (latest, entry) => (entry.date > latest ? entry.date : latest),
+        revisions[0].date,
+    )
+}
+
+export function checkRevisionsMirror(
+    en: RevisionEntry[] | undefined,
+    tr: RevisionEntry[] | undefined,
+    errors: string[],
+): void {
+    if (en === undefined && tr === undefined) {
+        return
+    }
+    if (en === undefined || tr === undefined) {
+        errors.push('revisions must be present in the translation exactly when present in English')
+        return
+    }
+    if (en.length !== tr.length) {
+        errors.push(`revisions length mismatch (English ${en.length}, translation ${tr.length})`)
+        return
+    }
+    en.forEach((entry, i) => {
+        const other = tr[i]
+        if (entry.version !== other.version) {
+            errors.push(
+                `revisions[${i}].version mismatch (English ${entry.version}, translation ${other.version})`,
+            )
+        }
+        if (entry.date !== other.date) {
+            errors.push(
+                `revisions[${i}].date mismatch (English ${entry.date}, translation ${other.date})`,
+            )
+        }
+    })
 }
 
 function validateMsigs(value: unknown, errors: string[]): value is MsigRef[] {
@@ -232,6 +336,7 @@ export function validateFrontmatter(
     } else if (typeof fm.excerpt === 'string') {
         checkExcerpt(fm.excerpt, errors)
     }
+    checkRevisions(fm.revisions, typeof created === 'string' ? created : undefined, errors)
 
     return errors.length ? { errors } : { value: fm as unknown as ProposalFrontmatter, errors }
 }

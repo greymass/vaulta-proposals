@@ -1,5 +1,6 @@
 import { describe, expect, test } from 'bun:test'
-import { validateFrontmatter } from '../lib/frontmatter'
+import { checkRevisionsMirror, resolveUpdated, validateFrontmatter } from '../lib/frontmatter'
+import type { RevisionEntry } from '../lib/types'
 
 const valid = () => ({
     vp: 'VP-0001',
@@ -131,5 +132,188 @@ describe('validateFrontmatter v2', () => {
         expect(
             validateFrontmatter({ ...valid(), resolution: txid }, SLUG).errors.length,
         ).toBeGreaterThan(0) // forbidden when not Executed
+    })
+})
+
+describe('checkRevisions (via validateFrontmatter)', () => {
+    const revisions = (): RevisionEntry[] => [
+        { version: 1, date: '2026-08-02', summary: 'Initial draft.' },
+        { version: 2, date: '2026-08-11', summary: 'Raised creator admission to a 15/21 BP MSIG.' },
+    ]
+
+    test('absent revisions stays valid (unversioned)', () => {
+        const { errors } = validateFrontmatter(valid(), SLUG)
+        expect(errors).toEqual([])
+    })
+
+    test('a valid revisions list passes', () => {
+        const { value, errors } = validateFrontmatter({ ...valid(), revisions: revisions() }, SLUG)
+        expect(errors).toEqual([])
+        expect(value?.revisions).toHaveLength(2)
+    })
+
+    test('rejects a version gap', () => {
+        const bad = [
+            revisions()[0],
+            { version: 3, date: '2026-08-11', summary: 'Skipped a version.' },
+        ]
+        const { errors } = validateFrontmatter({ ...valid(), revisions: bad }, SLUG)
+        expect(errors.some((e) => e.includes('revisions[1].version'))).toBe(true)
+    })
+
+    test('rejects versions that do not start at 1', () => {
+        const bad = [{ version: 2, date: '2026-08-02', summary: 'Wrong start.' }]
+        const { errors } = validateFrontmatter({ ...valid(), revisions: bad }, SLUG)
+        expect(errors.some((e) => e.includes('revisions[0].version'))).toBe(true)
+    })
+
+    test('rejects non-monotonic dates', () => {
+        const bad = [
+            { version: 1, date: '2026-08-11', summary: 'Later date first.' },
+            { version: 2, date: '2026-08-02', summary: 'Earlier date second.' },
+        ]
+        const { errors } = validateFrontmatter({ ...valid(), revisions: bad }, SLUG)
+        expect(errors.some((e) => e.includes('revisions[1].date'))).toBe(true)
+    })
+
+    test('rejects a revision date earlier than created', () => {
+        const bad = [{ version: 1, date: '2026-07-01', summary: 'Before created.' }]
+        const { errors } = validateFrontmatter({ ...valid(), revisions: bad }, SLUG)
+        expect(errors.some((e) => e.includes('revisions[0].date') && e.includes('created'))).toBe(
+            true,
+        )
+    })
+
+    test('accepts a summary of exactly 140 code points', () => {
+        const bad = [{ version: 1, date: '2026-08-02', summary: 'a'.repeat(140) }]
+        const { errors } = validateFrontmatter({ ...valid(), revisions: bad }, SLUG)
+        expect(errors).toEqual([])
+    })
+
+    test('rejects a summary of 141 code points', () => {
+        const bad = [{ version: 1, date: '2026-08-02', summary: 'a'.repeat(141) }]
+        const { errors } = validateFrontmatter({ ...valid(), revisions: bad }, SLUG)
+        expect(errors.some((e) => e.includes('revisions[0].summary'))).toBe(true)
+    })
+
+    test('rejects an empty summary', () => {
+        const bad = [{ version: 1, date: '2026-08-02', summary: '' }]
+        const { errors } = validateFrontmatter({ ...valid(), revisions: bad }, SLUG)
+        expect(errors.some((e) => e.includes('revisions[0].summary'))).toBe(true)
+    })
+
+    test.each(['`code`', 'a [link]', 'array[0]', '{@include}'])(
+        'rejects markup marker in summary %s',
+        (summary) => {
+            const bad = [{ version: 1, date: '2026-08-02', summary }]
+            const { errors } = validateFrontmatter({ ...valid(), revisions: bad }, SLUG)
+            expect(errors.some((e) => e.includes('revisions[0].summary'))).toBe(true)
+        },
+    )
+
+    test('normalizes Date-typed dates from the YAML parser', () => {
+        const bad = [{ version: 1, date: new Date('2026-08-02T00:00:00Z'), summary: 'Draft.' }]
+        const fm = { ...valid(), created: new Date('2026-08-01T00:00:00Z'), revisions: bad }
+        const { value, errors } = validateFrontmatter(fm, SLUG)
+        expect(errors).toEqual([])
+        expect(value?.revisions?.[0].date).toBe('2026-08-02')
+        expect(value?.created).toBe('2026-08-01')
+    })
+
+    test('rejects an unknown key on a revision entry', () => {
+        const bad = [{ version: 1, date: '2026-08-02', summary: 'Draft.', author: 'someone' }]
+        const { errors } = validateFrontmatter({ ...valid(), revisions: bad }, SLUG)
+        expect(errors.some((e) => e.includes('unknown key "author"'))).toBe(true)
+    })
+})
+
+describe('checkRevisionsMirror', () => {
+    test('matching lists produce no errors', () => {
+        const errors: string[] = []
+        checkRevisionsMirror(
+            [{ version: 1, date: '2026-08-02', summary: 'Initial draft.' }],
+            [{ version: 1, date: '2026-08-02', summary: '초안.' }],
+            errors,
+        )
+        expect(errors).toEqual([])
+    })
+
+    test('both sides absent produce no errors', () => {
+        const errors: string[] = []
+        checkRevisionsMirror(undefined, undefined, errors)
+        expect(errors).toEqual([])
+    })
+
+    test('rejects a length mismatch', () => {
+        const errors: string[] = []
+        checkRevisionsMirror(
+            [
+                { version: 1, date: '2026-08-02', summary: 'Initial draft.' },
+                { version: 2, date: '2026-08-11', summary: 'Second entry.' },
+            ],
+            [{ version: 1, date: '2026-08-02', summary: '초안.' }],
+            errors,
+        )
+        expect(errors.some((e) => e.includes('length'))).toBe(true)
+    })
+
+    test('rejects a date mismatch', () => {
+        const errors: string[] = []
+        checkRevisionsMirror(
+            [{ version: 1, date: '2026-08-02', summary: 'Initial draft.' }],
+            [{ version: 1, date: '2026-08-03', summary: '초안.' }],
+            errors,
+        )
+        expect(errors.some((e) => e.includes('revisions[0].date'))).toBe(true)
+    })
+
+    test('rejects a translation with revisions when English has none', () => {
+        const errors: string[] = []
+        checkRevisionsMirror(
+            undefined,
+            [{ version: 1, date: '2026-08-02', summary: '초안.' }],
+            errors,
+        )
+        expect(errors.length).toBeGreaterThan(0)
+    })
+
+    test('rejects English revisions with no translation mirror', () => {
+        const errors: string[] = []
+        checkRevisionsMirror(
+            [{ version: 1, date: '2026-08-02', summary: 'Initial draft.' }],
+            undefined,
+            errors,
+        )
+        expect(errors.length).toBeGreaterThan(0)
+    })
+})
+
+describe('resolveUpdated', () => {
+    test('with revisions, resolves to the latest revision date', () => {
+        const revisions: RevisionEntry[] = [
+            { version: 1, date: '2026-08-02', summary: 'Initial draft.' },
+            { version: 2, date: '2026-08-11', summary: 'Second entry.' },
+        ]
+        expect(resolveUpdated(revisions, '2026-01-01')).toBe('2026-08-11')
+    })
+
+    test('without revisions, falls back to the git-derived date', () => {
+        expect(resolveUpdated(undefined, '2026-01-01')).toBe('2026-01-01')
+    })
+
+    test('an empty revisions list falls back to the git-derived date', () => {
+        expect(resolveUpdated([], '2026-01-01')).toBe('2026-01-01')
+    })
+
+    test('no revisions and a null git date stays null', () => {
+        expect(resolveUpdated(undefined, null)).toBeNull()
+    })
+
+    test('takes the maximum date rather than assuming the list is sorted', () => {
+        const revisions: RevisionEntry[] = [
+            { version: 1, date: '2026-08-11', summary: 'Out of order.' },
+            { version: 2, date: '2026-08-02', summary: 'Out of order.' },
+        ]
+        expect(resolveUpdated(revisions, '2026-01-01')).toBe('2026-08-11')
     })
 })

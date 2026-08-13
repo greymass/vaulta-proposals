@@ -41,7 +41,7 @@ The `##` section roster is partially fixed:
 
 ## Frontmatter
 
-Every proposal begins with a YAML frontmatter block delimited by `---` lines. The allowed keys are exactly: `vp`, `title`, `standard`, `status`, `authors`, `created`, `accounts`, `msigs`, `sentiment`, `requires`, `replaces`, `superseded-by`, `resolution`, `excerpt`. Any other key is an error. There is no `updated` field: a proposal's last-modified date is derived from git history rather than declared.
+Every proposal begins with a YAML frontmatter block delimited by `---` lines. The allowed keys are exactly: `vp`, `title`, `standard`, `status`, `authors`, `created`, `accounts`, `msigs`, `sentiment`, `requires`, `replaces`, `superseded-by`, `resolution`, `excerpt`, `revisions`. Any other key is an error. There is no `updated` key: a proposal's rendered last-modified date is derived from git history, or, when the proposal has `revisions`, from the latest entry's date.
 
 - **`vp`** (required, string): matches `VP-NNNN` (four digits). Must agree with the proposal's directory name: `vp-NNNN-slug` and `VP-NNNN` share the same number.
 - **`title`** (required, non-empty string): the proposal's title; conventionally the same text as the `#` heading (not lint-enforced).
@@ -57,14 +57,25 @@ Every proposal begins with a YAML frontmatter block delimited by `---` lines. Th
 - **`superseded-by`** (optional, list): `VP-NNNN` identifiers of proposals that replace this one. Allowed only when `status` is `Superseded`, and required to be non-empty in that case. `replaces` and `superseded-by` are reciprocal: if A's `replaces` lists B, B's `superseded-by` must list A, and vice versa.
 - **`resolution`** (optional, string): a 64-hex txid. Allowed only when `status` is `Executed`, and required in that case. When the proposal also has `msigs` entries with `status: executed`, `resolution` must match one of their `txid` values.
 - **`excerpt`** (optional, string): supplies the proposal's index-card excerpt directly. It is 280 characters or fewer, counted in Unicode code points; a single paragraph, so any newline is an error; and plain text, so backticks, square brackets, and `{@` are errors. Omit it and the excerpt falls back to the extraction from `Summary`'s first paragraph.
+- **`revisions`** (optional, list): a record of authored changes to the proposal. Each entry is a mapping of `version` (an integer, starting at 1 and increasing by exactly 1 with each entry), `date` (a `YYYY-MM-DD` date, non-decreasing across the list and never earlier than `created`), and `summary` (a single line of plain text, 1 to 140 characters counted in Unicode code points, under the same plain-text rule as `excerpt`). No other keys are allowed within an entry. When the field is present, the list holds at least one entry; an empty list is an error. See Revisions for what a revision entry is and when to add one.
 
 Frontmatter is the canonical source of truth for a proposal's on-chain bindings. Any mention of an account, msig, or transaction in the proposal body is an informative echo of the frontmatter: if body prose and frontmatter ever disagree, frontmatter governs.
+
+## Revisions
+
+A revision entry records a change to the proposal that a returning reader should notice: a change to a requirement, an account, a threshold, or the proposal's scope. Typo fixes and formatting commits do not warrant an entry.
+
+Entry 1 SHOULD record the proposal's initial draft, dated `created`. The list is authored oldest first and appended to as the proposal changes; an entry SHOULD be added in the same commit as the change it describes, so the `revisions` list and the diff that prompted it land together in the git history.
+
+The linter enforces the field's shape (key names, version sequence, date ordering, summary length) but not this authoring guidance: nothing stops a change that deserves an entry from merging without one, or an entry from being added for a change that doesn't deserve it.
 
 ## Languages and Translations
 
 English is the canonical language of every proposal; only the English text is normative. Korean (`ko`) and Simplified Chinese (`zh`, the bare tag with no region subtag) are required translations, kept in lockstep with the English source at every merge, starting from a proposal's first `Draft` landing.
 
-Translations live as sibling files in the same proposal directory: `proposal.ko.md`, `proposal.zh.md`, and so on for any additional language. A translation file's own frontmatter has four keys: `lang` (must match the file's language tag), `source` (the 40-hex git blob hash of the English `proposal.md` content the translation was made from), `translator` (optional), and `excerpt` (optional), which holds a translated excerpt under the same rules as the English field: 280 characters or fewer counted in Unicode code points, a single paragraph, plain text. Unknown keys are errors, same as proposal frontmatter.
+Translations live as sibling files in the same proposal directory: `proposal.ko.md`, `proposal.zh.md`, and so on for any additional language. A translation file's own frontmatter has five keys: `lang` (must match the file's language tag), `source` (the 40-hex git blob hash of the English `proposal.md` content the translation was made from), `translator` (optional), `excerpt` (optional), which holds a translated excerpt under the same rules as the English field: 280 characters or fewer counted in Unicode code points, a single paragraph, plain text, and `revisions` (optional), present exactly when the English file's `revisions` is present. Unknown keys are errors, same as proposal frontmatter.
+
+A translation's `revisions` list mirrors the English list exactly: the same number of entries, with matching `version` and `date` per entry. `summary` text is deliberately not compared, since it is translated: each file's summaries are validated independently under the length and plain-text rules above.
 
 A translation's `excerpt` supplies that language's card excerpt, falling back to extraction from the translation's own body. Cards are resolved per language, so a translation may carry an `excerpt` where the English proposal does not, and the English may carry one where a translation does not.
 

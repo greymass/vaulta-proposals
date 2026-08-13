@@ -4,13 +4,15 @@
 
 1. Fork this repository.
 2. Copy `template/proposal.md` to `proposals/vp-0000-your-slug/proposal.md`. Copy that one file, not the whole `template/` directory. Use `0000` as a placeholder; the maintainer assigns the real VP number at merge, and the directory is renamed at that point.
-3. Fill in `proposal.md`. Keep `standard: VPS-1` in the frontmatter, and do not add an `updated` field: it is derived from git history rather than declared. See [standard/VPS-1.md](standard/VPS-1.md) for the full frontmatter and section rules.
+3. Fill in `proposal.md`. Keep `standard: VPS-1` in the frontmatter. There is no `updated` key to declare: the rendered date comes from git history, or from the latest `revisions` entry when the proposal has one. See [standard/VPS-1.md](standard/VPS-1.md) for the full frontmatter and section rules.
 4. Write the required `proposal.ko.md` and `proposal.zh.md` sibling translations. Write them yourself, work with a community translator, or use an agent following [skills/translate-proposal/SKILL.md](skills/translate-proposal/SKILL.md). Each needs its own frontmatter with `lang`, `source` (the 40-hex git blob hash of the English `proposal.md` the translation was made from, printed by `git hash-object proposals/<dir>/proposal.md`), and an optional `translator`. See the "Languages and Translations" section of [standard/VPS-1.md](standard/VPS-1.md) for the navigation-line and section-mirroring rules.
 5. Run `bun run verify` and fix every error until it passes.
 6. Run `bun run index` last, after verify is clean, and include the updated `index.json` in your PR. CI runs `bun run check`, `bun test`, `bun run verify`, and an `index.json` freshness check; a green local `verify` alone does not cover the freshness check.
 7. Open a pull request.
 
 Msig code (`msig/index.ts`) is optional at submission time: a proposal can be discussed and reviewed as a document alone. Reviewing a proposal must never require broadcasting a transaction. If you do add it, copy `template/msig/index.ts` into your proposal directory and change its import to `../../../lib/types` (one level deeper than the template's own path); the template's depth fails `bun run check` from a proposal directory.
+
+When a change to a proposal touches a requirement, an account, a threshold, or the proposal's scope, add an entry to `revisions` in the same commit as the change. See the Revisions section of [standard/VPS-1.md](standard/VPS-1.md) for what counts and the entry shape. Typo and formatting fixes do not need an entry.
 
 ## Status changes
 

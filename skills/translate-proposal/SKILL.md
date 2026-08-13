@@ -26,11 +26,13 @@ entry in `LANG_LABELS` (`lib/types.ts`) appears in the nav line as its bare tag.
    whole file including frontmatter, not just the body.
 3. **Write each sibling** `proposal.ko.md` / `proposal.zh.md`:
    - Frontmatter: exactly `lang`, `source` (the hash from step 2), and
-     optionally `translator` and `excerpt`. Nothing else: status, bindings,
-     and number live only in the English file. `excerpt` is the translated
-     counterpart of the English `excerpt`, under the same rules: 280
-     characters or fewer counted in Unicode code points, a single
-     paragraph, plain text.
+     optionally `translator`, `excerpt`, and `revisions`. Nothing else: status,
+     bindings, and number live only in the English file. `excerpt` is the
+     translated counterpart of the English `excerpt`, under the same rules:
+     280 characters or fewer counted in Unicode code points, a single
+     paragraph, plain text. `revisions`, when the English file has one,
+     mirrors it entry-for-entry: the same `version` numbers and `date`s, with
+     each entry's `summary` translated into the target language.
    - Translate the `#` title, keep the language-nav line identical to the
      English file's, and mirror the English `##` sections one-for-one, in
      order, with headings translated.
@@ -52,12 +54,18 @@ entry in `LANG_LABELS` (`lib/types.ts`) appears in the nav line as its bare tag.
    - The English `excerpt` was added or changed: each translation SHOULD carry
      a translated `excerpt` to match. A translation left without one falls back
      to extracting that language's card excerpt from its own body.
+   - The English `revisions` list gained an entry: add the matching entry to
+     each translation, copying `version` and `date` and translating `summary`.
+     This is the same restamp interaction as `excerpt`: the entry changed the
+     English file's content, so `source` no longer matches in either
+     translation, and the refresh that restamps `source` is the one that
+     carries the newly translated summary.
    - Prose changed: retranslate the affected passages only, not the whole file
      blindly, then update `source` in each.
 
    The restamp rule is the same in every case: the hash covers the whole
-   English file, so adding or editing `excerpt` makes every translation stale
-   and each `source` must be restamped.
+   English file, so adding or editing `excerpt` or `revisions` makes every
+   translation stale and each `source` must be restamped.
 6. **Validate and index**: run `bun run verify` and fix every error until clean,
    then run `bun run index` so `index.json` picks up each translation's path and
    current flag. CI checks the index separately from verify, so skipping this

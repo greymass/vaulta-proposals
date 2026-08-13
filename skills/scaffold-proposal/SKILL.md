@@ -25,7 +25,10 @@ root.
    Frontmatter section of [standard/VPS-1.md](../../standard/VPS-1.md). Leave
    `msigs`/`sentiment` empty unless on-chain items already exist for this
    proposal. The template's field set is exact: do not invent keys, and do not
-   add `replaces` at scaffold time. Reciprocity is linted (`replaces` on A
+   add `replaces` at scaffold time. `revisions` is an available optional field
+   that the template omits on purpose: a freshly scaffolded proposal has no
+   revision history, so add the field later, once a merged change to this
+   proposal earns its first entry. Reciprocity is linted (`replaces` on A
    requires `superseded-by` on B, which in turn requires B's status to be
    `Superseded`), and a placeholder `VP-0000` cannot be written into another
    proposal. If this proposal supersedes an existing one, say so in prose and in

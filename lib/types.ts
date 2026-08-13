@@ -34,6 +34,12 @@ export interface SentimentRef {
     topic: string
 }
 
+export interface RevisionEntry {
+    version: number
+    date: string // YYYY-MM-DD
+    summary: string
+}
+
 export interface ProposalFrontmatter {
     vp: string // "VP-0001"
     title: string
@@ -49,6 +55,7 @@ export interface ProposalFrontmatter {
     'superseded-by'?: string[] // "VP-NNNN", non-empty iff status Superseded
     resolution?: string // 64-hex txid, required iff status Executed
     excerpt?: string
+    revisions?: RevisionEntry[]
 }
 
 export interface TranslationFrontmatter {
@@ -56,6 +63,7 @@ export interface TranslationFrontmatter {
     source: string // 40-hex git blob hash of the English source
     translator?: string
     excerpt?: string
+    revisions?: RevisionEntry[]
 }
 
 export interface TranslationEntry {
