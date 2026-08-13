@@ -1,5 +1,5 @@
 {
-    "generated": "2026-08-13T05:00:46.952Z",
+    "generated": "2026-08-13T05:01:20.938Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -111,7 +111,7 @@
             "excerpt": "A demonstration document that exercises the proposal renderer, covering every heading level, tables, code blocks, images, cross-proposal links, non-Latin text, and live on-chain msig and sentiment bindings. It lives on the demo branch and carries no governance weight.",
             "slug": "vp-9999-demo",
             "path": "proposals/vp-9999-demo/proposal.md",
-            "updated": "2026-08-10",
+            "updated": "2026-08-12",
             "translations": [
                 {
                     "lang": "ko",

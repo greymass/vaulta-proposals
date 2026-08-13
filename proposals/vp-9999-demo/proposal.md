@@ -17,6 +17,16 @@ sentiment:
       topic: sentiment
 requires: []
 excerpt: A demonstration document that exercises the proposal renderer, covering every heading level, tables, code blocks, images, cross-proposal links, non-Latin text, and live on-chain msig and sentiment bindings. It lives on the demo branch and carries no governance weight.
+revisions:
+    - version: 1
+      date: 2026-08-10
+      summary: Publishes the initial draft of the rendering-exercise document, covering headings, tables, code, and an image.
+    - version: 2
+      date: 2026-08-11
+      summary: Adds level five and six headings with Korean and Chinese text to extend the heading roster.
+    - version: 3
+      date: 2026-08-12
+      summary: Authors the demonstration excerpt used on the proposal index card.
 ---
 
 # Demonstration of the Proposal Rendering System

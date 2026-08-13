@@ -1,7 +1,17 @@
 ---
 lang: zh
-source: 2caa8b2306e6eb85139297bd2f3392efdf741972
+source: df8219bf6f336564eedbe73f1ab2160e372f7973
 excerpt: 一份演示文档，用于检验提案渲染器，涵盖各级标题、表格、代码块、图片、跨提案链接、非拉丁文字，以及实时链上 msig 与 sentiment 绑定。它存在于 demo 分支，不具备任何治理效力。
+revisions:
+    - version: 1
+      date: 2026-08-10
+      summary: 发布渲染演示文档的初始草稿，涵盖标题、表格、代码和图片。
+    - version: 2
+      date: 2026-08-11
+      summary: 为扩展标题清单，新增包含韩文和中文文本的五级和六级标题。
+    - version: 3
+      date: 2026-08-12
+      summary: 撰写用于提案索引卡片的演示摘要。
 ---
 
 # 提案渲染系统演示
