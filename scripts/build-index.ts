@@ -1,6 +1,7 @@
 import { join } from 'node:path'
 import { ROOT } from '../lib/constants'
 import { extractCardFields, resolveExcerpt } from '../lib/excerpt'
+import { resolveUpdated } from '../lib/frontmatter'
 import { lintRepo } from '../lib/repo'
 import type { IndexEntry } from '../lib/types'
 
@@ -26,20 +27,24 @@ if (errors.length) {
 }
 
 const index: IndexEntry[] = await Promise.all(
-    proposals.map(async (p) => ({
-        ...p.frontmatter,
-        slug: p.slug,
-        path: `proposals/${p.slug}/proposal.md`,
-        updated: await gitUpdated(p.slug),
-        excerpt: resolveExcerpt(p.frontmatter.excerpt, p.body),
-        translations: p.translations.map((t) => ({
-            lang: t.lang,
-            path: `proposals/${p.slug}/proposal.${t.lang}.md`,
-            current: t.current,
-            title: extractCardFields(t.body).title,
-            excerpt: resolveExcerpt(t.frontmatter.excerpt, t.body),
-        })),
-    })),
+    proposals.map(async (p) => {
+        // revisions is authored data for the detail page, not part of the index shape
+        const { revisions, ...frontmatter } = p.frontmatter
+        return {
+            ...frontmatter,
+            slug: p.slug,
+            path: `proposals/${p.slug}/proposal.md`,
+            updated: resolveUpdated(revisions, await gitUpdated(p.slug)),
+            excerpt: resolveExcerpt(p.frontmatter.excerpt, p.body),
+            translations: p.translations.map((t) => ({
+                lang: t.lang,
+                path: `proposals/${p.slug}/proposal.${t.lang}.md`,
+                current: t.current,
+                title: extractCardFields(t.body).title,
+                excerpt: resolveExcerpt(t.frontmatter.excerpt, t.body),
+            })),
+        }
+    }),
 )
 index.sort((a, b) => a.vp.localeCompare(b.vp))
 

@@ -2,7 +2,7 @@ import { existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import { lintAssetsDir } from './assets'
 import { REQUIRED_LANGS } from './constants'
-import { parseProposal, validateFrontmatter } from './frontmatter'
+import { checkRevisionsMirror, parseProposal, validateFrontmatter } from './frontmatter'
 import { lintLinks } from './links'
 import { lintFences, lintRawHtml } from './markdown'
 import { lintSections, lintStructureMirror } from './sections'
@@ -155,6 +155,9 @@ export async function lintRepo(
             lintNavLine(tparsed.body, langs).forEach(terr)
             lintStructureMirror(parsed.body, tparsed.body).forEach(terr)
             lintLinks(tparsed.body, { slug, fileExists }).forEach(terr)
+            const mirrorErrors: string[] = []
+            checkRevisionsMirror(value.revisions, tfm.revisions, mirrorErrors)
+            mirrorErrors.forEach(terr)
             translations.push({ lang: tfm.lang, frontmatter: tfm, body: tparsed.body, current })
         }
         for (const lang of REQUIRED_LANGS) {

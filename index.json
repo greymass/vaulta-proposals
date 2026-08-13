@@ -1,5 +1,5 @@
 {
-    "generated": "2026-08-11T17:44:10.867Z",
+    "generated": "2026-08-13T03:18:37.937Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -23,7 +23,7 @@
             "excerpt": "Approved creators draw on a RAM endowment held by the network-owned account ram.vaulta to gift RAM to accounts they create, onboarding users without carrying the RAM cost. The system launches with no registered creators, and each creator is admitted by its own 15/21 BP MSIG.",
             "slug": "vp-0001-ram-gifting",
             "path": "proposals/vp-0001-ram-gifting/proposal.md",
-            "updated": "2026-08-09",
+            "updated": "2026-08-11",
             "translations": [
                 {
                     "lang": "ko",
@@ -64,7 +64,7 @@
             "excerpt": "new.vaulta is a self-serve account creation contract: a user pays in the network token and the contract creates the account and buys its RAM in one step, with no operator involved. It is the user-funded counterpart to VP-0001, and deploying it requires 15/21 BP approval.",
             "slug": "vp-0002-account-creation",
             "path": "proposals/vp-0002-account-creation/proposal.md",
-            "updated": "2026-08-09",
+            "updated": "2026-08-11",
             "translations": [
                 {
                     "lang": "ko",
