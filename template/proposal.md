@@ -8,6 +8,7 @@ authors:
 created: 2026-01-01
 accounts: []
 msigs: []
+# a sentiment topic suits a proposal that produces no msig; msig sentiment is collected on its own
 sentiment: []
 requires: []
 ---
