@@ -12,6 +12,13 @@ msigs:
     - proposer: test.gm
       proposal: ugkuddhb2jwp
       status: active
+    - proposer: test.gm
+      proposal: hqmz3rvktdxa
+      status: executed
+      txid: 4f2a9c1d7e6b03854a1fbc29d0e7538a6c4b91f2073ed5a8c16b4092fe7d3a5b
+    - proposer: test.gm
+      proposal: pfy4wnsbcjrt
+      status: expired
 sentiment:
     - contract: sentiment.gm
       topic: sentiment

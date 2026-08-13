@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: df8219bf6f336564eedbe73f1ab2160e372f7973
+source: b5c6daf11dfd60c8ee29f4466a1698947485212e
 excerpt: 제안 렌더러를 시험하는 시연 문서입니다. 모든 단계의 제목, 표, 코드 블록, 이미지, 제안 간 링크, 비라틴 문자, 그리고 실시간 온체인 msig 및 sentiment 바인딩을 다룹니다. demo 브랜치에 존재하며 어떠한 거버넌스 효력도 갖지 않습니다.
 revisions:
     - version: 1
