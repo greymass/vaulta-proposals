@@ -41,11 +41,35 @@ export function lintFences(body: string): string[] {
     return last?.fenced ? ['unterminated code fence: a ``` or ~~~ block is never closed'] : []
 }
 
-// Body with fenced blocks and inline code spans removed, for lints that must not see code samples.
+const LIST_ITEM = /^ {0,3}(?:[-*+]|\d{1,9}[.)])(?:[ \t]|$)/
+
+// An indented chunk is code only after a blank line outside any open list item; ambiguous text stays visible to the lints.
 export function stripCode(body: string): string {
     const out: string[] = []
+    let blank = true
+    let listOpen = false
+    let indented = false
     for (const { line, marker, fenced } of scanLines(body)) {
-        if (!marker && !fenced) out.push(line.replace(/`[^`]*`/g, ''))
+        if (marker || fenced) {
+            indented = false
+            blank = false
+            continue
+        }
+        if (line.trim() === '') {
+            blank = true
+            out.push(line)
+            continue
+        }
+        const indent = line.length - line.trimStart().length
+        if (indent >= 4 && (indented || (blank && !listOpen))) {
+            indented = true
+            continue
+        }
+        indented = false
+        blank = false
+        if (LIST_ITEM.test(line)) listOpen = true
+        else if (indent === 0) listOpen = false
+        out.push(line.replace(/`[^`]*`/g, ''))
     }
     return out.join('\n')
 }
