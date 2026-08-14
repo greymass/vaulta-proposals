@@ -14,8 +14,10 @@ const DEST_PAREN_1 = `\\(${DEST_ATOM}*\\)`
 const DEST_PAREN_2 = `\\((?:${DEST_ATOM}|${DEST_PAREN_1})*\\)`
 const DEST_PAREN_3 = `\\((?:${DEST_ATOM}|${DEST_PAREN_2})*\\)`
 const BARE_DEST = `(?:${DEST_ATOM}|${DEST_PAREN_3})+`
+// Link text may span lines but not a blank line (CommonMark 0.31.2 §6.3), same as a title.
+const LABEL = '(?:[^\\]\\n]|\\n(?!\\s*\\n))*'
 const MD_LINK = new RegExp(
-    `\\[([^\\]]*)\\]\\(\\s*(?:<([^<>\\n]*)>|(${BARE_DEST}))(?:\\s+(?:${TITLE.source}))?\\s*\\)`,
+    `\\[(${LABEL})\\]\\(\\s*(?:<([^<>\\n]*)>|(${BARE_DEST}))(?:\\s+(?:${TITLE.source}))?\\s*\\)`,
     'g',
 )
 // Case-insensitive scheme and www-autolink coverage: GitHub renders HTTP://, HTTPS://, and www. as live links.

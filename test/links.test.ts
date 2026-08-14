@@ -185,6 +185,36 @@ describe('lintLinks', () => {
         const body = '# T\n\nSee [the readme][ref].\n\n[ref]: ../../README.md\n'
         expect(lintLinks(body, opts).length).toBe(2)
     })
+    test('a link label wrapping across a single newline is still matched and validated', () => {
+        const body = '# T\n\nSee [the\ndocs](https://docs.vaulta.com/thing) for details.\n'
+        expect(lintLinks(body, opts)).toEqual([
+            'external link not on the allowlist (commit-pinned github.com only): https://docs.vaulta.com/thing',
+        ])
+    })
+    test('a wrapped label on a cross-VP link is still checked against the VP number', () => {
+        const good =
+            'Depends on [VP-0002](../vp-0002-new-network-accounts/proposal.md) for accounts.'
+        expect(lintLinks(good, opts)).toEqual([])
+        const bad =
+            'Depends on [the accounts\nproposal](../vp-0002-new-network-accounts/proposal.md).'
+        expect(lintLinks(bad, opts)).toEqual([
+            'cross-VP link text must be "VP-0002" (got "the accounts\nproposal")',
+        ])
+    })
+    test('an open bracket and a later link separated by a blank line are not one link', () => {
+        const body =
+            '# T\n\nAn unmatched bracket [here.\n\nSee [VP-0002](../vp-0002-new-network-accounts/proposal.md).\n'
+        expect(lintLinks(body, opts)).toEqual([])
+    })
+    test('a bare URL in the gap between an open bracket and a later link is reported', () => {
+        const body =
+            '# T\n\nAn unmatched bracket [here.\n\nA bare URL https://evil.com/x lives in the gap.\n\nSee [chart](assets/chart.png).\n'
+        expect(lintLinks(body, opts)).toEqual(['bare URL not on the allowlist: https://evil.com/x'])
+    })
+    test('a bracketed span and a later parenthetical separated by a blank line are not one link', () => {
+        const body = '# T\n\nSee [not a link] here.\n\n(An aside.) https://evil.com/y follows.\n'
+        expect(lintLinks(body, opts)).toEqual(['bare URL not on the allowlist: https://evil.com/y'])
+    })
     test('an inline link is not reported as a shortcut reference', () => {
         const body = '# T\n\nSee [chart](assets/chart.png).\n\n[chart]: assets/chart.png\n'
         expect(lintLinks(body, opts)).toEqual([
