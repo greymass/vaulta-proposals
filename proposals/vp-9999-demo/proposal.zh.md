@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: b5c6daf11dfd60c8ee29f4466a1698947485212e
+source: d40bec6d28d3049445228bd2fd50da97a7c685b3
 excerpt: 一份演示文档，用于检验提案渲染器，涵盖各级标题、表格、代码块、图片、跨提案链接、非拉丁文字，以及实时链上 msig 与 sentiment 绑定。它存在于 demo 分支，不具备任何治理效力。
 revisions:
     - version: 1
@@ -12,6 +12,11 @@ revisions:
     - version: 3
       date: 2026-08-12
       summary: 撰写用于提案索引卡片的演示摘要。
+msigs:
+    - step: 5
+      title: 为演示账户授予渲染权限
+    - step: 6
+      title: 将演示账户交还给其所有者
 ---
 
 # 提案渲染系统演示

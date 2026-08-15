@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: b5c6daf11dfd60c8ee29f4466a1698947485212e
+source: d40bec6d28d3049445228bd2fd50da97a7c685b3
 excerpt: 제안 렌더러를 시험하는 시연 문서입니다. 모든 단계의 제목, 표, 코드 블록, 이미지, 제안 간 링크, 비라틴 문자, 그리고 실시간 온체인 msig 및 sentiment 바인딩을 다룹니다. demo 브랜치에 존재하며 어떠한 거버넌스 효력도 갖지 않습니다.
 revisions:
     - version: 1
@@ -12,6 +12,11 @@ revisions:
     - version: 3
       date: 2026-08-12
       summary: 제안 색인 카드에 쓰이는 시연 발췌문을 작성합니다.
+msigs:
+    - step: 5
+      title: 시연 계정에 렌더링 권한을 부여합니다
+    - step: 6
+      title: 시연 계정을 소유자에게 반환합니다
 ---
 
 # 제안 렌더링 시스템 시연

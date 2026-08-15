@@ -19,6 +19,19 @@ msigs:
     - proposer: test.gm
       proposal: pfy4wnsbcjrt
       status: expired
+    - proposer: test.gm
+      proposal: wq2tzn5vhkbr
+      status: expired
+    - proposer: test.gm
+      proposal: dmx4jc3npseb
+      status: executed
+      txid: 8b71e0c4d92f3a56be08417dc35a9e2f640b7d18cae52f39017b64ad2ce8f105
+      title: Grant the demonstration account its rendering permissions
+      supersedes:
+          proposer: test.gm
+          proposal: wq2tzn5vhkbr
+    - status: planned
+      title: Return the demonstration account to its owner
 sentiment:
     - contract: sentiment.gm
       topic: sentiment
