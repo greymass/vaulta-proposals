@@ -1,5 +1,10 @@
-import { describe, expect, test } from 'bun:test'
-import { checkRevisionsMirror, resolveUpdated, validateFrontmatter } from '../lib/frontmatter'
+import { describe, expect, it, test } from 'bun:test'
+import {
+    checkMsigTitlesMirror,
+    checkRevisionsMirror,
+    resolveUpdated,
+    validateFrontmatter,
+} from '../lib/frontmatter'
 import type { RevisionEntry } from '../lib/types'
 
 const valid = () => ({
@@ -34,7 +39,11 @@ describe('validateFrontmatter v2', () => {
         expect(errors.some((e) => e.includes('standard'))).toBe(true)
     })
     test('accepts Superseded status with superseded-by', () => {
-        const fm = { ...valid(), status: 'Superseded', 'superseded-by': ['VP-0002'] }
+        const fm = {
+            ...valid(),
+            status: 'Superseded',
+            'superseded-by': ['VP-0002'],
+        }
         expect(validateFrontmatter(fm, SLUG).errors).toEqual([])
     })
     test('rejects Superseded without superseded-by', () => {
@@ -120,7 +129,14 @@ describe('validateFrontmatter v2', () => {
         const base = {
             ...valid(),
             status: 'Executed',
-            msigs: [{ proposer: 'greymassfuel', proposal: 'giftram', status: 'executed', txid }],
+            msigs: [
+                {
+                    proposer: 'greymassfuel',
+                    proposal: 'giftram',
+                    status: 'executed',
+                    txid,
+                },
+            ],
         }
         expect(validateFrontmatter(base, SLUG).errors.some((e) => e.includes('resolution'))).toBe(
             true,
@@ -138,7 +154,11 @@ describe('validateFrontmatter v2', () => {
 describe('checkRevisions (via validateFrontmatter)', () => {
     const revisions = (): RevisionEntry[] => [
         { version: 1, date: '2026-08-02', summary: 'Initial draft.' },
-        { version: 2, date: '2026-08-11', summary: 'Raised creator admission to a 15/21 BP MSIG.' },
+        {
+            version: 2,
+            date: '2026-08-11',
+            summary: 'Raised creator admission to a 15/21 BP MSIG.',
+        },
     ]
 
     test('absent revisions stays valid (unversioned)', () => {
@@ -213,7 +233,11 @@ describe('checkRevisions (via validateFrontmatter)', () => {
 
     test('normalizes Date-typed dates from the YAML parser', () => {
         const bad = [{ version: 1, date: new Date('2026-08-02T00:00:00Z'), summary: 'Draft.' }]
-        const fm = { ...valid(), created: new Date('2026-08-01T00:00:00Z'), revisions: bad }
+        const fm = {
+            ...valid(),
+            created: new Date('2026-08-01T00:00:00Z'),
+            revisions: bad,
+        }
         const { value, errors } = validateFrontmatter(fm, SLUG)
         expect(errors).toEqual([])
         expect(value?.revisions?.[0].date).toBe('2026-08-02')
@@ -315,5 +339,256 @@ describe('resolveUpdated', () => {
             { version: 2, date: '2026-08-02', summary: 'Out of order.' },
         ]
         expect(resolveUpdated(revisions, '2026-01-01')).toBe('2026-08-11')
+    })
+})
+
+describe('msigs step entries', () => {
+    const base = {
+        vp: 'VP-0001',
+        title: 'Test',
+        standard: 'VPS-1',
+        status: 'Draft',
+        authors: ['A'],
+        created: '2026-01-01',
+        accounts: [],
+        sentiment: [],
+        requires: [],
+    }
+    const validate = (msigs: unknown) => {
+        const { errors } = validateFrontmatter({ ...base, msigs }, 'vp-0001-test')
+        return errors
+    }
+
+    it('accepts a planned entry with no proposer or proposal', () => {
+        expect(validate([{ status: 'planned', title: 'Create the treasury account' }])).toEqual([])
+    })
+
+    it('rejects a planned entry that carries a binding', () => {
+        const errors = validate([{ status: 'planned', proposer: 'test.gm', proposal: 'aaa' }])
+        expect(errors.join(' ')).toContain('planned')
+    })
+
+    it('requires proposer and proposal on a non-planned entry', () => {
+        const errors = validate([{ status: 'active' }])
+        expect(errors.join(' ')).toContain('proposer')
+    })
+
+    it('accepts a title of 140 characters and rejects 141', () => {
+        expect(validate([{ status: 'planned', title: 'x'.repeat(140) }])).toEqual([])
+        expect(validate([{ status: 'planned', title: 'x'.repeat(141) }]).join(' ')).toContain(
+            '1-140',
+        )
+    })
+
+    it('rejects an empty title', () => {
+        expect(validate([{ status: 'planned', title: '' }]).join(' ')).toContain('1-140')
+    })
+
+    it('rejects a multi-line title', () => {
+        expect(validate([{ status: 'planned', title: 'a\nb' }]).join(' ')).toContain('single line')
+    })
+
+    it('rejects markup in a title', () => {
+        expect(validate([{ status: 'planned', title: 'use `code`' }]).join(' ')).toContain(
+            'plain text',
+        )
+    })
+
+    it('rejects an unknown key inside an entry', () => {
+        const errors = validate([{ status: 'planned', title: 'ok', notes: 'no' }])
+        expect(errors.join(' ')).toContain('unknown key')
+    })
+})
+
+describe('msigs supersedes', () => {
+    const base = {
+        vp: 'VP-0001',
+        title: 'Test',
+        standard: 'VPS-1',
+        status: 'Draft',
+        authors: ['A'],
+        created: '2026-01-01',
+        accounts: [],
+        sentiment: [],
+        requires: [],
+    }
+    const validate = (msigs: unknown) => {
+        const { errors } = validateFrontmatter({ ...base, msigs }, 'vp-0001-test')
+        return errors
+    }
+    const expired = { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa', status: 'expired' }
+
+    it('accepts a retry that supersedes an earlier expired entry', () => {
+        expect(
+            validate([
+                expired,
+                {
+                    proposer: 'test.gm',
+                    proposal: 'bbbbbbbbbbbb',
+                    status: 'active',
+                    supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa' },
+                },
+            ]),
+        ).toEqual([])
+    })
+
+    it('rejects a supersedes target that does not exist', () => {
+        const errors = validate([
+            {
+                proposer: 'test.gm',
+                proposal: 'bbbbbbbbbbbb',
+                status: 'active',
+                supersedes: { proposer: 'test.gm', proposal: 'cccccccccccc' },
+            },
+        ])
+        expect(errors.join(' ')).toContain('must name an earlier entry')
+    })
+
+    it('rejects a supersedes target that appears later in the list', () => {
+        const errors = validate([
+            {
+                proposer: 'test.gm',
+                proposal: 'bbbbbbbbbbbb',
+                status: 'active',
+                supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa' },
+            },
+            expired,
+        ])
+        expect(errors.join(' ')).toContain('must name an earlier entry')
+    })
+
+    it('rejects superseding an executed entry', () => {
+        const errors = validate([
+            {
+                proposer: 'test.gm',
+                proposal: 'aaaaaaaaaaaa',
+                status: 'executed',
+                txid: 'a'.repeat(64),
+            },
+            {
+                proposer: 'test.gm',
+                proposal: 'bbbbbbbbbbbb',
+                status: 'active',
+                supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa' },
+            },
+        ])
+        expect(errors.join(' ')).toContain('expired or cancelled')
+    })
+
+    it('rejects two entries superseding the same entry', () => {
+        const errors = validate([
+            expired,
+            {
+                proposer: 'test.gm',
+                proposal: 'bbbbbbbbbbbb',
+                status: 'cancelled',
+                supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa' },
+            },
+            {
+                proposer: 'test.gm',
+                proposal: 'cccccccccccc',
+                status: 'active',
+                supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa' },
+            },
+        ])
+        expect(errors.join(' ')).toContain('already superseded')
+    })
+
+    it('rejects an unknown key inside supersedes', () => {
+        const errors = validate([
+            expired,
+            {
+                proposer: 'test.gm',
+                proposal: 'bbbbbbbbbbbb',
+                status: 'active',
+                supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa', why: 'x' },
+            },
+        ])
+        expect(errors.join(' ')).toContain('unknown key')
+    })
+})
+
+describe('checkMsigTitlesMirror', () => {
+    const run = (en: unknown, tr: unknown) => {
+        const errors: string[] = []
+        checkMsigTitlesMirror(en as never, tr as never, errors)
+        return errors
+    }
+    const titled = [
+        { status: 'planned', title: 'Create the account' },
+        { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa', status: 'active' },
+        { status: 'planned', title: 'Deploy the contract' },
+    ]
+
+    it('passes when neither side has titles', () => {
+        expect(run([{ proposer: 'a', proposal: 'b', status: 'active' }], undefined)).toEqual([])
+    })
+
+    it('requires the translation list when English has a title', () => {
+        expect(run(titled, undefined).join(' ')).toContain('must be present')
+    })
+
+    it('rejects the translation list when English has no titles', () => {
+        const errors = run(
+            [{ proposer: 'a', proposal: 'b', status: 'active' }],
+            [{ step: 1, title: 'x' }],
+        )
+        expect(errors.join(' ')).toContain('must be present')
+    })
+
+    it('accepts one entry per titled English entry in ascending step order', () => {
+        expect(
+            run(titled, [
+                { step: 1, title: '계정 생성' },
+                { step: 3, title: '컨트랙트 배포' },
+            ]),
+        ).toEqual([])
+    })
+
+    it('rejects a step that names an untitled English entry', () => {
+        const errors = run(titled, [
+            { step: 1, title: 'a' },
+            { step: 2, title: 'b' },
+            { step: 3, title: 'c' },
+        ])
+        expect(errors.join(' ')).toContain('does not carry a title')
+    })
+
+    it('rejects a missing step', () => {
+        const errors = run(titled, [{ step: 1, title: 'a' }])
+        expect(errors.join(' ')).toContain('missing')
+    })
+
+    it('rejects an out-of-range step', () => {
+        const errors = run(titled, [
+            { step: 1, title: 'a' },
+            { step: 9, title: 'b' },
+        ])
+        expect(errors.join(' ')).toContain('out of range')
+    })
+
+    it('rejects a duplicated step', () => {
+        const errors = run(titled, [
+            { step: 1, title: 'a' },
+            { step: 1, title: 'b' },
+            { step: 3, title: 'c' },
+        ])
+        expect(errors.join(' ')).toContain('duplicate')
+    })
+
+    it('rejects descending step order', () => {
+        const errors = run(titled, [
+            { step: 3, title: 'a' },
+            { step: 1, title: 'b' },
+        ])
+        expect(errors.join(' ')).toContain('ascending')
+    })
+
+    it('validates translated title text independently', () => {
+        const errors = run(titled, [
+            { step: 1, title: '' },
+            { step: 3, title: 'ok' },
+        ])
+        expect(errors.join(' ')).toContain('1-140')
     })
 })

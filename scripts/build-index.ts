@@ -42,6 +42,7 @@ const index: IndexEntry[] = await Promise.all(
                 current: t.current,
                 title: extractCardFields(t.body).title,
                 excerpt: resolveExcerpt(t.frontmatter.excerpt, t.body),
+                msigs: t.frontmatter.msigs ?? [],
             })),
         }
     }),

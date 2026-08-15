@@ -28,7 +28,11 @@ Make each pass separately; do not blend them.
 4. **The implementer.** Is Next Steps executable as written: does each
    step have an actor and a definition of done? Does anything promised in
    the body lack a step? Do `msigs`/`accounts` entries match what the
-   mechanics describe? If the frontmatter lists any `msigs` entry, run
+   mechanics describe, including the `msigs` list's order, which must match
+   the execution order the mechanics describe? If a step was re-proposed
+   after the earlier attempt lapsed or was withdrawn, does the new entry
+   carry `supersedes` naming the entry it replaces, rather than appearing as
+   an unrelated new step? If the frontmatter lists any `msigs` entry, run
    `bun run verify VP-NNNN`: it rebuilds the actions from
    `proposals/<slug>/msig/index.ts` and byte-compares them against the chain,
    and a mismatch is automatically blocking. A raw "Cannot find module
@@ -38,13 +42,17 @@ Make each pass separately; do not blend them.
    passing the proposal silently.
 5. **The translator's check.** Skim `proposal.ko.md` / `proposal.zh.md`
    against the English for meaning drift in normative passages (numbers,
-   authorities, obligations). Structure is linted; meaning is not.
+   authorities, obligations). Structure is linted; meaning is not. Check that
+   every English `msigs` entry carrying a `title` has a matching translated
+   title in each translation's `msigs` list.
 6. **The standard's unlinted rules.** Read the diff, not just the file. Is a
    frozen proposal (`Executed`, `Rejected`, `Withdrawn`, `Superseded`) having
    its body or `assets/` edited? Has any existing `msigs` entry been rewritten
    to a different `{proposer, proposal}` pair rather than appended or advanced
-   in status? Both are blocking. If the proposal has an msig binding, check the
-   back-reference citation: `VP-NNNN` plus a commit-pinned GitHub URL, sole
+   in status? A `planned` entry gaining its `proposer` and `proposal` is the
+   only other in-place edit allowed to an existing entry; anything beyond a
+   status change or that one binding is blocking. If the proposal has an msig
+   binding, check the back-reference citation: `VP-NNNN` plus a commit-pinned GitHub URL, sole
    content of exactly one `msigmessager::message` action, first action of the
    transaction, VP number matching the URL path. A missing citation is
    advisory, never blocking. If the proposal carries `revisions`, does each

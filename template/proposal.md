@@ -8,6 +8,11 @@ authors:
 created: 2026-01-01
 accounts: []
 msigs: []
+# msigs:
+#     - status: planned
+#       title: Create the treasury account
+#     - status: planned
+#       title: Deploy the contract and set its configuration
 # a sentiment topic suits a proposal that produces no msig; msig sentiment is collected on its own
 sentiment: []
 requires: []

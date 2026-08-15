@@ -58,7 +58,7 @@ export function compareActions(local: Action[], onchain: Action[]): string[] {
     return mismatches
 }
 
-export async function fetchProposalRow(ref: MsigRef) {
+export async function fetchProposalRow(ref: MsigRef & { proposer: string; proposal: string }) {
     const result = await client.v1.chain.get_table_rows({
         code: 'eosio.msig',
         scope: ref.proposer,

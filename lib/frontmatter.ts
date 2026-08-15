@@ -1,7 +1,7 @@
 import { Name } from '@wharfkit/antelope'
 import { parse } from 'yaml'
 import { MSIG_STATUSES, STATUSES } from './constants'
-import type { MsigRef, ProposalFrontmatter, RevisionEntry } from './types'
+import type { MsigRef, ProposalFrontmatter, RevisionEntry, TranslatedMsigTitle } from './types'
 
 const VP_PATTERN = /^VP-\d{4}$/
 const SLUG_PATTERN = /^vp-\d{4}-[a-z0-9-]+$/
@@ -27,12 +27,17 @@ const ALLOWED_KEYS = new Set([
     'revisions',
 ])
 
-const MSIG_ENTRY_KEYS = new Set(['proposer', 'proposal', 'status', 'txid'])
+const MSIG_ENTRY_KEYS = new Set(['proposer', 'proposal', 'status', 'txid', 'title', 'supersedes'])
+const MSIG_SUPERSEDES_KEYS = new Set(['proposer', 'proposal'])
+const MSIG_TITLE_KEYS = new Set(['step', 'title'])
 const SENTIMENT_ENTRY_KEYS = new Set(['contract', 'topic'])
 const REVISION_ENTRY_KEYS = new Set(['version', 'date', 'summary'])
 const EXCERPT_MARKUP_PATTERN = /[`[\]]|\{@/
 
-export function parseProposal(markdown: string): { frontmatter: unknown; body: string } {
+export function parseProposal(markdown: string): {
+    frontmatter: unknown
+    body: string
+} {
     const match = markdown.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/)
     if (!match) {
         throw new Error('document must begin with a YAML frontmatter block delimited by ---')
@@ -203,12 +208,97 @@ export function checkRevisionsMirror(
     })
 }
 
+export function checkMsigTitlesMirror(
+    en: MsigRef[] | undefined,
+    tr: TranslatedMsigTitle[] | undefined,
+    errors: string[],
+): void {
+    const titledSteps = (en ?? [])
+        .map((entry, i) => (typeof entry.title === 'string' ? i + 1 : null))
+        .filter((step): step is number => step !== null)
+    if ((titledSteps.length === 0) !== (tr === undefined)) {
+        errors.push(
+            'msigs must be present in the translation exactly when an English msigs entry carries a title',
+        )
+    }
+    if (titledSteps.length === 0 || tr === undefined) {
+        return
+    }
+    let previous = 0
+    const seen = new Set<number>()
+    tr.forEach((entry, i) => {
+        if (typeof entry !== 'object' || entry === null) {
+            errors.push(`msigs[${i}] must be a mapping of {step, title}`)
+            return
+        }
+        const ref = entry as unknown as Record<string, unknown>
+        checkUnknownKeys(ref, MSIG_TITLE_KEYS, errors, `msigs[${i}]`)
+        if (typeof entry.step !== 'number' || !Number.isInteger(entry.step)) {
+            errors.push(`msigs[${i}].step must be an integer`)
+            return
+        }
+        if (entry.step < 1 || entry.step > (en ?? []).length) {
+            errors.push(`msigs[${i}].step ${entry.step} is out of range`)
+            return
+        }
+        if (seen.has(entry.step)) {
+            errors.push(`msigs[${i}].step ${entry.step} is a duplicate`)
+            return
+        }
+        seen.add(entry.step)
+        if (entry.step <= previous) {
+            errors.push(`msigs[${i}].step must be in ascending order`)
+        }
+        previous = entry.step
+        if (!titledSteps.includes(entry.step)) {
+            errors.push(
+                `msigs[${i}].step ${entry.step} names an English entry that does not carry a title`,
+            )
+        }
+        if (typeof entry.title !== 'string') {
+            errors.push(`msigs[${i}].title must be a string`)
+        } else {
+            checkMsigTitle(entry.title, i, errors)
+        }
+    })
+    for (const step of titledSteps) {
+        if (!seen.has(step)) {
+            errors.push(`msigs is missing a translated title for step ${step}`)
+        }
+    }
+}
+
+function checkMsigTitle(value: string, index: number, errors: string[]): boolean {
+    let ok = true
+    const length = [...value].length
+    if (length < 1 || length > 140) {
+        errors.push(`msigs[${index}].title must be 1-140 characters (got ${length})`)
+        ok = false
+    }
+    if (/[\n\r]/.test(value)) {
+        errors.push(`msigs[${index}].title must be a single line (no newlines)`)
+        ok = false
+    }
+    if (EXCERPT_MARKUP_PATTERN.test(value)) {
+        errors.push(
+            `msigs[${index}].title must be plain text (no backticks, brackets, or {@ template syntax)`,
+        )
+        ok = false
+    }
+    return ok
+}
+
 function validateMsigs(value: unknown, errors: string[]): value is MsigRef[] {
     if (!Array.isArray(value)) {
-        errors.push('msigs must be a list of {proposer, proposal, status, txid?}')
+        errors.push(
+            'msigs must be a list of {status, proposer?, proposal?, txid?, title?, supersedes?}',
+        )
         return false
     }
     let ok = true
+    const seen: string[] = []
+    const superseded = new Set<string>()
+    const key = (proposer: unknown, proposal: unknown) => `${String(proposer)}/${String(proposal)}`
     value.forEach((entry, i) => {
         const ref = entry as Record<string, unknown>
         if (typeof entry !== 'object' || entry === null) {
@@ -216,10 +306,22 @@ function validateMsigs(value: unknown, errors: string[]): value is MsigRef[] {
             ok = false
             return
         }
-        ok = checkNameFields(ref, ['proposer', 'proposal'], errors, `msigs[${i}]`) && ok
         if (typeof ref.status !== 'string' || !MSIG_STATUSES.includes(ref.status as never)) {
             errors.push(`msigs[${i}].status must be one of ${MSIG_STATUSES.join(', ')}`)
             ok = false
+        }
+        const planned = ref.status === 'planned'
+        if (planned) {
+            for (const field of ['proposer', 'proposal']) {
+                if (ref[field] !== undefined) {
+                    errors.push(
+                        `msigs[${i}]: ${field} is not allowed on a planned entry, which has no msig yet`,
+                    )
+                    ok = false
+                }
+            }
+        } else {
+            ok = checkNameFields(ref, ['proposer', 'proposal'], errors, `msigs[${i}]`) && ok
         }
         const executed = ref.status === 'executed'
         const hasTxid = typeof ref.txid === 'string' && TXID_PATTERN.test(ref.txid as string)
@@ -231,7 +333,59 @@ function validateMsigs(value: unknown, errors: string[]): value is MsigRef[] {
             errors.push(`msigs[${i}]: txid is only allowed when status is executed`)
             ok = false
         }
+        if (ref.title !== undefined) {
+            if (typeof ref.title !== 'string') {
+                errors.push(`msigs[${i}].title must be a string`)
+                ok = false
+            } else {
+                ok = checkMsigTitle(ref.title, i, errors) && ok
+            }
+        }
+        if (ref.supersedes !== undefined) {
+            const target = ref.supersedes as Record<string, unknown>
+            if (typeof target !== 'object' || target === null) {
+                errors.push(`msigs[${i}].supersedes must be a mapping of {proposer, proposal}`)
+                ok = false
+            } else {
+                ok =
+                    checkNameFields(
+                        target,
+                        ['proposer', 'proposal'],
+                        errors,
+                        `msigs[${i}].supersedes`,
+                    ) && ok
+                ok =
+                    checkUnknownKeys(
+                        target,
+                        MSIG_SUPERSEDES_KEYS,
+                        errors,
+                        `msigs[${i}].supersedes`,
+                    ) && ok
+                const targetKey = key(target.proposer, target.proposal)
+                const at = seen.indexOf(targetKey)
+                if (at === -1) {
+                    errors.push(`msigs[${i}].supersedes must name an earlier entry in the list`)
+                    ok = false
+                } else {
+                    const targetStatus = (value[at] as Record<string, unknown>).status
+                    if (targetStatus !== 'expired' && targetStatus !== 'cancelled') {
+                        errors.push(
+                            `msigs[${i}].supersedes must name an entry whose status is expired or cancelled`,
+                        )
+                        ok = false
+                    }
+                    if (superseded.has(targetKey)) {
+                        errors.push(
+                            `msigs[${i}].supersedes names an entry that is already superseded`,
+                        )
+                        ok = false
+                    }
+                    superseded.add(targetKey)
+                }
+            }
+        }
         ok = checkUnknownKeys(ref, MSIG_ENTRY_KEYS, errors, `msigs[${i}]`) && ok
+        seen.push(planned ? `planned:${i}` : key(ref.proposer, ref.proposal))
     })
     return ok
 }

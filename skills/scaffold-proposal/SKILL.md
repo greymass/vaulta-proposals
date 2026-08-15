@@ -24,8 +24,16 @@ root.
 3. **Frontmatter**: fill every field. For rules on any field, read the
    Frontmatter section of [standard/VPS-1.md](../../standard/VPS-1.md). Leave
    `msigs`/`sentiment` empty unless on-chain items already exist for this
-   proposal. A sentiment topic suits a proposal that produces no msig, since
-   msig sentiment is collected on its own. The template's field set is exact:
+   proposal. A proposal whose enactment takes more than one transaction SHOULD
+   declare each step up front as a `planned` entry with a `title`, in
+   execution order, so a reader sees the whole sequence from the proposal's
+   first landing; a `planned` entry carries no `proposer` or `proposal`,
+   because it names a step that has not been proposed on-chain yet. Adding a
+   `title` to any `msigs` entry requires a matching entry in every translation
+   file's own `msigs` list, so a scaffolded proposal with titled steps must
+   scaffold the translation `msigs` lists too. A sentiment topic suits a
+   proposal that produces no msig, since msig sentiment is collected on its
+   own. The template's field set is exact:
    do not invent keys, and do not add `replaces` at scaffold time. `revisions`
    is an available optional field that the template omits on purpose: a freshly
    scaffolded proposal has no revision history, so add the field later, once a

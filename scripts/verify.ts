@@ -27,27 +27,31 @@ if (vpArg) {
     const module = await loadMsigModule(slug)
     let failed = false
     for (const ref of frontmatter.msigs) {
-        const builder = module.msigs[ref.proposal]
+        const { proposer, proposal } = ref
+        if (proposer === undefined || proposal === undefined) {
+            console.log(`○ ${ref.title ?? 'planned entry'}: not yet proposed on-chain; skipping`)
+            continue
+        }
+        const builder = module.msigs[proposal]
         if (!builder) {
-            console.error(
-                `✗ ${ref.proposer}/${ref.proposal}: no local msig code named ${ref.proposal}`,
-            )
+            console.error(`✗ ${proposer}/${proposal}: no local msig code named ${proposal}`)
             failed = true
             continue
         }
-        const [local, onchain] = await Promise.all([builder(), fetchProposalRow(ref)])
+        const [local, onchain] = await Promise.all([
+            builder(),
+            fetchProposalRow({ ...ref, proposer, proposal }),
+        ])
         const mismatches = compareActions(local, onchain.transaction.actions)
         if (mismatches.length) {
-            console.error(`✗ ${ref.proposer}/${ref.proposal}:`)
+            console.error(`✗ ${proposer}/${proposal}:`)
             for (const mismatch of mismatches) console.error(`    ${mismatch}`)
             failed = true
         } else {
             const approvals = onchain.approvals
                 ? ` (approvals: ${onchain.approvals.provided}/${onchain.approvals.requested})`
                 : ''
-            console.log(
-                `✓ ${ref.proposer}/${ref.proposal}: on-chain msig matches local code${approvals}`,
-            )
+            console.log(`✓ ${proposer}/${proposal}: on-chain msig matches local code${approvals}`)
         }
     }
     process.exit(failed ? 1 : 0)

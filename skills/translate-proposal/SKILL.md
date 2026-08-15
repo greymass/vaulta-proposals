@@ -48,9 +48,14 @@ entry in `LANG_LABELS` (`lib/types.ts`) appears in the nav line as its bare tag.
    - Never editorialize, soften, or add caveats absent from the English.
      If the English is ambiguous, fix the English first.
 5. **When refreshing** after any English change, first identify what changed:
-   - Frontmatter only (a status transition, a new `msigs` entry): no
+   - Frontmatter only, no translation content: a `status` transition, or a
+     `planned` `msigs` entry gaining its `proposer`/`proposal` binding. No
      retranslation. The hash covers the whole file, frontmatter included, so
      both translations still go stale. Update `source` in each and stop.
+   - A new `msigs` entry that carries a `title`: not frontmatter-only. Add a
+     matching entry to each translation's `msigs` list, `{step, title}`, with
+     `step` set to the 1-based position of the English entry and `title`
+     translated. Then update `source` in each, as above.
    - The English `excerpt` was added or changed: each translation SHOULD carry
      a translated `excerpt` to match. A translation left without one falls back
      to extracting that language's card excerpt from its own body.

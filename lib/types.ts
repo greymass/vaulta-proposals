@@ -11,7 +11,7 @@ export const STATUSES = [
 ] as const
 export type ProposalStatus = (typeof STATUSES)[number]
 
-export const MSIG_STATUSES = ['active', 'expired', 'executed', 'cancelled'] as const
+export const MSIG_STATUSES = ['planned', 'active', 'expired', 'executed', 'cancelled'] as const
 export type MsigStatus = (typeof MSIG_STATUSES)[number]
 
 export const REQUIRED_LANGS = ['ko', 'zh'] as const
@@ -22,11 +22,18 @@ export const LANG_LABELS: Record<string, string> = {
     zh: '中文',
 }
 
-export interface MsigRef {
+export interface MsigSupersedes {
     proposer: string
     proposal: string
+}
+
+export interface MsigRef {
+    proposer?: string // required unless status === 'planned'
+    proposal?: string // required unless status === 'planned'
     status: MsigStatus
     txid?: string // 64-hex, present exactly when status === 'executed'
+    title?: string // single line, 1-140 code points, plain text
+    supersedes?: MsigSupersedes // names an earlier expired or cancelled entry
 }
 
 export interface SentimentRef {
@@ -58,12 +65,18 @@ export interface ProposalFrontmatter {
     revisions?: RevisionEntry[]
 }
 
+export interface TranslatedMsigTitle {
+    step: number // 1-based position in the English msigs list
+    title: string
+}
+
 export interface TranslationFrontmatter {
     lang: string // must match filename tag
     source: string // 40-hex git blob hash of the English source
     translator?: string
     excerpt?: string
     revisions?: RevisionEntry[]
+    msigs?: TranslatedMsigTitle[]
 }
 
 export interface TranslationEntry {
@@ -72,6 +85,7 @@ export interface TranslationEntry {
     current: boolean
     title: string
     excerpt: string
+    msigs: TranslatedMsigTitle[]
 }
 
 export interface IndexEntry extends ProposalFrontmatter {
