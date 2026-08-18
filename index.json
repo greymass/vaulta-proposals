@@ -1,5 +1,5 @@
 {
-    "generated": "2026-08-15T01:40:30.816Z",
+    "generated": "2026-08-17T04:06:23.629Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -56,33 +56,58 @@
                 "new.vaulta",
                 "eosio",
                 "eosio.prods",
-                "core.vaulta",
-                "admin.grants",
-                "fund.wram"
+                "core.vaulta"
             ],
-            "msigs": [],
+            "msigs": [
+                {
+                    "status": "planned",
+                    "title": "Create new.vaulta with network governance authorities and fund its RAM"
+                },
+                {
+                    "status": "planned",
+                    "title": "Deploy the create contract code and ABI to new.vaulta at the published hash"
+                }
+            ],
             "sentiment": [],
             "requires": [],
-            "excerpt": "new.vaulta is a self-serve account creation contract: a user pays in the network token and the contract creates the account and buys its RAM in one step, with no operator involved. It is the user-funded counterpart to VP-0001, and deploying it requires 15/21 BP approval.",
+            "excerpt": "new.vaulta is a self-serve account creation contract: a user pays in the network token and the contract creates the account and buys its RAM in one step, with no operator involved. It is the user-funded counterpart to VP-0001.",
             "slug": "vp-0002-account-creation",
             "path": "proposals/vp-0002-account-creation/proposal.md",
-            "updated": "2026-08-11",
+            "updated": "2026-08-15",
             "translations": [
                 {
                     "lang": "ko",
                     "path": "proposals/vp-0002-account-creation/proposal.ko.md",
                     "current": true,
                     "title": "셀프서비스 계정 생성",
-                    "excerpt": "new.vaulta는 셀프서비스, 결제 기반의 계정 생성 컨트랙트입니다. 사용자가 네트워크 토큰으로 비용을 지불하면 컨트랙트가 운영자 개입 없이 단일 단계로 계정을 생성하고 해당 계정의 RAM을 구매합니다. 이는 VP-0001의 생성자 주도·네트워크 부담 경로에 대응하는 사용자 부담 경로이며, 배포에는 15/21 BP 승인이 필요합니다.",
-                    "msigs": []
+                    "excerpt": "new.vaulta는 셀프서비스, 결제 기반의 계정 생성 컨트랙트입니다. 사용자가 네트워크 토큰으로 비용을 지불하면 컨트랙트가 운영자 개입 없이 단일 단계로 계정을 생성하고 해당 계정의 RAM을 구매합니다. 이는 VP-0001의 생성자 주도·네트워크 부담 경로에 대응하는 사용자 부담 경로입니다.",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "네트워크 거버넌스 권한으로 new.vaulta를 생성하고 RAM을 조달"
+                        },
+                        {
+                            "step": 2,
+                            "title": "게시된 해시의 create 컨트랙트 코드와 ABI를 new.vaulta에 배포"
+                        }
+                    ]
                 },
                 {
                     "lang": "zh",
                     "path": "proposals/vp-0002-account-creation/proposal.zh.md",
                     "current": true,
                     "title": "自助式账户创建",
-                    "excerpt": "new.vaulta 是一个自助式、由付款驱动的账户创建合约：用户以网络代币支付，合约便在单一步骤中创建其账户并购买该账户的 RAM，全程无需运营方参与。它是 VP-0001 中创建者主导、由网络承担成本这一路径的自行付费对应方。将该合约部署到 new.vaulta 账户下需要 15/21 BP 批准。",
-                    "msigs": []
+                    "excerpt": "new.vaulta 是一个自助式、由付款驱动的账户创建合约：用户以网络代币支付，合约便在单一步骤中创建其账户并购买该账户的 RAM，全程无需运营方参与。它是 VP-0001 中创建者主导、由网络承担成本这一路径的自行付费对应方。",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "以网络治理权限创建 new.vaulta 并为其调拨 RAM"
+                        },
+                        {
+                            "step": 2,
+                            "title": "将已公布哈希的 create 合约代码与 ABI 部署到 new.vaulta"
+                        }
+                    ]
                 }
             ]
         }

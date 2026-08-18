@@ -118,4 +118,4 @@ This is verified against the system contracts and Spring source:
 
 ## Next Steps
 
-A working prototype has been developed and demonstrated on the Jungle 4 testnet, with its source published at [`contracts/gift`](https://github.com/aaroncox/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/gift). Remaining work includes settling the open questions, productionizing the contract, and preparing the MSIG sequence (create `ram.vaulta`, deploy the contract, set `eosio.code`, and transfer the seed RAM). Creator admissions follow as separate MSIGs once the system is live.
+A working prototype has been developed and demonstrated on the Jungle 4 testnet, with its source published at [`contracts/gift`](https://github.com/greymass/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/gift). Remaining work includes settling the open questions, productionizing the contract, and preparing the MSIG sequence (create `ram.vaulta`, deploy the contract, set `eosio.code`, and transfer the seed RAM). Creator admissions follow as separate MSIGs once the system is live.

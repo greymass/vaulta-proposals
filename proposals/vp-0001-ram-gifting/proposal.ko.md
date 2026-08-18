@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: e0c5fa728747d0e51f662f38a94d3230ce77c928
+source: 6a278513e9295e17c4743de1bea4bd59b5438f01
 translator: Claude (agent translation)
 excerpt: 네트워크 소유 계정 ram.vaulta가 RAM 기금을 보유하고, 승인된 생성자가 이 기금으로 신규 생성 계정에 RAM을 기증합니다. 생성자는 RAM 비용을 직접 부담하지 않고 신규 사용자를 온보딩합니다. 기증된 RAM은 RAM 시장에서 영구적으로 격리되며, 유일한 반환 경로는 기증 계정으로의 회수입니다. 시스템은 등록된 생성자가 없는 상태로 출범하며, 각 생성자는 이후 개별 15/21 BP MSIG로 승인됩니다.
 ---
@@ -105,4 +105,4 @@ excerpt: 네트워크 소유 계정 ram.vaulta가 RAM 기금을 보유하고, �
 
 ## 다음 단계
 
-작동하는 프로토타입이 개발되어 Jungle 4 테스트넷에서 시연되었으며, 그 소스는 [`contracts/gift`](https://github.com/aaroncox/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/gift)에 공개되어 있습니다. 남은 작업으로는 미해결 질문 정리, 컨트랙트의 프로덕션화, MSIG 시퀀스 준비(`ram.vaulta` 생성, 컨트랙트 배포, `eosio.code` 설정, 시드 RAM 이전)가 있습니다. 생성자 승인은 시스템 가동 이후 별도의 MSIG로 진행됩니다.
+작동하는 프로토타입이 개발되어 Jungle 4 테스트넷에서 시연되었으며, 그 소스는 [`contracts/gift`](https://github.com/greymass/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/gift)에 공개되어 있습니다. 남은 작업으로는 미해결 질문 정리, 컨트랙트의 프로덕션화, MSIG 시퀀스 준비(`ram.vaulta` 생성, 컨트랙트 배포, `eosio.code` 설정, 시드 RAM 이전)가 있습니다. 생성자 승인은 시스템 가동 이후 별도의 MSIG로 진행됩니다.
