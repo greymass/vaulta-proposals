@@ -4,8 +4,10 @@ import {
     checkRevisionsMirror,
     resolveUpdated,
     validateFrontmatter,
-} from '../lib/frontmatter'
-import type { RevisionEntry } from '../lib/types'
+} from '$lib/frontmatter'
+import type { RevisionEntry } from '$lib/types'
+
+const COMMIT = 'a1b2c3d4e5f60718293a4b5c6d7e8f9012345678'
 
 const valid = () => ({
     vp: 'VP-0001',
@@ -15,7 +17,7 @@ const valid = () => ({
     authors: ['Aaron Cox (Greymass)'],
     created: '2026-08-01',
     accounts: ['ram.vaulta'],
-    msigs: [{ proposer: 'greymassfuel', proposal: 'giftram', status: 'active' }],
+    msigs: [{ proposer: 'greymassfuel', proposal: 'giftram', commit: COMMIT, status: 'active' }],
     sentiment: [{ contract: 'sentiment.gm', topic: 'ramgifting' }],
     requires: [],
 })
@@ -57,7 +59,14 @@ describe('validateFrontmatter v2', () => {
     test('msig txid required exactly when executed', () => {
         const executed = {
             ...valid(),
-            msigs: [{ proposer: 'greymassfuel', proposal: 'giftram', status: 'executed' }],
+            msigs: [
+                {
+                    proposer: 'greymassfuel',
+                    proposal: 'giftram',
+                    commit: COMMIT,
+                    status: 'executed',
+                },
+            ],
         }
         expect(validateFrontmatter(executed, SLUG).errors.some((e) => e.includes('txid'))).toBe(
             true,
@@ -68,6 +77,7 @@ describe('validateFrontmatter v2', () => {
                 {
                     proposer: 'greymassfuel',
                     proposal: 'giftram',
+                    commit: COMMIT,
                     status: 'active',
                     txid: 'a'.repeat(64),
                 },
@@ -133,6 +143,7 @@ describe('validateFrontmatter v2', () => {
                 {
                     proposer: 'greymassfuel',
                     proposal: 'giftram',
+                    commit: COMMIT,
                     status: 'executed',
                     txid,
                 },
@@ -373,6 +384,35 @@ describe('msigs step entries', () => {
         expect(errors.join(' ')).toContain('proposer')
     })
 
+    it('accepts a bound entry carrying proposer, proposal, and commit', () => {
+        expect(
+            validate([
+                { status: 'active', proposer: 'test.gm', proposal: 'aaaaaaaaaaaa', commit: COMMIT },
+            ]),
+        ).toEqual([])
+    })
+
+    it('rejects a planned entry that carries a commit', () => {
+        const errors = validate([{ status: 'planned', commit: COMMIT }])
+        expect(errors.join(' ')).toContain('commit is not allowed on a planned entry')
+    })
+
+    it('requires a commit on a non-planned entry', () => {
+        const errors = validate([
+            { status: 'active', proposer: 'test.gm', proposal: 'aaaaaaaaaaaa' },
+        ])
+        expect(errors.join(' ')).toContain('commit must be a 40-character lowercase hex commit sha')
+    })
+
+    it('rejects a malformed commit sha', () => {
+        for (const commit of ['abc123', COMMIT.toUpperCase(), `${COMMIT}0`, 42]) {
+            const errors = validate([
+                { status: 'active', proposer: 'test.gm', proposal: 'aaaaaaaaaaaa', commit },
+            ])
+            expect(errors.join(' ')).toContain('commit must be a 40-character lowercase hex')
+        }
+    })
+
     it('accepts a title of 140 characters and rejects 141', () => {
         expect(validate([{ status: 'planned', title: 'x'.repeat(140) }])).toEqual([])
         expect(validate([{ status: 'planned', title: 'x'.repeat(141) }]).join(' ')).toContain(
@@ -416,7 +456,12 @@ describe('msigs supersedes', () => {
         const { errors } = validateFrontmatter({ ...base, msigs }, 'vp-0001-test')
         return errors
     }
-    const expired = { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa', status: 'expired' }
+    const expired = {
+        proposer: 'test.gm',
+        proposal: 'aaaaaaaaaaaa',
+        commit: COMMIT,
+        status: 'expired',
+    }
 
     it('accepts a retry that supersedes an earlier expired entry', () => {
         expect(
@@ -425,6 +470,7 @@ describe('msigs supersedes', () => {
                 {
                     proposer: 'test.gm',
                     proposal: 'bbbbbbbbbbbb',
+                    commit: COMMIT,
                     status: 'active',
                     supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa' },
                 },
@@ -437,6 +483,7 @@ describe('msigs supersedes', () => {
             {
                 proposer: 'test.gm',
                 proposal: 'bbbbbbbbbbbb',
+                commit: COMMIT,
                 status: 'active',
                 supersedes: { proposer: 'test.gm', proposal: 'cccccccccccc' },
             },
@@ -449,6 +496,7 @@ describe('msigs supersedes', () => {
             {
                 proposer: 'test.gm',
                 proposal: 'bbbbbbbbbbbb',
+                commit: COMMIT,
                 status: 'active',
                 supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa' },
             },
@@ -462,12 +510,14 @@ describe('msigs supersedes', () => {
             {
                 proposer: 'test.gm',
                 proposal: 'aaaaaaaaaaaa',
+                commit: COMMIT,
                 status: 'executed',
                 txid: 'a'.repeat(64),
             },
             {
                 proposer: 'test.gm',
                 proposal: 'bbbbbbbbbbbb',
+                commit: COMMIT,
                 status: 'active',
                 supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa' },
             },
@@ -481,12 +531,14 @@ describe('msigs supersedes', () => {
             {
                 proposer: 'test.gm',
                 proposal: 'bbbbbbbbbbbb',
+                commit: COMMIT,
                 status: 'cancelled',
                 supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa' },
             },
             {
                 proposer: 'test.gm',
                 proposal: 'cccccccccccc',
+                commit: COMMIT,
                 status: 'active',
                 supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa' },
             },
@@ -500,6 +552,7 @@ describe('msigs supersedes', () => {
             {
                 proposer: 'test.gm',
                 proposal: 'bbbbbbbbbbbb',
+                commit: COMMIT,
                 status: 'active',
                 supersedes: { proposer: 'test.gm', proposal: 'aaaaaaaaaaaa', why: 'x' },
             },

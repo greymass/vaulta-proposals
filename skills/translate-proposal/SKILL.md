@@ -49,7 +49,7 @@ entry in `LANG_LABELS` (`lib/types.ts`) appears in the nav line as its bare tag.
      If the English is ambiguous, fix the English first.
 5. **When refreshing** after any English change, first identify what changed:
    - Frontmatter only, no translation content: a `status` transition, or a
-     `planned` `msigs` entry gaining its `proposer`/`proposal` binding. No
+     `planned` `msigs` entry gaining its `proposer`/`proposal`/`commit` binding. No
      retranslation. The hash covers the whole file, frontmatter included, so
      both translations still go stale. Update `source` in each and stop.
    - A new `msigs` entry that carries a `title`: not frontmatter-only. Add a

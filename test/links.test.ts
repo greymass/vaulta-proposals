@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test'
-import { lintLinks } from '../lib/links'
+import { lintLinks } from '$lib/links'
 
 const opts = {
     slug: 'vp-0001-ram-gifting',

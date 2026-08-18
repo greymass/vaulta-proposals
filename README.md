@@ -34,7 +34,7 @@ This is the same check CI runs; see [CONTRIBUTING.md](CONTRIBUTING.md) for the f
 bun run propose <vp> <name>
 ```
 
-Run without flags, this prints the transaction as a dry run and broadcasts nothing. Passing `--broadcast` submits the `eosio.msig::propose` transaction on-chain, and requires `PROPOSER_PERMISSION` and `PROPOSER_PRIVATE_KEY` to be set in `.env`.
+Run without flags, this prints the transaction as a dry run and broadcasts nothing. `--commit <sha>` sets the commit the citation pins, and `--help` lists it alongside any flag the selected builder declares. Passing `--broadcast` submits the `eosio.msig::propose` transaction on-chain, and requires `PROPOSER_PERMISSION` and `PROPOSER_PRIVATE_KEY` to be set in `.env`.
 
 ## Statuses
 

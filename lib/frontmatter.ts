@@ -6,6 +6,7 @@ import type { MsigRef, ProposalFrontmatter, RevisionEntry, TranslatedMsigTitle }
 const VP_PATTERN = /^VP-\d{4}$/
 const SLUG_PATTERN = /^vp-\d{4}-[a-z0-9-]+$/
 const TXID_PATTERN = /^[0-9a-f]{64}$/
+const COMMIT_PATTERN = /^[0-9a-f]{40}$/
 const STANDARD_PATTERN = /^VPS-\d+$/
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/
 
@@ -27,7 +28,15 @@ const ALLOWED_KEYS = new Set([
     'revisions',
 ])
 
-const MSIG_ENTRY_KEYS = new Set(['proposer', 'proposal', 'status', 'txid', 'title', 'supersedes'])
+const MSIG_ENTRY_KEYS = new Set([
+    'proposer',
+    'proposal',
+    'commit',
+    'status',
+    'txid',
+    'title',
+    'supersedes',
+])
 const MSIG_SUPERSEDES_KEYS = new Set(['proposer', 'proposal'])
 const MSIG_TITLE_KEYS = new Set(['step', 'title'])
 const SENTIMENT_ENTRY_KEYS = new Set(['contract', 'topic'])
@@ -291,7 +300,7 @@ function checkMsigTitle(value: string, index: number, errors: string[]): boolean
 function validateMsigs(value: unknown, errors: string[]): value is MsigRef[] {
     if (!Array.isArray(value)) {
         errors.push(
-            'msigs must be a list of {status, proposer?, proposal?, txid?, title?, supersedes?}',
+            'msigs must be a list of {status, proposer?, proposal?, commit?, txid?, title?, supersedes?}',
         )
         return false
     }
@@ -312,7 +321,7 @@ function validateMsigs(value: unknown, errors: string[]): value is MsigRef[] {
         }
         const planned = ref.status === 'planned'
         if (planned) {
-            for (const field of ['proposer', 'proposal']) {
+            for (const field of ['proposer', 'proposal', 'commit']) {
                 if (ref[field] !== undefined) {
                     errors.push(
                         `msigs[${i}]: ${field} is not allowed on a planned entry, which has no msig yet`,
@@ -322,6 +331,12 @@ function validateMsigs(value: unknown, errors: string[]): value is MsigRef[] {
             }
         } else {
             ok = checkNameFields(ref, ['proposer', 'proposal'], errors, `msigs[${i}]`) && ok
+            if (typeof ref.commit !== 'string' || !COMMIT_PATTERN.test(ref.commit)) {
+                errors.push(
+                    `msigs[${i}].commit must be a 40-character lowercase hex commit sha (got ${JSON.stringify(ref.commit)})`,
+                )
+                ok = false
+            }
         }
         const executed = ref.status === 'executed'
         const hasTxid = typeof ref.txid === 'string' && TXID_PATTERN.test(ref.txid as string)

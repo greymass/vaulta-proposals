@@ -1,7 +1,12 @@
 import { APIClient, PermissionLevel } from '@wharfkit/antelope'
 import { Chains, Session } from '@wharfkit/session'
 import { WalletPluginPrivateKey } from '@wharfkit/wallet-plugin-privatekey'
-import { NODEOS_API_URL, proposerKey, proposerPermission } from './constants'
+import {
+    NODEOS_API_URL,
+    proposerKey,
+    proposerPermission,
+    REQUESTED_PRODUCER_COUNT,
+} from './constants'
 
 export const client = new APIClient({ url: NODEOS_API_URL })
 
@@ -25,7 +30,9 @@ interface GetProducersResponse {
     rows: GetProducersRow[]
 }
 
-export async function getTopProducers(count = 21): Promise<PermissionLevel[]> {
+export async function getTopProducers(
+    count = REQUESTED_PRODUCER_COUNT,
+): Promise<PermissionLevel[]> {
     const result = await client.call<GetProducersResponse>({
         path: '/v1/chain/get_producers',
         params: { json: true, limit: 200 },

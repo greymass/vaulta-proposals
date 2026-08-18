@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test'
-import { lintAssetFile } from '../lib/assets'
+import { lintAssetFile } from '$lib/assets'
 
 describe('lintAssetFile', () => {
     test('allowlisted extension passes', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test'
-import { extractCardFields, resolveExcerpt } from '../lib/excerpt'
+import { extractCardFields, resolveExcerpt } from '$lib/excerpt'
 
 const en = `# Network RAM **Endowment** for Onboarding
 [English](proposal.md) | [한국어](proposal.ko.md) | [中文](proposal.zh.md)

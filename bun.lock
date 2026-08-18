@@ -6,6 +6,7 @@
       "name": "vaulta-proposals",
       "dependencies": {
         "@wharfkit/antelope": "^1.1.1",
+        "@wharfkit/contract": "^1.2.1",
         "@wharfkit/session": "^1.6.1",
         "@wharfkit/wallet-plugin-privatekey": "^1.1.0",
         "yaml": "^2.6.0",
@@ -45,6 +46,8 @@
     "@wharfkit/antelope": ["@wharfkit/antelope@1.2.0", "", { "dependencies": { "bn.js": "^4.11.9", "brorand": "^1.1.0", "elliptic": "^6.5.4", "hash.js": "^1.0.0", "pako": "^2.1.0", "tslib": "^2.0.3" } }, "sha512-9q0nvM8yUtjKTQlukKZODAhUN2S2/cfSlIYdh2mPnaOCSH8KOLJ2gYCPuQVvH1FE9AKu312lM5TzhkRccf1VjQ=="],
 
     "@wharfkit/common": ["@wharfkit/common@1.5.0", "", { "dependencies": { "tslib": "^2.1.0" }, "peerDependencies": { "@wharfkit/antelope": "^1.0.0" } }, "sha512-eqXkOy+vshcEzK8kED+EsoTPJjlBKHYglgV9CBnZQgIlGrWIRXWH4YaXH3W7EbI/nCRJCaNqxm5fC+pgpFcp8g=="],
+
+    "@wharfkit/contract": ["@wharfkit/contract@1.2.1", "", { "dependencies": { "@wharfkit/abicache": "^1.2.0", "@wharfkit/antelope": "^1.0.4", "@wharfkit/signing-request": "^3.1.0", "tslib": "^2.1.0" } }, "sha512-3UhCtDYCyapfM2nRTrslcbvko864d4MOpxRAz7TR/ZUbRAgZsxhYLFLEv1v23/SU+vsFzAHNBmvzkLEG0OLaHQ=="],
 
     "@wharfkit/session": ["@wharfkit/session@1.6.1", "", { "dependencies": { "@wharfkit/abicache": "^1.2.1", "@wharfkit/antelope": "^1.0.11", "@wharfkit/common": "^1.2.0", "@wharfkit/signing-request": "^3.1.0", "pako": "^2.0.4", "tslib": "^2.1.0" } }, "sha512-k6ntDGOe8bvD/Ps0erTPTFMdYVFrw5cRvPcEwxytlmRRcNV/M8xWcpCYWdmGDxa8QYqynf/hAkbVh1PSwRGl5A=="],
 

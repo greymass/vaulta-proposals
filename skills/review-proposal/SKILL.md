@@ -24,7 +24,10 @@ Make each pass separately; do not blend them.
 3. **The auditor.** For every factual claim (balances, RAM figures,
    account states, contract behavior), ask: is it verifiable, is it
    current, is it sourced from frontmatter/chain rather than asserted
-   loosely in prose? Flag any number that will silently go stale.
+   loosely in prose? Flag any number that will silently go stale. When the
+   proposal pins a contract commit, check that the commit is on that
+   repository's default branch and is the newest one touching the pinned
+   path.
 4. **The implementer.** Is Next Steps executable as written: does each
    step have an actor and a definition of done? Does anything promised in
    the body lack a step? Do `msigs`/`accounts` entries match what the
@@ -35,9 +38,17 @@ Make each pass separately; do not blend them.
    an unrelated new step? If the frontmatter lists any `msigs` entry, run
    `bun run verify VP-NNNN`: it rebuilds the actions from
    `proposals/<slug>/msig/index.ts` and byte-compares them against the chain,
-   and a mismatch is automatically blocking. A raw "Cannot find module
-   .../msig/index.ts" error means the proposal asserts an msig binding it has
-   no reproducible code for, which is itself a blocking finding. The command
+   and a mismatch is automatically blocking. An entry that names a `proposer`
+   and a `proposal` but has no builder reports that
+   `proposals/<slug>/msig/index.ts` is missing or that the file holds no msig of
+   that name; the proposal asserts a binding it has no reproducible code for, so
+   that is blocking. An entry still lacking `proposer`, `proposal`, and
+   `commit` is skipped
+   with a `○ ... not yet proposed on-chain` line, and a proposal whose entries
+   are every one of them planned reports that no on-chain comparison was made.
+   A declared sequence with no code behind it conforms to VPS-1, because msig
+   code is written when a step is proposed rather than at submission, so read
+   those lines as expected output and not as a finding. The command
    needs network access; if it is unavailable, say so in the review rather than
    passing the proposal silently.
 5. **The translator's check.** Skim `proposal.ko.md` / `proposal.zh.md`
@@ -49,12 +60,15 @@ Make each pass separately; do not blend them.
    frozen proposal (`Executed`, `Rejected`, `Withdrawn`, `Superseded`) having
    its body or `assets/` edited? Has any existing `msigs` entry been rewritten
    to a different `{proposer, proposal}` pair rather than appended or advanced
-   in status? A `planned` entry gaining its `proposer` and `proposal` is the
+   in status? A `planned` entry gaining its `proposer`, `proposal`, and
+   `commit` is the
    only other in-place edit allowed to an existing entry; anything beyond a
    status change or that one binding is blocking. If the proposal has an msig
    binding, check the back-reference citation: `VP-NNNN` plus a commit-pinned GitHub URL, sole
    content of exactly one `msigmessager::message` action, first action of the
-   transaction, VP number matching the URL path. A missing citation is
+   transaction, VP number matching the URL path. The entry's `commit` is what
+   `verify` replays into the rebuild, so check it against the SHA in the
+   citation the chain holds; a disagreement between the two is blocking. A missing citation is
    advisory, never blocking. If the proposal carries `revisions`, does each
    entry describe a change a returning reader would notice (a requirement,
    account, threshold, or scope change), and was it added in the same commit

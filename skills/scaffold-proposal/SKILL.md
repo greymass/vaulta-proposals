@@ -16,8 +16,8 @@ root.
    Create the directory under `proposals/`.
 2. **Copy the template**: `cp template/proposal.md proposals/vp-0000-<slug>/proposal.md`.
    Copy only `proposal.md`, not the whole `template/` directory (see step 6 for
-   the template's msig code, whose import depth differs). The template ships the
-   three-language nav line. Until `proposal.ko.md` and `proposal.zh.md` exist,
+   the template's msig code). The template ships the three-language nav line.
+   Until `proposal.ko.md` and `proposal.zh.md` exist,
    `bun run verify` reports that the nav line should list English only and that
    the two sibling links do not resolve. Ignore all three; do not edit the nav
    line. They clear when step 7 creates the translations.
@@ -27,8 +27,8 @@ root.
    proposal. A proposal whose enactment takes more than one transaction SHOULD
    declare each step up front as a `planned` entry with a `title`, in
    execution order, so a reader sees the whole sequence from the proposal's
-   first landing; a `planned` entry carries no `proposer` or `proposal`,
-   because it names a step that has not been proposed on-chain yet. Adding a
+   first landing; a `planned` entry carries no `proposer`, `proposal`, or
+   `commit`, because it names a step that has not been proposed on-chain yet. Adding a
    `title` to any `msigs` entry requires a matching entry in every translation
    file's own `msigs` list, so a scaffolded proposal with titled steps must
    scaffold the translation `msigs` lists too. A sentiment topic suits a
@@ -56,12 +56,17 @@ root.
    - Vendor any needed external material into `assets/` (check the standard's
      format allowlist) instead of linking out.
 6. **Msig code** (only if this proposal already has an on-chain msig): copy
-   `template/msig/index.ts` to `proposals/vp-0000-<slug>/msig/index.ts` and
-   change its import to `../../../lib/types` (one level deeper than the
-   template). Do not copy the whole `template/` directory; the template's import
-   depth is wrong for a proposal directory and fails `bun run check`. Skip this
-   step entirely when `msigs` is empty; msig code is optional at submission
-   time.
+   `template/msig/index.ts` to `proposals/vp-0000-<slug>/msig/index.ts`. Its
+   `$lib/` imports resolve from any depth, so copy the file as it stands and
+   leave the imports alone. Do not copy the whole `template/` directory. Skip
+   this step entirely when `msigs` is empty; msig code is optional at submission
+   time. A builder's `build` takes a `BuildContext` carrying `vp`, `slug`,
+   `commit`, and the resolved values of the flags that builder declares; read
+   every per-invocation input from that context rather than from `process.env`,
+   and declare a flag for anything the runner must supply. `build` returns only
+   the step's own actions: the tooling prepends the VPS-1 citation as action
+   zero, authorized by the permission levels the builder declares in
+   `citationAuth`.
 7. **Translations**: follow [translate-proposal](../translate-proposal/SKILL.md)
    to produce `proposal.ko.md` and `proposal.zh.md`. A proposal without them
    fails CI.

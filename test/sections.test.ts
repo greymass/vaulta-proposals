@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test'
-import { lintSections, lintStructureMirror } from '../lib/sections'
+import { lintSections, lintStructureMirror } from '$lib/sections'
 
 const good = `# Title
 

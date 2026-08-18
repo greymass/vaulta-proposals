@@ -6,11 +6,13 @@
         "index": "bun scripts/build-index.ts",
         "propose": "bun scripts/propose.ts",
         "verify": "bun scripts/verify.ts",
+        "codegen": "bunx @wharfkit/cli generate --json lib/codegen/eosio.abi.json --file lib/codegen/eosio.ts eosio && bunx @wharfkit/cli generate --json lib/codegen/msigmessager.abi.json --file lib/codegen/msigmessager.ts msigmessager",
         "check": "bunx tsc --noEmit && bunx biome check .",
         "test": "bun test"
     },
     "dependencies": {
         "@wharfkit/antelope": "^1.1.1",
+        "@wharfkit/contract": "^1.2.1",
         "@wharfkit/session": "^1.6.1",
         "@wharfkit/wallet-plugin-privatekey": "^1.1.0",
         "yaml": "^2.6.0"

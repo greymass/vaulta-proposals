@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test'
-import { lintLinks } from '../lib/links'
-import { lintFences, lintRawHtml, stripCode } from '../lib/markdown'
+import { lintLinks } from '$lib/links'
+import { lintFences, lintRawHtml, stripCode } from '$lib/markdown'
 
 const opts = { slug: 'vp-0001-ram-gifting', fileExists: () => true }
 
