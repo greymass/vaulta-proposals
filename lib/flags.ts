@@ -11,7 +11,7 @@ export const SHARED_FLAGS: Record<string, MsigFlag> = {
     },
 }
 
-const VALUELESS = new Set(['broadcast', 'help'])
+const VALUELESS = new Set(['broadcast', 'help', 'summary'])
 
 export type FlagSource = 'flag' | 'environment' | 'default'
 

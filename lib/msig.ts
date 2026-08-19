@@ -2,6 +2,7 @@ import { existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import { type Action, Name, PackedTransaction, Serializer, Transaction } from '@wharfkit/antelope'
 import { ROOT as root } from './constants'
+import { parseProposal, validateFrontmatter } from './frontmatter'
 import type { BoundMsigRef, MsigBuilder, MsigModule, MsigRef } from './types'
 import { client } from './wharf'
 
@@ -39,6 +40,34 @@ export async function loadMsigModule(slug: string): Promise<MsigModule> {
         )
     }
     return module as MsigModule
+}
+
+export interface ResolvedMsig {
+    slug: string
+    vp: string
+    name: string
+    builder: MsigBuilder
+}
+
+// The one path from `<vp> <proposal-name>` to a builder, so `propose` and `hash-msig` cannot disagree.
+export async function resolveMsigBuilder(
+    vpArg: string,
+    proposalName: string,
+): Promise<ResolvedMsig> {
+    const slug = resolveSlug(vpArg)
+    const markdown = await Bun.file(join(root, 'proposals', slug, 'proposal.md')).text()
+    const { value: frontmatter } = validateFrontmatter(parseProposal(markdown).frontmatter, slug)
+    if (!frontmatter) {
+        throw new Error(`invalid frontmatter in ${slug}; run \`bun run index\` for details`)
+    }
+    const module = await loadMsigModule(slug)
+    const builder = module.msigs[proposalName]
+    if (!builder) {
+        throw new Error(
+            `no msig named ${proposalName}; available: ${Object.keys(module.msigs).join(', ')}`,
+        )
+    }
+    return { slug, vp: frontmatter.vp, name: proposalName, builder }
 }
 
 export function lintMsigBuilders(builders: Record<string, MsigBuilder>, entryCount: number) {

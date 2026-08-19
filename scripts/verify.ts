@@ -102,7 +102,15 @@ if (vpArg) {
             failed = true
             continue
         }
-        const onchain = await fetchProposalRow(ref)
+        let onchain: Awaited<ReturnType<typeof fetchProposalRow>>
+        try {
+            onchain = await fetchProposalRow(ref)
+        } catch (error) {
+            const message = error instanceof Error ? error.message : String(error)
+            console.error(`✗ ${proposer}/${proposal}: ${message}`)
+            failed = true
+            continue
+        }
         const mismatches = compareActions(local, onchain.transaction.actions)
         if (mismatches.length) {
             console.error(`✗ ${proposer}/${proposal}:`)

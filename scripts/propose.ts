@@ -1,12 +1,11 @@
-import { join } from 'node:path'
-import { Serializer, Transaction } from '@wharfkit/antelope'
+import { type Action, Serializer, Transaction } from '@wharfkit/antelope'
 import {
     COMMIT_PATTERN,
     checkCitationActions,
     lintCitationActions,
     prependCitation,
 } from '$lib/citation'
-import { PROPOSAL_LIFETIME_DAYS, proposerPermission, ROOT } from '$lib/constants'
+import { PROPOSAL_LIFETIME_DAYS, proposerPermission } from '$lib/constants'
 import {
     COMMIT_FLAG,
     declaredFlags,
@@ -17,17 +16,19 @@ import {
     sourceLabel,
     unknownFlags,
 } from '$lib/flags'
-import { parseProposal, validateFrontmatter } from '$lib/frontmatter'
-import { loadMsigModule, resolveSlug } from '$lib/msig'
+import { type ResolvedMsig, resolveMsigBuilder } from '$lib/msig'
+import { summarizeActions } from '$lib/summary'
 import type { MsigFlag } from '$lib/types'
 import { getTopProducers, makeProposerSession } from '$lib/wharf'
 
 const args = parseArgs(process.argv.slice(2))
 const [vpArg, proposalName] = args.positionals
 const broadcast = args.switches.has('broadcast')
+const summary = args.switches.has('summary')
 const help = args.switches.has('help')
 
-const USAGE = 'usage: bun run propose <vp> <proposal-name> [--commit <sha>] [--broadcast]'
+const USAGE =
+    'usage: bun run propose <vp> <proposal-name> [--commit <sha>] [--summary] [--broadcast]'
 
 function usage(declared?: Record<string, MsigFlag>, log: (line: string) => void = console.error) {
     log(USAGE)
@@ -53,22 +54,14 @@ if (!vpArg || !proposalName) {
     process.exit(1)
 }
 
-const slug = resolveSlug(vpArg)
-const markdown = await Bun.file(join(ROOT, 'proposals', slug, 'proposal.md')).text()
-const { value: frontmatter } = validateFrontmatter(parseProposal(markdown).frontmatter, slug)
-if (!frontmatter) {
-    console.error(`invalid frontmatter in ${slug}; run \`bun run index\` for details`)
+let resolvedMsig: ResolvedMsig
+try {
+    resolvedMsig = await resolveMsigBuilder(vpArg, proposalName)
+} catch (error) {
+    console.error(error instanceof Error ? error.message : String(error))
     process.exit(1)
 }
-
-const module = await loadMsigModule(slug)
-const builder = module.msigs[proposalName]
-if (!builder) {
-    console.error(
-        `no msig named ${proposalName}; available: ${Object.keys(module.msigs).join(', ')}`,
-    )
-    process.exit(1)
-}
+const { slug, vp, builder } = resolvedMsig
 
 const declared = declaredFlags(builder.flags)
 if (help) {
@@ -109,12 +102,19 @@ const builderFlags = Object.fromEntries(
     Object.entries(resolved).filter(([name]) => name !== COMMIT_FLAG),
 )
 const ctx = {
-    vp: frontmatter.vp,
+    vp,
     slug,
     commit,
     flags: flagValues(builderFlags),
 }
-const actions = prependCitation(proposalName, builder, ctx, await builder.build(ctx))
+let actions: Action[]
+try {
+    actions = prependCitation(proposalName, builder, ctx, await builder.build(ctx))
+} catch (error) {
+    const message = error instanceof Error ? error.message : String(error)
+    console.error(`building ${slug} :: ${proposalName} failed: ${message}`)
+    process.exit(1)
+}
 const header = {
     expiration: new Date(Date.now() + PROPOSAL_LIFETIME_DAYS * 24 * 60 * 60 * 1000)
         .toISOString()
@@ -125,7 +125,11 @@ const header = {
 const trx = Transaction.from({ ...header, actions })
 
 console.log(`msig ${slug} :: ${proposalName}`)
-console.log(JSON.stringify(Serializer.objectify(trx), null, 4))
+if (summary) {
+    for (const line of summarizeActions(actions)) console.log(line)
+} else {
+    console.log(JSON.stringify(Serializer.objectify(trx), null, 4))
+}
 
 const citationProblems = [...lintCitationActions(actions), ...checkCitationActions(actions)]
 
