@@ -37,12 +37,14 @@ root.
    do not invent keys, and do not add `replaces` at scaffold time. `revisions`
    is an available optional field that the template omits on purpose: a freshly
    scaffolded proposal has no revision history, so add the field later, once a
-   merged change to this proposal earns its first entry. Reciprocity is linted
-   (`replaces` on A requires `superseded-by` on B, which in turn requires B's
-   status to be `Superseded`), and a placeholder `VP-0000` cannot be written
-   into another proposal. If this proposal supersedes an existing one, say so in
-   prose and in Next Steps; the maintainer wires `replaces` and `superseded-by`
-   together when the real number is assigned.
+   merged change to this proposal earns its first entry. Each entry's `summary`
+   is 1 to 140 characters counted in Unicode code points, on a single line and
+   in plain text. Reciprocity is linted (`replaces` on A requires
+   `superseded-by` on B, which in turn requires B's status to be `Superseded`),
+   and a placeholder `VP-0000` cannot be written into another proposal. If this
+   proposal supersedes an existing one, say so in prose and in Next Steps; the
+   maintainer wires `replaces` and `superseded-by` together when the real number
+   is assigned.
 4. **Write the body**: keep `## Summary` first and `## Open Questions` /
    `## Next Steps` last. Replace or delete the suggested middle sections
    (Rationale, Mechanics) freely; use whatever `##` sections fit the
