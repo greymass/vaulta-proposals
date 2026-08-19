@@ -1,4 +1,4 @@
-import type { Action } from '@wharfkit/antelope'
+import type { Action, PermissionLevelType } from '@wharfkit/antelope'
 
 export const STATUSES = [
     'Draft',
@@ -11,7 +11,7 @@ export const STATUSES = [
 ] as const
 export type ProposalStatus = (typeof STATUSES)[number]
 
-export const MSIG_STATUSES = ['active', 'expired', 'executed', 'cancelled'] as const
+export const MSIG_STATUSES = ['planned', 'active', 'expired', 'executed', 'cancelled'] as const
 export type MsigStatus = (typeof MSIG_STATUSES)[number]
 
 export const REQUIRED_LANGS = ['ko', 'zh'] as const
@@ -22,12 +22,22 @@ export const LANG_LABELS: Record<string, string> = {
     zh: '中文',
 }
 
-export interface MsigRef {
+export interface MsigSupersedes {
     proposer: string
     proposal: string
+}
+
+export interface MsigRef {
+    proposer?: string // required unless status === 'planned'
+    proposal?: string // required unless status === 'planned'
+    commit?: string // 40-hex, required unless status === 'planned'
     status: MsigStatus
     txid?: string // 64-hex, present exactly when status === 'executed'
+    title?: string // single line, 1-140 code points, plain text
+    supersedes?: MsigSupersedes // names an earlier expired or cancelled entry
 }
+
+export type BoundMsigRef = MsigRef & { proposer: string; proposal: string; commit: string }
 
 export interface SentimentRef {
     contract: string
@@ -58,12 +68,18 @@ export interface ProposalFrontmatter {
     revisions?: RevisionEntry[]
 }
 
+export interface TranslatedMsigTitle {
+    step: number // 1-based position in the English msigs list
+    title: string
+}
+
 export interface TranslationFrontmatter {
     lang: string // must match filename tag
     source: string // 40-hex git blob hash of the English source
     translator?: string
     excerpt?: string
     revisions?: RevisionEntry[]
+    msigs?: TranslatedMsigTitle[]
 }
 
 export interface TranslationEntry {
@@ -72,6 +88,7 @@ export interface TranslationEntry {
     current: boolean
     title: string
     excerpt: string
+    msigs: TranslatedMsigTitle[]
 }
 
 export interface IndexEntry extends ProposalFrontmatter {
@@ -82,7 +99,24 @@ export interface IndexEntry extends ProposalFrontmatter {
     translations: TranslationEntry[]
 }
 
-export type MsigBuilder = () => Promise<Action[]>
+export interface MsigFlag {
+    description: string
+    default?: string // a flag without one must be supplied, by command line or environment
+}
+
+export interface BuildContext {
+    vp: string // "VP-0001"
+    slug: string // "vp-0001-ram-gifting"
+    commit: string // 40-hex commit of the proposal text the citation pins
+    flags: Record<string, string> // resolved values of the builder's declared flags
+}
+
+export interface MsigBuilder {
+    entry: number // one-based position in the proposal's frontmatter `msigs` list
+    citationAuth: PermissionLevelType[] // authorizes the citation action the tooling prepends
+    flags?: Record<string, MsigFlag>
+    build: (ctx: BuildContext) => Promise<Action[]> // the proposal's own actions, citation excluded
+}
 
 export interface MsigModule {
     msigs: Record<string, MsigBuilder>

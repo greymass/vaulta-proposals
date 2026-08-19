@@ -11,19 +11,24 @@ accounts:
 msigs:
     - proposer: test.gm
       proposal: ugkuddhb2jwp
+      commit: dbbb8ddc417a672507eebc765f2faa0848ee79e4
       status: active
     - proposer: test.gm
       proposal: hqmz3rvktdxa
+      commit: dbbb8ddc417a672507eebc765f2faa0848ee79e4
       status: executed
       txid: 4f2a9c1d7e6b03854a1fbc29d0e7538a6c4b91f2073ed5a8c16b4092fe7d3a5b
     - proposer: test.gm
       proposal: pfy4wnsbcjrt
+      commit: dbbb8ddc417a672507eebc765f2faa0848ee79e4
       status: expired
     - proposer: test.gm
       proposal: wq2tzn5vhkbr
+      commit: dbbb8ddc417a672507eebc765f2faa0848ee79e4
       status: expired
     - proposer: test.gm
       proposal: dmx4jc3npseb
+      commit: dbbb8ddc417a672507eebc765f2faa0848ee79e4
       status: executed
       txid: 8b71e0c4d92f3a56be08417dc35a9e2f640b7d18cae52f39017b64ad2ce8f105
       title: Grant the demonstration account its rendering permissions

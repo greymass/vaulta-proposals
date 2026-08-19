@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: e0c5fa728747d0e51f662f38a94d3230ce77c928
+source: 6a278513e9295e17c4743de1bea4bd59b5438f01
 translator: Claude (agent translation)
 excerpt: 网络所有的账户 ram.vaulta 持有一笔 RAM 捐赠资金，获批的创建者可动用它向自己新创建的账户赠送 RAM，从而无需自行承担 RAM 成本即可为新用户开通账户。被赠送的 RAM 永久性地从 RAM 市场中隔离，唯一的退出方式是返还给赠送账户。系统启动时没有任何已注册的创建者，每个创建者此后通过各自的 15/21 BP MSIG 获得准入。
 ---
@@ -105,4 +105,4 @@ excerpt: 网络所有的账户 ram.vaulta 持有一笔 RAM 捐赠资金，获批
 
 ## 后续步骤
 
-一个可运行的原型已开发完成，并在 Jungle 4 测试网上进行了演示，其源代码发布于 [`contracts/gift`](https://github.com/aaroncox/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/gift)。剩余工作包括解决各项待解决问题、将合约产品化，以及准备 MSIG 流程（创建 `ram.vaulta`、部署合约、设置 `eosio.code`、转入初始注资 RAM）。创建者的准入在系统上线后作为独立的 MSIG 逐一进行。
+一个可运行的原型已开发完成，并在 Jungle 4 测试网上进行了演示，其源代码发布于 [`contracts/gift`](https://github.com/greymass/vaulta-contracts/tree/746cdef811814b455f7eb4a0c6c58849f3462863/contracts/gift)。剩余工作包括解决各项待解决问题、将合约产品化，以及准备 MSIG 流程（创建 `ram.vaulta`、部署合约、设置 `eosio.code`、转入初始注资 RAM）。创建者的准入在系统上线后作为独立的 MSIG 逐一进行。

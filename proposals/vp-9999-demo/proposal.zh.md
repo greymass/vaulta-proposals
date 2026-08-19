@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: d40bec6d28d3049445228bd2fd50da97a7c685b3
+source: 56bf55c320aa9693624311ae5998215656ba5905
 excerpt: 一份演示文档，用于检验提案渲染器，涵盖各级标题、表格、代码块、图片、跨提案链接、非拉丁文字，以及实时链上 msig 与 sentiment 绑定。它存在于 demo 分支，不具备任何治理效力。
 revisions:
     - version: 1

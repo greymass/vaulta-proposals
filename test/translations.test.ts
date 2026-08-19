@@ -1,11 +1,11 @@
 import { describe, expect, test } from 'bun:test'
-import { validateFrontmatter } from '../lib/frontmatter'
+import { validateFrontmatter } from '$lib/frontmatter'
 import {
     expectedNavLine,
     gitBlobHash,
     lintNavLine,
     validateTranslationFrontmatter,
-} from '../lib/translations'
+} from '$lib/translations'
 
 describe('gitBlobHash', () => {
     test('matches git hash-object', () => {

@@ -4,10 +4,10 @@ Public proposals (VPs) for the Vaulta network that require block producer multis
 
 ## Proposals
 
-| VP | Title | Status |
-| --- | --- | --- |
-| [VP-0001](proposals/vp-0001-ram-gifting/proposal.md) | Network RAM Endowment for Account Onboarding | Draft |
-| [VP-0002](proposals/vp-0002-account-creation/proposal.md) | Self-Serve Account Creation | Draft |
+| VP | Title | Status | Source |
+| --- | --- | --- | --- |
+| [VP-0001](proposals/vp-0001-ram-gifting/proposal.md) | Network RAM Endowment for Account Onboarding | Draft | [`contracts/gift`](https://github.com/greymass/vaulta-contracts/tree/master/contracts/gift) |
+| [VP-0002](proposals/vp-0002-account-creation/proposal.md) | Self-Serve Account Creation | Proposed | [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/master/contracts/create) |
 
 ## Verifying an msig
 
@@ -34,7 +34,7 @@ This is the same check CI runs; see [CONTRIBUTING.md](CONTRIBUTING.md) for the f
 bun run propose <vp> <name>
 ```
 
-Run without flags, this prints the transaction as a dry run and broadcasts nothing. Passing `--broadcast` submits the `eosio.msig::propose` transaction on-chain, and requires `PROPOSER_PERMISSION` and `PROPOSER_PRIVATE_KEY` to be set in `.env`.
+Run without flags, this prints the transaction as a dry run and broadcasts nothing. `--commit <sha>` sets the commit the citation pins, and `--help` lists it alongside any flag the selected builder declares. Passing `--broadcast` submits the `eosio.msig::propose` transaction on-chain, and requires `PROPOSER_PERMISSION` and `PROPOSER_PRIVATE_KEY` to be set in `.env`.
 
 ## Statuses
 

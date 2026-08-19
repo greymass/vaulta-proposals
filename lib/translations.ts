@@ -4,7 +4,7 @@ import type { TranslationFrontmatter } from './types'
 
 export const TRANSLATION_FILE_PATTERN = /^proposal\.([a-z]{2}(?:-[a-z]+)?)\.md$/
 const BLOB_PATTERN = /^[0-9a-f]{40}$/
-const ALLOWED_KEYS = new Set(['lang', 'source', 'translator', 'excerpt', 'revisions'])
+const ALLOWED_KEYS = new Set(['lang', 'source', 'translator', 'excerpt', 'revisions', 'msigs'])
 
 export function gitBlobHash(content: string): string {
     const bytes = new TextEncoder().encode(content)

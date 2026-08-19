@@ -1,9 +1,9 @@
 import { join } from 'node:path'
-import { ROOT } from '../lib/constants'
-import { extractCardFields, resolveExcerpt } from '../lib/excerpt'
-import { resolveUpdated } from '../lib/frontmatter'
-import { lintRepo } from '../lib/repo'
-import type { IndexEntry } from '../lib/types'
+import { ROOT } from '$lib/constants'
+import { extractCardFields, resolveExcerpt } from '$lib/excerpt'
+import { resolveUpdated } from '$lib/frontmatter'
+import { lintRepo } from '$lib/repo'
+import type { IndexEntry } from '$lib/types'
 
 const indexPath = join(ROOT, 'index.json')
 const check = process.argv.includes('--check')
@@ -42,6 +42,7 @@ const index: IndexEntry[] = await Promise.all(
                 current: t.current,
                 title: extractCardFields(t.body).title,
                 excerpt: resolveExcerpt(t.frontmatter.excerpt, t.body),
+                msigs: t.frontmatter.msigs ?? [],
             })),
         }
     }),

@@ -4,9 +4,12 @@
         "module": "ESNext",
         "moduleResolution": "bundler",
         "strict": true,
+        "experimentalDecorators": true,
         "skipLibCheck": true,
         "noEmit": true,
-        "types": ["bun-types"]
+        "types": ["bun-types"],
+        "baseUrl": ".",
+        "paths": { "$lib/*": ["./lib/*"] }
     },
     "include": ["lib", "scripts", "test", "proposals", "template"]
 }

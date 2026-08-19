@@ -16,31 +16,45 @@ root.
    Create the directory under `proposals/`.
 2. **Copy the template**: `cp template/proposal.md proposals/vp-0000-<slug>/proposal.md`.
    Copy only `proposal.md`, not the whole `template/` directory (see step 6 for
-   the template's msig code, whose import depth differs). The template ships the
-   three-language nav line. Until `proposal.ko.md` and `proposal.zh.md` exist,
+   the template's msig code). The template ships the three-language nav line.
+   Until `proposal.ko.md` and `proposal.zh.md` exist,
    `bun run verify` reports that the nav line should list English only and that
    the two sibling links do not resolve. Ignore all three; do not edit the nav
    line. They clear when step 7 creates the translations.
 3. **Frontmatter**: fill every field. For rules on any field, read the
    Frontmatter section of [standard/VPS-1.md](../../standard/VPS-1.md). Leave
    `msigs`/`sentiment` empty unless on-chain items already exist for this
-   proposal. A sentiment topic suits a proposal that produces no msig, since
-   msig sentiment is collected on its own. The template's field set is exact:
+   proposal. A proposal whose enactment takes more than one transaction SHOULD
+   declare each step up front as a `planned` entry with a `title`, in
+   execution order, so a reader sees the whole sequence from the proposal's
+   first landing; a `planned` entry carries no `proposer`, `proposal`, or
+   `commit`, because it names a step that has not been proposed on-chain yet. Adding a
+   `title` to any `msigs` entry requires a matching entry in every translation
+   file's own `msigs` list, so a scaffolded proposal with titled steps must
+   scaffold the translation `msigs` lists too. A sentiment topic suits a
+   proposal that produces no msig, since msig sentiment is collected on its
+   own. The template's field set is exact:
    do not invent keys, and do not add `replaces` at scaffold time. `revisions`
    is an available optional field that the template omits on purpose: a freshly
    scaffolded proposal has no revision history, so add the field later, once a
-   merged change to this proposal earns its first entry. Reciprocity is linted
-   (`replaces` on A requires `superseded-by` on B, which in turn requires B's
-   status to be `Superseded`), and a placeholder `VP-0000` cannot be written
-   into another proposal. If this proposal supersedes an existing one, say so in
-   prose and in Next Steps; the maintainer wires `replaces` and `superseded-by`
-   together when the real number is assigned.
+   merged change to this proposal earns its first entry. Each entry's `summary`
+   is 1 to 140 characters counted in Unicode code points, on a single line and
+   in plain text. Reciprocity is linted (`replaces` on A requires
+   `superseded-by` on B, which in turn requires B's status to be `Superseded`),
+   and a placeholder `VP-0000` cannot be written into another proposal. If this
+   proposal supersedes an existing one, say so in prose and in Next Steps; the
+   maintainer wires `replaces` and `superseded-by` together when the real number
+   is assigned.
 4. **Write the body**: keep `## Summary` first and `## Open Questions` /
    `## Next Steps` last. Replace or delete the suggested middle sections
    (Rationale, Mechanics) freely; use whatever `##` sections fit the
    proposal. Every core section must have content; "None." is acceptable.
 5. **Substance requirements** the linter cannot check:
    - Summary must let a busy reader decide relevance in one paragraph.
+   - The proposal answers why the network should support it, in a Rationale section or equivalent. Before drafting, grill the author on the why until every justifying claim is precise and provable against chain state, contract source, or protocol rules; a claim that cannot be proven is cut or moved to Open Questions.
+   - Summary opens with the proposal, not the thing it creates: the first sentence states the governance action ("This proposal creates X and deploys Y to it"), and what X or Y is comes after.
+   - The proposal references only what it introduces itself. No planning history, no sibling workstreams, no comparisons to anything a reader cannot see from this document and its frontmatter.
+   - Authority language distinguishes acting under an authority from assigning one. "Create X with authority Y" reads both ways; write "created by Y" or "owned by Y" as the fact requires, in body prose and in `msigs` entry titles alike.
    - Every on-chain fact (accounts, txids) appears as backticked names or
      full 64-hex txids, and anything the proposal asserts about itself also
      lives in frontmatter.
@@ -48,12 +62,17 @@ root.
    - Vendor any needed external material into `assets/` (check the standard's
      format allowlist) instead of linking out.
 6. **Msig code** (only if this proposal already has an on-chain msig): copy
-   `template/msig/index.ts` to `proposals/vp-0000-<slug>/msig/index.ts` and
-   change its import to `../../../lib/types` (one level deeper than the
-   template). Do not copy the whole `template/` directory; the template's import
-   depth is wrong for a proposal directory and fails `bun run check`. Skip this
-   step entirely when `msigs` is empty; msig code is optional at submission
-   time.
+   `template/msig/index.ts` to `proposals/vp-0000-<slug>/msig/index.ts`. Its
+   `$lib/` imports resolve from any depth, so copy the file as it stands and
+   leave the imports alone. Do not copy the whole `template/` directory. Skip
+   this step entirely when `msigs` is empty; msig code is optional at submission
+   time. A builder's `build` takes a `BuildContext` carrying `vp`, `slug`,
+   `commit`, and the resolved values of the flags that builder declares; read
+   every per-invocation input from that context rather than from `process.env`,
+   and declare a flag for anything the runner must supply. `build` returns only
+   the step's own actions: the tooling prepends the VPS-1 citation as action
+   zero, authorized by the permission levels the builder declares in
+   `citationAuth`.
 7. **Translations**: follow [translate-proposal](../translate-proposal/SKILL.md)
    to produce `proposal.ko.md` and `proposal.zh.md`. A proposal without them
    fails CI.

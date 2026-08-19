@@ -32,7 +32,8 @@ entry in `LANG_LABELS` (`lib/types.ts`) appears in the nav line as its bare tag.
      280 characters or fewer counted in Unicode code points, a single
      paragraph, plain text. `revisions`, when the English file has one,
      mirrors it entry-for-entry: the same `version` numbers and `date`s, with
-     each entry's `summary` translated into the target language.
+     each entry's `summary` translated into the target language and kept to
+     1 to 140 characters counted in Unicode code points.
    - Translate the `#` title, keep the language-nav line identical to the
      English file's, and mirror the English `##` sections one-for-one, in
      order, with headings translated.
@@ -48,14 +49,20 @@ entry in `LANG_LABELS` (`lib/types.ts`) appears in the nav line as its bare tag.
    - Never editorialize, soften, or add caveats absent from the English.
      If the English is ambiguous, fix the English first.
 5. **When refreshing** after any English change, first identify what changed:
-   - Frontmatter only (a status transition, a new `msigs` entry): no
+   - Frontmatter only, no translation content: a `status` transition, or a
+     `planned` `msigs` entry gaining its `proposer`/`proposal`/`commit` binding. No
      retranslation. The hash covers the whole file, frontmatter included, so
      both translations still go stale. Update `source` in each and stop.
+   - A new `msigs` entry that carries a `title`: not frontmatter-only. Add a
+     matching entry to each translation's `msigs` list, `{step, title}`, with
+     `step` set to the 1-based position of the English entry and `title`
+     translated. Then update `source` in each, as above.
    - The English `excerpt` was added or changed: each translation SHOULD carry
      a translated `excerpt` to match. A translation left without one falls back
      to extracting that language's card excerpt from its own body.
    - The English `revisions` list gained an entry: add the matching entry to
-     each translation, copying `version` and `date` and translating `summary`.
+     each translation, copying `version` and `date` and translating `summary`
+     within the same 1 to 140 character limit.
      This is the same restamp interaction as `excerpt`: the entry changed the
      English file's content, so `source` no longer matches in either
      translation, and the refresh that restamps `source` is the one that

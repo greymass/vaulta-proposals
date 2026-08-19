@@ -1,5 +1,5 @@
 {
-    "generated": "2026-08-15T02:56:54.442Z",
+    "generated": "2026-08-19T20:07:15.258Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -47,42 +47,71 @@
             "vp": "VP-0002",
             "title": "Self-Serve Account Creation",
             "standard": "VPS-1",
-            "status": "Draft",
+            "status": "Proposed",
             "authors": [
                 "Aaron Cox (Greymass)"
             ],
-            "created": "2026-02-16",
+            "created": "2026-08-08",
             "accounts": [
                 "new.vaulta",
                 "eosio",
                 "eosio.prods",
                 "core.vaulta",
-                "admin.grants",
-                "fund.wram"
+                "create.gm"
             ],
-            "msigs": [],
+            "msigs": [
+                {
+                    "status": "active",
+                    "proposer": "aaron",
+                    "proposal": "vp2create",
+                    "commit": "4573989e2a220527b9b2354b45e36f4ddeac7475",
+                    "title": "Create the new.vaulta account and fund its RAM"
+                },
+                {
+                    "status": "planned",
+                    "title": "Deploy the create contract code and ABI to new.vaulta at the published hash"
+                }
+            ],
             "sentiment": [],
             "requires": [],
-            "excerpt": "new.vaulta is a self-serve account creation contract: a user pays in the network token and the contract creates the account and buys its RAM in one step, with no operator involved. It is the user-funded counterpart to VP-0001, and deploying it requires 15/21 BP approval.",
+            "excerpt": "A proposal to create the new.vaulta account and deploy an account creation contract to it: one canonical, network-secured home where a user pays in the network token and receives their account and its RAM in one step.",
             "slug": "vp-0002-account-creation",
             "path": "proposals/vp-0002-account-creation/proposal.md",
-            "updated": "2026-08-11",
+            "updated": "2026-08-19",
             "translations": [
                 {
                     "lang": "ko",
                     "path": "proposals/vp-0002-account-creation/proposal.ko.md",
                     "current": true,
                     "title": "셀프서비스 계정 생성",
-                    "excerpt": "new.vaulta는 셀프서비스, 결제 기반의 계정 생성 컨트랙트입니다. 사용자가 네트워크 토큰으로 비용을 지불하면 컨트랙트가 운영자 개입 없이 단일 단계로 계정을 생성하고 해당 계정의 RAM을 구매합니다. 이는 VP-0001의 생성자 주도·네트워크 부담 경로에 대응하는 사용자 부담 경로이며, 배포에는 15/21 BP 승인이 필요합니다.",
-                    "msigs": []
+                    "excerpt": "new.vaulta 계정을 생성하고 계정 생성 컨트랙트를 그 계정에 배포하기 위한 제안입니다. 사용자가 네트워크 토큰으로 비용을 지불하면 계정과 그 RAM을 단일 단계로 받는, 네트워크가 보증하는 하나의 표준 창구를 마련합니다.",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "new.vaulta 계정을 생성하고 RAM을 조달"
+                        },
+                        {
+                            "step": 2,
+                            "title": "게시된 해시의 create 컨트랙트 코드와 ABI를 new.vaulta에 배포"
+                        }
+                    ]
                 },
                 {
                     "lang": "zh",
                     "path": "proposals/vp-0002-account-creation/proposal.zh.md",
                     "current": true,
                     "title": "自助式账户创建",
-                    "excerpt": "new.vaulta 是一个自助式、由付款驱动的账户创建合约：用户以网络代币支付，合约便在单一步骤中创建其账户并购买该账户的 RAM，全程无需运营方参与。它是 VP-0001 中创建者主导、由网络承担成本这一路径的自行付费对应方。将该合约部署到 new.vaulta 账户下需要 15/21 BP 批准。",
-                    "msigs": []
+                    "excerpt": "一份创建 new.vaulta 账户并向其部署账户创建合约的提案：设立一个由网络保障的标准入口，用户以网络代币支付，即可在单一步骤中获得账户及其 RAM。",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "创建 new.vaulta 账户并为其调拨 RAM"
+                        },
+                        {
+                            "step": 2,
+                            "title": "将已公布哈希的 create 合约代码与 ABI 部署到 new.vaulta"
+                        }
+                    ]
                 }
             ]
         },
@@ -102,27 +131,32 @@
                 {
                     "proposer": "test.gm",
                     "proposal": "ugkuddhb2jwp",
+                    "commit": "dbbb8ddc417a672507eebc765f2faa0848ee79e4",
                     "status": "active"
                 },
                 {
                     "proposer": "test.gm",
                     "proposal": "hqmz3rvktdxa",
+                    "commit": "dbbb8ddc417a672507eebc765f2faa0848ee79e4",
                     "status": "executed",
                     "txid": "4f2a9c1d7e6b03854a1fbc29d0e7538a6c4b91f2073ed5a8c16b4092fe7d3a5b"
                 },
                 {
                     "proposer": "test.gm",
                     "proposal": "pfy4wnsbcjrt",
+                    "commit": "dbbb8ddc417a672507eebc765f2faa0848ee79e4",
                     "status": "expired"
                 },
                 {
                     "proposer": "test.gm",
                     "proposal": "wq2tzn5vhkbr",
+                    "commit": "dbbb8ddc417a672507eebc765f2faa0848ee79e4",
                     "status": "expired"
                 },
                 {
                     "proposer": "test.gm",
                     "proposal": "dmx4jc3npseb",
+                    "commit": "dbbb8ddc417a672507eebc765f2faa0848ee79e4",
                     "status": "executed",
                     "txid": "8b71e0c4d92f3a56be08417dc35a9e2f640b7d18cae52f39017b64ad2ce8f105",
                     "title": "Grant the demonstration account its rendering permissions",

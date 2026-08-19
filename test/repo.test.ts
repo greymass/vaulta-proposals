@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'bun:test'
-import { crossChecks } from '../lib/repo'
-import type { ProposalFrontmatter } from '../lib/types'
+import { crossChecks } from '$lib/repo'
+import type { ProposalFrontmatter } from '$lib/types'
 
 function fm(vp: string, extra: Partial<ProposalFrontmatter> = {}): ProposalFrontmatter {
     return {
