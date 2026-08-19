@@ -7,7 +7,7 @@ Public proposals (VPs) for the Vaulta network that require block producer multis
 | VP | Title | Status | Source |
 | --- | --- | --- | --- |
 | [VP-0001](proposals/vp-0001-ram-gifting/proposal.md) | Network RAM Endowment for Account Onboarding | Draft | [`contracts/gift`](https://github.com/greymass/vaulta-contracts/tree/master/contracts/gift) |
-| [VP-0002](proposals/vp-0002-account-creation/proposal.md) | Self-Serve Account Creation | Draft | [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/master/contracts/create) |
+| [VP-0002](proposals/vp-0002-account-creation/proposal.md) | Self-Serve Account Creation | Proposed | [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/master/contracts/create) |
 
 ## Verifying an msig
 
