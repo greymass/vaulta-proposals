@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: f4052ecbf7dd68fd4b0c001ae299b18057f9e401
+source: d0458cb09cfcb310f81f5360581ee6ea42059dc7
 translator: Claude (agent translation)
 msigs:
     - step: 1
@@ -9,7 +9,7 @@ msigs:
       title: 将已公布哈希的 create 合约代码与 ABI 部署到 new.vaulta
 revisions:
     - version: 1
-      date: 2026-02-16
+      date: 2026-08-08
       summary: 初始草案。
     - version: 2
       date: 2026-08-18

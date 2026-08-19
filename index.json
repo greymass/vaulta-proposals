@@ -1,5 +1,5 @@
 {
-    "generated": "2026-08-19T18:27:59.631Z",
+    "generated": "2026-08-19T19:54:33.822Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -51,7 +51,7 @@
             "authors": [
                 "Aaron Cox (Greymass)"
             ],
-            "created": "2026-02-16",
+            "created": "2026-08-08",
             "accounts": [
                 "new.vaulta",
                 "eosio",

@@ -5,7 +5,7 @@ standard: VPS-1
 status: Proposed
 authors:
     - Aaron Cox (Greymass)
-created: 2026-02-16
+created: 2026-08-08
 accounts:
     - new.vaulta
     - eosio
@@ -24,7 +24,7 @@ sentiment: []
 requires: []
 revisions:
     - version: 1
-      date: 2026-02-16
+      date: 2026-08-08
       summary: Initial draft.
     - version: 2
       date: 2026-08-18
