@@ -6,7 +6,7 @@ import { eosio } from '$lib/contracts'
 import type { MsigBuilder } from '$lib/types'
 
 const ACCOUNT = 'new.vaulta'
-const RAM_BYTES = 204800
+const RAM_BYTES = 409600
 
 const system = { actor: 'eosio', permission: 'active' }
 const account = { actor: ACCOUNT, permission: 'active' }
