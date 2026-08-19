@@ -6,6 +6,7 @@
         "index": "bun scripts/build-index.ts",
         "propose": "bun scripts/propose.ts",
         "verify": "bun scripts/verify.ts",
+        "hash-msig": "bun scripts/hash-msig.ts",
         "codegen": "bunx @wharfkit/cli generate --json lib/codegen/eosio.abi.json --file lib/codegen/eosio.ts eosio && bunx @wharfkit/cli generate --json lib/codegen/msigmessager.abi.json --file lib/codegen/msigmessager.ts msigmessager",
         "check": "bunx tsc --noEmit && bunx biome check .",
         "test": "bun test"
