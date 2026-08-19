@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: ec1f2fff50e28f81222a89f953570ac92cf31a86
+source: f4052ecbf7dd68fd4b0c001ae299b18057f9e401
 translator: Claude (agent translation)
 msigs:
     - step: 1
@@ -14,6 +14,9 @@ revisions:
     - version: 2
       date: 2026-08-18
       summary: 依据合约源代码重新推导，更正转账处理与 RAM 数字，并声明两步式实施流程。
+    - version: 3
+      date: 2026-08-19
+      summary: 将合约源代码固定到构建出已部署产物的提交，记录其哈希与 CDT 版本，并更正 logcreation 的签名。
 excerpt: "一份创建 new.vaulta 账户并向其部署账户创建合约的提案：设立一个由网络保障的标准入口，用户以网络代币支付，即可在单一步骤中获得账户及其 RAM。"
 ---
 
@@ -48,7 +51,7 @@ excerpt: "一份创建 new.vaulta 账户并向其部署账户创建合约的提�
 | `transfer` 通知（`*::transfer`） | 代币发送方 | 收到由 `core.vaulta` 发行的付款代币后，解析备注、创建账户、购买其 RAM 并退还多余部分 |
 | `parsememo(memo)`（只读） | 无 | 将 `accountname-PUBLICKEY` 解析为账户名和单一密钥权限 |
 | `estimatecost()`（只读） | 无 | 返回创建一个账户的当前代币成本 |
-| `logcreation(account, excess, ram, timestamp)` | `new.vaulta` | 每次创建时发出的内联日志操作，用于索引 |
+| `logcreation(account, from, excess, ram, timestamp)` | `new.vaulta` | 每次创建时发出的内联日志操作，用于索引。`from` 是发出付款转账的账户，未必就是被创建的账户 |
 
 备注格式为 `accountname-PUBLICKEY`（`PUB_` 和旧版密钥格式均可）。每次创建支出 3,260 字节的 RAM 成本加上系统手续费，用户至少需发送该金额。多余部分会转入新账户。账户实际收到的 RAM 是这笔付款按市场价所能买到的数量，因此接近 3,260 字节而非恰好等于该数，网络的每账户基础配给量则在此之上另行叠加。
 
@@ -95,7 +98,16 @@ excerpt: "一份创建 new.vaulta 账户并向其部署账户创建合约的提�
 
 ## 后续步骤
 
-合约源代码发布于 [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/1d38e7aca622707888942a093bc45fa4ac3893df/contracts/create)。
+合约源代码发布于 [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/d103fdcea03bf2a6e3e0ff5ed893ec10389c29a2/contracts/create)。
 
-- [ ] 作者在提出部署步骤之前，于本节记录代码哈希、其构建所依据的提交，以及可复现该哈希的 CDT 版本，以便 BP 自行构建并比对。
+部署步骤所提议的产物如下：
+
+- 提交：`d103fdcea03bf2a6e3e0ff5ed893ec10389c29a2`
+- 代码哈希：`7166a16ea0d6db98fe18cde9a2d56b30f091dcbb19efcd0a0b5fa0e510f272c8`，对应 38,534 字节的 WASM
+- ABI 哈希：`4f47d205f7cc990efb548d002f324e9c23c8a5ab65012dbab4430973e3c7ffdb`，对应 610 字节的序列化 ABI
+- CDT：v4.1.1，以构建参数的形式固定在工具链容器中
+
+重新构建的方法是检出该提交并运行 `make build/create/production`，编译在上述容器内进行。`shasum -a 256 contracts/create/build/create.wasm` 得到代码哈希；将 `contracts/create/build/create.abi` 序列化为二进制形式得到 610 字节，其哈希即 ABI 哈希。这两个值也正是 `create.gm` 在 Vaulta 主网上运行的内容，由 `get_raw_abi` 以 `code_hash` 和 `abi_hash` 返回。
+
+- [x] 作者在提出部署步骤之前，于本节记录代码哈希、其构建所依据的提交，以及可复现该哈希的 CDT 版本，以便 BP 自行构建并比对。
 - [ ] 作者为每个步骤的交易加上回溯引用，并将其固定到承载本提案最终文本的提交。

@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: ec1f2fff50e28f81222a89f953570ac92cf31a86
+source: f4052ecbf7dd68fd4b0c001ae299b18057f9e401
 translator: Claude (agent translation)
 msigs:
     - step: 1
@@ -14,6 +14,9 @@ revisions:
     - version: 2
       date: 2026-08-18
       summary: 컨트랙트 소스를 기준으로 재검증하여 전송 처리와 RAM 수치를 바로잡고, 2단계 시행 시퀀스를 명시함.
+    - version: 3
+      date: 2026-08-19
+      summary: 배포된 산출물을 빌드하는 커밋으로 컨트랙트 소스를 고정하고, 해시와 CDT 버전을 기록하며, logcreation 시그니처를 바로잡음.
 excerpt: "new.vaulta 계정을 생성하고 계정 생성 컨트랙트를 그 계정에 배포하기 위한 제안입니다. 사용자가 네트워크 토큰으로 비용을 지불하면 계정과 그 RAM을 단일 단계로 받는, 네트워크가 보증하는 하나의 표준 창구를 마련합니다."
 ---
 
@@ -48,7 +51,7 @@ excerpt: "new.vaulta 계정을 생성하고 계정 생성 컨트랙트를 그 �
 | `transfer` 알림(`*::transfer`) | 토큰 송신자 | `core.vaulta`가 발행한 결제 토큰을 수신하면 메모를 파싱하고, 계정을 생성하며, RAM을 구매하고, 초과분을 환급 |
 | `parsememo(memo)`(읽기 전용) | 없음 | `accountname-PUBLICKEY`를 계정명과 단일 키 권한으로 파싱 |
 | `estimatecost()`(읽기 전용) | 없음 | 계정 생성 1건의 현재 토큰 비용을 반환 |
-| `logcreation(account, excess, ram, timestamp)` | `new.vaulta` | 인덱싱을 위해 생성마다 발생시키는 인라인 로그 액션 |
+| `logcreation(account, from, excess, ram, timestamp)` | `new.vaulta` | 인덱싱을 위해 생성마다 발생시키는 인라인 로그 액션. `from`은 결제 전송을 보낸 계정으로, 생성되는 계정과 반드시 일치하지는 않습니다 |
 
 메모 형식은 `accountname-PUBLICKEY`입니다(`PUB_` 및 레거시 키 형식 모두 허용). 각 생성은 3,260바이트의 RAM 비용에 시스템 수수료를 더한 금액을 지출하며, 사용자는 최소 그만큼을 전송해야 합니다. 초과분은 신규 계정으로 이전됩니다. 계정이 실제로 받는 RAM은 그 결제 금액이 시장 가격으로 구매하는 양이므로 3,260바이트에 정확히 맞아떨어지지 않고 그 부근에 놓이며, 여기에 네트워크의 기본 계정당 할당량이 더해집니다.
 
@@ -95,7 +98,16 @@ excerpt: "new.vaulta 계정을 생성하고 계정 생성 컨트랙트를 그 �
 
 ## 다음 단계
 
-컨트랙트 소스는 [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/1d38e7aca622707888942a093bc45fa4ac3893df/contracts/create)에 공개되어 있습니다.
+컨트랙트 소스는 [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/d103fdcea03bf2a6e3e0ff5ed893ec10389c29a2/contracts/create)에 공개되어 있습니다.
 
-- [ ] 저자는 배포 단계를 제안하기 전에 코드 해시, 빌드 기준 커밋, 이를 재현하는 CDT 버전을 이 섹션에 기록하여 BP가 직접 빌드해 비교할 수 있게 함
+배포 단계가 제안하는 산출물은 다음과 같습니다.
+
+- 커밋: `d103fdcea03bf2a6e3e0ff5ed893ec10389c29a2`
+- 코드 해시: `7166a16ea0d6db98fe18cde9a2d56b30f091dcbb19efcd0a0b5fa0e510f272c8`, 38,534바이트 WASM에 대한 값
+- ABI 해시: `4f47d205f7cc990efb548d002f324e9c23c8a5ab65012dbab4430973e3c7ffdb`, 610바이트 직렬화 ABI에 대한 값
+- CDT: v4.1.1, 툴체인 컨테이너의 빌드 인자로 고정
+
+재현하려면 해당 커밋을 체크아웃하고 `make build/create/production`을 실행하며, 컴파일은 그 컨테이너 안에서 이루어집니다. `shasum -a 256 contracts/create/build/create.wasm`이 코드 해시를 내주고, `contracts/create/build/create.abi`를 바이너리로 직렬화하면 610바이트가 되며 그 해시가 ABI 해시입니다. 두 값은 `create.gm`이 Vaulta 메인넷에서 실행 중인 값과 같으며, `get_raw_abi`가 `code_hash`와 `abi_hash`로 반환합니다.
+
+- [x] 저자는 배포 단계를 제안하기 전에 코드 해시, 빌드 기준 커밋, 이를 재현하는 CDT 버전을 이 섹션에 기록하여 BP가 직접 빌드해 비교할 수 있게 함
 - [ ] 저자는 본 제안의 최종 텍스트를 담은 커밋에 고정한 백레퍼런스 인용을 각 단계의 트랜잭션에 추가함

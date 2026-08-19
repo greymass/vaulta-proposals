@@ -1,5 +1,5 @@
 {
-    "generated": "2026-08-19T04:58:16.954Z",
+    "generated": "2026-08-19T18:27:59.631Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -77,7 +77,7 @@
             "excerpt": "A proposal to create the new.vaulta account and deploy an account creation contract to it: one canonical, network-secured home where a user pays in the network token and receives their account and its RAM in one step.",
             "slug": "vp-0002-account-creation",
             "path": "proposals/vp-0002-account-creation/proposal.md",
-            "updated": "2026-08-18",
+            "updated": "2026-08-19",
             "translations": [
                 {
                     "lang": "ko",
