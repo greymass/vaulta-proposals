@@ -16,11 +16,15 @@ Make each pass separately; do not blend them.
    block producer decide what they are approving and what it costs the
    network? List every question they would have to ask; each one is a gap
    in the document.
+   The Summary's first sentence must state the governance action itself; a Summary that only describes what the proposal would create is a gap even when nothing else is.
+   The document must answer why the network should put its support behind it, and each justifying claim must be provable against chain state, contract source, or protocol rules. No provable why, or a why resting on unproven claims, is a gap.
+   A reference to planning history, sibling workstreams, or anything else the document does not itself introduce is also a gap: the proposal stands alone.
 2. **The adversary.** Assume the proposal executes. How could its
    mechanism be abused for profit or spam? Does the text address each
    vector, or at least acknowledge it in Open Questions? Check authorities
    especially: who can act, who can change who can act, what happens if a
    listed account is compromised.
+   Check authority phrasing as well as authority facts: wording like "create X with authority Y" is ambiguous between Y acting and Y being assigned, in body prose and in `msigs` titles alike.
 3. **The auditor.** For every factual claim (balances, RAM figures,
    account states, contract behavior), ask: is it verifiable, is it
    current, is it sourced from frontmatter/chain rather than asserted
