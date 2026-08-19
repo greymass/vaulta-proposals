@@ -1,5 +1,5 @@
 {
-    "generated": "2026-08-19T03:38:51.963Z",
+    "generated": "2026-08-19T04:58:16.954Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -47,7 +47,7 @@
             "vp": "VP-0002",
             "title": "Self-Serve Account Creation",
             "standard": "VPS-1",
-            "status": "Draft",
+            "status": "Proposed",
             "authors": [
                 "Aaron Cox (Greymass)"
             ],
@@ -61,7 +61,10 @@
             ],
             "msigs": [
                 {
-                    "status": "planned",
+                    "status": "active",
+                    "proposer": "aaron",
+                    "proposal": "vp2create",
+                    "commit": "4573989e2a220527b9b2354b45e36f4ddeac7475",
                     "title": "Create the new.vaulta account and fund its RAM"
                 },
                 {

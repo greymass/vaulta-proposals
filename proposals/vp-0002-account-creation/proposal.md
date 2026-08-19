@@ -2,7 +2,7 @@
 vp: VP-0002
 title: Self-Serve Account Creation
 standard: VPS-1
-status: Draft
+status: Proposed
 authors:
     - Aaron Cox (Greymass)
 created: 2026-02-16
@@ -13,7 +13,10 @@ accounts:
     - core.vaulta
     - create.gm
 msigs:
-    - status: planned
+    - status: active
+      proposer: aaron
+      proposal: vp2create
+      commit: 4573989e2a220527b9b2354b45e36f4ddeac7475
       title: Create the new.vaulta account and fund its RAM
     - status: planned
       title: Deploy the create contract code and ABI to new.vaulta at the published hash
