@@ -5,6 +5,7 @@ const GITHUB_COMMIT_PINNED =
 const CROSS_VP = /^\.\.\/(vp-(\d{4})-[a-z0-9-]+)\/proposal(?:\.[a-z-]+)?\.md(?:#[\w-]+)?$/
 const OWN_ASSET = /^assets\/[\w][\w.-]*$/
 const SIBLING = /^proposal(?:\.[a-z-]+)?\.md$/
+const OWN_DOCUMENT = /^documents\/[a-z0-9-]+(?:\.[a-z]{2}(?:-[a-z]+)?)?\.md(?:#[\p{L}\p{N}_-]+)?$/u
 const SAFE_ANCHOR = /^#[\p{L}\p{N}_-]+$/u
 // A title may span lines but not a blank line (CommonMark 0.31.2 §6.3); the paren form forbids nesting.
 const TITLE = /"(?:[^"\n]|\n(?!\s*\n))*"|'(?:[^'\n]|\n(?!\s*\n))*'|\((?:[^()\n]|\n(?!\s*\n))*\)/
@@ -60,9 +61,14 @@ function lintReferenceLinks(text: string): string[] {
 
 export function lintLinks(
     body: string,
-    opts: { slug: string; fileExists: (relativePath: string) => boolean },
+    opts: {
+        slug: string
+        fileExists: (relativePath: string) => boolean
+        scope?: 'root' | 'document'
+    },
 ): string[] {
     const errors: string[] = []
+    const scope = opts.scope ?? 'root'
     const text = stripCode(body)
     const linkRanges: [number, number][] = []
 
@@ -76,6 +82,18 @@ export function lintLinks(
                     `external link not on the allowlist (commit-pinned github.com only): ${target}`,
                 )
             }
+            continue
+        }
+        if (scope === 'document') {
+            if (target.startsWith('#')) {
+                if (!SAFE_ANCHOR.test(target)) {
+                    errors.push(`same-page anchor must match ${SAFE_ANCHOR}: ${target}`)
+                }
+                continue
+            }
+            errors.push(
+                `a document other than the root may only carry same-page anchors and allowlisted external links: ${target}`,
+            )
             continue
         }
         const crossVp = target.match(CROSS_VP)
@@ -95,6 +113,12 @@ export function lintLinks(
             }
             continue
         }
+        if (OWN_DOCUMENT.test(target)) {
+            if (!opts.fileExists(target.replace(/#.*$/, ''))) {
+                errors.push(`relative link does not resolve: ${target}`)
+            }
+            continue
+        }
         if (target.startsWith('#')) {
             if (!SAFE_ANCHOR.test(target)) {
                 errors.push(`same-page anchor must match ${SAFE_ANCHOR}: ${target}`)
@@ -102,7 +126,7 @@ export function lintLinks(
             continue
         }
         errors.push(
-            `internal link must be ../vp-NNNN-slug/proposal.md, assets/<file>, or a sibling language file: ${target}`,
+            `internal link must be ../vp-NNNN-slug/proposal.md, assets/<file>, documents/<file>, or a sibling language file: ${target}`,
         )
     }
 

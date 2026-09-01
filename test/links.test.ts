@@ -10,6 +10,8 @@ const opts = {
             'proposal.ko.md',
             'proposal.zh.md',
             '../vp-0002-new-network-accounts/proposal.md',
+            'documents/rfp-framework.md',
+            'documents/rfp-framework.ko.md',
         ].includes(p),
 }
 
@@ -91,7 +93,7 @@ describe('lintLinks', () => {
     test('angle-bracket destination containing a space fails as an internal link', () => {
         const errors = lintLinks('See [x](<assets/my file.png>).', opts)
         expect(errors).toEqual([
-            'internal link must be ../vp-NNNN-slug/proposal.md, assets/<file>, or a sibling language file: assets/my file.png',
+            'internal link must be ../vp-NNNN-slug/proposal.md, assets/<file>, documents/<file>, or a sibling language file: assets/my file.png',
         ])
     })
     test('titled angle-bracket destination validated the same way', () => {
@@ -127,13 +129,13 @@ describe('lintLinks', () => {
     test('balanced parentheses stay in the destination', () => {
         const errors = lintLinks('See [x](assets/diagram(1).png).', opts)
         expect(errors).toEqual([
-            'internal link must be ../vp-NNNN-slug/proposal.md, assets/<file>, or a sibling language file: assets/diagram(1).png',
+            'internal link must be ../vp-NNNN-slug/proposal.md, assets/<file>, documents/<file>, or a sibling language file: assets/diagram(1).png',
         ])
     })
     test('nested parentheses to depth three stay in the destination', () => {
         const errors = lintLinks('See [x](assets/a(b(c(d)e)f)g.png).', opts)
         expect(errors).toEqual([
-            'internal link must be ../vp-NNNN-slug/proposal.md, assets/<file>, or a sibling language file: assets/a(b(c(d)e)f)g.png',
+            'internal link must be ../vp-NNNN-slug/proposal.md, assets/<file>, documents/<file>, or a sibling language file: assets/a(b(c(d)e)f)g.png',
         ])
     })
     test('nesting beyond depth three is not recognised as a link at all', () => {
@@ -220,5 +222,60 @@ describe('lintLinks', () => {
         expect(lintLinks(body, opts)).toEqual([
             'link destination must be written inline, not as a reference definition: [chart]',
         ])
+    })
+})
+
+describe('lintLinks document targets on the root', () => {
+    test('documents/<file> link resolving to a real file passes', () => {
+        expect(lintLinks('See [the framework](documents/rfp-framework.md).', opts)).toEqual([])
+    })
+    test('language-tagged document link passes', () => {
+        expect(lintLinks('See [KO](documents/rfp-framework.ko.md).', opts)).toEqual([])
+    })
+    test('document link with an anchor passes', () => {
+        expect(lintLinks('See [part 1](documents/rfp-framework.md#part-1).', opts)).toEqual([])
+    })
+    test('document link to a missing file fails', () => {
+        const errors = lintLinks('See [x](documents/missing.md).', opts)
+        expect(errors).toEqual(['relative link does not resolve: documents/missing.md'])
+    })
+    test('document link may not reach into subdirectories', () => {
+        const errors = lintLinks('See [x](documents/sub/file.md).', opts)
+        expect(errors.length).toBe(1)
+        expect(errors[0]).toContain('internal link must be')
+    })
+})
+
+describe('lintLinks in document scope', () => {
+    const docOpts = { ...opts, scope: 'document' as const }
+    test('allowlisted external link passes', () => {
+        const body = `See [x](https://github.com/greymass/vaulta-proposals/blob/${'a'.repeat(40)}/README.md).`
+        expect(lintLinks(body, docOpts)).toEqual([])
+    })
+    test('same-page anchor passes', () => {
+        expect(lintLinks('See [above](#part-1).', docOpts)).toEqual([])
+    })
+    test('malformed anchor fails', () => {
+        expect(lintLinks('See [x](#a.b).', docOpts).length).toBe(1)
+    })
+    test('any relative link fails, even one legal on the root', () => {
+        for (const target of [
+            'assets/chart.png',
+            'proposal.md',
+            '../vp-0002-new-network-accounts/proposal.md',
+            'documents/rfp-framework.md',
+        ]) {
+            const errors = lintLinks(`See [x](${target}).`, docOpts)
+            expect(errors).toEqual([
+                `a document other than the root may only carry same-page anchors and allowlisted external links: ${target}`,
+            ])
+        }
+    })
+    test('unlisted external link still fails', () => {
+        expect(lintLinks('See [x](https://example.com/a).', docOpts).length).toBe(1)
+    })
+    test('reference-style links still fail', () => {
+        const body = '[label]: https://example.com\nSee [label].'
+        expect(lintLinks(body, docOpts).length).toBeGreaterThan(0)
     })
 })

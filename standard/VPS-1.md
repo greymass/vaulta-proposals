@@ -27,6 +27,8 @@ Once a proposal reaches `Executed`, `Rejected`, `Withdrawn`, or `Superseded`, it
 
 ## Document Structure
 
+This section governs the root document, `proposal.md`, and its translations. A file listed in the `documents` frontmatter field is exempt from all of it; see Document Sets.
+
 A proposal body (the markdown after the frontmatter block) is a single `#` title heading followed by `##` sections. Exactly one `#` heading is allowed, and it must be the first heading in the document; nothing may precede it.
 
 The `##` section roster is partially fixed:
@@ -41,7 +43,7 @@ The `##` section roster is partially fixed:
 
 ## Frontmatter
 
-Every proposal begins with a YAML frontmatter block delimited by `---` lines. The allowed keys are exactly: `vp`, `title`, `standard`, `status`, `authors`, `created`, `accounts`, `msigs`, `sentiment`, `requires`, `replaces`, `superseded-by`, `resolution`, `excerpt`, `revisions`. Any other key is an error. There is no `updated` key: a proposal's rendered last-modified date is derived from git history, or, when the proposal has `revisions`, from the latest entry's date.
+Every proposal begins with a YAML frontmatter block delimited by `---` lines. The allowed keys are exactly: `vp`, `title`, `standard`, `status`, `authors`, `created`, `accounts`, `msigs`, `sentiment`, `requires`, `documents`, `replaces`, `superseded-by`, `resolution`, `excerpt`, `revisions`. Any other key is an error. There is no `updated` key: a proposal's rendered last-modified date is derived from git history, or, when the proposal has `revisions`, from the latest entry's date.
 
 - **`vp`** (required, string): matches `VP-NNNN` (four digits). Must agree with the proposal's directory name: `vp-NNNN-slug` and `VP-NNNN` share the same number.
 - **`title`** (required, non-empty string): the proposal's title; conventionally the same text as the `#` heading (not lint-enforced).
@@ -53,6 +55,7 @@ Every proposal begins with a YAML frontmatter block delimited by `---` lines. Th
 - **`msigs`** (required, list, may be empty): the proposal's enactment steps, written in the order they are intended to execute, each bound to an on-chain `eosio.msig` proposal once one exists. Each entry is a mapping of `status` (one of `planned`, `active`, `expired`, `executed`, `cancelled`), `proposer` and `proposal` (both Antelope names), `commit` (a 40-character lowercase hex commit sha), `txid` (optional), `title` (optional), and `supersedes` (optional). `proposer`, `proposal`, and `commit` are required for every status other than `planned`, and are an error on a `planned` entry, which names a step whose msig has not been proposed yet. `commit` records the commit of the proposal text that the msig's citation action pins, so that rebuilding the entry's actions reproduces the transaction the chain holds; see Back-References for the citation itself. `txid` is a 64-hex string and is required exactly when an entry's `status` is `executed`; it is an error to include `txid` for any other status. `title` is a single line of plain text, 1 to 140 characters counted in Unicode code points, under the same plain-text rule as `excerpt`, naming what the step does; see Languages and Translations for how it is translated. `supersedes` is a mapping of `proposer` and `proposal` naming an earlier entry that this one replaces: the named entry must appear earlier in the list, must have `status` `expired` or `cancelled`, and no two entries may supersede the same entry. No other keys are allowed within an entry; an unknown key inside a `msigs` entry is an error. The list is append-only: entries already merged are never removed or reordered, and are edited only as a step advances, meaning a `status` change and, exactly once per entry, a `planned` entry gaining the `proposer`, `proposal`, and `commit` of the msig proposed for it.
 - **`sentiment`** (required, list, may be empty): bindings to off-chain sentiment-signaling topics. Each entry is a mapping of `contract` and `topic`, both Antelope names, and no other keys; an unknown key inside a `sentiment` entry is an error. Sentiment bindings carry no `status` field; sentiment topics do not have an on-chain lifecycle the way msig proposals do.
 - **`requires`** (required, list, may be empty): `VP-NNNN` identifiers of proposals this one depends on. Every listed identifier must resolve to a proposal in this repository.
+- **`documents`** (optional, list, may be empty): declares the proposal as a document set. Each entry is a path relative to the proposal directory of the form `documents/<stem>.md`, where the stem matches `[a-z0-9-]+` and is the document's identifier. The list is ordered, and its order is the set's order. Every listed file must exist, and a duplicate entry is an error. A proposal without the field, or with an empty list, is a single-document proposal. See Document Sets for what listing a document means.
 - **`replaces`** (optional, list): `VP-NNNN` identifiers of proposals this one replaces.
 - **`superseded-by`** (optional, list): `VP-NNNN` identifiers of proposals that replace this one. Allowed only when `status` is `Superseded`, and required to be non-empty in that case. `replaces` and `superseded-by` are reciprocal: if A's `replaces` lists B, B's `superseded-by` must list A, and vice versa.
 - **`resolution`** (optional, string): a 64-hex txid. Allowed only when `status` is `Executed`, and required in that case. When the proposal also has `msigs` entries with `status: executed`, `resolution` must match one of their `txid` values.
@@ -71,9 +74,9 @@ The linter enforces the field's shape (key names, version sequence, date orderin
 
 ## Languages and Translations
 
-English is the canonical language of every proposal; only the English text is normative. Korean (`ko`) and Simplified Chinese (`zh`, the bare tag with no region subtag) are required translations, kept in lockstep with the English source at every merge, starting from a proposal's first `Draft` landing.
+English is the canonical language of every proposal; only the English text is normative. Korean (`ko`) and Simplified Chinese (`zh`, the bare tag with no region subtag) are required translations of the root document, kept in lockstep with the English source at every merge, starting from a proposal's first `Draft` landing. The root document is the only file in a proposal whose `ko` and `zh` translations are required; a listed document's translations are optional (see Document Sets).
 
-Translations live as sibling files in the same proposal directory: `proposal.ko.md`, `proposal.zh.md`, and so on for any additional language. A translation file's own frontmatter has six keys: `lang` (must match the file's language tag), `source` (the 40-hex git blob hash of the English `proposal.md` content the translation was made from), `translator` (optional), `excerpt` (optional), which holds a translated excerpt under the same rules as the English field: 280 characters or fewer counted in Unicode code points, a single paragraph, plain text, `revisions` (optional), present exactly when the English file's `revisions` is present, and `msigs` (optional), present exactly when at least one entry in the English file's `msigs` carries a `title`. Unknown keys are errors, same as proposal frontmatter.
+Translations live as sibling files in the same proposal directory: `proposal.ko.md`, `proposal.zh.md`, and so on for any additional language. A root translation's frontmatter has six keys: `lang` (must match the file's language tag), `source` (the 40-hex git blob hash of the English `proposal.md` content the translation was made from), `translator` (optional), `excerpt` (optional), which holds a translated excerpt under the same rules as the English field: 280 characters or fewer counted in Unicode code points, a single paragraph, plain text, `revisions` (optional), present exactly when the English file's `revisions` is present, and `msigs` (optional), present exactly when at least one entry in the English file's `msigs` carries a `title`. Unknown keys are errors, same as proposal frontmatter.
 
 A translation's `revisions` list mirrors the English list exactly: the same number of entries, with matching `version` and `date` per entry. `summary` text is deliberately not compared, since it is translated: each file's summaries are validated independently under the length and plain-text rules above.
 
@@ -93,6 +96,26 @@ The first non-blank line after the `#` title, in every language file (English an
 
 Translations may be produced by anyone: proposal authors, community translators, or agents. Human correction is welcome at any time, but there is no native-speaker review gate before a translation may merge.
 
+## Document Sets
+
+A proposal may comprise several markdown documents. `proposal.md` is the root document, and the files its `documents` frontmatter field lists complete the document set. "The proposal" means the whole set; the root document is the file that carries the frontmatter, the required structure, and the required translations, and it names and links each listed document from its prose.
+
+Every listed document lives in the proposal's `documents/` subdirectory, with its translations as siblings there under the `<stem>.<lang>.md` convention. `assets/` keeps its existing meaning: assets are raw-fetch supporting files under their own caps, listed documents are rendered prose subject to content lint, and the two never share a directory.
+
+A listed document enters the repository verbatim, and this standard relaxes around it rather than requiring the text to be normalized. An English document carries no frontmatter: the file is body from its first byte, so a document that opens with a `---` line has that line as content, never as a frontmatter delimiter.
+
+No document carries a declared title, in any form or language. The root document's prose names each document through link text, so translating the root translates the names, and a rendering client wanting chrome derives a label from the document's first `#` heading via `index.json` (see Rendering Contract).
+
+Lint dispatches by position, never by declaration: nothing marks which ruleset a file gets. The root document and its translations are judged by this standard's full ruleset, unchanged. Every listed document, and every translation of one, is judged by a reduced set:
+
+- These rules bind every document in every language: the external-link allowlist, the raw HTML ban, balanced code fences, the ban on link reference definitions and reference-style links, and the 256 KB per-file cap.
+- The whole of Document Structure is dropped: no required section roster, no single-`#` rule, and no requirement that a `#` heading exist at all. The language navigation line is likewise dropped, in every language; cross-language navigation for a document is the renderer's job, resolved from `index.json`.
+- Relative links are an error. A listed document's permitted link targets are same-page `#anchor` links and allowlisted external links, nothing else.
+
+A document translation is found by the `documents/<stem>.<lang>.md` filename convention, keyed to a listed document; nothing declares it. Its frontmatter holds exactly `lang` and `source`, both required, and an unknown key is an error. `source` pins the 40-hex git blob hash of its own English document, so each document's freshness is independent: editing one document outdates only that document's translations, and restamping them touches no other file. A document translation's body must mirror its own English document's `##` section count and order, under the same rule as a root translation. An outdated document translation is a warning in every language and never blocks a merge.
+
+A markdown file in `documents/` that no entry lists is tolerated but is not part of the set: nothing serves it and nothing checks it. There is no cap on the number of documents in a set; the 256 KB per-file cap is the only bound.
+
 ## References and Assets
 
 External links are banned by default. The single allowlisted exception is a commit-pinned GitHub link: `https://github.com/{org}/{repo}/blob/<40-hex-sha>/...` or the `tree/<40-hex-sha>/...` equivalent, with a full 40-character commit SHA (never a branch or tag name). Any other `http(s)://` occurrence in a proposal body (as a markdown link or as bare text), outside a code fence or inline code span, is an error. Links to block explorers or UI front-ends are never permitted, anywhere: rendering clients are expected to derive such links themselves from frontmatter (account names, txids) rather than have them hardcoded into proposal prose.
@@ -101,7 +124,7 @@ A proposal body is plain Markdown, and raw HTML in it is an error. Any tag-shape
 
 Code fences must be balanced. A ```` ``` ```` or `~~~` fence left open at the end of a document is an error, because an unterminated fence hides the remainder of the body from every other content check.
 
-Internal links resolve against two shapes only: a cross-VP link, `../vp-NNNN-slug/proposal.md` (optionally with a `.lang` tag and a `#anchor`), whose link text must be exactly the target's `VP-NNNN`; and an own-directory asset link, `assets/<file>`, which may not reach into subdirectories or escape `assets/`. The language navigation line's own targets (`proposal.md`, `proposal.<lang>.md`) are also legal link targets. Every relative target must resolve to a file that actually exists. Every link writes its destination inline, in the `[text](destination)` form; a link reference definition (`[label]: destination`) and any reference-style use of one are errors.
+Internal links in the root document resolve against three shapes only: a cross-VP link, `../vp-NNNN-slug/proposal.md` (optionally with a `.lang` tag and a `#anchor`), whose link text must be exactly the target's `VP-NNNN`; an own-directory asset link, `assets/<file>`, which may not reach into subdirectories or escape `assets/`; and a document link, `documents/<file>` (optionally with a `.lang` tag before the `.md` extension, and a `#anchor`), which is constrained the same way and must resolve to a file that exists, whether or not the `documents` field lists it. A listed document's own links are restricted further; see Document Sets. The language navigation line's own targets (`proposal.md`, `proposal.<lang>.md`) are also legal link targets. Every relative target must resolve to a file that actually exists. Every link writes its destination inline, in the `[text](destination)` form; a link reference definition (`[label]: destination`) and any reference-style use of one are errors.
 
 When a proposal's prose needs to reference an on-chain fact directly rather than via a link, it does so as plain backticked text: account names as `` `accountname` `` and transaction IDs as the full 64-hex txid in backticks, not truncated and not linked.
 
@@ -152,10 +175,13 @@ The vehicle for this citation differs by binding type:
 
 ## Rendering Contract
 
-A conforming VP is written so that any external client can render it correctly by applying two rewrite rules, without needing further knowledge of the repository's internal layout:
+A conforming VP is written so that any external client can render it correctly by applying three rewrite rules, all of which appear in the root document only, without needing further knowledge of the repository's internal layout:
 
 - A cross-VP link target, `../vp-NNNN-slug/proposal.md`, rewrites to the client's own proposal route for that VP number. The client resolves slug to number (and back) via `index.json`, which carries both.
 - An asset link target, `assets/<file>`, rewrites to a raw fetch of that file at the commit the client is rendering.
+- A document link target, `documents/<file>`, rewrites to the client's own view of that document within the proposal.
+
+For a proposal that declares a document set, `index.json` carries a `documents` array in frontmatter order: per document its repo-relative `path`, a best-effort `heading` derived from its first `#` heading (omitted when the document has none, in which case a client falls back to the filename stem), and its `translations`, each with `lang`, `path`, `current`, and the translation's own derived `heading`. The array is present only when the proposal declares a non-empty `documents` field, so the index entry of a single-document proposal is unchanged.
 
 Heading anchors follow GitHub-Flavored Markdown slugification rules, so clients that generate a table of contents or in-page anchors from `##`/`###` headings can do so without a proposal-specific anchor scheme.
 

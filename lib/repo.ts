@@ -3,6 +3,11 @@ import { join } from 'node:path'
 import { lintAssetsDir } from './assets'
 import { REQUIRED_LANGS } from './constants'
 import {
+    documentStem,
+    documentTranslationLang,
+    validateDocumentTranslationFrontmatter,
+} from './documents'
+import {
     checkMsigTitlesMirror,
     checkRevisionsMirror,
     parseProposal,
@@ -17,7 +22,11 @@ import {
     TRANSLATION_FILE_PATTERN,
     validateTranslationFrontmatter,
 } from './translations'
-import type { ProposalFrontmatter, TranslationFrontmatter } from './types'
+import type {
+    DocumentTranslationFrontmatter,
+    ProposalFrontmatter,
+    TranslationFrontmatter,
+} from './types'
 
 const MARKDOWN_SIZE_LIMIT = 262_144
 
@@ -28,11 +37,25 @@ export interface LoadedTranslation {
     current: boolean
 }
 
+export interface LoadedDocumentTranslation {
+    lang: string
+    frontmatter: DocumentTranslationFrontmatter
+    body: string
+    current: boolean
+}
+
+export interface LoadedDocument {
+    file: string // the frontmatter-declared path, relative to the proposal directory
+    body: string
+    translations: LoadedDocumentTranslation[]
+}
+
 export interface LoadedProposal {
     slug: string
     frontmatter: ProposalFrontmatter
     body: string
     translations: LoadedTranslation[]
+    documents: LoadedDocument[]
 }
 
 export function crossChecks(
@@ -171,7 +194,74 @@ export async function lintRepo(
                 err(`missing required translation proposal.${lang}.md`)
             }
         }
-        proposals.push({ slug, frontmatter: value, body: parsed.body, translations })
+
+        const documents: LoadedDocument[] = []
+        const documentsDir = join(dir, 'documents')
+        const documentFiles = existsSync(documentsDir) ? readdirSync(documentsDir).sort() : []
+        for (const file of value.documents ?? []) {
+            const derr = (message: string) => errors.push(`${slug}/${file}: ${message}`)
+            let text: string
+            try {
+                text = await Bun.file(join(dir, file)).text()
+            } catch {
+                derr('declared document does not exist')
+                continue
+            }
+            if (text.length > MARKDOWN_SIZE_LIMIT) {
+                derr(`exceeds the ${MARKDOWN_SIZE_LIMIT}-byte size cap (${text.length} bytes)`)
+                continue
+            }
+            // An English document is verbatim body from byte zero: no frontmatter extraction, no structure rules.
+            lintFences(text).forEach(derr)
+            lintRawHtml(text).forEach(derr)
+            lintLinks(text, { slug, fileExists, scope: 'document' }).forEach(derr)
+            const documentHash = gitBlobHash(text)
+            const stem = documentStem(file)
+            const documentTranslations: LoadedDocumentTranslation[] = []
+            for (const sibling of documentFiles) {
+                const lang = documentTranslationLang(sibling, stem)
+                if (!lang) continue
+                const rel = `documents/${sibling}`
+                const terr = (message: string) => errors.push(`${slug}/${rel}: ${message}`)
+                const ttext = await Bun.file(join(documentsDir, sibling)).text()
+                if (ttext.length > MARKDOWN_SIZE_LIMIT) {
+                    terr(`exceeds the ${MARKDOWN_SIZE_LIMIT}-byte size cap (${ttext.length} bytes)`)
+                    continue
+                }
+                let tparsed: { frontmatter: unknown; body: string }
+                try {
+                    tparsed = parseProposal(ttext)
+                } catch (error) {
+                    terr((error as Error).message)
+                    continue
+                }
+                const { value: dfm, errors: derrs } = validateDocumentTranslationFrontmatter(
+                    tparsed.frontmatter,
+                    lang,
+                )
+                if (!dfm) {
+                    derrs.forEach(terr)
+                    continue
+                }
+                const current = dfm.source === documentHash
+                if (!current) {
+                    console.warn(`warning: ${slug}/${rel} is outdated`)
+                }
+                lintFences(tparsed.body).forEach(terr)
+                lintRawHtml(tparsed.body).forEach(terr)
+                lintLinks(tparsed.body, { slug, fileExists, scope: 'document' }).forEach(terr)
+                lintStructureMirror(text, tparsed.body).forEach(terr)
+                documentTranslations.push({
+                    lang,
+                    frontmatter: dfm,
+                    body: tparsed.body,
+                    current,
+                })
+            }
+            documents.push({ file, body: text, translations: documentTranslations })
+        }
+
+        proposals.push({ slug, frontmatter: value, body: parsed.body, translations, documents })
     }
 
     errors.push(...crossChecks(proposals))

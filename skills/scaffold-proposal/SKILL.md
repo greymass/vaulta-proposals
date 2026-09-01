@@ -83,3 +83,36 @@ root.
 9. **Index**: run `bun run index` last, after the final fix, so `index.json`
    reflects the finished state. CI rejects a stale index. Do not commit; leave
    the working tree for review.
+
+## Document sets
+
+A proposal that carries supporting documents (an externally authored package,
+exhibits, a PRD) declares them in frontmatter and vendors them whole instead
+of restating their content in the body.
+
+- Declare the set with `documents`: an ordered list of paths of the form
+  `documents/<stem>.md`, each stem matching `[a-z0-9-]+`; the stem is the
+  document's identifier. Every listed file must exist, and the list's order is
+  the set's order.
+- Vendor each file into `documents/` byte for byte, exactly as received.
+  Never edit, reformat, or normalize a listed document: draft version lines,
+  `[___]` blanks, self-stated statuses, and references to material outside the
+  repo all stay as written. A revised upstream version later replaces the file
+  whole, with a `revisions` entry recording the ingestion.
+- Listed documents are exempt from the standard's Document Structure rules and
+  the language navigation line, and an English document carries no
+  frontmatter: a file opening with `---` has that line as content. The
+  universal rules still bind every document (the external-link allowlist, the
+  raw HTML ban, balanced fences, the ban on reference-style links, the 256 KB
+  cap), so check a candidate file against them before ingesting; a violation
+  goes back to the document's author rather than being edited away.
+- Relative links inside a listed document are errors; its only legal targets
+  are same-page `#anchor` links and allowlisted external links.
+- No document carries a declared title anywhere. The root's prose names each
+  document through its link text, using the `documents/<file>` link target,
+  and routes readers into the set: the root says what each document is, not
+  what it says.
+- `documents/` holds rendered prose; `assets/` keeps raw-fetch supporting
+  files. The two never share a directory.
+- Document translations are optional in every language; see
+  [translate-proposal](../translate-proposal/SKILL.md).
