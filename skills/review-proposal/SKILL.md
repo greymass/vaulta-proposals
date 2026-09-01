@@ -60,6 +60,11 @@ Make each pass separately; do not blend them.
    authorities, obligations). Structure is linted; meaning is not. Check that
    every English `msigs` entry carrying a `title` has a matching translated
    title in each translation's `msigs` list.
+   For a document set, also check each document translation found beside its
+   English document (`documents/<stem>.<lang>.md`): frontmatter of exactly
+   `lang` and `source`, and meaning drift against its own English document.
+   Document translations are optional and a stale one warns without blocking,
+   so a missing or stale translation is not a finding; a wrong one is.
 6. **The standard's unlinted rules.** Read the diff, not just the file. Is a
    frozen proposal (`Executed`, `Rejected`, `Withdrawn`, `Superseded`) having
    its body or `assets/` edited? Has any existing `msigs` entry been rewritten
@@ -78,6 +83,11 @@ Make each pass separately; do not blend them.
    account, threshold, or scope change), and was it added in the same commit
    as that change? The linter checks the field's shape, not this judgment;
    a missing or undeserved entry is advisory, never blocking.
+   In a document set, a diff that edits a listed document is suspect:
+   documents enter verbatim and change only by wholesale replacement with a
+   revised upstream version, recorded in `revisions`. A piecemeal edit that
+   rewrites, reformats, or normalizes a listed document is blocking. Check
+   too that the root's prose names and links every listed document.
 
 ## Output
 

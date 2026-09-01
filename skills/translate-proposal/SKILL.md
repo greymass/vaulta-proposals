@@ -48,7 +48,10 @@ entry in `LANG_LABELS` (`lib/types.ts`) appears in the nav line as its bare tag.
      (RAM, MSIG, BP, WASM); translate surrounding prose.
    - Never editorialize, soften, or add caveats absent from the English.
      If the English is ambiguous, fix the English first.
-5. **When refreshing** after any English change, first identify what changed:
+5. **When refreshing** after any English change, first identify what changed.
+   A change to a listed document is not a `proposal.md` change: it stales only
+   that document's own translations, never the root's `ko` and `zh` (see
+   Document translations). For the root itself:
    - Frontmatter only, no translation content: a `status` transition, or a
      `planned` `msigs` entry gaining its `proposer`/`proposal`/`commit` binding. No
      retranslation. The hash covers the whole file, frontmatter included, so
@@ -81,3 +84,27 @@ entry in `LANG_LABELS` (`lib/types.ts`) appears in the nav line as its bare tag.
    translation before rerunning: the stale-translation error names the
    translation file, but the cause is usually the English edit you just made. Do
    not commit.
+
+## Document translations
+
+Everything above governs the root document, the only file whose `ko` and `zh`
+are required. A listed document (see the standard's Document Sets section) may
+also carry translations, in any language, and every one is optional: a
+document with none is complete, and one carrying `ko` without `zh` is missing
+nothing.
+
+- A document translation is discovered by filename convention,
+  `documents/<stem>.<lang>.md` beside its English document; nothing declares
+  it, so adding one touches no existing file and stales nothing.
+- Its frontmatter holds exactly `lang` and `source`, both required and
+  nothing else; an unknown key is an error. `source` pins the git blob hash of
+  its own English document (`git hash-object documents/<stem>.md`).
+- No language navigation line, in any language. The body mirrors its own
+  English document's `##` section count and order, and the fidelity rules in
+  step 4 apply unchanged. The English document is verbatim source material: if
+  it is ambiguous, the translation carries the ambiguity, and the English is
+  never edited to ease translation.
+- Freshness is per document. Editing one document stales only that document's
+  own translations: never the root's `ko` and `zh`, and never another
+  document's. A stale document translation is a warning in every language and
+  never blocks a merge; restamp its `source` when refreshing it.

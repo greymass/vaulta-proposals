@@ -11,6 +11,13 @@ question; this file only routes.
   English edit. "Any edit" is literal: the freshness check is a hash of the
   whole English file, so a frontmatter-only change such as a status transition
   makes both translations stale and requires restamping their `source` values.
+- A proposal may be a document set: the root `proposal.md` lists supporting
+  documents in a `documents` frontmatter field, and the files live under
+  `documents/`. Listed documents are vendored verbatim and never rewritten,
+  reformatted, or normalized; the standard relaxes around them instead. Only
+  the root's `ko` and `zh` are required: document translations are optional,
+  and a stale one warns without blocking. Editing a document stales only that
+  document's own translations, never the root's.
 - No external links except commit-pinned `github.com` URLs. No UI/explorer
   links anywhere.
 - Frontmatter is canonical for all on-chain assertions; body prose is
