@@ -1,6 +1,7 @@
 import { Name } from '@wharfkit/antelope'
 import { parse } from 'yaml'
 import { MSIG_STATUSES, STATUSES } from './constants'
+import { checkDocuments } from './documents'
 import type { MsigRef, ProposalFrontmatter, RevisionEntry, TranslatedMsigTitle } from './types'
 
 const VP_PATTERN = /^VP-\d{4}$/
@@ -21,6 +22,7 @@ const ALLOWED_KEYS = new Set([
     'msigs',
     'sentiment',
     'requires',
+    'documents',
     'replaces',
     'superseded-by',
     'resolution',
@@ -471,6 +473,7 @@ export function validateFrontmatter(
     }
     validateMsigs(fm.msigs, errors)
     validateSentiment(fm.sentiment, errors)
+    checkDocuments(fm.documents, errors)
     if (!isVpList(fm.requires)) {
         errors.push('requires must be a list of VP-NNNN identifiers (may be empty)')
     }

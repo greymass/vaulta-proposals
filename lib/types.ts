@@ -61,11 +61,17 @@ export interface ProposalFrontmatter {
     msigs: MsigRef[]
     sentiment: SentimentRef[]
     requires: string[] // "VP-NNNN"
+    documents?: string[] // ordered "documents/<stem>.md" paths; absent or empty means single-document
     replaces?: string[] // "VP-NNNN"
     'superseded-by'?: string[] // "VP-NNNN", non-empty iff status Superseded
     resolution?: string // 64-hex txid, required iff status Executed
     excerpt?: string
     revisions?: RevisionEntry[]
+}
+
+export interface DocumentTranslationFrontmatter {
+    lang: string // must match the filename language tag
+    source: string // 40-hex git blob hash of its own English document
 }
 
 export interface TranslatedMsigTitle {
@@ -91,12 +97,26 @@ export interface TranslationEntry {
     msigs: TranslatedMsigTitle[]
 }
 
-export interface IndexEntry extends ProposalFrontmatter {
+export interface DocumentTranslationIndexEntry {
+    lang: string
+    path: string
+    current: boolean
+    heading?: string // best-effort first # heading of the translation
+}
+
+export interface DocumentIndexEntry {
+    path: string
+    heading?: string // best-effort first # heading of the English document
+    translations: DocumentTranslationIndexEntry[]
+}
+
+export interface IndexEntry extends Omit<ProposalFrontmatter, 'documents'> {
     slug: string
     path: string
     updated: string | null // git-derived last-modified date for the proposal dir
     excerpt: string
     translations: TranslationEntry[]
+    documents?: DocumentIndexEntry[] // present only when the proposal declares a document set
 }
 
 export interface MsigFlag {

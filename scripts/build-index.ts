@@ -1,9 +1,10 @@
 import { join } from 'node:path'
 import { ROOT } from '$lib/constants'
+import { extractFirstHeading } from '$lib/documents'
 import { extractCardFields, resolveExcerpt } from '$lib/excerpt'
 import { resolveUpdated } from '$lib/frontmatter'
 import { lintRepo } from '$lib/repo'
-import type { IndexEntry } from '$lib/types'
+import type { DocumentIndexEntry, IndexEntry } from '$lib/types'
 
 const indexPath = join(ROOT, 'index.json')
 const check = process.argv.includes('--check')
@@ -29,7 +30,23 @@ if (errors.length) {
 const index: IndexEntry[] = await Promise.all(
     proposals.map(async (p) => {
         // revisions is authored data for the detail page, not part of the index shape
-        const { revisions, ...frontmatter } = p.frontmatter
+        const { revisions, documents: _documents, ...frontmatter } = p.frontmatter
+        const documentEntries: DocumentIndexEntry[] = p.documents.map((d) => {
+            const heading = extractFirstHeading(d.body)
+            return {
+                path: `proposals/${p.slug}/${d.file}`,
+                ...(heading !== undefined && { heading }),
+                translations: d.translations.map((t) => {
+                    const theading = extractFirstHeading(t.body)
+                    return {
+                        lang: t.lang,
+                        path: `proposals/${p.slug}/${d.file.slice(0, -'.md'.length)}.${t.lang}.md`,
+                        current: t.current,
+                        ...(theading !== undefined && { heading: theading }),
+                    }
+                }),
+            }
+        })
         return {
             ...frontmatter,
             slug: p.slug,
@@ -44,6 +61,7 @@ const index: IndexEntry[] = await Promise.all(
                 excerpt: resolveExcerpt(t.frontmatter.excerpt, t.body),
                 msigs: t.frontmatter.msigs ?? [],
             })),
+            ...(documentEntries.length > 0 && { documents: documentEntries }),
         }
     }),
 )
