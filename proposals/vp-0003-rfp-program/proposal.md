@@ -12,7 +12,9 @@ accounts:
     - eosio.prods
     - delphioracle
 msigs: []
-sentiment: []
+sentiment:
+    - contract: sentiment.gm
+      topic: rfp
 requires: []
 documents:
     - documents/msig-5.md

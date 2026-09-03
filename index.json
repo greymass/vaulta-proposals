@@ -1,5 +1,5 @@
 {
-    "generated": "2026-09-01T18:42:17.824Z",
+    "generated": "2026-09-03T21:38:00.516Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -131,7 +131,12 @@
                 "delphioracle"
             ],
             "msigs": [],
-            "sentiment": [],
+            "sentiment": [
+                {
+                    "contract": "sentiment.gm",
+                    "topic": "rfp"
+                }
+            ],
             "requires": [],
             "slug": "vp-0003-rfp-program",
             "path": "proposals/vp-0003-rfp-program/proposal.md",
