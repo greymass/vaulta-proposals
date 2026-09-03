@@ -1,5 +1,5 @@
 import type { Action } from '@wharfkit/antelope'
-import { prependCitation } from '$lib/citation'
+import { checkCitationCommit, prependCitation } from '$lib/citation'
 import { ROOT } from '$lib/constants'
 import { COMMIT_FLAG, declaredFlags, flagValues, resolveFlags } from '$lib/flags'
 import {
@@ -12,7 +12,8 @@ import {
     resolveSlug,
 } from '$lib/msig'
 import { lintRepo } from '$lib/repo'
-import type { MsigModule } from '$lib/types'
+import { fetchTopicRow, lintTopicCitation } from '$lib/sentiment'
+import type { MsigModule, ProposalFrontmatter } from '$lib/types'
 
 const [vpArg] = process.argv.slice(2)
 
@@ -21,26 +22,13 @@ if (errors.length) {
     console.error('verification failed:')
     for (const error of errors) console.error(`  - ${error}`)
     if (vpArg) {
-        console.error(
-            `the on-chain msig comparison for ${vpArg} did not run because conformance failed`,
-        )
+        console.error(`the on-chain comparison for ${vpArg} did not run because conformance failed`)
     }
     process.exit(1)
 }
 console.log('✓ all proposals conform to their declared standard')
 
-if (vpArg) {
-    const slug = resolveSlug(vpArg)
-    const proposal = proposals.find((p) => p.slug === slug)
-    if (!proposal) {
-        console.error(`no proposal directory named ${slug}`)
-        process.exit(1)
-    }
-    const frontmatter = proposal.frontmatter
-    if (frontmatter.msigs.length === 0) {
-        console.log(`${frontmatter.vp} has no msigs listed in frontmatter; nothing to verify`)
-        process.exit(0)
-    }
+async function verifyMsigs(frontmatter: ProposalFrontmatter, slug: string): Promise<boolean> {
     const loadModule = createMsigModuleLoader(slug)
     let failed = false
     let bound = 0
@@ -127,6 +115,61 @@ if (vpArg) {
         console.log(
             `${frontmatter.vp}: every msigs entry is still planned, so no on-chain comparison was made`,
         )
+    }
+    return failed
+}
+
+// A topic that frontmatter names must exist; its citation is advisory under VPS-1, so it only warns.
+async function verifySentiment(frontmatter: ProposalFrontmatter, slug: string): Promise<boolean> {
+    let failed = false
+    for (const ref of frontmatter.sentiment) {
+        const label = `${ref.contract}/${ref.topic}`
+        let topic: Awaited<ReturnType<typeof fetchTopicRow>>
+        try {
+            topic = await fetchTopicRow(ref)
+        } catch (error) {
+            const message = error instanceof Error ? error.message : String(error)
+            console.error(`✗ ${label}: ${message}`)
+            failed = true
+            continue
+        }
+        const check = lintTopicCitation(topic.description, frontmatter.vp, slug)
+        const problems = [
+            ...check.problems,
+            ...(check.parsed ? checkCitationCommit(check.parsed) : []),
+        ]
+        for (const problem of problems) console.warn(`warning: ${label}: ${problem}`)
+        if (check.cited && problems.length === 0) {
+            console.log(
+                `✓ ${label}: topic exists and cites ${frontmatter.vp} at ${check.parsed?.commit.slice(0, 7)}`,
+            )
+        } else if (!check.cited && problems.length === 0) {
+            console.log(`○ ${label}: topic exists and carries no citation, which VPS-1 permits`)
+        } else {
+            console.log(`○ ${label}: topic exists; its citation is not conformant`)
+        }
+    }
+    return failed
+}
+
+if (vpArg) {
+    const slug = resolveSlug(vpArg)
+    const proposal = proposals.find((p) => p.slug === slug)
+    if (!proposal) {
+        console.error(`no proposal directory named ${slug}`)
+        process.exit(1)
+    }
+    const frontmatter = proposal.frontmatter
+    let failed = false
+    if (frontmatter.msigs.length === 0) {
+        console.log(`${frontmatter.vp} has no msigs listed in frontmatter`)
+    } else {
+        failed = (await verifyMsigs(frontmatter, slug)) || failed
+    }
+    if (frontmatter.sentiment.length === 0) {
+        console.log(`${frontmatter.vp} has no sentiment topics listed in frontmatter`)
+    } else {
+        failed = (await verifySentiment(frontmatter, slug)) || failed
     }
     process.exit(failed ? 1 : 0)
 }
