@@ -34,7 +34,7 @@ revisions:
       summary: Pinned the contract source to the deployed artifact's commit, recorded its hashes and CDT version, and corrected the logcreation signature.
     - version: 4
       date: 2026-09-03
-      summary: Removed the logcreation action and republished the artifact at its new commit and hashes.
+      summary: Removed the logcreation action, republished the artifact at its new commit and hashes, and stated what a creation spends its bytes on.
 excerpt: "A proposal to create the new.vaulta account and deploy an account creation contract to it: one canonical, network-secured home where a user pays in the network token and receives their account and its RAM in one step."
 ---
 
@@ -70,7 +70,7 @@ The contract is driven by a token-transfer notification rather than a directly c
 | `parsememo(memo)` (read-only) | none | Parse `accountname-PUBLICKEY` into an account name and a single-key authority |
 | `estimatecost()` (read-only) | none | Return the current token cost of one account creation |
 
-The memo format is `accountname-PUBLICKEY` (both `PUB_` and legacy key formats accepted). Each creation spends the RAM cost of 3,260 bytes plus the system fee, and the user must send at least that much. Any excess is transferred to the new account. The RAM the account receives is what that payment buys at the market rate, which lands near 3,260 bytes rather than exactly on it, and the network's standard per-account allowance applies on top of it.
+The memo format is `accountname-PUBLICKEY` (both `PUB_` and legacy key formats accepted). Each creation spends the RAM cost of 3,260 bytes plus the system fee, and the user must send at least that much. Any excess is transferred to the new account. The RAM the account receives is what that payment buys at the market rate, which lands near 3,260 bytes rather than exactly on it, and the network's standard per-account allowance applies on top of it. The 3,260 bytes are 3,000 for the account itself and 260 for the token balance row a refunded excess creates, both compile-time constants.
 
 Payment is accepted only in the designated token (`A`, 4 decimals) issued by `core.vaulta`. The contract passes over, rather than rejects, any transfer it is not the recipient of, any transfer it sends itself, and any transfer from `eosio.ram` or `core.vaulta`, which covers its own RAM purchases and the leg `core.vaulta` returns to it while unwrapping the payment during `buyram`. A transfer of any other token is rejected and the sending transaction fails, unless its memo is `bypass`.
 
@@ -104,6 +104,8 @@ A created account holds RAM but no CPU or NET, so it cannot move its refunded ba
 
 One key serves both authorities by design. A separate owner key, a multisig, or account-based recovery is set up with `updateauth` after creation.
 
+`create.gm` on Vaulta mainnet runs the artifact Next Steps publishes, so these steps can be exercised against a live contract by substituting `create.gm` for `new.vaulta` in step 2.
+
 ## Scope Boundaries
 
 - This proposal covers the `new.vaulta` account and its account creation contract only.
@@ -127,4 +129,5 @@ The deployment step proposes this artifact:
 Rebuilding takes a checkout of that commit and `make build/create/production`, which compiles inside that container. `shasum -a 256 contracts/create/build/create.wasm` gives the code hash, and serializing `contracts/create/build/create.abi` to its binary form gives 512 bytes hashing to the ABI hash. Both values are also what `create.gm` runs on Vaulta mainnet, returned as `code_hash` and `abi_hash` by `get_raw_abi`.
 
 - [x] The authors record the code hash, the commit it builds from, and the CDT version that reproduces it in this section before the deployment step is proposed, so BPs can rebuild and compare.
+- [x] The authors keep `create.gm` deployed at the artifact this section publishes, so the production example and the proposed code stay the same build.
 - [ ] The authors add the back-reference citation to each step's transaction, pinned to the commit carrying this proposal's final text.

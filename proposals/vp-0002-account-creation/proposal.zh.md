@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: f69fd6229bed41853f8de0dc85a821a7d0d6e7d1
+source: 29aa2bcc23a9b89382ce97698225e06bf5a3ea64
 translator: Claude (agent translation)
 msigs:
     - step: 1
@@ -19,7 +19,7 @@ revisions:
       summary: 将合约源代码固定到构建出已部署产物的提交，记录其哈希与 CDT 版本，并更正 logcreation 的签名。
     - version: 4
       date: 2026-09-03
-      summary: 从合约中移除 logcreation 操作，并以新的提交与哈希重新公布产物。
+      summary: 从合约中移除 logcreation 操作，以新的提交与哈希重新公布产物，并说明单次创建的字节构成。
 excerpt: "一份创建 new.vaulta 账户并向其部署账户创建合约的提案：设立一个由网络保障的标准入口，用户以网络代币支付，即可在单一步骤中获得账户及其 RAM。"
 ---
 
@@ -55,7 +55,7 @@ excerpt: "一份创建 new.vaulta 账户并向其部署账户创建合约的提�
 | `parsememo(memo)`（只读） | 无 | 将 `accountname-PUBLICKEY` 解析为账户名和单一密钥权限 |
 | `estimatecost()`（只读） | 无 | 返回创建一个账户的当前代币成本 |
 
-备注格式为 `accountname-PUBLICKEY`（`PUB_` 和旧版密钥格式均可）。每次创建支出 3,260 字节的 RAM 成本加上系统手续费，用户至少需发送该金额。多余部分会转入新账户。账户实际收到的 RAM 是这笔付款按市场价所能买到的数量，因此接近 3,260 字节而非恰好等于该数，网络的每账户基础配给量则在此之上另行叠加。
+备注格式为 `accountname-PUBLICKEY`（`PUB_` 和旧版密钥格式均可）。每次创建支出 3,260 字节的 RAM 成本加上系统手续费，用户至少需发送该金额。多余部分会转入新账户。账户实际收到的 RAM 是这笔付款按市场价所能买到的数量，因此接近 3,260 字节而非恰好等于该数，网络的每账户基础配给量则在此之上另行叠加。这 3,260 字节由账户本身的 3,000 字节和退还多余款项时所创建的代币余额记录行的 260 字节构成，两者均为编译期常量。
 
 付款仅接受由 `core.vaulta` 发行的指定代币（`A`，4 位小数）。合约会放行而非拒绝以下转账：并非发给它的转账、由它自己发出的转账，以及来自 `eosio.ram` 或 `core.vaulta` 的转账，后者涵盖合约自身的 RAM 购买，以及 `buyram` 过程中 `core.vaulta` 解包付款时退回合约的那一段。除备注为 `bypass` 的情形外，转入任何其他代币都会被拒绝，发送方的交易随之失败。
 
@@ -89,6 +89,8 @@ excerpt: "一份创建 new.vaulta 账户并向其部署账户创建合约的提�
 
 由一个密钥同时承担两项权限是有意的设计。单独的 owner 密钥、多重签名或基于账户的恢复方式，可在创建之后通过 `updateauth` 设置。
 
+Vaulta 主网上的 `create.gm` 运行着「后续步骤」一节所公布的产物，因此将第 2 步中的 `new.vaulta` 换成 `create.gm`，即可在真实合约上实测上述流程。
+
 ## 范围边界
 
 - 本提案仅涉及 `new.vaulta` 账户及其账户创建合约。
@@ -112,4 +114,5 @@ excerpt: "一份创建 new.vaulta 账户并向其部署账户创建合约的提�
 重新构建的方法是检出该提交并运行 `make build/create/production`，编译在上述容器内进行。`shasum -a 256 contracts/create/build/create.wasm` 得到代码哈希；将 `contracts/create/build/create.abi` 序列化为二进制形式得到 512 字节，其哈希即 ABI 哈希。这两个值也正是 `create.gm` 在 Vaulta 主网上运行的内容，由 `get_raw_abi` 以 `code_hash` 和 `abi_hash` 返回。
 
 - [x] 作者在提出部署步骤之前，于本节记录代码哈希、其构建所依据的提交，以及可复现该哈希的 CDT 版本，以便 BP 自行构建并比对。
+- [x] 作者使 `create.gm` 始终部署本节所公布的产物，从而让生产环境示例与所提议的代码保持为同一构建。
 - [ ] 作者为每个步骤的交易加上回溯引用，并将其固定到承载本提案最终文本的提交。
