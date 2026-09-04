@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: d0458cb09cfcb310f81f5360581ee6ea42059dc7
+source: f69fd6229bed41853f8de0dc85a821a7d0d6e7d1
 translator: Claude (agent translation)
 msigs:
     - step: 1
@@ -17,6 +17,9 @@ revisions:
     - version: 3
       date: 2026-08-19
       summary: 배포된 산출물을 빌드하는 커밋으로 컨트랙트 소스를 고정하고, 해시와 CDT 버전을 기록하며, logcreation 시그니처를 바로잡음.
+    - version: 4
+      date: 2026-09-03
+      summary: 컨트랙트에서 logcreation 액션을 제거하고, 새 커밋과 해시로 산출물을 다시 게시함.
 excerpt: "new.vaulta 계정을 생성하고 계정 생성 컨트랙트를 그 계정에 배포하기 위한 제안입니다. 사용자가 네트워크 토큰으로 비용을 지불하면 계정과 그 RAM을 단일 단계로 받는, 네트워크가 보증하는 하나의 표준 창구를 마련합니다."
 ---
 
@@ -38,7 +41,7 @@ excerpt: "new.vaulta 계정을 생성하고 계정 생성 컨트랙트를 그 �
 ### 계정 및 권한
 
 - `new.vaulta`는 다른 `*.vaulta` 계정들과 동일한 패턴을 따라 BP MSIG(15/21)을 통해 생성됩니다. 두 권한 모두 생성 시의 `eosio::newaccount` 액션에서 설정되므로 이후 `updateauth`는 뒤따르지 않습니다.
-- `owner`와 `active`는 모두 `eosio.prods@active`에 위임되며, 이는 15/21 BP 합의로 귀결됩니다. `active`는 추가로 `new.vaulta@eosio.code`를 포함하므로 컨트랙트가 자체 권한으로 인라인 액션을 전송할 수 있습니다. 해당 액션은 `eosio::newaccount`, `core.vaulta::buyram`, 초과 결제분을 돌려주는 `core.vaulta::transfer`, 그리고 자체 `logcreation`입니다.
+- `owner`와 `active`는 모두 `eosio.prods@active`에 위임되며, 이는 15/21 BP 합의로 귀결됩니다. `active`는 추가로 `new.vaulta@eosio.code`를 포함하므로 컨트랙트가 자체 권한으로 인라인 액션을 전송할 수 있습니다. 해당 액션은 `eosio::newaccount`, `core.vaulta::buyram`, 그리고 초과 결제분을 돌려주는 `core.vaulta::transfer`입니다.
 - 따라서 향후 모든 `setcode`/`setabi`에도 동일한 15/21 승인이 필요합니다. 더 낮은 임계값의 관리 권한은 존재하지 않으며, 컨트랙트에는 그런 권한을 필요로 하는 관리자 액션 자체가 없습니다.
 - 모든 컨트랙트 매개변수(결제 토큰, 바이트 제공량, 프록시 컨트랙트)는 컴파일 타임 상수입니다. 이 중 무엇이든 변경하는 것은 곧 코드 변경입니다. 새로 게시된 커밋과 해시가 15/21 `setcode`로 승인되어야 하며, 설정 액션은 존재하지 않습니다.
 
@@ -51,7 +54,6 @@ excerpt: "new.vaulta 계정을 생성하고 계정 생성 컨트랙트를 그 �
 | `transfer` 알림(`*::transfer`) | 토큰 송신자 | `core.vaulta`가 발행한 결제 토큰을 수신하면 메모를 파싱하고, 계정을 생성하며, RAM을 구매하고, 초과분을 환급 |
 | `parsememo(memo)`(읽기 전용) | 없음 | `accountname-PUBLICKEY`를 계정명과 단일 키 권한으로 파싱 |
 | `estimatecost()`(읽기 전용) | 없음 | 계정 생성 1건의 현재 토큰 비용을 반환 |
-| `logcreation(account, from, excess, ram, timestamp)` | `new.vaulta` | 인덱싱을 위해 생성마다 발생시키는 인라인 로그 액션. `from`은 결제 전송을 보낸 계정으로, 생성되는 계정과 반드시 일치하지는 않습니다 |
 
 메모 형식은 `accountname-PUBLICKEY`입니다(`PUB_` 및 레거시 키 형식 모두 허용). 각 생성은 3,260바이트의 RAM 비용에 시스템 수수료를 더한 금액을 지출하며, 사용자는 최소 그만큼을 전송해야 합니다. 초과분은 신규 계정으로 이전됩니다. 계정이 실제로 받는 RAM은 그 결제 금액이 시장 가격으로 구매하는 양이므로 3,260바이트에 정확히 맞아떨어지지 않고 그 부근에 놓이며, 여기에 네트워크의 기본 계정당 할당량이 더해집니다.
 
@@ -98,16 +100,16 @@ excerpt: "new.vaulta 계정을 생성하고 계정 생성 컨트랙트를 그 �
 
 ## 다음 단계
 
-컨트랙트 소스는 [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/d103fdcea03bf2a6e3e0ff5ed893ec10389c29a2/contracts/create)에 공개되어 있습니다.
+컨트랙트 소스는 [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/5cf57a57484c7f0efe5a2e5740186f41070522de/contracts/create)에 공개되어 있습니다.
 
 배포 단계가 제안하는 산출물은 다음과 같습니다.
 
-- 커밋: `d103fdcea03bf2a6e3e0ff5ed893ec10389c29a2`
-- 코드 해시: `7166a16ea0d6db98fe18cde9a2d56b30f091dcbb19efcd0a0b5fa0e510f272c8`, 38,534바이트 WASM에 대한 값
-- ABI 해시: `4f47d205f7cc990efb548d002f324e9c23c8a5ab65012dbab4430973e3c7ffdb`, 610바이트 직렬화 ABI에 대한 값
+- 커밋: `5cf57a57484c7f0efe5a2e5740186f41070522de`
+- 코드 해시: `592f0bd14c4964548485d8f048c44bf31946c24b245db4fd78799cf1fb4c5f22`, 36,757바이트 WASM에 대한 값
+- ABI 해시: `2804e98748d68d67bb9e1447178114f20a5901063e978899e514e0e39347f5ac`, 512바이트 직렬화 ABI에 대한 값
 - CDT: v4.1.1, 툴체인 컨테이너의 빌드 인자로 고정
 
-재현하려면 해당 커밋을 체크아웃하고 `make build/create/production`을 실행하며, 컴파일은 그 컨테이너 안에서 이루어집니다. `shasum -a 256 contracts/create/build/create.wasm`이 코드 해시를 내주고, `contracts/create/build/create.abi`를 바이너리로 직렬화하면 610바이트가 되며 그 해시가 ABI 해시입니다. 두 값은 `create.gm`이 Vaulta 메인넷에서 실행 중인 값과 같으며, `get_raw_abi`가 `code_hash`와 `abi_hash`로 반환합니다.
+재현하려면 해당 커밋을 체크아웃하고 `make build/create/production`을 실행하며, 컴파일은 그 컨테이너 안에서 이루어집니다. `shasum -a 256 contracts/create/build/create.wasm`이 코드 해시를 내주고, `contracts/create/build/create.abi`를 바이너리로 직렬화하면 512바이트가 되며 그 해시가 ABI 해시입니다. 두 값은 `create.gm`이 Vaulta 메인넷에서 실행 중인 값과 같으며, `get_raw_abi`가 `code_hash`와 `abi_hash`로 반환합니다.
 
 - [x] 저자는 배포 단계를 제안하기 전에 코드 해시, 빌드 기준 커밋, 이를 재현하는 CDT 버전을 이 섹션에 기록하여 BP가 직접 빌드해 비교할 수 있게 함
 - [ ] 저자는 본 제안의 최종 텍스트를 담은 커밋에 고정한 백레퍼런스 인용을 각 단계의 트랜잭션에 추가함

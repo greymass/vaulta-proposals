@@ -32,6 +32,9 @@ revisions:
     - version: 3
       date: 2026-08-19
       summary: Pinned the contract source to the deployed artifact's commit, recorded its hashes and CDT version, and corrected the logcreation signature.
+    - version: 4
+      date: 2026-09-03
+      summary: Removed the logcreation action and republished the artifact at its new commit and hashes.
 excerpt: "A proposal to create the new.vaulta account and deploy an account creation contract to it: one canonical, network-secured home where a user pays in the network token and receives their account and its RAM in one step."
 ---
 
@@ -53,7 +56,7 @@ The function itself is proven: the same contract has run in production at `creat
 ### Account and authority
 
 - `new.vaulta` is created via BP MSIG (15/21), following the same pattern as other `*.vaulta` accounts. Both authorities are set in the creating `eosio::newaccount` action, so no `updateauth` follows.
-- `owner` and `active` both delegate to `eosio.prods@active`, which resolves to 15/21 BP consensus. `active` additionally carries `new.vaulta@eosio.code`, so the contract can send its inline actions under its own authority: `eosio::newaccount`, `core.vaulta::buyram`, the `core.vaulta::transfer` that returns excess payment, and its own `logcreation`.
+- `owner` and `active` both delegate to `eosio.prods@active`, which resolves to 15/21 BP consensus. `active` additionally carries `new.vaulta@eosio.code`, so the contract can send its inline actions under its own authority: `eosio::newaccount`, `core.vaulta::buyram`, and the `core.vaulta::transfer` that returns excess payment.
 - Every future `setcode`/`setabi` therefore requires the same 15/21 approval. No lower-threshold administrative permission exists, and the contract exposes no admin actions that would need one.
 - All contract parameters (the payment token, the byte provisioning, the proxy contract) are compile-time constants. Changing any of them is a code change: a new published commit and hash, approved by a 15/21 `setcode`. There is no configuration action.
 
@@ -66,7 +69,6 @@ The contract is driven by a token-transfer notification rather than a directly c
 | `transfer` notification (`*::transfer`) | token sender | On receiving the payment token issued by `core.vaulta`, parse the memo, create the account, buy its RAM, refund any excess |
 | `parsememo(memo)` (read-only) | none | Parse `accountname-PUBLICKEY` into an account name and a single-key authority |
 | `estimatecost()` (read-only) | none | Return the current token cost of one account creation |
-| `logcreation(account, from, excess, ram, timestamp)` | `new.vaulta` | Inline log action emitted per creation for indexing. `from` is the account that sent the paying transfer, which need not be the account created |
 
 The memo format is `accountname-PUBLICKEY` (both `PUB_` and legacy key formats accepted). Each creation spends the RAM cost of 3,260 bytes plus the system fee, and the user must send at least that much. Any excess is transferred to the new account. The RAM the account receives is what that payment buys at the market rate, which lands near 3,260 bytes rather than exactly on it, and the network's standard per-account allowance applies on top of it.
 
@@ -113,16 +115,16 @@ None.
 
 ## Next Steps
 
-The contract source is published at [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/d103fdcea03bf2a6e3e0ff5ed893ec10389c29a2/contracts/create).
+The contract source is published at [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/5cf57a57484c7f0efe5a2e5740186f41070522de/contracts/create).
 
 The deployment step proposes this artifact:
 
-- Commit: `d103fdcea03bf2a6e3e0ff5ed893ec10389c29a2`
-- Code hash: `7166a16ea0d6db98fe18cde9a2d56b30f091dcbb19efcd0a0b5fa0e510f272c8`, over 38,534 bytes of WASM
-- ABI hash: `4f47d205f7cc990efb548d002f324e9c23c8a5ab65012dbab4430973e3c7ffdb`, over the 610-byte serialized ABI
+- Commit: `5cf57a57484c7f0efe5a2e5740186f41070522de`
+- Code hash: `592f0bd14c4964548485d8f048c44bf31946c24b245db4fd78799cf1fb4c5f22`, over 36,757 bytes of WASM
+- ABI hash: `2804e98748d68d67bb9e1447178114f20a5901063e978899e514e0e39347f5ac`, over the 512-byte serialized ABI
 - CDT: v4.1.1, pinned as the toolchain container's build argument
 
-Rebuilding takes a checkout of that commit and `make build/create/production`, which compiles inside that container. `shasum -a 256 contracts/create/build/create.wasm` gives the code hash, and serializing `contracts/create/build/create.abi` to its binary form gives 610 bytes hashing to the ABI hash. Both values are also what `create.gm` runs on Vaulta mainnet, returned as `code_hash` and `abi_hash` by `get_raw_abi`.
+Rebuilding takes a checkout of that commit and `make build/create/production`, which compiles inside that container. `shasum -a 256 contracts/create/build/create.wasm` gives the code hash, and serializing `contracts/create/build/create.abi` to its binary form gives 512 bytes hashing to the ABI hash. Both values are also what `create.gm` runs on Vaulta mainnet, returned as `code_hash` and `abi_hash` by `get_raw_abi`.
 
 - [x] The authors record the code hash, the commit it builds from, and the CDT version that reproduces it in this section before the deployment step is proposed, so BPs can rebuild and compare.
 - [ ] The authors add the back-reference citation to each step's transaction, pinned to the commit carrying this proposal's final text.

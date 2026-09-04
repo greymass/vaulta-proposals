@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: d0458cb09cfcb310f81f5360581ee6ea42059dc7
+source: f69fd6229bed41853f8de0dc85a821a7d0d6e7d1
 translator: Claude (agent translation)
 msigs:
     - step: 1
@@ -17,6 +17,9 @@ revisions:
     - version: 3
       date: 2026-08-19
       summary: 将合约源代码固定到构建出已部署产物的提交，记录其哈希与 CDT 版本，并更正 logcreation 的签名。
+    - version: 4
+      date: 2026-09-03
+      summary: 从合约中移除 logcreation 操作，并以新的提交与哈希重新公布产物。
 excerpt: "一份创建 new.vaulta 账户并向其部署账户创建合约的提案：设立一个由网络保障的标准入口，用户以网络代币支付，即可在单一步骤中获得账户及其 RAM。"
 ---
 
@@ -38,7 +41,7 @@ excerpt: "一份创建 new.vaulta 账户并向其部署账户创建合约的提�
 ### 账户与权限
 
 - `new.vaulta` 通过 BP MSIG（15/21）创建，遵循与其他 `*.vaulta` 账户相同的模式。两项权限都在创建时的 `eosio::newaccount` 操作中设定，因此其后不再需要 `updateauth`。
-- `owner` 和 `active` 均委托给 `eosio.prods@active`，其归结为 15/21 BP 共识。`active` 另包含 `new.vaulta@eosio.code`，因此合约可以以自身权限发送内联操作，即 `eosio::newaccount`、`core.vaulta::buyram`、退还多余付款的 `core.vaulta::transfer`，以及自身的 `logcreation`。
+- `owner` 和 `active` 均委托给 `eosio.prods@active`，其归结为 15/21 BP 共识。`active` 另包含 `new.vaulta@eosio.code`，因此合约可以以自身权限发送内联操作，即 `eosio::newaccount`、`core.vaulta::buyram`，以及退还多余付款的 `core.vaulta::transfer`。
 - 因此，未来所有 `setcode`/`setabi` 都需要同样的 15/21 批准。不存在阈值更低的管理权限，合约也没有任何需要这类权限的管理操作。
 - 所有合约参数（付款代币、字节配给量、代理合约）均为编译期常量。更改其中任何一项都是代码变更：需要新发布的提交和哈希，并由 15/21 `setcode` 批准。不存在配置操作。
 
@@ -51,7 +54,6 @@ excerpt: "一份创建 new.vaulta 账户并向其部署账户创建合约的提�
 | `transfer` 通知（`*::transfer`） | 代币发送方 | 收到由 `core.vaulta` 发行的付款代币后，解析备注、创建账户、购买其 RAM 并退还多余部分 |
 | `parsememo(memo)`（只读） | 无 | 将 `accountname-PUBLICKEY` 解析为账户名和单一密钥权限 |
 | `estimatecost()`（只读） | 无 | 返回创建一个账户的当前代币成本 |
-| `logcreation(account, from, excess, ram, timestamp)` | `new.vaulta` | 每次创建时发出的内联日志操作，用于索引。`from` 是发出付款转账的账户，未必就是被创建的账户 |
 
 备注格式为 `accountname-PUBLICKEY`（`PUB_` 和旧版密钥格式均可）。每次创建支出 3,260 字节的 RAM 成本加上系统手续费，用户至少需发送该金额。多余部分会转入新账户。账户实际收到的 RAM 是这笔付款按市场价所能买到的数量，因此接近 3,260 字节而非恰好等于该数，网络的每账户基础配给量则在此之上另行叠加。
 
@@ -98,16 +100,16 @@ excerpt: "一份创建 new.vaulta 账户并向其部署账户创建合约的提�
 
 ## 后续步骤
 
-合约源代码发布于 [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/d103fdcea03bf2a6e3e0ff5ed893ec10389c29a2/contracts/create)。
+合约源代码发布于 [`contracts/create`](https://github.com/greymass/vaulta-contracts/tree/5cf57a57484c7f0efe5a2e5740186f41070522de/contracts/create)。
 
 部署步骤所提议的产物如下：
 
-- 提交：`d103fdcea03bf2a6e3e0ff5ed893ec10389c29a2`
-- 代码哈希：`7166a16ea0d6db98fe18cde9a2d56b30f091dcbb19efcd0a0b5fa0e510f272c8`，对应 38,534 字节的 WASM
-- ABI 哈希：`4f47d205f7cc990efb548d002f324e9c23c8a5ab65012dbab4430973e3c7ffdb`，对应 610 字节的序列化 ABI
+- 提交：`5cf57a57484c7f0efe5a2e5740186f41070522de`
+- 代码哈希：`592f0bd14c4964548485d8f048c44bf31946c24b245db4fd78799cf1fb4c5f22`，对应 36,757 字节的 WASM
+- ABI 哈希：`2804e98748d68d67bb9e1447178114f20a5901063e978899e514e0e39347f5ac`，对应 512 字节的序列化 ABI
 - CDT：v4.1.1，以构建参数的形式固定在工具链容器中
 
-重新构建的方法是检出该提交并运行 `make build/create/production`，编译在上述容器内进行。`shasum -a 256 contracts/create/build/create.wasm` 得到代码哈希；将 `contracts/create/build/create.abi` 序列化为二进制形式得到 610 字节，其哈希即 ABI 哈希。这两个值也正是 `create.gm` 在 Vaulta 主网上运行的内容，由 `get_raw_abi` 以 `code_hash` 和 `abi_hash` 返回。
+重新构建的方法是检出该提交并运行 `make build/create/production`，编译在上述容器内进行。`shasum -a 256 contracts/create/build/create.wasm` 得到代码哈希；将 `contracts/create/build/create.abi` 序列化为二进制形式得到 512 字节，其哈希即 ABI 哈希。这两个值也正是 `create.gm` 在 Vaulta 主网上运行的内容，由 `get_raw_abi` 以 `code_hash` 和 `abi_hash` 返回。
 
 - [x] 作者在提出部署步骤之前，于本节记录代码哈希、其构建所依据的提交，以及可复现该哈希的 CDT 版本，以便 BP 自行构建并比对。
 - [ ] 作者为每个步骤的交易加上回溯引用，并将其固定到承载本提案最终文本的提交。
