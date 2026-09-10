@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: 87c3453d593366bafd333b99b2a7602242e480a0
+source: f9a0d9823cd8da2c9c2b89a467f7ed9809674a7d
 revisions:
     - version: 1
       date: 2026-09-01

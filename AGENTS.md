@@ -45,7 +45,10 @@ question; this file only routes.
 
 - `bun run verify`: standard conformance checks. CI runs this, but it is not the
   whole of CI (see the hard rules).
-- `bun run verify VP-NNNN`: conformance plus on-chain msig comparison.
+- `bun run verify VP-NNNN`: conformance plus on-chain comparison of that
+  proposal's bindings. Msig entries are rebuilt from their builders and compared
+  action by action; sentiment entries are checked for the topic's existence, and
+  its citation line, which VPS-1 makes advisory, only warns.
 - `bun run index`: regenerate `index.json`. Required after any proposal change,
   translations included, since the index records each translation's path and
   freshness.
