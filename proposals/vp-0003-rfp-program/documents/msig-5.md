@@ -1,6 +1,6 @@
 # MSIG #5 — Network Steering Committee, RFP Framework, Program Funding
 
-**Status: DRAFT v6.2 — for VST and block producer review**
+**Status: DRAFT v6.13 — for VST and block producer review**
 **Date: [___]**
 
 ---
@@ -21,13 +21,14 @@ If you read nothing else, read this page.
 | 8 | **Every payment waits 7 days** before it executes, in public | You may cancel any payment at 15/21 during that wait |
 | 9 | **Objection rule**: 4–6 block producers objecting sends an award back to you; 7 or more ends it | Part E |
 | 10 | **Recognize ECF** to run the community vote for the Community seat | Francis Sangkuan holds it in the meantime |
-| 11a | A member engaged as Technical Reviewer under Framework 12.6 also earns rate-card fees **outside** this retainer — see Part H | Capped, and not available until **both caps** are set |
 | 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
-| 12 | **Authorize USD 950,000 over four quarterly cycles**, first instalment A worth USD 296,875 | Gross transferred up to USD 1,009,375 — see note 3 |
+| 11a | A member engaged as Technical Reviewer under Framework 12.6 also earns rate-card fees **outside** this retainer — see Part H | Limited to **3 concurrent engagements**, not by total fees. Not available until that cap is set |
+| 12 | **Authorize USD 910,000 over four quarterly cycles**, first instalment A worth USD 284,375 | Gross transferred up to USD 966,875 — see note 3 |
+| 13 | **If the price oracle fails**, all payments stop — awardees, Managers, Committee pay alike — **no new awards may be made**, and **only you** may name a replacement rate source | Part D; Framework 13.4a |
 
 **What you keep.** Setting every limit above. **Funding the program a year at a time** — the program cannot spend what you have not authorized, and you may change any amount or cycle length at 15/21 at any time. Seating and removing members. Deciding anything above the limits. Cancelling any payment. Suspending or revoking the mandate at any time, without cause.
 
-**What you give up.** Voting on each RFP and each award. **Designating the price source** if the Delphi Oracle fails — the Committee restores it under Part D so payments are not frozen waiting on a vote, within stated tests it cannot change, and you may direct a different source or cancel any payment made at the new rate at any time.
+**What you give up.** Voting on each RFP and each award.
 
 **What this does not do.** It does not authorize the Committee to create a company, foundation, or any other entity. That needs a separate MSIG. See Part I.
 
@@ -54,8 +55,7 @@ The RFP program is a **Network program, not a Trust program**. Program funds are
 **Mandate** — the authority granted in Part C.
 **Threshold** — approval by not fewer than 15 of the 21 active block producers.
 **Business day** — Monday to Friday, measured in UTC. No public holidays are excluded, because the block producer set is global and no single holiday calendar applies to it.
-**Reference Source** — the on-chain price source from which the Reference Rate is read. It is the Delphi Oracle (`delphioracle`) unless and until the Committee designates a replacement under Part D.
-**Reference Rate** — the Reference Source's `datapoints.median` for the `eosusd` pair, read at the time of the relevant action and converted as set out in Part D.
+**Reference Rate** — the Delphi Oracle `datapoints.median` for the `eosusd` pair, read at the time of the relevant action and converted as set out in Part D.
 **Award Commitments** — amounts committed to awardees, constrained by the Cycle Ceiling.
 **Program Costs** — Committee pay, Manager and Reviewer fees, Portal and administration costs.
 **Total Program Spend** — Award Commitments plus Program Costs.
@@ -115,6 +115,32 @@ FURTHER RESOLVED, that **Francis Sangkuan (1DEX)** is the **only carry-over into
 
 FURTHER RESOLVED, that the Core Development, Marketing, Business Development, and At-Large seats are **not filled by this Resolution**. They are filled by separate MSIG Resolutions using the template at **Exhibit E**, and that a single such Resolution may name **one candidate for one seat, a full slate of all four, or any subset of them**.
 
+FURTHER RESOLVED, that **this Resolution names no candidate for any of those four seats, and is not incomplete for that reason**. It sets the process, the eligibility tests, and the form a proposal must take; **who is proposed is a separate decision, made in a separate Resolution, on its own merits and at the Threshold**. The only individual this Resolution seats is the interim holder of the Community seat under Part F. A governance framework that arrived with its own nominees attached would ask block producers to approve the rules and the people in one vote, and the second question deserves its own.
+
+**What makes an Exhibit E proposal complete**
+
+FURTHER RESOLVED, that a proposal is a valid Exhibit E proposal, and block producers should expect to see, all of the following — and that a proposal missing any of them is **incomplete and should be declined rather than approved and corrected later**:
+
+| # | Requirement |
+|---|---|
+| 1 | It uses the **Exhibit E template** and states that it is made under this Part |
+| 2 | A **Candidates table** naming, for each seat covered, the seat, the candidate's **name**, their **on-chain account**, their **affiliation**, their **Vaulta Treasury affiliation** (which must be none, absent an express waiver at the Threshold), and the initial term for that seat |
+| 3 | The table's rows in **deliberate priority order**, that order being the tie-break where two candidates in the same proposal conflict with each other |
+| 4 | A stated **resolution mode** — seat by seat, or all or nothing |
+| 5 | A **network vision statement per candidate**, written by that candidate, addressed to the portfolio of the seat they are named for, in the form set out below |
+| 6 | **Relevant background and declared conflicts** for each candidate |
+| 7 | Confirmation that no candidate **already holds a seat**, that seating them would not breach the **one-member-per-affiliation rule** against a sitting member or against another candidate in the same proposal, and that no candidate appears on the **published register of bans** |
+
+FURTHER RESOLVED, that completeness is **not the same as effect**: a complete proposal still has no effect for a seat on any of the five grounds set out below, tested at the moment of execution, and an incomplete proposal that is nonetheless executed is **not void** — the consequences are those set out in this Part, and the member files what is missing before pay and signing weight begin.
+
+FURTHER RESOLVED, that **anyone may propose** an Exhibit E Resolution. Sourcing candidates, canvassing the community, and assembling slates are **off-chain work**, carried on outside this Resolution, and neither this Resolution nor VS LLC controls who may be put forward.
+
+FURTHER RESOLVED, that **every appointment proposal shall carry a network vision statement, one per candidate, written by the candidate and addressing the portfolio of the seat they are named for** (Framework 3.1a); that it states what the Network needs in that portfolio over the term, **what the candidate would prioritize funding and what they would decline**, how they would judge the program's success by the end of their term, and any position block producers should know about — direction, not interest, interests belonging to the disclosure questionnaire; that it runs to roughly **300 to 800 words in plain language**, with a translation filed alongside where that helps; and that it is **published with the proposal and linked from the seat register** for the term.
+
+FURTHER RESOLVED, that **a proposal omitting a vision statement is incomplete and block producers should decline to approve it**; that the omission does **not** void an appointment, since that would punish the candidate for the proposer's failure and leave the Committee short; and that where a proposal is nonetheless executed without one, the member **files their statement before pay and signing weight begin**, alongside the contract, questionnaire and signing key required below.
+
+FURTHER RESOLVED, that a statement **does not bind** the member — circumstances move — but is the natural document to read again at reappointment, and a member seeking a second term should expect to be asked how the year compared with what they wrote.
+
 FURTHER RESOLVED, that every rule in this Part operates **per seat and not per proposal**, and that each Exhibit E proposal states one of two **resolution modes**:
 
 1. **Seat by seat** — the default. Each seat named is treated independently, so a Resolution naming several seats takes effect for those that are open and has no effect for those already filled;
@@ -137,7 +163,7 @@ FURTHER RESOLVED, that an appointment **has no effect for a given seat** if, **a
 
 FURTHER RESOLVED, that where a **single Resolution** names the same individual for more than one seat, or names two candidates who would breach the affiliation rule against each other, the seats are tested **in the order they appear in the Candidates table of that proposal**: the appointment takes effect for the first and has **no effect** for the later. The table's row order is the proposer's priority order.
 
-FURTHER RESOLVED, that **VS LLC shall maintain a published seat register on the Portal**, recording for each seat the individual seated **by name and on-chain account**, the proposal name, the execution transaction, the **resolution mode** of that proposal, and **any seat a proposal named but did not fill, together with the reason**. Parallel proposals make it possible for the chain to contain executed appointments that have no effect, and the register is the canonical record of what was executed.
+FURTHER RESOLVED, that **VS LLC shall maintain a published seat register on the Portal**, recording for each seat the individual seated **by name and on-chain account**, the proposal name, the execution transaction, a **link to that member's network vision statement**, the **resolution mode** of that proposal, and **any seat a proposal named but did not fill, together with the reason**. Parallel proposals make it possible for the chain to contain executed appointments that have no effect, and the register is the canonical record of what was executed.
 
 FURTHER RESOLVED, that the register is **not a determination of eligibility**. Where VS LLC records a seat as unfilled on any ground other than an earlier execution, it shall **publish its reasons and refer the matter to MSIG**, and the seat is treated as **vacant until MSIG resolves it**. VS LLC does not decide who is eligible.
 
@@ -209,23 +235,26 @@ FURTHER RESOLVED, that the following apply to **each cycle**:
 
 | Limit | Amount | Unit |
 |---|---|---|
-| **Cycle Ceiling** — most the Committee may commit in **awards** | **150,000** *(recommended)* | **USD** |
-| **Per-Award Limit** — largest single award without coming back to MSIG, measured on **total contract value** | **100,000** *(recommended)* | **USD** |
-| Program operating costs — Manager and Reviewer fees, Portal, administration | **50,000** *(recommended)* | **USD** |
-| Committee pay for the cycle — 5 members × 3 months | **37,500** *(recommended)* | **USD** |
-| **Total Program Spend for the cycle** | **237,500** | **USD** |
+| **Cycle Ceiling** — most the Committee may commit in **awards** | **150,000** | **USD** |
+| **Per-Award Limit** — largest single award without coming back to MSIG, measured on **total contract value** | **100,000** | **USD** |
+| **Program Costs** — everything the program spends on itself | **77,500** | **USD** |
+| — of which **Committee pay**, 5 members × 3 months at USD 2,500 | **37,500** | **USD** |
+| — of which **Manager and Reviewer fees, Portal, and administration** | **40,000** | **USD** |
+| **Total Program Spend for the cycle** | **227,500** | **USD** |
 
-FURTHER RESOLVED, that two terms are used and are not interchangeable: **Award Commitments** are amounts committed to awardees and are constrained by the **Cycle Ceiling**; **Program Costs** are Committee pay, Manager and Reviewer fees, Portal and administration. **Total Program Spend** is the sum of the two and is what the funding request in Part I is sized against.
+FURTHER RESOLVED, that two terms are used and are not interchangeable: **Award Commitments** are amounts committed to awardees and are constrained by the **Cycle Ceiling**; **Program Costs** are everything the program spends on itself — Committee pay, Manager and Reviewer fees, Portal and administration — and are constrained by the **Program Cost Ceiling of USD 77,500 a cycle**. **Total Program Spend** is the sum of the two and is what the funding request in Part I is sized against.
+
+FURTHER RESOLVED, that Program Costs are a **single line with two internal caps that do not move**: Committee pay may not exceed **USD 37,500** a cycle, and Manager and Reviewer fees together with Portal and administration may not exceed **USD 40,000** a cycle. **Underspend in one does not raise the other.** A single line keeps what the program spends on itself legible as one number; the two caps stop that number being reallocated from the people who run RFPs to the people who govern them, or the reverse, without anyone deciding to.
+
+FURTHER RESOLVED, that **exceeding either cap is outside the mandate** and is a reserved matter requiring an MSIG Resolution, on the same footing as exceeding the Cycle Ceiling; and that the Committee shall **report both against their caps in every cycle report**, so that a cap being approached is visible before it is reached.
 
 FURTHER RESOLVED, that the Cycle Ceiling is a **maximum, not a target**, and that unspent amounts do not carry into the next funding period.
 
-FURTHER RESOLVED, that the **post-award review threshold** required by **Framework 25.2** is **USD 25,000** *(recommended)*, **measured on total contract value** — the same basis as the Per-Award Limit, so that a recurring service priced monthly is measured whole rather than by the slice falling in any one cycle.
-
-FURTHER RESOLVED, that this is a **reporting trigger, not a spending limit**. It does not cap, gate, or delay any award; it sets the point above which the Manager of record writes a short review after the award closes. At the figure recommended it catches the upper part of the expected USD 15,000–30,000 band and **every recurring service award**, which is the intent: Framework 13.2 requires a service to be re-competed rather than renewed, and the review is the evidence that re-competition is decided on.
+FURTHER RESOLVED, that the **post-award review threshold under Framework 25.2 is USD 25,000**, being **25% of the Per-Award Limit** and to be re-set to a quarter of that Limit whenever it changes — so that the Manager of record writes a **short closing review** on every award at or above that figure: whether it met the need, whether the budget was right, and whether the Network would do it again; that the review is **published on the Portal** and summarized in the next cycle report; and that **Exhibit B's rate card shall carry that review within the Manager's scope**, so it is paid work rather than an unfunded expectation.
 
 **Everything is denominated in USD. Everything is paid in A.**
 
-FURTHER RESOLVED, that **all figures in this MSIG — the Cycle Ceiling, the Per-Award Limit, every award, every reservation, Committee pay, and operating costs — are denominated in USD**, and that all payments are made in A.
+FURTHER RESOLVED, that **all figures in this MSIG — the Cycle Ceiling, the Per-Award Limit, the Program Cost Ceiling and its internal caps, every award, every reservation, and Committee pay — are denominated in USD**, and that all payments are made in A.
 
 FURTHER RESOLVED, that **the amount of A paid against a milestone is calculated at the time the milestone is approved**, using the **Delphi Oracle** (`delphioracle`), the on-chain price oracle operated by block producers.
 
@@ -247,33 +276,15 @@ FURTHER RESOLVED, that the approval record shall include the **oracle value, the
 
 FURTHER RESOLVED, that the approval record shall **always state the timestamp of the newest datapoint**, and that this timestamp shall be published with the approval.
 
-FURTHER RESOLVED, that where that timestamp is older than **24 hours** (Framework 13.4, which sets that period), the Manager of record **may not approve alone**. The matter goes to the Committee, which may approve **at the threshold in Framework 5.3** with the staleness recorded, or defer until a fresh rate is available.
+FURTHER RESOLVED, that where that timestamp is older than **24 hours**, the Manager of record **may not approve alone**. The matter goes to the Committee, which may approve at the ordinary milestone threshold with the staleness recorded, or defer until a fresh rate is available.
 
-FURTHER RESOLVED, that if the `eosusd` pair or the Reference Source becomes **unavailable, renamed, or deprecated**, **payments are suspended** until a Reference Source is in force — no A amount is computable without a rate — and that **the Committee may restore the Reference Source itself, without a further MSIG Resolution**, on the two paths below.
+FURTHER RESOLVED, that if the `eosusd` pair or the `delphioracle` contract becomes **unavailable, renamed, or deprecated**, payments are suspended and the Committee shall escalate to MSIG within **5 business days** — displacing the ordinary 10 business days for reserved matters — to designate a replacement rate source. Payments do not resume on a substituted source chosen by the Committee.
 
-FURTHER RESOLVED, that this **reverses an earlier position** under which only MSIG could designate a replacement. An oracle outage is a technical failure with no policy content in it. Routing it through a 15-of-21 vote would stop every payment in the program for as long as the vote took, and would penalize awardees for a failure entirely outside their control — the same reasoning that makes a stale rate an escalation rather than a halt. What block producers keep is stated below, and it is the part that matters: they can cancel any payment made at the new rate, and they can direct a different source at any time.
+FURTHER RESOLVED, that a designation of a replacement rate source **operates as an amendment to the Reference Rate definition** in this Resolution and in the Framework, and is **not subject to the deemed-decline default** in the reserved-matters clause below; that payments resume **only for approvals made after the designation** and payments already made are not reopened; that **no new award may be made while payments are suspended**, because both the coverage test and the decision record require a rate read, while scoping, publication, evaluation, and scoring continue; that the suspension reaches **every** payment from the Program Account, including Committee pay and Manager and Reviewer fees, which continue to **accrue** — charged to the cycle in which they accrued — and are paid on resumption at the rate then current, **save that Portal hosting and essential administration are not suspended**, the Portal being where the suspension itself must be published; that a quarterly instalment **into** the Program Account falling due during a suspension is **sized and made on resumption** and is not skipped; and that a suspension **extends**, by its own length, the 60-day contracting clock, any bounty closing date, and any cycle-close cut-off applying to an award not yet contracted (Framework 13.4a).
 
-FURTHER RESOLVED, that **a technical continuity change is recorded, not chosen.** Where the same price data remains available under a changed name — the pair renamed, the contract redeployed to another account, or `quoted_precision` altered — the Committee records the change by **simple majority, minimum 3**, VS LLC republishes the affected parts of Exhibit D, and payments resume. Nothing is being selected: the same source is being followed to its new address.
+FURTHER RESOLVED, that this is necessary because the contract **never fails a read**. It holds 21 rows from the moment a pair is created and modifies them in place, so a read returns a value whether or not any oracle has submitted a price recently. A stale rate is indistinguishable from a current one except by its timestamp, and no other source is substituted for it.
 
-FURTHER RESOLVED, that **a replacement source is designated at the award threshold — two-thirds of filled non-recused seats, minimum 3** — and only where it meets **all** of the following, these being the properties that made the Delphi Oracle acceptable in the first place:
-
-1. it is **on-chain and publicly readable**, so that anyone can recompute any payment from it without permission;
-2. it is supplied by **no party to the transaction** — not the Committee, not VS LLC, not any awardee or proposer;
-3. it is derived from **multiple independent submitters**, none of them able to move the published figure alone;
-4. it carries a **datapoint timestamp**, so that the 24-hour staleness check continues to operate;
-5. it expresses a **USD price of A at a stated integer precision**, so that the truncation formula is unchanged.
-
-FURTHER RESOLVED, that a source failing any of those tests **may not be designated**, and that this power **does not extend to the denomination convention itself** — the Committee may not change the USD denomination, the payment of A, the conversion formula, or the truncation rule. Those remain reserved matters. It may change **where the rate is read from**, and nothing else.
-
-FURTHER RESOLVED, that the designation is **published on the Portal with the Committee's reasons and the vote by name and on-chain account before any payment is made on it**, is written to the decisions register under Framework 7.6a, and is **reported to MSIG within 5 business days — as notice, not for approval**; and that **VS LLC republishes Exhibit D** to describe the source actually in use, with a fresh worked example.
-
-FURTHER RESOLVED, that **block producers retain every control over the result**: they may cancel any payment made at the new rate during its delay window at the Threshold, may direct a different source by MSIG Resolution at any time, and may suspend or revoke the mandate. This Part restores the program's ability to pay; it does not put the rate beyond block producer reach.
-
-FURTHER RESOLVED, that **the first payment under each award following a designation is approved by the Committee rather than by the Manager of record alone**, whatever the collar shows, and that the **15% collar** on that payment measures against the rate last used under that award on the previous source. A change of source is precisely the moment a mispriced rate would pass unnoticed, the collar otherwise having nothing comparable to measure against.
-
-FURTHER RESOLVED, that this is necessary because the contract **never fails a read**. It holds 21 rows from the moment a pair is created and modifies them in place, so a read returns a value whether or not any oracle has submitted a price recently. A stale rate is indistinguishable from a current one except by its timestamp, and no other source is substituted for it while it remains available — staleness is handled by the 24-hour check, not by changing where the rate is read from.
-
-FURTHER RESOLVED, that where the oracle rate at approval differs by more than **15%** (Framework 13.4, which sets that collar) from the rate used at the **previous payment under that award** — or, for the first payment, from the rate recorded at the award decision — the Manager of record **may not approve alone**. The matter goes to the Committee, which may approve **at the threshold in Framework 5.3** or defer. This bounds the effect of a momentary price movement on the program's A outflow.
+FURTHER RESOLVED, that where the oracle rate at approval differs by more than **15%** from the rate used at the **previous payment under that award** — or, for the first payment, from the rate recorded at the award decision — the Manager of record **may not approve alone**. The matter goes to the Committee, which may approve at the ordinary milestone threshold or defer. This bounds the effect of a momentary price movement on the program's A outflow.
 
 **Coverage: the program must hold enough A to meet its USD commitments**
 
@@ -301,7 +312,7 @@ FURTHER RESOLVED, that a payment not on an approved schedule requires a fresh Co
 
 **Reserved matters**
 
-FURTHER RESOLVED, that the Committee may fund work through three instruments: a **directed RFP**; an **unsolicited proposal** under the open call (Framework 26); and a **bounty** (Framework 26a) — a published fixed-price task, open to anyone, paid to the first acceptable delivery, where the publication vote is itself the award decision at the award threshold. **Neither the open call nor bounties carries a per-cycle sub-limit.** All three instruments draw on the Cycle Ceiling and compete on the merits. An unsolicited award clears the same award threshold, Per-Award Limit, publication, delay, and objection bands as a directed one, so a sub-limit would add no protection the award process does not already give — and would create an artificial cap, blocking good work in a quarter with few directed RFPs while money sat unusable.
+FURTHER RESOLVED, that the Committee may fund work through **three instruments and no others** — a **directed RFP**; an **open call** for unsolicited proposals (Framework 26); and a **bounty** (Framework 26a) — and that where the working group has said "**grants**" the word means the **open call**, which is not a fourth instrument: *RFP* is the Committee naming the work and inviting bids, *open call* is a proposer naming the work, and *bounty* is the Committee naming the work at a fixed price open to whoever delivers it first. A **bounty** is a published fixed-price task, open to anyone, paid to the first acceptable delivery, where the publication vote is itself the award decision at the award threshold. **Neither the open call nor the bounty channel carries a per-cycle sub-limit.** All three instruments draw on the Cycle Ceiling and compete on the merits. An unsolicited award clears the same award threshold, Per-Award Limit, publication, delay, and objection bands as a directed one, so a sub-limit would add no protection the award process does not already give — and would create an artificial cap, blocking good work in a quarter with few directed RFPs while money sat unusable.
 
 FURTHER RESOLVED, that **there is likewise no per-bounty cap**: a bounty is bounded by the **Per-Award Limit** and the **Cycle Ceiling**, the same two limits as every other award, and by nothing else.
 
@@ -312,11 +323,11 @@ FURTHER RESOLVED, that what a bounty gives up is the **evaluation round** — th
 
 FURTHER RESOLVED, that a bounty reserves its price at publication, lapses at its closing date or at cycle end, and is otherwise subject to every rule that applies to an award — contract first, signature, delay, objection banding, conflict checks, the ban register, and the bar on splitting work that should have been an RFP.
 
-FURTHER RESOLVED, that the **cycle report breaks spending down by channel** — directed RFPs, open call, bounties — as amounts and as shares of the Cycle Ceiling; and that where bounties exceed **25%** of the awards committed in a cycle the Committee **states why** (Framework 13.5, which sets that trigger). That is comply-or-explain, not a cap: block producers may change any limit at the Threshold at any time, and this breakdown is the number they need in order to decide.
+FURTHER RESOLVED, that the **cycle report breaks spending down by channel** — directed RFPs, open call, bounties — as amounts and as shares of the Cycle Ceiling; and that where bounties exceed **25%** of the awards committed in a cycle the Committee **states why**. That is comply-or-explain, not a cap: block producers may change any limit at the Threshold at any time, and this breakdown is the number they need in order to decide.
 
-FURTHER RESOLVED, that these matters are **outside the mandate and require an MSIG Resolution**: any award above the Per-Award Limit measured on total contract value; any award taking total Award Commitments above the Cycle Ceiling; any award extending beyond the end of the authorized funding period; any award that would fail the coverage test in this Part; **any milestone approved under an executed agreement that the Program Account balance cannot cover;** any award where recusals leave fewer than three non-recused members or fewer than four able to sign; **any payment, including a Program Cost payment, where recusals or vacancies leave fewer than four members able to sign; any award for work on the RFP system where the Committee records that no other capable provider exists; any termination recommendation on an award reviewed by a Committee member where recusals of any kind leave fewer than four non-recused members; any milestone on an award whose published statement says a Reviewer is engaged, where none is engaged and no substitute has been engaged; any milestone or evaluation on an RFP where no unconflicted Manager of record is available, MSIG being able to direct the engagement of a named Manager or another basis of approval;** any award the conflict rules would forbid; any change to the mandate, the limits, the cycle length, the Committee Permission, the denomination convention, or the funding source — **the denomination convention here meaning the USD denomination, the payment of A, the conversion formula and the truncation rule, and not the designation of a replacement Reference Source under this Part, which is the Committee's**; **the creation of any entity** (see Part I); and anything the Committee escalates.
+FURTHER RESOLVED, that these matters are **outside the mandate and require an MSIG Resolution**, mirroring section 9.1 of the Framework: any single award above the **Per-Award Limit**, measured on total contract value; any award taking total Award Commitments above the **Cycle Ceiling**; any award extending beyond the end of the **authorized funding period**; any award that would **fail the coverage test** in this Part; any award where recusals leave fewer than three non-recused members or fewer than four able to sign; **any payment**, including a Program Cost payment, where recusals or vacancies leave fewer than four members able to sign; any **award for work on the RFP system** where the Committee records that no other capable provider exists; any **termination recommendation on an award reviewed by a Committee member** where **recusals of any kind** leave fewer than four non-recused members; any **milestone on an award whose published statement says a Reviewer is engaged**, where none is engaged and no substitute has been engaged; any **milestone or evaluation on an RFP where no unconflicted Manager of record is available**, MSIG being able to direct the engagement of a named Manager or another basis of approval; the **designation of a replacement rate source** where the existing one has failed, which the Committee may not make itself; any award the **conflict rules** would forbid; any **change to the mandate, the Cycle Ceiling, the Per-Award Limit, the cycle length, the Committee Permission, the denomination convention, or the funding source**; **the creation of any entity** (see Part I); and anything the Committee **votes to** escalate.
 
-FURTHER RESOLVED, that the Committee must send such matters to MSIG within **10 business days**, and that if MSIG does not act within **30 days** the matter is **treated as declined**.
+FURTHER RESOLVED, that the Committee must send such matters to MSIG within **10 business days** — or within **5 business days** where the matter is the designation of a replacement rate source — and that if MSIG does not act within **30 days** the matter is **treated as declined**, **except** where the matter is (i) a **payment or a milestone under an executed agreement** or (ii) the **designation of a replacement rate source** under Framework 13.4a, in which case the matter **stays open**, no reservation is released, and the Committee re-submits until MSIG acts. Declining to pay a delivered milestone, or declining to restore a rate source the Committee is barred from choosing itself, would penalize awardees for the Network's own delay and leave payments suspended with no exit.
 
 ### Part E — The Program Account and how payments work
 
@@ -361,7 +372,7 @@ FURTHER RESOLVED, that **MSIG confirmation revives the award decision but not th
 
 FURTHER RESOLVED, that **VS LLC is directed to develop and configure the Program Account and the Committee Permission**, and to **publish the configuration as Exhibit D** before the Program Account is funded, covering: the account name, permission structure and thresholds, the delay mechanism and its values, the cancellation path and the exact action and authority required to use it, account resource provisioning, the `eosusd` pair and its `quoted_precision`, and a worked example of the payment calculation.
 
-FURTHER RESOLVED, that VS LLC is **further directed to establish the on-chain disclosure register** required by Framework 6.3b on a **separate account, `disc.vst`**, and to cover in Exhibit D its account name, the append-only contract and its ABI, the deploying and writing authority, and the coded-answer schema and questionnaire version in use; and, in a separate decisions table on the same account, the records required by Framework 7.6a — award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect — covering the decisions schema, the hash algorithm **and the serialization it runs over**, the version of the published record hashed, the writing authority, the **deployment and upgrade authority**, and **RAM provisioning** — an append-only register grows for the life of the program and a register that cannot accept writes stops it. Disclosures are **not** written to the Program Account: that account holds funds, its owner permission is `eosio.prods`, and no routine writing key should exist on it.
+FURTHER RESOLVED, that VS LLC is **further directed to establish the on-chain disclosure register** required by Framework 6.3b on a **separate account, `disc.vst`**, and to cover in Exhibit D its account name, the append-only contract and its ABI, the deploying and writing authority, and the coded-answer schema and questionnaire version in use; **and, in a separate decisions table on the same account, the records required by Framework 7.6a — award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect — covering the decisions schema, the decisions-schema version, the writing authority, the **deployment and upgrade authority**, and **RAM provisioning** — an append-only register grows for the life of the program and a register that cannot accept writes stops it.** Disclosures are **not** written to the Program Account: that account holds funds, its owner permission is `eosio.prods`, and no routine writing key should exist on it.
 
 FURTHER RESOLVED, that the configuration shall record the **public key delivered by each member**, and that the permission is configured with those keys and activated only once all five are delivered. Delivering a key to VS LLC and activating the permission are separate steps.
 
@@ -400,7 +411,7 @@ RESOLVED, that the program has two contractor roles, selected by the Committee a
 
 FURTHER RESOLVED, that **every decision in the program is attributable to named individuals**: a milestone approval names the **Manager of record** and any **Technical Reviewer** by name and on-chain account; a payment names **each signing Committee member by name and on-chain account**, both and not the account alone; and an award names every member voting for, against, and recused, **by name and account**. An account can be rotated, renamed, or rebuilt by block producers under the owner permission; the name is what keeps the record answerable years later.
 
-FURTHER RESOLVED, that **the decisions behind payments are recorded on-chain**, not merely published — award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect — on the same append-only register as the disclosure questionnaires, in a separate decisions table, each with a hash of the published record so the Portal copy can be checked against it. A Portal that goes down or changes hands cannot then take the decision history with it.
+FURTHER RESOLVED, that **the decisions behind payments are recorded on-chain**, not merely published — award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect — on the same append-only register as the disclosure questionnaires, in a separate decisions table, **written in full rather than as a digest of a copy held elsewhere**; and that **almost everything else the program publishes is written to a third table** — published RFPs and their amendments, questions and answers, the objection register, the register of bans, the seat register, network vision statements, cycle reports and the annual review. The Portal reads the registers and renders them, so there is one record and not two that have to be kept in step, and a Portal that goes down or changes hands takes nothing with it. **Three things stay off**: **minutes**, which carry redaction grounds under Framework 5.9; **proposals**, which are confidential until award; and the **backlog**, which is a working list nothing turns on.
 
 FURTHER RESOLVED, that **the RFP platform and Portal code are VST-owned work product**, operated by VS LLC and not owned by it; and that code written before this Resolution was written under no Independent Contractor Agreement and so was never vested — **moving a repository is not an assignment of copyright** — so that a **written assignment from every party that authored it in favour of the VST**, or failing that a perpetual, irrevocable, sublicensable licence, **and** transfer to a VST-controlled repository are **both preconditions** to the program relying on it.
 
@@ -418,15 +429,15 @@ FURTHER RESOLVED, that **no Committee member may serve as an RFP Program Manager
 
 FURTHER RESOLVED, that **a Committee member may be engaged as a Technical Reviewer** — the Reviewer role only, never the Manager role — on the terms in Framework 12.6 and no others, namely:
 
-1. **not until MSIG has set both caps** — the per-cycle cap on Reviewer fees a member may earn and the cap on concurrent engagements (Part H) — until then no member may be engaged;
+1. **not until MSIG has set the cap on concurrent engagements** (Part H) — until then no member may be engaged. **There is no cap on the fees a member may earn**: the control is on **workload**, not on the total, for the reasons at Part H;
 2. only where the Committee has **recorded that no suitable unconflicted external reviewer was available**, published with the engagement;
 3. only while **all five seats are filled**, an engagement being suspended for any vacancy; and where the suspended member is the **only engaged Reviewer on a published RFP or a live award**, the Committee shall engage a **substitute Reviewer** for that RFP — the published statement records that a Reviewer is engaged, not who — failing which, for a published RFP not yet awarded the Manager of record writes the scored assessment, and for a live award the affected milestone goes to MSIG;
-4. **no more than one member per RFP**, and the engagement leaving the member **within both caps** — fees and concurrent engagements;
+4. **no more than one member per RFP**, and the engagement leaving the member **within the concurrent-engagement cap**;
 5. the member **recuses from the availability finding and from the vote engaging them**;
 6. on that RFP the member **does not draft the acceptance criteria or milestone schedule**, **does not score proposals** and takes **no part in score reconciliation** (a written note to the Committee instead — where they are the only engaged Reviewer the Manager of record writes the scored assessment), and **does not vote on any termination recommendation, recovery plan, or strike decision concerning that award, whoever filed it, and whether or not the engagement has since ended or been suspended** — where **recusals of any kind** would leave fewer than four non-recused members, the recommendation goes to MSIG;
 7. the member **keeps their award vote** and **may sign the milestone payment**;
 8. the fee is the **Exhibit B rate card amount**, which the Committee cannot set or vary; it is paid on **its own separate payment**, one per member-Reviewer, signed by the other four, from which that member recuses;
-9. every engagement and fee is **published in the cycle report** by member and by RFP, with each member's cumulative fees shown against the per-cycle cap, and the member **files a disclosure questionnaire update before the engagement begins**.
+9. every engagement and fee is **published in the cycle report** by member and by RFP, with each member's cumulative fees for the cycle and the number of engagements held against the cap, and the member **files a disclosure questionnaire update before the engagement begins**.
 
 FURTHER RESOLVED, that both roles may not bid on any RFP they work on during the engagement and for **6 months** afterwards, may not approve or assess milestones for an awardee they are conflicted on — **conflicted** having the meaning given in Framework 6.4 — and may not be paid in any way that depends on milestone approval or on the size or outcome of an award.
 
@@ -460,25 +471,29 @@ FURTHER RESOLVED, that program **funds** are Network funds held outside the Trus
 
 FURTHER RESOLVED, that **VS LLC contracts with awardees** using the standard Vaulta Stewardship LLC Independent Contractor Agreement, under which **work product, as defined for the award's shape, vests in the VST**; that its role is **administrative and contractual only**; that it does not choose awardees and does not control the Program Account; and that it must **refuse to contract** on a decision plainly outside the mandate, telling the Committee and MSIG in writing why.
 
-FURTHER RESOLVED, that VS LLC's costs of this role come from program operating costs and are **separate from** the CY2026 VST operating funding under MSIG #3.
+FURTHER RESOLVED, that VS LLC's costs of this role come from **Program Costs**, inside the USD 40,000 cap in Part D, and are **separate from** the CY2026 VST operating funding under MSIG #3.
 
 ### Part H — Committee pay
 
 RESOLVED, that Committee members are **not employees of the Trust**, and that VS LLC is authorized to contract with each of them.
 
-FURTHER RESOLVED, that pay is a **fixed retainer of USD 2,500 per member per month** *(recommended)*, **paid in arrears** in A at the reference rate in Part D on the date of each payment, the same for all five seats including the Community seat and the interim holder, with **no** per-meeting fees, success fees, or pay linked to the size, number, or outcome of any award.
+FURTHER RESOLVED, that pay is a **fixed retainer of USD 2,500 per member per month**, **paid in arrears** in A at the reference rate in Part D on the date of each payment, the same for all five seats including the Community seat and the interim holder, with **no** per-meeting fees, success fees, or pay linked to the size, number, or outcome of any award.
 
 FURTHER RESOLVED, that **Technical Reviewer fees earned by a member** under Framework 12.6 are **Program Costs, not Committee pay** — they fall outside the retainer and outside the aggregate cap below. Block producers should note that permitting them makes member pay **unequal in practice, in favour of whichever seat does the technical reviewing**, which is the question Part H otherwise leaves open.
 
-FURTHER RESOLVED, that the control on this is a **per-cycle cap on Reviewer fees a member may earn, together with a cap on concurrent engagements**, set at **[___] per cycle** and **[___] concurrent engagements** *(open — see Blanks)*; and that **no member may be engaged as Technical Reviewer until those figures are set**. The arrangement does not begin before its only control exists.
+FURTHER RESOLVED, that the control on this is a **cap on concurrent engagements**, set at **3 concurrent engagements**; and that **no member may be engaged as Technical Reviewer until that figure is set**. The arrangement does not begin before its only control exists.
 
-FURTHER RESOLVED, that each contract must cover: the retainer; **assignment of all work product to the VST**, per section 9 of the standard Independent Contractor Agreement; confidentiality; the conflict and recusal duties in the Framework, including the 6-month bar on bidding after leaving; **key custody duties**, including secure handling, no sharing or delegation, and surrender on removal or replacement; **automatic suspension of pay** if the member is referred to MSIG for removal or misses 3 consecutive meetings without excuse; and termination on removal or when the term ends.
+FURTHER RESOLVED, that there is **no cap on the total Reviewer fees a member may earn in a cycle**, and that this is a deliberate choice rather than an omission. The control is on **workload**, not on the total. The rate card at Exhibit B is set by MSIG and cannot be varied by the Committee, the figures in it are modest, and a member who holds three engagements has earned three engagements' worth of assessments. A cap on the total would have to be enforced mid-award — leaving a Reviewer contractually obliged to assess milestones unpaid, or forcing a substitute in partway through — for a problem the concurrent cap already prevents at the point of entry.
+
+FURTHER RESOLVED, that **publication is what remains**: every member-Reviewer engagement and every fee is published in the cycle report by member and by RFP, with each member's cumulative total for the cycle. Block producers who conclude that a member is earning too much have the same remedy they have for every other figure in this Resolution — change it at the Threshold, or remove the member.
+
+FURTHER RESOLVED, that each contract must cover: the retainer; **assignment of all work product to the VST**, per section 9 of the standard Independent Contractor Agreement; confidentiality; the conflict and recusal duties in the Framework, including the 6-month bar on bidding after leaving; **key custody duties**, including secure handling, no sharing or delegation, and surrender on removal or replacement; **automatic suspension of pay** if the member is referred to MSIG for removal or misses 3 consecutive meetings without excuse; **suspension of pay while payments are suspended under Framework 13.4a**, the entitlement continuing to accrue and being paid on resumption at the rate then current; and termination on removal or when the term ends.
 
 FURTHER RESOLVED, that reasonable pre-approved expenses are reimbursable, and that total pay authorized is **USD 12,500 per month in aggregate**, funded cycle by cycle as part of each cycle's transfer, so that pay continues only for so long as block producers keep funding it.
 
 ### Part I — Funding
 
-RESOLVED, that the active block producers **request the transfer of A to the value of USD 296,875** to the Program Account, being the first quarterly instalment, from the funding pools allocated to the Network — the REX yield pool and the Year 1 allocation — held at **[___]** *(name the source account)*.
+RESOLVED, that the active block producers **request the transfer of A to the value of USD 284,375** to the Program Account, being the first quarterly instalment, from the funding pools allocated to the Network — the REX yield pool and the Year 1 allocation — held at **[___]** *(name the source account)*.
 
 FURTHER RESOLVED, that if the request is **declined, delayed, or only partly met**, the program does not begin: the Program Account is not funded, no cycle starts, no term runs, and no pay accrues. The Committee shall report the position publicly and MSIG may re-scope the program to the amount actually available. Every clock in this Resolution starts at funding precisely so that a shortfall postpones the program rather than quietly shrinking it mid-cycle.
 
@@ -486,20 +501,21 @@ FURTHER RESOLVED, that this is a **one-way contribution of Network funds**; that
 
 FURTHER RESOLVED, that this Resolution authorizes **four cycles**. Authorizing the **next four** requires a further MSIG Resolution, and that is the recurring decision point which replaces a fixed mandate term.
 
-FURTHER RESOLVED, that the amount authorized for the **first funding period of four cycles** is **USD 950,000**, being:
+FURTHER RESOLVED, that the amount authorized for the **first funding period of four cycles** is **USD 910,000**, being:
 
 | Component | Per cycle | Four cycles |
 |---|---|---|
 | Cycle Ceiling for awards | 150,000 | 600,000 |
-| Program operating costs | 50,000 | 200,000 |
-| Committee pay | 37,500 | 150,000 |
-| **Total Program Spend** | **237,500** | **950,000** |
+| **Program Costs** | **77,500** | **310,000** |
+| — Committee pay | 37,500 | 150,000 |
+| — Manager and Reviewer fees, Portal, administration | 40,000 | 160,000 |
+| **Total Program Spend** | **227,500** | **910,000** |
 
 FURTHER RESOLVED, that funds are **transferred in four quarterly instalments, not all at once**, and that each instalment **tops the Program Account up to 125% of the coming cycle's Total Program Spend**, measured in A at the Reference Rate. Forward commitments are not added on top, because they already sit inside that cycle's Cycle Ceiling.
 
 FURTHER RESOLVED, that the **25% margin is not spending authority**. It exists because commitments are in USD while the account holds A, and a fall in the price of A would otherwise leave the program unable to pay what it has promised. The Committee may not commit against it.
 
-FURTHER RESOLVED, that the **first instalment is A to the value of USD 296,875** at the Reference Rate on the date of transfer, being 125% of the first cycle's Total Program Spend of USD 237,500.
+FURTHER RESOLVED, that the **first instalment is A to the value of USD 284,375** at the Reference Rate on the date of transfer, being 125% of the first cycle's Total Program Spend of USD 227,500.
 
 FURTHER RESOLVED, that instalments after the first require **no further vote** — they are authorized by this Resolution — but that block producers may **stop, reduce, or re-time any instalment** by MSIG Resolution at any time.
 
@@ -517,7 +533,7 @@ FURTHER RESOLVED, that this MSIG **does not decide** the wider question of who r
 
 RESOLVED, that this MSIG **overrides earlier MSIGs only where they directly conflict**, and that MSIGs #2, #3, and #4 otherwise remain fully in force.
 
-FURTHER RESOLVED, that the Trustee is directed to execute any conforming amendments to the Trust Agreement needed to reflect the Committee's new name, size, and dual capacity, prepared by counsel and attached as **Exhibit C**.
+FURTHER RESOLVED, that the Trustee is directed to execute any conforming amendments to the Trust Agreement needed to reflect the Committee's new name, size, and dual capacity, **prepared by counsel to the Trust**. The amendments are **not attached to this Resolution**: this Resolution supplies the authority required by vstcreation, and the drafting, execution, and any conforming changes to VS LLC's own operating procedures are administered by the VST and VS LLC off-chain. Block producers are voting on the direction to make them conform, not on their text.
 
 FURTHER RESOLVED, that these amendments are made under the vstcreation MSIG, which approved the governing documents and provided that **"any material amendment or substantive change shall require a separate MSIG Resolution"**. This Resolution is that separate MSIG Resolution.
 
@@ -529,7 +545,7 @@ FURTHER RESOLVED, that the **first cycle begins on the date funds are received i
 
 FURTHER RESOLVED, that **Committee pay under Part H accrues from the later of** the date the member's engagement contract is signed and the date funds are received in the Program Account, so that VS LLC does not incur obligations it has not been funded to meet.
 
-FURTHER RESOLVED, that the Committee shall **publish the funding date on the Portal** when it occurs, since **four** separate periods are calculated from it: the cycle, the pay period, the initial terms of the four MSIG-appointed seats, and the nine-month self-review under Framework 16.1. The nine months in Part F run from **execution** of this MSIG instead, and are a different period of the same length.
+FURTHER RESOLVED, that the Committee shall **publish the funding date on the Portal** when it occurs, since three separate periods are calculated from it.
 
 ---
 
@@ -538,33 +554,30 @@ FURTHER RESOLVED, that the Committee shall **publish the funding date on the Por
 | Exhibit | Document | From |
 |---|---|---|
 | **A** | Vaulta Network RFP Framework | Working group |
-| **B** | Manager and Reviewer rate card and scope | To be prepared |
-| **C** | Trust Agreement conforming amendments | Counsel to the Trust |
-| **D** | Program Account, permission, and `disc.vst` register configuration — **both the disclosure and decisions contracts** | VS LLC |
+| **B** | Manager and Reviewer rate card and scope | **Complete** — figures confirmed, concurrent cap set at 3 |
+| **D** | Program Account, permission, and `disc.vst` register configuration — **the disclosure, decisions and publications registers** | VS LLC — drafted as a specification; deployment values to be filled before publication |
 | **E** | Seat appointment MSIG template | This Resolution |
 | **F** | Schedule A templates for Committee members, Program Managers, Technical Reviewers, and awardees | This Resolution |
 
+**There is no Exhibit C.** Counsel's conforming amendments to the Trust Agreement were once attached under that letter. They are administered off-chain by the VST and VS LLC, and Part J directs the Trustee to execute them without attaching their text. **The remaining letters are unchanged**, because Exhibits D, E, and F are cited by letter throughout the Framework, the Schedule A templates, and the platform requirements, and renaming them to close the gap would silently redirect every one of those citations.
+
 ## Blanks to fill
 
-The MSIG takes effect on execution, so there is no effective date to fill. Recommended values are already entered where a recommendation could be made from what is known. Those are marked *(recommended)* in the text and remain open to change.
+The MSIG takes effect on execution, so there is no effective date to fill. **Every figure in this Resolution is now set**, not proposed: the Cycle Ceiling, the Per-Award Limit, operating costs, Committee pay, and the post-award review threshold are the numbers block producers are voting on. Part D already provides that you may change any amount, the cycle length, or any limit at the Threshold at any time, so nothing here is locked — but nothing here is a blank either.
+
+**What is not here.** This list holds only what block producers decide or must see filled. Work the VST and VS LLC administer off-chain — candidate sourcing for the four seats, counsel's conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover — is tracked in the **Program Administration Register**, which is not an attachment to this Resolution and is not approved by it.
+
+**Numbers are stable.** When a blank is closed it is deleted from this list and the surviving numbers do not move. Gaps in the sequence are therefore deliberate, and every reference to a blank number elsewhere in this Resolution keeps pointing at the same item. Numbers here are **independent of** the numbering in the Framework's *Appendix C*: the same subject may be blank 12 here and item 11 there.
 
 | # | Item | Part |
 |---|---|---|
-| 1 | ~~*Contingency:* alternative account name if the `vst` bid fails~~ — **closed. The `vst` bid has been won**, so the Program Account is `rfp.vst` and the register account is `disc.vst` as drafted | E |
 | 2 | Source account holding the REX yield and Year 1 pools | I |
-| 3 | Candidates to be proposed for the four seats by Exhibit E MSIG — individually, as a full slate, or in any subset | B |
 | 4 | ECF process publication and first vote dates | F |
-| 5 | Exhibits B, C, D. **Blocking — the Program Account is not funded until Exhibit D is published (Part J), and no Manager or Reviewer may be contracted until Exhibit B's rate card exists** | Attachments |
-| 6 | Confirm or change the recommended figures: Cycle Ceiling, Per-Award Limit, operating costs, Committee pay | D, H, I |
-| 7 | ~~Open question: equal or differentiated seat pay~~ — **closed for now: equal**, as drafted. Revisit at the annual review under Framework 14.3, and note that Reviewer fees under Framework 12.6 make pay unequal in practice, which is what the caps in blank 12 control | H |
-| 8 | The **disclosure questionnaire instrument** — version 1 text, coded-answer schema, and holdings band set (Framework 6.3a). **Blocking — the Program Account is not funded until every member has filed, which is impossible before the instrument exists** | B |
-| 9 | The **`disc.vst` register** — account, both contracts (**disclosures** and **decisions**), both schemas, the hash algorithm and serialization, RAM provisioning, upgrade authority, and the writing authority, to be covered in Exhibit D (Framework 6.3b, 7.6a). **To be built and serviced by the EOS Rio team; VS LLC remains accountable.** **Blocking — the Program Account is not funded until Exhibit D is published** | E |
-| 10 | ~~Licences~~ — **closed: Apache-2.0 for code, CC-BY-4.0 for non-code**, the three licence modes in Framework 20.2a, and the Proposer's-choice **permitted set named per RFP** — no standing list | G |
+| 5 | **Exhibit D** — the account and register configuration. Drafted as a specification; the **deployment values remain** (its Part 10 and item **D1**; the member keys at **D6** are recorded as they arrive and do not hold publication). *Exhibit B is complete: its figures are confirmed and the concurrent-engagement cap is set at 3.* **Blocking — the Program Account is not funded until Exhibit D is published with its deployment record complete (Part J)** | Attachments |
+| 8 | The **disclosure questionnaire instrument** (Framework 6.3a). **Drafted as version `VQ1`** — text, coded-answer schema and position bands complete. What remains is **publication by VS LLC with the register open for filing**, with **no open questions** remaining in it. **Blocking — the Program Account is not funded until every member has filed, and nobody can file until the register is open** | E |
+| 9 | The **`disc.vst` register** — account, all three registers (**disclosures**, **decisions** and **publications**; three tables, one contract or more), both schemas, RAM provisioning (**settled: 16 MB at launch, provisioned and topped up by the VST and VS LLC — Exhibit D 8.6**), upgrade authority, and the writing authority, to be covered in Exhibit D (Framework 6.3b, 7.6a). **To be built and serviced by the EOS Rio team; VS LLC remains accountable.** **Blocking — the Program Account is not funded until Exhibit D is published** | E |
 | 11 | **Counsel confirmation that section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A. **Blocking — until confirmed, no Service or Embedded RFP may be published and no award may be contracted with a populated pre-existing-IP schedule** (Part G) | G, F |
-| 12 | **Per-cycle cap on Technical Reviewer fees a Committee member may earn, and cap on concurrent engagements**, under Framework 12.6. **Blocking — no member may be engaged until both are set** | G, H |
-| 13 | ~~Confirm what "grant" means~~ — **closed: "grant" is the open call in Framework 26**, not a further instrument. The Committee funds through three instruments only: directed RFP, open call, bounty. *Bounties carry **no cap and no sub-limit** — the Per-Award Limit and Cycle Ceiling are the only bounds* | D |
-| 14 | **Transfer of the existing platform code and rights to the VST** (Framework 15.2a). **EOS Rio has committed to transferring both, and that commitment is accepted.** Remaining work is administrative: the executed assignment, confirmation it covers every contributor, and the repository transfer. **Not blocking** — tracked as a handover deliverable | G |
-| 15 | **Post-award review threshold** under Framework 25.2 — **recommended USD 25,000 on total contract value**, entered in Part D. Confirm or change it. Also scope the review as a Manager task in the **Exhibit B rate card**, or it is unfunded work. **Not blocking** — no award is held up by it | D, B |
+| 16 | **The suspension long-stop in the Awardee Schedule A** (Exhibit F clause 6) — how many **business days** a payment suspension under Framework 13.4a must run before an awardee may terminate, and the notice period. Counsel to confirm the term itself. **Blocking — no awardee agreement can be executed while the two blanks are live** | F |
 
 ## Notes for review
 
@@ -578,14 +591,16 @@ The MSIG takes effect on execution, so there is no effective date to fill. Recom
 
 **The amendment path is clear.** vstcreation provides that material amendment of the approved governing documents requires a separate MSIG Resolution. Part J relies on that clause.
 
-**2. Where the recommended figures come from.** *Market figures as at the date of this draft; the USD denomination of every limit is unaffected by price movement, but the share-of-yield comparison below is not.* A trades at roughly **USD 0.077**, giving a market capitalisation of about USD 127 million on a circulating supply of about 1.66 billion A. The REX yield pool of 18–20M A a year is therefore worth roughly **USD 1.4–1.5 million a year**, or about **USD 350,000–380,000 a quarter**.
+**2. Where the figures come from.** **These are the figures you are voting on, not proposals** — the working group has confirmed them. Part D lets you change any of them at the Threshold at any time, and the reasoning below is kept so that a later change starts from what was actually considered rather than from the number alone. *Market figures as at the date of this draft; the USD denomination of every limit is unaffected by price movement, but the share-of-yield comparison below is not.* A trades at roughly **USD 0.077**, giving a market capitalisation of about USD 127 million on a circulating supply of about 1.66 billion A. The REX yield pool of 18–20M A a year is therefore worth roughly **USD 1.4–1.5 million a year**, or about **USD 350,000–380,000 a quarter**.
 
 | Figure | Reasoning |
 |---|---|
 | **Cycle Ceiling USD 150,000** | About 40% of one quarter's REX yield, and about 10% of the annual yield. An earlier draft proposed 1,000,000 A, which at the current price is only about USD 77,000 — too thin to fund four to eight meaningful RFPs, and a good illustration of why the ceiling should be set in USD rather than in A |
 | **Per-Award Limit USD 100,000** | Sized to accommodate recurring network infrastructure. The Treasury already contracts history API and related services at about **USD 7,000 a month** *(figure supplied by the VST; to be confirmed against the contract)*, which is USD 84,000 over a year. A USD 100,000 limit covers that with room, and is measured on total contract value so a monthly figure cannot be used to slip past it. This is a ceiling, not an expectation — early cycles are unlikely to approach it |
-| **Operating costs USD 50,000 per quarter** | A pool of at least two Program Managers, Technical Reviewers on technical RFPs, Portal maintenance, administration. An estimate, to be replaced by a real quote once the rate card exists |
+| **Manager and Reviewer fees, Portal, administration — USD 40,000 per quarter** | The Exhibit B rate card prices the first part: a **busy six-RFP cycle runs about USD 16,300** in Manager and Reviewer fees, leaving about **USD 23,700** for the Portal, hosting, and administration. An earlier draft set this at 50,000 before the rate card existed; with real figures the estimate could come down. It is a **cap**, not a budget to spend |
+| **Program Costs USD 77,500 per quarter** | The two lines above, combined and capped. This is what the program spends on **itself**, as opposed to on the work — the single number to argue about, and the one to watch grow |
 | **Committee pay USD 2,500 per member per month** | USD 150,000 a year across five seats. This is the figure most likely to be argued over, and it deserves to be. It is close to the VST's entire CY2026 operating budget of USD 160,000 under MSIG #3. The case for it is 1-year appointments with a named subject area, real evaluation workload, personal key custody, and legal exposure. The case against is that the Network would be paying its governance body roughly what it pays to run the Trust |
+| **Post-award review threshold USD 25,000** | Stated as **25% of the Per-Award Limit**, so it moves when that Limit moves rather than silently drifting out of proportion to it. At the Cycle Ceiling at most six awards in a cycle can reach it, and against the expected band of USD 15,000–30,000 an RFP, roughly half of typical awards will — one or two short reviews per Manager per quarter against a pool of at least three, falling at closing rather than at award, so they spread out further |
 | **Buffer 25%** | A can fall a long way in a quarter. Without a buffer, a decline would leave the program holding signed agreements it cannot pay in full |
 
 **3. What this costs against the yield, over a year.** Quarterly figures make the total easy to miss, so here it is plainly.
@@ -593,19 +608,18 @@ The MSIG takes effect on execution, so there is no effective date to fill. Recom
 | | USD |
 |---|---|
 | Awards, four cycles | 600,000 |
-| Operating costs, four cycles | 200,000 |
-| Committee pay, four cycles | 150,000 |
-| **Total authorized for one year (Total Program Spend)** | **950,000** |
-| **Gross transferred** — first instalment 296,875, then three top-ups of up to 237,500 | **up to 1,009,375** |
+| Program Costs, four cycles — 150,000 Committee pay, 160,000 everything else | 310,000 |
+| **Total authorized for one year (Total Program Spend)** | **910,000** |
+| **Gross transferred** — first instalment 284,375, then three top-ups of up to 227,500 | **up to 966,875** |
 | REX yield at today's price of A | ~1,400,000–1,500,000 a year |
-| **Share of the annual yield — committed** | **roughly 65%** |
-| **Share of the annual yield — gross transferred** | **roughly 70%** |
+| **Share of the annual yield — committed** | **roughly 61–65%** |
+| **Share of the annual yield — gross transferred** | **roughly 65–69%** |
 
-The gross figure is the one that leaves the Treasury. **The 25% margin is funded once, not four times** — each instalment after the first *tops the account up* to 125% of the coming cycle's spend, so it restores whatever the previous cycle consumed rather than adding a fresh margin. At full spend and a steady price the gross is 296,875 + 3 × 237,500. The margin is not spending authority and is returned at the end of the funding period, but it is unavailable to the Network in the meantime.
+The gross figure is the one that leaves the Treasury. **The 25% margin is funded once, not four times** — each instalment after the first *tops the account up* to 125% of the coming cycle's spend, so it restores whatever the previous cycle consumed rather than adding a fresh margin. At full spend and a steady price the gross is 284,375 + 3 × 227,500. The margin is not spending authority and is returned at the end of the funding period, but it is unavailable to the Network in the meantime.
 
-Gross runs **higher than 1,009,375 if the price of A falls**, because the top-up restores a USD-denominated level from an account holding A. It runs **lower if the program underspends**, since a carried balance reduces the next top-up.
+Gross runs **higher than 966,875 if the price of A falls**, because the top-up restores a USD-denominated level from an account holding A. It runs **lower if the program underspends**, since a carried balance reduces the next top-up.
 
-**That is a large share, and block producers should decide it deliberately.** The REX yield is not reserved for the RFP program — it also has to cover Labs, infrastructure, and anything else the Network funds from it. If the intention is for the RFP program to be one call on the yield among several, the quarterly ceiling should come down. A ceiling of USD 100,000 a cycle brings the annual total to USD 750,000, about 52% of the yield.
+**That is a large share, and block producers should decide it deliberately.** The REX yield is not reserved for the RFP program — it also has to cover Labs, infrastructure, and anything else the Network funds from it. If the intention is for the RFP program to be one call on the yield among several, the quarterly ceiling should come down. A ceiling of USD 100,000 a cycle brings the annual **Total Program Spend** to **USD 710,000** — 400,000 in awards plus 310,000 of Program Costs — about **49%** of the yield.
 
 The recommendation of USD 150,000 a cycle stands on administrative grounds — five part-time people can run perhaps four to eight RFPs well in a quarter, at USD 15,000 to 30,000 each, plus the in-cycle portion of any recurring infrastructure. But **that is a capacity argument, not an affordability argument**, and the two should be reconciled before this goes to a vote.
 
@@ -652,7 +666,7 @@ This also fixes the awkward interaction with long awards. The constraint on a mu
 
 **8. Why the clocks start at funding.** Under MSIG #3 the Treasury funding for the VST was approved well before it arrived, and the Trustee and LLC Manager contracts were only signed in June 2026 once it did. If the same gap happens here and the cycle and pay run from MSIG approval, VS LLC would carry retainer obligations against money it does not have, and the cycle would burn while the Committee had nothing to allocate. Part J therefore ties both clocks to the arrival of funds.
 
-**9. Settled for now: equal pay.** Part H pays **all five seats equally**, and the working group has confirmed that for the first funding period. **Revisit at the annual review** under Framework 14.3 — and note that Reviewer fees under Framework 12.6 make pay unequal in practice, which is what the caps in blank 12 exist to control. The arguments considered, kept as the record of reasoning:
+**9. Settled for now: equal pay.** Part H pays **all five seats equally**, and the working group has confirmed that for the first funding period. **Revisit at the annual review** under Framework 14.3 — and note that Reviewer fees under Framework 12.6 make pay unequal in practice. The working group has decided **not** to cap that inequality by amount: the concurrent-engagement cap in Part H bounds the workload, and the cycle report makes the resulting totals visible. Unequal pay is therefore **accepted and published**, not capped. The arguments considered, kept as the record of reasoning:
 
 *For differentiating.* Core Development, Business Development, and Marketing carry recurring scoping and diligence work in their categories. Technical judgment in particular is the hardest of the five to recruit, and a weak evaluation there costs the most.
 

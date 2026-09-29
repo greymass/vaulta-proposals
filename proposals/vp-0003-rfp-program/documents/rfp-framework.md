@@ -1,7 +1,7 @@
 # Vaulta Network RFP Framework
 
 **Exhibit A to MSIG #5**
-**Status: DRAFT v4.2**
+**Status: DRAFT v5.3**
 **Date: [___]**
 
 This is the final RFP Framework required by MSIG #4. It has two parts.
@@ -9,9 +9,9 @@ This is the final RFP Framework required by MSIG #4. It has two parts.
 - **Part 1 — The Steering Committee and the Mandate.** Who decides, how they are chosen, how they vote, and how money moves.
 - **Part 2 — Running an RFP.** How a single RFP goes from an idea to a paid deliverable.
 
-Part 2 may be amended by MSIG without reopening Part 1. Part 1 governs where the two disagree.
+Part 2 may be amended by MSIG without reopening Part 1. **Part 1 governs where the two disagree**, and Part 2 may vary a Part 1 rule **only where Part 1 expressly so provides** — otherwise an amendment to Part 2 could rewrite Part 1 payment mechanics without reopening Part 1, which is what the split exists to prevent. *Terms used throughout* forms part of Part 1.
 
-**Terms used throughout.** *Business day* = Monday to Friday, measured in UTC; no public holidays are excluded, because no single holiday calendar fits a global block producer set. *Reference Source* = the on-chain price source the Reference Rate is read from — the Delphi Oracle (`delphioracle`) unless the Committee designates a replacement under 13.4a. *Reference Rate* = the Reference Source's `datapoints.median` for `eosusd`, read at the time of the relevant action and converted per section 13.4. *Award Commitments* = amounts committed to awardees, constrained by the Cycle Ceiling. *Program Costs* = Committee pay, Manager and Reviewer fees, Portal and administration. *Total Program Spend* = the two together. *Committee* = the Vaulta Network Steering Committee. *Threshold* = 15 of 21 active block producers. *Program Account* = the on-chain account holding program funds. *Manager of record* = the RFP Program Manager assigned to one RFP. *Portal* = the RFP portal. *VS LLC* = Vaulta Stewardship LLC. *Coverage Margin* = the minimum margin the coverage test in 13.4 requires, set in MSIG #5 Part D. *Delay window* = the on-chain waiting period before a payment executes.
+**Terms used throughout.** *Business day* = Monday to Friday, measured in UTC; no public holidays are excluded, because no single holiday calendar fits a global block producer set. *Reference Rate* = the Delphi Oracle `datapoints.median` for `eosusd`, read at the time of the relevant action and converted per section 13.4. *Award Commitments* = amounts committed to awardees, constrained by the Cycle Ceiling. *Program Costs* = everything the program spends on itself — Committee pay, Manager and Reviewer fees, Portal and administration — constrained by the Program Cost Ceiling. *Program Cost Ceiling* = the per-cycle cap on Program Costs, set in MSIG #5, with internal caps on Committee pay and on everything else. *Total Program Spend* = Award Commitments and Program Costs together. *Committee* = the Vaulta Network Steering Committee. *Threshold* = 15 of 21 active block producers. *Program Account* = the on-chain account holding program funds. *Manager of record* = the RFP Program Manager assigned to one RFP. *Portal* = the RFP portal. *VS LLC* = Vaulta Stewardship LLC. *Delay window* = the on-chain waiting period before a payment executes.
 
 ---
 
@@ -99,7 +99,24 @@ An appointment has no effect for a given seat if, at the moment of execution:
 
 **Internal conflicts resolve by order of appearance.** Where a single Resolution names the same individual for more than one seat, or names two candidates who would breach the affiliation rule against each other, the seats are tested **in the order they appear in the Candidates table of the proposal**: the appointment takes effect for the first and has no effect for the later. The table's row order is therefore the proposer's priority order, and proposers should set it deliberately.
 
-VS LLC maintains a **published seat register** on the Portal recording who holds each seat **by name and on-chain account** — the name being the Part 1 identity under 6.3a, so the register and the questionnaire cannot diverge — the proposal name, the execution transaction, the resolution mode, and any seat a proposal named but did not fill together with the reason.
+**3.1a Every appointment proposal carries a network vision statement, one per candidate.** A name and a background paragraph tell block producers who someone is. They do not tell them what that person would do with a seat, and that is what the vote is actually about.
+
+**Each candidate writes their own.** It is the candidate's statement, not the proposer's, and it addresses **the portfolio of the seat they are named for** — a Core Development candidate writes about core development. A slate may add a short collective note explaining why the four were put forward together, but that does not replace the individual statements.
+
+**What it covers,** in the candidate's own words:
+
+1. **What the Network needs in this portfolio** over the term ahead;
+2. **What they would prioritize funding, and what they would decline** — the second is more informative than the first, and most statements skip it;
+3. **How they would judge whether the program succeeded** by the end of their term;
+4. **Any position or commitment block producers should know about.** This is about *direction*, not *interest* — interests belong in the disclosure questionnaire under 6.3a, and this does not replace it.
+
+**Length and language.** Aim for **300 to 800 words**. Long enough to say something, short enough that block producers read all of them when several candidates stand for the same seat. **Write plainly**, and file a translation alongside the original where that helps — not every block producer reads English as a first language, and a statement nobody can read is a statement that does not count.
+
+**A proposal without one is incomplete and should not be proposed.** It is not a condition that voids an appointment: a missing statement is the proposer's failure, and voiding the seat would punish the candidate and leave the Committee short. Instead, block producers should decline to approve a proposal that omits it; VS LLC records the omission in the seat register; and where a proposal is nonetheless executed without one, **the member files their statement before pay and signing weight begin**, alongside the contract, questionnaire and signing key required by MSIG #5 Part B.
+
+**It is published and it is kept.** The statement is **written to the `publications` register** (7.6a), rendered on the Portal with the proposal, and linked from the seat register. It stays there for the term. It does not bind the member — nobody should be held to a plan the Network's circumstances have moved past — but it is the natural thing to read again at reappointment, and a member who wants a second term should expect to be asked how the second year compared to what they wrote before the first.
+
+VS LLC maintains a **seat register written to the `publications` table** (7.6a) and rendered on the Portal, recording who holds each seat **by name and on-chain account** — the name being the Part 1 identity under 6.3a, so the register and the questionnaire cannot diverge — the proposal name, the execution transaction, the resolution mode, a **link to each member's network vision statement** under 3.1a, and any seat a proposal named but did not fill together with the reason.
 
 The register is the canonical **record of what was executed** and of any condition VS LLC has identified. It is **not a determination of eligibility.** Where VS LLC records a seat as unfilled on any ground other than an earlier execution, it publishes its reasons and refers the matter to MSIG, and the seat is treated as vacant until MSIG resolves it. VS LLC does not decide who is eligible; MSIG does.
 
@@ -169,6 +186,8 @@ This period runs from execution rather than from funding, so ECF is not held up 
 
 **4.8** Where MSIG seats a Community member — whether seating an ECF winner under 4.2 or filling the seat under 4.6 or 4.7 — it uses the **Exhibit E template** and **the rules in section 3.1 apply**: resolution modes, first execution by block time, the five conditions, and the row-order tie-break. The term runs one year from execution (section 3.4).
 
+**The vision statement requirement in 3.1a applies too.** Where ECF's own process already produced a candidate statement covering the ground in 3.1a, that statement satisfies it and is filed with the proposal — there is no need to write a second one for the same purpose.
+
 ## 5. Meetings and voting
 
 **5.1 Meetings.** At least monthly, and whenever the Chair or any two members call one. At least twice monthly while an RFP solicitation is open for submissions or under evaluation.
@@ -195,26 +214,16 @@ This period runs from execution rather than from funding, so ECF is not held up 
 | Reassign an RFP to another Manager | Simple majority, minimum 3 |
 | Engage a Manager or Technical Reviewer | Simple majority, minimum 3 |
 | Record that no unconflicted external reviewer was available (12.6.1) | Simple majority, minimum 3 |
-| **Record a technical continuity change to the Reference Source** (13.4a) | Simple majority, minimum 3 |
-| **Designate a replacement Reference Source** (13.4a) | Two-thirds, rounded up, minimum 3 |
 | Recommend a Framework amendment | Two-thirds, rounded up, minimum 3 |
-| Declare urgency for the shortened delay (10.4) | Two-thirds, rounded up, minimum 3 |
-| Approve an advance payment (11.7) | Two-thirds, rounded up, minimum 3 |
-| Approve the Program Cost payment schedule (13.3a) | Simple majority, minimum 3 |
-| Resume a suspended member-Reviewer engagement where a substitute was engaged (12.6.1) | Simple majority, minimum 3 |
-| Lift a coverage stop once coverage is back above the margin (13.4) | Simple majority, minimum 3 |
-| **Approve a milestone routed to the Committee** by 13.4 or 13.4a — a stale rate, a rate outside the collar, or the first payment after a change of Reference Source | Simple majority, minimum 3 |
 | **Sign a payment on-chain** | **4 signatures.** See section 7 |
 
 Two-thirds rounded up: 5 seats = 4 votes. 4 seats = 3 votes. 3 seats = 2 votes.
-
-**This table is the complete list.** Every Committee vote this Framework requires appears here. Where another section states a threshold, it restates a row above rather than creating one — and where a section says "at the threshold in 5.3", the row it means is in this table.
 
 **5.4 Why there is a minimum of 3.** Without it, two-thirds of three rounds to two, and an award would pass on fewer votes than publishing the RFP required. The Trustee suspension row has no minimum, so that a reduced Committee is not weakened against the Trustee.
 
 **5.5 The Committee does not vote on milestones.** Milestone approval belongs to the Manager of record (section 11).
 
-**One narrow exception**, and it is not about the work. Sections 13.4 and 13.4a route a milestone to the Committee where the **rate** is doubtful — a datapoint older than 24 hours, a rate outside the collar, or the first payment after a change of Reference Source. The Committee then approves at the threshold in 5.3. What it is approving is **the rate and the payment, not the delivery**: the Manager's determination that the milestone was met stands untouched, and 11.4's ministerial checks are unaffected.
+**One exception.** Where the staleness or collar check in 13.4 triggers, the **approval for payment** moves to the Committee at simple majority, minimum 3. Even then the Manager's **determination** is not reopened — what the Committee decides is whether to pay at a rate the checks have flagged.
 
 **5.6 Recusal.** Where a member has a conflict, recusal is required, not optional. A recused member is excluded from the materials, the quorum, and the count.
 
@@ -226,7 +235,7 @@ A recused member also **does not sign** the payment. Because the permission is f
 
 **5.9 Minutes.** Every meeting is minuted with attendance, decisions, vote counts, and recusals. Minutes are published within 10 business days. Only three things may be removed: confidential proposal content before award, legal advice, and personal data. **Vote counts and recusals are never removed.**
 
-**"Personal data" does not include** the name, role, seat, or on-chain account of any member, Manager, Reviewer, or other person exercising a decision right in the program, **acting in that capacity**. Those are never removed. Without this the redaction ground would reach exactly what section 11.3a requires to be published, and would break the hash of any decision already recorded on-chain.
+**"Personal data" does not include** the name, role, seat, or on-chain account of any member, Manager, Reviewer, or other person exercising a decision right in the program, **acting in that capacity**. Those are never removed. Without this the redaction ground would reach exactly what section 11.3a requires to be published — and those names are written into the decisions register, which cannot be redacted at all (7.6a).
 
 ## 6. Conflicts of interest
 
@@ -240,7 +249,7 @@ This section matters more than any other. The Committee chooses what is funded a
 
 **6.2 Connected companies.** A company connected to a member — their employer, a company they work for, one under common control, or one they hold a material interest in — may bid only if the member: declares the connection in writing **before the RFP is published**; recuses fully from scoping, drafting, evaluation, scoring, discussion, and voting on that RFP; and the connection and recusal are minuted and published. The member may not help set the budget or the criteria for an RFP their connected company later bids on.
 
-**6.3 Declarations.** Every member, Manager, and Technical Reviewer files a declaration of connections, employment, and Vaulta-related token or equity holdings within 30 days of appointment. For a Committee member the 30 days run as set out in 6.3c. This includes any connection to the **Vaulta Treasury**, which is the source of the funds this Committee allocates. They update it within 10 business days of any change and refile every year.
+**6.3 Declarations.** Every member, Manager, and Technical Reviewer files a declaration of connections, employment, and **Vaulta-ecosystem positions other than A** within 30 days of appointment. For a Committee member the 30 days run as set out in 6.3c. This includes any connection to the **Vaulta Treasury**, which is the source of the funds this Committee allocates. They update it within 10 business days of any change and refile every year.
 
 **6.3a The disclosure questionnaire.** Declarations are made on a **single standard questionnaire**, not as free-form statements. Everyone who decides or manages answers the same questions in the same order, so answers can be compared across people and across years, and so a missing answer is visible as a gap rather than an omission nobody noticed.
 
@@ -253,7 +262,7 @@ This section matters more than any other. The Committee chooses what is funded a
 | 1. Identity and role | Name, role, seat or RFPs covered, on-chain account, date |
 | 2. Employment and engagement | Current employer; other paid engagements in the Vaulta or wider Antelope ecosystem — **including any Technical Reviewer or Program Manager engagement in this program, by RFP**; block producer affiliation; board, officer, or advisory positions |
 | 3. Vaulta Treasury | Any employment, contract, consulting, advisory, board, or equity relationship with the Vaulta Treasury or any entity it controls, now or in the previous 12 months |
-| 4. Holdings | A holdings **by band**, not exact figure; any other Vaulta-ecosystem token, equity, or option position; any position taken on behalf of another person |
+| 4. Positions | Any **Vaulta-ecosystem token, equity, or option position other than A**, **by band** and not exact figure; any position held **on behalf of another person**; any position **deliberately taken to profit from a fall in the price of A** — a short sale, a put option, or an inverse product, which asks about **intent, not exposure** |
 | 5. Connections to likely proposers | Named organizations the filer is connected to that plausibly bid; the nature of each connection; whether the filer would recuse |
 | 6. Other funding roles | Roles in any other grant, funding, or treasury body in this ecosystem or another |
 | 7. Family and household | Connections in Parts 2 to 5 held by an immediate family member or household member |
@@ -262,15 +271,21 @@ This section matters more than any other. The Committee chooses what is funded a
 
 Parts 2 to 8 each require an explicit **"None"** where there is nothing to declare. A blank is treated as an unfiled questionnaire.
 
-**6.3b Publication on-chain.** A filed questionnaire is **published on-chain**, not only on the Portal.
+**Why Part 4 does not ask for A holdings.** An earlier draft did. It was removed because the question does no work: **every person who files is paid in A**, so holding it is universal rather than distinguishing, and every award is denominated in **USD**, so no decision this Committee makes moves the price in a way a member could act on. A large A position is closer to alignment than to conflict. What Part 4 asks instead are the three cases that are genuinely conflicts — a position in an organization that might **bid**, a position held for **someone else**, and a position **deliberately taken against A**, which is the only one pointed against the program and the only one nothing else in the questionnaire would surface.
+
+**6.3b Publication on-chain.** A filed questionnaire is **published on-chain in full**. The Portal does not hold a separate copy — it **reads the register and renders it**, so there is one record, not two that have to be kept in step.
 
 **Where it is written.** Disclosures are **not** written to the Program Account. That account holds funds, its owner permission sits with `eosio.prods`, and VS LLC has no weight on it. Disclosures go to a **separate account, `disc.vst`**, carrying a small append-only disclosure contract deployed and controlled by VS LLC. VS LLC configures and publishes it under the same Exhibit D process as the Program Account, and MSIG #5 Part E includes it in that scope. Keeping the two apart means the disclosure register can be written routinely without anyone holding a key that can move money.
 
-**What is written.** For each filing: the filer's account, role, questionnaire version, filing date, the **coded answers** to Parts 2 to 8, and a **SHA-256 hash of the full submission** including free text. The full submission is published on the Portal, and the hash lets anyone confirm the Portal copy is the one that was filed. The filer signs their own submission; **VS LLC writes the record and cannot alter its content.**
+**What is written.** For each filing: the filer's account, role, questionnaire version, filing date, the **coded answers** to Parts 2 to 8, and the **full text of the filing** — the organizations named in Part 5, the nature of each connection, and every reason and explanation given. The filer signs their own submission; **VS LLC writes the record and cannot alter its content.**
+
+**No hash is kept, because there is nothing to hash against.** An earlier design held the full submission on the Portal and wrote only a digest on-chain, so that anyone could prove the Portal copy was the one filed. With the register itself holding the text and the Portal reading from it, the chain **is** the copy — a digest would be a digest of itself.
 
 Records are **append-only**. An update files a new record referencing the previous one; nothing is edited or removed. The history of what a person disclosed and when is therefore permanent and public, which is the point — a conflict that surfaces later can be checked against what was declared at the time.
 
-Because on-chain records cannot be withdrawn, the questionnaire asks for holdings by band rather than by figure, and asks filers not to name third parties beyond the organizations already named in Part 5.
+**Because the text is on-chain, nothing in a filing can be withdrawn.** That is why the questionnaire asks for positions **by band** rather than by figure, and why it **forbids naming any individual** — not a family member, not a colleague, not a counterparty. Organizations are named; people are not. A filer who names a person has published that person's affairs permanently, and neither they nor the program can take it back.
+
+**So the check happens before the write, not after.** VS LLC screens each filing for named individuals and for figures where a band was asked for, and returns it to the filer rather than writing it. That screen is mechanical — it is not a review of the substance, which VS LLC has no business forming a view on.
 
 **6.3c Filing gates.** The questionnaire **is** the conflict-of-interest declaration referred to in the appointment and engagement documents — it is one item, not an additional one.
 
@@ -312,7 +327,7 @@ Because on-chain records cannot be withdrawn, the questionnaire asks for holding
 
 **Before MSIG votes**, the person shall be given the allegation in writing and **10 business days** to respond, and their response is published with the referral. A permanent exclusion decided without hearing the person would not survive its first contested application.
 
-**The ban register.** VS LLC maintains a **published register of bans** on the Portal, listing the person, the date, the MSIG transaction that confirmed it, and any entity named in it. The register is checked at proposal submission and before any role is assigned. A ban that only exists in a minute from two years ago is a ban nobody enforces.
+**The ban register.** VS LLC maintains a **register of bans written to the `publications` table** (7.6a) and rendered on the Portal, listing the person, the date, the MSIG transaction that confirmed it, and any entity named in it. Being append-only, a **lifting at the Threshold is written alongside the ban rather than in place of it** — the register shows that a ban existed and that it was lifted, which is the honest record of both. The register is checked at proposal submission and before any role is assigned. A ban that only exists in a minute from two years ago is a ban nobody enforces.
 
 **6.7 Committee members as Technical Reviewers.** A member may hold a paid Technical Reviewer engagement. That is a conflict this section does not otherwise reach — a member cannot bid, so 6.1 and 6.2 never bite — and it is governed instead by **section 12.6**, which sets its own preconditions and recusals.
 
@@ -340,18 +355,60 @@ The name reads as belonging to the VST, but it confers no authority. A parent ac
 
 **7.6** The platform **never holds a key with any authority over the Program Account, and never holds a member's signing key.** Members sign with their own wallets. VS LLC operates a key of its own for writing the disclosure register on `disc.vst` (section 6.3b); that key has no weight on the Program Account and cannot move funds.
 
-**7.6a Decisions are recorded on-chain, not only published.** Payments are already on-chain because that is how money moves. The **decisions behind them are recorded on-chain too**, on the same append-only register as the disclosure questionnaires (`disc.vst`, section 6.3b), in a separate decisions table.
+**7.6a What the program publishes is recorded on-chain.** Payments are already on-chain because that is how money moves. **So is almost everything the program publishes** — on the same append-only register as the disclosure questionnaires (`disc.vst`, section 6.3b), in three tables: **disclosures**, **decisions**, and **publications**.
+
+The Portal **reads the register and renders it**. It does not hold its own copy of anything in it, so a Portal that goes down, changes hands, or is quietly edited takes none of it with it, and two copies cannot drift apart because there are not two copies.
 
 | What is written | For each |
 |---|---|
-| Award decisions | RFP reference, awardee, USD amount, vote counts, members voting for, against, and recused **by name and account**, and a SHA-256 hash of the published decision record |
-| Milestone approvals | Award reference, milestone, the Manager of record and any Technical Reviewer **by name and account**, amount, the oracle read, and a hash of the approval record |
+**The `decisions` table**
+
+| What is written | For each |
+|---|---|
+| Award decisions | RFP reference, awardee, USD amount, scope, the milestone schedule as awarded, vote counts, members voting for, against, and recused **by name and account**, any reason for departing from the scores, and the oracle read — **the full decision record required by 23.2** |
+| Milestone approvals | Award reference, milestone, the Manager of record and any Technical Reviewer **by name and account**, the criteria applied, the determination and its reasons, **any Technical Reviewer assessment as screened below**, amount, and the oracle read |
 | Payment signatures | The proposal, and **each signing member by name and account** |
-| Committee resolutions with an external effect | Terminations, recovery plans, strikes, engagements, and reserved-matter escalations, with vote counts and a hash of the minute |
+| Committee resolutions with an external effect | Terminations, recovery plans, strikes, engagements, and reserved-matter escalations, with vote counts and the substance of the resolution |
+| **Termination recommendations (11.10a)** | The recommendation as filed — the grounds relied on, the milestone determination it arises from, the filer **by name and account** — **the awardee's response**, and the Committee's outcome, including a decision to decline, a deemed decline, or a strike |
+| Post-award reviews (25.2) | The review as published, with any awardee response |
 
-Records are **append-only**; a correction is a new record referencing the old one. **The hash is taken of the record as published**; where a published record is later corrected or lawfully redacted, a **new** decision record is written referencing the prior one, carrying the new hash and the reason — otherwise a redaction would silently break verification of a record nobody can withdraw. The full text stays on the Portal and the hash proves the Portal copy is the one that was recorded. A Portal that goes down, changes hands, or is quietly edited then cannot take the decision history with it.
+**The `publications` table**
 
-These records are written with the same `disc.vst` key described in 7.6.
+| What is written | For each |
+|---|---|
+| **Published RFPs** (20.2) and their numbered amendments (21.3) | The RFP as published, in full |
+| **Questions and answers** (21.2) | Each question and its answer, without naming who asked, **within 2 business days of the answer** |
+| **The objection register** (10.5, 10.6, 10.6a) | Each objection as received, with the block producer, the time, and the signature — and the **count fixed at the close of the delay window**. The bands in 10.5 send an award back to MSIG or end it outright on this count, which is reason enough for it to live where nobody can alter it |
+| **The register of bans** (6.6) | Each ban, each lifting, and the confirming Resolution |
+| **The seat register** (3.1) | Each seat, its holder **by name and on-chain account**, the proposal and execution transaction, the resolution mode, and any seat a proposal named but did not fill, with the reason |
+| **Network vision statements** (3.1a) | Each statement as filed, and the seat and term it attaches to |
+| **Cycle reports** (13.5) and the **annual review** (14.3) | As published, in full |
+
+**Records are written in full and are append-only.** A correction is a new record referencing the old one; nothing is edited or removed. The Portal **reads** the register rather than holding its own copy, so a Portal that goes down, changes hands, or is quietly edited takes nothing with it — and there is no second copy for the two to disagree about.
+
+**Three things stay off the register, each for its own reason.**
+
+| | |
+|---|---|
+| **Minutes** (5.9) | They carry three redaction grounds — confidential proposal content before award, legal advice, and personal data. A record that may need to be redacted cannot be a record that cannot be withdrawn. What goes on-chain is the **resolution**; the deliberation stays in the minutes |
+| **Proposals** | Confidential until the award is announced (6.5). A proposal written to an append-only register at submission would be published at the moment the program promised it would not be, and could never be withdrawn if the proposer never won |
+| **The backlog** (18.3) | A working list of what the Network might fund, reordered constantly. It is published on the Portal, and nothing turns on its state at a past moment |
+
+**Redaction therefore happens before the write, never after.** Where a record has a redaction step of its own — a post-award review under 25.2, which the awardee may ask to redact on stated grounds — that step completes and the record is written as redacted. **The awardee's response carries the same step as the review it answers**, on the same three grounds: a response is published with the review, and an unscreened response on an append-only register would let one party write anything about anyone permanently.
+
+**The pre-write screen in 6.3b applies to every table.** Before a decision record is written, VS LLC screens it for the **names of individuals outside the program** and for anything a filing would have had to give as a band. The 5.9 carve-out names the program's own decision-makers and does not make an awardee's staff fair game. Where a **Technical Reviewer's assessment** names an awardee's engineers, quotes their internal material, or recites legal advice, those passages are **removed before the write** and the assessment is recorded as screened — the Manager's determination and its reasons go on the register, the assessment's identifying detail does not.
+
+**The screen bites hardest on three classes**, and they are the ones to write carefully rather than quickly:
+
+| | |
+|---|---|
+| **Termination recommendations** (11.10a) | A named allegation against a named party, sometimes of misrepresentation, written before the Committee has decided anything. It stays on the register **whatever the outcome** — including where the Committee declines, where it is deemed declined, and where it is **struck as improperly filed**. The strike is written alongside it; it does not remove it. Anyone filing one should write it knowing that |
+| **Questions and answers** (21.2) | Published without naming who asked, which 21.2 already requires. The screen enforces it rather than trusting it |
+| **The register of bans** (6.6) | A ban names a person and the conduct. It is published under 6.6 in any case; on the register it is permanent, and a lifting at 15/21 is written alongside rather than in place of it |
+
+**The screen is mechanical and is not a review of substance.** VS LLC forms no view on whether a determination is right; it only refuses to make permanent what the program would otherwise have been able to redact.
+
+**Each record is written within 2 business days** of the decision it records, matching the publication deadline in 10.3 — the delay window in 10.4 starts from publication, and publication is now a write to this register. These records are written with the same `disc.vst` key described in 7.6.
 
 ## 8. The mandate
 
@@ -396,21 +453,27 @@ Removing any one of these — a lower threshold, a token delay, paying before co
 - an award extending beyond the end of the authorized funding period;
 - an award where recusals leave fewer than three non-recused members, or fewer than four able to sign;
 - **any payment**, including a Program Cost payment, where recusals or vacancies leave fewer than four able to sign;
+- **any administrative action that 10.7 or 11.10a makes mandatory** — a cancellation above all — where recusals, vacancies, or suspensions leave **fewer than three able to sign**. Block producers may cancel through the owner permission in the meantime, and **the removal ground in 10.7 does not run where three signatures were not available**;
 - a **termination recommendation on an award reviewed by a Committee member**, where **recusals of any kind** leave fewer than four non-recused members;
-- a **milestone on an award whose published statement under 20.2 says a Reviewer is engaged**, where no Reviewer is engaged and no substitute has been engaged.
-- a **milestone or evaluation on an RFP where no unconflicted Manager of record is available** (section 12.3). MSIG may direct the engagement of a named Manager or another basis of approval;
+- a **milestone on an award whose published statement under 20.2 says a Reviewer is engaged**, where no Reviewer is engaged and no substitute has been engaged;
+- a **milestone, evaluation, or post-award review under 25.2 on an RFP where no unconflicted Manager of record is available** (section 12.3). MSIG may direct the engagement of a named Manager or another basis of approval;
 - an **award for work on the RFP system** where the Committee records that no other capable provider exists (section 15.2b);
 - an award the conflict rules would otherwise forbid;
 - an award that fails the coverage test in section 13.4;
-- a **milestone approved under an executed agreement that the Program Account balance cannot cover** (section 13.4). The approval stands and the reservation is not released; 9.2's exception applies, so MSIG inaction does not decline it;
+- **any Program Cost that would take the cycle above the Program Cost Ceiling, or above either of its internal caps** (section 13.1). A Committee that has run out of Manager and Reviewer budget stops publishing RFPs; it does not borrow from its own pay, and it does not pay itself less to buy more RFPs;
 - the creation of any company, foundation, association, trust, or other entity;
-- any change to the **denomination convention** — the USD denomination, the payment of A, the conversion formula, or the truncation rule. This does **not** reach the designation of a replacement **Reference Source** under 13.4a, which is the Committee's;
+- any change to the denomination convention;
+- the **designation of a replacement rate source** where the existing one has failed (section 13.4a). The Committee may not make this designation itself;
 - any change to the mandate, the Cycle Ceiling, the Per-Award Limit, the cycle length, the permission, or the funding source;
 - anything the Committee votes to escalate.
 
-**9.2 Timing.** The Committee sends the record and a draft resolution to MSIG within **10 business days**. If MSIG does not act within **30 days**, the matter is **treated as declined**, the reserved amount returns to the Cycle Ceiling, and the Committee may rework it.
+**9.2 Timing.** The Committee sends the record and a draft resolution to MSIG within **10 business days** — or, for the designation of a replacement rate source under 13.4a, within **5 business days**, and the submission for that head is a **record of the failure and a request for designation**, not a draft naming a source, since 13.4a bars the Committee from choosing one. **The Manager of record or the Chair records and publishes the failure on the Portal, and the 5 business days run from that record.** If MSIG does not act within **30 days**, the matter is **treated as declined**, the reserved amount returns to the Cycle Ceiling, and the Committee may rework it.
 
-**Two exceptions to the declined default.** Where the escalated matter is a **payment or a milestone under an executed agreement**, MSIG inaction does **not** decline it: the matter stays open, the reservation is not released, and the Committee re-submits. Declining to pay a delivered milestone because MSIG did not act would penalize an awardee for the Network's own delay.
+**Three exceptions to the declined default.** Where the escalated matter is a **payment or a milestone under an executed awardee agreement**, MSIG inaction does **not** decline it: the matter stays open, any reservation made under 13.2 is not released, and the Committee re-submits. Declining to pay a delivered milestone because MSIG did not act would penalize an awardee for the Network's own delay. *This exception is confined to awardee agreements: a Program Cost escalated because it would breach the Program Cost Ceiling or an internal cap is capable of being declined, which is the point of that head.*
+
+**Where MSIG confirms a payment the Committee cannot sign**, confirmation alone does not move money — the permission needs four signatures and MSIG holds none. MSIG may therefore, at the Threshold, either **direct block producers to execute the payment through the owner permission**, or **temporarily rebuild the Committee permission** for named payments. Without one of those an escalation under the payment head would confirm an obligation nobody can discharge, and the reservation behind it would never release.
+
+The same applies to the **designation of a replacement rate source under 13.4a**. There is nothing to decline and nothing to rework — the Committee is barred from choosing a source, so a deemed decline would leave payments suspended with no exit. The matter stays open, reservations on the awards the suspension affects continue under 13.4a, and the Committee re-submits until MSIG acts.
 
 **Submission is ministerial.** Where a matter falls within 9.1 by operation of these rules rather than by a vote to escalate, no Committee vote is needed to send it. The Chair — or any member if there is no Chair — makes the submission. Otherwise a Committee that had lost quorum to recusals could not escalate the very matter the recusals created.
 
@@ -438,7 +501,7 @@ Publication is required. The chain shows that money moved; the Portal shows why.
 
 **10.4 The delay window** runs from the moment publication is complete. If publication is incomplete or has to be corrected, the Committee cancels the proposal and starts again, which restarts the delay. The delay cannot be waived. A shorter urgent delay may be used only where the Committee votes to declare urgency **at the award threshold — two-thirds of filled non-recused seats, minimum 3** — records the reason, and completes publication before the proposal is made.
 
-**10.5 Objections.** Block producers may object during the delay. Objections are recorded in a public register on the Portal, are attributed to the block producer who made them, and may be withdrawn.
+**10.5 Objections.** Block producers may object during the delay. Objections are **written to the `publications` register as they are received** (7.6a) and recorded in a public register on the Portal, are attributed to the block producer who made them, and may be withdrawn.
 
 | Objections | Result |
 |---|---|
@@ -450,11 +513,11 @@ Publication is required. The chain shows that money moved; the Portal shows why.
 
 **10.6 Counting.** The Manager of record keeps the register. The count is **fixed when the delay window closes**. Withdrawals must be recorded before that moment. Objections arriving later do not change the result.
 
+**10.6a Objections are signed, and only eligible signatures count.** An objection and any withdrawal are **signed by the block producer's on-chain account**. A signature counts toward the band only if that account is in the **active producer set at the time of signing**; one that is not is recorded but not counted, and the register states which schedule was used. The bands turn an award back to MSIG or end it outright on a count of exactly these signatures, so who is eligible has to be settled before the count, not after.
+
 **10.7 Cancelling is itself an on-chain action.** It is a **3-of-5** administrative action and is **mandatory** in the 4-to-6 and 7-or-more groups. The Committee shall cancel within **2 business days** of the count closing, and **failure to cancel is an express ground for referral to MSIG for removal**.
 
 Block producers can also cancel through the owner permission. That is the backstop, not the primary route — 4 to 6 objectors are by definition short of the Threshold, so a Committee that simply declined to act could not otherwise be stopped.
-
-**10.6a Objections are signed, and only eligible signatures count.** An objection and any withdrawal are **signed by the block producer's on-chain account**. A signature counts toward the band only if that account is in the **active producer set at the time of signing**; one that is not is recorded but not counted, and the register states which schedule was used. The bands turn an award back to MSIG or end it outright on a count of exactly these signatures, so who is eligible has to be settled before the count, not after.
 
 **10.8 Block producers may cancel any payment at the Threshold during its delay**, whatever the objection count. The register records opinion; the chain enforces it.
 
@@ -466,9 +529,32 @@ Block producers can also cancel through the owner permission. That is the backst
 
 ## 11. Milestone approval and payment
 
-**11.1** Awards are paid in milestones. The **Manager of record approves each milestone for payment**. The Committee decides what the milestones are when it makes the award. The Manager decides whether they have been met.
+**11.1** Awards are paid in milestones. The **Manager of record approves each milestone for payment**. The schedule is proposed, settled, and contracted under 11.1a. The Manager decides whether each milestone has been met.
 
-**11.2 Technical Reviewer.** A Technical Reviewer's **written assessment** — accept, accept with conditions, or reject with stated fixes — is **required at every milestone under an award whose published statement under 20.2 says a Reviewer is engaged**, and the Manager's approval must record it. Where the statement says one is not engaged, none is required and its absence is not a defect in the approval record; the Manager approves on their own assessment.
+**11.1a Where milestones come from, and the two-milestone minimum.**
+
+**Every RFP award has at least two milestones.** No RFP award is paid as a single payment on completion. Two is a floor, not a target.
+
+The reason is that a single milestone gives the program no point between contracting and completion at which it can say *not yet*. The Manager's determination would happen once, at the end, when the money is already committed and the work is already done — and the only available response to weak delivery would be to terminate the whole award. Two milestones is the smallest number at which a rejection means something short of ending the engagement, and at which the program learns something about a team before most of its money is at stake.
+
+**The schedule originates with the proposer.** Four steps:
+
+| Step | Who | What |
+|---|---|---|
+| **The RFP sets expectations, not the schedule** | The Committee, at scoping | The published RFP states what must be staged, any checkpoint it requires, the budget ceiling, and the **two-milestone minimum** (20.2). It does **not** fix the schedule — the people who will do the work are better placed to say how it breaks up |
+| **The proposal proposes the schedule** | The proposer | Every proposal carries a **milestone schedule of at least two milestones**, each with its deliverable, acceptance criteria, amount, and date. Fewer than two is a **non-compliant submission and is rejected at the compliance screen** (22.2). The schedule is then scored under *timeline and milestone structure* (22.1) — how a team stages its own work is evidence about the team |
+| **The Committee may modify it** | The Committee, before the award decision | The Committee may change the **number, order, content, dates, or amounts** of milestones so that the schedule **makes sense, fits the budget, and is fair to both sides**. It may not take the count below two. **Material changes are agreed with the proposer before the award decision** — a schedule imposed on an unwilling awardee is a schedule that fails — and the decision record states what changed from the proposal as submitted (23.2) |
+| **The agreement enumerates it** | VS LLC, at contracting | The awarded schedule is **enumerated in the agreement**: each milestone **numbered**, with its deliverable, acceptance criteria, amount, and date, matching the published decision record exactly (23.3). **What is in the agreement governs.** Nothing is paid against a milestone that is not enumerated there |
+
+**What the Committee is looking for when it modifies a schedule.** That each milestone has a deliverable someone can actually inspect, rather than a date with a payment attached. That the amounts track the work rather than being front-loaded, so the program is not effectively paying in full before it has seen anything — the mobilization advance in the Awardee Schedule A is capped precisely because that is the honest way to fund a team that cannot self-finance. That the dates are achievable. And that the schedule is not so finely divided that the program spends more on determinations than the staging is worth.
+
+**After award**, any change to milestone scope or dates runs through **11.8** — Committee approval at majority, minimum 3, a contract amendment, and publication. The two-milestone minimum survives every such change.
+
+**Bounties are different and are excluded.** A bounty is a published fixed-price task paid on the first acceptable delivery (26a). It has one determination by design, and this section does not apply to it.
+
+**Two acts, ordinarily one step.** The Manager's **determination** — that the milestone has been met, or has not — and the **approval for payment** that follows from it are normally made together, and this Framework treats "approval" as meaning both. They come apart only where payments are suspended under 13.4a: the determination is made and published when it is reached, and the approval for payment is completed on resumption.
+
+**11.2 Technical Reviewer.** A Technical Reviewer's **written assessment** — accept, accept with conditions, or reject with stated fixes — is **required at every milestone under an award whose published statement under 20.2 says a Reviewer is engaged**, and the Manager's determination must record it. Where the approval for payment is completed later under 13.4a, it records the assessment as it stood at the determination; a Reviewer whose engagement has since ended does not re-file. Where the statement says one is not engaged, none is required and its absence is not a defect in the approval record; the Manager approves on their own assessment.
 
 The test is the published field, not a judgment about the work. That matters because a **Service** award has no built deliverable at all (20.2a) yet may well need technical assessment — a history API or an indexer is technical whether or not anything is handed over.
 
@@ -477,6 +563,8 @@ The test is the published field, not a judgment about the work. That matters bec
 The judgment about whether the work is technical is therefore made **once, at scoping**, by the Committee — not again at each signature. A hosted service, a history API, or anything else on the line between technical and operational is decided when the RFP is written, and recorded there for everyone to see. Nobody has to re-argue it later.
 
 **11.3 The approval record** must contain: the milestone, the criteria applied, the **Manager of record by name and on-chain account**, their decision and reasons, the **Technical Reviewer by name and account** and their assessment where required, the amount payable, and the awardee's verified receiving account. The approval and amount are **published**.
+
+Where the determination is made while payments are suspended under 13.4a, **the determination, its date, and everything in this section except the amount payable are published when the determination is made**. The record is completed with the rate data and the amount on resumption, and republished. A suspension does not make a milestone determination private.
 
 **11.3a Every decision is attributable to named people.** Approvals and disbursements are not the acts of an institution; they are the acts of individuals who can be asked about them afterwards.
 
@@ -516,9 +604,12 @@ The account alone is not enough. Accounts can be rotated, renamed, or read by no
 
 | Change | What is needed |
 |---|---|
-| Milestone scope or dates | Committee approval (majority, minimum 3), contract amendment, publication |
+| Milestone scope, dates, or **amounts** (other than an increase in the award total) | Committee approval (majority, minimum 3), contract amendment, publication |
 | **Increase in award amount** | Award threshold, contract amendment, publication, **new proposal and new delay** |
 | **Award shape, licence mode, permitted set, or the licence named in Required mode** | **Cannot be changed.** Fixed at publication under 20.2a; the remedy is the next RFP. In Proposer's choice mode the licence itself is fixed at the award decision and cannot change after it |
+| **Variation, other than an increase in the award amount, where payment is suspended under 13.4a** | Committee approval (majority, minimum 3), contract amendment, publication. No fresh payment proposal is needed, because nothing is paid until the suspension ends. **An increase remains governed by the row above and is unavailable during a suspension**, since it needs a fresh payment proposal |
+| **Termination by agreement**, whether or not payment is suspended | **Two-thirds, minimum 3** — the same bar as termination for cause under 11.10 — on the **awardee's written consent**, published with the amendment. Ending an award is not a lesser act because both sides signed, and it is never something the Manager logs under *anything else* |
+| **Termination by the awardee on the suspension long-stop** (Exhibit F clause 6) | No Committee vote. Recorded by the Manager of record and published, and the reservation is released under 13.3 as to unearned amounts |
 | Anything else | Logged by the Manager and reported |
 
 The rule on increases prevents an award being set below the Per-Award Limit and topped up past it later.
@@ -539,7 +630,7 @@ The rule on increases prevents an award being set below the Per-Award Limit and 
 4. the work is not what the awardee represented it to be;
 5. on a **Service** award, the published service levels are **persistently not met**.
 
-A recommendation is made **in writing**, states which of the grounds apply, attaches the milestone determination it arises from, and is **published**. A Technical Reviewer files it directly with the Committee; it does not pass through the Manager, and the Manager may not withhold it. Where the Manager and the Reviewer disagree, both positions are filed and published.
+A recommendation is made **in writing**, states which of the grounds apply, attaches the milestone determination it arises from, and is **published and written to the `decisions` register** (7.6a). **It stays there whatever the outcome** — including where the Committee declines, where it is deemed declined, and where it is struck as improperly filed. A strike is written alongside it and does not remove it. Anyone filing should write it in that knowledge. A Technical Reviewer files it directly with the Committee; it does not pass through the Manager, and the Manager may not withhold it. Where the Manager and the Reviewer disagree, both positions are filed and published.
 
 **Who may not file.** A Manager or Reviewer who is **conflicted on that award** (section 6.4) may not file a recommendation, and shall notify the Committee instead. A person who is no longer Manager of record, or whose Reviewer engagement on that RFP has ended, may not file on it.
 
@@ -606,9 +697,11 @@ This is the one place the bar in 12.2a can leave nobody able to act: only a Mana
 
 **12.6.1 Preconditions.** A member may be engaged as Technical Reviewer only where all of the following hold:
 
-1. **MSIG has set both caps** — the per-cycle cap on Reviewer fees a member may earn, and the cap on concurrent engagements (**MSIG #5 Part H**; open item at Appendix C item 11). Until **both** are set, no member may be engaged. They are the only control on this arrangement and they should exist before the arrangement does;
+1. **MSIG has set the cap on concurrent engagements** (**MSIG #5 Part H** — set at **3**). Until it is set, no member may be engaged. It is the only structural control on this arrangement and it should exist before the arrangement does.
+
+   **There is no *per-member* cap on the fees a member may earn in a cycle**, and that is a decision rather than a gap. The total **is** capped — by the internal cap on Manager and Reviewer fees within the Program Cost Ceiling (13.1), which every Manager and Reviewer shares and which is a reserved matter to exceed (9.1). What is absent is a second, personal ceiling on top of it. The control on the individual is on **workload, not on the total**. The rate card at Exhibit B is set by MSIG and the Committee cannot vary it, the figures are modest, and a member holding three engagements has earned three engagements' worth of assessments. A personal cap would have to bite mid-award, which would leave a Reviewer contractually obliged to assess milestones unpaid or force a substitute in partway through — a worse outcome than the one it prevents. The shared cap can bite mid-cycle too, but it bites on the **program**, which stops publishing RFPs, rather than on one person who is already engaged. What remains is **publication**: every engagement and every fee is in the cycle report (13.5), and block producers who think a member is earning too much can change the cap, change the rate card, or remove the member;
 2. the Committee has recorded that **no suitable unconflicted external reviewer was available**, minuted and published with the engagement;
-3. **all five seats are filled.** An existing engagement is **suspended for the duration of any vacancy**.
+3. **all five seats are filled.** An existing engagement is **suspended for the duration of any vacancy, and for any suspension of the member's role or signing weight** — under 6.6, under 2.4a, or otherwise. A suspended member is not an engaged Reviewer for the purposes of 9.1, 11.2 or 11.4.
 
    Where the suspended member is the **only engaged Reviewer on a published RFP or a live award**, the Committee shall engage a **substitute Technical Reviewer** for that RFP at the threshold in 5.3. The published statement under 20.2 records **that** a Reviewer is engaged, not who, so a substitute satisfies it — otherwise a single resignation would freeze an awardee's payments, or strand an RFP mid-evaluation, for a reason entirely outside anyone's control.
 
@@ -617,7 +710,7 @@ This is the one place the bar in 12.2a can leave nobody able to act: only a Mana
    **When the seat is refilled**, the member's engagement resumes — **unless a substitute was engaged**, in which case it resumes only if the Committee so decides at the threshold in 5.3. Absent that decision the substitute remains the engaged Reviewer for that RFP and the member's fee is prorated to work actually performed. Two engaged Reviewers on one RFP would leave no rule about which assessment governs;
 
    Every recusal below is costed against **five** filled seats. The recusal in 11.10a survives the suspension or ending of an engagement, because the member's assessments remain the evidence either way; **where it would leave fewer than four non-recused seats, the termination recommendation goes to MSIG under 9.1** rather than turning on the unanimity of three;
-4. **no other member already reviews that RFP**, and the member is **within the cap** on concurrent engagements and on fees.
+4. **no other member already reviews that RFP**, and the member is **within the cap on concurrent engagements**.
 
 **12.6.2 The member recuses from the decision to engage themselves** — both the availability finding under 12.6.1(2) and the vote engaging them. They are the sole beneficiary of a finding only they are expert enough to contradict. Both decisions are taken at simple majority, minimum 3, on non-recused seats (section 5.3).
 
@@ -634,17 +727,23 @@ This is the one place the bar in 12.2a can leave nobody able to act: only a Mana
 
 **12.6.5 Pay and disclosure.** The fee is the **published rate card amount at Exhibit B to MSIG #5**. The rate card is set by MSIG and is **not within the Committee's gift**, so there is no rate to negotiate and no rate-card vote to recuse from. Every engagement and every fee is listed in the cycle report by member and by RFP (section 13.5), and the member **files an update to their disclosure questionnaire before the engagement begins** — not within the usual 10-business-day window, since the engagement itself is the thing being disclosed (section 6.3c).
 
-**12.6.6 One thing this decides that the working group has not.** MSIG #5 Part H sets member pay equal across all five seats and defers the question of whether category leads should earn more. Reviewer fees sit outside that retainer, so allowing them makes pay unequal in practice, and in favour of whichever seat does the technical reviewing. That may well be the right answer — but it should be chosen, not discovered. That is what the two caps in 12.6.1(1) are for.
+**12.6.6 One thing this decides that the working group has not.** MSIG #5 Part H sets member pay equal across all five seats and defers the question of whether category leads should earn more. Reviewer fees sit outside that retainer, so allowing them makes pay unequal in practice, and in favour of whichever seat does the technical reviewing.
+
+**That inequality is now accepted, not capped.** The working group considered bounding it by amount and chose not to: the amount a member earns is a consequence of how much work they do at a rate MSIG sets and the Committee cannot touch. What bounds it is the **concurrent-engagement cap** in 12.6.1(1) — a limit on workload — and what exposes it is the **cycle report**, which publishes every engagement and every fee by member and by RFP. So the answer is chosen rather than discovered, which was always the point; it is simply a different answer from a cap on the total.
 
 ## 13. Money: ceiling, reservation, reporting
 
-**13.1 Limits and funding periods.** MSIG sets the **Cycle Ceiling**, the **Per-Award Limit**, the **cycle length**, and the **program scope**. The Cycle Ceiling is a maximum, not a target. Unspent amounts do not carry over.
+**13.1 Limits and funding periods.** MSIG sets the **Cycle Ceiling**, the **Per-Award Limit**, the **Program Cost Ceiling**, the **cycle length**, and the **program scope**. Each ceiling is a maximum, not a target. Unspent amounts do not carry over.
 
-**Funding is authorized four cycles at a time**, covering one year — the **authorized funding period**. Funds are transferred quarterly under that single authorization, each instalment topping the Program Account up to **the level set in MSIG #5 Part I** — a margin above the coming cycle's Total Program Spend, held because commitments are in USD while the account holds A, and not available to commit against. Forward commitments are not added on top, because they already sit inside that cycle's Cycle Ceiling.
+**Two ceilings, not one.** The **Cycle Ceiling** bounds what the program commits to **awardees**. The **Program Cost Ceiling** bounds what the program spends on **itself** — and carries two internal caps that do not move against each other: one on **Committee pay**, one on **Manager and Reviewer fees together with Portal and administration**. Underspend in either does not raise the other, and **exceeding either is a reserved matter under 9.1**. The figures are in MSIG #5 Part D (Appendix B).
+
+The reason the second ceiling exists as a single line with two caps inside it is that the program's spending on itself is the number most likely to drift, and the least likely to be noticed drifting. One line makes it legible; the caps stop it being quietly reallocated between the people who run RFPs and the people who govern them.
+
+**Funding is authorized four cycles at a time**, covering one year — the **authorized funding period**. Funds are transferred quarterly under that single authorization, each instalment topping the Program Account up to **125% of the coming cycle's Total Program Spend**. Forward commitments are not added on top, because they already sit inside that cycle's Cycle Ceiling.
 
 **Block producers may change any amount, the cycle length, or any limit at any time** by MSIG Resolution, and may stop, reduce, or re-time any instalment. Authorizing a year at a time is a convenience, not a commitment that binds them for the year.
 
-**The first cycle begins on the day funds arrive in the Program Account**, not on the day MSIG #5 passes. Committee pay accrues from the later of contract signature and that date. The Committee publishes the funding date on the Portal, because **four** periods are counted from it: the cycle, the pay period, the initial terms of the four MSIG-appointed seats (section 3.4), and the nine-month self-review (section 16.1). The Community seat is the exception throughout — a Community member seated by MSIG runs from execution (section 3.4), as does the interim holding in 4.5.
+**The first cycle begins on the day funds arrive in the Program Account**, not on the day MSIG #5 passes. Committee pay accrues from the later of contract signature and that date. The Committee publishes the funding date on the Portal, because three periods are counted from it: the cycle, the pay period, and the initial terms of the four MSIG-appointed seats (section 3.4).
 
 **13.2 Reservation.** An award **reserves** its full **USD** amount against the Cycle Ceiling from the moment of decision, through publication, contracting, the delay window, and any MSIG confirmation. Reservation is not payment. No money moves until an agreement exists and the delay ends. But the amount is unavailable to other awards in the meantime.
 
@@ -666,7 +765,7 @@ Recurring service awards — history APIs, snapshots, and similar infrastructure
 
 A renewed service is a **new award**: a fresh RFP under Part 2, a fresh Committee decision at the award threshold, and a fresh reservation. It is not an extension of the old agreement, and section 11.8's bar on increasing an award applies to the old one regardless. The incumbent may bid and may well win — the point is that they have to.
 
-**13.3 Release.** A reservation is released when the award ends, expires, is cancelled by block producers, is terminated as to unearned amounts, is contracted for less than reserved, or — for a bounty — **lapses unclaimed under 26a rule 5**. It is **not** released while MSIG confirmation is still pending, and it is **not** released by a termination recommendation under 11.10a — only by the termination itself.
+**13.3 Release.** A reservation is released when the award ends, expires, is cancelled by block producers, is terminated as to unearned amounts — **including on an awardee's termination under the suspension long-stop in Exhibit F clause 6** — is contracted for less than reserved, or, for a bounty, **lapses unclaimed under 26a rule 5**. It is also released where the **Committee records that an award has been abandoned** — a second consecutive missed milestone with no recovery plan filed, or no response from the awardee for 30 days — which the Committee shall do rather than leave a reservation standing against a Cycle Ceiling indefinitely. It is **not** released while MSIG confirmation is still pending, and it is **not** released by a termination recommendation under 11.10a — only by the termination itself.
 
 A released amount returns to the ceiling of the **cycle in which the release occurs**, not the cycle the reservation was made in.
 
@@ -675,7 +774,7 @@ A released amount returns to the ceiling of the **cycle in which the release occ
 1. the Committee approves a **published payment schedule** once per cycle — simple majority, minimum 3 — listing each recipient, amount, and cadence;
 2. individual payments under it are signed **4 of 5** and carry the **same delay** as any other disbursement;
 3. **no objection banding applies**, because the schedule was published in advance and the amounts are fixed;
-4. every payment appears in the cycle report, with cumulative Program Costs against the cycle allocation.
+4. every payment appears in the cycle report, with cumulative Program Costs against the **Program Cost Ceiling** and against **each of its two internal caps**.
 
 A payment not on an approved schedule needs a fresh Committee approval at the same threshold and its own published record.
 
@@ -683,13 +782,13 @@ A payment not on an approved schedule needs a fresh Committee approval at the sa
 
 One payment each, not one payment for all of them: if two members held engagements and their fees shared a payment, both would recuse and only three could sign, and a 4-of-5 permission cannot be met by three. Splitting per member also confines each recusal to one small payment per cycle instead of putting every Program Cost payment at zero signing margin.
 
-**The retainer needs no such treatment.** All five members vote on and sign the line paying their own **retainer**, because that figure is set by MSIG at Part H, identical for every seat, and nothing the Committee does can change it. A Reviewer fee is different in kind: it varies with engagements the Committee itself awards.
+**The retainer needs no such treatment.** All five members vote on and sign the line paying their own USD 2,500, because that figure is set by MSIG at Part H, identical for every seat, and nothing the Committee does can change it. A Reviewer fee is different in kind: it varies with engagements the Committee itself awards.
 
 **13.4 Denomination and price movement.**
 
-**Everything is denominated in USD. Everything is paid in A.** The Cycle Ceiling, the Per-Award Limit, every award, every reservation, Committee pay, and operating costs are all USD figures. The Program Account holds A.
+**Everything is denominated in USD. Everything is paid in A.** The Cycle Ceiling, the Per-Award Limit, the Program Cost Ceiling and its internal caps, every award, every reservation, and Committee pay are all USD figures. The Program Account holds A.
 
-The amount of A paid against a milestone is calculated **at the time the milestone is approved**, using the **Delphi Oracle** (`delphioracle`) — the on-chain price oracle operated by block producers.
+The amount of A paid against a milestone is calculated **at the time the milestone is approved for payment**, using the **Delphi Oracle** (`delphioracle`) — the on-chain price oracle operated by block producers.
 
 The rate is the **`median` field of the `datapoints` table**, scoped to the **`eosusd`** pair. The contract computes it as the median of the last 21 submissions from qualified oracles, so moving it requires collusion by a majority of the oracle set. It is supplied by **no party to the transaction** — not the Committee, not VS LLC, not the awardee.
 
@@ -708,6 +807,8 @@ The rate is the **`median` field of the `datapoints` table**, scoped to the **`e
 
 Truncation is used because it needs no tie-breaking rule, it is the default of integer division in most languages, and it can never pay more than was reserved. The largest possible difference between rounding rules is 0.0001 A — under one hundredth of a cent. The rule is specified for **reproducibility, not materiality**: the platform, the awardee, and any later auditor must reach the same integer, and floating-point arithmetic is the real hazard, not the choice of rule.
 
+**Payments that are not milestones.** A mobilization advance under 11.7 and a Program Cost payment under 13.3a are not milestones and have no approval of their own. Each converts at the **rate read at the time the payment is proposed**, and the 24-hour staleness check applies to that read in the same way.
+
 **A note on granularity.** Because the precision is fixed at 4 decimals of a dollar, the smallest step the oracle can express is USD 0.0001. At around USD 0.0766 that is about 0.13% of the price, which is immaterial. If the price of A fell substantially, the same absolute step would become a larger share of it, and the rounding error on a payment would grow with it. The Committee should note this in the cycle report if it becomes material.
 
 Three practical consequences follow from how the contract works:
@@ -718,7 +819,7 @@ Three practical consequences follow from how the contract works:
 | **It keeps no history** | Only 21 rows exist per pair and the oldest is overwritten on each submission. A rate read today cannot be re-read from the table later, so **the approval record must capture the oracle value, the block number, and the transaction id** of the read. That is what makes the figure provable afterwards |
 | **A read never fails, even when the data is old** | The contract holds 21 rows from the moment a pair is created and modifies them in place. It never empties and never errors. If oracles stopped submitting, a read would still return a `median` — just an old one. The timestamp is the only thing that distinguishes a live price from a frozen one |
 
-**Two checks on the rate, both handled the same way.** Neither blocks a payment outright — each moves the decision from the Manager of record to the Committee, which may approve **at the threshold in 5.3** with the fact recorded, or defer. The Committee is approving the rate, not re-judging the work (5.5).
+**Two checks on the rate, both handled the same way.** Neither blocks a payment outright — each moves the decision from the Manager of record to the Committee, which may approve at the ordinary milestone threshold with the fact recorded, or defer.
 
 | Check | Trigger | Why |
 |---|---|---|
@@ -731,33 +832,6 @@ A halt would be the wrong response to a quiet oracle: awardees would go unpaid f
 
 The Exhibit D configuration published by VS LLC under MSIG #5 confirms the pair, precision, and a worked example. The pair is `eosusd` and its `quoted_precision` is 4.
 
-**13.4a If the Reference Source fails.** The two checks above handle a rate that is *wrong*. This handles a rate that is *gone* — the pair renamed, the contract redeployed or deprecated, the oracle set wound down.
-
-**Payments suspend** from the moment the Reference Source becomes unavailable until one is in force again. There is no way to compute an A amount without a rate, and no rate is inferred, carried forward, or supplied by anyone to the transaction.
-
-**The Committee restores it, not MSIG.** An outage is a technical failure with no policy content, and a program that had to wait for a 15-of-21 vote before it could pay anyone would leave awardees unpaid for a failure entirely outside their control. Two paths, and the difference between them is whether anything is actually being chosen:
-
-| Path | When | Threshold |
-|---|---|---|
-| **Technical continuity** | The same price data remains available under a changed name — pair renamed, contract redeployed to another account, `quoted_precision` altered | Simple majority, minimum 3. Recorded, not chosen |
-| **Replacement source** | The data is genuinely gone and a different source must be used | **Two-thirds, rounded up, minimum 3** — the award threshold |
-
-**A replacement must meet all five tests**, which are the properties that made the Delphi Oracle acceptable in the first place. A source failing any of them may not be designated:
-
-1. **on-chain and publicly readable**, so anyone can recompute any payment from it without permission;
-2. supplied by **no party to the transaction** — not the Committee, not VS LLC, not any awardee or proposer;
-3. derived from **multiple independent submitters**, none able to move the published figure alone;
-4. carrying a **datapoint timestamp**, so the 24-hour staleness check keeps working;
-5. expressing a **USD price of A at a stated integer precision**, so the truncation formula is unchanged.
-
-**What this power does not reach.** The Committee may change **where the rate is read from** and nothing else. The USD denomination, the payment in A, the conversion formula, and the truncation rule are the *denomination convention* and remain reserved matters under section 9. Section 9's entry is drawn accordingly.
-
-**What is published.** The designation goes on the Portal with the Committee's reasons and the vote **by name and on-chain account, before any payment is made on it**; it is written to the decisions register under 7.6a; it is **reported to MSIG within 5 business days as notice, not for approval**; and VS LLC republishes Exhibit D describing the source actually in use, with a fresh worked example.
-
-**Block producers keep every control over the result.** They may cancel any payment made at the new rate during its delay window at the Threshold, may direct a different source by MSIG Resolution at any time, and may suspend or revoke the mandate. This section restores the program's ability to pay. It does not put the rate beyond their reach.
-
-**The first payment under each award after a designation is approved by the Committee** at the threshold in 5.3, not by the Manager of record alone, whatever the collar shows — and the collar on that payment measures against the rate last used under that award on the previous source. A change of source is exactly when a mispriced rate would pass unnoticed, the collar otherwise having nothing comparable to measure against.
-
 RFP budgets, award decisions, and approval records are stated in **USD**. The A amount and the rate used are recorded at each payment.
 
 **The program carries the price risk, not the awardee.** A team contracted for a USD amount receives that USD value at every milestone, whatever A has done since. This is deliberate: awardees budget in fiat, and making them absorb A's movement across a multi-month engagement would produce padded bids and fewer good teams bidding.
@@ -766,39 +840,54 @@ RFP budgets, award decisions, and approval records are stated in **USD**. The A 
 
 | Rule | |
 |---|---|
-| **Before every award** | Confirm the A balance, at the Reference Rate, covers all outstanding Award Commitments and Program Costs **falling due before the next scheduled instalment**, plus the proposed award, **with at least the Coverage Margin** (Appendix B). An award failing this test cannot be made and is a reserved matter under section 9 |
+| **Before every award** | Confirm the A balance, at the Reference Rate, covers all outstanding Award Commitments and Program Costs **falling due before the next scheduled instalment**, plus the proposed award, **with at least a 10% margin**. An award failing this test cannot be made and is a reserved matter under section 9 |
 | **Every cycle** | Report outstanding USD commitments, the A balance, the rate used, and the resulting coverage percentage |
-| **If coverage falls below the Coverage Margin** | Stop awarding. Notify MSIG within **5 business days** and request a top-up. Milestones under existing agreements continue to be paid while funds allow |
+| **If coverage falls below the 10% floor** | Stop awarding. Notify MSIG within **5 business days** and request a top-up. Milestones under existing agreements continue to be paid while funds allow |
 | **If A rises** | Report the surplus. It is not swept at cycle end — it reduces the next quarterly instalment, and any final balance is returned at the end of the funding period (section 14.6) |
-
-**Two things the table above does not settle, and both bite in exactly the situation it describes.**
-
-**When awarding resumes.** The stop is entered automatically — coverage is arithmetic — but it is **lifted only by a recorded Committee decision**, at simple majority with a minimum of 3, once coverage is back above the Coverage Margin. It does not lift on its own when the price of A recovers. Automatic resumption would have the program flickering in and out of a stop with every price movement, and would let an award be made on a rate that re-breaches the floor days later. Entry is arithmetic; exit is a decision, on the record, in the minutes.
-
-**What "while funds allow" means at the boundary.** A milestone that has been approved but which the balance cannot cover **is not paid in part.** Partial payment would break the milestone structure, the acceptance criteria, and the recovery clause in 23.3, all of which treat a milestone as a single unit. Instead the approval stands, the amount stays reserved, the matter is escalated under 9.1 with the top-up request, and it is paid in full when funds arrive. The exception in 9.2 is what makes that safe: a milestone under an executed agreement is not deemed declined by MSIG inaction, so the awardee's claim does not expire while the Network sorts out its funding. Where more than one approved milestone is waiting, they are paid **in order of approval**.
-
-**Awardees are told.** Where a milestone is approved and unpaid for want of funds, the awardee is notified and the position is published with the approval record. An awardee who has delivered should not discover a funding problem from the absence of a payment.
 
 **A change in the A amount paid is not a top-up** — it is the peg working. But the **USD amount of an award may never be increased past the Per-Award Limit**, and any increase in a USD award amount needs the award threshold, a contract amendment, publication, and a fresh proposal and delay (section 11.8).
 
-**13.5 Cycle report.** Published on the Portal and sent to MSIG each cycle:
+**13.4a If the rate source fails.** The staleness and collar checks in 13.4 assume the oracle is still there and still readable. Loss of the source itself is a different failure and is handled differently.
+
+If the **`eosusd` pair or the `delphioracle` contract becomes unavailable, renamed, or deprecated**, payments are **suspended**. The Committee escalates to MSIG within **5 business days of the failure being recorded and published** under 9.2 — that timing displaces the 10 business days in 9.2 — to designate a replacement rate source. **The Chair records and publishes the failure within 2 business days of any member or VS LLC becoming aware of it**, with the Manager of record on the affected award as alternate; awareness by any one of them is awareness for this purpose. Without that obligation the 5-day clock would never start, while every consequence of the suspension had already begun. **The Committee may not substitute a source of its own choosing.** The whole value of the oracle is that no party to the transaction supplies the number, and a rate the Committee picked would be a rate the paying party picked. Payments resume only on the source MSIG designates, and only for approvals for payment made after the designation; payments already made are not reopened. A designation operates as an **amendment to the Reference Rate definition** in *Terms used throughout*, made under 16.2, and is not caught by the deemed-decline default in 9.2.
+
+This is a separate rule from staleness because the contract **never fails a read**. It holds 21 rows from the moment a pair is created and modifies them in place, so a read returns a value whether or not any oracle has submitted recently. A stale rate is caught by the 24-hour timestamp check and escalates within the Committee. A **missing** pair or contract cannot be caught that way at all, and escalates out of the Committee entirely.
+
+**A suspension stops paying and stops awarding. It does not stop working, reviewing, or scoping.** Three things in this Framework need a rate read and none of them can be done without one: the amount payable in an approval record (11.3), the coverage test before every award (13.4), and the oracle figures in a decision record (23.2) — and an incomplete decision record cannot go to contracting.
+
+| | |
+|---|---|
+| **Work continues; approval for payment waits** | Milestone submission and the Manager's **written determination** — that the work meets the milestone, or does not — continue as normal, and the 11.9 and 11.10a clocks run from the determination. The **approval for payment** is made when payments resume, using the rate read at that time. The determination and its date are **recorded and published when made** — everything in 11.3 except the amount payable — and the record is completed and republished on resumption |
+| **No new awards** | No award may be made, because the coverage test in 13.4 and the decision record in 23.2 both require a rate read. Scoping, publication, questions, evaluation, and scoring continue, and a **bounty already published** is not a new award (see below). Note also that the 10% coverage floor **cannot be tested** during a suspension, so it will not detect a breach; that is one more reason the escalation is urgent |
+| **Reservations hold, and clocks are extended** | A suspension does not **by itself** release a reservation against the Cycle Ceiling; the release triggers in 13.3 continue to operate, including on a termination or downward variation under the suspension row in 11.8 and on an awardee termination under the Exhibit F long-stop. The **60-day clock in 10.10**, any **bounty closing date under 26a rule 5**, and any cycle-close cut-off applying to an award not yet contracted are **extended by the length of the suspension**, on the same basis as a freeze under 11.10a. A reservation carried past the end of a cycle is carried as a **forward commitment against the cycle in which payments resume**, and counts against that cycle's Ceiling; where the carried commitments plus that cycle's own awards would exceed it, or where an extension would carry an award **beyond the end of the authorized funding period**, the matter is escalated under 9.1 |
+| **The awardee is not in default** | No deadline the awardee must meet is shortened, and time spent suspended does not count against them. The failure is the program's, not theirs |
+| **Program Costs are suspended too — except the lights** | The suspension reaches **every** payment from the Program Account, including Committee pay and Manager and Reviewer fees (13.3a). Those entitlements **continue to accrue** and are paid on resumption at the rate then current, **charged to the cycle in which they accrued, not the cycle in which they are paid** — and that cycle's Program Cost allocation **survives for that purpose despite 13.1**, which would otherwise lapse it — so a suspension spanning a cycle boundary does not make the resuming cycle carry two cycles of retainers. Where the accrued amount exceeds what the accruing cycle's allocation can bear, the shortfall is escalated under 9.1. The suspension does **not** reach **Portal hosting and essential administration**: those are third-party bills, not payments to program insiders, and the Portal is where this suspension, the cycle report, and the objection register all have to be published. Suspending the Portal to prove a point would take down the record of the suspension. **Those payments convert at the last rate read before the failure**, recorded and published with each one — the only place this Framework permits a rate other than a live read, and it is confined to keeping the lights on |
+| **It goes in every cycle report** | The date the suspension began, the amounts affected, the date MSIG designated a replacement source, and the date payments resumed — in **every** cycle report until it is resolved (13.5) |
+
+**Four further points.** A quarterly instalment **into** the Program Account is also sized at the Reference Rate (MSIG #5 Part I); a transfer falling due during a suspension is **sized and made on resumption**, and the instalment is not skipped. Where a **freeze under 11.10a** and a suspension under this section overlap, the overlapping period **extends a clock once, not twice**. A **bounty already published** may be delivered, determined, and contracted during a suspension — its award decision was the publication vote and needs no fresh rate read — but it is not **paid** until payments resume. And a **replacement source designated by MSIG** carries the staleness and collar checks in 13.4 across to it in substance: the designation states the field read, the precision, the equivalent of the newest-datapoint timestamp, and how the two checks apply; a source that cannot support them is not a source this program can use.
+
+If a suspension runs long enough that an awardee cannot reasonably continue unpaid, the route is the **suspension row in 11.8** — variation or termination by agreement, on the record. It is not a substituted rate, and it is not the increase row in 11.8, which needs a fresh payment proposal and is therefore unavailable during a suspension.
+
+**13.5 Cycle report.** **Written to the `publications` register** (7.6a), rendered on the Portal, and sent to MSIG each cycle:
 
 - RFPs published and proposals received;
 - every award, with amount, **each member's vote — for, against, or recused — by name and on-chain account**, and transaction reference;
 - **awards for work on the RFP system itself**, flagged as self-referential, with the cycle total (section 15.2b);
 - **Program Account opening and closing balances**, reconciled to the chain;
 - total reserved and committed against the Cycle Ceiling, and what remains;
+- **Program Costs against the Program Cost Ceiling**, broken out against **each internal cap** — Committee pay, and Manager and Reviewer fees with Portal and administration — and what remains of each;
 - objections by block producer, and outcomes;
 - payments cancelled, and awards ended or expired, and why;
 - milestones approved and rejected, **each with the approving Manager and any Reviewer by name and account**, and the signing members by name and account; terminations;
+- **post-award reviews published under 25.2**, with the awards they cover and a link to each;
 - committed against actually paid;
-- **post-award reviews written under 25.2**, and any that are overdue;
 - spending by category against the planned shares;
 - **bounties recorded as sole-source under 26a rule 14**, listed separately with their reasons;
 - **spending by channel — directed RFPs, open call, bounties — as amounts and as shares of the Cycle Ceiling.** There are no sub-limits between the three, so this breakdown is how drift becomes visible. Where bounties exceed **25%** of the awards committed in a cycle, the Committee states why. That is a comply-or-explain trigger, not a cap: block producers can change any limit at the Threshold at any time, and the number they need in order to decide is this one;
+- **any suspension of payments under 13.4a**, in every cycle report until it is resolved, with the date it began, the amounts affected, the date MSIG designated a replacement rate source, and the date payments resumed;
 - matters escalated to MSIG and their outcomes;
 - RFP load per Manager, and any reassignments;
-- **every Technical Reviewer engagement held by a Committee member and every fee paid**, by member and by RFP, with each member's cumulative total against the per-cycle cap (section 12.6);
+- **every Technical Reviewer engagement held by a Committee member and every fee paid**, by member and by RFP, with each member's **cumulative total for the cycle** and the number of engagements held against the concurrent cap (section 12.6);
 - disclosure questionnaires filed, updated, or overdue, with the on-chain transaction for each.
 
 **13.6** Because the Program Account is on-chain, anyone can audit it directly. The cycle report explains and reconciles; it is not the only record.
@@ -811,7 +900,7 @@ The recurring point of block producer control is **funding, not authority**. Fun
 
 **14.2** MSIG may **suspend or revoke** the mandate at any time, without cause, and may rebuild the Committee permission through the owner permission.
 
-**14.3 Annual review.** The Committee publishes an annual review of the program: awards made, outcomes, conflict incidents, coverage history, and whether the limits remain appropriate. This is the scheduled moment at which performance goes on the record, whether or not anyone calls a vote.
+**14.3 Annual review.** The Committee publishes an annual review of the program, **written to the `publications` register** (7.6a): awards made, outcomes, conflict incidents, coverage history, and whether the limits remain appropriate. This is the scheduled moment at which performance goes on the record, whether or not anyone calls a vote.
 
 **14.4** When the mandate ends, by suspension or revocation:
 
@@ -859,7 +948,7 @@ Every such award is flagged as **self-referential in the cycle report** — not 
 
 ## 16. Reviews and amendment
 
-**16.1** The Committee publishes a written self-review **9 months after the funding date** — not from the execution of MSIG #5, which is the anchor for the different nine-month period in 4.5. The two are the same length and run from different dates on purpose: 4.5 runs from execution so ECF's process is not held up waiting for the program to be funded, while this review measures the program, which does not exist until it is funded. The review covers RFP throughput, results, conflict incidents, and whether five seats is working.
+**16.1** The Committee publishes a written self-review **9 months after the funding date**, covering RFP throughput, results, conflict incidents, and whether five seats is working.
 
 **16.2** This Framework may be amended by MSIG. The Committee may propose amendments by two-thirds, minimum 3. **Part 2 may be amended without reopening Part 1.**
 
@@ -911,7 +1000,7 @@ This is an RFP program, not a grants program. In a grants program, applicants pr
 - scope — what is included and what is excluded;
 - deliverables, specific enough to inspect;
 - acceptance criteria for each deliverable;
-- milestone schedule;
+- **milestone expectations** — what must be staged, any checkpoint the Committee requires, and a statement of the **two-milestone minimum** under 11.1a. The RFP does **not** fix the schedule; proposers submit one and the Committee may modify it before award;
 - **budget ceiling** — published, not hidden;
 - timeline: submission deadline, question period, evaluation period, target award date, delivery deadline;
 - **evaluation criteria and weights**, published before submissions open;
@@ -922,7 +1011,9 @@ This is an RFP program, not a grants program. In a grants program, applicants pr
 - submission format and channel;
 - named **Manager of record** and contact, and **whether a Technical Reviewer is engaged**.
 
-**20.2a Award shape, work product, and licence.** Not every award produces a thing that can be handed over. Three shapes exist, and **every RFP declares which one it is, at publication, and the declaration is fixed like the Reviewer statement.** Everything downstream — what the agreement must contain (23.3a), what closing means (25.1), what the Network actually owns — follows from it.
+**The RFP is written to the `publications` register as published** (7.6a), and each numbered amendment under 21.3 is written alongside it rather than replacing it. What an RFP said when a proposer read it is therefore recoverable, which is what the fixed statements in 20.2 and 20.2a depend on.
+
+**20.2a Award shape, work product, and licence.** Not every award produces a thing that can be handed over. Three shapes exist, and **every RFP declares which one it is, at publication, and the declaration is fixed like the Reviewer statement.** *On an unsolicited proposal the declaration is made at categorization under 26.1 and is fixed from that moment in the same way.* Everything downstream — what the agreement must contain (23.3a), what closing means (25.1), what the Network actually owns — follows from it.
 
 | Shape | What it is | What the work product is |
 |---|---|---|
@@ -980,7 +1071,9 @@ This is an RFP program, not a grants program. In a grants program, applicants pr
 
 **21.1** The RFP is published on the **Portal**, which is the canonical venue. Anything published elsewhere mirrors the Portal. The Marketing portfolio holder is responsible for reach. An RFP only two teams see is not a competition.
 
-**21.2 Questions.** All questions go to the Manager of record through the published channel. **All questions and answers are published to everyone**, without naming who asked. No private guidance of any kind.
+**21.2 Questions.** All questions go to the Manager of record through the published channel. **All questions and answers are published to everyone**, without naming who asked, and are **written to the `publications` register within 2 business days of the answer** (7.6a). No private guidance of any kind.
+
+Writing them to the register is what makes the rule checkable rather than merely stated: the time each answer became public is on the chain, so an answer given to one proposer and published late is visible as late.
 
 This is the single most effective rule against favouritism in the program.
 
@@ -990,7 +1083,7 @@ This is the single most effective rule against favouritism in the program.
 
 ## 22. Stage 5 — Evaluation
 
-**22.1 Criteria and weights are fixed before submissions open** and cannot change afterwards. Default weights:
+**22.1 Criteria and weights are fixed before submissions open** and cannot change afterwards. On an **unsolicited proposal** they are fixed at categorization under 26.1, there being no submissions window to open. Default weights:
 
 | Criterion | Weight |
 |---|---|
@@ -1002,9 +1095,9 @@ This is the single most effective rule against favouritism in the program.
 
 Weights may differ by category, but the version used must be published with the RFP.
 
-**22.2 Compliance check.** The Manager first checks completeness, eligibility, conflicts, and **licence compliance with the RFP's licence mode** (20.2a). Non-compliant submissions are rejected with a written reason. This check involves no judgment about quality.
+**22.2 Compliance check.** The Manager first checks completeness, eligibility, conflicts, **licence compliance with the RFP's licence mode** (20.2a), and that the proposal carries a **milestone schedule of at least two milestones**, each with a deliverable, acceptance criteria, an amount, and a date (11.1a). Non-compliant submissions are rejected with a written reason. This check involves no judgment about quality — whether the schedule is a *good* one is a scoring question under 22.1, not a compliance one.
 
-**22.3 Scoring.**
+**22.3 Scoring.** *On an unsolicited proposal, "the published statement" and "the published criteria" mean those fixed at categorization under 26.1.*
 
 - **RFPs whose published statement says a Reviewer is engaged:** Technical Reviewers score independently and in writing. They do not see each other's scores before submitting. They may discuss afterwards to resolve large differences, and the discussion is recorded.
 - **RFPs whose published statement says one is not:** the Manager of record writes the assessment, in the same format, against the same published criteria.
@@ -1026,17 +1119,17 @@ In every case a written assessment against published criteria must exist before 
 
 **23.1** The award decision, publication, contracting, on-chain proposal, delay window, and payment follow **Part 1, sections 10 and 11**. That sequence is not repeated here.
 
-**23.2 The decision record must state:** awardee, scope, **award shape** (20.2a), **the licence — the one required by the RFP, the one the awardee offered where the choice was open, or, in Default mode, the applicable default stated expressly**, total amount, milestone schedule and amounts, **each member's vote — for, against, or recused — by name and on-chain account**, any reason for departing from the scores, and the **oracle `median`, block number, transaction id, and newest-datapoint timestamp read at the decision** — the collar in section 13.4 measures against it. An incomplete record cannot go to contracting.
+**23.2 The decision record must state:** awardee, scope, **award shape** (20.2a), **the licence — the one required by the RFP, the one the awardee offered where the choice was open, or, in Default mode, the applicable default stated expressly**, total amount, the **milestone schedule and amounts as awarded — at least two milestones — together with any change the Committee made to the schedule the proposer submitted, and the proposer's agreement to it** (11.1a), **each member's vote — for, against, or recused — by name and on-chain account**, any reason for departing from the scores, and the **oracle `median`, block number, transaction id, and newest-datapoint timestamp read at the decision** — the collar in section 13.4 measures against it. An incomplete record cannot go to contracting.
 
 **23.3 Every awardee agreement must:**
 
 - be the standard **VS LLC Independent Contractor Agreement** with an award-specific Schedule A, under which **work product — as defined for the award's shape under 20.2a — vests in the VST** (section 9);
-- state the milestone schedule, acceptance criteria, and amounts, **matching the published decision exactly**;
+- **enumerate the milestone schedule** — each milestone numbered, with its deliverable, acceptance criteria, amount, and date, **at least two of them** (11.1a) — **matching the published decision exactly**. Nothing is paid against a milestone the agreement does not enumerate;
 - **depend on the on-chain payment clearing its delay**, with no liability on either side if it is cancelled;
 - allow termination for non-delivery and for cause, with a period to fix problems;
 - include a **recovery clause** for money paid against milestones later found undelivered or misrepresented, enforced by VS LLC — on-chain payments cannot be reversed, so milestone sizing is the real protection;
 - require disclosure of any other Network funding for the same work;
-- state the award value in **USD**, the **verified receiving account** for payment in A, and that each milestone is paid in A calculated at the reference rate on the date of approval;
+- state the award value in **USD**, the **verified receiving account** for payment in A, and that each milestone is paid in A calculated at the reference rate on the date of **approval for payment**, which is the date of the Manager's determination except where payments are suspended under 13.4a or the approval is referred to the Committee under 13.4;
 - confirm the awardee is an independent contractor, not an agent of the Network, the Trust, or VS LLC.
 
 **23.3a What the agreement must contain, by shape** (section 20.2a):
@@ -1057,28 +1150,6 @@ In every case a written assessment against published criteria must exist before 
 
 *If section 9 does not permit it, the agreement itself needs amending — a Schedule A cannot narrow a vesting clause it is subordinate to. Note that defining what the work product **is** for a shape does not narrow section 9; only the carve-out does.*
 
-**23.3b Verifying the receiving account.** Every award is paid to one on-chain account, and no other (11.3, and the bullet above). Nothing until now said what *verified* meant. It means this, and **VS LLC performs it before the agreement is executed**, as part of its ministerial check under 15.3.
-
-**At contracting, three things together:**
-
-1. the account **exists on chain and can receive A**;
-2. the awardee **signs a challenge message from that account**, proving control of its key, and the signature is recorded with the agreement;
-3. the account is **confirmed with the awardee through a channel other than email**, against the contact details recorded at contracting.
-
-**Why a signed message and not a test payment.** The obvious control — send a small amount first — cannot work here. Every transfer from the Program Account needs **four of five signatures and the full delay window** (7.2), so a test payment would be a four-signature, seven-day event before each real one. A signed challenge is better in any case: a test payment shows only that an address accepts funds, which is equally true of an address belonging to someone else. A signature shows the awardee holds the key.
-
-**Changing the account.** A change is where the real risk sits, because an award redirected to an attacker's account cannot be undone — this Framework says repeatedly that on-chain payments are irreversible, and 23.3's recovery clause is a claim against a party, not a reversal. So a change requires:
-
-- verification through a channel **different from the one the change request arrived on** — never a reply to the request itself;
-- a **fresh signed challenge** from the new account;
-- a hold of **one business day** before the new account becomes payable.
-
-**There is no urgency exception to the hold.** Speed is the thing an impersonator needs, and no milestone is urgent enough to justify losing an award to a wrong address.
-
-**A change during a live delay window does not redirect the payment.** A proposal already made targets the old account. The Committee **cancels** it — a 3-of-5 administrative action (7.2, 10.7) — and, once the new account is verified, proposes again with a **fresh delay**. Nothing in this section shortens a delay or moves a payment already in flight.
-
-**What is recorded.** The verification, its date, the channel used, and the signed proof are held with the agreement; a change records the same again, and the account history is retained so a past payment stays attributable to the account that was verified at the time (11.3a).
-
 **23.4 Publication of award.** Published within **2 business days** of the decision, per section 10.3. Unsuccessful proposers may request their own scores and a short written explanation.
 
 ## 24. Stage 7 — Delivery
@@ -1089,7 +1160,7 @@ In every case a written assessment against published criteria must exist before 
 
 ## 25. Stage 8 — Closing and reporting
 
-**25.1 Closing an award.** Final acceptance, final payment, and a short public completion note — plus the closing test for the award's shape (section 20.2a). What is confirmed must have **actually happened**, not been promised.
+**25.1 Closing an award.** Final acceptance, final payment, a short public completion note, the closing test for the award's shape (section 20.2a), and — where the award is at or above the review threshold — **the published post-award review required by 25.2**. What is confirmed must have **actually happened**, not been promised.
 
 | Shape | Closes on |
 |---|---|
@@ -1097,19 +1168,20 @@ In every case a written assessment against published criteria must exist before 
 | **Service** | Delivery of the **operational handover set** and confirmation that any **Network data has been exported**. The checklist must not ask for a deliverable handover; there is none |
 | **Embedded** | A **tagged source copy of the deliverable** in a Network-controlled repository where it is open source; where it is not, written confirmation that the licence or other alternative named in the RFP is in force, plus any escrow deposit made |
 
-**A terminated award closes on its shape's handover items alone.** Final acceptance and final payment are not required where the award ended under 11.10 — otherwise a terminated Service award could never close. On a terminated **Deliverable** or **Embedded** award the handover items are those covering **work accepted before termination**; where nothing was accepted, the award closes on the published termination record alone.
+**A terminated award closes on its shape's handover items, and, where 25.2 applies, that review.** Final acceptance and final payment are not required where the award ended under 11.10 — otherwise a terminated Service award could never close. On a terminated **Deliverable** or **Embedded** award the handover items are those covering **work accepted before termination**; where nothing was accepted, the award closes on the published termination record alone.
 
-**25.2 Review after large awards.** Where an award's **total contract value** is above the threshold set in MSIG #5 Part D (Appendix B) — the same measurement basis as the Per-Award Limit under 13.2, so a service priced monthly is measured whole — the **Manager of record writes a short review within 15 business days of the award closing** under 25.1, and it is **published on the Portal** with the completion note and listed in the cycle report (13.5).
+**25.2 Review after large awards.** At or above the size set by MSIG at **Part D** (Appendix B), **measured on total contract value as under 13.2**, the **Manager of record** writes a short review: did it meet the need, was the budget right, would the Network do it again.
 
-It answers three questions: **did it meet the need, was the budget right, would the Network do it again.**
-
-**It applies to a terminated award too**, where it also records why the engagement ended. A large award that failed is the one the Network has most to learn from, and 25.1 already provides that a terminated award closes on its shape's handover items alone.
-
-**Where the RFP was reassigned** under 12.3, the review is written by the Manager of record at closing, drawing on the outgoing Manager's written handover.
-
-**This is the input to re-competition.** Section 13.2 requires a recurring service to run for a fixed term and then be **re-competed rather than renewed**, the incumbent having to bid like anyone else. Whether to re-scope, re-price, or change approach is decided on something, and this review is it — which is why the threshold is measured on total contract value, so that every recurring service award generates one before its term ends.
-
-Writing it is within the Manager's engagement and is covered by the Exhibit B rate card.
+| | |
+|---|---|
+| **When** | Within **20 business days** of **final acceptance** — or, on an award that ends any other way, of the **publication of the record that ended it**: a termination under 11.10, a termination or variation by agreement under 11.8, an awardee termination on the suspension long-stop, or an expiry under 10.10. On a **bounty**, of the Manager's written acceptance determination under 26a rule 2. An award at or above the threshold **does not close until the review is published**, where one is due |
+| **Scope** | The review sits **within the Manager's scope under the Exhibit B rate card**, which prices it separately, so it is paid work. An unfunded closing obligation is one that does not get written |
+| **Who writes it** | The Manager of record. Where there is none — the engagement ended, or the Manager is the person who recommended the termination — the **Committee appoints another Manager from the pool** to write it, at majority, minimum 3, and records why |
+| **Terminated awards** | A **terminated** award at or above the threshold is reviewed too, and the review says why it was terminated and what the program would do differently. This is the case the program has most to learn from |
+| **Bounties** | 26a does not disapply this section. A bounty at or above the threshold is reviewed on the same basis, by the Manager of record for that bounty |
+| **Before publication** | The awardee is given the review **5 business days** before it is published and **may file a short response within those 5 business days**, published with it. Publication proceeds whether or not a response is filed — an award cannot be held open by silence |
+| **Redaction** | Three grounds, and only three: the **awardee's confidential commercial information**, **legal advice**, and **personal data**. The 5.9 carve-out applies — the name, role, seat, and on-chain account of anyone exercising a decision right in the program are **never** removed. Redaction is decided at **majority, minimum 3**, is recorded, and **may not be used to alter the review's conclusions**. Disagreeing with the Manager's judgment is not a ground (11.5). **Redaction is settled before the review is written to the register** (7.6a) — once written it cannot be undone |
+| **Publication** | Published on the Portal, and **listed with a link in the next cycle report** (13.5) |
 
 **25.3 Cycle report and annual review** follow **Part 1, sections 13.5, 14.3 and 16.1**.
 
@@ -1125,11 +1197,31 @@ Unsolicited awards use the same mandate, the same thresholds, the same contract-
 
 This matters more for the open call than for the directed program. A directed RFP is already the product of a portfolio holder's own scoping, so its owner is obvious. An unsolicited proposal arrives without one, and without categorization it lands on whoever happens to read it first — which is how a category quietly ends up with no diligence behind it.
 
-Categorization also keeps the rest of the machinery working. Category budget shares (section 19.2) cover both tracks, so an open call cannot quietly overweight one area. A **Manager of record** is assigned in the same way, and a **Technical Reviewer** is required where the RFP's published statement says one is engaged, exactly as under section 11.2. Unsolicited proposals appear in the public backlog with the same statuses (section 18.3) and in the cycle report under the same category breakdown, so the Network can see both tracks against each other.
+Categorization also keeps the rest of the machinery working. Category budget shares (section 19.2) cover both tracks, so an open call cannot quietly overweight one area. A **Manager of record** is assigned in the same way. Unsolicited proposals appear in the public backlog with the same statuses (section 18.3) and in the cycle report under the same category breakdown, so the Network can see both tracks against each other.
+
+**26.1 The terms are fixed at categorization, because there is no publication to fix them at.**
+
+A directed RFP settles its terms when it is published, and 20.2a locks them there. **An unsolicited proposal has no publication** — the proposer named the work, not the Committee — so five rules that are keyed to "the published statement under 20.2" would have nothing to point at: the Reviewer requirement in 11.2 and the third ministerial check in 11.4; the criteria and weights in 22.1; all three branches of 22.3; and the award shape and licence mode in 20.2a. Read literally, a grant award would never require a technical assessment however technical the work, and would never lock a shape — while 23.2 still demands both in the decision record and 25.1 still closes on the shape.
+
+So the Committee supplies the terms at the one moment it controls. **On categorization, and before any assessment begins, the portfolio holder settles and publishes:**
+
+| What is fixed | On the same footing as |
+|---|---|
+| The **award shape** — Deliverable, Service, or Embedded | 20.2a, and fixed from that moment exactly as a published declaration is |
+| The **licence mode** and, in Proposer's-choice mode, the **permitted set** | 20.2a |
+| **Whether a Technical Reviewer is engaged** | 20.2, and it governs for the life of the award — so 11.2, 11.4's third check and 22.3 all have a statement to read |
+| The **evaluation criteria and weights** | 22.1, which 22.3 requires an assessment to be written against |
+| The **scope as accepted**, and any **budget ceiling** the Committee applies to it | 20.2 |
+
+**These are published on the Portal and written to the `publications` register** (7.6a) before the assessment starts, and they are **fixed from publication in the same way and for the same reason** — a term that can move once scoring has begun is a term that can be moved to fit a result.
+
+**The proposer may withdraw.** Where the Committee's settled terms differ materially from what was proposed — a different shape, a licence the proposer did not offer, a lower budget ceiling — the proposer is told and has **10 business days to withdraw or to accept them**. A grant request is a proposal, not a submission to a competition someone else designed, and a proposer who would not have asked on those terms should not be held to them.
+
+**What this does not change.** The Committee does not re-scope the work. It is settling the **terms the program needs in order to evaluate and contract** — not rewriting what the proposer asked to do, which would turn a grant request into a directed RFP the proposer happened to trigger.
 
 **Recommendation: do not run this in cycle 1.** Prove the directed program works first.
 
-## 26a. Bounties — *for confirmation*
+## 26a. Bounties
 
 The working group has asked that the Committee be able to issue **bounties and grants** as well as RFPs. Two of those three are already here under different names, and one is genuinely new.
 
@@ -1139,31 +1231,27 @@ The working group has asked that the Committee be able to issue **bounties and g
 | **Grant** | The **open call** in section 26 — an award on a proposal the Network did not ask for |
 | **Bounty** | **New.** Nothing in this Framework currently describes it |
 
-**A bounty**, as drafted here, is a **published, fixed-price task, open to anyone, paid to the first acceptable delivery**. There is no evaluation round and no scoring, because there is nothing to compare — the first submission meeting the published acceptance criteria wins. It suits small, well-specified work: a fix, a tool, a dataset, a translation.
+**A bounty** is a **published, fixed-price task, open to anyone, paid to the first acceptable delivery**. **The two-milestone minimum in 11.1a does not apply to it** — a bounty has one determination by design, and that is what distinguishes it from an RFP rather than a defect in it. For the same reason **23.2 and 23.3 read, for a bounty, with the fixed price and the published acceptance criteria standing in place of the milestone schedule**, and the publication vote standing in place of the proposer's agreement to it. **The oracle read that 23.2 requires at the award decision is taken at the publication vote**, which is the award decision for a bounty (rule 2) — without it the collar in 13.4 would have no baseline on the one payment class that has no second milestone to catch anything. There is no evaluation round and no scoring, because there is nothing to compare — the first submission meeting the published acceptance criteria wins. It suits small, well-specified work: a fix, a tool, a dataset, a translation.
 
 **Minimum rules, so a bounty cannot be used to route around the rest of this document:**
 
-- **Rule 1 —** **published on the Portal** with the **acceptance criteria**, the **fixed price**, the **award shape**, and the **licence — in Required or Default mode only**, Proposer's choice being impossible on a bounty since the award decision is the publication vote and no proposal exists at it, **whether a Technical Reviewer is engaged**, the **named Manager of record**, and a **closing date** — all fixed at publication and locked on the same footing as 20.2a;
-- **Rule 2 —** **the publication vote is the award decision**, taken at the **award threshold** — two-thirds, minimum 3 — conditional on an acceptable delivery. There is no second vote, because there is nothing left to decide once the criteria are met. **The 60-day limit in 10.10 runs from the Manager's written acceptance determination, not from the publication vote**, and the publication vote does not expire while the bounty is open. Without this the Manager alone would be committing Network funds, which is the Committee's decision under 8.3 and would leave the 11.4 signature with no award to be ministerial about;
-- **Rule 3 —** **bounded by the Per-Award Limit and the Cycle Ceiling, and by nothing else.** There is **no per-bounty cap and no bounty sub-limit** — a bounty is subject to the same two limits as every other award. Neither a cap on size nor a cap on total would add protection those limits do not already give, and both would bite hardest in the quarter when the Committee had the least directed work and the most well-specified small tasks;
-- **Rule 3a —** **open for a minimum period before any delivery may be accepted**: **21 days**, or **10 days** for a bounty under USD 5,000 or where urgency is recorded — the same periods as 20.5. "First acceptable delivery wins" is only a contest if a second party had time to enter one. A bounty accepted on day two was never open to anyone but the party already building it;
-- **Rule 4 —** **reserves its fixed price against the Cycle Ceiling at publication** (13.2). A bounty published against headroom that is committed by the time someone delivers would leave the deliverer with no ceiling to be paid from;
-- **Rule 5 —** **lapses** at its closing date, or at the end of the cycle in which it was published if earlier, releasing its reservation — **unless a delivery has been accepted by then**. On acceptance the reservation continues under 13.2 through contracting, the delay window, and any MSIG confirmation; any amount payable after cycle end is carried as a **forward commitment** against the following cycle. **The closing date must leave room inside the cycle for acceptance, contracting, and the full delay** — the Cycle Ceiling does not carry over (13.1);
-- **Rule 6 —** **deliveries are recorded in a public register with a receipt timestamp.** The Manager of record assesses **in order of receipt** and **stops at the first** that meets the published acceptance criteria; later deliveries are recorded as unsuccessful with a written reason. "First" means first received, not first assessed;
-- **Rule 7 —** **the section 10.3 publication is made on acceptance**, not at the publication vote — there is no awardee, receiving account, or milestone schedule until then. It states the awardee, the receipt timestamp, the acceptance determination, the price, and the publication vote by name and account, and **the 10.4 delay window runs from it**;
-- **Rule 8 —** **contracted before payment**, and paid on the same signature and delay as any other disbursement — a bounty is not exempt for being a bounty. The payment is an **initial award disbursement**, so **11.4a's checks apply, not 11.4's**, and it carries **objection banding** under 10.5. Where the published statement says a Technical Reviewer is engaged, **their written assessment is a condition of the Manager's acceptance determination** — that is what the field does on a bounty, there being no milestone;
-- **Rule 9 —** **where a bounty payment is cancelled**, the Manager **resumes assessment at the next delivery in order of receipt**, provided the bounty has not lapsed; a delivery recorded unsuccessful only because an earlier one was accepted is **reinstated**. Otherwise the Network would pay nothing and receive nothing while a second compliant delivery sat closed out;
-- **Rule 10 —** **where a bounty payment is cancelled, no work product vests.** The deliverer keeps what they made and nothing in the agreement limits their use of it. Unlike an ordinary award, the work is already done when the delay runs, so the "no liability either side" rule in 23.3 cannot be left to do the work alone;
-- **Rule 11 —** every **conflict rule applies**, including the bidding bars in 6.1 and 6.4, the ban register, and the pre-existing-IP schedule at contracting — which on a bounty is written after the work exists, so a deliverer must list what they brought or forfeit it;
-- **Rule 12 —** work product handled by shape under 20.2a, normally **Deliverable**;
-- **Rule 13 —** **no bounty may be split** out of work that should have been an RFP (rule 5 of section 27 applies unchanged);
-- **Rule 14 —** **where the Committee expects that only one party will realistically deliver, it records that expectation and its reasons at publication, and the record is published.** This does not stop the bounty. It names what is happening: a bounty nobody else will attempt is a **sole-source award**, which is a normal and often correct thing to do — but it should be documented as one rather than described as an open contest. The cycle report lists these separately.
+1. **published on the Portal** with the **acceptance criteria**, the **fixed price**, the **award shape**, and the **licence — in Required or Default mode only**, Proposer's choice being impossible on a bounty since the award decision is the publication vote and no proposal exists at it, **whether a Technical Reviewer is engaged**, the **named Manager of record**, and a **closing date** — all fixed at publication and locked on the same footing as 20.2a;
+2. **the publication vote is the award decision**, taken at the **award threshold** — two-thirds, minimum 3 — conditional on an acceptable delivery. There is no second vote, because there is nothing left to decide once the criteria are met. **The 60-day limit in 10.10 runs from the Manager's written acceptance determination, not from the publication vote**, and the publication vote does not expire while the bounty is open. Without this the Manager alone would be committing Network funds, which is the Committee's decision under 8.3 and would leave the 11.4 signature with no award to be ministerial about;
+3. **bounded by the Per-Award Limit and the Cycle Ceiling, and by nothing else.** There is **no per-bounty cap and no bounty sub-limit** — a bounty is subject to the same two limits as every other award. Neither a cap on size nor a cap on total would add protection those limits do not already give, and both would bite hardest in the quarter when the Committee had the least directed work and the most well-specified small tasks;
+3a. **open for a minimum period before any delivery may be accepted**: **21 days**, or **10 days** for a bounty under USD 5,000 or where urgency is recorded — the same periods as 20.5. "First acceptable delivery wins" is only a contest if a second party had time to enter one. A bounty accepted on day two was never open to anyone but the party already building it;
+4. **reserves its fixed price against the Cycle Ceiling at publication** (13.2). A bounty published against headroom that is committed by the time someone delivers would leave the deliverer with no ceiling to be paid from;
+5. **lapses** at its closing date, or at the end of the cycle in which it was published if earlier, releasing its reservation — **unless a delivery has been accepted by then**. On acceptance the reservation continues under 13.2 through contracting, the delay window, and any MSIG confirmation; any amount payable after cycle end is carried as a **forward commitment** against the following cycle. **The closing date must leave room inside the cycle for acceptance, contracting, and the full delay** — the Cycle Ceiling does not carry over (13.1);
+6. **deliveries are recorded in a public register with a receipt timestamp.** The Manager of record assesses **in order of receipt** and **stops at the first** that meets the published acceptance criteria; later deliveries are recorded as unsuccessful with a written reason. "First" means first received, not first assessed;
+7. **the section 10.3 publication is made on acceptance**, not at the publication vote — there is no awardee, receiving account, or milestone schedule until then. It states the awardee, the receipt timestamp, the acceptance determination, the price, and the publication vote by name and account, and **the 10.4 delay window runs from it**;
+8. **contracted before payment**, and paid on the same signature and delay as any other disbursement — a bounty is not exempt for being a bounty. The payment is an **initial award disbursement**, so **11.4a's checks apply, not 11.4's**, and it carries **objection banding** under 10.5. Where the published statement says a Technical Reviewer is engaged, **their written assessment is a condition of the Manager's acceptance determination** — that is what the field does on a bounty, there being no milestone;
+9. **where a bounty payment is cancelled**, the Manager **resumes assessment at the next delivery in order of receipt**, provided the bounty has not lapsed; a delivery recorded unsuccessful only because an earlier one was accepted is **reinstated**. Otherwise the Network would pay nothing and receive nothing while a second compliant delivery sat closed out;
+10. **where a bounty payment is cancelled, no work product vests.** The deliverer keeps what they made and nothing in the agreement limits their use of it. Unlike an ordinary award, the work is already done when the delay runs, so the "no liability either side" rule in 23.3 cannot be left to do the work alone;
+11. every **conflict rule applies**, including the bidding bars in 6.1 and 6.4, the ban register, and the pre-existing-IP schedule at contracting — which on a bounty is written after the work exists, so a deliverer must list what they brought or forfeit it;
+12. work product handled by shape under 20.2a, normally **Deliverable**;
+13. **no bounty may be split** out of work that should have been an RFP (rule 5 of section 27 applies unchanged);
+14. **where the Committee expects that only one party will realistically deliver, it records that expectation and its reasons at publication, and the record is published.** This does not stop the bounty. It names what is happening: a bounty nobody else will attempt is a **sole-source award**, which is a normal and often correct thing to do — but it should be documented as one rather than described as an open contest. The cycle report lists these separately.
 
-**Sections 22.1, 22.2, 22.4 and 22.5 do not apply to a bounty.** There is no scoring round, no weights, and no reconciliation. **Section 22.3 does apply, and is satisfied by** the Manager of record's written acceptance determination against the published acceptance criteria — that is the written assessment 22.3 requires before any award.
-
-**Section 21.2 does apply**, with one adjustment: a bounty has no discrete question period, so questions may be put to the Manager of record at any time while the bounty is open, and answers are published on the bounty's own page. Everything else in 21.2 holds — all questions and answers published to everyone, without naming who asked, and **no private guidance of any kind**.
-
-An earlier draft listed 21.2 among the disapplied sections. That was wrong, and it contradicted **rule 2 of section 27**, which applies throughout and says the same thing. 21.2 contains no scoring machinery to disapply — it is a channel rule, a publication rule, and a prohibition — and the prohibition matters **more** on a bounty than on a scored RFP, not less. Where the first acceptable delivery wins, a private word about what will be accepted tells one party what to build while everyone else guesses, and it is worth more than any scoring advantage could be. That is the same concern rules 3a and 14 address from the other direction.
+**Sections 21.2, 22.1, 22.4 and 22.5 do not apply to a bounty. **Section 22.2 applies in part**: its milestone-schedule and licence-mode limbs fall away, but the **completeness, eligibility, conflict and register-of-bans checks do not** — the Manager applies them to each delivery, in order of receipt, before assessing it against the acceptance criteria. Without that limb a banned person who delivered first would be accepted, because rule 6 stops at the acceptance criteria and the 11.4a signature checks do not reach the ban register.** There is no scoring round, no weights, and no reconciliation. **Section 22.3 does apply, and is satisfied by** the Manager of record's written acceptance determination against the published acceptance criteria — that is the written assessment 22.3 requires before any award.
 
 **What a bounty gives up, stated plainly.** There is no evaluation round, so the Network never compares approaches, prices, or teams. What replaces that is **openness**: anyone may deliver, and the first acceptable delivery wins. That substitution holds well at small sizes, where several people plausibly attempt the same task. **It weakens as the price rises** — nobody speculatively builds a large system hoping to win a race, so a large bounty in practice attracts exactly one attempt, from the party who already knew they would make it.
 
@@ -1192,7 +1280,7 @@ That is why rules 3a and 14 exist rather than a size cap. A **minimum open perio
 | Role | Decides | Does not |
 |---|---|---|
 | **Block producers (MSIG)** | Grant, suspend, revoke the mandate. Authorize each four-cycle funding period. Set the limits. Seat and remove members. Decide escalated matters. Cancel payments at the Threshold | Vote on individual RFPs or awards |
-| **Steering Committee** | What becomes an RFP. Scopes and budgets. Who wins. Withholding and termination. Classifies RFP-system work as award or operating cost (15.2b). **Designates a replacement Reference Source if the oracle fails (13.4a)**. Signs payments 4 of 5 | Approve milestones. **Serve as Manager of record** (12.2a). Hold or manage funds outside the Program Account. **Change the denomination convention** — the USD denomination, the payment in A, the conversion formula, or the truncation rule (13.4a, 9.1) |
+| **Steering Committee** | What becomes an RFP. Scopes and budgets. Who wins. Withholding and termination. Classifies RFP-system work as award or operating cost (15.2b). Signs payments 4 of 5 | Approve milestones (except a 13.4 rate-check referral). **Serve as Manager of record** (12.2a). Hold or manage funds outside the Program Account |
 | **Manager of record** | Runs one RFP. **Approves its milestones for payment.** Keeps its objection register. **May recommend termination** (11.10a). **Never a Committee member** (12.2a) | Vote on awards. Bid on RFPs they work on. Terminate an award. Sign or disburse anything — payment is the Committee's 4-of-5 |
 | **Technical Reviewer** | Written scores and milestone assessments on any RFP whose published statement says a Reviewer is engaged — **including a technical Service award**. **May recommend termination**, filed directly with the Committee (11.10a). **May be a Committee member** on the terms in 12.6 | Vote *(except a member-Reviewer, who keeps their seat's award vote but not the proposal score, does not vote on a termination recommendation, recovery plan, or strike decision on that award, takes no part in score reconciliation, and does not vote on or sign the payment of their own Reviewer fee)*. Work on an RFP whose published statement says no Reviewer is engaged. Approve a milestone. Terminate an award |
 | **VS LLC** | Contracts with awardees and role-holders; work product — as defined for each award's shape (20.2a) — vests in the **VST**. Runs the Portal and writes the `disc.vst` disclosure and decisions registers (6.3b, 7.6a). Configures and publishes the Program Account. Refuses to contract outside the mandate | Choose awardees. Control the Program Account. **Own the platform — it operates it** (15.2a). **Bid on work on the RFP system**, nor may any connected entity (15.2b) |
@@ -1202,46 +1290,38 @@ That is why rules 3a and 14 exist rather than a size cap. A **minimum open perio
 
 These are set in MSIG #5, not here, so they can change without amending this Framework.
 
-**The rule this appendix depends on.** Where a figure is listed below, **this Framework does not state it** — it names the thing and points here. Restating a figure would defeat the purpose: MSIG #5 is the instrument block producers vote on and amend, so a number changed there would silently leave this document wrong. The Framework keeps the *reasoning* for each figure and MSIG #5 keeps the *figure*.
-
-**The reverse is not true.** Figures this Framework owns — the evaluation weights in 22.1, the minimum open period in 20.5, the advance cap in 11.7, the bounty comply-or-explain trigger in 13.5 and the small-bounty threshold in 26a — are stated here and are **not** in this table. MSIG #5 restates several of them for the reader; where it does, it points back to the section that owns them.
-
 | Item | Where |
 |---|---|
 | Cycle Ceiling and Per-Award Limit (in **USD**) | MSIG #5 |
+| **Program Cost Ceiling** and its two internal caps — Committee pay, and Manager and Reviewer fees with Portal and administration (section 13.1) | MSIG #5, Part D |
 | Delay window length, normal and urgent | MSIG #5 |
 | Cycle ceilings and the funding period | MSIG #5 |
-| Committee pay — the retainer in 13.3a (in **USD**, paid in A) | MSIG #5, Part H |
+| Committee pay (in **USD**, paid in A) | MSIG #5 |
 | Initial staggered terms | MSIG #5 |
 | ECF process publication and first vote dates | MSIG #5 |
 | Program Account (`rfp.vst`) permission settings | MSIG #5. Developed, configured, and published by **VS LLC** |
 | Manager and Reviewer rate card | MSIG #5, Exhibit B |
 | Schedule A terms for every paid role | MSIG #5, Exhibit F |
-| **Coverage Margin** — the floor the coverage test in 13.4 applies | MSIG #5, Part D |
-| **Instalment top-up level** — the margin each quarterly transfer restores the account to (13.1) | MSIG #5, Part I |
-| Caps on member Reviewer fees per cycle and on concurrent engagements (section 12.6) | MSIG #5, Part H |
-| **Post-award review threshold** — the total contract value above which 25.2 requires a review | MSIG #5, Part D |
+| The coverage margin | MSIG #5 |
+| Cap on concurrent member-Reviewer engagements (section 12.6) | MSIG #5, Part H |
+| Post-award review threshold (section 25.2), set as a share of the Per-Award Limit | MSIG #5, Part D |
 
 ## Appendix C — Still to confirm
 
 **Blocking items are marked.** A blocking item stops something specific from happening until it is resolved.
 
+**What is not here.** This list holds only what the program itself is waiting on. Work the VST and VS LLC administer off-chain — candidate sourcing for the four seats, counsel's conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover — is tracked in the **Program Administration Register**, which is not part of this Framework and is not approved by MSIG.
+
+**Numbers are stable.** When an item is closed it is deleted from this list and the surviving numbers do not move. Gaps in the sequence are therefore deliberate, and every reference to an item number elsewhere in the package keeps pointing at the same item. Numbers here are **independent of** the numbering in MSIG #5's *Blanks to fill*: the same subject may be item 11 here and blank 12 there.
+
 | # | Item | Blocking? |
 |---|---|---|
-| 1 | Candidates to propose for the four seats — individually, as a full slate, or in any subset (section 3.1) | — |
 | 2 | Source account holding the REX yield and Year 1 pools | — |
 | 3 | The **Trustee Compensation and Indemnification Acknowledgment**, approved by vstcreation but not yet reviewed — it may add indemnification terms for compensated governance roles that Committee members should also have | — |
 | 4 | Initial Manager pool — **at least three, or at least two who are unconflicted on every open RFP**. Two is only enough while the second is unconflicted, and 12.2a means a member can never fill the gap. Also load-bearing for 11.10a: with one Manager there is no reassignment remedy against a Manager who has frozen an award | — |
 | 5 | Technical Reviewer roster for technical categories | — |
-| 5a | **Exhibit B rate card** for Managers and Reviewers | **Yes** — no Manager or Reviewer may be contracted without it (12.1), and no member-Reviewer fee has a figure (12.6.5) |
 | 6 | Portal readiness to host the backlog, award records, and objection register | — |
-| 7 | The **disclosure questionnaire instrument** — version 1 text, the coded-answer schema, and the holdings band set (section 6.3a) | **Yes** — the Program Account is not funded until every member has filed, and nobody can file before the instrument exists |
-| 8 | The **`disc.vst` account and its two contracts** — the **disclosure** register (6.3b) and the **decisions** register (7.6a): deployment, ABI, both schemas, the hash algorithm and its serialization, RAM provisioning, the upgrade path, and who signs the writes. **To be built and serviced by the EOS Rio team; VS LLC remains accountable** and covers it in the Exhibit D configuration under MSIG #5 Part E (PRD section 7.2) | **Yes** — the Program Account is not funded until Exhibit D is published |
-| 9 | ~~Licences~~ — **closed.** Apache-2.0 for code, CC-BY-4.0 for non-code, three licence modes in 20.2a, and the Proposer's-choice **permitted set named per RFP** — no standing list | — |
+| 7 | The **disclosure questionnaire instrument** — **drafted as version `VQ1`**; text, coded-answer schema and position bands complete (section 6.3a). What remains is publication with the register open for filing | **Yes** — the Program Account is not funded until every member has filed, and nobody can file until the register is open |
+| 8 | The **`disc.vst` account and its three registers** — **disclosures** (6.3b), **decisions** and **publications** (7.6a), as three tables in one contract or more: deployment, ABI, both schemas, RAM provisioning (**estimated and settled at Exhibit D 8.6 — 16 MB at launch, VST and VS LLC provisioning and topping up**), the upgrade path, and who signs the writes. **Specified at Exhibit D Parts 7 and 8; to be built and serviced by the EOS Rio team, with VS LLC accountable** and covers it in the Exhibit D configuration under MSIG #5 Part E (PRD section 7.2) | **Yes** — the Program Account is not funded until Exhibit D is published |
 | 10 | **Counsel to confirm section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A (section 23.3a) | **Yes** — until confirmed, no Service or Embedded RFP may be published, and no award may be contracted with a populated pre-existing-IP schedule |
-| 11 | **Two caps under section 12.6**, set by MSIG at Part H: the **per-cycle cap on Reviewer fees** a member may earn, and the **cap on concurrent engagements** | **Yes** — no member may be engaged as Reviewer until both are set |
-| 12 | ~~Confirm what "grant" means~~ — **closed: "grant" is the open call in section 26**, not a further instrument. Three instruments only: directed RFP, open call, bounty. *Bounties carry **no per-bounty cap and no sub-limit** — the Per-Award Limit and Cycle Ceiling are the only bounds (26a rule 3)* | — |
-| 13 | **Who owns the oracle risk tolerances** — the **15% collar** and the **24-hour staleness period** in 13.4. Both are stated as operative resolutions in MSIG #5 Part D, which suggests block producers set them, but neither appears in Appendix B or in MSIG's list of figures to confirm, which suggests this Framework does. They are treated here as Framework-owned, and MSIG points back to 13.4 accordingly. If they are meant to be block producer dials they move to Appendix B and out of 13.4 | — |
-| 14 | **Transfer of the existing platform code and rights to the VST** (section 15.2a). **EOS Rio has committed to transferring both, and that commitment is accepted.** Remaining work is administrative: the executed assignment, confirmation it covers every contributor, and the repository transfer | — |
-| 15 | **Post-award review threshold** under 25.2 — set in **MSIG #5 Part D** on total contract value (Appendix B). Confirm or change the figure there, and scope the review as a Manager task in the Exhibit B rate card | — |
-| 16 | **Schedule A clause for receiving-account verification** (23.3b) — the awardee-facing counterpart in the **Exhibit F** template: the awardee's obligation to sign the challenge, to notify a change only through the named channel, and to accept the one-business-day hold. 23.3b binds VS LLC; this binds the awardee | — | 
+| 16 | **The suspension long-stop in the Awardee Schedule A** (Exhibit F clause 6) — how many **business days** a payment suspension under 13.4a must run before an awardee may terminate, and the notice period | **Yes** — no awardee agreement can be executed with the two blanks live |

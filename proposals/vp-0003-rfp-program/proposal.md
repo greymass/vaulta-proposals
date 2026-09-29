@@ -19,11 +19,21 @@ requires: []
 documents:
     - documents/msig-5.md
     - documents/rfp-framework.md
+    - documents/exhibit-b-rate-card.md
+    - documents/exhibit-d-account-configuration.md
+    - documents/exhibit-e-seat-appointment.md
+    - documents/exhibit-f-schedule-a.md
+    - documents/disclosure-questionnaire.md
     - documents/rfp-platform-prd.md
+    - documents/program-administration-register.md
+    - documents/sop-fit-analysis.md
 revisions:
     - version: 1
       date: 2026-09-01
       summary: Initial draft.
+    - version: 2
+      date: 2026-09-29
+      summary: Ingests MSIG #5 v6.13, Framework v5.3, and PRD v1.6, and adds Exhibits B, D, E, F and four supporting documents.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding
@@ -31,17 +41,31 @@ revisions:
 
 ## Summary
 
-This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as an expanded Network Steering Committee with a mandate to decide RFP funding, and authorize an on-chain program fund under limits that block producers keep. It consists of three documents, distributed for review by the VST and block producers and carried here verbatim.
+This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as an expanded Network Steering Committee with a mandate to decide RFP funding, and authorize an on-chain program fund under limits that block producers keep. It consists of ten documents, distributed for review by the VST and block producers and carried here verbatim.
 
 The resolution itself states everything being voted on, in full context: read [MSIG #5](documents/msig-5.md).
 
 ## Documents
 
-- [MSIG #5 resolution](documents/msig-5.md): the resolution block producers would approve. Its stated status is DRAFT v6.2, for VST and block producer review.
-- [Vaulta Network RFP Framework](documents/rfp-framework.md): Exhibit A to MSIG #5, the framework its first decision approves. Its stated status is DRAFT v4.2, and it is amendable by the Committee under its own Part 2 rule.
-- [Vaulta RFP Platform PRD](documents/rfp-platform-prd.md): the build specification for the RFP platform, assessed against the eosrio platform. Its stated status is v1.0. It is not a governance document; it is published alongside the resolution rather than approved by it.
+The resolution and its exhibits:
 
-MSIG #5 attaches six exhibits. Exhibit A is included here as the Vaulta Network RFP Framework. Exhibits E and F are templates contained within the resolution itself. Exhibits B, C, and D are listed as to be prepared and are not part of this package. The `[___]` blanks and draft version lines throughout are the documents as distributed; every document is carried verbatim.
+- [MSIG #5 resolution](documents/msig-5.md): the resolution block producers would approve. Its stated status is DRAFT v6.13, for VST and block producer review.
+- [Vaulta Network RFP Framework](documents/rfp-framework.md): Exhibit A to MSIG #5, the framework its first decision approves. Its stated status is DRAFT v5.3, and it is amendable by the Committee under its own Part 2 rule.
+- [Manager and Reviewer Rate Card and Scope](documents/exhibit-b-rate-card.md): Exhibit B, the rate card for RFP Program Managers and Technical Reviewers. Its stated status is DRAFT v3.4, settled.
+- [Program Account, Permission, and Register Configuration](documents/exhibit-d-account-configuration.md): Exhibit D, the configuration of the Program Account, the Committee Permission, and the `disc.vst` registers, which VS LLC publishes before the Program Account is funded. Its stated status is DRAFT v2.3, a specification whose deployment values are filled before publication.
+- [Seat Appointment MSIG Template](documents/exhibit-e-seat-appointment.md): Exhibit E, the template for the resolutions that fill Committee seats. Its stated status is TEMPLATE v2.1.
+- [Schedule A Templates](documents/exhibit-f-schedule-a.md): Exhibit F, the Schedule A templates for Committee members, Program Managers, Technical Reviewers, and awardees. Its stated status is DRAFT v1.7.
+
+MSIG #5 attaches Exhibits A, B, D, E, and F. The resolution explains that it has no Exhibit C: the Trust Agreement amendments once attached under that letter are administered off-chain.
+
+Supporting documents, published alongside the resolution and not approved by it:
+
+- [Disclosure Questionnaire, Version 1](documents/disclosure-questionnaire.md): the disclosure instrument VS LLC publishes alongside Exhibit D, questionnaire version `VQ1`. Its stated status is DRAFT v1.4, settled.
+- [Vaulta RFP Platform PRD](documents/rfp-platform-prd.md): the build specification for the RFP platform, assessed against the eosrio platform. Its stated status is DRAFT v1.6, with the current-state assessment pending repository access.
+- [Program Administration Register](documents/program-administration-register.md): the off-chain working register of tasks the VST and VS LLC administer themselves. Its stated status is DRAFT v1.3.
+- [SOP Fit Analysis](documents/sop-fit-analysis.md): a review of the VS LLC Operational and Vendor Onboarding SOP against MSIG #5, the Framework, Exhibit F, and the PRD.
+
+The `[___]` blanks and draft version lines throughout are the documents as distributed; every document is carried verbatim.
 
 ## Open Questions
 

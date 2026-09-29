@@ -1,10 +1,13 @@
 ---
 lang: ko
-source: f9a0d9823cd8da2c9c2b89a467f7ed9809674a7d
+source: 58d3d3603c4eb5f20097a2742e77835060464b3b
 revisions:
     - version: 1
       date: 2026-09-01
       summary: 최초 초안.
+    - version: 2
+      date: 2026-09-29
+      summary: MSIG #5 v6.13, 프레임워크 v5.3, PRD v1.6을 반영하고 Exhibit B, D, E, F와 네 개의 지원 문서를 추가합니다.
 ---
 
 # 네트워크 운영 위원회, RFP 프레임워크 승인 및 온체인 프로그램 자금 조달
@@ -12,17 +15,31 @@ revisions:
 
 ## 요약
 
-이 제안은 블록 프로듀서에게 Vaulta 네트워크 RFP 프레임워크를 승인하고, 감독 위원회(Oversight Committee)를 RFP 자금 결정 권한을 가진 확대된 네트워크 운영 위원회(Network Steering Committee)로 이어가며, 블록 프로듀서가 유지하는 한도 내에서 온체인 프로그램 기금을 승인할 것을 요청합니다. 이 제안은 VST와 블록 프로듀서의 검토를 위해 배포된 세 개의 문서로 구성되며, 원문 그대로 수록되어 있습니다.
+이 제안은 블록 프로듀서에게 Vaulta 네트워크 RFP 프레임워크를 승인하고, 감독 위원회(Oversight Committee)를 RFP 자금 결정 권한을 가진 확대된 네트워크 운영 위원회(Network Steering Committee)로 이어가며, 블록 프로듀서가 유지하는 한도 내에서 온체인 프로그램 기금을 승인할 것을 요청합니다. 이 제안은 VST와 블록 프로듀서의 검토를 위해 배포된 열 개의 문서로 구성되며, 원문 그대로 수록되어 있습니다.
 
 표결 대상 전체는 결의안 자체에 완전한 맥락과 함께 기술되어 있습니다: [MSIG #5](documents/msig-5.md)를 읽어 보시기 바랍니다.
 
 ## 문서
 
-- [MSIG #5 결의안](documents/msig-5.md): 블록 프로듀서가 승인하게 될 결의안입니다. 문서에 명시된 상태는 DRAFT v6.2이며, VST와 블록 프로듀서의 검토용입니다.
-- [Vaulta 네트워크 RFP 프레임워크](documents/rfp-framework.md): MSIG #5의 Exhibit A로, 결의안의 첫 번째 결정이 승인하는 프레임워크입니다. 명시된 상태는 DRAFT v4.2이며, 자체 Part 2 규정에 따라 위원회가 개정할 수 있습니다.
-- [Vaulta RFP 플랫폼 PRD](documents/rfp-platform-prd.md): eosrio 플랫폼을 기준으로 평가한 RFP 플랫폼 구축 명세서입니다. 명시된 상태는 v1.0입니다. 거버넌스 문서가 아니며, 결의안의 승인 대상이 아니라 결의안과 함께 공개되는 문서입니다.
+결의안과 그 Exhibit:
 
-MSIG #5에는 여섯 개의 Exhibit이 첨부되어 있습니다. Exhibit A는 Vaulta 네트워크 RFP 프레임워크로 여기에 포함되어 있습니다. Exhibit E와 F는 결의안 본문에 포함된 템플릿입니다. Exhibit B, C, D는 준비 예정으로 명시되어 있으며 이 패키지에 포함되지 않습니다. 문서 전반의 `[___]` 공란과 초안 버전 표기는 배포된 문서 그대로이며, 모든 문서는 원문 그대로 수록되어 있습니다.
+- [MSIG #5 결의안](documents/msig-5.md): 블록 프로듀서가 승인하게 될 결의안입니다. 문서에 명시된 상태는 DRAFT v6.13이며, VST와 블록 프로듀서의 검토용입니다.
+- [Vaulta 네트워크 RFP 프레임워크](documents/rfp-framework.md): MSIG #5의 Exhibit A로, 결의안의 첫 번째 결정이 승인하는 프레임워크입니다. 명시된 상태는 DRAFT v5.3이며, 자체 Part 2 규정에 따라 위원회가 개정할 수 있습니다.
+- [매니저 및 리뷰어 요율표와 업무 범위](documents/exhibit-b-rate-card.md): Exhibit B로, RFP 프로그램 매니저와 기술 리뷰어의 요율표입니다. 명시된 상태는 DRAFT v3.4이며 확정되었습니다.
+- [프로그램 계정, 권한 및 레지스터 구성](documents/exhibit-d-account-configuration.md): Exhibit D로, 프로그램 계정, 위원회 권한, `disc.vst` 레지스터의 구성입니다. VS LLC가 프로그램 계정에 자금이 들어오기 전에 공개합니다. 명시된 상태는 DRAFT v2.3이며, 배포 값은 공개 전에 채워지는 명세서입니다.
+- [좌석 임명 MSIG 템플릿](documents/exhibit-e-seat-appointment.md): Exhibit E로, 위원회 좌석을 채우는 결의안의 템플릿입니다. 명시된 상태는 TEMPLATE v2.1입니다.
+- [Schedule A 템플릿](documents/exhibit-f-schedule-a.md): Exhibit F로, 위원회 위원, 프로그램 매니저, 기술 리뷰어, 수혜자를 위한 Schedule A 템플릿입니다. 명시된 상태는 DRAFT v1.7입니다.
+
+MSIG #5에는 Exhibit A, B, D, E, F가 첨부되어 있습니다. 결의안은 Exhibit C가 없는 이유를 설명합니다. 과거 그 문자로 첨부되었던 신탁 계약 개정안은 오프체인에서 관리됩니다.
+
+결의안과 함께 공개되지만 결의안의 승인 대상은 아닌 지원 문서:
+
+- [공시 설문지, 버전 1](documents/disclosure-questionnaire.md): VS LLC가 Exhibit D와 함께 공개하는 공시 도구로, 설문지 버전은 `VQ1`입니다. 명시된 상태는 DRAFT v1.4이며 확정되었습니다.
+- [Vaulta RFP 플랫폼 PRD](documents/rfp-platform-prd.md): eosrio 플랫폼을 기준으로 평가한 RFP 플랫폼 구축 명세서입니다. 명시된 상태는 DRAFT v1.6이며, 현황 평가는 저장소 접근을 기다리고 있습니다.
+- [프로그램 관리 레지스터](documents/program-administration-register.md): VST와 VS LLC가 직접 관리하는 업무를 기록하는 오프체인 작업 레지스터입니다. 명시된 상태는 DRAFT v1.3입니다.
+- [SOP 적합성 분석](documents/sop-fit-analysis.md): VS LLC 운영 및 공급업체 온보딩 SOP를 MSIG #5, 프레임워크, Exhibit F, PRD에 비추어 검토한 문서입니다.
+
+문서 전반의 `[___]` 공란과 초안 버전 표기는 배포된 문서 그대로이며, 모든 문서는 원문 그대로 수록되어 있습니다.
 
 ## 미해결 질문
 
