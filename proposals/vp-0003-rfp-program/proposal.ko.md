@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: 58d3d3603c4eb5f20097a2742e77835060464b3b
+source: f88e1bc8d7cf3bbd9d0fd46d3974c061c24fc1a8
 revisions:
     - version: 1
       date: 2026-09-01
@@ -8,6 +8,9 @@ revisions:
     - version: 2
       date: 2026-09-29
       summary: MSIG #5 v6.13, 프레임워크 v5.3, PRD v1.6을 반영하고 Exhibit B, D, E, F와 네 개의 지원 문서를 추가합니다.
+    - version: 3
+      date: 2026-09-30
+      summary: 투표 대상이 아닌 작업 문서인 PRD, 프로그램 관리 레지스터, SOP 적합성 분석을 제거합니다.
 ---
 
 # 네트워크 운영 위원회, RFP 프레임워크 승인 및 온체인 프로그램 자금 조달
@@ -15,7 +18,7 @@ revisions:
 
 ## 요약
 
-이 제안은 블록 프로듀서에게 Vaulta 네트워크 RFP 프레임워크를 승인하고, 감독 위원회(Oversight Committee)를 RFP 자금 결정 권한을 가진 확대된 네트워크 운영 위원회(Network Steering Committee)로 이어가며, 블록 프로듀서가 유지하는 한도 내에서 온체인 프로그램 기금을 승인할 것을 요청합니다. 이 제안은 VST와 블록 프로듀서의 검토를 위해 배포된 열 개의 문서로 구성되며, 원문 그대로 수록되어 있습니다.
+이 제안은 블록 프로듀서에게 Vaulta 네트워크 RFP 프레임워크를 승인하고, 감독 위원회(Oversight Committee)를 RFP 자금 결정 권한을 가진 확대된 네트워크 운영 위원회(Network Steering Committee)로 이어가며, 블록 프로듀서가 유지하는 한도 내에서 온체인 프로그램 기금을 승인할 것을 요청합니다. 이 제안은 VST와 블록 프로듀서의 검토를 위해 배포된 일곱 개의 문서로 구성되며, 원문 그대로 수록되어 있습니다.
 
 표결 대상 전체는 결의안 자체에 완전한 맥락과 함께 기술되어 있습니다: [MSIG #5](documents/msig-5.md)를 읽어 보시기 바랍니다.
 
@@ -35,9 +38,6 @@ MSIG #5에는 Exhibit A, B, D, E, F가 첨부되어 있습니다. 결의안은 E
 결의안과 함께 공개되지만 결의안의 승인 대상은 아닌 지원 문서:
 
 - [공시 설문지, 버전 1](documents/disclosure-questionnaire.md): VS LLC가 Exhibit D와 함께 공개하는 공시 도구로, 설문지 버전은 `VQ1`입니다. 명시된 상태는 DRAFT v1.4이며 확정되었습니다.
-- [Vaulta RFP 플랫폼 PRD](documents/rfp-platform-prd.md): eosrio 플랫폼을 기준으로 평가한 RFP 플랫폼 구축 명세서입니다. 명시된 상태는 DRAFT v1.6이며, 현황 평가는 저장소 접근을 기다리고 있습니다.
-- [프로그램 관리 레지스터](documents/program-administration-register.md): VST와 VS LLC가 직접 관리하는 업무를 기록하는 오프체인 작업 레지스터입니다. 명시된 상태는 DRAFT v1.3입니다.
-- [SOP 적합성 분석](documents/sop-fit-analysis.md): VS LLC 운영 및 공급업체 온보딩 SOP를 MSIG #5, 프레임워크, Exhibit F, PRD에 비추어 검토한 문서입니다.
 
 문서 전반의 `[___]` 공란과 초안 버전 표기는 배포된 문서 그대로이며, 모든 문서는 원문 그대로 수록되어 있습니다.
 

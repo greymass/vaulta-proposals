@@ -24,9 +24,6 @@ documents:
     - documents/exhibit-e-seat-appointment.md
     - documents/exhibit-f-schedule-a.md
     - documents/disclosure-questionnaire.md
-    - documents/rfp-platform-prd.md
-    - documents/program-administration-register.md
-    - documents/sop-fit-analysis.md
 revisions:
     - version: 1
       date: 2026-09-01
@@ -34,6 +31,9 @@ revisions:
     - version: 2
       date: 2026-09-29
       summary: Ingests MSIG #5 v6.13, Framework v5.3, and PRD v1.6, and adds Exhibits B, D, E, F and four supporting documents.
+    - version: 3
+      date: 2026-09-30
+      summary: Removes the PRD, the Program Administration Register, and the SOP Fit Analysis, which are working documents outside the vote.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding
@@ -41,7 +41,7 @@ revisions:
 
 ## Summary
 
-This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as an expanded Network Steering Committee with a mandate to decide RFP funding, and authorize an on-chain program fund under limits that block producers keep. It consists of ten documents, distributed for review by the VST and block producers and carried here verbatim.
+This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as an expanded Network Steering Committee with a mandate to decide RFP funding, and authorize an on-chain program fund under limits that block producers keep. It consists of seven documents, distributed for review by the VST and block producers and carried here verbatim.
 
 The resolution itself states everything being voted on, in full context: read [MSIG #5](documents/msig-5.md).
 
@@ -58,12 +58,9 @@ The resolution and its exhibits:
 
 MSIG #5 attaches Exhibits A, B, D, E, and F. The resolution explains that it has no Exhibit C: the Trust Agreement amendments once attached under that letter are administered off-chain.
 
-Supporting documents, published alongside the resolution and not approved by it:
+A supporting document, published alongside the resolution and not approved by it:
 
 - [Disclosure Questionnaire, Version 1](documents/disclosure-questionnaire.md): the disclosure instrument VS LLC publishes alongside Exhibit D, questionnaire version `VQ1`. Its stated status is DRAFT v1.4, settled.
-- [Vaulta RFP Platform PRD](documents/rfp-platform-prd.md): the build specification for the RFP platform, assessed against the eosrio platform. Its stated status is DRAFT v1.6, with the current-state assessment pending repository access.
-- [Program Administration Register](documents/program-administration-register.md): the off-chain working register of tasks the VST and VS LLC administer themselves. Its stated status is DRAFT v1.3.
-- [SOP Fit Analysis](documents/sop-fit-analysis.md): a review of the VS LLC Operational and Vendor Onboarding SOP against MSIG #5, the Framework, Exhibit F, and the PRD.
 
 The `[___]` blanks and draft version lines throughout are the documents as distributed; every document is carried verbatim.
 

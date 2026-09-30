@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: 58d3d3603c4eb5f20097a2742e77835060464b3b
+source: f88e1bc8d7cf3bbd9d0fd46d3974c061c24fc1a8
 revisions:
     - version: 1
       date: 2026-09-01
@@ -8,6 +8,9 @@ revisions:
     - version: 2
       date: 2026-09-29
       summary: 纳入 MSIG #5 v6.13、框架 v5.3 与 PRD v1.6，并新增附件 B、D、E、F 及四份支持文件。
+    - version: 3
+      date: 2026-09-30
+      summary: 移除 PRD、项目管理登记簿及 SOP 适配性分析，这些是不在表决范围内的工作文件。
 ---
 
 # 网络指导委员会、RFP 框架批准与链上项目资金
@@ -15,7 +18,7 @@ revisions:
 
 ## 摘要
 
-本提案请求区块生产者批准 Vaulta 网络 RFP 框架，将监督委员会（Oversight Committee）延续为经扩充、拥有 RFP 资金决定授权的网络指导委员会（Network Steering Committee），并在区块生产者保留的限额之内批准一笔链上项目资金。本提案由十份文件组成，这些文件为 VST 与区块生产者的审阅而分发，并在此原文收录。
+本提案请求区块生产者批准 Vaulta 网络 RFP 框架，将监督委员会（Oversight Committee）延续为经扩充、拥有 RFP 资金决定授权的网络指导委员会（Network Steering Committee），并在区块生产者保留的限额之内批准一笔链上项目资金。本提案由七份文件组成，这些文件为 VST 与区块生产者的审阅而分发，并在此原文收录。
 
 表决的全部内容连同完整背景均载于决议本身：请阅读 [MSIG #5](documents/msig-5.md)。
 
@@ -35,9 +38,6 @@ MSIG #5 附有附件 A、B、D、E、F。决议说明了其中没有附件 C 的
 随决议一同发布、但不由决议批准的支持文件：
 
 - [披露问卷第 1 版](documents/disclosure-questionnaire.md)：VS LLC 随附件 D 一同发布的披露工具，问卷版本为 `VQ1`。其自述状态为 DRAFT v1.4，已定稿。
-- [Vaulta RFP 平台 PRD](documents/rfp-platform-prd.md)：RFP 平台的构建规格说明，以 eosrio 平台为基准进行评估。其自述状态为 DRAFT v1.6，现状评估有待获得代码仓库访问权限。
-- [项目管理登记簿](documents/program-administration-register.md)：记录 VST 与 VS LLC 自行管理之事务的链下工作登记簿。其自述状态为 DRAFT v1.3。
-- [SOP 适配性分析](documents/sop-fit-analysis.md)：对照 MSIG #5、框架、附件 F 及 PRD，对 VS LLC 运营与供应商入驻 SOP 所作的审阅。
 
 文件中的 `[___]` 空白与草案版本标注即为分发时的原样；所有文件均原文收录。
 
