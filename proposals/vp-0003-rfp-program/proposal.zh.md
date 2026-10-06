@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: f88e1bc8d7cf3bbd9d0fd46d3974c061c24fc1a8
+source: ef3ec3434d65391fba7f25e959387b9bc3d5d86c
 revisions:
     - version: 1
       date: 2026-09-01
@@ -11,6 +11,9 @@ revisions:
     - version: 3
       date: 2026-09-30
       summary: 移除 PRD、项目管理登记簿及 SOP 适配性分析，这些是不在表决范围内的工作文件。
+    - version: 4
+      date: 2026-10-06
+      summary: 将文件一节改写为面向投票者的审阅指南，并新增一份说明未使用的附件 C 的占位文件。
 ---
 
 # 网络指导委员会、RFP 框架批准与链上项目资金
@@ -18,28 +21,35 @@ revisions:
 
 ## 摘要
 
-本提案请求区块生产者批准 Vaulta 网络 RFP 框架，将监督委员会（Oversight Committee）延续为经扩充、拥有 RFP 资金决定授权的网络指导委员会（Network Steering Committee），并在区块生产者保留的限额之内批准一笔链上项目资金。本提案由七份文件组成，这些文件为 VST 与区块生产者的审阅而分发，并在此原文收录。
+本提案请求区块生产者批准 Vaulta 网络 RFP 框架，将监督委员会（Oversight Committee）延续为经扩充、拥有 RFP 资金决定授权的网络指导委员会（Network Steering Committee），并在区块生产者保留的限额之内批准一笔链上项目资金。为 VST 与区块生产者审阅而分发的七份文件在此原文收录，另附一份说明未使用的附件 C 的占位文件。
 
 表决的全部内容连同完整背景均载于决议本身：请阅读 [MSIG #5](documents/msig-5.md)。
 
 ## 文件
 
-决议及其附件：
+各文件按投票者应阅读的顺序列出，并各自注明建议的审阅深度。需要仔细阅读的有三项：MSIG #5、框架 Part 1，以及附件 B 的费率表。其余文件只需浏览下文指出的具体要点。
 
-- [MSIG #5 决议](documents/msig-5.md)：区块生产者将批准的决议。其自述状态为 DRAFT v6.13，供 VST 与区块生产者审阅。
-- [Vaulta 网络 RFP 框架](documents/rfp-framework.md)：MSIG #5 的附件 A（Exhibit A），即决议第一项决定所批准的框架。其自述状态为 DRAFT v5.3，委员会可依其自身 Part 2 规则予以修订。
-- [项目经理与评审员费率表及工作范围](documents/exhibit-b-rate-card.md)：附件 B，RFP 项目经理与技术评审员的费率表。其自述状态为 DRAFT v3.4，已定稿。
-- [项目账户、权限与登记簿配置](documents/exhibit-d-account-configuration.md)：附件 D，项目账户、委员会权限及 `disc.vst` 登记簿的配置，由 VS LLC 在项目账户注资之前发布。其自述状态为 DRAFT v2.3，为一份规格说明，其部署数值在发布前填入。
-- [席位任命 MSIG 模板](documents/exhibit-e-seat-appointment.md)：附件 E，用于填补委员会席位之决议的模板。其自述状态为 TEMPLATE v2.1。
-- [Schedule A 模板](documents/exhibit-f-schedule-a.md)：附件 F，适用于委员会成员、项目经理、技术评审员及获奖方的 Schedule A 模板。其自述状态为 DRAFT v1.7。
+完整阅读：
 
-MSIG #5 附有附件 A、B、D、E、F。决议说明了其中没有附件 C 的原因：曾以该字母附上的信托协议修订在链下管理。
+- [MSIG #5 决议](documents/msig-5.md)（约 67 分钟）：区块生产者将批准的决议。它将监督委员会延续为五席的网络指导委员会，授予其从 `rfp.vst` 项目账户分配资金的常设授权，并请求首笔转入价值 USD 284,375 的 A。在五个席位全部填满、每位成员签署合同、提交披露并登记签名密钥，且附件 D 完整发布之前，任何资金都不会转出。其自述状态为 DRAFT v6.13，供 VST 与区块生产者审阅。
+- [附件 A：Vaulta 网络 RFP 框架](documents/rfp-framework.md)（Part 1，约 85 分钟）：决议第一项决定所批准的框架。Part 1（第 1 至 16 节）是治理规则：席位、表决、利益冲突、签署、授权、支出限额与暂停，是需要阅读的部分。Part 2（第 17 至 27 节）是 RFP 的分步流程，MSIG 日后可在不重启 Part 1 的情况下修订；两者冲突时以 Part 1 为准。其自述状态为 DRAFT v5.3。
+- [附件 B：项目经理与评审员费率表及工作范围](documents/exhibit-b-rate-card.md)（浏览费率表，约 5 分钟）：RFP 项目经理（每个里程碑 USD 350，评估变体为 600）与技术评审员（每个里程碑 USD 450）的费用。担任评审员的委员会成员同时承接的业务上限为 3 项。金额仅能由 MSIG 变更。委员会成员本身的报酬由 MSIG #5 规定，而非本文件。其自述状态为 DRAFT v3.4，已定稿。
+
+浏览具体要点：
+
+- [附件 D：项目账户、权限与登记簿配置](documents/exhibit-d-account-configuration.md)（约 5 分钟）：由 VS LLC 在项目账户注资之前发布的技术规格说明。投票者应核对权限设计：付款需 5 名委员会成员中 4 人签署，取消需 5 人中 3 人；付款有 7 天延迟（紧急情况为 3 天）；所有者权限由区块生产者以 21 中 15 保留。其自述状态为 DRAFT v2.3，其部署数值在发布前填入。
+- [附件 F：Schedule A 模板](documents/exhibit-f-schedule-a.md)（约 10 分钟）：依 VS LLC 独立承包商协议订立、适用于委员会成员、项目经理、技术评审员及获奖方的合同附表，VS LLC 为合同当事方。大部分为标准合同条文。请核对四点：与 MSIG #5 一致的委员会报酬每月 USD 2,500；工作成果归属 VST，并对既有知识产权设有例外，该例外尚待法律顾问确认，在此之前 Service 与 Embedded RFP 均被阻塞；汇率来源暂停时获奖方可退出合同的期限（空白）；以及重大利益冲突违规将导致全项目永久禁入，仅能以 21 中 15 确认与解除。其自述状态为 DRAFT v1.7。
+
+仅供参考：
+
+- [附件 E：席位任命 MSIG 模板](documents/exhibit-e-seat-appointment.md)：日后填补委员会席位之决议的必需格式，每项决议单独表决。每位候选人须提交 300 至 800 词的网络愿景陈述并申报利益冲突。其自述状态为 TEMPLATE v2.1。
+- [附件 C：信托协议配套修订](documents/exhibit-c-trust-agreement-amendments.md)：占位文件，无需审阅。MSIG #5 附有附件 A、B、D、E、F，并无附件 C：曾以该字母附上的信托协议修订在链下管理，其余字母保持不变，以确保现有引用依然准确。
 
 随决议一同发布、但不由决议批准的支持文件：
 
-- [披露问卷第 1 版](documents/disclosure-questionnaire.md)：VS LLC 随附件 D 一同发布的披露工具，问卷版本为 `VQ1`。其自述状态为 DRAFT v1.4，已定稿。
+- [披露问卷第 1 版](documents/disclosure-questionnaire.md)（浏览披露规则，约 5 分钟）：每位决策者在就任前提交的利益冲突申报表，由 VS LLC 随附件 D 一同发布，问卷版本为 `VQ1`。每份申报的全文永久写入 `disc.vst`。持仓仅以 USD 区间申报，从不填写确切数额；不询问 A 的持有量；且从不列出个人姓名。在全部委员会成员提交之前，项目账户不会注资。其自述状态为 DRAFT v1.4，已定稿。
 
-文件中的 `[___]` 空白与草案版本标注即为分发时的原样；所有文件均原文收录。
+文件中的 `[___]` 空白与草案版本标注即为分发时的原样；所有分发的文件均原文收录，附件 C 占位文件是唯一为本仓库撰写的文件。
 
 ## 未决问题
 
