@@ -2,7 +2,7 @@
 
 **Exhibit D to MSIG #5**
 **Published by Vaulta Stewardship LLC under MSIG #5 Part E**
-**Status: DRAFT v2.3 — specification. Values marked *(to confirm on deployment)* are filled from what is actually deployed before publication; the member keys at 2.2 are recorded as they arrive**
+**Status: DRAFT v2.4 — specification. Values marked *(to confirm on deployment)* are filled from what is actually deployed before publication; the member keys at 2.2 are recorded as they arrive**
 **Date: [___]**
 
 ---
@@ -177,7 +177,7 @@ The 72-hour delay may be used **only** where the Committee has voted to declare 
 
 ## Part 6 — The reference rate
 
-MSIG #5 Part E requires this Exhibit to confirm the pair, its precision, and a worked example.
+MSIG #5 Part E requires this Exhibit to confirm the pair, its precision, and a worked example. MSIG #5 Part D adds a worked example of the CoinMarketCap fallback rate (6.5).
 
 | | |
 |---|---|
@@ -210,14 +210,14 @@ The **oracle value, the block number, the transaction id, and the timestamp of t
 
 | Check | Trigger | Effect |
 |---|---|---|
-| **Staleness** | Newest datapoint older than **24 hours** | The Manager may not approve alone; the matter goes to the Committee, which may approve at the ordinary milestone threshold with the staleness recorded, or defer |
+| **Staleness** | Newest datapoint older than **24 hours** | The rate moves to the **fallback rate** in 6.5. Only where the fallback is also unavailable does the matter go to the Committee, which may approve at the ordinary milestone threshold with the staleness recorded, or defer |
 | **Collar** | Approval rate differs by more than **15%** from the rate at the previous payment under that award, or from the award decision rate for the first payment | Same — Committee, not Manager alone |
 
 **A read never fails.** The contract holds 21 rows from the moment a pair is created and modifies them in place. If every oracle stopped submitting, a read would still return a `median`. The timestamp is the only thing distinguishing a live price from a frozen one, which is why it is recorded on every approval whether or not it triggers the check.
 
 ### 6.4 If the pair or the contract disappears
 
-Payments are **suspended**, no new award may be made, and the Committee escalates to MSIG within **5 business days** to designate a replacement source (Framework 13.4a). **The Committee may not substitute a source of its own choosing.** Portal hosting and essential administration are not suspended — the Portal is where the suspension itself has to be published.
+Payments continue at the **fallback rate** in 6.5. They are **suspended**, and no new award may be made, only where the fallback is unavailable too. In either case the Committee escalates to MSIG within **5 business days** to designate a replacement source (Framework 13.4a). **The Committee may not substitute a source of its own choosing.** Portal hosting and essential administration are not suspended — the Portal is where the suspension itself has to be published.
 
 **Monitoring.** The staleness check in 6.3 needs no monitor — it runs at every approval, so a frozen oracle surfaces at the moment it matters. **A missing pair or contract has no such trigger.** Nothing in the program reads the oracle except an approval or an award decision, so if no milestone falls due for three weeks the failure sits undetected for three weeks. This is an **active monitor**, not a check on demand.
 
@@ -231,6 +231,34 @@ Payments are **suspended**, no new award may be made, and the Committee escalate
 | **Escalation if nobody acts** | If no record is published within 1 business day, VS LLC publishes the fact of the alert itself and notifies every member. VS LLC cannot make the 9.2 submission, but it can make sure nobody can later say they did not know |
 
 **A false positive costs an hour; a false negative costs a payment run.** The monitor should alert on doubt — an unreadable table is treated as a failure until a subsequent check clears it, and a cleared alert is logged rather than deleted.
+
+### 6.5 The fallback rate
+
+Set by MSIG #5 Part D and Framework 13.4. It applies where the newest `eosusd` datapoint is more than 24 hours old at a read, or where the pair or the `delphioracle` contract is unavailable, renamed, or deprecated.
+
+| | |
+|---|---|
+| **Source** | **CoinMarketCap**, Vaulta (A), **CoinMarketCap ID 36462** |
+| **Figure** | The **daily average USD price**: the arithmetic mean of the published **high and low** |
+| **Day** | The **UTC calendar day before the date of the read** |
+| **Form** | An integer in millionths of a dollar: fallback = ⌊ (high + low) ÷ 2 × 10^6 ⌋, computed in exact decimal arithmetic from the published figures |
+| **How long it applies** | To every read until the `eosusd` pair has received at least one new datapoint in every 24-hour period for **7 consecutive days**. The Chair records and publishes the day it began and the day the oracle resumed |
+
+**The worked example.**
+
+| Step | Value |
+|---|---|
+| Published high, previous UTC day | USD 0.0781 |
+| Published low, previous UTC day | USD 0.0752 |
+| Daily average — (high + low) ÷ 2 | USD 0.07665 per A |
+| fallback = ⌊ 0.07665 × 10^6 ⌋ | **76,650** |
+| Milestone amount | USD 10,000 — that is **1,000,000 USD-cents** |
+| A-units = ⌊ USD-cents × 10^8 ÷ fallback ⌋ | ⌊ 1,000,000 × 10^8 ÷ 76,650 ⌋ = **1,304,631,441** |
+| **A payable** | **130,463.1441 A** |
+
+**Why millionths, not ten-thousandths.** The oracle is fixed at 4 decimals of a dollar, which at around USD 0.077 is a step of about 0.13% of the price. The fallback is not bound by the oracle's storage format, so it carries 6 decimals and the truncation error is about a hundredth of that. The arithmetic is still integer and truncated, for the same reproducibility reason as 6.1.
+
+**What is recorded at every fallback read.** In place of the oracle value, block number, and transaction id: the timestamp of the newest `eosusd` datapoint, or the fact that the pair or contract could not be read; the CoinMarketCap date; the published high and low; the resulting integer; and a retrieval record of the published figures. CoinMarketCap's daily history is public, so anyone can check the figure afterwards against the date recorded.
 
 ---
 

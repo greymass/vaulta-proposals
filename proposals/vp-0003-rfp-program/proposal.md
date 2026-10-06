@@ -20,6 +20,7 @@ documents:
     - documents/msig-5.md
     - documents/rfp-framework.md
     - documents/exhibit-b-rate-card.md
+    - documents/exhibit-c-trust-agreement-amendments.md
     - documents/exhibit-d-account-configuration.md
     - documents/exhibit-e-seat-appointment.md
     - documents/exhibit-f-schedule-a.md
@@ -34,6 +35,12 @@ revisions:
     - version: 3
       date: 2026-09-30
       summary: Removes the PRD, the Program Administration Register, and the SOP Fit Analysis, which are working documents outside the vote.
+    - version: 4
+      date: 2026-10-06
+      summary: Rewrites the Documents section as a review guide for voters and adds a placeholder explaining the unused Exhibit C.
+    - version: 5
+      date: 2026-10-06
+      summary: Ingests MSIG #5 v6.14, Framework v5.4, Exhibit D v2.4 and Exhibit F v1.8: a CoinMarketCap fallback rate and a 30/10-day long-stop.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding
@@ -41,28 +48,35 @@ revisions:
 
 ## Summary
 
-This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as an expanded Network Steering Committee with a mandate to decide RFP funding, and authorize an on-chain program fund under limits that block producers keep. It consists of seven documents, distributed for review by the VST and block producers and carried here verbatim.
+This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as an expanded Network Steering Committee with a mandate to decide RFP funding, and authorize an on-chain program fund under limits that block producers keep. Its seven documents, distributed for review by the VST and block producers, are carried here verbatim, alongside a placeholder explaining the unused Exhibit C.
 
 The resolution itself states everything being voted on, in full context: read [MSIG #5](documents/msig-5.md).
 
 ## Documents
 
-The resolution and its exhibits:
+The documents are listed in the order a voter should read them, each with a suggested depth of review. Three need careful reading: MSIG #5, Part 1 of the Framework, and the Exhibit B fee table. The rest can be skimmed for the specific points named below.
 
-- [MSIG #5 resolution](documents/msig-5.md): the resolution block producers would approve. Its stated status is DRAFT v6.13, for VST and block producer review.
-- [Vaulta Network RFP Framework](documents/rfp-framework.md): Exhibit A to MSIG #5, the framework its first decision approves. Its stated status is DRAFT v5.3, and it is amendable by the Committee under its own Part 2 rule.
-- [Manager and Reviewer Rate Card and Scope](documents/exhibit-b-rate-card.md): Exhibit B, the rate card for RFP Program Managers and Technical Reviewers. Its stated status is DRAFT v3.4, settled.
-- [Program Account, Permission, and Register Configuration](documents/exhibit-d-account-configuration.md): Exhibit D, the configuration of the Program Account, the Committee Permission, and the `disc.vst` registers, which VS LLC publishes before the Program Account is funded. Its stated status is DRAFT v2.3, a specification whose deployment values are filled before publication.
-- [Seat Appointment MSIG Template](documents/exhibit-e-seat-appointment.md): Exhibit E, the template for the resolutions that fill Committee seats. Its stated status is TEMPLATE v2.1.
-- [Schedule A Templates](documents/exhibit-f-schedule-a.md): Exhibit F, the Schedule A templates for Committee members, Program Managers, Technical Reviewers, and awardees. Its stated status is DRAFT v1.7.
+Read in full:
 
-MSIG #5 attaches Exhibits A, B, D, E, and F. The resolution explains that it has no Exhibit C: the Trust Agreement amendments once attached under that letter are administered off-chain.
+- [MSIG #5 resolution](documents/msig-5.md) (about 67 minutes): the resolution block producers would approve. It continues the Oversight Committee as a five-seat Network Steering Committee, gives it a standing mandate to allocate funds from the `rfp.vst` Program Account, and requests a first transfer of A worth USD 284,375. No funds move until all five seats are filled, every member has signed their contract, filed their disclosure, and registered a signing key, and Exhibit D is published complete. If the Delphi Oracle price goes stale for 24 hours or disappears, payments are priced from a CoinMarketCap fallback (Vaulta, ID 36462: the average of the previous UTC day's high and low), and payments stop only if both sources fail. Its stated status is DRAFT v6.14, for VST and block producer review.
+- [Exhibit A: Vaulta Network RFP Framework](documents/rfp-framework.md) (Part 1, about 85 minutes): the framework the resolution's first decision approves. Part 1 (sections 1 to 16) is the governance rulebook: seats, voting, conflicts, signing, the mandate, spending limits, and suspension, and it is the part to read. Part 2 (sections 17 to 27) is the step-by-step RFP process, and MSIG may amend it later without reopening Part 1; Part 1 governs where the two disagree. Its stated status is DRAFT v5.4.
+- [Exhibit B: Manager and Reviewer Rate Card and Scope](documents/exhibit-b-rate-card.md) (scan the fee tables, about 5 minutes): fees for RFP Program Managers (USD 350 a milestone, or 600 on the assessment variant) and Technical Reviewers (USD 450 a milestone). Committee members serving as Reviewers are capped at 3 concurrent engagements. The figures change only by MSIG. Committee members' own pay is set in MSIG #5, not here. Its stated status is DRAFT v3.4, settled.
+
+Skim for specific points:
+
+- [Exhibit D: Program Account, Permission, and Register Configuration](documents/exhibit-d-account-configuration.md) (about 5 minutes): a technical specification, published by VS LLC before the Program Account is funded. Voters should check the permission design: 4 of 5 Committee signatures to pay and 3 of 5 to cancel, a 7-day delay on payments (3 days if urgent), and owner control kept by block producers at 15 of 21. It also carries worked examples for the oracle rate and the CoinMarketCap fallback rate. Its stated status is DRAFT v2.4; its deployment values are filled before publication.
+- [Exhibit F: Schedule A Templates](documents/exhibit-f-schedule-a.md) (about 10 minutes): contract schedules for Committee members, Program Managers, Technical Reviewers, and awardees under VS LLC's Independent Contractor Agreement, with VS LLC as the contracting party. Most of it is standard contract text. Check four points: Committee pay of USD 2,500 a month, matching MSIG #5; work product vesting in the VST, with a carve-out for pre-existing IP that awaits counsel's confirmation and until then blocks Service and Embedded RFPs; an awardee's right to exit once payments have been suspended for 30 business days, on 10 business days' notice that lapses if payments resume; and the permanent program-wide ban for a material conflict breach, confirmed and lifted only at 15 of 21. Its stated status is DRAFT v1.8.
+
+Reference only:
+
+- [Exhibit E: Seat Appointment MSIG Template](documents/exhibit-e-seat-appointment.md): the required format for the later resolutions that fill Committee seats, each voted on separately. Every candidate needs a network vision statement of 300 to 800 words and declared conflicts. Its stated status is TEMPLATE v2.1.
+- [Exhibit C: Trust Agreement Conforming Amendments](documents/exhibit-c-trust-agreement-amendments.md): a placeholder, with nothing to review. MSIG #5 attaches Exhibits A, B, D, E, and F and has no Exhibit C: the Trust Agreement amendments once attached under that letter are administered off-chain, and the remaining letters are kept so that existing citations stay correct.
 
 A supporting document, published alongside the resolution and not approved by it:
 
-- [Disclosure Questionnaire, Version 1](documents/disclosure-questionnaire.md): the disclosure instrument VS LLC publishes alongside Exhibit D, questionnaire version `VQ1`. Its stated status is DRAFT v1.4, settled.
+- [Disclosure Questionnaire, Version 1](documents/disclosure-questionnaire.md) (skim the disclosure rules, about 5 minutes): the conflict-of-interest form every decision-maker files before taking up a role, published by VS LLC alongside Exhibit D, questionnaire version `VQ1`. The full text of each filing is written permanently to `disc.vst`. Positions are reported only as USD bands, never exact figures; holdings of A are not asked for; and individuals are never named. The Program Account is not funded until every Committee member has filed. Its stated status is DRAFT v1.4, settled.
 
-The `[___]` blanks and draft version lines throughout are the documents as distributed; every document is carried verbatim.
+The `[___]` blanks and draft version lines throughout are the documents as distributed; every distributed document is carried verbatim, and the Exhibit C placeholder is the only document written for this repository.
 
 ## Open Questions
 
