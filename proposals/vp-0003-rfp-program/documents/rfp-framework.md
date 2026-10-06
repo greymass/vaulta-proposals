@@ -1,7 +1,7 @@
 # Vaulta Network RFP Framework
 
 **Exhibit A to MSIG #5**
-**Status: DRAFT v5.3**
+**Status: DRAFT v5.4**
 **Date: [___]**
 
 This is the final RFP Framework required by MSIG #4. It has two parts.
@@ -11,7 +11,7 @@ This is the final RFP Framework required by MSIG #4. It has two parts.
 
 Part 2 may be amended by MSIG without reopening Part 1. **Part 1 governs where the two disagree**, and Part 2 may vary a Part 1 rule **only where Part 1 expressly so provides** — otherwise an amendment to Part 2 could rewrite Part 1 payment mechanics without reopening Part 1, which is what the split exists to prevent. *Terms used throughout* forms part of Part 1.
 
-**Terms used throughout.** *Business day* = Monday to Friday, measured in UTC; no public holidays are excluded, because no single holiday calendar fits a global block producer set. *Reference Rate* = the Delphi Oracle `datapoints.median` for `eosusd`, read at the time of the relevant action and converted per section 13.4. *Award Commitments* = amounts committed to awardees, constrained by the Cycle Ceiling. *Program Costs* = everything the program spends on itself — Committee pay, Manager and Reviewer fees, Portal and administration — constrained by the Program Cost Ceiling. *Program Cost Ceiling* = the per-cycle cap on Program Costs, set in MSIG #5, with internal caps on Committee pay and on everything else. *Total Program Spend* = Award Commitments and Program Costs together. *Committee* = the Vaulta Network Steering Committee. *Threshold* = 15 of 21 active block producers. *Program Account* = the on-chain account holding program funds. *Manager of record* = the RFP Program Manager assigned to one RFP. *Portal* = the RFP portal. *VS LLC* = Vaulta Stewardship LLC. *Delay window* = the on-chain waiting period before a payment executes.
+**Terms used throughout.** *Business day* = Monday to Friday, measured in UTC; no public holidays are excluded, because no single holiday calendar fits a global block producer set. *Reference Rate* = the Delphi Oracle `datapoints.median` for `eosusd`, read at the time of the relevant action and converted per section 13.4, or the fallback rate in 13.4 where it applies. *Award Commitments* = amounts committed to awardees, constrained by the Cycle Ceiling. *Program Costs* = everything the program spends on itself — Committee pay, Manager and Reviewer fees, Portal and administration — constrained by the Program Cost Ceiling. *Program Cost Ceiling* = the per-cycle cap on Program Costs, set in MSIG #5, with internal caps on Committee pay and on everything else. *Total Program Spend* = Award Commitments and Program Costs together. *Committee* = the Vaulta Network Steering Committee. *Threshold* = 15 of 21 active block producers. *Program Account* = the on-chain account holding program funds. *Manager of record* = the RFP Program Manager assigned to one RFP. *Portal* = the RFP portal. *VS LLC* = Vaulta Stewardship LLC. *Delay window* = the on-chain waiting period before a payment executes.
 
 ---
 
@@ -223,7 +223,7 @@ Two-thirds rounded up: 5 seats = 4 votes. 4 seats = 3 votes. 3 seats = 2 votes.
 
 **5.5 The Committee does not vote on milestones.** Milestone approval belongs to the Manager of record (section 11).
 
-**One exception.** Where the staleness or collar check in 13.4 triggers, the **approval for payment** moves to the Committee at simple majority, minimum 3. Even then the Manager's **determination** is not reopened — what the Committee decides is whether to pay at a rate the checks have flagged.
+**One exception.** Where the collar check in 13.4 triggers, or the staleness check triggers and the fallback rate in 13.4 is unavailable, the **approval for payment** moves to the Committee at simple majority, minimum 3. Even then the Manager's **determination** is not reopened — what the Committee decides is whether to pay at a rate the checks have flagged.
 
 **5.6 Recusal.** Where a member has a conflict, recusal is required, not optional. A recused member is excluded from the materials, the quorum, and the count.
 
@@ -807,7 +807,7 @@ The rate is the **`median` field of the `datapoints` table**, scoped to the **`e
 
 Truncation is used because it needs no tie-breaking rule, it is the default of integer division in most languages, and it can never pay more than was reserved. The largest possible difference between rounding rules is 0.0001 A — under one hundredth of a cent. The rule is specified for **reproducibility, not materiality**: the platform, the awardee, and any later auditor must reach the same integer, and floating-point arithmetic is the real hazard, not the choice of rule.
 
-**Payments that are not milestones.** A mobilization advance under 11.7 and a Program Cost payment under 13.3a are not milestones and have no approval of their own. Each converts at the **rate read at the time the payment is proposed**, and the 24-hour staleness check applies to that read in the same way.
+**Payments that are not milestones.** A mobilization advance under 11.7 and a Program Cost payment under 13.3a are not milestones and have no approval of their own. Each converts at the **rate read at the time the payment is proposed**, and the 24-hour staleness check and the fallback rate apply to that read in the same way.
 
 **A note on granularity.** Because the precision is fixed at 4 decimals of a dollar, the smallest step the oracle can express is USD 0.0001. At around USD 0.0766 that is about 0.13% of the price, which is immaterial. If the price of A fell substantially, the same absolute step would become a larger share of it, and the rounding error on a payment would grow with it. The Committee should note this in the cycle report if it becomes material.
 
@@ -819,7 +819,7 @@ Three practical consequences follow from how the contract works:
 | **It keeps no history** | Only 21 rows exist per pair and the oldest is overwritten on each submission. A rate read today cannot be re-read from the table later, so **the approval record must capture the oracle value, the block number, and the transaction id** of the read. That is what makes the figure provable afterwards |
 | **A read never fails, even when the data is old** | The contract holds 21 rows from the moment a pair is created and modifies them in place. It never empties and never errors. If oracles stopped submitting, a read would still return a `median` — just an old one. The timestamp is the only thing that distinguishes a live price from a frozen one |
 
-**Two checks on the rate, both handled the same way.** Neither blocks a payment outright — each moves the decision from the Manager of record to the Committee, which may approve at the ordinary milestone threshold with the fact recorded, or defer.
+**Two checks on the rate.** Neither blocks a payment outright. A stale rate is replaced by the **fallback rate** below. A rate outside the collar, or a stale rate when the fallback is unavailable too, moves the decision from the Manager of record to the Committee, which may approve at the ordinary milestone threshold with the fact recorded, or defer.
 
 | Check | Trigger | Why |
 |---|---|---|
@@ -828,9 +828,19 @@ Three practical consequences follow from how the contract works:
 
 The timestamp of the newest datapoint is **recorded and published with every approval**, whether or not it triggers the check. That costs nothing and makes the age auditable after the fact.
 
-A halt would be the wrong response to a quiet oracle: awardees would go unpaid for something entirely outside their control. Escalation forces a conscious decision instead, on the record.
+A halt would be the wrong response to a quiet oracle: awardees would go unpaid for something entirely outside their control. The fallback keeps payments moving at a rate nobody in the transaction chose, and escalation, where even the fallback is unavailable, forces a conscious decision instead, on the record.
 
-The Exhibit D configuration published by VS LLC under MSIG #5 confirms the pair, precision, and a worked example. The pair is `eosusd` and its `quoted_precision` is 4.
+**The fallback rate.** Where the newest `eosusd` datapoint is more than **24 hours** old at a read, or the pair or the `delphioracle` contract is unavailable, renamed, or deprecated, the rate is the **CoinMarketCap daily average USD price of Vaulta (A), CoinMarketCap ID 36462**, for the **UTC calendar day before the date of the read**. The daily average is the **arithmetic mean of that day's high and low prices** as published by CoinMarketCap. MSIG #5 sets it in advance, so it remains a number supplied by no party to the transaction.
+
+| | |
+|---|---|
+| **How it converts** | fallback = ⌊ (high + low) ÷ 2 × 10^6 ⌋, computed in exact decimal arithmetic from the published figures — an integer in millionths of a dollar. Then **A-units = ⌊ USD-cents × 10^8 ÷ fallback ⌋** |
+| **How long it applies** | Once it applies, it applies to **every read** until the `eosusd` pair has received at least one new datapoint in every 24-hour period for **7 consecutive days**, so that payments do not switch sources back and forth on a recovering oracle. The Chair records and publishes the day the fallback began and the day the oracle resumed |
+| **What is recorded** | In place of the oracle value, block number, and transaction id: the timestamp of the newest `eosusd` datapoint, or the fact that the pair or contract could not be read; the CoinMarketCap date; the published high and low; the resulting integer; and a retrieval record of the published figures |
+| **The collar still applies** | A fallback rate is measured against the rate used at the previous payment under that award, like any other |
+| **If the fallback is unavailable too** | Where CoinMarketCap publishes no high and low for that day, a stale but readable oracle goes to the Committee under the staleness check above, and a missing pair or contract suspends payments under 13.4a |
+
+The Exhibit D configuration published by VS LLC under MSIG #5 confirms the pair, precision, and worked examples for the oracle and the fallback rate. The pair is `eosusd` and its `quoted_precision` is 4.
 
 RFP budgets, award decisions, and approval records are stated in **USD**. The A amount and the rate used are recorded at each payment.
 
@@ -847,11 +857,11 @@ RFP budgets, award decisions, and approval records are stated in **USD**. The A 
 
 **A change in the A amount paid is not a top-up** — it is the peg working. But the **USD amount of an award may never be increased past the Per-Award Limit**, and any increase in a USD award amount needs the award threshold, a contract amendment, publication, and a fresh proposal and delay (section 11.8).
 
-**13.4a If the rate source fails.** The staleness and collar checks in 13.4 assume the oracle is still there and still readable. Loss of the source itself is a different failure and is handled differently.
+**13.4a If the rate source fails.** The staleness and collar checks in 13.4 assume the oracle is still there and still readable. Loss of the source itself is a different failure and is handled differently. The fallback rate in 13.4 carries payments through it while it lasts; this section governs replacing the source, and the suspension that follows only where the fallback is unavailable too.
 
-If the **`eosusd` pair or the `delphioracle` contract becomes unavailable, renamed, or deprecated**, payments are **suspended**. The Committee escalates to MSIG within **5 business days of the failure being recorded and published** under 9.2 — that timing displaces the 10 business days in 9.2 — to designate a replacement rate source. **The Chair records and publishes the failure within 2 business days of any member or VS LLC becoming aware of it**, with the Manager of record on the affected award as alternate; awareness by any one of them is awareness for this purpose. Without that obligation the 5-day clock would never start, while every consequence of the suspension had already begun. **The Committee may not substitute a source of its own choosing.** The whole value of the oracle is that no party to the transaction supplies the number, and a rate the Committee picked would be a rate the paying party picked. Payments resume only on the source MSIG designates, and only for approvals for payment made after the designation; payments already made are not reopened. A designation operates as an **amendment to the Reference Rate definition** in *Terms used throughout*, made under 16.2, and is not caught by the deemed-decline default in 9.2.
+If the **`eosusd` pair or the `delphioracle` contract becomes unavailable, renamed, or deprecated**, payments continue at the **fallback rate in 13.4**, and are **suspended** only where the fallback is unavailable too. In either case the Committee escalates to MSIG within **5 business days of the failure being recorded and published** under 9.2 — that timing displaces the 10 business days in 9.2 — to designate a replacement rate source. **The Chair records and publishes the failure within 2 business days of any member or VS LLC becoming aware of it**, with the Manager of record on the affected award as alternate; awareness by any one of them is awareness for this purpose. Without that obligation the 5-day clock would never start, while every consequence of the suspension had already begun. **The Committee may not substitute a source of its own choosing.** The whole value of the oracle is that no party to the transaction supplies the number, and a rate the Committee picked would be a rate the paying party picked. Suspended payments resume only on the fallback rate in 13.4, once it is available again, or on the source MSIG designates, and only for approvals for payment made after that; payments already made are not reopened. A designation operates as an **amendment to the Reference Rate definition** in *Terms used throughout*, made under 16.2, and is not caught by the deemed-decline default in 9.2.
 
-This is a separate rule from staleness because the contract **never fails a read**. It holds 21 rows from the moment a pair is created and modifies them in place, so a read returns a value whether or not any oracle has submitted recently. A stale rate is caught by the 24-hour timestamp check and escalates within the Committee. A **missing** pair or contract cannot be caught that way at all, and escalates out of the Committee entirely.
+This is a separate rule from staleness because the contract **never fails a read**. It holds 21 rows from the moment a pair is created and modifies them in place, so a read returns a value whether or not any oracle has submitted recently. A stale rate is caught by the 24-hour timestamp check and moves to the fallback rate. A **missing** pair or contract cannot be caught that way at all, and escalates out of the Committee entirely.
 
 **A suspension stops paying and stops awarding. It does not stop working, reviewing, or scoping.** Three things in this Framework need a rate read and none of them can be done without one: the amount payable in an approval record (11.3), the coverage test before every award (13.4), and the oracle figures in a decision record (23.2) — and an incomplete decision record cannot go to contracting.
 
@@ -884,6 +894,7 @@ If a suspension runs long enough that an awardee cannot reasonably continue unpa
 - spending by category against the planned shares;
 - **bounties recorded as sole-source under 26a rule 14**, listed separately with their reasons;
 - **spending by channel — directed RFPs, open call, bounties — as amounts and as shares of the Cycle Ceiling.** There are no sub-limits between the three, so this breakdown is how drift becomes visible. Where bounties exceed **25%** of the awards committed in a cycle, the Committee states why. That is a comply-or-explain trigger, not a cap: block producers can change any limit at the Threshold at any time, and the number they need in order to decide is this one;
+- **any use of the fallback rate under 13.4**, with the day it began, the day the oracle resumed, and the payments it priced;
 - **any suspension of payments under 13.4a**, in every cycle report until it is resolved, with the date it began, the amounts affected, the date MSIG designated a replacement rate source, and the date payments resumed;
 - matters escalated to MSIG and their outcomes;
 - RFP load per Manager, and any reassignments;
@@ -1324,4 +1335,3 @@ These are set in MSIG #5, not here, so they can change without amending this Fra
 | 7 | The **disclosure questionnaire instrument** — **drafted as version `VQ1`**; text, coded-answer schema and position bands complete (section 6.3a). What remains is publication with the register open for filing | **Yes** — the Program Account is not funded until every member has filed, and nobody can file until the register is open |
 | 8 | The **`disc.vst` account and its three registers** — **disclosures** (6.3b), **decisions** and **publications** (7.6a), as three tables in one contract or more: deployment, ABI, both schemas, RAM provisioning (**estimated and settled at Exhibit D 8.6 — 16 MB at launch, VST and VS LLC provisioning and topping up**), the upgrade path, and who signs the writes. **Specified at Exhibit D Parts 7 and 8; to be built and serviced by the EOS Rio team, with VS LLC accountable** and covers it in the Exhibit D configuration under MSIG #5 Part E (PRD section 7.2) | **Yes** — the Program Account is not funded until Exhibit D is published |
 | 10 | **Counsel to confirm section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A (section 23.3a) | **Yes** — until confirmed, no Service or Embedded RFP may be published, and no award may be contracted with a populated pre-existing-IP schedule |
-| 16 | **The suspension long-stop in the Awardee Schedule A** (Exhibit F clause 6) — how many **business days** a payment suspension under 13.4a must run before an awardee may terminate, and the notice period | **Yes** — no awardee agreement can be executed with the two blanks live |

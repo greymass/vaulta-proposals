@@ -1,6 +1,6 @@
 # MSIG #5 — Network Steering Committee, RFP Framework, Program Funding
 
-**Status: DRAFT v6.13 — for VST and block producer review**
+**Status: DRAFT v6.14 — for VST and block producer review**
 **Date: [___]**
 
 ---
@@ -24,7 +24,7 @@ If you read nothing else, read this page.
 | 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
 | 11a | A member engaged as Technical Reviewer under Framework 12.6 also earns rate-card fees **outside** this retainer — see Part H | Limited to **3 concurrent engagements**, not by total fees. Not available until that cap is set |
 | 12 | **Authorize USD 910,000 over four quarterly cycles**, first instalment A worth USD 284,375 | Gross transferred up to USD 966,875 — see note 3 |
-| 13 | **If the price oracle fails**, all payments stop — awardees, Managers, Committee pay alike — **no new awards may be made**, and **only you** may name a replacement rate source | Part D; Framework 13.4a |
+| 13 | **If the price oracle goes stale or fails**, payments are priced from a **CoinMarketCap fallback** set in this Resolution. Only if that fails too do all payments stop — awardees, Managers, Committee pay alike — and **no new awards may be made**. **Only you** may name a permanent replacement rate source | Part D; Framework 13.4, 13.4a |
 
 **What you keep.** Setting every limit above. **Funding the program a year at a time** — the program cannot spend what you have not authorized, and you may change any amount or cycle length at 15/21 at any time. Seating and removing members. Deciding anything above the limits. Cancelling any payment. Suspending or revoking the mandate at any time, without cause.
 
@@ -55,7 +55,7 @@ The RFP program is a **Network program, not a Trust program**. Program funds are
 **Mandate** — the authority granted in Part C.
 **Threshold** — approval by not fewer than 15 of the 21 active block producers.
 **Business day** — Monday to Friday, measured in UTC. No public holidays are excluded, because the block producer set is global and no single holiday calendar applies to it.
-**Reference Rate** — the Delphi Oracle `datapoints.median` for the `eosusd` pair, read at the time of the relevant action and converted as set out in Part D.
+**Reference Rate** — the Delphi Oracle `datapoints.median` for the `eosusd` pair, read at the time of the relevant action and converted as set out in Part D, or, where Part D applies it, the CoinMarketCap fallback rate set out there.
 **Award Commitments** — amounts committed to awardees, constrained by the Cycle Ceiling.
 **Program Costs** — Committee pay, Manager and Reviewer fees, Portal and administration costs.
 **Total Program Spend** — Award Commitments plus Program Costs.
@@ -276,15 +276,21 @@ FURTHER RESOLVED, that the approval record shall include the **oracle value, the
 
 FURTHER RESOLVED, that the approval record shall **always state the timestamp of the newest datapoint**, and that this timestamp shall be published with the approval.
 
-FURTHER RESOLVED, that where that timestamp is older than **24 hours**, the Manager of record **may not approve alone**. The matter goes to the Committee, which may approve at the ordinary milestone threshold with the staleness recorded, or defer until a fresh rate is available.
+FURTHER RESOLVED, that where that timestamp is older than **24 hours**, the rate is the **fallback rate** below. Only where the fallback rate is also unavailable does the Manager of record lose the power to approve alone: the matter then goes to the Committee, which may approve at the ordinary milestone threshold with the staleness recorded, or defer until a rate is available.
 
-FURTHER RESOLVED, that if the `eosusd` pair or the `delphioracle` contract becomes **unavailable, renamed, or deprecated**, payments are suspended and the Committee shall escalate to MSIG within **5 business days** — displacing the ordinary 10 business days for reserved matters — to designate a replacement rate source. Payments do not resume on a substituted source chosen by the Committee.
+FURTHER RESOLVED, that the **fallback rate** is the **CoinMarketCap daily average USD price of Vaulta (A), CoinMarketCap ID 36462**, for the **UTC calendar day before the date of the read**, the daily average being the **arithmetic mean of that day's published high and low prices**; that it applies where the newest `eosusd` datapoint is more than 24 hours old at the read, or where the `eosusd` pair or the `delphioracle` contract is unavailable, renamed, or deprecated; and that it is set here, in advance, so that it remains a rate supplied by **no party to the transaction**.
+
+FURTHER RESOLVED, that the fallback rate is expressed as an integer in millionths of a dollar, **fallback = ⌊ (high + low) ÷ 2 × 10^6 ⌋**, computed in exact decimal arithmetic from the published figures, and that the amount payable at the fallback rate is **A-units = ⌊ USD-cents × 10^8 ÷ fallback ⌋**; and that VS LLC shall publish a worked example of this calculation in Exhibit D alongside the oracle example.
+
+FURTHER RESOLVED, that once the fallback rate applies, it applies to **every read** until the `eosusd` pair has received at least one new datapoint in every 24-hour period for **7 consecutive days**, so that payments do not switch sources back and forth on a recovering oracle; that the Chair records and publishes the day the fallback began and the day the oracle resumed; and that an approval record priced at the fallback rate states, in place of the oracle value, block number, and transaction id, the timestamp of the newest `eosusd` datapoint or the fact that the pair or contract could not be read, the CoinMarketCap date, the published high and low, the resulting integer, and a retrieval record of the published figures.
+
+FURTHER RESOLVED, that if the `eosusd` pair or the `delphioracle` contract becomes **unavailable, renamed, or deprecated**, payments continue at the fallback rate and are suspended only where the fallback rate is also unavailable, and in either case the Committee shall escalate to MSIG within **5 business days** — displacing the ordinary 10 business days for reserved matters — to designate a replacement rate source. Payments do not resume on a substituted source chosen by the Committee.
 
 FURTHER RESOLVED, that a designation of a replacement rate source **operates as an amendment to the Reference Rate definition** in this Resolution and in the Framework, and is **not subject to the deemed-decline default** in the reserved-matters clause below; that payments resume **only for approvals made after the designation** and payments already made are not reopened; that **no new award may be made while payments are suspended**, because both the coverage test and the decision record require a rate read, while scoping, publication, evaluation, and scoring continue; that the suspension reaches **every** payment from the Program Account, including Committee pay and Manager and Reviewer fees, which continue to **accrue** — charged to the cycle in which they accrued — and are paid on resumption at the rate then current, **save that Portal hosting and essential administration are not suspended**, the Portal being where the suspension itself must be published; that a quarterly instalment **into** the Program Account falling due during a suspension is **sized and made on resumption** and is not skipped; and that a suspension **extends**, by its own length, the 60-day contracting clock, any bounty closing date, and any cycle-close cut-off applying to an award not yet contracted (Framework 13.4a).
 
-FURTHER RESOLVED, that this is necessary because the contract **never fails a read**. It holds 21 rows from the moment a pair is created and modifies them in place, so a read returns a value whether or not any oracle has submitted a price recently. A stale rate is indistinguishable from a current one except by its timestamp, and no other source is substituted for it.
+FURTHER RESOLVED, that this is necessary because the contract **never fails a read**. It holds 21 rows from the moment a pair is created and modifies them in place, so a read returns a value whether or not any oracle has submitted a price recently. A stale rate is indistinguishable from a current one except by its timestamp, which is why the timestamp, and not a failed read, is what moves a payment to the fallback rate.
 
-FURTHER RESOLVED, that where the oracle rate at approval differs by more than **15%** from the rate used at the **previous payment under that award** — or, for the first payment, from the rate recorded at the award decision — the Manager of record **may not approve alone**. The matter goes to the Committee, which may approve at the ordinary milestone threshold or defer. This bounds the effect of a momentary price movement on the program's A outflow.
+FURTHER RESOLVED, that where the rate at approval, from the oracle or the fallback, differs by more than **15%** from the rate used at the **previous payment under that award** — or, for the first payment, from the rate recorded at the award decision — the Manager of record **may not approve alone**. The matter goes to the Committee, which may approve at the ordinary milestone threshold or defer. This bounds the effect of a momentary price movement on the program's A outflow.
 
 **Coverage: the program must hold enough A to meet its USD commitments**
 
@@ -577,7 +583,6 @@ The MSIG takes effect on execution, so there is no effective date to fill. **Eve
 | 8 | The **disclosure questionnaire instrument** (Framework 6.3a). **Drafted as version `VQ1`** — text, coded-answer schema and position bands complete. What remains is **publication by VS LLC with the register open for filing**, with **no open questions** remaining in it. **Blocking — the Program Account is not funded until every member has filed, and nobody can file until the register is open** | E |
 | 9 | The **`disc.vst` register** — account, all three registers (**disclosures**, **decisions** and **publications**; three tables, one contract or more), both schemas, RAM provisioning (**settled: 16 MB at launch, provisioned and topped up by the VST and VS LLC — Exhibit D 8.6**), upgrade authority, and the writing authority, to be covered in Exhibit D (Framework 6.3b, 7.6a). **To be built and serviced by the EOS Rio team; VS LLC remains accountable.** **Blocking — the Program Account is not funded until Exhibit D is published** | E |
 | 11 | **Counsel confirmation that section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A. **Blocking — until confirmed, no Service or Embedded RFP may be published and no award may be contracted with a populated pre-existing-IP schedule** (Part G) | G, F |
-| 16 | **The suspension long-stop in the Awardee Schedule A** (Exhibit F clause 6) — how many **business days** a payment suspension under Framework 13.4a must run before an awardee may terminate, and the notice period. Counsel to confirm the term itself. **Blocking — no awardee agreement can be executed while the two blanks are live** | F |
 
 ## Notes for review
 
