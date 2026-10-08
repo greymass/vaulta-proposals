@@ -65,13 +65,13 @@ It also reconstitutes the Oversight Committee as the Steering Committee, gives t
 
 ### Part A — Approve the Framework
 
-RESOLVED, that the active block producers **approve the Vaulta Network RFP Framework** attached as **Exhibit A**, which satisfies the requirement in MSIG #4 that the final Framework — covering eligibility, evaluation, conflicts, records, proposal intake, awards, and funding mechanics — be approved by at least 15 of 21 active block producers before implementation.
+This proposal approves the Vaulta Network RFP Framework in Exhibit A, which sets rules for eligibility, applications, evaluation, conflicts of interest, recordkeeping, awards, and funding. MSIG #4 required that at least 15 of the 21 active block producers approve this Framework before it could be used.
 
-FURTHER RESOLVED, that the working group convened under MSIG #4 is **discharged**, having delivered the Framework.
+It discharges the working group established under MSIG #4, which has completed its work.
 
-FURTHER RESOLVED, that the **Portal** is the canonical place for publishing RFPs, the needs backlog, award decisions, the objection register, minutes, and cycle reports; and that **VS LLC** maintains and administers it, as contemplated by MSIG #4.
+It establishes the Portal as the official place for publishing RFPs, the needs backlog, award decisions, the objection register, meeting minutes, and cycle reports. VS LLC maintains and administers it.
 
-FURTHER RESOLVED, that the Framework may be amended by MSIG Resolution, and that **Part 2 of the Framework may be amended without reopening Part 1**.
+It allows the Framework to be amended by MSIG Resolution, and for **Part 2 of the Framework to be amended without reopening Part 1**.
 
 ### Part B — The Steering Committee
 
