@@ -44,8 +44,6 @@ MSIG #4 authorized a working group to write an RFP Framework, and required that 
 
 It also reconstitutes the Oversight Committee as the Steering Committee, gives that Committee a bounded mandate to make RFP funding decisions for the Network, and asks the Treasury to fund the program.
 
-The RFP program is a **Network program, not a Trust program**. Program funds are not Trust Property. The Trustee has no role in it. The Trust and VS LLC provide defined support only.
-
 ## Definitions
 
 **Committee** — the Vaulta Network Steering Committee.
