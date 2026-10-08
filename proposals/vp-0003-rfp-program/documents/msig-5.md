@@ -52,8 +52,8 @@ It also reconstitutes the Oversight Committee as the Steering Committee, gives t
 **Committee Permission** — the multisignature permission through which the Committee moves those funds.
 **Mandate** — the authority granted in Part C.
 **Threshold** — approval by not fewer than 15 of the 21 active block producers.
-**Business day** — Monday to Friday, measured in UTC. No public holidays are excluded, because the block producer set is global and no single holiday calendar applies to it.
-**Reference Rate** — the Delphi Oracle `datapoints.median` for the `eosusd` pair, read at the time of the relevant action and converted as set out in Part D, or, where Part D applies it, the CoinMarketCap fallback rate set out there.
+**Business day** — Monday to Friday in UTC, including public holidays.
+**Reference Rate** — the rate used to convert USD amounts into A at the time of the relevant action, using the Delphi Oracle or the CoinMarketCap fallback as specified in Part D.
 **Award Commitments** — amounts committed to awardees, constrained by the Cycle Ceiling.
 **Program Costs** — Committee pay, Manager and Reviewer fees, Portal and administration costs.
 **Total Program Spend** — Award Commitments plus Program Costs.
