@@ -11,7 +11,7 @@ One proposal may name **one candidate for one seat**, a **full slate** of the fo
 
 Block producers may approve more than one proposal covering the same seat. Where more than one reaches 15 of 21, **the seat goes to whichever proposal executes first by block time**.
 
-**Seats resolve independently by default.** A proposal that names four seats and executes when one of them is already filled seats the other three, and has no effect for the filled one. Where the combination matters — because the candidates were chosen to balance each other — mark the proposal **all-or-nothing** in the field below, and it will have no effect at all if **any** named seat fails for **any** of the conditions listed in the Resolved Clauses, not only because it is already filled.
+**Seats resolve independently by default.** A proposal that names four seats and executes when one of them is already filled seats the other three, and has no effect for the filled one. Where the combination matters — because the candidates were chosen to balance each other — mark the proposal **all-or-nothing** in the field below, and it will have no effect at all if **any** named seat fails for **any** of the conditions listed in the Decisions section, not only because it is already filled.
 
 **Row order is priority order.** If two candidates in the same proposal conflict with each other — the same person named twice, or two people from the same organization — the seats are tested in the order the rows appear in the Candidates table. The first takes effect; the later has no effect. Order the rows deliberately, and reorder them if the default order is not the priority you want.
 
@@ -66,7 +66,7 @@ MSIG #5 Part B sets out what makes an Exhibit E proposal complete. **A proposal 
 | 6 | Included **relevant background and declared conflicts** for each candidate |
 | 7 | Confirmed no candidate already holds a seat, that none breaches the **one-member-per-affiliation rule** against a sitting member or another candidate here, and that none appears on the **published register of bans** |
 
-Completeness is not the same as effect. A complete proposal can still have no effect for a seat on the grounds in the Resolved Clauses, tested at the moment of execution.
+Completeness is not the same as effect. A complete proposal can still have no effect for a seat on the grounds in the Decisions section, tested at the moment of execution.
 
 ## Network vision statement — one per candidate
 
@@ -87,21 +87,21 @@ Completeness is not the same as effect. A complete proposal can still have no ef
 
 **Community seat:** where the ECF process already produced a candidate statement covering this ground, file that instead — there is no need to write a second one.
 
-## Resolved Clauses
+## Decisions
 
-RESOLVED, that each individual named above is appointed to the seat shown against their name on the Vaulta Network Steering Committee, for the initial term shown, in accordance with MSIG #5 Part B — and, for the Community seat, Part F — and the Vaulta Network RFP Framework.
+This proposal appoints each named individual to the Vaulta Network Steering Committee seat and initial term shown above, under MSIG #5 Part B, Part F for the Community seat, and the Vaulta Network RFP Framework.
 
 *Terms for the four staggered seats run from the date funds are received in the Program Account, not from the execution of this Resolution. Those seats may be filled by Resolutions executing at different times, and a common anchor is what keeps the stagger intact.*
 
-FURTHER RESOLVED, that each appointment authorizes the member to **continue serving month to month** after the initial term ends, keeping their signing weight on the Program Account, until a successor is seated or MSIG replaces them.
+It allows each member to **continue serving month to month** after the initial term ends, retaining their Program Account signing weight until a successor is seated or MSIG replaces them.
 
 **How this Resolution interacts with competing proposals**
 
-FURTHER RESOLVED, that **under seat-by-seat resolution** each seat named above is treated independently: an appointment has **no effect** for a seat that is already filled by an earlier executed Resolution, and takes effect normally for every other seat named.
+In **seat-by-seat mode**, each named seat is considered independently. An appointment **has no effect** if an earlier executed Resolution has already filled that seat. Other appointments take effect normally.
 
-FURTHER RESOLVED, that **under all-or-nothing resolution**, where that mode is marked above, this Resolution has **no effect for any seat** if any seat it names would not be filled by it for any of the conditions below — not only where a seat is already filled.
+In **all-or-nothing mode**, if selected above, this Resolution **has no effect for any seat** if any of the grounds below applies to any named seat, including a seat being already filled.
 
-FURTHER RESOLVED, that an appointment has **no effect** for a given seat if, at the moment of execution:
+An appointment **has no effect** for a given seat if, **at execution**:
 
 1. that seat is already filled by an earlier executed appointment;
 2. the named individual already holds another Steering Committee seat;
@@ -109,23 +109,25 @@ FURTHER RESOLVED, that an appointment has **no effect** for a given seat if, at 
 4. they are **affiliated with the Vaulta Treasury**, absent an express MSIG waiver at the Threshold;
 5. they appear on the **published register of bans** maintained by VS LLC.
 
-FURTHER RESOLVED, that where this Resolution names the **same individual for more than one seat**, or names **two candidates who conflict with each other under the affiliation rule**, the seats are tested **in the order the rows appear in the Candidates table above**: the appointment takes effect for the first and has **no effect** for the later.
+If this Resolution names **the same person for multiple seats**, or **two candidates who conflict under the affiliation rule**, seats are tested **in Candidates table order**. The first appointment takes effect; the later one **has no effect**.
 
-FURTHER RESOLVED, that within **30 days** of this Resolution each member shall:
+Each member must complete these steps within **30 days**, calculated as explained below:
 
 1. sign an engagement contract with Vaulta Stewardship LLC;
 2. **file the standard disclosure questionnaire on-chain** under Framework 6.3a and 6.3b — this is the conflict-of-interest declaration, not an additional item;
-3. deliver a signing key for the Program Account permission,
+3. deliver a signing key for the Program Account permission.
 
-and that **pay and signing weight begin only when all three are complete**. The 30 days run from the **later of** execution of this Resolution and the date VS LLC publishes the disclosure register as open for filing. If they are not complete within that period, MSIG may replace that appointee by a further Resolution. Funding of the Program Account is blocked until all five members have complied, so an incomplete appointment holds up the whole program.
+**Pay and signing weight begin only when all three are complete**. The 30 days run from the **later of** execution of this Resolution and the date VS LLC publishes the disclosure register as open for filing. If they are not complete within that period, MSIG may replace that appointee by a further Resolution. Funding of the Program Account is blocked until all five members have complied, so an incomplete appointment holds up the whole program.
 
-FURTHER RESOLVED, that each member accepts the obligations in the Framework, including personal key custody with no sharing or delegation, mandatory recusal on conflicts, confidentiality of proposal contents, and the bar on bidding for any Vaulta RFP during the term and for **6 months** afterwards.
+Each member accepts the Framework's obligations: personal key custody without sharing or delegation, mandatory recusal for conflicts, confidentiality of proposal contents, and no bidding on any Vaulta RFP during their term or for **6 months afterwards**.
 
-FURTHER RESOLVED, that each member acknowledges that a **material breach of the conflict-of-interest rules carries a permanent ban** from every role in and every payment from the RFP program, confirmed at the Threshold and liftable only at the same Threshold, as set out in Framework section 6.6.
+Each member acknowledges that a **material conflict-of-interest breach carries a permanent ban** from every program role and payment, as set out in Framework section 6.6. The ban must be confirmed **at the Threshold** and may be lifted **only at the same Threshold**.
 
-FURTHER RESOLVED, that MSIG may **remove any member at any time, with or without cause**, and that removal ends their signing weight immediately.
+MSIG may **remove any member at any time, with or without cause**. Removal ends their signing weight immediately.
 
-FURTHER RESOLVED, that VS LLC shall record each appointment in the **published seat register** on the Portal, with the proposal name, the execution transaction, a **link to that member's network vision statement**, this Resolution's **resolution mode**, and **any seat this Resolution named but did not fill, together with the reason**; and that the register is a record of what was executed and **not a determination of eligibility** — where VS LLC records a seat as unfilled on any ground other than an earlier execution, it publishes its reasons and refers the matter to MSIG, and the seat is treated as vacant until MSIG resolves it.
+VS LLC must record each appointment in the **published seat register on the Portal**, including the proposal name, execution transaction, **link to the member's network vision statement**, this Resolution's **resolution mode**, and **any named seat it did not fill, with the reason**.
+
+The register records what was executed; it **does not determine eligibility**. If VS LLC records a seat as unfilled for a reason other than an earlier execution, it must publish its reasons and refer the matter to MSIG. The seat remains **vacant until MSIG resolves it**.
 
 ---
 
