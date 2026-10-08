@@ -75,11 +75,11 @@ It allows the Framework to be amended by MSIG Resolution, and for **Part 2 of th
 
 ### Part B — The Steering Committee
 
-RESOLVED, that the **Oversight Committee is renamed the Vaulta Network Steering Committee**, is the same body continued, and that every reference to the "Oversight Committee" in the Trust Agreement, in any prior MSIG, in the VS LLC Operating Agreement, or in any other Trust document is read as a reference to it.
+This proposal renames the Oversight Committee the **Vaulta Network Steering Committee**. It remains the same body. References to its old name in the Trust Agreement, prior MSIGs, the VS LLC Operating Agreement, and other Trust documents refer to the renamed Committee.
 
-FURTHER RESOLVED, that the Committee is **increased from 3 seats to 5**, with the seats, portfolios, and category assignments set out in Framework Part 1, section 2.
+It expands the Committee from **3 seats to 5**, with each seat’s responsibilities and categories defined in Framework Part 1, section 2.
 
-FURTHER RESOLVED, that the Committee keeps in full its **Trust oversight responsibilities**, and that its RFP work is a separate Network capacity, as set out in Framework Part 1, section 1.
+It preserves all the Committee’s **Trust oversight responsibilities**. Its RFP work is a separate role on behalf of the Network, as defined in Framework Part 1, section 1.
 
 **Terms**
 
