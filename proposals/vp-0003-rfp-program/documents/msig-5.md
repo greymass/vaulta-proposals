@@ -69,25 +69,25 @@ This proposal approves the Vaulta Network RFP Framework in Exhibit A, which sets
 
 It discharges the working group established under MSIG #4, which has completed its work.
 
-It establishes the Portal as the official place for publishing RFPs, the needs backlog, award decisions, the objection register, meeting minutes, and cycle reports. It assigns maintenance and administration of the Portal to VS LLC.
+It establishes the Portal as the official place for publishing RFPs, the needs backlog, award decisions, the objection register, meeting minutes, and cycle reports, and it assigns maintenance and administration of the Portal to VS LLC.
 
 It allows the Framework to be amended by MSIG Resolution, and for **Part 2 of the Framework to be amended without reopening Part 1**.
 
 ### Part B — The Steering Committee
 
-This proposal renames the Oversight Committee the **Vaulta Network Steering Committee**. It continues the same Committee body. It applies the new name to references in the Trust Agreement, prior MSIGs, the VS LLC Operating Agreement, and other Trust documents.
+This proposal renames the Oversight Committee the **Vaulta Network Steering Committee**; it continues the same Committee body; and it applies the new name to references in the Trust Agreement, prior MSIGs, the VS LLC Operating Agreement, and other Trust documents.
 
 It expands the Committee from **3 seats to 5**, with each seat’s responsibilities and categories defined in Framework Part 1, section 2.
 
-It preserves all the Committee’s **Trust oversight responsibilities**. It assigns the Committee a separate RFP role on behalf of the Network, as defined in Framework Part 1, section 1.
+It preserves all the Committee’s **Trust oversight responsibilities**, and it assigns the Committee a separate RFP role on behalf of the Network, as defined in Framework Part 1, section 1.
 
 **Terms**
 
-This proposal sets a **one-year Committee term**. It allows members to be reappointed at the Threshold without limit. It allows members whose terms have ended to continue serving month to month and **keep their signing key** until a successor is seated or MSIG replaces them.
+This proposal sets a **one-year Committee term**; it allows members to be reappointed at the Threshold without limit; and it allows members whose terms have ended to continue serving month to month and **keep their signing key** until a successor is seated or MSIG replaces them.
 
-It **sets** a term rather than extending one, because the vstcreation MSIG appointed the original Oversight Committee members **without stating a term length**. It specifies that these terms replace MSIG #2's reference to "the remainder of Dario Cesaro's Initial Term".
+It **sets** a term rather than extending one, because the vstcreation MSIG appointed the original Oversight Committee members **without stating a term length**, and it specifies that these terms replace MSIG #2's reference to "the remainder of Dario Cesaro's Initial Term".
 
-It sets the initial terms of the **Core Development, Marketing, Business Development, and General (At-Large) seats to begin when funds are received in the Program Account**, rather than when each appointment MSIG executes. It specifies that a **Community seat filled by MSIG**, whether seating an ECF winner or filling the seat under Part F, runs for one year from execution of that appointment Resolution.
+It sets the initial terms of the **Core Development, Marketing, Business Development, and General (At-Large) seats to begin when funds are received in the Program Account**, rather than when each appointment MSIG executes, and it specifies that a **Community seat filled by MSIG**, whether seating an ECF winner or filling the seat under Part F, runs for one year from execution of that appointment Resolution.
 
 The four seats may be filled by Resolutions that execute at different times. If each term ran from its own execution, the stagger would drift and could collapse — a Business Development member seated six months after Core Development would finish an 8-month term at the same moment Core Development finished a 14-month one. A single anchor keeps the intended spacing. It also means no member's term runs down while the Committee is waiting to be completed, and it uses the same date as the cycle and pay clocks.
 
@@ -101,23 +101,23 @@ It staggers the initial terms as follows:
 | General (At-Large) | **8** months |
 | Community | See Part F |
 
-It authorizes MSIG to **remove a member at any time, with or without cause**. It ends their signing weight immediately on removal.
+It authorizes MSIG to **remove a member at any time, with or without cause**, and it ends their signing weight immediately on removal.
 
 **Appointments**
 
-It records that the vstcreation MSIG appointed Dario Cesaro (EOS Support), Dafeng Guo (Vaulta Treasury), and Francis Sangkuan (1DEX) to the original Oversight Committee. It records that MSIG #2 replaced Dario Cesaro with **Ross Dold (EOSphere)**. It identifies Dafeng Guo, Francis Sangkuan, and Ross Dold as the current members.
+It records that the vstcreation MSIG appointed Dario Cesaro (EOS Support), Dafeng Guo (Vaulta Treasury), and Francis Sangkuan (1DEX) to the original Oversight Committee; it records that MSIG #2 replaced Dario Cesaro with **Ross Dold (EOSphere)**; and it identifies Dafeng Guo, Francis Sangkuan, and Ross Dold as the current members.
 
-It carries over **only Francis Sangkuan (1DEX)** into a Steering Committee seat. It gives him the **Community seat** on an interim basis under Part F.
+It carries over **only Francis Sangkuan (1DEX)** into a Steering Committee seat, and it gives him the **Community seat** on an interim basis under Part F.
 
 **How the four remaining seats get filled**
 
-This proposal **does not fill the Core Development, Marketing, Business Development, or At-Large seats**. It requires separate MSIG Resolutions to fill them using **Exhibit E**. It allows each to name **one candidate for one seat, a full slate of four, or any subset**.
+This proposal **does not fill the Core Development, Marketing, Business Development, or At-Large seats**; it requires separate MSIG Resolutions to fill them using **Exhibit E**; and it allows each to name **one candidate for one seat, a full slate of four, or any subset**.
 
-It names no candidates for those four seats; that omission **does not make it incomplete**. It sets the process, eligibility tests, and proposal format. It requires **candidates to be considered separately, on their own merits, in a separate Resolution at the Threshold**. It seats only the interim Community seat holder under Part F. It lets block producers decide on the rules and the people separately.
+It names no candidates for those four seats; that omission **does not make it incomplete**; it sets the process, eligibility tests, and proposal format; it requires **candidates to be considered separately, on their own merits, in a separate Resolution at the Threshold**; it seats only the interim Community seat holder under Part F; and it lets block producers decide on the rules and the people separately.
 
 **What makes an Exhibit E proposal complete**
 
-It requires an Exhibit E proposal to include all of the following. It treats a proposal missing any item as **incomplete and asks block producers to decline it rather than approve it and correct it later**:
+It requires an Exhibit E proposal to include all of the following, and it treats a proposal missing any item as **incomplete and asks block producers to decline it rather than approve it and correct it later**:
 
 | # | Requirement |
 |---|---|
@@ -129,22 +129,22 @@ It requires an Exhibit E proposal to include all of the following. It treats a p
 | 6 | **Relevant background and declared conflicts** for each candidate |
 | 7 | Confirmation that no candidate **already holds a seat**, that seating them would not breach the **one-member-per-affiliation rule** against a sitting member or against another candidate in the same proposal, and that no candidate appears on the **published register of bans** |
 
-It clarifies that **completeness does not guarantee that an appointment takes effect**. It specifies that even a complete proposal has no effect for a seat if any of the five grounds below applies at execution. It specifies that an incomplete proposal that executes is **not void**; the consequences in this Part apply, and the member must file the missing items before pay and signing weight begin.
+It clarifies that **completeness does not guarantee that an appointment takes effect**; it specifies that even a complete proposal has no effect for a seat if any of the five grounds below applies at execution; and it specifies that an incomplete proposal that executes is **not void**; the consequences in this Part apply, and the member must file the missing items before pay and signing weight begin.
 
-It allows **anyone to propose** an Exhibit E Resolution. It leaves candidate searches, community consultation, and slate preparation **off-chain**. It specifies that neither this proposal nor VS LLC controls who may be put forward.
+It allows **anyone to propose** an Exhibit E Resolution; it leaves candidate searches, community consultation, and slate preparation **off-chain**; and it specifies that neither this proposal nor VS LLC controls who may be put forward.
 
-It requires every appointment proposal to include a **network vision statement for each candidate**, written by that candidate about their seat's portfolio (Framework 3.1a). It requires each statement to explain what the Network needs over the term, **what they would prioritize funding and what they would decline**, how they would judge the program's success, and any position block producers should know about. It directs candidates to declare interests in the disclosure questionnaire. It asks for roughly **300 to 800 words in plain language**, with a translation where helpful. It requires each statement to be **published with the proposal and linked from the seat register** for the term.
+It requires every appointment proposal to include a **network vision statement for each candidate**, written by that candidate about their seat's portfolio (Framework 3.1a); it requires each statement to explain what the Network needs over the term, **what they would prioritize funding and what they would decline**, how they would judge the program's success, and any position block producers should know about; it directs candidates to declare interests in the disclosure questionnaire; it asks for roughly **300 to 800 words in plain language**, with a translation where helpful; and it requires each statement to be **published with the proposal and linked from the seat register** for the term.
 
-It treats a proposal without a vision statement as **incomplete and asks block producers to decline it**. It specifies that the omission does **not** void an appointment, avoiding a penalty for the proposer's failure. It specifies that if the proposal executes anyway, the member must **file their statement before pay and signing weight begin**, alongside the contract, questionnaire, and signing key required below.
+It treats a proposal without a vision statement as **incomplete and asks block producers to decline it**; it specifies that the omission does **not** void an appointment, avoiding a penalty for the proposer's failure; and it specifies that if the proposal executes anyway, the member must **file their statement before pay and signing weight begin**, alongside the contract, questionnaire, and signing key required below.
 
-It makes the vision statement **non-binding** so members can respond to changing circumstances. It identifies the statement as a reference for reappointment and asks members seeking another term to explain how the year compared with their statement.
+It makes the vision statement **non-binding** so members can respond to changing circumstances, and it identifies the statement as a reference for reappointment and asks members seeking another term to explain how the year compared with their statement.
 
-It applies every rule in this Part **per seat, rather than per proposal**. It requires each Exhibit E proposal to state one of two **resolution modes**:
+It applies every rule in this Part **per seat, rather than per proposal**, and it requires each Exhibit E proposal to state one of two **resolution modes**:
 
 1. **Seat by seat** — the default. Each seat named is treated independently, so a Resolution naming several seats takes effect for those that are open and has no effect for those already filled;
 2. **All or nothing** — where marked, the Resolution has **no effect for any seat** if any of the five grounds listed below applies to any seat it names, including a seat being already filled.
 
-It allows block producers to support multiple candidates by approving multiple proposals. It specifies that if more than one proposal for a seat reaches the Threshold, the appointment whose **execution transaction has the earliest block time** fills it.
+It allows block producers to support multiple candidates by approving multiple proposals, and it specifies that if more than one proposal for a seat reaches the Threshold, the appointment whose **execution transaction has the earliest block time** fills it.
 
 It applies the following rules once a seat is filled:
 
@@ -159,11 +159,11 @@ It gives an appointment **no effect for a given seat** if any of the following a
 4. they are **affiliated with the Vaulta Treasury**, absent an express waiver at the Threshold;
 5. they appear on the **published register of bans**.
 
-It requires seats to be tested **in Candidates table order** if a Resolution names the same person for multiple seats or two candidates who would breach the affiliation rule against each other. It specifies that the first appointment takes effect; the later one **has no effect**. It lets the proposer set priority through the table's row order.
+It requires seats to be tested **in Candidates table order** if a Resolution names the same person for multiple seats or two candidates who would breach the affiliation rule against each other; it specifies that the first appointment takes effect; the later one **has no effect**; and it lets the proposer set priority through the table's row order.
 
-It requires **VS LLC to maintain a published seat register on the Portal**. It requires VS LLC to record, for each seat, the member's **name and on-chain account**, proposal name, execution transaction, **link to their network vision statement**, and the proposal's **resolution mode**. It requires VS LLC to record **any seat named but not filled, and why**. It specifies that executed appointments may have no effect when proposals compete; the register is the canonical record of what was executed.
+It requires **VS LLC to maintain a published seat register on the Portal**; it requires VS LLC to record, for each seat, the member's **name and on-chain account**, proposal name, execution transaction, **link to their network vision statement**, and the proposal's **resolution mode**; it requires VS LLC to record **any seat named but not filled, and why**; and it specifies that executed appointments may have no effect when proposals compete; the register is the canonical record of what was executed.
 
-It clarifies that the register **does not determine eligibility**. It specifies that if VS LLC records a seat as unfilled for any reason other than an earlier execution, it must **publish its reasons and refer the matter to MSIG**. It keeps the seat **vacant until MSIG decides the matter**. It gives VS LLC no authority to decide eligibility.
+It clarifies that the register **does not determine eligibility**; it specifies that if VS LLC records a seat as unfilled for any reason other than an earlier execution, it must **publish its reasons and refer the matter to MSIG**; it keeps the seat **vacant until MSIG decides the matter**; and it gives VS LLC no authority to decide eligibility.
 
 It allows a further MSIG Resolution to correct an appointment executed in error.
 
@@ -181,15 +181,15 @@ It establishes the following seats and initial terms:
 
 It continues the temporary service of **Dafeng Guo (Vaulta Treasury)** and **Ross Dold (EOSphere)** alongside Francis Sangkuan **in the original Oversight Committee's capacity**, until MSIG fills the four seats above.
 
-It limits their transition service to **the former Oversight Committee's Trust oversight responsibilities**. It specifies that **the RFP mandate cannot be exercised, no RFP may be published, and no award may be made** until the Committee is constituted.
+It limits their transition service to **the former Oversight Committee's Trust oversight responsibilities**, and it specifies that **the RFP mandate cannot be exercised, no RFP may be published, and no award may be made** until the Committee is constituted.
 
-It makes **Dafeng Guo and Ross Dold's transition service unpaid**. It specifies that a member appointed before the Program Account is funded **accrues no retainer** before funding. It specifies that pay begins at the later of contract signature and funding, as set out in Part J.
+It makes **Dafeng Guo and Ross Dold's transition service unpaid**; it specifies that a member appointed before the Program Account is funded **accrues no retainer** before funding; and it specifies that pay begins at the later of contract signature and funding, as set out in Part J.
 
-This proposal **sets no deadline for filling the four seats**; block producers determine the timing. It specifies that until all five seats are filled, no RFP may be published, no award may be made, and the Program Account may not be funded.
+This proposal **sets no deadline for filling the four seats**; block producers determine the timing, and it specifies that until all five seats are filled, no RFP may be published, no award may be made, and the Program Account may not be funded.
 
-It ends **Dafeng Guo and Ross Dold's service when the four seats are filled**. It allows Ross Dold to be separately appointed to a seat. It specifies that Dafeng Guo is ineligible while affiliated with the Vaulta Treasury unless MSIG expressly waives that restriction. It recognizes and thanks them for their transition service.
+It ends **Dafeng Guo and Ross Dold's service when the four seats are filled**; it allows Ross Dold to be separately appointed to a seat; it specifies that Dafeng Guo is ineligible while affiliated with the Vaulta Treasury unless MSIG expressly waives that restriction; and it recognizes and thanks them for their transition service.
 
-It prohibits **funding the Program Account or activating the Committee Permission until all five seats are filled** and every member has signed their engagement contract, filed the standard disclosure questionnaire on-chain under Framework 6.3a, and registered a signing key. It specifies that the permission requires four of five signatures, so a three-member body cannot operate it.
+It prohibits **funding the Program Account or activating the Committee Permission until all five seats are filled** and every member has signed their engagement contract, filed the standard disclosure questionnaire on-chain under Framework 6.3a, and registered a signing key, and it specifies that the permission requires four of five signatures, so a three-member body cannot operate it.
 
 It requires **Dafeng Guo's Vaulta Treasury affiliation** to remain recorded as a standing disclosure throughout his transition service.
 
@@ -199,35 +199,35 @@ It excludes anyone **affiliated with the Vaulta Treasury** from holding a Steeri
 
 It defines "affiliated with the Vaulta Treasury" as being its employee, officer, or director; providing services to it under contract; holding authority over Treasury funds; or otherwise acting under its direction on treasury functions.
 
-It adopts this exclusion in line with the Treasury's stated position that it will not participate in allocation decisions after transferring funds to the Network. It protects both the Treasury and the program from the appearance of Treasury direction. It allows **MSIG to expressly waive the default exclusion at the Threshold, with published reasons**. It requires a deliberate decision for a waiver.
+It adopts this exclusion in line with the Treasury's stated position that it will not participate in allocation decisions after transferring funds to the Network; it protects both the Treasury and the program from the appearance of Treasury direction; it allows **MSIG to expressly waive the default exclusion at the Threshold, with published reasons**; and it requires a deliberate decision for a waiver.
 
-It keeps **the transition arrangement unchanged**. It specifies that Dafeng Guo continues alongside Ross Dold and Francis Sangkuan in the original Oversight Committee's Trust oversight role until the four seats are filled. It specifies that that service does not include the RFP mandate and ends when the seats are filled.
+It keeps **the transition arrangement unchanged**; it specifies that Dafeng Guo continues alongside Ross Dold and Francis Sangkuan in the original Oversight Committee's Trust oversight role until the four seats are filled; and it specifies that that service does not include the RFP mandate and ends when the seats are filled.
 
-It prohibits two members from being connected to the same block producer, company, or corporate group. It requires each member to sign their engagement contract, **file the standard disclosure questionnaire on-chain** under Framework 6.3a and 6.3b, and register their signing key within **30 days**. It specifies that the questionnaire is the conflict declaration, not an additional document. It starts **pay and signing weight only after all three are complete**. It specifies that the 30 days run from the **later of** appointment execution and VS LLC publishing that the disclosure register is open for filing.
+It prohibits two members from being connected to the same block producer, company, or corporate group; it requires each member to sign their engagement contract, **file the standard disclosure questionnaire on-chain** under Framework 6.3a and 6.3b, and register their signing key within **30 days**; it specifies that the questionnaire is the conflict declaration, not an additional document; it starts **pay and signing weight only after all three are complete**; and it specifies that the 30 days run from the **later of** appointment execution and VS LLC publishing that the disclosure register is open for filing.
 
 ### Part C — The Mandate
 
-This proposal grants the Committee a **standing mandate to allocate Program Account funds on behalf of the Vaulta Network** under the Framework. It removes **block-producer votes on individual RFPs or awards**. It treats a recorded Committee decision within Part D's limits as the Network's decision.
+This proposal grants the Committee a **standing mandate to allocate Program Account funds on behalf of the Vaulta Network** under the Framework; it removes **block-producer votes on individual RFPs or awards**; and it treats a recorded Committee decision within Part D's limits as the Network's decision.
 
 It provides the separate authorization MSIG #4 required before anyone could award funds, select vendors, or create payment obligations.
 
-It limits the mandate to the activities specified in the Framework. It makes an action outside Part D's limits **void**. It prohibits VS LLC from contracting on that action and asks block producers to cancel any related payment during its delay window.
+It limits the mandate to the activities specified in the Framework; it makes an action outside Part D's limits **void**; and it prohibits VS LLC from contracting on that action and asks block producers to cancel any related payment during its delay window.
 
 It continues the mandate **until MSIG suspends or revokes it**, with no fixed expiry date.
 
 It authorizes **MSIG to suspend or revoke the mandate at any time, without cause**, and rebuild the Committee Permission through the owner permission.
 
-It preserves block producers' recurring control through **funding**. It specifies that Part I authorizes funding **four cycles at a time**, and block producers may stop, reduce, or re-time any instalment at the Threshold. It limits Committee spending to funds block producers choose to send, even though the mandate continues indefinitely.
+It preserves block producers' recurring control through **funding**; it specifies that Part I authorizes funding **four cycles at a time**, and block producers may stop, reduce, or re-time any instalment at the Threshold; and it limits Committee spending to funds block producers choose to send, even though the mandate continues indefinitely.
 
-It requires the Committee to publish an **annual review** covering awards, outcomes, conflict incidents, coverage history, and whether the limits remain appropriate. It puts performance on record each year whether or not anyone calls a vote.
+It requires the Committee to publish an **annual review** covering awards, outcomes, conflict incidents, coverage history, and whether the limits remain appropriate, and it puts performance on record each year whether or not anyone calls a vote.
 
-It requires a Resolution ending the mandate to retain the Committee Permission for payments under signed agreements or direct block producers to create a replacement permission. It requires the Network to remain able to pay its existing obligations.
+It requires a Resolution ending the mandate to retain the Committee Permission for payments under signed agreements or direct block producers to create a replacement permission, and it requires the Network to remain able to pay its existing obligations.
 
 ### Part D — Limits and denomination
 
-This proposal establishes **quarterly cycles**, with **four cycles authorized at a time, covering one year**. It starts the first cycle **when funds are received in the Program Account**.
+This proposal establishes **quarterly cycles**, with **four cycles authorized at a time, covering one year**, and it starts the first cycle **when funds are received in the Program Account**.
 
-It authorizes **block producers to change any cycle amount, cycle length, or limit at any time by MSIG Resolution at the Threshold**. It specifies that authorizing a year of funding does not bind them for that year.
+It authorizes **block producers to change any cycle amount, cycle length, or limit at any time by MSIG Resolution at the Threshold**, and it specifies that authorizing a year of funding does not bind them for that year.
 
 It applies these limits to **each cycle**:
 
@@ -240,63 +240,63 @@ It applies these limits to **each cycle**:
 | — of which **Manager and Reviewer fees, Portal, and administration** | **40,000** | **USD** |
 | **Total Program Spend for the cycle** | **227,500** | **USD** |
 
-It defines **Award Commitments** as amounts committed to awardees, limited by the **Cycle Ceiling**. It defines **Program Costs** as Committee pay, Manager and Reviewer fees, Portal costs, and administration, limited to **USD 77,500 per cycle**. It defines **Total Program Spend** as their sum and uses it to determine the funding request in Part I.
+It defines **Award Commitments** as amounts committed to awardees, limited by the **Cycle Ceiling**; it defines **Program Costs** as Committee pay, Manager and Reviewer fees, Portal costs, and administration, limited to **USD 77,500 per cycle**; and it defines **Total Program Spend** as their sum and uses it to determine the funding request in Part I.
 
-It sets **two fixed internal caps** for Program Costs: **USD 37,500** per cycle for Committee pay, and **USD 40,000** for Manager and Reviewer fees, Portal costs, and administration combined. It prohibits **using underspending under one cap to increase the other**. It prevents funds from moving between governance pay and program operations without a decision.
+It sets **two fixed internal caps** for Program Costs: **USD 37,500** per cycle for Committee pay, and **USD 40,000** for Manager and Reviewer fees, Portal costs, and administration combined; it prohibits **using underspending under one cap to increase the other**; and it prevents funds from moving between governance pay and program operations without a decision.
 
-It treats **spending above either internal cap as outside the mandate**, requiring an MSIG Resolution just as exceeding the Cycle Ceiling does. It requires the Committee to **report spending against both caps in every cycle report**, making approaching limits visible.
+It treats **spending above either internal cap as outside the mandate**, requiring an MSIG Resolution just as exceeding the Cycle Ceiling does, and it requires the Committee to **report spending against both caps in every cycle report**, making approaching limits visible.
 
-It sets the Cycle Ceiling as a **maximum, not a target**. It prohibits carrying unspent amounts into the next funding period.
+It sets the Cycle Ceiling as a **maximum, not a target**, and it prohibits carrying unspent amounts into the next funding period.
 
-It sets the **post-award review threshold under Framework 25.2 at USD 25,000**, or **25% of the Per-Award Limit**. It requires the review threshold to be reset to a quarter of that Limit whenever the Limit changes. It specifies that for every award at or above the threshold, the Manager of record must write a **short closing review** of whether the work met the need, the budget was right, and the Network would do it again. It requires the review to be **published on the Portal** and summarized in the next cycle report. It requires **Exhibit B's rate card to include this review in the Manager's paid scope**.
+It sets the **post-award review threshold under Framework 25.2 at USD 25,000**, or **25% of the Per-Award Limit**; it requires the review threshold to be reset to a quarter of that Limit whenever the Limit changes; it specifies that for every award at or above the threshold, the Manager of record must write a **short closing review** of whether the work met the need, the budget was right, and the Network would do it again; it requires the review to be **published on the Portal** and summarized in the next cycle report; and it requires **Exhibit B's rate card to include this review in the Manager's paid scope**.
 
 **Everything is denominated in USD. Everything is paid in A.**
 
-It denominates **all amounts in this MSIG in USD**, including the Cycle Ceiling, Per-Award Limit, Program Cost Ceiling and internal caps, awards, reservations, and Committee pay. It requires **all payments to be made in A**.
+It denominates **all amounts in this MSIG in USD**, including the Cycle Ceiling, Per-Award Limit, Program Cost Ceiling and internal caps, awards, reservations, and Committee pay, and it requires **all payments to be made in A**.
 
 It requires **milestone payments to be converted to A when the milestone is approved**, using the block-producer-operated **Delphi Oracle** (`delphioracle`).
 
-It uses the **`median` field in the `datapoints` table for the `eosusd` pair** as the rate. It specifies that the contract calculates it from the last 21 qualified oracle submissions, so moving it requires control of a **majority of those submissions**. It specifies that **no party to the transaction supplies the rate**: neither the Committee, VS LLC, nor the awardee. It specifies that the window counts *submissions*, not individual oracles, so frequent writers occupy more of it. It specifies that the staleness check below helps expose unhealthy submission patterns.
+It uses the **`median` field in the `datapoints` table for the `eosusd` pair** as the rate; it specifies that the contract calculates it from the last 21 qualified oracle submissions, so moving it requires control of a **majority of those submissions**; it specifies that **no party to the transaction supplies the rate**: neither the Committee, VS LLC, nor the awardee; it specifies that the window counts *submissions*, not individual oracles, so frequent writers occupy more of it; and it specifies that the staleness check below helps expose unhealthy submission patterns.
 
-It notes that the oracle stores prices as **integers**. It specifies that the actual price is **`median` divided by 10 to the power of `quoted_precision`**. It specifies that for `eosusd`, `quoted_precision` is **4**, giving ten-thousandths of a dollar: 766 means USD 0.0766.
+It notes that the oracle stores prices as **integers**; it specifies that the actual price is **`median` divided by 10 to the power of `quoted_precision`**; and it specifies that for `eosusd`, `quoted_precision` is **4**, giving ten-thousandths of a dollar: 766 means USD 0.0766.
 
 It requires the amount of A payable to be calculated **using integer arithmetic and truncation**:
 
 **A-units = ⌊ USD-cents × 10^6 ÷ median ⌋**, where an A-unit is 0.0001 A.
 
-It specifies this rule to make the calculation **reproducible**. It specifies that the largest rounding difference is 0.0001 A, under one hundredth of a cent at current prices. It specifies that the platform, awardee, and auditors must reach the same integer so that published amounts match on-chain transfers. It specifies that floating-point arithmetic could produce inconsistent results.
+It specifies this rule to make the calculation **reproducible**; it specifies that the largest rounding difference is 0.0001 A, under one hundredth of a cent at current prices; it specifies that the platform, awardee, and auditors must reach the same integer so that published amounts match on-chain transfers; and it specifies that floating-point arithmetic could produce inconsistent results.
 
 It uses truncation because it is simple to reproduce, requires no tie-breaking, matches integer division in most languages, and never pays more than the reserved amount.
 
 It requires **VS LLC to publish** confirmation of the `eosusd` pair and its `quoted_precision`, plus a worked calculation example, in the Exhibit D configuration under Part E.
 
-It requires the approval record to include the **oracle value, block number, and transaction id at which it was read**. It specifies that the contract overwrites the oldest of its 21 datapoints, so these details are needed to verify the rate later from history.
+It requires the approval record to include the **oracle value, block number, and transaction id at which it was read**, and it specifies that the contract overwrites the oldest of its 21 datapoints, so these details are needed to verify the rate later from history.
 
 It requires the approval record to **always include the newest datapoint's timestamp**, published with the approval.
 
-It applies the **fallback rate** below if that timestamp is more than **24 hours** old. It specifies that if the fallback is also unavailable, the Manager of record may not approve alone. It specifies that the Committee may approve at the ordinary milestone threshold with the staleness recorded, or defer until a rate is available.
+It applies the **fallback rate** below if that timestamp is more than **24 hours** old; it specifies that if the fallback is also unavailable, the Manager of record may not approve alone; and it specifies that the Committee may approve at the ordinary milestone threshold with the staleness recorded, or defer until a rate is available.
 
-It defines the **fallback rate** as the **CoinMarketCap daily average USD price of Vaulta (A), ID 36462**, for the **UTC calendar day before the read**. It specifies that the average is the **arithmetic mean of that day's published high and low**. It applies the fallback when the newest `eosusd` datapoint is over 24 hours old, or the pair or `delphioracle` contract is unavailable, renamed, or deprecated. This proposal fixes the fallback in advance so that **no party to the transaction supplies the rate**.
+It defines the **fallback rate** as the **CoinMarketCap daily average USD price of Vaulta (A), ID 36462**, for the **UTC calendar day before the read**; it specifies that the average is the **arithmetic mean of that day's published high and low**; it applies the fallback when the newest `eosusd` datapoint is over 24 hours old, or the pair or `delphioracle` contract is unavailable, renamed, or deprecated; and it fixes the fallback in advance so that **no party to the transaction supplies the rate**.
 
-It expresses the fallback rate as an integer in millionths of a dollar: **fallback = ⌊ (high + low) ÷ 2 × 10^6 ⌋**, calculated from the published figures using exact decimal arithmetic. It specifies that the payment is **A-units = ⌊ USD-cents × 10^8 ÷ fallback ⌋**. It requires VS LLC to publish a worked example in Exhibit D alongside the oracle example.
+It expresses the fallback rate as an integer in millionths of a dollar: **fallback = ⌊ (high + low) ÷ 2 × 10^6 ⌋**, calculated from the published figures using exact decimal arithmetic; it specifies that the payment is **A-units = ⌊ USD-cents × 10^8 ÷ fallback ⌋**; and it requires VS LLC to publish a worked example in Exhibit D alongside the oracle example.
 
-It applies the fallback to **every read** after activation until `eosusd` receives at least one new datapoint in every 24-hour period for **7 consecutive days**. It specifies that this prevents repeated switching while the oracle recovers. It requires the Chair to record and publish when fallback use began and when oracle use resumed. It specifies that each fallback-priced approval replaces the oracle value, block number, and transaction id with: the newest `eosusd` timestamp or the fact that the pair or contract could not be read; the CoinMarketCap date; the published high and low; the resulting integer; and a retrieval record of the published figures.
+It applies the fallback to **every read** after activation until `eosusd` receives at least one new datapoint in every 24-hour period for **7 consecutive days**; it specifies that this prevents repeated switching while the oracle recovers; it requires the Chair to record and publish when fallback use began and when oracle use resumed; and it specifies that each fallback-priced approval replaces the oracle value, block number, and transaction id with: the newest `eosusd` timestamp or the fact that the pair or contract could not be read; the CoinMarketCap date; the published high and low; the resulting integer; and a retrieval record of the published figures.
 
-It continues payments at the fallback rate if `eosusd` or `delphioracle` becomes **unavailable, renamed, or deprecated**. It specifies that they stop only if the fallback is also unavailable. It specifies that in either case, the Committee must refer the replacement-rate decision to MSIG within **5 business days**, instead of the ordinary 10 business days for reserved matters. It gives **the Committee no authority to choose a substitute source to resume payments**.
+It continues payments at the fallback rate if `eosusd` or `delphioracle` becomes **unavailable, renamed, or deprecated**; it specifies that they stop only if the fallback is also unavailable; it specifies that in either case, the Committee must refer the replacement-rate decision to MSIG within **5 business days**, instead of the ordinary 10 business days for reserved matters; and it gives **the Committee no authority to choose a substitute source to resume payments**.
 
-It treats designation of a replacement source as **an amendment to the Reference Rate definition** in this Resolution and the Framework. It specifies that the reserved-matters default that treats inaction as a decline **does not apply**. It specifies that payments resume **only for approvals made after the designation**; payments already made are not reopened.
+It treats designation of a replacement source as **an amendment to the Reference Rate definition** in this Resolution and the Framework; it specifies that the reserved-matters default that treats inaction as a decline **does not apply**; and it specifies that payments resume **only for approvals made after the designation**; payments already made are not reopened.
 
-It prohibits **new awards while payments are suspended**, because the coverage test and decision record require a rate read. It allows scoping, publication, evaluation, and scoring to continue. It suspends **every Program Account payment**, including Committee pay and Manager and Reviewer fees, **except Portal hosting and essential administration**. It requires those services to continue so the suspension can be published. It specifies that suspended pay and fees continue to **accrue**, are charged to the cycle in which they accrue, and are paid on resumption at the then-current rate.
+It prohibits **new awards while payments are suspended**, because the coverage test and decision record require a rate read; it allows scoping, publication, evaluation, and scoring to continue; it suspends **every Program Account payment**, including Committee pay and Manager and Reviewer fees, **except Portal hosting and essential administration**; it requires those services to continue so the suspension can be published; and it specifies that suspended pay and fees continue to **accrue**, are charged to the cycle in which they accrue, and are paid on resumption at the then-current rate.
 
-It requires a quarterly instalment **into** the Program Account that falls due during a suspension to be **sized and transferred on resumption**, rather than skipped. It specifies that the suspension **extends by its own duration** the 60-day contracting clock, any bounty closing date, and any cycle-close cut-off for an award not yet contracted (Framework 13.4a).
+It requires a quarterly instalment **into** the Program Account that falls due during a suspension to be **sized and transferred on resumption**, rather than skipped, and it specifies that the suspension **extends by its own duration** the 60-day contracting clock, any bounty closing date, and any cycle-close cut-off for an award not yet contracted (Framework 13.4a).
 
-It requires the timestamp check because the contract **never fails a read**. It notes that the contract holds 21 rows from pair creation and updates them in place, returning a value even without recent submissions. It specifies that only the timestamp distinguishes a stale rate from a current one and triggers the fallback.
+It requires the timestamp check because the contract **never fails a read**; it notes that the contract holds 21 rows from pair creation and updates them in place, returning a value even without recent submissions; and it specifies that only the timestamp distinguishes a stale rate from a current one and triggers the fallback.
 
-It prohibits the Manager of record from approving alone if the approval rate, whether oracle or fallback, differs by more than **15%** from the rate at the **previous payment under that award**. It requires comparison with the rate recorded at the award decision for a first payment. It allows the Committee to approve at the ordinary milestone threshold or defer. It specifies that this limits the effect of short-term price movements on A outflow.
+It prohibits the Manager of record from approving alone if the approval rate, whether oracle or fallback, differs by more than **15%** from the rate at the **previous payment under that award**; it requires comparison with the rate recorded at the award decision for a first payment; it allows the Committee to approve at the ordinary milestone threshold or defer; and it specifies that this limits the effect of short-term price movements on A outflow.
 
 **Coverage: the program must hold enough A to meet its USD commitments**
 
-It denominates commitments in USD while the Program Account holds A. It specifies that a fall in A's price reduces its ability to pay. It specifies that the Committee must therefore:
+It denominates commitments in USD while the Program Account holds A; it specifies that a fall in A's price reduces its ability to pay; and it specifies that the Committee must therefore:
 
 1. **Test coverage before every award.** Confirm that the account's A balance, valued at the Reference Rate, covers all outstanding Award Commitments and Program Costs **falling due before the next scheduled instalment**, plus the proposed award, with **at least a 10% margin**. An award that fails this test may not be made and is a reserved matter.
 
@@ -305,11 +305,11 @@ It denominates commitments in USD while the Program Account holds A. It specifie
 3. **Stop and escalate if coverage falls below the 10% floor.** The Committee shall make no further awards, shall notify MSIG within **5 business days**, and shall request a top-up transfer. Milestones under existing agreements continue to be paid while funds allow.
 4. **Report a surplus.** If the price of A rises and the account holds more than the cycle requires, the surplus is reported. It is not swept at cycle end — surpluses reduce the next quarterly instalment, and any final balance is returned at the end of the funding period under Part I.
 
-It clarifies that **a change in the A payment amount is not a top-up**; it maintains the USD peg. It prohibits **an award's USD amount from exceeding the Per-Award Limit**. It requires the full award threshold, a contract amendment, publication, and a fresh proposal and delay for any USD increase.
+It clarifies that **a change in the A payment amount is not a top-up**; it maintains the USD peg; it prohibits **an award's USD amount from exceeding the Per-Award Limit**; and it requires the full award threshold, a contract amendment, publication, and a fresh proposal and delay for any USD increase.
 
 **Paying Program Costs**
 
-It sets the following Program Account payment process for Committee pay, Manager and Reviewer fees, Portal costs, and administration. It specifies that the Program Cost payment process mirrors award payments but is simpler because the amounts are set in advance:
+It sets the following Program Account payment process for Committee pay, Manager and Reviewer fees, Portal costs, and administration, and it specifies that the Program Cost payment process mirrors award payments but is simpler because the amounts are set in advance:
 
 1. the Committee approves a **published payment schedule** once per cycle, by simple majority with a minimum of 3, listing each recipient, amount, and cadence;
 2. individual payments under that schedule are signed **4 of 5** like any other disbursement and carry the **same delay**;
@@ -320,22 +320,22 @@ It requires fresh Committee approval at the same threshold and a separate publis
 
 **Reserved matters**
 
-It allows the Committee to use **only three funding instruments**: a **directed RFP**, an **open call** for unsolicited proposals (Framework 26), or a **bounty** (Framework 26a). It specifies that the working group's term "**grants**" means the **open call**, not a fourth instrument.
+It allows the Committee to use **only three funding instruments**: a **directed RFP**, an **open call** for unsolicited proposals (Framework 26), or a **bounty** (Framework 26a), and it specifies that the working group's term "**grants**" means the **open call**, not a fourth instrument.
 
-It defines a directed RFP as the Committee defining the work and inviting bids. It defines an open call as the proposer defining the work. It specifies that a bounty is a published fixed-price task, open to anyone and paid to the first acceptable delivery. It treats the bounty publication vote as the award decision and requires the award threshold.
+It defines a directed RFP as the Committee defining the work and inviting bids; it defines an open call as the proposer defining the work; it specifies that a bounty is a published fixed-price task, open to anyone and paid to the first acceptable delivery; and it treats the bounty publication vote as the award decision and requires the award threshold.
 
-It sets **no per-cycle sub-limit for open calls or bounties**. It specifies that all three instruments draw on the Cycle Ceiling and compete on merit. It applies the same award threshold, Per-Award Limit, publication, delay, and objection bands to unsolicited and directed awards. It specifies that a sub-limit would restrict useful work without adding protection.
+It sets **no per-cycle sub-limit for open calls or bounties**; it specifies that all three instruments draw on the Cycle Ceiling and compete on merit; it applies the same award threshold, Per-Award Limit, publication, delay, and objection bands to unsolicited and directed awards; and it specifies that a sub-limit would restrict useful work without adding protection.
 
-It sets **no separate per-bounty cap**. It applies the **Per-Award Limit** and **Cycle Ceiling** to bounties, like other awards.
+It sets **no separate per-bounty cap**, and it applies the **Per-Award Limit** and **Cycle Ceiling** to bounties, like other awards.
 
-It replaces comparative evaluation of bounty approaches, prices, and teams with **open participation and payment for the first acceptable delivery**. It specifies that this becomes less effective as prices rise, because providers are less likely to build a large system speculatively. It specifies that the following controls apply:
+It replaces comparative evaluation of bounty approaches, prices, and teams with **open participation and payment for the first acceptable delivery**; it specifies that this becomes less effective as prices rise, because providers are less likely to build a large system speculatively; and it specifies that the following controls apply:
 
 1. a **minimum open period before any delivery may be accepted** — **21 days**, or **10 days** below USD 5,000 or where urgency is recorded, matching Framework 20.5 — because "first acceptable delivery wins" is only a contest if a second party had time to enter one;
 2. **where the Committee expects only one party will realistically deliver, it records and publishes that expectation and its reasons.** This does not stop the bounty. A bounty nobody else will attempt is a **sole-source award** — a normal and often correct thing to do, which should be documented as one rather than described as an open contest. Such bounties are listed separately in the cycle report.
 
-It requires a bounty to reserve its price at publication and lapse at its closing date or cycle end. It applies all other award rules: contract first, signature, delay, objection bands, conflict checks, the ban register, and the prohibition on splitting work that should be an RFP.
+It requires a bounty to reserve its price at publication and lapse at its closing date or cycle end, and it applies all other award rules: contract first, signature, delay, objection bands, conflict checks, the ban register, and the prohibition on splitting work that should be an RFP.
 
-It requires the **cycle report to show spending by channel**: directed RFPs, open calls, and bounties, both as amounts and shares of the Cycle Ceiling. It specifies that if bounties exceed **25%** of awards committed in a cycle, the Committee must **explain why**. It specifies that this is a reporting requirement, not a cap. It gives block producers information to change limits at the Threshold.
+It requires the **cycle report to show spending by channel**: directed RFPs, open calls, and bounties, both as amounts and shares of the Cycle Ceiling; it specifies that if bounties exceed **25%** of awards committed in a cycle, the Committee must **explain why**; it specifies that this is a reporting requirement, not a cap; and it gives block producers information to change limits at the Threshold.
 
 It reserves the following matters for **MSIG Resolution**, outside the mandate, matching Framework section 9.1:
 
@@ -354,15 +354,15 @@ It reserves the following matters for **MSIG Resolution**, outside the mandate, 
 - **Creating any entity** (Part I).
 - Any matter the Committee **votes to escalate**.
 
-It requires the Committee to refer reserved matters to MSIG within **10 business days**, or **5 business days** for a replacement rate source. It specifies that if MSIG does not act within **30 days**, the matter is **treated as declined**, with two exceptions: **payments or milestones under executed agreements**, and **replacement rate sources** under Framework 13.4a. It specifies that those matters **remain open**, their reservations remain in place, and the Committee must re-submit until MSIG acts. It specifies that network delays must not penalize awardees or leave payments suspended indefinitely.
+It requires the Committee to refer reserved matters to MSIG within **10 business days**, or **5 business days** for a replacement rate source; it specifies that if MSIG does not act within **30 days**, the matter is **treated as declined**, with two exceptions: **payments or milestones under executed agreements**, and **replacement rate sources** under Framework 13.4a; it specifies that those matters **remain open**, their reservations remain in place, and the Committee must re-submit until MSIG acts; and it specifies that network delays must not penalize awardees or leave payments suspended indefinitely.
 
 ### Part E — The Program Account and how payments work
 
-This proposal establishes **`rfp.vst`**, a subaccount of `vst`, as the **Program Account**. It requires all program funds to be held there.
+This proposal establishes **`rfp.vst`**, a subaccount of `vst`, as the **Program Account**, and it requires all program funds to be held there.
 
-It clarifies that **the `rfp.vst` name gives the VST no authority over the funds**. It specifies that under Antelope, a parent account has no standing control over a subaccount once created. It specifies that the owner permission belongs to `eosio.prods`, and moving funds requires 4 of 5 Committee signatures. It gives **the VST no authority to move program funds**; the name is a naming convention only.
+It clarifies that **the `rfp.vst` name gives the VST no authority over the funds**; it specifies that under Antelope, a parent account has no standing control over a subaccount once created; it specifies that the owner permission belongs to `eosio.prods`, and moving funds requires 4 of 5 Committee signatures; and it gives **the VST no authority to move program funds**; the name is a naming convention only.
 
-It records that **the `vst` name has been secured**, so no alternative is needed. It specifies that if it had not been secured, VS LLC would have proposed another name, requiring **MSIG confirmation before funding**. It specifies that block producers, rather than whoever publishes the configuration, name the account holding program funds. It specifies that this contingency is retained for the record.
+It records that **the `vst` name has been secured**, so no alternative is needed; it specifies that if it had not been secured, VS LLC would have proposed another name, requiring **MSIG confirmation before funding**; it specifies that block producers, rather than whoever publishes the configuration, name the account holding program funds; and it specifies that this contingency is retained for the record.
 
 It requires the Committee Permission to use these settings:
 
@@ -375,13 +375,13 @@ It requires the Committee Permission to use these settings:
 | Delay before a payment executes | **168** hours (7 days) |
 | Shorter delay for urgent awards | **72** hours (3 days) |
 
-It permits the shorter delay only after a Committee urgency vote **at the award threshold: two-thirds of filled non-recused seats, minimum 3**. It requires the Committee to record the reason and **complete publication before proposing payment**, leaving a genuine opportunity to object.
+It permits the shorter delay only after a Committee urgency vote **at the award threshold: two-thirds of filled non-recused seats, minimum 3**, and it requires the Committee to record the reason and **complete publication before proposing payment**, leaving a genuine opportunity to object.
 
 It prohibits **proposing any payment on-chain until VS LLC has signed the awardee agreement**.
 
 It authorizes block producers to **cancel any type of payment at the Threshold** during the delay window.
 
-It applies **objection bands only to the initial award disbursement**. It specifies that milestone and Program Cost payments still have the delay and may be cancelled by block producers, but no objection bands apply because they fulfil commitments already published and approved. It specifies that Portal objections to an award disbursement have these effects:
+It applies **objection bands only to the initial award disbursement**; it specifies that milestone and Program Cost payments still have the delay and may be cancelled by block producers, but no objection bands apply because they fulfil commitments already published and approved; and it specifies that Portal objections to an award disbursement have these effects:
 
 | Objections | Result |
 |---|---|
@@ -389,49 +389,49 @@ It applies **objection bands only to the initial award disbursement**. It specif
 | **4 to 6** | Committee cancels; the award proceeds only if MSIG confirms it |
 | **7 or more** | Committee cancels and the award ends. No MSIG vote is held |
 
-It uses seven objections because **seven block producers can block a 15-of-21 decision**. It specifies that an award with 7 objections cannot be confirmed, so no confirmation vote is held.
+It uses seven objections because **seven block producers can block a 15-of-21 decision**, and it specifies that an award with 7 objections cannot be confirmed, so no confirmation vote is held.
 
-It makes cancellation **mandatory** in the 4-to-6 and 7-or-more objection bands. It requires the Committee to cancel within **2 business days** after the objection count closes. It specifies that **failure to cancel is grounds for referral to MSIG for removal**. It allows block producers to cancel through the owner permission as well. It specifies that this ensures 4 to 6 objectors can trigger the backstop even though they cannot reach the Threshold alone.
+It makes cancellation **mandatory** in the 4-to-6 and 7-or-more objection bands; it requires the Committee to cancel within **2 business days** after the objection count closes; it specifies that **failure to cancel is grounds for referral to MSIG for removal**; it allows block producers to cancel through the owner permission as well; and it specifies that this ensures 4 to 6 objectors can trigger the backstop even though they cannot reach the Threshold alone.
 
-It requires the Committee to submit the record and a draft confirming Resolution to MSIG within **10 business days** after cancellation in the 4-to-6 band. It specifies that if MSIG does not confirm within **30 days of submission**, the award **lapses**, its reservation is released, and the Committee may re-scope and re-run it.
+It requires the Committee to submit the record and a draft confirming Resolution to MSIG within **10 business days** after cancellation in the 4-to-6 band, and it specifies that if MSIG does not confirm within **30 days of submission**, the award **lapses**, its reservation is released, and the Committee may re-scope and re-run it.
 
-It provides that **MSIG confirmation restores the award decision, not the agreement**. It specifies that cancellation terminates the awardee agreement, so VS LLC must sign a **fresh agreement on identical terms** before proposing disbursement again. It specifies that the 60-day window in this Part runs from confirmation.
+It provides that **MSIG confirmation restores the award decision, not the agreement**; it specifies that cancellation terminates the awardee agreement, so VS LLC must sign a **fresh agreement on identical terms** before proposing disbursement again; and it specifies that the 60-day window in this Part runs from confirmation.
 
-It requires **VS LLC to develop and configure the Program Account and Committee Permission**, and **publish Exhibit D before funding**. It requires Exhibit D to cover the account name, permission structure and thresholds, delay mechanism and values, cancellation path and exact action and authority required, account resources, `eosusd` pair and `quoted_precision`, and a worked payment calculation.
+It requires **VS LLC to develop and configure the Program Account and Committee Permission**, and **publish Exhibit D before funding**, and it requires Exhibit D to cover the account name, permission structure and thresholds, delay mechanism and values, cancellation path and exact action and authority required, account resources, `eosusd` pair and `quoted_precision`, and a worked payment calculation.
 
-It requires **VS LLC to establish the on-chain disclosure register** under Framework 6.3b on a **separate account, `disc.vst`**. It requires Exhibit D to identify the account, append-only contract and ABI, deployment and writing authorities, coded-answer schema, and questionnaire version.
+It requires **VS LLC to establish the on-chain disclosure register** under Framework 6.3b on a **separate account, `disc.vst`**, and it requires Exhibit D to identify the account, append-only contract and ABI, deployment and writing authorities, coded-answer schema, and questionnaire version.
 
-It requires a separate decisions table on that account to hold the records required by Framework 7.6a: award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect. It requires Exhibit D to specify the decisions schema and version, writing authority, **deployment and upgrade authority**, and **RAM provisioning**. It specifies that an append-only register needs capacity to keep accepting records throughout the program.
+It requires a separate decisions table on that account to hold the records required by Framework 7.6a: award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect; it requires Exhibit D to specify the decisions schema and version, writing authority, **deployment and upgrade authority**, and **RAM provisioning**; and it specifies that an append-only register needs capacity to keep accepting records throughout the program.
 
-It prohibits **writing disclosures to the Program Account**. It notes that the Program Account holds funds under the `eosio.prods` owner permission and must have no routine writing key.
+It prohibits **writing disclosures to the Program Account**, and it notes that the Program Account holds funds under the `eosio.prods` owner permission and must have no routine writing key.
 
-It requires the configuration to record **each member's delivered public key**. It specifies that the permission must use those keys and **may be activated only after all five are delivered**. It specifies that key delivery and permission activation are separate steps.
+It requires the configuration to record **each member's delivered public key**; it specifies that the permission must use those keys and **may be activated only after all five are delivered**; and it specifies that key delivery and permission activation are separate steps.
 
 **If the protocol cannot enforce the delay**
 
-It provides for the delay to be **enforced on-chain**. It specifies that if VS LLC finds that the current protocol cannot enforce transaction-level delays, the fallback is a **held multisignature proposal**. It specifies that the Committee proposes disbursement, keeps it **unexecuted and publicly visible** for the full window, and executes it only afterwards. It requires the proposal identifier to be published with the award. It specifies that block producers retain the cancellation route through the owner permission.
+It provides for the delay to be **enforced on-chain**; it specifies that if VS LLC finds that the current protocol cannot enforce transaction-level delays, the fallback is a **held multisignature proposal**; it specifies that the Committee proposes disbursement, keeps it **unexecuted and publicly visible** for the full window, and executes it only afterwards; it requires the proposal identifier to be published with the award; and it specifies that block producers retain the cancellation route through the owner permission.
 
-It requires VS LLC to state **which delay mechanism is used** in Exhibit D **before the Program Account is funded**. It specifies that if an element cannot be built as described, VS LLC must explain the limitation and propose the nearest workable alternative.
+It requires VS LLC to state **which delay mechanism is used** in Exhibit D **before the Program Account is funded**, and it specifies that if an element cannot be built as described, VS LLC must explain the limitation and propose the nearest workable alternative.
 
 ### Part F — The Community seat
 
 This proposal recognizes the **EOS Community Foundation (ECF)** as designer and administrator of the Community seat vote.
 
-It recognizes **ECF as independent of this program and grants no funding to ECF or its members under this Resolution**. It creates **no funding obligation** by recognizing ECF as vote administrator. It requires ECF to seek Network funding through **its own MSIG**, decided directly by block producers, rather than a Committee award. It prevents the Committee from setting the budget of the body that selects one of its members.
+It recognizes **ECF as independent of this program and grants no funding to ECF or its members under this Resolution**; it creates **no funding obligation** by recognizing ECF as vote administrator; it requires ECF to seek Network funding through **its own MSIG**, decided directly by block producers, rather than a Committee award; and it prevents the Committee from setting the budget of the body that selects one of its members.
 
-It allows **ECF to bid on RFPs**. It specifies that if the Community seat holder is engaged by, paid by, or holds a position in ECF, it is their **connected organization** under Framework 6.2. It specifies that the connection must be declared in writing **before publication**, the member must **recuse fully**, and both must be minuted and published. It prohibits the member from helping set the budget or criteria for an RFP ECF later bids on. It requires any ECF stipend to be disclosed on-chain under Framework 6.3a Part 2, whoever pays it.
+It allows **ECF to bid on RFPs**; it specifies that if the Community seat holder is engaged by, paid by, or holds a position in ECF, it is their **connected organization** under Framework 6.2; it specifies that the connection must be declared in writing **before publication**, the member must **recuse fully**, and both must be minuted and published; it prohibits the member from helping set the budget or criteria for an RFP ECF later bids on; and it requires any ECF stipend to be disclosed on-chain under Framework 6.3a Part 2, whoever pays it.
 
-It treats the ECF vote as a **nomination** and leaves **appointment to MSIG**. It specifies that block producers should refuse appointment only for **disqualifying cause** and state publicly any other basis for refusal.
+It treats the ECF vote as a **nomination** and leaves **appointment to MSIG**, and it specifies that block producers should refuse appointment only for **disqualifying cause** and state publicly any other basis for refusal.
 
 It seats **Francis Sangkuan** on an interim basis with full voting rights, signing weight, and pay until the first ECF winner is seated or **9 months after this MSIG executes**, whichever comes first.
 
-It starts the interim period at **execution**, rather than funding, so ECF can run its process while funding is pending. It allows **MSIG to extend the interim period once**, at the Threshold and on ECF's request.
+It starts the interim period at **execution**, rather than funding, so ECF can run its process while funding is pending, and it allows **MSIG to extend the interim period once**, at the Threshold and on ECF's request.
 
 It directs **MSIG to fill the seat at the Threshold** if the interim deadline passes without a winner, so a vacancy does not stop payments.
 
-It authorizes MSIG to name another administrator or **fill the Community seat at the Threshold using Exhibit E** if **ECF stops running the process or ceases to exist**. It allows MSIG appointments to continue indefinitely, term after term. It allows MSIG to return selection to a later community process without requiring it. It specifies that **the seat retains its Community portfolio, category assignments, vote, signing weight, and pay** regardless of how it is filled.
+It authorizes MSIG to name another administrator or **fill the Community seat at the Threshold using Exhibit E** if **ECF stops running the process or ceases to exist**; it allows MSIG appointments to continue indefinitely, term after term; it allows MSIG to return selection to a later community process without requiring it; and it specifies that **the seat retains its Community portfolio, category assignments, vote, signing weight, and pay** regardless of how it is filled.
 
-It asks ECF to publish its process by **[___]** and complete the first vote by **[___]**. It specifies that a Community member **appointed by MSIG**, whether an ECF winner or a member appointed under the preceding clause, serves **one year from execution of their appointment Resolution**. It specifies that the interim appointment above is not a one-year term and ends as specified there.
+It asks ECF to publish its process by **[___]** and complete the first vote by **[___]**; it specifies that a Community member **appointed by MSIG**, whether an ECF winner or a member appointed under the preceding clause, serves **one year from execution of their appointment Resolution**; and it specifies that the interim appointment above is not a one-year term and ends as specified there.
 
 ### Part G — Program roles and VS LLC
 
@@ -440,31 +440,31 @@ This proposal establishes two contractor roles, selected by the Committee and co
 1. **RFP Program Managers**, engaged as a pool, with **exactly one Manager of record for each RFP**, who runs it and **approves its milestones for payment**. A Manager may hold several RFPs. The Committee may reassign an RFP by majority, publishing the change, with a written handover.
 2. **Technical Reviewers**, engaged **where the RFP's own published statement says a Reviewer is engaged** — fixed at publication and not reopened at signing, a question the Committee settles at scoping by whether the work is technical, **including on a Service award, which has no built deliverable but may well need technical assessment** — whose written assessments inform evaluation and milestone approval.
 
-It requires **every program decision to identify the people responsible by name and on-chain account**. It requires milestone approvals to identify the **Manager of record** and any **Technical Reviewer**. It requires payments to identify **each signing Committee member**. It requires awards to identify every member voting for, against, or recused. It specifies that both name and account are required, because accounts may be rotated, renamed, or rebuilt through the owner permission.
+It requires **every program decision to identify the people responsible by name and on-chain account**; it requires milestone approvals to identify the **Manager of record** and any **Technical Reviewer**; it requires payments to identify **each signing Committee member**; it requires awards to identify every member voting for, against, or recused; and it specifies that both name and account are required, because accounts may be rotated, renamed, or rebuilt through the owner permission.
 
-It requires **payment decisions to be recorded in full on-chain** in a separate decisions table on the same append-only register as the disclosure questionnaires. It specifies that this includes award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect. It specifies that a digest of an off-chain copy is insufficient.
+It requires **payment decisions to be recorded in full on-chain** in a separate decisions table on the same append-only register as the disclosure questionnaires; it specifies that this includes award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect; and it specifies that a digest of an off-chain copy is insufficient.
 
-It requires a third table to hold published RFPs and amendments, questions and answers, the objection register, ban register, seat register, network vision statements, cycle reports, and annual reviews. It specifies that the Portal displays these registers rather than maintaining a second record, so a Portal outage or change of operator does not remove them.
+It requires a third table to hold published RFPs and amendments, questions and answers, the objection register, ban register, seat register, network vision statements, cycle reports, and annual reviews, and it specifies that the Portal displays these registers rather than maintaining a second record, so a Portal outage or change of operator does not remove them.
 
 It keeps **three records off-chain**: **minutes**, which may require redaction under Framework 5.9; **proposals**, confidential until award; and the **backlog**, a working list that does not determine decisions.
 
-It recognizes **the RFP platform and Portal code as VST-owned work product**, operated by VS LLC. It specifies that code written before this Resolution was not covered by an Independent Contractor Agreement and its ownership was never vested. It specifies that **moving a repository does not assign copyright**. It specifies that before the program relies on that code, the program must obtain **a written assignment to the VST from every author**, or a perpetual, irrevocable, sublicensable licence if assignment is unavailable, **and transfer the code to a VST-controlled repository**.
+It recognizes **the RFP platform and Portal code as VST-owned work product**, operated by VS LLC; it specifies that code written before this Resolution was not covered by an Independent Contractor Agreement and its ownership was never vested; it specifies that **moving a repository does not assign copyright**; and it specifies that before the program relies on that code, the program must obtain **a written assignment to the VST from every author**, or a perpetual, irrevocable, sublicensable licence if assignment is unavailable, **and transfer the code to a VST-controlled repository**.
 
-It authorizes the Committee to fund work on the RFP system through the **ordinary award process**: published RFP, award threshold, contract, delay, and signature. It categorizes this as **Core Development work counted against the Cycle Ceiling**.
+It authorizes the Committee to fund work on the RFP system through the **ordinary award process**: published RFP, award threshold, contract, delay, and signature, and it categorizes this as **Core Development work counted against the Cycle Ceiling**.
 
-It prohibits **VS LLC and connected entities from bidding on this work**, because VS LLC operates the system, holds its code, contracts with awardees, runs the Portal, checks whether to refuse contracting, and writes decision records. It specifies that if no other capable provider exists, the award is a **reserved matter**.
+It prohibits **VS LLC and connected entities from bidding on this work**, because VS LLC operates the system, holds its code, contracts with awardees, runs the Portal, checks whether to refuse contracting, and writes decision records, and it specifies that if no other capable provider exists, the award is a **reserved matter**.
 
-It classifies work that builds or materially changes what the system does as an **award**, and work that keeps it running unchanged as an **operating cost**. It requires **the Committee to classify the work by recorded vote**. It requires every such award to be **flagged as self-referential in the cycle report** so spending on the system itself remains visible.
+It classifies work that builds or materially changes what the system does as an **award**, and work that keeps it running unchanged as an **operating cost**; it requires **the Committee to classify the work by recorded vote**; and it requires every such award to be **flagged as self-referential in the cycle report** so spending on the system itself remains visible.
 
-It assigns **milestone approval to the Manager of record**. It specifies that a Technical Reviewer's written assessment is required at each milestone **only if the award's published statement under Framework 20.2 says a Reviewer is engaged**. It requires the approval record to be **published on the Portal**.
+It assigns **milestone approval to the Manager of record**; it specifies that a Technical Reviewer's written assessment is required at each milestone **only if the award's published statement under Framework 20.2 says a Reviewer is engaged**; and it requires the approval record to be **published on the Portal**.
 
-It defines the Committee's four signatures on a milestone payment as **administrative**. It specifies that they confirm only that the approval record is complete, the amount matches the published schedule, a Reviewer assessment is present **when the RFP's published statement requires one**, the payment is within the award, and **no termination recommendation under Framework 11.10a is open**. It specifies that no Reviewer assessment is required where the statement says none is engaged. It specifies that **the Committee does not reassess the work**.
+It defines the Committee's four signatures on a milestone payment as **administrative**; it specifies that they confirm only that the approval record is complete, the amount matches the published schedule, a Reviewer assessment is present **when the RFP's published statement requires one**, the payment is within the award, and **no termination recommendation under Framework 11.10a is open**; it specifies that no Reviewer assessment is required where the statement says none is engaged; and it specifies that **the Committee does not reassess the work**.
 
-It defines signing the **initial award disbursement** as administrative as well. It specifies that signers confirm that the decision record is complete, the executed agreement matches it, the amount is within the limits, the delay has run, and no termination recommendation under Framework 11.10a is open.
+It defines signing the **initial award disbursement** as administrative as well, and it specifies that signers confirm that the decision record is complete, the executed agreement matches it, the amount is within the limits, the delay has run, and no termination recommendation under Framework 11.10a is open.
 
-It requires a member who **voted against an award to sign its disbursement** unless an administrative check above fails or there is credible evidence of misrepresentation or a conflict-rule breach. It specifies that with one recusal, only four signers remain; withholding a signature merely because of disagreement would let one member veto an approved award.
+It requires a member who **voted against an award to sign its disbursement** unless an administrative check above fails or there is credible evidence of misrepresentation or a conflict-rule breach, and it specifies that with one recusal, only four signers remain; withholding a signature merely because of disagreement would let one member veto an approved award.
 
-It prohibits **any Committee member from serving as an RFP Program Manager** (Framework 12.2a). It allows **no exception or waiver at any threshold**. It specifies that a Manager appointed to the Committee stops being Manager of record when their appointment executes, and their RFPs must be reassigned within 5 business days. It specifies that milestone approval must always rest with a Manager outside the Committee, including when a member reviews the RFP. It specifies that this protects the administrative signing role under **Framework 11.4**.
+It prohibits **any Committee member from serving as an RFP Program Manager** (Framework 12.2a); it allows **no exception or waiver at any threshold**; it specifies that a Manager appointed to the Committee stops being Manager of record when their appointment executes, and their RFPs must be reassigned within 5 business days; it specifies that milestone approval must always rest with a Manager outside the Committee, including when a member reviews the RFP; and it specifies that this protects the administrative signing role under **Framework 11.4**.
 
 It allows **a Committee member to serve as a Technical Reviewer**, but never as a Manager, **only on the terms in Framework 12.6**:
 
@@ -478,65 +478,65 @@ It allows **a Committee member to serve as a Technical Reviewer**, but never as 
 8. the fee is the **Exhibit B rate card amount**, which the Committee cannot set or vary; it is paid on **its own separate payment**, one per member-Reviewer, signed by the other four, from which that member recuses;
 9. every engagement and fee is **published in the cycle report** by member and by RFP, with each member's cumulative fees for the cycle and the number of engagements held against the cap, and the member **files a disclosure questionnaire update before the engagement begins**.
 
-It prohibits Managers and Reviewers from bidding on an RFP they work on during their engagement or for **6 months afterwards**. It specifies that they may not approve or assess milestones for an awardee where they have a conflict as defined in Framework 6.4. It specifies that their pay may not depend on milestone approval or an award's size or outcome.
+It prohibits Managers and Reviewers from bidding on an RFP they work on during their engagement or for **6 months afterwards**; it specifies that they may not approve or assess milestones for an awardee where they have a conflict as defined in Framework 6.4; and it specifies that their pay may not depend on milestone approval or an award's size or outcome.
 
 **Material conflict breaches carry a permanent ban**
 
-It requires **immediate suspension of the person's role, signing weight, and pay, and referral to MSIG** for a **material conflict-of-interest breach**. It specifies that breaches include self-dealing, an undisclosed interest in a proposer or awardee, payment from a proposer or awardee, private use of proposal information, breaching confidentiality, or signing a matter from which the person was recused.
+It requires **immediate suspension of the person's role, signing weight, and pay, and referral to MSIG** for a **material conflict-of-interest breach**, and it specifies that breaches include self-dealing, an undisclosed interest in a proposer or awardee, payment from a proposer or awardee, private use of proposal information, breaching confidentiality, or signing a matter from which the person was recused.
 
-It **permanently bars** a person from Committee seats, Manager and Reviewer roles, submitting or being named on program proposals, and receiving program payments if MSIG confirms the breach **at the Threshold**. It specifies that the ban applies directly and through any entity in which they hold a material interest.
+It **permanently bars** a person from Committee seats, Manager and Reviewer roles, submitting or being named on program proposals, and receiving program payments if MSIG confirms the breach **at the Threshold**, and it specifies that the ban applies directly and through any entity in which they hold a material interest.
 
-It makes the ban **permanent and liftable only at the same Threshold**: fifteen of twenty-one to confirm it and fifteen of twenty-one to overturn it. It gives the Committee no authority to reduce the ban.
+It makes the ban **permanent and liftable only at the same Threshold**: fifteen of twenty-one to confirm it and fifteen of twenty-one to overturn it, and it gives the Committee no authority to reduce the ban.
 
-It requires the person to receive the allegation in writing and **10 business days to respond** before MSIG votes. It requires their response to be published with the referral.
+It requires the person to receive the allegation in writing and **10 business days to respond** before MSIG votes, and it requires their response to be published with the referral.
 
 It requires **VS LLC to maintain a published ban register on the Portal**, checked at proposal submission and before assigning any role.
 
-It requires every RFP to declare its **award shape at publication**: **Deliverable**, **Service**, or **Embedded** (Framework 20.2a). It prohibits **changing the shape at contracting or signing**. It clarifies that the award shape defines the work product and never disapplies section 9:
+It requires every RFP to declare its **award shape at publication**: **Deliverable**, **Service**, or **Embedded** (Framework 20.2a); it prohibits **changing the shape at contracting or signing**; and it clarifies that the award shape defines the work product and never disapplies section 9:
 
 1. a **Deliverable** award vests what was built, released under the licence recorded in the award decision — required by the RFP, offered by the awardee from the permitted set, or the applicable default;
 2. an **Embedded** award vests the named deliverable, **carves out the awardee's identified pre-existing IP**, and takes an **irrevocable licence back, surviving termination**, over any pre-existing IP embedded in the deliverable, sufficient for the Network to use, modify, and have others operate it;
 3. a **Service** award vests the **operational handover set** — configuration, deployment tooling, runbooks, and an export of any Network data — and nothing else, the running service being performed rather than delivered. Because it vests, the Network may give it to a successor provider, which is what makes a service re-competable rather than renewed indefinitely.
 
-It makes a Service award's operational handover set and data export due on **termination**. It specifies that an Embedded award's licence back survives termination.
+It makes a Service award's operational handover set and data export due on **termination**, and it specifies that an Embedded award's licence back survives termination.
 
-It requires **pre-existing IP to be identified and carved out in Schedule A at contracting for every award shape**. It excludes unlisted items from pre-existing IP. It specifies that if such IP is embedded in the work product, the awardee must grant the VST an **irrevocable licence back that survives termination**, allowing the Network to use, modify, and have third parties operate it. It specifies that on a Service award, the awardee's service software must be identified as pre-existing IP, and the awardee must warrant that a successor can **use the handover set independently**.
+It requires **pre-existing IP to be identified and carved out in Schedule A at contracting for every award shape**; it excludes unlisted items from pre-existing IP; it specifies that if such IP is embedded in the work product, the awardee must grant the VST an **irrevocable licence back that survives termination**, allowing the Network to use, modify, and have third parties operate it; and it specifies that on a Service award, the awardee's service software must be identified as pre-existing IP, and the awardee must warrant that a successor can **use the handover set independently**.
 
-It prohibits **publishing a Service or Embedded RFP or contracting an award of any shape with a populated pre-existing-IP schedule until counsel confirms and records that section 9 of the standard Independent Contractor Agreement permits the Schedule A carve-out and licence back**. It allows a Deliverable award with no carve-out to proceed. It specifies that defining the work product for an award shape does not narrow section 9; only the carve-out does.
+It prohibits **publishing a Service or Embedded RFP or contracting an award of any shape with a populated pre-existing-IP schedule until counsel confirms and records that section 9 of the standard Independent Contractor Agreement permits the Schedule A carve-out and licence back**; it allows a Deliverable award with no carve-out to proceed; and it specifies that defining the work product for an award shape does not narrow section 9; only the carve-out does.
 
-It sets **Apache-2.0** as the default licence for code and **CC-BY-4.0** for non-code deliverables. It requires each **Deliverable or Embedded** RFP to declare a **licence mode at publication**:
+It sets **Apache-2.0** as the default licence for code and **CC-BY-4.0** for non-code deliverables, and it requires each **Deliverable or Embedded** RFP to declare a **licence mode at publication**:
 
 - **Required**: the RFP names a binding licence.
 - **Proposer's choice**: the RFP specifies a permitted set; the proposer chooses a licence from it, which becomes an award term.
 - **Default**: the default licences apply.
 
-It assigns no licence mode to a **Service** award because its handover set vests outright. It requires **closed-source RFPs to use Required mode**.
+It assigns no licence mode to a **Service** award because its handover set vests outright, and it requires **closed-source RFPs to use Required mode**.
 
-It assigns the **licence mode and, in Required mode, licence decision to the Committee at the publication threshold**. It locks the mode, permitted set, and Required licence **at publication**. It specifies that in Proposer's choice mode, the chosen licence **locks at the award decision and must be recorded there**.
+It assigns the **licence mode and, in Required mode, licence decision to the Committee at the publication threshold**; it locks the mode, permitted set, and Required licence **at publication**; and it specifies that in Proposer's choice mode, the chosen licence **locks at the award decision and must be recorded there**.
 
-It requires the Committee to specify the permitted set **for each RFP**, with **no standing list**. It specifies that if the Committee omits the set, **only permissive licences are allowed**. It specifies that this prevents an accidental copyleft obligation on Network infrastructure.
+It requires the Committee to specify the permitted set **for each RFP**, with **no standing list**; it specifies that if the Committee omits the set, **only permissive licences are allowed**; and it specifies that this prevents an accidental copyleft obligation on Network infrastructure.
 
-It allows a proposed licence to be scored **only if it is published as a separate criterion with its own weight before submissions open**. It specifies that the standing openness criterion is insufficient. It requires **any departure to be published in the RFP with reasons**. It specifies that if a deliverable cannot be released as usable open source, the RFP must state this at publication and explain what the Network receives instead. It requires **open source where an RFP is silent**.
+It allows a proposed licence to be scored **only if it is published as a separate criterion with its own weight before submissions open**; it specifies that the standing openness criterion is insufficient; it requires **any departure to be published in the RFP with reasons**; it specifies that if a deliverable cannot be released as usable open source, the RFP must state this at publication and explain what the Network receives instead; and it requires **open source where an RFP is silent**.
 
-It recognizes program **funds as Network funds held outside the Trust**. It specifies that **work product**, as defined by the award shape above, **vests in the VST**. It specifies that holding intellectual property for the Network is an express Trust purpose; allocating Network funds is not.
+It recognizes program **funds as Network funds held outside the Trust**; it specifies that **work product**, as defined by the award shape above, **vests in the VST**; and it specifies that holding intellectual property for the Network is an express Trust purpose; allocating Network funds is not.
 
-It directs **VS LLC to contract with awardees** through the standard Vaulta Stewardship LLC Independent Contractor Agreement, under which the award shape's **work product vests in the VST**. It specifies that VS LLC's role is **administrative and contractual**: VS LLC neither chooses awardees nor controls the Program Account. It requires VS LLC to **refuse to contract on a decision plainly outside the mandate**, explaining why to the Committee and MSIG in writing.
+It directs **VS LLC to contract with awardees** through the standard Vaulta Stewardship LLC Independent Contractor Agreement, under which the award shape's **work product vests in the VST**; it specifies that VS LLC's role is **administrative and contractual**: VS LLC neither chooses awardees nor controls the Program Account; and it requires VS LLC to **refuse to contract on a decision plainly outside the mandate**, explaining why to the Committee and MSIG in writing.
 
 It charges VS LLC's costs for this role to **Program Costs within Part D's USD 40,000 cap**, separately from the CY2026 VST operating funding under MSIG #3.
 
 ### Part H — Committee pay
 
-This proposal authorizes VS LLC to contract with each Committee member. It gives members **no status as Trust employees**.
+This proposal authorizes VS LLC to contract with each Committee member, and it gives members **no status as Trust employees**.
 
-It sets a **fixed USD 2,500 monthly retainer per member**, **paid in arrears** in A at Part D's Reference Rate on the payment date. It provides the same retainer for all five seats, including the Community seat and interim holder. It authorizes **no per-meeting fees, success fees, or payments tied to an award's size, number, or outcome**.
+It sets a **fixed USD 2,500 monthly retainer per member**, **paid in arrears** in A at Part D's Reference Rate on the payment date; it provides the same retainer for all five seats, including the Community seat and interim holder; and it authorizes **no per-meeting fees, success fees, or payments tied to an award's size, number, or outcome**.
 
-It classifies member **Technical Reviewer fees** under Framework 12.6 as **Program Costs**, separate from Committee pay. It specifies that they fall outside the retainer and the aggregate Committee pay cap below. It specifies that members who review technical work therefore **may earn more than other members**, even though the retainers are equal.
+It classifies member **Technical Reviewer fees** under Framework 12.6 as **Program Costs**, separate from Committee pay; it specifies that they fall outside the retainer and the aggregate Committee pay cap below; and it specifies that members who review technical work therefore **may earn more than other members**, even though the retainers are equal.
 
-This proposal sets a limit of **3 concurrent Technical Reviewer engagements per member**. It prohibits **engaging any member until that cap is set**.
+This proposal sets a limit of **3 concurrent Technical Reviewer engagements per member**, and it prohibits **engaging any member until that cap is set**.
 
-It sets **no cap on a member's total Reviewer fees per cycle**. It specifies that the control is on concurrent **workload**. It reserves Exhibit B's rate card to MSIG and prohibits the Committee from varying it. It specifies that the fees are modest, and a member with three engagements earns fees for three engagements' assessments. It specifies that a total-fee cap could leave contracted milestones unpaid or force a mid-award Reviewer replacement; the concurrent cap controls workload before an engagement starts.
+It sets **no cap on a member's total Reviewer fees per cycle**; it specifies that the control is on concurrent **workload**; it reserves Exhibit B's rate card to MSIG and prohibits the Committee from varying it; it specifies that the fees are modest, and a member with three engagements earns fees for three engagements' assessments; and it specifies that a total-fee cap could leave contracted milestones unpaid or force a mid-award Reviewer replacement; the concurrent cap controls workload before an engagement starts.
 
-It requires every member-Reviewer engagement and fee to be **published in the cycle report by member and RFP**, including each member's cumulative cycle total. It allows block producers to change the limits at the Threshold or remove a member if they consider the resulting pay excessive.
+It requires every member-Reviewer engagement and fee to be **published in the cycle report by member and RFP**, including each member's cumulative cycle total, and it allows block producers to change the limits at the Threshold or remove a member if they consider the resulting pay excessive.
 
 It requires each member's contract to cover:
 
@@ -548,17 +548,17 @@ It requires each member's contract to cover:
 - **Suspension of payment under Framework 13.4a**, with entitlement continuing to accrue and paid on resumption at the then-current rate.
 - Termination on removal or when the term ends.
 
-It makes reasonable, pre-approved expenses reimbursable. It authorizes total Committee pay of **USD 12,500 per month**, funded through each cycle's transfer. It continues pay only while block producers continue funding it.
+It makes reasonable, pre-approved expenses reimbursable; it authorizes total Committee pay of **USD 12,500 per month**, funded through each cycle's transfer; and it continues pay only while block producers continue funding it.
 
 ### Part I — Funding
 
-This proposal requests, on behalf of the active block producers, the transfer of **A worth USD 284,375** to the Program Account as the first quarterly instalment. It specifies that the source is the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
+This proposal requests, on behalf of the active block producers, the transfer of **A worth USD 284,375** to the Program Account as the first quarterly instalment, and it specifies that the source is the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
 
-It provides that the program does not begin if the request is **declined, delayed, or only partly met**: the Program Account is not funded, no cycle starts, no term runs, and no pay accrues. It requires the Committee to report this publicly. It allows MSIG to re-scope the program to available funds. It specifies that starting the funding-dependent clocks at funding prevents a shortfall from silently shrinking an active cycle.
+It provides that the program does not begin if the request is **declined, delayed, or only partly met**: the Program Account is not funded, no cycle starts, no term runs, and no pay accrues; it requires the Committee to report this publicly; it allows MSIG to re-scope the program to available funds; and it specifies that starting the funding-dependent clocks at funding prevents a shortfall from silently shrinking an active cycle.
 
-It treats the transfer as a **one-way contribution of Network funds**, which neither pass through nor remain held by the VST. It specifies that if the VST or VS LLC currently holds any of the source pools, transferring them releases Network funds and is not a Trust activity.
+It treats the transfer as a **one-way contribution of Network funds**, which neither pass through nor remain held by the VST, and it specifies that if the VST or VS LLC currently holds any of the source pools, transferring them releases Network funds and is not a Trust activity.
 
-This proposal authorizes **four cycles**. It requires **another MSIG Resolution for the next four cycles**, providing a recurring funding decision in place of a fixed mandate term.
+This proposal authorizes **four cycles**, and it requires **another MSIG Resolution for the next four cycles**, providing a recurring funding decision in place of a fixed mandate term.
 
 It authorizes **USD 910,000 for the first four-cycle funding period**, comprising:
 
@@ -570,39 +570,39 @@ It authorizes **USD 910,000 for the first four-cycle funding period**, comprisin
 | — Manager and Reviewer fees, Portal, administration | 40,000 | 160,000 |
 | **Total Program Spend** | **227,500** | **910,000** |
 
-It directs funds to be **transferred in four quarterly instalments**. It specifies that each tops up the Program Account to **125% of the coming cycle's Total Program Spend**, valued in A at the Reference Rate. It specifies that forward commitments are already within that cycle's Cycle Ceiling and are not added again.
+It directs funds to be **transferred in four quarterly instalments**; it specifies that each tops up the Program Account to **125% of the coming cycle's Total Program Spend**, valued in A at the Reference Rate; and it specifies that forward commitments are already within that cycle's Cycle Ceiling and are not added again.
 
-It grants **no spending authority against the 25% margin**. It protects USD commitments against a fall in A's price. It prohibits **the Committee from committing against the margin**.
+It grants **no spending authority against the 25% margin**; it protects USD commitments against a fall in A's price; and it prohibits **the Committee from committing against the margin**.
 
-It sets the **first instalment at A worth USD 284,375**, calculated at the Reference Rate on the transfer date. It specifies that this is 125% of the first cycle's USD 227,500 Total Program Spend.
+It sets the **first instalment at A worth USD 284,375**, calculated at the Reference Rate on the transfer date, and it specifies that this is 125% of the first cycle's USD 227,500 Total Program Spend.
 
-It authorizes later instalments **without a further vote**. It allows block producers to **stop, reduce, or re-time any instalment by MSIG Resolution at any time**.
+It authorizes later instalments **without a further vote**, and it allows block producers to **stop, reduce, or re-time any instalment by MSIG Resolution at any time**.
 
-It prohibits unspent funds, including the margin, from **carrying into the next funding period**. It requires the remaining balance to be **returned or swept through the owner permission as MSIG directs** after all contracted obligations are met. It specifies that there is **no sweep at individual cycle ends**; carried balances reduce the next quarterly top-up.
+It prohibits unspent funds, including the margin, from **carrying into the next funding period**; it requires the remaining balance to be **returned or swept through the owner permission as MSIG directs** after all contracted obligations are met; and it specifies that there is **no sweep at individual cycle ends**; carried balances reduce the next quarterly top-up.
 
 **No authority to create an entity**
 
-It recognizes the Steering Committee as the Network's decision-making body **for RFP funding only**. It does **not** authorize the Committee, VST, or VS LLC to **form, register, incorporate, or become a member or director of any company, foundation, association, trust, or other entity** on the Network's behalf. It requires **a separate MSIG Resolution at the Threshold to create any such entity**.
+It recognizes the Steering Committee as the Network's decision-making body **for RFP funding only**; it does **not** authorize the Committee, VST, or VS LLC to **form, register, incorporate, or become a member or director of any company, foundation, association, trust, or other entity** on the Network's behalf; and it requires **a separate MSIG Resolution at the Threshold to create any such entity**.
 
 It applies this restriction to direct action and action through an agent, adviser, or affiliate, whether or not the entity would hold funds.
 
-It addresses management of the REX yield and Year 1 pools **only for the RFP program**. It does not settle their wider management, and the Committee does not represent the Network for other funds.
+It addresses management of the REX yield and Year 1 pools **only for the RFP program**, and it does not settle their wider management, and the Committee does not represent the Network for other funds.
 
 ### Part J — Effect
 
-This proposal **overrides earlier MSIGs only where they directly conflict**. It leaves MSIGs #2, #3, and #4 otherwise fully in force.
+This proposal **overrides earlier MSIGs only where they directly conflict**, and it leaves MSIGs #2, #3, and #4 otherwise fully in force.
 
-It directs the Trustee to execute any amendments to the Trust Agreement needed to reflect the Committee's new name, size, and dual capacity, **prepared by Trust counsel**. It specifies that their text is **not attached or voted on here**. It specifies that this Resolution provides the authority required by vstcreation. It specifies that the VST and VS LLC administer drafting, execution, and any conforming changes to VS LLC's operating procedures off-chain. It specifies that block producers approve the direction to bring the documents into conformity.
+It directs the Trustee to execute any amendments to the Trust Agreement needed to reflect the Committee's new name, size, and dual capacity, **prepared by Trust counsel**; it specifies that their text is **not attached or voted on here**; it specifies that this Resolution provides the authority required by vstcreation; it specifies that the VST and VS LLC administer drafting, execution, and any conforming changes to VS LLC's operating procedures off-chain; and it specifies that block producers approve the direction to bring the documents into conformity.
 
-It records that the vstcreation MSIG approved the governing documents and required a separate MSIG Resolution for any material amendment or substantive change. It provides **that separate Resolution** for these amendments.
+It records that the vstcreation MSIG approved the governing documents and required a separate MSIG Resolution for any material amendment or substantive change, and it provides **that separate Resolution** for these amendments.
 
-It takes effect **on execution**. It prohibits **funding the Program Account until the Exhibit D configuration under Part E is published**.
+It takes effect **on execution**, and it prohibits **funding the Program Account until the Exhibit D configuration under Part E is published**.
 
 **Clocks start when the money arrives, not when this MSIG passes**
 
-It starts the **first cycle when funds are received in the Program Account**, rather than when this MSIG takes effect. It specifies that Part D's cycle end date is calculated from that funding date.
+It starts the **first cycle when funds are received in the Program Account**, rather than when this MSIG takes effect, and it specifies that Part D's cycle end date is calculated from that funding date.
 
-It provides that **Committee pay under Part H accrues from the later of contract signature and receipt of funds in the Program Account**. It specifies that VS LLC therefore incurs no retainer obligations before the program is funded.
+It provides that **Committee pay under Part H accrues from the later of contract signature and receipt of funds in the Program Account**, and it specifies that VS LLC therefore incurs no retainer obligations before the program is funded.
 
 It requires the Committee to **publish the funding date on the Portal** when funds arrive, because three separate periods are calculated from it.
 ---
