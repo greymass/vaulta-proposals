@@ -24,7 +24,7 @@ If you read nothing else, read this page.
 | 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
 | 11a | A member engaged as Technical Reviewer under Framework 12.6 also earns rate-card fees **outside** this retainer — see Part H | Limited to **3 concurrent engagements**, not by total fees. Not available until that cap is set |
 | 12 | **Authorize USD 910,000 over four quarterly cycles**, first instalment A worth USD 284,375 | Gross transferred up to USD 966,875 — see note 3 |
-| 13 | **If the price oracle goes stale or fails**, payments are priced from a **CoinMarketCap fallback** set in this Resolution. Only if that fails too do all payments stop — awardees, Managers, Committee pay alike — and **no new awards may be made**. **Only you** may name a permanent replacement rate source | Part D; Framework 13.4, 13.4a |
+| 13 | **If the oracle is stale or unavailable**, payments use the **CoinMarketCap fallback**; if the fallback is unavailable but the oracle is stale and readable, **the Committee may approve payment**; if the oracle and fallback are both unavailable, **payments and new awards stop**, except payments for **Portal hosting and essential administration**; and **only block producers may name a permanent replacement rate source** | Part D; Framework 13.4, 13.4a |
 
 **What you keep.** Setting every limit above. **Funding the program a year at a time** — the program cannot spend what you have not authorized, and you may change any amount or cycle length at 15/21 at any time. Seating and removing members. Deciding anything above the limits. Cancelling any payment. Suspending or revoking the mandate at any time, without cause.
 
@@ -270,17 +270,19 @@ It uses truncation because it is simple to reproduce, requires no tie-breaking, 
 
 It requires **VS LLC to publish** confirmation of the `eosusd` pair and its `quoted_precision`, plus a worked calculation example, in the Exhibit D configuration under Part E.
 
-It requires the approval record to include the **oracle value, block number, and transaction id at which it was read**, and it specifies that the contract overwrites the oldest of its 21 datapoints, so these details are needed to verify the rate later from history.
+It requires each award decision and milestone approval to record the **oracle value, block number, and transaction id when using the oracle**, or the **CoinMarketCap records listed below when using the fallback**, so the rate can be checked later.
 
-It requires the approval record to **always include the newest datapoint's timestamp**, published with the approval.
+It requires the record to include the **newest oracle datapoint's timestamp**, or state that the pair or contract could not be read, and it requires that information to be published.
 
-It applies the **fallback rate** below if that timestamp is more than **24 hours** old; it specifies that if the fallback is also unavailable, the Manager of record may not approve alone; and it specifies that the Committee may approve at the ordinary milestone threshold with the staleness recorded, or defer until a rate is available.
+It uses the **fallback rate** below when the newest oracle datapoint is more than **24 hours** old; if the fallback is unavailable but the oracle is **stale and readable**, it bars the Manager of record from approving alone and allows the Committee to approve at the ordinary milestone threshold with the staleness recorded or defer until a rate is available.
 
-It defines the **fallback rate** as the **CoinMarketCap daily average USD price of Vaulta (A), ID 36462**, for the **UTC calendar day before the read**; it specifies that the average is the **arithmetic mean of that day's published high and low**; it applies the fallback when the newest `eosusd` datapoint is over 24 hours old, or the pair or `delphioracle` contract is unavailable, renamed, or deprecated; and it fixes the fallback in advance so that **no party to the transaction supplies the rate**.
+It defines the **fallback rate** as the **midpoint of CoinMarketCap's published daily high and low USD prices for Vaulta (A), ID 36462**, for the **UTC calendar day before the read**; it calculates the midpoint by adding the high and low and dividing by two; it applies the fallback when the newest `eosusd` datapoint is over 24 hours old, or the pair or `delphioracle` contract is unavailable, renamed, or deprecated; and it fixes the fallback in advance so that **no party to the transaction supplies the rate**.
 
 It expresses the fallback rate as an integer in millionths of a dollar: **fallback = ⌊ (high + low) ÷ 2 × 10^6 ⌋**, calculated from the published figures using exact decimal arithmetic; it specifies that the payment is **A-units = ⌊ USD-cents × 10^8 ÷ fallback ⌋**; and it requires VS LLC to publish a worked example in Exhibit D alongside the oracle example.
 
-It applies the fallback to **every read** after activation until `eosusd` receives at least one new datapoint in every 24-hour period for **7 consecutive days**; it specifies that this prevents repeated switching while the oracle recovers; it requires the Chair to record and publish when fallback use began and when oracle use resumed; and it specifies that each fallback-priced approval replaces the oracle value, block number, and transaction id with: the newest `eosusd` timestamp or the fact that the pair or contract could not be read; the CoinMarketCap date; the published high and low; the resulting integer; and a retrieval record of the published figures.
+It applies the fallback to **every read** after activation until `eosusd` receives at least one new datapoint in every 24-hour period for **7 consecutive days**, preventing repeated switching while the oracle recovers, and it requires the Chair to record and publish when fallback use began and when oracle use resumed.
+
+It requires each award decision and milestone approval using the fallback to record the newest `eosusd` timestamp or state that the pair or contract could not be read, plus the **CoinMarketCap date, published high and low, calculated integer rate, and a retrieval record of the published figures**, instead of the oracle value, block number, and transaction id.
 
 It continues payments at the fallback rate if `eosusd` or `delphioracle` becomes **unavailable, renamed, or deprecated**; it specifies that they stop only if the fallback is also unavailable; it specifies that in either case, the Committee must refer the replacement-rate decision to MSIG within **5 business days**, instead of the ordinary 10 business days for reserved matters; and it gives **the Committee no authority to choose a substitute source to resume payments**.
 
@@ -592,7 +594,9 @@ It addresses management of the REX yield and Year 1 pools **only for the RFP pro
 
 This proposal **overrides earlier MSIGs only where they directly conflict**, and it leaves MSIGs #2, #3, and #4 otherwise fully in force.
 
-It directs the Trustee to execute any amendments to the Trust Agreement needed to reflect the Committee's new name, size, and dual capacity, **prepared by Trust counsel**; it specifies that their text is **not attached or voted on here**; it specifies that this Resolution provides the authority required by vstcreation; it specifies that the VST and VS LLC administer drafting, execution, and any conforming changes to VS LLC's operating procedures off-chain; and it specifies that block producers approve the direction to bring the documents into conformity.
+It **authorizes the Trust Agreement amendments** needed to reflect the Committee's new name, size, and dual capacity, and it directs the Trustee to execute the text prepared by Trust counsel, **without attaching or voting on that text here**.
+
+It assigns drafting, execution, and any conforming changes to VS LLC's operating procedures to the VST and VS LLC off-chain, and it makes clear that **block producers approve the direction to bring the documents into conformity**.
 
 It records that the vstcreation MSIG approved the governing documents and required a separate MSIG Resolution for any material amendment or substantive change, and it provides **that separate Resolution** for these amendments.
 
