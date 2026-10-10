@@ -65,7 +65,7 @@ It also reconstitutes the Oversight Committee as the Steering Committee, gives t
 
 ### Part A — Approve the Framework
 
-The proposal approves the Vaulta Network RFP Framework in Exhibit A, which sets rules for eligibility, applications, evaluation, conflicts of interest, recordkeeping, awards, and funding, since MSIG #4 required approval from at least 15 of the 21 active block producers before the Framework could be used.
+This proposal approves the Vaulta Network RFP Framework in Exhibit A, which sets rules for eligibility, applications, evaluation, conflicts of interest, recordkeeping, awards, and funding, since MSIG #4 required approval from at least 15 of the 21 active block producers before the Framework could be used.
 
 It discharges the working group established under MSIG #4, which has completed its work.
 
@@ -75,7 +75,7 @@ It allows the Framework to be amended by MSIG Resolution, and for **Part 2 of th
 
 ### Part B — The Steering Committee
 
-The proposal renames the Oversight Committee the **Vaulta Network Steering Committee**; it continues the same Committee body; and it applies the new name to references in the Trust Agreement, prior MSIGs, the VS LLC Operating Agreement, and other Trust documents.
+This proposal renames the Oversight Committee the **Vaulta Network Steering Committee**; it continues the same Committee body; and it applies the new name to references in the Trust Agreement, prior MSIGs, the VS LLC Operating Agreement, and other Trust documents.
 
 It expands the Committee from **3 seats to 5**, with each seat’s responsibilities and categories defined in Framework Part 1, section 2.
 
@@ -83,7 +83,7 @@ It preserves all the Committee’s **Trust oversight responsibilities**, and it 
 
 **Terms**
 
-The proposal sets a **one-year Committee term**; it allows members to be reappointed at the Threshold without limit; and it allows members whose terms have ended to continue serving month to month and **keep their signing key** until a successor is seated or MSIG replaces them.
+This proposal sets a **one-year Committee term**; it allows members to be reappointed at the Threshold without limit; and it allows members whose terms have ended to continue serving month to month and **keep their signing key** until a successor is seated or MSIG replaces them.
 
 It **sets** a term rather than extending one, because the vstcreation MSIG appointed the original Oversight Committee members **without stating a term length**, and it specifies that these terms replace MSIG #2's reference to "the remainder of Dario Cesaro's Initial Term".
 
@@ -105,19 +105,19 @@ It authorizes MSIG to **remove a member at any time, with or without cause**, an
 
 **Appointments**
 
-The proposal records that the vstcreation MSIG appointed Dario Cesaro (EOS Support), Dafeng Guo (Vaulta Treasury), and Francis Sangkuan (1DEX) to the original Oversight Committee; it records that MSIG #2 replaced Dario Cesaro with **Ross Dold (EOSphere)**; and it identifies Dafeng Guo, Francis Sangkuan, and Ross Dold as the current members.
+This proposal records that the vstcreation MSIG appointed Dario Cesaro (EOS Support), Dafeng Guo (Vaulta Treasury), and Francis Sangkuan (1DEX) to the original Oversight Committee; it records that MSIG #2 replaced Dario Cesaro with **Ross Dold (EOSphere)**; and it identifies Dafeng Guo, Francis Sangkuan, and Ross Dold as the current members.
 
 It carries over **only Francis Sangkuan (1DEX)** into a Steering Committee seat, and it gives him the **Community seat** on an interim basis under Part F.
 
 **How the four remaining seats get filled**
 
-The proposal **does not fill the Core Development, Marketing, Business Development, or At-Large seats**; it requires separate MSIG Resolutions to fill them using **Exhibit E**; and it allows each to name **one candidate for one seat, a full slate of four, or any subset**.
+This proposal **does not fill the Core Development, Marketing, Business Development, or At-Large seats**; it requires separate MSIG Resolutions to fill them using **Exhibit E**; and it allows each to name **one candidate for one seat, a full slate of four, or any subset**.
 
 It names no candidates for those four seats; that omission **does not make it incomplete**; it sets the process, eligibility tests, and proposal format; it requires **candidates to be considered separately, on their own merits, in a separate Resolution at the Threshold**; it seats only the interim Community seat holder under Part F; and it lets block producers decide on the rules and the people separately.
 
 **What makes an Exhibit E proposal complete**
 
-The proposal requires an Exhibit E proposal to include all of the following, and it treats a proposal missing any item as **incomplete and asks block producers to decline it rather than approve it and correct it later**:
+This proposal requires an Exhibit E proposal to include all of the following, and it treats a proposal missing any item as **incomplete and asks block producers to decline it rather than approve it and correct it later**:
 
 | # | Requirement |
 |---|---|
@@ -179,7 +179,7 @@ It establishes the following seats and initial terms:
 
 **Transition until the four seats are filled**
 
-The proposal continues the temporary service of **Dafeng Guo (Vaulta Treasury)** and **Ross Dold (EOSphere)** alongside Francis Sangkuan **in the original Oversight Committee's capacity**, until MSIG fills the four seats above.
+This proposal continues the temporary service of **Dafeng Guo (Vaulta Treasury)** and **Ross Dold (EOSphere)** alongside Francis Sangkuan **in the original Oversight Committee's capacity**, until MSIG fills the four seats above.
 
 It limits their transition service to **the former Oversight Committee's Trust oversight responsibilities**, and it specifies that **the RFP mandate cannot be exercised, no RFP may be published, and no award may be made** until the Committee is constituted.
 
@@ -195,7 +195,7 @@ It requires **Dafeng Guo's Vaulta Treasury affiliation** to remain recorded as a
 
 **The Vaulta Treasury is excluded from service**
 
-The proposal excludes anyone **affiliated with the Vaulta Treasury** from holding a Steering Committee seat or serving as an RFP Program Manager or Technical Reviewer.
+This proposal excludes anyone **affiliated with the Vaulta Treasury** from holding a Steering Committee seat or serving as an RFP Program Manager or Technical Reviewer.
 
 It defines "affiliated with the Vaulta Treasury" as being its employee, officer, or director; providing services to it under contract; holding authority over Treasury funds; or otherwise acting under its direction on treasury functions.
 
@@ -207,7 +207,7 @@ It prohibits two members from being connected to the same block producer, compan
 
 ### Part C — The Mandate
 
-The proposal grants the Committee a **standing mandate to allocate Program Account funds on behalf of the Vaulta Network** under the Framework; it removes **block-producer votes on individual RFPs or awards**; and it treats a recorded Committee decision within Part D's limits as the Network's decision.
+This proposal grants the Committee a **standing mandate to allocate Program Account funds on behalf of the Vaulta Network** under the Framework; it removes **block-producer votes on individual RFPs or awards**; and it treats a recorded Committee decision within Part D's limits as the Network's decision.
 
 It provides the separate authorization MSIG #4 required before anyone could award funds, select vendors, or create payment obligations.
 
@@ -225,7 +225,7 @@ It requires a Resolution ending the mandate to retain the Committee Permission f
 
 ### Part D — Limits and denomination
 
-The proposal establishes **quarterly cycles**, with **four cycles authorized at a time, covering one year**, and it starts the first cycle **when funds are received in the Program Account**.
+This proposal establishes **quarterly cycles**, with **four cycles authorized at a time, covering one year**, and it starts the first cycle **when funds are received in the Program Account**.
 
 It authorizes **block producers to change any cycle amount, cycle length, or limit at any time by MSIG Resolution at the Threshold**, and it specifies that authorizing a year of funding does not bind them for that year.
 
@@ -252,7 +252,7 @@ It sets the **post-award review threshold under Framework 25.2 at USD 25,000**, 
 
 **Everything is denominated in USD. Everything is paid in A.**
 
-The proposal denominates **all amounts in this MSIG in USD**, including the Cycle Ceiling, Per-Award Limit, Program Cost Ceiling and internal caps, awards, reservations, and Committee pay, and it requires **all payments to be made in A**.
+This proposal denominates **all amounts in this MSIG in USD**, including the Cycle Ceiling, Per-Award Limit, Program Cost Ceiling and internal caps, awards, reservations, and Committee pay, and it requires **all payments to be made in A**.
 
 It requires **milestone payments to be converted to A when the milestone is approved**, using the block-producer-operated **Delphi Oracle** (`delphioracle`).
 
@@ -298,7 +298,7 @@ It prohibits the Manager of record from approving alone if the approval rate, wh
 
 **Coverage: the program must hold enough A to meet its USD commitments**
 
-The proposal denominates commitments in USD while the Program Account holds A; it specifies that a fall in A's price reduces its ability to pay; and it specifies that the Committee must therefore:
+This proposal denominates commitments in USD while the Program Account holds A; it specifies that a fall in A's price reduces its ability to pay; and it specifies that the Committee must therefore:
 
 1. **Test coverage before every award.** Confirm that the account's A balance, valued at the Reference Rate, covers all outstanding Award Commitments and Program Costs **falling due before the next scheduled instalment**, plus the proposed award, with **at least a 10% margin**. An award that fails this test may not be made and is a reserved matter.
 
@@ -311,7 +311,7 @@ It clarifies that **a change in the A payment amount is not a top-up**; it maint
 
 **Paying Program Costs**
 
-The proposal sets the following Program Account payment process for Committee pay, Manager and Reviewer fees, Portal costs, and administration, and it specifies that the Program Cost payment process mirrors award payments but is simpler because the amounts are set in advance:
+This proposal sets the following Program Account payment process for Committee pay, Manager and Reviewer fees, Portal costs, and administration, and it specifies that the Program Cost payment process mirrors award payments but is simpler because the amounts are set in advance:
 
 1. the Committee approves a **published payment schedule** once per cycle, by simple majority with a minimum of 3, listing each recipient, amount, and cadence;
 2. individual payments under that schedule are signed **4 of 5** like any other disbursement and carry the **same delay**;
@@ -322,7 +322,7 @@ It requires fresh Committee approval at the same threshold and a separate publis
 
 **Reserved matters**
 
-The proposal allows the Committee to use **only three funding instruments**: a **directed RFP**, an **open call** for unsolicited proposals (Framework 26), or a **bounty** (Framework 26a), and it specifies that the working group's term "**grants**" means the **open call**, not a fourth instrument.
+This proposal allows the Committee to use **only three funding instruments**: a **directed RFP**, an **open call** for unsolicited proposals (Framework 26), or a **bounty** (Framework 26a), and it specifies that the working group's term "**grants**" means the **open call**, not a fourth instrument.
 
 It defines a directed RFP as the Committee defining the work and inviting bids; it defines an open call as the proposer defining the work; it specifies that a bounty is a published fixed-price task, open to anyone and paid to the first acceptable delivery; and it treats the bounty publication vote as the award decision and requires the award threshold.
 
@@ -360,7 +360,7 @@ It requires the Committee to refer reserved matters to MSIG within **10 business
 
 ### Part E — The Program Account and how payments work
 
-The proposal establishes **`rfp.vst`**, a subaccount of `vst`, as the **Program Account**, and it requires all program funds to be held there.
+This proposal establishes **`rfp.vst`**, a subaccount of `vst`, as the **Program Account**, and it requires all program funds to be held there.
 
 It clarifies that **the `rfp.vst` name gives the VST no authority over the funds**; it specifies that under Antelope, a parent account has no standing control over a subaccount once created; it specifies that the owner permission belongs to `eosio.prods`, and moving funds requires 4 of 5 Committee signatures; and it gives **the VST no authority to move program funds**; the name is a naming convention only.
 
@@ -411,13 +411,13 @@ It requires the configuration to record **each member's delivered public key**; 
 
 **If the protocol cannot enforce the delay**
 
-The proposal provides for the delay to be **enforced on-chain**; it specifies that if VS LLC finds that the current protocol cannot enforce transaction-level delays, the fallback is a **held multisignature proposal**; it specifies that the Committee proposes disbursement, keeps it **unexecuted and publicly visible** for the full window, and executes it only afterwards; it requires the proposal identifier to be published with the award; and it specifies that block producers retain the cancellation route through the owner permission.
+This proposal provides for the delay to be **enforced on-chain**; it specifies that if VS LLC finds that the current protocol cannot enforce transaction-level delays, the fallback is a **held multisignature proposal**; it specifies that the Committee proposes disbursement, keeps it **unexecuted and publicly visible** for the full window, and executes it only afterwards; it requires the proposal identifier to be published with the award; and it specifies that block producers retain the cancellation route through the owner permission.
 
 It requires VS LLC to state **which delay mechanism is used** in Exhibit D **before the Program Account is funded**, and it specifies that if an element cannot be built as described, VS LLC must explain the limitation and propose the nearest workable alternative.
 
 ### Part F — The Community seat
 
-The proposal recognizes the **EOS Community Foundation (ECF)** as designer and administrator of the Community seat vote.
+This proposal recognizes the **EOS Community Foundation (ECF)** as designer and administrator of the Community seat vote.
 
 It recognizes **ECF as independent of this program and grants no funding to ECF or its members under this Resolution**; it creates **no funding obligation** by recognizing ECF as vote administrator; it requires ECF to seek Network funding through **its own MSIG**, decided directly by block producers, rather than a Committee award; and it prevents the Committee from setting the budget of the body that selects one of its members.
 
@@ -437,7 +437,7 @@ It asks ECF to publish its process by **[___]** and complete the first vote by *
 
 ### Part G — Program roles and VS LLC
 
-The proposal establishes two contractor roles, selected by the Committee and contracted by VS LLC under **Exhibit B's rate card**:
+This proposal establishes two contractor roles, selected by the Committee and contracted by VS LLC under **Exhibit B's rate card**:
 
 1. **RFP Program Managers**, engaged as a pool, with **exactly one Manager of record for each RFP**, who runs it and **approves its milestones for payment**. A Manager may hold several RFPs. The Committee may reassign an RFP by majority, publishing the change, with a written handover.
 2. **Technical Reviewers**, engaged **where the RFP's own published statement says a Reviewer is engaged** — fixed at publication and not reopened at signing, a question the Committee settles at scoping by whether the work is technical, **including on a Service award, which has no built deliverable but may well need technical assessment** — whose written assessments inform evaluation and milestone approval.
@@ -484,7 +484,7 @@ It prohibits Managers and Reviewers from bidding on an RFP they work on during t
 
 **Material conflict breaches carry a permanent ban**
 
-The proposal requires **immediate suspension of the person's role, signing weight, and pay, and referral to MSIG** for a **material conflict-of-interest breach**, and it specifies that breaches include self-dealing, an undisclosed interest in a proposer or awardee, payment from a proposer or awardee, private use of proposal information, breaching confidentiality, or signing a matter from which the person was recused.
+This proposal requires **immediate suspension of the person's role, signing weight, and pay, and referral to MSIG** for a **material conflict-of-interest breach**, and it specifies that breaches include self-dealing, an undisclosed interest in a proposer or awardee, payment from a proposer or awardee, private use of proposal information, breaching confidentiality, or signing a matter from which the person was recused.
 
 It **permanently bars** a person from Committee seats, Manager and Reviewer roles, submitting or being named on program proposals, and receiving program payments if MSIG confirms the breach **at the Threshold**, and it specifies that the ban applies directly and through any entity in which they hold a material interest.
 
@@ -528,7 +528,7 @@ It charges VS LLC's costs for this role to **Program Costs within Part D's USD 4
 
 ### Part H — Committee pay
 
-The proposal authorizes VS LLC to contract with each Committee member, and it gives members **no status as Trust employees**.
+This proposal authorizes VS LLC to contract with each Committee member, and it gives members **no status as Trust employees**.
 
 It sets a **fixed USD 2,500 monthly retainer per member**, **paid in arrears** in A at Part D's Reference Rate on the payment date; it provides the same retainer for all five seats, including the Community seat and interim holder; and it authorizes **no per-meeting fees, success fees, or payments tied to an award's size, number, or outcome**.
 
@@ -554,7 +554,7 @@ It makes reasonable, pre-approved expenses reimbursable; it authorizes total Com
 
 ### Part I — Funding
 
-The proposal requests, on behalf of the active block producers, the transfer of **A worth USD 284,375** to the Program Account as the first quarterly instalment, and it specifies that the source is the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
+This proposal requests, on behalf of the active block producers, the transfer of **A worth USD 284,375** to the Program Account as the first quarterly instalment, and it specifies that the source is the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
 
 It provides that the program does not begin if the request is **declined, delayed, or only partly met**: the Program Account is not funded, no cycle starts, no term runs, and no pay accrues; it requires the Committee to report this publicly; it allows MSIG to re-scope the program to available funds; and it specifies that starting the funding-dependent clocks at funding prevents a shortfall from silently shrinking an active cycle.
 
@@ -584,7 +584,7 @@ It prohibits unspent funds, including the margin, from **carrying into the next 
 
 **No authority to create an entity**
 
-The proposal recognizes the Steering Committee as the Network's decision-making body **for RFP funding only**; it does **not** authorize the Committee, VST, or VS LLC to **form, register, incorporate, or become a member or director of any company, foundation, association, trust, or other entity** on the Network's behalf; and it requires **a separate MSIG Resolution at the Threshold to create any such entity**.
+This proposal recognizes the Steering Committee as the Network's decision-making body **for RFP funding only**; it does **not** authorize the Committee, VST, or VS LLC to **form, register, incorporate, or become a member or director of any company, foundation, association, trust, or other entity** on the Network's behalf; and it requires **a separate MSIG Resolution at the Threshold to create any such entity**.
 
 It applies this restriction to direct action and action through an agent, adviser, or affiliate, whether or not the entity would hold funds.
 
@@ -592,7 +592,7 @@ It addresses management of the REX yield and Year 1 pools **only for the RFP pro
 
 ### Part J — Effect
 
-The proposal **overrides earlier MSIGs only where they directly conflict**, and it leaves MSIGs #2, #3, and #4 otherwise fully in force.
+This proposal **overrides earlier MSIGs only where they directly conflict**, and it leaves MSIGs #2, #3, and #4 otherwise fully in force.
 
 It **authorizes the Trust Agreement amendments** needed to reflect the Committee's new name, size, and dual capacity, and it directs the Trustee to execute the text prepared by Trust counsel, **without attaching or voting on that text here**.
 
@@ -604,7 +604,7 @@ It takes effect **on execution**, and it prohibits **funding the Program Account
 
 **Clocks start when the money arrives, not when this MSIG passes**
 
-The proposal starts the **first cycle when funds are received in the Program Account**, rather than when this MSIG takes effect, and it specifies that Part D's cycle end date is calculated from that funding date.
+This proposal starts the **first cycle when funds are received in the Program Account**, rather than when this MSIG takes effect, and it specifies that Part D's cycle end date is calculated from that funding date.
 
 It provides that **Committee pay under Part H accrues from the later of contract signature and receipt of funds in the Program Account**, and it specifies that VS LLC therefore incurs no retainer obligations before the program is funded.
 
