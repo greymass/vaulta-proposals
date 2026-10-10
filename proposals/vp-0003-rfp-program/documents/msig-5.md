@@ -105,15 +105,13 @@ FURTHER RESOLVED, that a member may be removed at any time, with or without caus
 
 **Appointments**
 
-FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by this Resolution** and must be filled by **separate MSIG Resolutions using Exhibit E**, with the Community seat selected under Part F.
+FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by this Resolution** and must be filled by **separate MSIG Resolutions at the Threshold using Exhibit E**, with **candidates considered on their own merits** and the Community seat selected under Part F.
 
 FURTHER RESOLVED, that the appointment and transition rules in **Parts B and F of this Resolution take precedence over conflicting Framework provisions**, including the interim Community seat appointment and its related deadlines.
 
 **How the seats get filled**
 
 FURTHER RESOLVED, that appointment Resolutions for the Core Development, Marketing, Business Development, and At-Large seats may name **one candidate for one seat, a full slate of four, or any subset**.
-
-FURTHER RESOLVED, that no candidates are named for any Steering Committee seat, and that omission **does not make this Resolution incomplete**; the process, eligibility tests, and proposal format are set here; **candidates must be considered separately, on their own merits, in a separate Resolution at the Threshold**; and block producers decide on the rules and the people separately.
 
 **What makes an Exhibit E proposal complete**
 
