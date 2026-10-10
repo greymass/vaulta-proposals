@@ -201,7 +201,7 @@ It defines "affiliated with the Vaulta Treasury" as being its employee, officer,
 
 It adopts this exclusion in line with the Treasury's stated position that it will not participate in allocation decisions after transferring funds to the Network; it protects both the Treasury and the program from the appearance of Treasury direction; it allows **MSIG to expressly waive the default exclusion at the Threshold, with published reasons**; and it requires a deliberate decision for a waiver.
 
-It keeps **the transition arrangement unchanged**; it specifies that Dafeng Guo continues alongside Ross Dold and Francis Sangkuan in the original Oversight Committee's Trust oversight role until the four seats are filled; and it specifies that that service does not include the RFP mandate and ends when the seats are filled.
+It leaves the **transition arrangement above unchanged** by this exclusion.
 
 It prohibits two members from being connected to the same block producer, company, or corporate group; it requires each member to sign their engagement contract, **file the standard disclosure questionnaire on-chain** under Framework 6.3a and 6.3b, and register their signing key within **30 days**; it specifies that the questionnaire is the conflict declaration, not an additional document; it starts **pay and signing weight only after all three are complete**; and it specifies that the 30 days run from the **later of** appointment execution and VS LLC publishing that the disclosure register is open for filing.
 
@@ -213,9 +213,7 @@ It provides the separate authorization MSIG #4 required before anyone could awar
 
 It limits the mandate to the activities specified in the Framework; it makes an action outside Part D's limits **void**; and it prohibits VS LLC from contracting on that action and asks block producers to cancel any related payment during its delay window.
 
-It continues the mandate **until MSIG suspends or revokes it**, with no fixed expiry date.
-
-It authorizes **MSIG to suspend or revoke the mandate at any time, without cause**, and rebuild the Committee Permission through the owner permission.
+It continues the mandate **without a fixed expiry date until MSIG suspends or revokes it**, and it authorizes MSIG to do so **at any time, without cause**, and rebuild the Committee Permission through the owner permission.
 
 It preserves block producers' recurring control through **funding**; it specifies that Part I authorizes funding **four cycles at a time**, and block producers may stop, reduce, or re-time any instalment at the Threshold; and it limits Committee spending to funds block producers choose to send, even though the mandate continues indefinitely.
 
@@ -225,7 +223,7 @@ It requires a Resolution ending the mandate to retain the Committee Permission f
 
 ### Part D — Limits and denomination
 
-The proposal establishes **quarterly cycles**, with **four cycles authorized at a time, covering one year**, and it starts the first cycle **when funds are received in the Program Account**.
+The proposal establishes **quarterly cycles**, with **four cycles authorized at a time, covering one year**, and it applies Part J's rule for the first cycle's start date.
 
 It authorizes **block producers to change any cycle amount, cycle length, or limit at any time by MSIG Resolution at the Threshold**, and it specifies that authorizing a year of funding does not bind them for that year.
 
@@ -536,7 +534,7 @@ This proposal sets a limit of **3 concurrent Technical Reviewer engagements per 
 
 It sets **no cap on a member's total Reviewer fees per cycle**; it specifies that the control is on concurrent **workload**; it reserves Exhibit B's rate card to MSIG and prohibits the Committee from varying it; it specifies that the fees are modest, and a member with three engagements earns fees for three engagements' assessments; and it specifies that a total-fee cap could leave contracted milestones unpaid or force a mid-award Reviewer replacement; the concurrent cap controls workload before an engagement starts.
 
-It requires every member-Reviewer engagement and fee to be **published in the cycle report by member and RFP**, including each member's cumulative cycle total, and it allows block producers to change the limits at the Threshold or remove a member if they consider the resulting pay excessive.
+It allows block producers to change the limits at the Threshold or remove a member if they consider the resulting pay excessive.
 
 It requires each member's contract to cover:
 
@@ -552,7 +550,7 @@ It makes reasonable, pre-approved expenses reimbursable; it authorizes total Com
 
 ### Part I — Funding
 
-The proposal requests, on behalf of the active block producers, the transfer of **A worth USD 284,375** to the Program Account as the first quarterly instalment, and it specifies that the source is the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
+The proposal requests, on behalf of the active block producers, the transfer of **A worth USD 284,375** to the Program Account as the first quarterly instalment, calculated at the Reference Rate on the transfer date as **125% of the first cycle's USD 227,500 Total Program Spend**, and it specifies that the source is the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
 
 It provides that the program does not begin if the request is **declined, delayed, or only partly met**: the Program Account is not funded, no cycle starts, no term runs, and no pay accrues; it requires the Committee to report this publicly; it allows MSIG to re-scope the program to available funds; and it specifies that starting the funding-dependent clocks at funding prevents a shortfall from silently shrinking an active cycle.
 
@@ -573,8 +571,6 @@ It authorizes **USD 910,000 for the first four-cycle funding period**, comprisin
 It directs funds to be **transferred in four quarterly instalments**; it specifies that each tops up the Program Account to **125% of the coming cycle's Total Program Spend**, valued in A at the Reference Rate; and it specifies that forward commitments are already within that cycle's Cycle Ceiling and are not added again.
 
 It grants **no spending authority against the 25% margin**; it protects USD commitments against a fall in A's price; and it prohibits **the Committee from committing against the margin**.
-
-It sets the **first instalment at A worth USD 284,375**, calculated at the Reference Rate on the transfer date, and it specifies that this is 125% of the first cycle's USD 227,500 Total Program Spend.
 
 It authorizes later instalments **without a further vote**, and it allows block producers to **stop, reduce, or re-time any instalment by MSIG Resolution at any time**.
 
