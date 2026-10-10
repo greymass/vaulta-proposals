@@ -105,8 +105,6 @@ FURTHER RESOLVED, that MSIG may **remove a member at any time, with or without c
 
 **Appointments**
 
-FURTHER RESOLVED, that the vstcreation MSIG appointed Dario Cesaro (EOS Support), Dafeng Guo (Vaulta Treasury), and Francis Sangkuan (1DEX) to the original Oversight Committee; MSIG #2 replaced Dario Cesaro with **Ross Dold (EOSphere)**; and Dafeng Guo, Francis Sangkuan, and Ross Dold are the current members.
-
 FURTHER RESOLVED, that **only Francis Sangkuan (1DEX)** carries over into a Steering Committee seat, holding the **Community seat** on an interim basis under Part F.
 
 **How the four remaining seats get filled**
