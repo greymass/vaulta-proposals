@@ -69,8 +69,6 @@ RESOLVED, that the Vaulta Network RFP Framework in Exhibit A, which sets rules f
 
 FURTHER RESOLVED, that the working group established under MSIG #4 is discharged, having completed its work.
 
-FURTHER RESOLVED, that the Framework may be amended by MSIG Resolution, and **Part 2 of the Framework may be amended without reopening Part 1**.
-
 ### Part B — The Steering Committee
 
 FURTHER RESOLVED, that the Oversight Committee is renamed the **Vaulta Network Steering Committee**; the same Committee body continues; and the new name applies to references in the Trust Agreement, prior MSIGs, the VS LLC Operating Agreement, and other Trust documents.
