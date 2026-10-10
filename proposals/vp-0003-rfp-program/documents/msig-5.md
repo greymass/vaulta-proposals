@@ -20,7 +20,7 @@ If you read nothing else, read this page.
 | 7 | **Hold program funds on-chain**, moved only by 4 of 5 Committee signatures | Owner permission stays with `eosio.prods` |
 | 8 | **Require every payment to wait 7 days** before it executes, in public | You may cancel any payment at 15/21 during that wait |
 | 9 | Set **rules for block producer objections** | **4–6 objections** send an award back to block producers for approval; **7 or more** end the award. Part E |
-| 10 | **Recognize ECF** to run the community vote for the Community seat | Francis Sangkuan holds it in the meantime |
+| 10 | **Recognize ECF** to run the community vote for the Community seat | The winner is nominated for appointment by a separate MSIG Resolution |
 | 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
 | 11a | Allow Committee members to earn **separate Technical Reviewer fees** | Rate-card fees under Framework 12.6, **outside the retainer** — see Part H. Limited to **3 concurrent engagements**, not by total fees. Not available until that cap is set |
 | 12 | **Authorize USD 910,000 over four quarterly cycles**, first instalment A worth USD 284,375 | Gross transferred up to USD 966,875 — see note 3 |
@@ -105,13 +105,15 @@ FURTHER RESOLVED, that a member may be removed at any time, with or without caus
 
 **Appointments**
 
-FURTHER RESOLVED, that **only Francis Sangkuan (1DEX)** carries over into a Steering Committee seat, holding the **Community seat** on an interim basis under Part F.
+FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by this Resolution** and must be filled by **separate MSIG Resolutions using Exhibit E**, with the Community seat selected under Part F.
 
-**How the four remaining seats get filled**
+FURTHER RESOLVED, that the appointment and transition rules in **Parts B and F of this Resolution take precedence over conflicting Framework provisions**, including the interim Community seat appointment and its related deadlines.
 
-FURTHER RESOLVED, that the Core Development, Marketing, Business Development, and At-Large seats **remain unfilled by this Resolution**; separate MSIG Resolutions must fill them using **Exhibit E**; and each may name **one candidate for one seat, a full slate of four, or any subset**.
+**How the seats get filled**
 
-FURTHER RESOLVED, that no candidates are named for those four seats, and that omission **does not make this Resolution incomplete**; the process, eligibility tests, and proposal format are set here; **candidates must be considered separately, on their own merits, in a separate Resolution at the Threshold**; only the interim Community seat holder is seated under Part F; and block producers decide on the rules and the people separately.
+FURTHER RESOLVED, that appointment Resolutions for the Core Development, Marketing, Business Development, and At-Large seats may name **one candidate for one seat, a full slate of four, or any subset**.
+
+FURTHER RESOLVED, that no candidates are named for any Steering Committee seat, and that omission **does not make this Resolution incomplete**; the process, eligibility tests, and proposal format are set here; **candidates must be considered separately, on their own merits, in a separate Resolution at the Threshold**; and block producers decide on the rules and the people separately.
 
 **What makes an Exhibit E proposal complete**
 
@@ -173,19 +175,19 @@ FURTHER RESOLVED, that the following seats and initial terms are established:
 | Marketing | Exhibit E MSIG — alone, as a slate, or in a subset | 14 months |
 | Business Development | Exhibit E MSIG — alone, as a slate, or in a subset | 8 months |
 | General (At-Large) | Exhibit E MSIG — alone, as a slate, or in a subset | 8 months |
-| Community | **Francis Sangkuan** on an interim basis, then the ECF process under Part F | See Part F |
+| Community | ECF nomination, then a separate Exhibit E MSIG under Part F | One year from execution of the appointment Resolution |
 
-**Transition until the four seats are filled**
+**Transition until all five seats are filled**
 
-FURTHER RESOLVED, that the temporary service of **Dafeng Guo (Vaulta Treasury)** and **Ross Dold (EOSphere)** continues alongside Francis Sangkuan **in the original Oversight Committee's capacity**, until MSIG fills the four seats above.
+FURTHER RESOLVED, that the temporary service of **Dafeng Guo (Vaulta Treasury)** and **Ross Dold (EOSphere)** continues alongside Francis Sangkuan **in the original Oversight Committee's capacity**, until all five Steering Committee seats are filled by separate MSIG Resolutions.
 
 FURTHER RESOLVED, that their transition service is limited to **the former Oversight Committee's Trust oversight responsibilities**, and **the RFP mandate cannot be exercised, no RFP may be published, and no award may be made** until the Committee is constituted.
 
 FURTHER RESOLVED, that **Dafeng Guo and Ross Dold's transition service is unpaid**; a member appointed before the Program Account is funded **accrues no retainer** before funding; and pay begins at the later of contract signature and funding, as set out in Part J.
 
-FURTHER RESOLVED, that there is **no deadline for filling the four seats**; block producers determine the timing; and until all five seats are filled, no RFP may be published, no award may be made, and the Program Account may not be funded.
+FURTHER RESOLVED, that there is **no deadline for filling the five seats**; block producers determine the timing; and until all five seats are filled, no RFP may be published, no award may be made, and the Program Account may not be funded.
 
-FURTHER RESOLVED, that **Dafeng Guo and Ross Dold's service ends when the four seats are filled**; Ross Dold may be separately appointed to a seat; Dafeng Guo is ineligible while affiliated with the Vaulta Treasury unless MSIG expressly waives that restriction; and their transition service is recognized with thanks.
+FURTHER RESOLVED, that **Dafeng Guo and Ross Dold's service ends when all five seats are filled**; Ross Dold may be separately appointed to a seat; Dafeng Guo is ineligible while affiliated with the Vaulta Treasury unless MSIG expressly waives that restriction; and their transition service is recognized with thanks.
 
 FURTHER RESOLVED, that **the Program Account must not be funded and the Committee Permission must not be activated until all five seats are filled** and every member has signed their engagement contract, filed the standard disclosure questionnaire on-chain under Framework 6.3a, and registered a signing key, because the permission requires four of five signatures, so a three-member body cannot operate it.
 
@@ -199,7 +201,7 @@ FURTHER RESOLVED, that "affiliated with the Vaulta Treasury" means being its emp
 
 FURTHER RESOLVED, that this exclusion applies in line with the Treasury's stated position that it will not participate in allocation decisions after transferring funds to the Network, protecting both the Treasury and the program from the appearance of Treasury direction; **MSIG may expressly waive the default exclusion at the Threshold, with published reasons**; and a waiver requires a deliberate decision.
 
-FURTHER RESOLVED, that **the transition arrangement remains unchanged**; Dafeng Guo continues alongside Ross Dold and Francis Sangkuan in the original Oversight Committee's Trust oversight role until the four seats are filled; and that service does not include the RFP mandate and ends when the seats are filled.
+FURTHER RESOLVED, that Dafeng Guo continues alongside Ross Dold and Francis Sangkuan in the original Oversight Committee's **Trust oversight role until all five seats are filled**; and that service does not include the RFP mandate and ends when the seats are filled.
 
 FURTHER RESOLVED, that two members must not be connected to the same block producer, company, or corporate group; each member must sign their engagement contract, **file the standard disclosure questionnaire on-chain** under Framework 6.3a and 6.3b, and register their signing key within **30 days**; the questionnaire is the conflict declaration, not an additional document; **pay and signing weight begin only after all three are complete**; and the 30 days run from the **later of** appointment execution and VS LLC publishing that the disclosure register is open for filing.
 
@@ -421,17 +423,11 @@ FURTHER RESOLVED, that **ECF is independent of this program and no funding is gr
 
 FURTHER RESOLVED, that **ECF may bid on RFPs**; if the Community seat holder is engaged by, paid by, or holds a position in ECF, ECF is their **connected organization** under Framework 6.2; the connection must be declared in writing **before publication**, the member must **recuse fully**, and both must be minuted and published; the member must not help set the budget or criteria for an RFP ECF later bids on; and any ECF stipend must be disclosed on-chain under Framework 6.3a Part 2, whoever pays it.
 
-FURTHER RESOLVED, that the ECF vote is a **nomination** and **appointment rests with MSIG**, and block producers should refuse appointment only for **disqualifying cause** and state publicly any other basis for refusal.
-
-FURTHER RESOLVED, that **Francis Sangkuan** is seated on an interim basis with full voting rights, signing weight, and pay until the first ECF winner is seated or **9 months after this MSIG executes**, whichever comes first.
-
-FURTHER RESOLVED, that the interim period starts at **execution**, rather than funding, so ECF can run its process while funding is pending, and **MSIG may extend the interim period once**, at the Threshold and on ECF's request.
-
-FURTHER RESOLVED, that **MSIG must fill the seat at the Threshold** if the interim deadline passes without a winner, so a vacancy does not stop payments.
+FURTHER RESOLVED, that the ECF vote is a **nomination** and the winner must be appointed by **a separate MSIG Resolution at the Threshold using Exhibit E**, and block producers should refuse appointment only for **disqualifying cause** and state publicly any other basis for refusal.
 
 FURTHER RESOLVED, that MSIG may name another administrator or **fill the Community seat at the Threshold using Exhibit E** if **ECF stops running the process or ceases to exist**; MSIG appointments may continue indefinitely, term after term; MSIG may return selection to a later community process without being required to do so; and **the seat retains its Community portfolio, category assignments, vote, signing weight, and pay** regardless of how it is filled.
 
-FURTHER RESOLVED, that ECF is asked to publish its process by **[___]** and complete the first vote by **[___]**; a Community member **appointed by MSIG**, whether an ECF winner or a member appointed under the preceding clause, serves **one year from execution of their appointment Resolution**; and the interim appointment above is not a one-year term and ends as specified there.
+FURTHER RESOLVED, that ECF is asked to publish its process by **[___]** and complete the first vote by **[___]**; and a Community member **appointed by MSIG**, whether an ECF winner or a member appointed under the preceding clause, serves **one year from execution of their appointment Resolution**.
 
 ### Part G — Program roles and VS LLC
 
@@ -528,7 +524,7 @@ FURTHER RESOLVED, that VS LLC's costs for this role are charged to **Program Cos
 
 FURTHER RESOLVED, that VS LLC is authorized to contract with each Committee member, and members have **no status as Trust employees**.
 
-FURTHER RESOLVED, that each member has a **fixed USD 2,500 monthly retainer**, **paid in arrears** in A at Part D's Reference Rate on the payment date; the same retainer applies to all five seats, including the Community seat and interim holder; and **no per-meeting fees, success fees, or payments tied to an award's size, number, or outcome** are authorized.
+FURTHER RESOLVED, that each member has a **fixed USD 2,500 monthly retainer**, **paid in arrears** in A at Part D's Reference Rate on the payment date; the same retainer applies to all five seats, including the Community seat; and **no per-meeting fees, success fees, or payments tied to an award's size, number, or outcome** are authorized.
 
 FURTHER RESOLVED, that member **Technical Reviewer fees** under Framework 12.6 are **Program Costs**, separate from Committee pay; they fall outside the retainer and the aggregate Committee pay cap below; and members who review technical work therefore **may earn more than other members**, even though the retainers are equal.
 
@@ -625,7 +621,7 @@ FURTHER RESOLVED, that the Committee must **publish the funding date on the Port
 
 The MSIG takes effect on execution, so there is no effective date to fill. **Every figure in this Resolution is now set**, not proposed: the Cycle Ceiling, the Per-Award Limit, operating costs, Committee pay, and the post-award review threshold are the numbers block producers are voting on. Part D already provides that you may change any amount, the cycle length, or any limit at the Threshold at any time, so nothing here is locked — but nothing here is a blank either.
 
-**What is not here.** This list holds only what block producers decide or must see filled. Work the VST and VS LLC administer off-chain — candidate sourcing for the four seats, counsel's conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover — is tracked in the **Program Administration Register**, which is not an attachment to this Resolution and is not approved by it.
+**What is not here.** This list holds only what block producers decide or must see filled. Work the VST and VS LLC administer off-chain — candidate sourcing for the four staggered seats, counsel's conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover — is tracked in the **Program Administration Register**, which is not an attachment to this Resolution and is not approved by it.
 
 **Numbers are stable.** When a blank is closed it is deleted from this list and the surviving numbers do not move. Gaps in the sequence are therefore deliberate, and every reference to a blank number elsewhere in this Resolution keeps pointing at the same item. Numbers here are **independent of** the numbering in the Framework's *Appendix C*: the same subject may be blank 12 here and item 11 there.
 
@@ -729,7 +725,7 @@ This also fixes the awkward interaction with long awards. The constraint on a mu
 
 *For differentiating.* Core Development, Business Development, and Marketing carry recurring scoping and diligence work in their categories. Technical judgment in particular is the hardest of the five to recruit, and a weak evaluation there costs the most.
 
-*For equal pay.* By the seat table in the Framework, the Community seat carries two named MSIG #4 categories — educational initiatives, and community engagement and advocacy — while Business Development carries one. Portfolio load does not rank the way intuition suggests, and it is in any case a poor proxy for effort. The At-Large member **chairs** the Committee, which is different work rather than less of it. All five hold identical vote weight, identical signing duty, identical key custody, identical conflict obligations, and identical liability exposure. And the Community seat is the one filled by **community vote** — paying it least is a statement about its standing that will be quoted back during the first contested award.
+*For equal pay.* By the seat table in the Framework, the Community seat carries two named MSIG #4 categories — educational initiatives, and community engagement and advocacy — while Business Development carries one. Portfolio load does not rank the way intuition suggests, and it is in any case a poor proxy for effort. The At-Large member **chairs** the Committee, which is different work rather than less of it. All five hold identical vote weight, identical signing duty, identical key custody, identical conflict obligations, and identical liability exposure. And the Community seat is the one selected through **community vote** — paying it least is a statement about its standing that will be quoted back during the first contested award.
 
 *Alternatives to a seat differential.* Scarce technical expertise can be bought per engagement through the **Technical Reviewer budget**, where it is needed and at a rate that reflects it, rather than embedded permanently in a retainer. Drafting and category diligence can sit with the **Program Manager pool**, with the portfolio lead sponsoring and directing rather than producing.
 
