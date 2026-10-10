@@ -18,7 +18,7 @@ If you read nothing else, read this page.
 | 5 | **Give the Committee a mandate to decide RFP funding** on behalf of the Network | Block producers stop voting on individual awards |
 | 6 | **Cap that mandate**: Cycle Ceiling **USD 150,000 per cycle**, Per-Award Limit **USD 100,000 total contract value**. The mandate **runs until you cancel it** | Anything larger comes back to you |
 | 7 | **Hold program funds on-chain**, moved only by 4 of 5 Committee signatures | Owner permission stays with `eosio.prods` |
-| 8 | **Every payment waits 7 days** before it executes, in public | You may cancel any payment at 15/21 during that wait |
+| 8 | **Require every payment to wait 7 days** before it executes, in public | You may cancel any payment at 15/21 during that wait |
 | 9 | Set **rules for block producer objections** | **4–6 objections** send an award back to block producers for approval; **7 or more** end the award. Part E |
 | 10 | **Recognize ECF** to run the community vote for the Community seat | Francis Sangkuan holds it in the meantime |
 | 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
