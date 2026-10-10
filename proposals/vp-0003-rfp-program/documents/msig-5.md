@@ -101,7 +101,7 @@ FURTHER RESOLVED, that the initial terms are staggered as follows:
 | General (At-Large) | **8** months |
 | Community | See Part F |
 
-FURTHER RESOLVED, that MSIG may **remove a member at any time, with or without cause**, and removal ends their signing weight immediately.
+FURTHER RESOLVED, that a member may be removed at any time, with or without cause, by an MSIG Resolution, and removal ends their signing weight immediately.
 
 **Appointments**
 
