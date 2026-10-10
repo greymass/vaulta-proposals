@@ -24,7 +24,7 @@ If you read nothing else, read this page.
 | 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
 | 11a | A member engaged as Technical Reviewer under Framework 12.6 also earns rate-card fees **outside** this retainer — see Part H | Limited to **3 concurrent engagements**, not by total fees. Not available until that cap is set |
 | 12 | **Authorize USD 910,000 over four quarterly cycles**, first instalment A worth USD 284,375 | Gross transferred up to USD 966,875 — see note 3 |
-| 13 | **If the price oracle goes stale or fails**, payments are priced from a **CoinMarketCap fallback** set in this Resolution. Only if that fails too do all payments stop — awardees, Managers, Committee pay alike — and **no new awards may be made**. **Only block producers** may name a permanent replacement rate source | Part D; Framework 13.4, 13.4a |
+| 13 | Allow **fallback pricing when the oracle is stale or unavailable** | Use the **CoinMarketCap fallback** set in this Resolution; if it also fails, **all payments stop and no new awards may be made**. **Only block producers** may name a permanent replacement rate source. Part D; Framework 13.4, 13.4a |
 
 **What you keep.** Setting every limit above. **Funding the program a year at a time** — the program cannot spend what you have not authorized, and you may change any amount or cycle length at 15/21 at any time. Seating and removing members. Deciding anything above the limits. Cancelling any payment. Suspending or revoking the mandate at any time, without cause.
 
