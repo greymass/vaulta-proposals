@@ -143,7 +143,7 @@ FURTHER RESOLVED, that an appointment has **no effect for a given seat** if any 
 4. they are **affiliated with the Vaulta Treasury**, absent an express waiver at the Threshold;
 5. they appear on the **published register of bans**.
 
-FURTHER RESOLVED, that seats must be tested **in Candidates table order** if a Resolution names the same person for multiple seats or two candidates who would breach the affiliation rule against each other; the first appointment takes effect; the later one **has no effect**; and the proposer may set priority through the table's row order.
+FURTHER RESOLVED, that if a Resolution names the same person for multiple seats or two candidates whose appointments would breach the affiliation rule, the first appointment listed in the **Candidates table** takes effect and the later one **has no effect**.
 
 FURTHER RESOLVED, that **VS LLC must maintain a published seat register on the Portal**; VS LLC must record, for each seat, the member's **name and on-chain account**, proposal name, execution transaction, **link to their network vision statement**, and the proposal's **resolution mode**; VS LLC must record **any seat named but not filled, and why**; and executed appointments may have no effect when proposals compete; the register is the canonical record of what was executed.
 
