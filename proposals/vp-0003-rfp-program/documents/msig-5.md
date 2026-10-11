@@ -101,10 +101,6 @@ FURTHER RESOLVED, that a member may be removed at any time, with or without caus
 
 FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by this Resolution** and must be filled by **separate MSIG Resolutions at the Threshold using Exhibit E**, with **candidates considered on their own merits** and the Community seat selected under Part F.
 
-**How the seats get filled**
-
-FURTHER RESOLVED, that appointment Resolutions for the Core Development, Marketing, Business Development, and At-Large seats may name **one candidate for one seat, a full slate of four, or any subset**.
-
 **What makes an Exhibit E proposal complete**
 
 FURTHER RESOLVED, that an Exhibit E proposal must include all of the following, and a proposal missing any item is **incomplete and should be declined by block producers rather than approved and corrected later**:
