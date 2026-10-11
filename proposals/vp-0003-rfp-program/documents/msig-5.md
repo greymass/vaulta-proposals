@@ -181,9 +181,9 @@ FURTHER RESOLVED, that **Dafeng Guo's Vaulta Treasury affiliation** must remain 
 
 FURTHER RESOLVED, that anyone **affiliated with the Vaulta Treasury** is excluded from holding a Steering Committee seat or serving as an RFP Program Manager or Technical Reviewer.
 
-FURTHER RESOLVED, that "affiliated with the Vaulta Treasury" means being its employee, officer, or director; providing services to it under contract; holding authority over Treasury funds; or otherwise acting under its direction on treasury functions.
-
 FURTHER RESOLVED, that this exclusion applies in line with the Treasury's stated position that it will not participate in allocation decisions after transferring funds to the Network, protecting both the Treasury and the program from the appearance of Treasury direction; **MSIG may expressly waive the default exclusion at the Threshold, with published reasons**; and a waiver requires a deliberate decision.
+
+FURTHER RESOLVED, that "affiliated with the Vaulta Treasury" means being its employee, officer, or director; providing services to it under contract; holding authority over Treasury funds; or otherwise acting under its direction on treasury functions.
 
 FURTHER RESOLVED, that Dafeng Guo continues alongside Ross Dold and Francis Sangkuan in the original Oversight Committee's **Trust oversight role until all five seats are filled**; and that service does not include the RFP mandate and ends when the seats are filled.
 
