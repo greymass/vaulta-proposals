@@ -67,7 +67,7 @@ It also reconstitutes the Oversight Committee as the Steering Committee, gives t
 
 RESOLVED, that the Vaulta Network RFP Framework in Exhibit A is approved, and the Portal is established as the official place for publishing RFPs, the needs backlog, award decisions, the objection register, meeting minutes, and cycle reports, with maintenance and administration assigned to VS LLC.
 
-FURTHER RESOLVED, that the working group established under MSIG #4 is discharged.
+FURTHER RESOLVED, that the working group established under MSIG #4 is discharged, having completed its work.
 
 ### Part B — The Steering Committee
 
