@@ -169,11 +169,9 @@ FURTHER RESOLVED, that their transition service is limited to **the former Overs
 
 FURTHER RESOLVED, that **Dafeng Guo and Ross Dold's transition service is unpaid**; a member appointed before the Program Account is funded **accrues no retainer** before funding; and pay begins at the later of contract signature and funding, as set out in Part J.
 
-FURTHER RESOLVED, that **no RFP may be published until all five Steering Committee seats are filled**.
+FURTHER RESOLVED, that **no RFP may be published until all five Steering Committee seats are filled**, and **the Program Account must not be funded and the Committee Permission must not be activated until those seats are filled** and every member has signed their engagement contract, filed the standard disclosure questionnaire on-chain under Framework 6.3a, and registered a signing key.
 
 FURTHER RESOLVED, that **Dafeng Guo and Ross Dold’s temporary service on the original Oversight Committee ends when all five Steering Committee seats are filled**; Ross Dold may be separately appointed to a seat; Dafeng Guo is ineligible while affiliated with the Vaulta Treasury unless MSIG expressly waives that restriction; and their transition service is recognized with thanks.
-
-FURTHER RESOLVED, that **the Program Account must not be funded and the Committee Permission must not be activated until all five seats are filled** and every member has signed their engagement contract, filed the standard disclosure questionnaire on-chain under Framework 6.3a, and registered a signing key, because the permission requires four of five signatures, so a three-member body cannot operate it.
 
 FURTHER RESOLVED, that **Dafeng Guo's Vaulta Treasury affiliation** must remain recorded as a standing disclosure throughout his transition service.
 
