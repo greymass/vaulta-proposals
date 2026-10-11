@@ -81,8 +81,6 @@ FURTHER RESOLVED, that all the Committee’s **Trust oversight responsibilities*
 
 FURTHER RESOLVED, that the Committee term is **one year**; members may be reappointed at the Threshold without limit; and members whose terms have ended may continue serving month to month and **keep their signing key** until a successor is seated or MSIG replaces them.
 
-FURTHER RESOLVED, that the terms in this Part replace MSIG #2's reference to "the remainder of Dario Cesaro's Initial Term".
-
 FURTHER RESOLVED, that the initial terms of the **Core Development, Marketing, Business Development, and General (At-Large) seats start when the Program Account receives funds**.
 
 FURTHER RESOLVED, that the initial terms are staggered as follows:
