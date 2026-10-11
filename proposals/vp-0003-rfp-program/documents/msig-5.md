@@ -185,7 +185,7 @@ FURTHER RESOLVED, that "affiliated with the Vaulta Treasury" means being its emp
 
 FURTHER RESOLVED, that Dafeng Guo continues alongside Ross Dold and Francis Sangkuan in the original Oversight Committee's **Trust oversight role until all five seats are filled**; and that service does not include the RFP mandate and ends when the seats are filled.
 
-FURTHER RESOLVED, that two members must not be connected to the same block producer, company, or corporate group; each member must sign their engagement contract, **file the standard disclosure questionnaire on-chain** under Framework 6.3a and 6.3b, and register their signing key within **30 days**; the questionnaire is the conflict declaration, not an additional document; **pay and signing weight begin only after all three are complete**; and the 30 days run from the **later of** appointment execution and VS LLC publishing that the disclosure register is open for filing.
+FURTHER RESOLVED, that **no two members may be connected to the same block producer, company, or corporate group**; each member must sign their engagement contract, **file their conflict declaration through the standard on-chain disclosure questionnaire** under Framework 6.3a and 6.3b, and register their signing key **within 30 days of appointment execution or VS LLC’s announcement that the disclosure register is open, whichever is later**; and **pay and signing weight begin only after all three are complete**.
 
 ### Part C — The Mandate
 
