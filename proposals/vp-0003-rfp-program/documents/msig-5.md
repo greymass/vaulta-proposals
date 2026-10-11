@@ -83,9 +83,7 @@ FURTHER RESOLVED, that the Committee term is **one year**; members may be reappo
 
 FURTHER RESOLVED, that these terms are **set**, rather than extended, because the vstcreation MSIG appointed the original Oversight Committee members **without stating a term length**, and they replace MSIG #2's reference to "the remainder of Dario Cesaro's Initial Term".
 
-FURTHER RESOLVED, that the initial terms of the **Core Development, Marketing, Business Development, and General (At-Large) seats begin when funds are received in the Program Account**, rather than when each appointment MSIG executes, and a **Community seat filled by MSIG**, whether seating an ECF winner or filling the seat under Part F, runs for one year from execution of that appointment Resolution.
-
-The four seats may be filled by Resolutions that execute at different times. If each term ran from its own execution, the stagger would drift and could collapse — a Business Development member seated six months after Core Development would finish an 8-month term at the same moment Core Development finished a 14-month one. A single anchor keeps the intended spacing. It also means no member's term runs down while the Committee is waiting to be completed, and it uses the same date as the cycle and pay clocks.
+FURTHER RESOLVED, that the initial terms of the **Core Development, Marketing, Business Development, and General (At-Large) seats start when the Program Account receives funds**, and the **Community seat’s one-year term starts when its appointment MSIG executes**.
 
 FURTHER RESOLVED, that the initial terms are staggered as follows:
 
