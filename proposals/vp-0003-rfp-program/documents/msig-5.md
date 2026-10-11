@@ -85,6 +85,16 @@ FURTHER RESOLVED, that the terms in this Part replace MSIG #2's reference to "th
 
 FURTHER RESOLVED, that the initial terms of the **Core Development, Marketing, Business Development, and General (At-Large) seats start when the Program Account receives funds**.
 
+FURTHER RESOLVED, that the initial terms are staggered as follows:
+
+| Seat | Initial term |
+|---|---|
+| Core Development | **14** months |
+| Marketing | **14** months |
+| Business Development | **8** months |
+| General (At-Large) | **8** months |
+| Community | See Part F |
+
 FURTHER RESOLVED, that a member may be removed at any time, with or without cause, by an MSIG Resolution, and removal ends their signing weight immediately.
 
 **Appointments**
