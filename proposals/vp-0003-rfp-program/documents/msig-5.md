@@ -115,9 +115,7 @@ FURTHER RESOLVED, that an Exhibit E proposal must include all of the following, 
 | 6 | **Relevant background and declared conflicts** for each candidate |
 | 7 | Confirmation that no candidate **already holds a seat**, that seating them would not breach the **one-member-per-affiliation rule** against a sitting member or against another candidate in the same proposal, and that no candidate appears on the **published register of bans** |
 
-FURTHER RESOLVED, that **completeness does not guarantee that an appointment takes effect**; even a complete proposal has no effect for a seat if any of the five grounds below applies at execution; and an incomplete proposal that executes is **not void**; the consequences in this Part apply, and the member must file the missing items before pay and signing weight begin.
-
-FURTHER RESOLVED, that **anyone may propose** an Exhibit E Resolution; candidate searches, community consultation, and slate preparation remain **off-chain**; and neither this MSIG nor VS LLC controls who may be put forward.
+FURTHER RESOLVED, that an incomplete proposal that executes is **not void**, but the member must file the missing items before pay and signing weight begin.
 
 FURTHER RESOLVED, that every appointment proposal must include a **network vision statement for each candidate**, written by that candidate about their seat's portfolio (Framework 3.1a); each statement must explain what the Network needs over the term, **what they would prioritize funding and what they would decline**, how they would judge the program's success, and any position block producers should know about; candidates must declare interests in the disclosure questionnaire; statements should be roughly **300 to 800 words in plain language**, with a translation where helpful; and each statement must be **published with the proposal and linked from the seat register** for the term.
 
