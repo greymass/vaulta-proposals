@@ -83,17 +83,7 @@ FURTHER RESOLVED, that the Committee term is **one year**; members may be reappo
 
 FURTHER RESOLVED, that the terms in this Part replace MSIG #2's reference to "the remainder of Dario Cesaro's Initial Term".
 
-FURTHER RESOLVED, that the initial terms of the **Core Development, Marketing, Business Development, and General (At-Large) seats start when the Program Account receives funds**, and the **Community seat’s one-year term starts when its appointment MSIG executes**.
-
-FURTHER RESOLVED, that the initial terms are staggered as follows:
-
-| Seat | Initial term |
-|---|---|
-| Core Development | **14** months |
-| Marketing | **14** months |
-| Business Development | **8** months |
-| General (At-Large) | **8** months |
-| Community | See Part F |
+FURTHER RESOLVED, that the initial terms of the **Core Development, Marketing, Business Development, and General (At-Large) seats start when the Program Account receives funds**.
 
 FURTHER RESOLVED, that a member may be removed at any time, with or without cause, by an MSIG Resolution, and removal ends their signing weight immediately.
 
@@ -111,11 +101,11 @@ FURTHER RESOLVED, that an Exhibit E proposal must include all of the following, 
 | 2 | A **Candidates table** naming, for each seat covered, the seat, the candidate's **name**, their **on-chain account**, their **affiliation**, their **Vaulta Treasury affiliation** (which must be none, absent an express waiver at the Threshold), and the initial term for that seat |
 | 3 | The table's rows in **deliberate priority order**, that order being the tie-break where two candidates in the same proposal conflict with each other |
 | 4 | A stated **resolution mode** — seat by seat, or all or nothing |
-| 5 | A **candidate-written network vision statement** about their seat’s portfolio (Framework 3.1a). **Content:** Describe the Network’s needs during the term, funding priorities and exclusions, measures of success, and positions block producers should know about; disclose interests in the questionnaire. **Format:** About **300–800 words in plain language**, with a translation where helpful. **Publication:** Publish with the proposal and keep it linked from the seat register throughout the term. **Missing statement:** The proposal is **incomplete and should be declined**, but an executed appointment is **not void**; pay and signing weight wait until the statement and questionnaire are filed, the contract is signed, and the signing key is registered. **Reappointment:** The statement is **non-binding** but informs reappointment; members seeking another term are asked to explain how their year compared with it. |
+| 5 | A **candidate-written network vision statement** about their seat’s portfolio (Framework 3.1a). **Content:** Describe the Network’s needs during the term, funding priorities and exclusions, measures of success, and positions block producers should know about; disclose interests in the questionnaire. **Format:** About **300–800 words in plain language**, with a translation where helpful. **Publication:** Publish with the proposal and keep it linked from the seat register throughout the term. **Reappointment:** The statement is **non-binding** but informs reappointment; members seeking another term are asked to explain how their year compared with it. |
 | 6 | **Relevant background and declared conflicts** for each candidate |
 | 7 | Confirmation that no candidate **already holds a seat**, that seating them would not breach the **one-member-per-affiliation rule** against a sitting member or against another candidate in the same proposal, and that no candidate appears on the **published register of bans** |
 
-FURTHER RESOLVED, that an incomplete proposal that executes is **not void**, but the member must file the missing items before pay and signing weight begin.
+FURTHER RESOLVED, that an incomplete proposal that executes is **not void**, but **pay and signing weight begin only after all required items are filed, the engagement contract is signed, and the signing key is registered**.
 
 FURTHER RESOLVED, that every rule in this Part applies **per seat, rather than per proposal**, and each Exhibit E proposal must state one of two **resolution modes**:
 
@@ -145,7 +135,7 @@ FURTHER RESOLVED, that the register **does not determine eligibility**; if VS LL
 
 FURTHER RESOLVED, that a further MSIG Resolution may correct an appointment executed in error.
 
-FURTHER RESOLVED, that the following seats and initial terms are established:
+FURTHER RESOLVED, that the seats and staggered initial terms are established as follows:
 
 | Seat | How filled | Initial term |
 |---|---|---|
@@ -153,7 +143,7 @@ FURTHER RESOLVED, that the following seats and initial terms are established:
 | Marketing | Exhibit E MSIG — alone, as a slate, or in a subset | 14 months |
 | Business Development | Exhibit E MSIG — alone, as a slate, or in a subset | 8 months |
 | General (At-Large) | Exhibit E MSIG — alone, as a slate, or in a subset | 8 months |
-| Community | ECF nomination, then a separate Exhibit E MSIG under Part F | One year from execution of the appointment Resolution |
+| Community | ECF nomination, then a separate Exhibit E MSIG under Part F | See Part F |
 
 **Transition until all five seats are filled**
 
@@ -161,7 +151,7 @@ FURTHER RESOLVED, that the temporary service of **Dafeng Guo (Vaulta Treasury)**
 
 FURTHER RESOLVED, that their transition service is limited to **the former Oversight Committee's Trust oversight responsibilities**, and **the RFP mandate cannot be exercised, no RFP may be published, and no award may be made** until the Committee is constituted.
 
-FURTHER RESOLVED, that **Dafeng Guo and Ross Dold's transition service is unpaid**; a member appointed before the Program Account is funded **accrues no retainer** before funding; and pay begins at the later of contract signature and funding, as set out in Part J.
+FURTHER RESOLVED, that **Dafeng Guo and Ross Dold's transition service is unpaid**.
 
 FURTHER RESOLVED, that **no RFP may be published until all five Steering Committee seats are filled**, and **the Program Account must not be funded and the Committee Permission must not be activated until those seats are filled** and every member has signed their engagement contract, filed the standard disclosure questionnaire on-chain under Framework 6.3a, and registered a signing key.
 
@@ -177,8 +167,6 @@ FURTHER RESOLVED, that **the Treasury exclusion may be expressly waived by an MS
 
 FURTHER RESOLVED, that "affiliated with the Vaulta Treasury" means being its employee, officer, or director; providing services to it under contract; holding authority over Treasury funds; or otherwise acting under its direction on treasury functions.
 
-FURTHER RESOLVED, that Dafeng Guo continues alongside Ross Dold and Francis Sangkuan in the original Oversight Committee's **Trust oversight role until all five seats are filled**; and that service does not include the RFP mandate and ends when the seats are filled.
-
 FURTHER RESOLVED, that **no two members may be connected to the same block producer, company, or corporate group**; each member must sign their engagement contract, **file their conflict declaration through the standard on-chain disclosure questionnaire** under Framework 6.3a and 6.3b, and register their signing key **within 30 days of appointment execution or VS LLC’s announcement that the disclosure register is open, whichever is later**; and **pay and signing weight begin only after all three are complete**.
 
 ### Part C — The Mandate
@@ -193,7 +181,7 @@ FURTHER RESOLVED, that the mandate continues **until MSIG suspends or revokes it
 
 FURTHER RESOLVED, that **MSIG may suspend or revoke the mandate at any time, without cause**, and rebuild the Committee Permission through the owner permission.
 
-FURTHER RESOLVED, that funding is authorized **four cycles at a time** under Part I; block producers may stop, reduce, or re-time any instalment at the Threshold; and **Committee spending is limited to funds block producers send**.
+FURTHER RESOLVED, that **Committee spending is limited to funds block producers send**.
 
 FURTHER RESOLVED, that the Committee must publish an **annual review** covering awards, outcomes, conflict incidents, coverage history, and whether the limits remain appropriate.
 
@@ -201,7 +189,7 @@ FURTHER RESOLVED, that a Resolution ending the mandate must retain the Committee
 
 ### Part D — Limits and denomination
 
-FURTHER RESOLVED, that **quarterly cycles** are established, with **four cycles authorized at a time, covering one year**, and the first cycle starts **when funds are received in the Program Account**.
+FURTHER RESOLVED, that **quarterly cycles** are established, the first cycle starts **when funds are received in the Program Account**, and the cycle end date is calculated from that funding date.
 
 FURTHER RESOLVED, that **block producers may change any cycle amount, cycle length, or limit at any time by MSIG Resolution at the Threshold**, and a funding authorization does not prevent those changes.
 
@@ -371,7 +359,7 @@ FURTHER RESOLVED, that **VS LLC must develop and configure the Program Account a
 
 FURTHER RESOLVED, that **VS LLC must establish the on-chain disclosure register** under Framework 6.3b on a **separate account, `disc.vst`**, and Exhibit D must identify the account, append-only contract and ABI, deployment and writing authorities, coded-answer schema, and questionnaire version.
 
-FURTHER RESOLVED, that a separate decisions table on that account must hold the records required by Framework 7.6a: award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect; Exhibit D must specify the decisions schema and version, writing authority, **deployment and upgrade authority**, and **RAM provisioning**.
+FURTHER RESOLVED, that a separate decisions table on the same append-only register account as the disclosure questionnaires must hold **full on-chain records** of award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect under Framework 7.6a; **a digest of an off-chain copy is insufficient**; and Exhibit D must specify the decisions schema and version, writing authority, **deployment and upgrade authority**, and **RAM provisioning**.
 
 FURTHER RESOLVED, that **disclosures must not be written to the Program Account**, and the Program Account **must have no routine writing key**.
 
@@ -405,8 +393,6 @@ FURTHER RESOLVED, that two contractor roles are established, selected by the Com
 2. **Technical Reviewers**, engaged **where the RFP's own published statement says a Reviewer is engaged** — the Committee must decide at scoping whether a Reviewer is needed based on whether the work is technical, including for a Service award, and fix that decision at publication without reopening it at signing — whose written assessments inform evaluation and milestone approval.
 
 FURTHER RESOLVED, that **every program decision must identify the people responsible by name and on-chain account**; milestone approvals must identify the **Manager of record** and any **Technical Reviewer**; payments must identify **each signing Committee member**; awards must identify every member voting for, against, or recused.
-
-FURTHER RESOLVED, that **payment decisions must be recorded in full on-chain** in a separate decisions table on the same append-only register as the disclosure questionnaires; this includes award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect; and a digest of an off-chain copy is insufficient.
 
 FURTHER RESOLVED, that a third table must hold published RFPs and amendments, questions and answers, the objection register, ban register, seat register, network vision statements, cycle reports, and annual reviews, and the Portal displays these registers rather than maintaining a second record.
 
@@ -498,9 +484,7 @@ FURTHER RESOLVED, that member **Technical Reviewer fees** under Framework 12.6 a
 
 FURTHER RESOLVED, that the limit is **3 concurrent Technical Reviewer engagements per member**, and **no member may be engaged until that cap is set**.
 
-FURTHER RESOLVED, that there is **no cap on a member's total Reviewer fees per cycle**, and **Exhibit B's rate card is reserved to MSIG and must not be varied by the Committee**.
-
-FURTHER RESOLVED, that every member-Reviewer engagement and fee must be **published in the cycle report by member and RFP**, including each member's cumulative cycle total, and block producers may change the limits at the Threshold or remove a member if they consider the resulting pay excessive.
+FURTHER RESOLVED, that there is **no cap on a member's total Reviewer fees per cycle**; **Exhibit B's rate card is reserved to MSIG and must not be varied by the Committee**; and block producers may change the limits at the Threshold or remove a member if they consider the resulting pay excessive.
 
 FURTHER RESOLVED, that each member's contract must cover:
 
@@ -516,13 +500,13 @@ FURTHER RESOLVED, that reasonable, pre-approved expenses are reimbursable; total
 
 ### Part I — Funding
 
-FURTHER RESOLVED, that the transfer of **A worth USD 284,375** to the Program Account as the first quarterly instalment is requested on behalf of the active block producers, from the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
+FURTHER RESOLVED, that the transfer of **A worth USD 284,375**, calculated at the **Reference Rate on the transfer date** as **125% of the first cycle's USD 227,500 Total Program Spend**, to the Program Account as the first quarterly instalment is requested on behalf of the active block producers, from the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
 
 FURTHER RESOLVED, that the program does not begin if the request is **declined, delayed, or only partly met**: the Program Account is not funded, no cycle starts, no term runs, and no pay accrues; the Committee must report this publicly; MSIG may re-scope the program to available funds.
 
 FURTHER RESOLVED, that the transfer is a **one-way contribution of Network funds**, which neither pass through nor remain held by the VST, and if the VST or VS LLC currently holds any of the source pools, transferring them releases Network funds and is not a Trust activity.
 
-FURTHER RESOLVED, that **four cycles** are authorized, and **another MSIG Resolution is required for the next four cycles**.
+FURTHER RESOLVED, that **four quarterly cycles, covering one year, are authorized**, and **another MSIG Resolution is required for the next four cycles**.
 
 FURTHER RESOLVED, that **USD 910,000 is authorized for the first four-cycle funding period**, comprising:
 
@@ -538,9 +522,7 @@ FURTHER RESOLVED, that funds must be **transferred in four quarterly instalments
 
 FURTHER RESOLVED, that there is **no spending authority against the 25% margin**, and **the Committee must not commit against the margin**.
 
-FURTHER RESOLVED, that the **first instalment is A worth USD 284,375**, calculated at the Reference Rate on the transfer date, which is 125% of the first cycle's USD 227,500 Total Program Spend.
-
-FURTHER RESOLVED, that later instalments are authorized **without a further vote**, and block producers may **stop, reduce, or re-time any instalment by MSIG Resolution at any time**.
+FURTHER RESOLVED, that later instalments are authorized **without a further vote**, and block producers may **stop, reduce, or re-time any instalment by MSIG Resolution at the Threshold at any time**.
 
 FURTHER RESOLVED, that unspent funds, including the margin, must not **carry into the next funding period**; the remaining balance must be **returned or swept through the owner permission as MSIG directs** after all contracted obligations are met; and there is **no sweep at individual cycle ends**; carried balances reduce the next quarterly top-up.
 
@@ -563,8 +545,6 @@ FURTHER RESOLVED, that drafting, execution, and any conforming changes to VS LLC
 FURTHER RESOLVED, that this Resolution takes effect **on execution**, and **the Program Account must not be funded until the Exhibit D configuration under Part E is published**.
 
 **Clocks start when the money arrives, not when this MSIG passes**
-
-FURTHER RESOLVED, that the **first cycle starts when funds are received in the Program Account**, rather than when this MSIG takes effect, and Part D's cycle end date is calculated from that funding date.
 
 FURTHER RESOLVED, that **Committee pay under Part H accrues from the later of contract signature and receipt of funds in the Program Account**.
 
