@@ -126,8 +126,6 @@ FURTHER RESOLVED, that their transition service is limited to **the former Overs
 
 FURTHER RESOLVED, that **the Program Account must not be funded and the Committee Permission must not be activated until all five Steering Committee seats are filled** and every member has signed their engagement contract, filed the standard disclosure questionnaire on-chain under Framework 6.3a, and registered a signing key.
 
-FURTHER RESOLVED, that **Dafeng Guo's Vaulta Treasury affiliation** must remain recorded as a standing disclosure throughout his transition service.
-
 **The Vaulta Treasury is excluded from service**
 
 FURTHER RESOLVED, that anyone **affiliated with the Vaulta Treasury** is excluded from holding a Steering Committee seat or serving as an RFP Program Manager or Technical Reviewer.
