@@ -108,7 +108,7 @@ FURTHER RESOLVED, that an incomplete proposal that executes is **not void**, but
 FURTHER RESOLVED, that every rule in this Part applies **per seat, rather than per proposal**, and each Exhibit E proposal must state one of two **resolution modes**:
 
 1. **Seat by seat** — the default. Each seat named is treated independently, so a Resolution naming several seats takes effect for those that are open and has no effect for those already filled;
-2. **All or nothing** — where marked, the Resolution has **no effect for any seat** if any of the five grounds listed below applies to any seat it names, including a seat being already filled.
+2. **All or nothing** — where marked, the Resolution has **no effect for any seat** if any of the five grounds in **Exhibit E** applies to any seat it names, including a seat being already filled.
 
 FURTHER RESOLVED, that block producers may support multiple candidates by approving multiple proposals, and if more than one proposal for a seat reaches the Threshold, the appointment whose **execution transaction has the earliest block time** fills it.
 
@@ -116,16 +116,6 @@ FURTHER RESOLVED, that the following rules apply once a seat is filled:
 
 1. every other pending proposal for that seat is **void as to that seat**. Proposers should cancel them and block producers should withdraw approvals. A multi-seat proposal marked seat by seat remains live for its other seats;
 2. if such a proposal is nonetheless executed afterwards, it **has no effect for that seat** and does not displace the seated member. Displacing a seated member requires removal by MSIG Resolution.
-
-FURTHER RESOLVED, that an appointment has **no effect for a given seat** if any of the following applies **at the moment of execution**:
-
-1. that seat is already filled by an earlier executed appointment;
-2. the named individual **already holds another seat**;
-3. seating them would breach the **one-member-per-affiliation rule** — two members from the same block producer, company, or corporate group;
-4. they are **affiliated with the Vaulta Treasury**, absent an express waiver at the Threshold;
-5. they appear on the **published register of bans**.
-
-FURTHER RESOLVED, that if a Resolution names the same person for multiple seats or two candidates whose appointments would breach the affiliation rule, the first appointment listed in the **Candidates table** takes effect and the later one **has no effect**.
 
 FURTHER RESOLVED, that **VS LLC must maintain a published seat register on the Portal**; VS LLC must record, for each seat, the member's **name and on-chain account**, proposal name, execution transaction, **link to their network vision statement**, and the proposal's **resolution mode**; VS LLC must record **any seat named but not filled, and why**; and the register is the canonical record of what was executed.
 
