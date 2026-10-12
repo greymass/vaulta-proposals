@@ -150,7 +150,7 @@ FURTHER RESOLVED, that **the Treasury exclusion may be expressly waived by an MS
 
 FURTHER RESOLVED, that "affiliated with the Vaulta Treasury" means being its employee, officer, or director; providing services to it under contract; holding authority over Treasury funds; or otherwise acting under its direction on treasury functions.
 
-FURTHER RESOLVED, that **no two members may be connected to the same block producer, company, or corporate group**; each member must sign their engagement contract, **file their conflict declaration through the standard on-chain disclosure questionnaire** under Framework 6.3a and 6.3b, and register their signing key **within 30 days of appointment execution or VS LLC’s announcement that the disclosure register is open, whichever is later**; and **pay and signing weight begin only after all three are complete**.
+FURTHER RESOLVED, that **no two seats may be occupied by the same person or by people connected to the same block producer, company, or corporate group**; each member must sign their engagement contract, **file their conflict declaration through the standard on-chain disclosure questionnaire** under Framework 6.3a and 6.3b, and register their signing key **within 30 days of appointment execution or VS LLC’s announcement that the disclosure register is open, whichever is later**; and **pay and signing weight begin only after all three are complete**.
 
 ### Part C — The Mandate
 
