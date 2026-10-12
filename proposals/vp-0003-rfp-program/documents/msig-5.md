@@ -101,17 +101,7 @@ FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by th
 
 **What makes an Exhibit E proposal complete**
 
-FURTHER RESOLVED, that an appointment proposal must include all of the following, and a proposal missing any item is **incomplete and should be declined by block producers rather than approved and corrected later**:
-
-| # | Requirement |
-|---|---|
-| 1 | It uses the **Exhibit E template** and states that it is made under this Part |
-| 2 | A **Candidates table** naming, for each seat covered, the seat, the candidate's **name**, their **on-chain account**, their **affiliation**, their **Vaulta Treasury affiliation** (which must be none, absent an express waiver at the Threshold), and the initial term for that seat |
-| 3 | The table's rows in **deliberate priority order**, that order being the tie-break where two candidates in the same proposal conflict with each other |
-| 4 | A stated **resolution mode** — seat by seat, or all or nothing |
-| 5 | A **candidate-written network vision statement** about their seat’s portfolio, **as set out in Exhibit E** (Framework 3.1a). Keep it linked from the seat register **throughout the term**. The statement is **non-binding** but informs reappointment; members seeking another term are asked to explain how their year compared with it. |
-| 6 | **Relevant background and declared conflicts** for each candidate |
-| 7 | Confirmation that no candidate **already holds a seat**, that seating them would not breach the **one-member-per-affiliation rule** against a sitting member or against another candidate in the same proposal, and that no candidate appears on the **published register of bans** |
+FURTHER RESOLVED, that appointment proposals must meet the requirements in **Exhibit E**, including the network vision statement requirements in **Framework section 3.1a**.
 
 FURTHER RESOLVED, that an incomplete proposal that executes is **not void**, but **pay and signing weight begin only after all required items are filed, the engagement contract is signed, and the signing key is registered**.
 
