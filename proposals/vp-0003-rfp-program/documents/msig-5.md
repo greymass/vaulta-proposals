@@ -110,7 +110,7 @@ FURTHER RESOLVED, that the **post-award review threshold under Framework 25.2 is
 
 **Everything is denominated in USD. Everything is paid in A.**
 
-FURTHER RESOLVED, that the **fallback rate** is the **midpoint of CoinMarketCap's published daily high and low USD prices for Vaulta (A), ID 36462**, for the **UTC calendar day before the read**; the midpoint is calculated by adding the high and low and dividing by two; the fallback applies when the newest `eosusd` datapoint is over 24 hours old, or the pair or `delphioracle` contract is unavailable, renamed, or deprecated; and **no party to the transaction may supply the rate**.
+FURTHER RESOLVED, that **CoinMarketCap's Vaulta (A) listing, ID 36462, is designated as the fallback rate source** under Framework 13.4.
 
 **Coverage: the program must hold enough A to meet its USD commitments**
 
