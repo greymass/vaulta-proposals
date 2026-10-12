@@ -106,7 +106,7 @@ FURTHER RESOLVED, that the following limits apply:
 | — of which **Manager and Reviewer fees, Portal, and administration** | **40,000** | Each cycle |
 | **Total Program Spend for the cycle** | **227,500** | Each cycle |
 
-FURTHER RESOLVED, that the **post-award review threshold under Framework 25.2 is USD 25,000**, or **25% of the Per-Award Limit**; the review threshold must be reset to a quarter of that Limit whenever the Limit changes; for every award at or above the threshold, the Manager of record must write a **short closing review** of whether the work met the need, the budget was right, and the Network would do it again; the review must be **published on the Portal** and summarized in the next cycle report; and **Exhibit B's rate card must include this review in the Manager's paid scope**.
+FURTHER RESOLVED, that the **post-award review threshold under Framework 25.2 is USD 25,000**, or **25% of the Per-Award Limit**; the threshold must be reset to a quarter of that Limit whenever the Limit changes; and **reviews must be summarized in the next cycle report**.
 
 **Everything is denominated in USD. Everything is paid in A.**
 
