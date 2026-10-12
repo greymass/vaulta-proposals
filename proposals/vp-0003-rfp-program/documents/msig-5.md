@@ -101,7 +101,7 @@ FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by th
 
 **What makes an Exhibit E proposal complete**
 
-FURTHER RESOLVED, that an Exhibit E proposal must include all of the following, and a proposal missing any item is **incomplete and should be declined by block producers rather than approved and corrected later**:
+FURTHER RESOLVED, that an appointment proposal must include all of the following, and a proposal missing any item is **incomplete and should be declined by block producers rather than approved and corrected later**:
 
 | # | Requirement |
 |---|---|
