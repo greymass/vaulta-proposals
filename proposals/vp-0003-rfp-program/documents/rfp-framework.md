@@ -1295,7 +1295,7 @@ That is why rules 3a and 14 exist rather than a size cap. A **minimum open perio
 
 ## Appendix B — Numbers set elsewhere
 
-These are set in MSIG #5, not here, so they can change without amending this Framework.
+Except for the initial staggered terms in section 3.4, these are set in MSIG #5 and can change without amending this Framework.
 
 | Item | Where |
 |---|---|
@@ -1304,7 +1304,7 @@ These are set in MSIG #5, not here, so they can change without amending this Fra
 | Delay window length, normal and urgent | MSIG #5 |
 | Cycle ceilings and the funding period | MSIG #5 |
 | Committee pay (in **USD**, paid in A) | MSIG #5 |
-| Initial staggered terms | MSIG #5 |
+| Initial staggered terms | Framework section 3.4 |
 | ECF process publication and first vote dates | MSIG #5 |
 | Program Account (`rfp.vst`) permission settings | MSIG #5. Developed, configured, and published by **VS LLC** |
 | Manager and Reviewer rate card | MSIG #5, Exhibit B |

@@ -73,18 +73,6 @@ FURTHER RESOLVED, that the working group established under MSIG #4 is discharged
 
 FURTHER RESOLVED, that the Oversight Committee is renamed the **Vaulta Network Steering Committee**; the same Committee body continues; and the new name applies to references in the Trust Agreement, prior MSIGs, the VS LLC Operating Agreement, and other Trust documents.
 
-**Terms**
-
-FURTHER RESOLVED, that the initial terms are staggered as follows:
-
-| Seat | Initial term |
-|---|---|
-| Core Development | **14** months |
-| Marketing | **14** months |
-| Business Development | **8** months |
-| General (At-Large) | **8** months |
-| Community | See Part F |
-
 **Appointments**
 
 FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by this Resolution** and must be filled by **separate MSIG Resolutions at the Threshold using Exhibit E**, with **candidates considered on their own merits** and the Community seat selected under Part F.
