@@ -19,7 +19,7 @@ Part 2 may be amended by MSIG without reopening Part 1. **Part 1 governs where t
 
 ## 1. What the Committee is
 
-**1.1** The Oversight Committee is renamed the **Vaulta Network Steering Committee**. It is the same body, continued. Existing members, records, and indemnification rights carry over.
+**1.1** The Oversight Committee is renamed the **Vaulta Network Steering Committee**; the same body continues, with its existing members, records, and indemnification rights.
 
 **Francis Sangkuan** (1DEX) is the only carry-over **into a Steering Committee seat**, holding the Community seat on an interim basis (section 4).
 
@@ -38,7 +38,7 @@ No date is set for filling the four seats — that rests with block producers. T
 | What the Committee does | Monitors and reports | Decides what is funded and to whom |
 | Accountability | Trust Agreement records | Publication, delay window, reporting, four-cycle funding authorization |
 
-**1.3** Program funds are **not Trust Property**. The RFP program is not a Trust activity. The Trustee has no role in it.
+**1.3** Program funds are **not Trust Property**, the RFP program is not a Trust activity, and the Trustee has no role in it.
 
 **1.4** Every decision and every record must say which job it belongs to.
 
@@ -56,33 +56,33 @@ No date is set for filling the four seats — that rests with block producers. T
 | **Community** | Builders, holders, user-facing programs | Educational initiatives; community engagement and advocacy |
 | **General (At-Large)** | Cross-cutting matters, process integrity; chairs the Committee | Any category, and matters spanning categories |
 
-**2.2** A portfolio decides who **leads** work in that category. It gives no power to approve, block, or award alone.
+**2.2** Each portfolio determines who **leads** work in that category, but gives no authority to approve, block, or award alone.
 
-**2.3** Members set direction and evaluate. They do not deliver funded work — **other than a Technical Reviewer engagement under section 12.6, which is a Program Cost, not an award**.
+**2.3** Members set direction and evaluate, but must not deliver funded work except as Technical Reviewers under section 12.6, whose fees are Program Costs rather than awards.
 
-**2.4** No more than one member may be connected to the same block producer, company, or corporate group. Members must be individuals. They serve personally and may not send substitutes.
+**2.4** No two seats may be occupied by the same person or by people connected to the same block producer, company, or corporate group; members must be individuals who serve personally and must not send substitutes.
 
 **2.4a The Vaulta Treasury is excluded.** A person **affiliated with the Vaulta Treasury may not** hold a Steering Committee seat, serve as an RFP Program Manager, or serve as a Technical Reviewer.
 
-"Affiliated with the Vaulta Treasury" means employed by it, an officer or director of it, under contract to provide services to it, holding authority over Treasury funds, or otherwise acting under its direction in respect of its treasury functions.
+"Affiliated with the Vaulta Treasury" means being its employee, officer, or director; providing services to it under contract; holding authority over Treasury funds; or otherwise acting under its direction on treasury functions.
 
-The Treasury has stated it will not take part in allocation decisions once funds reach the Network. This exclusion holds it to that, and protects both sides: the Treasury from appearing to direct what it funds, and the program from appearing to be directed. It is a **default**, and MSIG may waive it expressly at the Threshold with published reasons.
+The Treasury has stated that it will not participate in allocation decisions after transferring funds to the Network; this **default exclusion** protects the Treasury and the program from the appearance of Treasury direction, and **MSIG may expressly waive it at the Threshold, with published reasons**.
 
-**Eligibility is continuing, not just tested at appointment.** A member, Manager, or Reviewer who becomes Treasury-affiliated during their term shall disclose it within **10 business days**. Their signing weight, if any, is suspended immediately and the matter goes to MSIG, which may waive the exclusion or remove them.
+**Eligibility applies throughout service.** A member, Manager, or Reviewer who becomes Treasury-affiliated must disclose it within **10 business days**; their signing weight, if any, is suspended immediately and the matter goes to MSIG, which may waive the exclusion or remove them.
 
 The transition arrangement in section 1.1 is unaffected. Dafeng Guo's service there is in the Trust oversight capacity only, does not touch the RFP mandate, and ends when the four seats are filled.
 
-**2.5** Members are **not employees of the Trust**. Each signs a written contract with VS LLC.
+**2.5** Members are **not Trust employees** and must each sign a written contract with VS LLC.
 
-**2.6** Each member holds one unit of signing weight on the Program Account (section 7). A member who cannot hold a signing key securely cannot serve.
+**2.6** Each member holds one unit of signing weight on the Program Account (section 7) and must be able to keep their signing key secure.
 
 ## 3. Choosing members and terms
 
-**3.1 The Core Development, Marketing, Business Development, and General (At-Large) seats** are appointed by MSIG at the Threshold, using the template at Exhibit E to MSIG #5. A single Resolution may name **one candidate for one seat, a full slate of all four, or any subset** — whichever grouping reflects how the candidates were put forward.
+**3.1** The **Core Development, Marketing, Business Development, and General (At-Large) seats** are filled by MSIG Resolutions at the Threshold using **Exhibit E to MSIG #5**; each Resolution may name **one candidate for one seat, all four candidates, or any subset**, according to how the candidates were put forward.
 
-Every rule below operates **per seat**, not per proposal.
+Every rule below applies **per seat, rather than per proposal**.
 
-Block producers may approve more than one proposal covering the same seat. Where more than one reaches the Threshold, the seat goes to whichever proposal is **executed first by block time**. Once a seat is filled, later executions have no effect for that seat.
+Block producers may approve multiple proposals for the same seat; if more than one reaches the Threshold, the appointment **executed first by block time** fills it, and later executions have no effect for that seat.
 
 Each Exhibit E proposal states a **resolution mode**:
 
@@ -97,11 +97,11 @@ An appointment has no effect for a given seat if, at the moment of execution:
 4. they are affiliated with the Vaulta Treasury absent an express waiver at the Threshold;
 5. they appear on the register of bans under section 6.6.
 
-**Internal conflicts resolve by order of appearance.** Where a single Resolution names the same individual for more than one seat, or names two candidates who would breach the affiliation rule against each other, the seats are tested **in the order they appear in the Candidates table of the proposal**: the appointment takes effect for the first and has no effect for the later. The table's row order is therefore the proposer's priority order, and proposers should set it deliberately.
+**Internal conflicts resolve in Candidates table order.** If a Resolution names the same person for multiple seats or candidates who breach the affiliation rule against each other, test the seats in the table's row order; the first appointment takes effect and the later one has no effect, so proposers should set that priority deliberately.
 
-**3.1a Every appointment proposal carries a network vision statement, one per candidate.** A name and a background paragraph tell block producers who someone is. They do not tell them what that person would do with a seat, and that is what the vote is actually about.
+**3.1a Network vision statements.** Every appointment proposal must include a **candidate-written network vision statement for each candidate**; a name and background describe who they are, while the statement explains what they would do with the seat, which is what block producers are voting on.
 
-**Each candidate writes their own.** It is the candidate's statement, not the proposer's, and it addresses **the portfolio of the seat they are named for** — a Core Development candidate writes about core development. A slate may add a short collective note explaining why the four were put forward together, but that does not replace the individual statements.
+**Each candidate writes their own statement**, rather than the proposer, about **their seat's portfolio** — for example, a Core Development candidate writes about core development; a slate may add a collective note explaining why the candidates were put forward together, but this does not replace the individual statements.
 
 **What it covers,** in the candidate's own words:
 
@@ -110,23 +110,23 @@ An appointment has no effect for a given seat if, at the moment of execution:
 3. **How they would judge whether the program succeeded** by the end of their term;
 4. **Any position or commitment block producers should know about.** This is about *direction*, not *interest* — interests belong in the disclosure questionnaire under 6.3a, and this does not replace it.
 
-**Length and language.** Aim for **300 to 800 words**. Long enough to say something, short enough that block producers read all of them when several candidates stand for the same seat. **Write plainly**, and file a translation alongside the original where that helps — not every block producer reads English as a first language, and a statement nobody can read is a statement that does not count.
+**Length and language.** Aim for **300 to 800 words in plain language**, with a translation where helpful; the statement should be long enough to explain the candidate’s views but short enough for block producers to read several candidates’ statements, including those who do not read English as their first language.
 
-**A proposal without one is incomplete and should not be proposed.** It is not a condition that voids an appointment: a missing statement is the proposer's failure, and voiding the seat would punish the candidate and leave the Committee short. Instead, block producers should decline to approve a proposal that omits it; VS LLC records the omission in the seat register; and where a proposal is nonetheless executed without one, **the member files their statement before pay and signing weight begin**, alongside the contract, questionnaire and signing key required by MSIG #5 Part B.
+**A proposal missing a statement is incomplete and should not be proposed or approved.** The omission does not void an appointment: it is the proposer’s failure, and voiding it would punish the candidate and leave the Committee short. VS LLC must record the omission in the seat register, and if the proposal executes, the member must **file their statement before pay and signing weight begin**, alongside the contract, questionnaire, and signing key required by MSIG #5 Part B.
 
-**It is published and it is kept.** The statement is **written to the `publications` register** (7.6a), rendered on the Portal with the proposal, and linked from the seat register. It stays there for the term. It does not bind the member — nobody should be held to a plan the Network's circumstances have moved past — but it is the natural thing to read again at reappointment, and a member who wants a second term should expect to be asked how the second year compared to what they wrote before the first.
+**Publication and reappointment.** Each statement must be **written to the `publications` register** (7.6a), displayed on the Portal with the proposal, and **linked from the seat register throughout the term**; it is **non-binding**, so members can respond to changing Network circumstances, but informs reappointment, and members seeking another term should expect to explain how their year compared with it.
 
 VS LLC maintains a **seat register written to the `publications` table** (7.6a) and rendered on the Portal, recording who holds each seat **by name and on-chain account** — the name being the Part 1 identity under 6.3a, so the register and the questionnaire cannot diverge — the proposal name, the execution transaction, the resolution mode, a **link to each member's network vision statement** under 3.1a, and any seat a proposal named but did not fill together with the reason.
 
 The register is the canonical **record of what was executed** and of any condition VS LLC has identified. It is **not a determination of eligibility.** Where VS LLC records a seat as unfilled on any ground other than an earlier execution, it publishes its reasons and refers the matter to MSIG, and the seat is treated as vacant until MSIG resolves it. VS LLC does not decide who is eligible; MSIG does.
 
-**3.2 Term** is **one year**. Members may be reappointed without limit.
+**3.2** Members serve a **one-year term** and may be reappointed without limit.
 
 The vstcreation MSIG appointed the initial members "effective upon formation of the Trust" and set no term length. MSIG #5 therefore **sets** this term rather than extending an earlier one.
 
-**3.3 Continuation.** Each appointment allows the member to continue month to month after the term ends, until a successor is seated or MSIG replaces them. A continuing member **keeps their signing key**. Without this the Committee would fall below four signers and payments would stop.
+**3.3 Continuation.** Each appointment allows the member to continue month to month after their term ends and **keep their signing key** until a successor is seated or MSIG replaces them, so the Committee does not fall below four signers and stop payments.
 
-**3.4 Staggering.** **All initial terms for the Core Development, Marketing, Business Development, and General (At-Large) seats run from the date funds are received in the Program Account**, not from the date each appointment Resolution is executed. A **Community seat filled by MSIG** — whether seating an ECF winner under 4.2 or filling the seat under 4.6 or 4.7 — instead runs one year from the execution of that Resolution.
+**3.4 Staggering.** Initial terms for the **Core Development, Marketing, Business Development, and General (At-Large) seats start when the Program Account receives funds**, rather than when their appointment Resolutions execute; a **Community member appointed by MSIG**, whether an ECF winner under 4.2 or an appointment under 4.6 or 4.7, serves **one year from execution of that appointment Resolution**.
 
 The four seats may be filled by Resolutions executing at different times. If each term ran from its own execution the stagger would drift, and could collapse entirely — a Business Development member seated six months after Core Development would finish an 8-month term at the same moment Core Development finished a 14-month one. One anchor keeps the spacing, stops a member's term running down while the Committee is incomplete, and matches the cycle and pay clocks.
 
@@ -142,7 +142,7 @@ Initial terms are staggered so all five seats do not end together:
 
 All later terms run the full 12 months.
 
-**3.5 Removal.** MSIG may remove a member at any time, with or without cause. The Committee cannot remove its own members. It may refer a member to MSIG for removal. Removal ends the member's signing weight immediately.
+**3.5 Removal.** A member may be removed at any time, with or without cause, by an MSIG Resolution, and removal ends their signing weight immediately; the Committee may refer a member to MSIG for removal but cannot remove members itself.
 
 **3.6 Resignation.** A member may resign on written notice to the Chair and to block producers. Resignation takes effect on the date stated in the notice or, if none, on delivery. **Key weight is surrendered immediately**, and the seat becomes vacant.
 
@@ -156,9 +156,9 @@ All later terms run the full 12 months.
 
 ## 4. The Community seat
 
-**4.1** The **EOS Community Foundation (ECF)** designs and runs the community vote for this seat. ECF decides candidate eligibility, voter eligibility, voting method, and publication of results.
+**4.1** The **EOS Community Foundation (ECF)** designs and administers the Community seat vote, deciding candidate and voter eligibility, the voting method, and publication of results.
 
-**4.1a ECF is independent of this program, and is not funded by it.** Nothing in this Framework or MSIG #5 pays ECF or its members, and recognizing ECF as the administrator of the vote creates no funding obligation. If ECF seeks Network funding it proposes **its own MSIG**, which block producers vote on directly — not an award under this program, and not the Committee's decision.
+**4.1a ECF is independent of this program, and neither ECF nor its members receive funding under this Framework or MSIG #5.** Recognizing ECF as vote administrator creates no funding obligation; ECF must seek Network funding through **its own MSIG**, decided directly by block producers rather than through a Committee award.
 
 That separation is deliberate. ECF selects the person who fills one of the Committee's five seats; a Committee that also set ECF's budget would be funding the body that seats one of its own members.
 
@@ -166,9 +166,9 @@ That separation is deliberate. ECF selects the person who fills one of the Commi
 
 Any stipend or engagement from ECF is also a **Part 2 disclosure** under 6.3a — "other paid engagements in the Vaulta or wider Antelope ecosystem" — so it is filed on-chain and published like any other, whoever pays it.
 
-**4.2** The ECF vote produces a **nomination**. MSIG then seats the winner, because all Committee members are appointed by MSIG.
+**4.2** The ECF vote nominates a candidate, who must then be appointed by MSIG like every other Committee member.
 
-**4.3** Block producers should refuse to seat an ECF winner only for **disqualifying cause**: a proven conflict of interest, a legal bar to service, a serious failure in the vote itself, or conduct that would be Cause under the Trust Agreement. A block producer refusing on any other basis should say so publicly and give reasons. This is a commitment, not a rule this document can enforce.
+**4.3** Block producers should refuse to appoint an ECF winner only for **disqualifying cause**: a proven conflict of interest, a legal bar, a serious failure in the vote, or conduct that would be Cause under the Trust Agreement; anyone refusing for another reason should publish it, although this document cannot enforce that commitment.
 
 **4.4** If MSIG refuses to seat the winner, ECF seats the runner-up if its process has one. If not, ECF runs the vote again.
 
@@ -178,13 +178,13 @@ This period runs from execution rather than from funding, so ECF is not held up 
 
 **4.6** If the outer date passes with no ECF winner, MSIG fills the seat at the Threshold. Leaving it empty would stop payments (section 3.8).
 
-**4.7 If ECF stops running the process — or ceases to exist —** MSIG may name another administrator, or **fill the seat at the Threshold like any other seat**.
+**4.7** If ECF **stops running the process or ceases to exist**, MSIG may name another administrator or **fill the Community seat at the Threshold** like any other seat.
 
 **Filling it that way is durable, not a holding pattern.** MSIG may keep filling the Community seat indefinitely, appointment after appointment, exactly as it fills the other four. Block producers are the Network's ultimate consensus, and where a community process no longer exists they take it over rather than leaving the seat empty or the program waiting for a body that may never return. If a community process emerges later, MSIG may hand selection back to it — but nothing obliges it to, and nothing lapses if it does not.
 
-**The seat does not change character.** It keeps its Community portfolio, its category assignments under section 2.1, its vote, its signing weight, and its pay. Only the selection method changes. A seat MSIG fills is not a lesser seat.
+**The seat retains its Community portfolio, category assignments under section 2.1, vote, signing weight, and pay** regardless of how it is filled; only the selection method changes, and an MSIG-appointed seat has the same status.
 
-**4.8** Where MSIG seats a Community member — whether seating an ECF winner under 4.2 or filling the seat under 4.6 or 4.7 — it uses the **Exhibit E template** and **the rules in section 3.1 apply**: resolution modes, first execution by block time, the five conditions, and the row-order tie-break. The term runs one year from execution (section 3.4).
+**4.8** Every MSIG appointment to the Community seat, whether seating an ECF winner under 4.2 or filling it under 4.6 or 4.7, must use **Exhibit E** and follow **section 3.1**: resolution modes, first execution by block time, the five conditions, and the row-order tie-break; the term runs **one year from execution** under section 3.4.
 
 **The vision statement requirement in 3.1a applies too.** Where ECF's own process already produced a candidate statement covering the ground in 3.1a, that statement satisfies it and is filed with the proposal — there is no need to write a second one for the same purpose.
 
@@ -249,9 +249,9 @@ This section matters more than any other. The Committee chooses what is funded a
 
 **6.2 Connected companies.** A company connected to a member — their employer, a company they work for, one under common control, or one they hold a material interest in — may bid only if the member: declares the connection in writing **before the RFP is published**; recuses fully from scoping, drafting, evaluation, scoring, discussion, and voting on that RFP; and the connection and recusal are minuted and published. The member may not help set the budget or the criteria for an RFP their connected company later bids on.
 
-**6.3 Declarations.** Every member, Manager, and Technical Reviewer files a declaration of connections, employment, and **Vaulta-ecosystem positions other than A** within 30 days of appointment. For a Committee member the 30 days run as set out in 6.3c. This includes any connection to the **Vaulta Treasury**, which is the source of the funds this Committee allocates. They update it within 10 business days of any change and refile every year.
+**6.3 Declarations.** Every member, Manager, and Technical Reviewer must declare connections, employment, and **Vaulta-ecosystem positions other than A** within 30 days of appointment, including any connection to the **Vaulta Treasury**, which supplies the funds the Committee allocates; the deadline for Committee members runs as set out in 6.3c, and everyone must update their declaration within 10 business days of a change and refile annually.
 
-**6.3a The disclosure questionnaire.** Declarations are made on a **single standard questionnaire**, not as free-form statements. Everyone who decides or manages answers the same questions in the same order, so answers can be compared across people and across years, and so a missing answer is visible as a gap rather than an omission nobody noticed.
+**6.3a The disclosure questionnaire.** Declarations must use a **single standard questionnaire**, with the same questions in the same order, so answers can be compared across people and years and missing answers are visible; free-form declarations do not satisfy this requirement.
 
 **Who files:** every Steering Committee member, every RFP Program Manager, and every Technical Reviewer. Any other person given a decision or approval right in the program files the same questionnaire before that right takes effect.
 
@@ -273,7 +273,7 @@ Parts 2 to 8 each require an explicit **"None"** where there is nothing to decla
 
 **Why Part 4 does not ask for A holdings.** An earlier draft did. It was removed because the question does no work: **every person who files is paid in A**, so holding it is universal rather than distinguishing, and every award is denominated in **USD**, so no decision this Committee makes moves the price in a way a member could act on. A large A position is closer to alignment than to conflict. What Part 4 asks instead are the three cases that are genuinely conflicts — a position in an organization that might **bid**, a position held for **someone else**, and a position **deliberately taken against A**, which is the only one pointed against the program and the only one nothing else in the questionnaire would surface.
 
-**6.3b Publication on-chain.** A filed questionnaire is **published on-chain in full**. The Portal does not hold a separate copy — it **reads the register and renders it**, so there is one record, not two that have to be kept in step.
+**6.3b Publication on-chain.** Questionnaires are published **on-chain in full**, and the Portal displays the register without keeping a separate copy.
 
 **Where it is written.** Disclosures are **not** written to the Program Account. That account holds funds, its owner permission sits with `eosio.prods`, and VS LLC has no weight on it. Disclosures go to a **separate account, `disc.vst`**, carrying a small append-only disclosure contract deployed and controlled by VS LLC. VS LLC configures and publishes it under the same Exhibit D process as the Program Account, and MSIG #5 Part E includes it in that scope. Keeping the two apart means the disclosure register can be written routinely without anyone holding a key that can move money.
 
@@ -287,7 +287,7 @@ Records are **append-only**. An update files a new record referencing the previo
 
 **So the check happens before the write, not after.** VS LLC screens each filing for named individuals and for figures where a band was asked for, and returns it to the filer rather than writing it. That screen is mechanical — it is not a review of the substance, which VS LLC has no business forming a view on.
 
-**6.3c Filing gates.** The questionnaire **is** the conflict-of-interest declaration referred to in the appointment and engagement documents — it is one item, not an additional one.
+**6.3c Filing gates.** The questionnaire **is the conflict-of-interest declaration** required by appointment and engagement documents, rather than an additional item.
 
 | Who | Gate |
 |---|---|
@@ -296,15 +296,15 @@ Records are **append-only**. An update files a new record referencing the previo
 | Technical Reviewer | Cannot be **assigned to an RFP** before filing |
 | A member taking a Reviewer engagement (12.6) | Files an **update** under 6.3 **before the engagement begins**. The engagement may not begin until it is filed, and the 10-business-day change window in 6.3 does not apply to it |
 
-**When the 30-day clock starts.** For a Committee member, the 30 days run from the **later of** the execution of their appointment Resolution and the date VS LLC publishes the disclosure register as open for filing. Nobody is replaced for missing a deadline the program made impossible to meet.
+**When the 30-day clock starts.** Committee members have 30 days from **appointment execution or VS LLC announcing that the disclosure register is open, whichever is later**; nobody is replaced for missing a deadline before filing was possible.
 
 **Overdue annual refiling.** More than 30 days overdue: a **member's pay is suspended** until filed; a **Manager or Reviewer takes no new assignment and cannot be recorded as Manager of record** until filed. Work already assigned continues, since a lapsed refiling is a procedural breach under 6.6, not a material one.
 
-**6.4 Managers and Reviewers.** They may not bid on any RFP they work on, during the engagement and for 6 months afterwards. They may not approve or assess milestones for an awardee they are conflicted on.
+**6.4 Managers and Reviewers.** Managers and Reviewers must not bid on an RFP they work on during their engagement or for **6 months afterwards**, or approve or assess milestones for an awardee with whom they have a conflict.
 
 **What "conflicted" means for a Manager or Reviewer.** Sections 6.1 and 6.2 are written about members. For a Manager or Reviewer they apply **as if references to a member were references to them** — so a connected company, an employer, common control, a material interest, or any payment, fee, equity, token allocation, or referral from the proposer or awardee all count. In addition, they are conflicted on any awardee that is, or is connected to, an organization or person they declared in **Part 3, Part 5, or Part 7** of their questionnaire (section 6.3a). This is the definition every other document points to. The normal remedy is reassignment (section 12.3). They must also not be affiliated with the Vaulta Treasury (section 2.4a) — the Manager of record approves payments, which is exactly the kind of active decision the Treasury has said it will stay out of.
 
-**6.5 Confidentiality.** Proposal contents, prices, and evaluation discussions stay confidential until the award is announced. Members may not share proposal content with competitors or use what they learn for their own or a connected company's benefit.
+**6.5 Confidentiality.** Proposal contents, prices, and evaluation discussions remain confidential until the award is announced, and members must not share them with competitors or use information from them for their own benefit or that of a connected company.
 
 **6.6 Consequences.** Consequences run on two levels, because a late filing and a concealed self-dealing award are not the same thing.
 
@@ -323,7 +323,7 @@ Records are **append-only**. An update files a new record referencing the previo
 - serving as an RFP Program Manager or Technical Reviewer;
 - submitting or being named on any proposal to the Vaulta RFP program, or receiving any payment from it — directly, or through any entity in which they hold a material interest.
 
-**A ban can only be lifted by the same Threshold.** Fifteen of twenty-one confirmed it, and fifteen of twenty-one are required to overturn it. Nothing else — not a Committee vote, not the passage of time, not a change in the Committee's membership — reduces or expires it.
+**A ban can only be lifted at the same Threshold:** fifteen of twenty-one to confirm it and fifteen of twenty-one to overturn it; no Committee vote, passage of time, or change in membership reduces or expires it.
 
 **Before MSIG votes**, the person shall be given the allegation in writing and **10 business days** to respond, and their response is published with the referral. A permanent exclusion decided without hearing the person would not survive its first contested application.
 
@@ -333,7 +333,7 @@ Records are **append-only**. An update files a new record referencing the previo
 
 ## 7. The Program Account and signing
 
-**7.1** Program funds sit in the on-chain **Program Account**, `rfp.vst`. They sit nowhere else.
+**7.1** All program funds must be held in the on-chain **Program Account, `rfp.vst`**, and nowhere else.
 
 The name reads as belonging to the VST, but it confers no authority. A parent account has no standing control over a subaccount once created, and the permissions in 7.2 govern: the owner permission sits with `eosio.prods` and moving funds needs 4 of 5 Committee signatures. **The VST cannot move program funds.**
 
@@ -347,9 +347,9 @@ The name reads as belonging to the VST, but it confers no authority. A parent ac
 | Owner permission | Held by `eosio.prods` |
 | Delay before a payment executes | Set in MSIG #5 |
 
-**7.3** Because the owner permission stays with block producers, they can replace a removed member's key, rebuild the permission, or recover the account.
+**7.3** Block producers retain the owner permission and may replace a removed member's key, rebuild the Committee permission, or recover the account.
 
-**7.4 Keys are personal.** No member may share, delegate, or let an employer hold their key. No member may sign for another member, including a recused one. Keys are registered on appointment and given up on removal or replacement — but **not** during authorized month-to-month continuation (section 3.3).
+**7.4 Keys are personal.** Members must not share or delegate their key, let an employer hold it, or sign for another member, including a recused member; keys must be registered on appointment and surrendered on removal or replacement, but retained during authorized month-to-month continuation under section 3.3.
 
 **7.5 Lost or compromised keys.** A member must tell the Chair and block producers **immediately**, and must not sign until the key is replaced. The Committee proposes no payments in the meantime.
 
@@ -412,11 +412,11 @@ The Portal **reads the register and renders it**. It does not hold its own copy 
 
 ## 8. The mandate
 
-**8.1** MSIG grants the Committee a standing mandate to **allocate Program Account funds on behalf of the Network**. Block producers do not vote on individual RFPs or individual awards. Within the limits below, the Committee's decision is the Network's decision.
+**8.1** MSIG grants the Committee a **standing mandate to allocate Program Account funds on behalf of the Network**; block producers do not vote on individual RFPs or awards, and a Committee decision within the limits below is the Network's decision.
 
 **8.2** This is the separate authorization MSIG #4 required before anyone could award funds.
 
-**8.3 The Committee decides:** what becomes an RFP; scopes, deliverables, criteria, budgets, and timelines; **who wins and on what terms**; who serves as Manager of record and Technical Reviewer; and whether to withhold payment or terminate an engagement.
+**8.3 The Committee decides:** which needs become RFPs; their scopes, deliverables, criteria, budgets, and timelines; **awardees and award terms**; Managers of record and Technical Reviewers; and whether to withhold payment or terminate an engagement.
 
 **8.4 What the Committee may not do:**
 
@@ -428,7 +428,7 @@ The Portal **reads the register and renders it**. It does not hold its own copy 
 6. act after the mandate is suspended or revoked;
 7. **form, register, or join any company, foundation, association, trust, or other entity** on behalf of the Network. That requires a separate MSIG Resolution.
 
-An action outside these limits is **void**. VS LLC must not contract on it. Block producers should cancel any matching payment during its delay window.
+An action outside these limits is **void**; VS LLC must not contract on it, and block producers should cancel any related payment during its delay window.
 
 **8.5 What replaced the old safeguard.** In most funding systems, the body that decides never touches the money. **That is no longer true here** — the Committee decides and also signs. These controls replace it, and they only work together:
 
@@ -495,11 +495,11 @@ The same applies to the **designation of a replacement rate source under 13.4a**
 
 **10.2 Why step 3 comes before step 4.** An awardee who has signed nothing has no obligations, no acceptance criteria, and nothing to recover against. This is the last cheap point to stop a bad decision.
 
-**10.3 Publication happens in two stages.** The decision is published within 2 business days: awardee, scope, **award shape**, **licence**, amount, milestone schedule, **each member's vote — for, against, or recused — by name and on-chain account**, and the reasons where the Committee did not follow the reviewers' scores. The **on-chain transaction reference is added later**, when the payment is proposed.
+**10.3 Publication happens in two stages.** Within 2 business days, publish the awardee, scope, **award shape**, **licence**, amount, milestone schedule, **each member's vote — for, against, or recused — by name and on-chain account**, and any reason for departing from the reviewers' scores; add the **on-chain transaction reference** when payment is proposed.
 
 Publication is required. The chain shows that money moved; the Portal shows why.
 
-**10.4 The delay window** runs from the moment publication is complete. If publication is incomplete or has to be corrected, the Committee cancels the proposal and starts again, which restarts the delay. The delay cannot be waived. A shorter urgent delay may be used only where the Committee votes to declare urgency **at the award threshold — two-thirds of filled non-recused seats, minimum 3** — records the reason, and completes publication before the proposal is made.
+**10.4 The delay window** starts when publication is complete and **cannot be waived**; incomplete or corrected publication requires cancellation and a new proposal, restarting the delay; the shorter urgent delay requires a Committee urgency vote **at the award threshold — two-thirds of filled non-recused seats, minimum 3** — with the reason recorded and publication complete before proposing payment.
 
 **10.5 Objections.** Block producers may object during the delay. Objections are **written to the `publications` register as they are received** (7.6a) and recorded in a public register on the Portal, are attributed to the block producer who made them, and may be withdrawn.
 
@@ -515,21 +515,21 @@ Publication is required. The chain shows that money moved; the Portal shows why.
 
 **10.6a Objections are signed, and only eligible signatures count.** An objection and any withdrawal are **signed by the block producer's on-chain account**. A signature counts toward the band only if that account is in the **active producer set at the time of signing**; one that is not is recorded but not counted, and the register states which schedule was used. The bands turn an award back to MSIG or end it outright on a count of exactly these signatures, so who is eligible has to be settled before the count, not after.
 
-**10.7 Cancelling is itself an on-chain action.** It is a **3-of-5** administrative action and is **mandatory** in the 4-to-6 and 7-or-more groups. The Committee shall cancel within **2 business days** of the count closing, and **failure to cancel is an express ground for referral to MSIG for removal**.
+**10.7 Cancellation** is a **3-of-5 on-chain administrative action** and is **mandatory** in the 4-to-6 and 7-or-more objection bands; the Committee must cancel within **2 business days** of the count closing, and failure to do so is an express ground for referral to MSIG for removal.
 
 Block producers can also cancel through the owner permission. That is the backstop, not the primary route — 4 to 6 objectors are by definition short of the Threshold, so a Committee that simply declined to act could not otherwise be stopped.
 
 **10.8 Block producers may cancel any payment at the Threshold during its delay**, whatever the objection count. The register records opinion; the chain enforces it.
 
-**10.9 After a cancellation in the 4-to-6 group**, the Committee sends the record and a draft confirming resolution to MSIG within **10 business days**. If MSIG does not confirm within **30 days of that submission**, the award ends and its reservation is released.
+**10.9** After cancellation in the 4-to-6 band, the Committee must submit the record and a draft confirming Resolution to MSIG within **10 business days**; if MSIG does not confirm within **30 days of submission**, the award ends and its reservation is released.
 
-**MSIG confirmation revives the decision, not the agreement.** The awardee agreement terminated on cancellation, so VS LLC executes a **fresh agreement on identical terms** before the disbursement is proposed again — within the 60 days in section 10.10, running from confirmation.
+**MSIG confirmation restores the award decision, not the agreement**; cancellation terminated the agreement, so VS LLC must sign a **fresh agreement on identical terms** before proposing disbursement again, within the 60 days in section 10.10 measured from confirmation.
 
 **10.10 Time limit on an unused decision.** The agreement must be signed within **60 days** of the award decision, or of MSIG confirmation if the award was cancelled into the 4-to-6 group — and in any case before the cycle closes. After that the decision expires and the Committee must vote again. Late in a cycle the 60 days may in practice be shorter, so contract quickly or hold the award over.
 
 ## 11. Milestone approval and payment
 
-**11.1** Awards are paid in milestones. The **Manager of record approves each milestone for payment**. The schedule is proposed, settled, and contracted under 11.1a. The Manager decides whether each milestone has been met.
+**11.1** The **Manager of record approves each milestone for payment**, deciding whether it has been met; awards are paid in milestones under the schedule proposed, settled, and contracted under 11.1a.
 
 **11.1a Where milestones come from, and the two-milestone minimum.**
 
@@ -562,7 +562,7 @@ The test is the published field, not a judgment about the work. That matters bec
 
 The judgment about whether the work is technical is therefore made **once, at scoping**, by the Committee — not again at each signature. A hosted service, a history API, or anything else on the line between technical and operational is decided when the RFP is written, and recorded there for everyone to see. Nobody has to re-argue it later.
 
-**11.3 The approval record** must contain: the milestone, the criteria applied, the **Manager of record by name and on-chain account**, their decision and reasons, the **Technical Reviewer by name and account** and their assessment where required, the amount payable, and the awardee's verified receiving account. The approval and amount are **published**.
+**11.3 The approval record** must state the milestone, criteria applied, the **Manager of record's name and on-chain account**, decision and reasons, the **Technical Reviewer's name, account, and assessment where required**, amount payable, and the awardee’s verified receiving account; the approval and amount must be **published**.
 
 Where the determination is made while payments are suspended under 13.4a, **the determination, its date, and everything in this section except the amount payable are published when the determination is made**. The record is completed with the rate data and the amount on resumption, and republished. A suspension does not make a milestone determination private.
 
@@ -588,15 +588,15 @@ The account alone is not enough. Accounts can be rotated, renamed, or read by no
 
 **The Committee does not judge the work again.**
 
-**11.4a Signing an award disbursement is administrative too.** Once the Committee has voted to award and the agreement is executed, signing confirms only that the decision record is complete, the agreement matches it, the amount is within the limits, the delay has run, and no termination recommendation under 11.10a is open on the award.
+**11.4a Signing the initial award disbursement is administrative.** After the award vote and execution of the agreement, signers check only that the decision record is complete, the agreement matches it, the amount is within the limits, the delay has run, and no termination recommendation under 11.10a is open.
 
 **A member who voted against an award still signs its disbursement**, absent one of those failures or credible evidence of misrepresentation or conflict. One recusal leaves exactly four available signers, so a dissenting member withholding a signature could otherwise veto a properly passed award alone. Disagreement belongs at the vote, not at the signature.
 
-**11.5 Refusing to sign.** A member may refuse only if one of those five checks fails, or if there is credible evidence that the approval was obtained by misrepresentation or in breach of the conflict rules. The member states the reason in writing and it is minuted. **Disagreeing with the Manager's judgment is not a valid reason.** That disagreement belongs at the award stage.
+**11.5 Refusing to sign.** A member may refuse only if one of the five checks fails or there is credible evidence that the approval was obtained by misrepresentation or a conflict-rule breach, and must give the reason in writing for the minutes; **disagreement with the Manager's judgment is not a valid reason**, since that belongs at the award stage.
 
 **Nor is disagreeing with the RFP's Reviewer setting.** A member may not refuse to sign on the ground that the work *ought* to have been treated as technical when the published RFP said no Reviewer was engaged. That call was made at scoping under 20.2 and the awardee bid on it. The remedy is to set the next RFP differently.
 
-**11.6 Milestone payments have no objection process.** They carry the normal delay, but they carry out a commitment the Network already made and already published.
+**11.6** Milestone payments carry the normal delay but **no objection process**, because they fulfil a commitment the Network has already made and published.
 
 **11.7 Advance payments** before delivery are capped at **15%** of the award total, and only where the awardee genuinely cannot fund the first milestone. An advance is **approved by the Committee at the award threshold and published with the award decision** — it is not a milestone, so the Manager of record does not approve it.
 
@@ -614,9 +614,9 @@ The account alone is not enough. Accounts can be rotated, renamed, or read by no
 
 The rule on increases prevents an award being set below the Per-Award Limit and topped up past it later.
 
-**11.9 Late delivery.** A missed milestone requires a written recovery plan within 10 business days, managed by the Manager. A second consecutive miss triggers a Committee review.
+**11.9 Late delivery.** A missed milestone requires a written recovery plan within 10 business days, managed by the Manager, and a second consecutive miss triggers a Committee review.
 
-**11.10 Termination for cause** needs a two-thirds vote, minimum 3, and is published with reasons. Accepted milestones are paid. Unearned amounts are not proposed. Delivered work product stays with the VST. Any pending payment proposal is cancelled.
+**11.10 Termination for cause** requires a two-thirds vote, minimum 3, and publication of the reasons; accepted milestones are paid, unearned amounts are not proposed, delivered work product stays with the VST, and any pending payment proposal is cancelled.
 
 **What termination leaves behind, by shape** (20.2a): for a **Service** award, the **operational handover set and the data export fall due on termination**; for an **Embedded** award, the **licence back over embedded pre-existing IP survives termination**. Termination is exactly when the Network most needs both.
 
@@ -667,9 +667,9 @@ At five filled seats, two-thirds of the remaining four is 3, so every outcome ca
 
 ## 12. Program Managers and Technical Reviewers
 
-**12.1** Both are outside contractors, **except where a Committee member is engaged as Technical Reviewer under 12.6**. The Committee **selects** them. **VS LLC contracts** them on the standard Independent Contractor Agreement, using the Schedule A at Exhibit F to MSIG #5, under a published rate card.
+**12.1** Managers and Technical Reviewers are outside contractors, **except Committee members engaged as Reviewers under 12.6**; the Committee selects them, and VS LLC contracts them under the standard Independent Contractor Agreement using the **Schedule A at Exhibit F to MSIG #5**, with a published rate card.
 
-**12.2 Managers are a pool. Each RFP has exactly one Manager of record**, named and published with that RFP. One Manager may run several RFPs at once.
+**12.2** Managers are engaged as a pool, with **exactly one Manager of record named and published for each RFP**; a Manager may run several RFPs at once.
 
 One Manager per RFP keeps milestone approval a single accountable decision. Many Managers across the program means a conflicted or unavailable Manager can be replaced on one RFP without stopping it.
 
@@ -681,7 +681,7 @@ The reason is that milestone approval is the one judgment in the program that th
 
 So on every award, including one reviewed by a member under 12.6, **the milestone is approved by a Manager of record who is not on the Committee.**
 
-**12.3 Reassignment.** The Committee assigns the Manager when it approves an RFP for publication and may reassign at any time by majority. Reassignment is published. The outgoing Manager hands over the approval history, correspondence, and open items in writing. The incoming Manager must have no conflict on that RFP.
+**12.3 Reassignment.** The Committee assigns a Manager when approving an RFP for publication and may reassign it by majority at any time; the change must be published, the outgoing Manager must hand over the approval history, correspondence, and open items in writing, and the incoming Manager must have no conflict on that RFP.
 
 **Where no unconflicted Manager is available**, the Committee records and publishes that fact and **escalates under 9.1**. MSIG may direct the engagement of a named Manager or another basis of approval. **Section 12.2a is not lifted in any case** — the answer to an empty Manager pool is a new Manager, never a member.
 
@@ -689,7 +689,7 @@ This is the one place the bar in 12.2a can leave nobody able to act: only a Mana
 
 **12.4 Workload.** The Committee tracks how many RFPs each Manager holds and reports it. A Manager holding too many will approve milestones on paperwork rather than on knowledge of the work.
 
-**12.5 Neither role's pay may depend on** milestone approval, or on the size, number, or outcome of any award.
+**12.5** Manager and Reviewer pay must not depend on milestone approval or the size, number, or outcome of an award.
 
 **12.6 A Committee member may serve as Technical Reviewer.** The pool of people who can competently assess Antelope code is small, and the person best placed to read it is often the Core Development seat holder. Excluding them would mean either no competent assessment or a less competent one bought from outside. So this is permitted — but expressly and on terms, not by silence. This section is the complete statement of those terms.
 
@@ -712,7 +712,7 @@ This is the one place the bar in 12.2a can leave nobody able to act: only a Mana
    Every recusal below is costed against **five** filled seats. The recusal in 11.10a survives the suspension or ending of an engagement, because the member's assessments remain the evidence either way; **where it would leave fewer than four non-recused seats, the termination recommendation goes to MSIG under 9.1** rather than turning on the unanimity of three;
 4. **no other member already reviews that RFP**, and the member is **within the cap on concurrent engagements**.
 
-**12.6.2 The member recuses from the decision to engage themselves** — both the availability finding under 12.6.1(2) and the vote engaging them. They are the sole beneficiary of a finding only they are expert enough to contradict. Both decisions are taken at simple majority, minimum 3, on non-recused seats (section 5.3).
+**12.6.2 The member recuses from both the availability finding and the vote engaging them**, since they benefit from the decision; both require a simple majority of non-recused seats, minimum 3, under section 5.3.
 
 **12.6.3 What the member-Reviewer does not do on that RFP.**
 
@@ -723,9 +723,9 @@ This is the one place the bar in 12.2a can leave nobody able to act: only a Mana
 | **Does not vote on any termination recommendation, recovery plan, or strike decision concerning that award** | Whether the recommendation is theirs or the Manager's, they are a fact witness on the substance: their own assessments are the evidence either way. Two-thirds of the remaining four seats is 3, so every outcome still carries |
 | **Does not vote on, or sign, the payment of their own fee** | Section 13.3a |
 
-**12.6.4 What they still do.** They **keep their award vote** on that RFP — the fee is a fixed rate-card figure, unaffected by who wins, and removing the portfolio expert from the award decision would defeat the point of having portfolios. They **may sign the milestone payment** on an award they reviewed: the third check in 11.4 confirms an assessment is *present*, not that it is right, and the three other signers make that check independently. Barring their signature would put every technical milestone payment permanently at zero margin under the 4-of-5 permission.
+**12.6.4** A member-Reviewer **keeps their award vote** because the fixed rate-card fee does not depend on the winner and the portfolio expertise is needed; they **may sign milestone payments** on that award because the third check in 11.4 confirms that an assessment exists rather than judging it, and the other three signers check independently; otherwise these payments would have no signing margin under the 4-of-5 permission.
 
-**12.6.5 Pay and disclosure.** The fee is the **published rate card amount at Exhibit B to MSIG #5**. The rate card is set by MSIG and is **not within the Committee's gift**, so there is no rate to negotiate and no rate-card vote to recuse from. Every engagement and every fee is listed in the cycle report by member and by RFP (section 13.5), and the member **files an update to their disclosure questionnaire before the engagement begins** — not within the usual 10-business-day window, since the engagement itself is the thing being disclosed (section 6.3c).
+**12.6.5 Pay and disclosure.** Member-Reviewer fees are the **published Exhibit B rate-card amounts**, set by MSIG and not negotiable or variable by the Committee, so there is no rate-card vote to recuse from; every engagement and fee must be reported by member and RFP in the cycle report (13.5), and the member must **update their disclosure questionnaire before the engagement begins**, rather than using the usual 10-business-day window (6.3c), because the engagement itself is being disclosed.
 
 **12.6.6 One thing this decides that the working group has not.** MSIG #5 Part H sets member pay equal across all five seats and defers the question of whether category leads should earn more. Reviewer fees sit outside that retainer, so allowing them makes pay unequal in practice, and in favour of whichever seat does the technical reviewing.
 
@@ -733,7 +733,7 @@ This is the one place the bar in 12.2a can leave nobody able to act: only a Mana
 
 ## 13. Money: ceiling, reservation, reporting
 
-**13.1 Limits and funding periods.** MSIG sets the **Cycle Ceiling**, the **Per-Award Limit**, the **Program Cost Ceiling**, the **cycle length**, and the **program scope**. Each ceiling is a maximum, not a target. Unspent amounts do not carry over.
+**13.1 Limits and funding periods.** MSIG sets the **Cycle Ceiling**, **Per-Award Limit**, **Program Cost Ceiling**, **cycle length**, and **program scope**; ceilings are maxima rather than targets, and unspent allocations do not carry over.
 
 **Two ceilings, not one.** The **Cycle Ceiling** bounds what the program commits to **awardees**. The **Program Cost Ceiling** bounds what the program spends on **itself** — and carries two internal caps that do not move against each other: one on **Committee pay**, one on **Manager and Reviewer fees together with Portal and administration**. Underspend in either does not raise the other, and **exceeding either is a reserved matter under 9.1**. The figures are in MSIG #5 Part D (Appendix B).
 
@@ -741,9 +741,9 @@ The reason the second ceiling exists as a single line with two caps inside it is
 
 **Funding is authorized four cycles at a time**, covering one year — the **authorized funding period**. Funds are transferred quarterly under that single authorization, each instalment topping the Program Account up to **125% of the coming cycle's Total Program Spend**. Forward commitments are not added on top, because they already sit inside that cycle's Cycle Ceiling.
 
-**Block producers may change any amount, the cycle length, or any limit at any time** by MSIG Resolution, and may stop, reduce, or re-time any instalment. Authorizing a year at a time is a convenience, not a commitment that binds them for the year.
+**Block producers may change any amount, cycle length, or limit at any time by MSIG Resolution**, and may stop, reduce, or re-time an instalment; authorizing a year does not bind them to fund the whole year.
 
-**The first cycle begins on the day funds arrive in the Program Account**, not on the day MSIG #5 passes. Committee pay accrues from the later of contract signature and that date. The Committee publishes the funding date on the Portal, because three periods are counted from it: the cycle, the pay period, and the initial terms of the four MSIG-appointed seats (section 3.4).
+**The first cycle starts when the Program Account receives funds**, rather than when MSIG #5 passes; Committee pay accrues from contract signature or that funding date, whichever is later; the Committee must publish the funding date on the Portal because it starts the cycle, pay period, and initial terms of the four MSIG-appointed seats (3.4).
 
 **13.2 Reservation.** An award **reserves** its full **USD** amount against the Cycle Ceiling from the moment of decision, through publication, contracting, the delay window, and any MSIG confirmation. Reservation is not payment. No money moves until an agreement exists and the delay ends. But the amount is unavailable to other awards in the meantime.
 
@@ -776,7 +776,7 @@ A released amount returns to the ceiling of the **cycle in which the release occ
 3. **no objection banding applies**, because the schedule was published in advance and the amounts are fixed;
 4. every payment appears in the cycle report, with cumulative Program Costs against the **Program Cost Ceiling** and against **each of its two internal caps**.
 
-A payment not on an approved schedule needs a fresh Committee approval at the same threshold and its own published record.
+A payment outside an approved schedule requires fresh Committee approval at the same threshold and its own published record.
 
 **Reviewer fees payable to a Committee member** under section 12.6 are approved as a separate line and **paid on a separate payment** from the rest of the schedule — **one payment per member-Reviewer**, never a combined one. Each is signed by the other four. The member recuses from their own schedule line and from signing their own payment only.
 
@@ -786,13 +786,13 @@ One payment each, not one payment for all of them: if two members held engagemen
 
 **13.4 Denomination and price movement.**
 
-**Everything is denominated in USD. Everything is paid in A.** The Cycle Ceiling, the Per-Award Limit, the Program Cost Ceiling and its internal caps, every award, every reservation, and Committee pay are all USD figures. The Program Account holds A.
+**All amounts are denominated in USD and paid in A**: the Cycle Ceiling, Per-Award Limit, Program Cost Ceiling and internal caps, awards, reservations, and Committee pay; the Program Account holds A.
 
-The amount of A paid against a milestone is calculated **at the time the milestone is approved for payment**, using the **Delphi Oracle** (`delphioracle`) — the on-chain price oracle operated by block producers.
+**Milestone payments convert to A when approved for payment**, using the block-producer-operated **Delphi Oracle (`delphioracle`)**.
 
-The rate is the **`median` field of the `datapoints` table**, scoped to the **`eosusd`** pair. The contract computes it as the median of the last 21 submissions from qualified oracles, so moving it requires collusion by a majority of the oracle set. It is supplied by **no party to the transaction** — not the Committee, not VS LLC, not the awardee.
+The rate is the **`median` field of the `datapoints` table for the `eosusd` pair**, computed from the last 21 qualified oracle submissions, so changing it requires a majority of the oracle set to collude; **neither the Committee, VS LLC, nor the awardee supplies the rate**.
 
-**How the number converts.** The oracle stores prices as integers. The actual price is `median` ÷ 10^`quoted_precision`, and for `eosusd` the precision is **4** — the stored integer is in ten-thousandths of a dollar.
+**How the number converts.** The oracle stores integer prices; divide `median` by 10^`quoted_precision` to obtain USD per A, using precision **4** for `eosusd`, which expresses prices in ten-thousandths of a dollar.
 
 | Step | Example |
 |---|---|
@@ -830,7 +830,7 @@ The timestamp of the newest datapoint is **recorded and published with every app
 
 A halt would be the wrong response to a quiet oracle: awardees would go unpaid for something entirely outside their control. The fallback keeps payments moving at a rate nobody in the transaction chose, and escalation, where even the fallback is unavailable, forces a conscious decision instead, on the record.
 
-**The fallback rate.** Where the newest `eosusd` datapoint is more than **24 hours** old at a read, or the pair or the `delphioracle` contract is unavailable, renamed, or deprecated, the rate is the **CoinMarketCap daily average USD price of Vaulta (A), CoinMarketCap ID 36462**, for the **UTC calendar day before the date of the read**. The daily average is the **arithmetic mean of that day's high and low prices** as published by CoinMarketCap. MSIG #5 sets it in advance, so it remains a number supplied by no party to the transaction.
+**The fallback rate.** If the newest `eosusd` datapoint is more than **24 hours** old at a read, or the pair or `delphioracle` contract is unavailable, renamed, or deprecated, use the **midpoint of CoinMarketCap's published daily high and low USD prices for Vaulta (A), ID 36462**, for the **UTC calendar day before the read**; add the high and low and divide by two; MSIG #5 sets this source in advance so no party to the transaction supplies the rate.
 
 | | |
 |---|---|
@@ -855,7 +855,7 @@ RFP budgets, award decisions, and approval records are stated in **USD**. The A 
 | **If coverage falls below the 10% floor** | Stop awarding. Notify MSIG within **5 business days** and request a top-up. Milestones under existing agreements continue to be paid while funds allow |
 | **If A rises** | Report the surplus. It is not swept at cycle end — it reduces the next quarterly instalment, and any final balance is returned at the end of the funding period (section 14.6) |
 
-**A change in the A amount paid is not a top-up** — it is the peg working. But the **USD amount of an award may never be increased past the Per-Award Limit**, and any increase in a USD award amount needs the award threshold, a contract amendment, publication, and a fresh proposal and delay (section 11.8).
+**A change in the A payment amount is not a top-up**: it maintains the USD peg; **an award's USD amount must not exceed the Per-Award Limit**, and any increase requires the award threshold, a contract amendment, publication, and a fresh proposal and delay (11.8).
 
 **13.4a If the rate source fails.** The staleness and collar checks in 13.4 assume the oracle is still there and still readable. Loss of the source itself is a different failure and is handled differently. The fallback rate in 13.4 carries payments through it while it lasts; this section governs replacing the source, and the suspension that follows only where the fallback is unavailable too.
 
@@ -905,13 +905,13 @@ If a suspension runs long enough that an awardee cannot reasonably continue unpa
 
 ## 14. Expiry, suspension, revocation
 
-**14.1** The mandate **runs until MSIG suspends or revokes it**. It has no end date.
+**14.1** The mandate continues **until MSIG suspends or revokes it**, with no fixed expiry date.
 
 The recurring point of block producer control is **funding, not authority**. Funding is authorized four cycles at a time, so the Committee can only ever spend what block producers have authorized. Declining to authorize the next period needs no confrontation and no revocation vote, and any instalment inside a period can be stopped or reduced at the Threshold.
 
-**14.2** MSIG may **suspend or revoke** the mandate at any time, without cause, and may rebuild the Committee permission through the owner permission.
+**14.2** MSIG may **suspend or revoke the mandate at any time, without cause**, and rebuild the Committee permission through the owner permission.
 
-**14.3 Annual review.** The Committee publishes an annual review of the program, **written to the `publications` register** (7.6a): awards made, outcomes, conflict incidents, coverage history, and whether the limits remain appropriate. This is the scheduled moment at which performance goes on the record, whether or not anyone calls a vote.
+**14.3 Annual review.** The Committee must publish an annual review in the **`publications` register** (7.6a), covering awards, outcomes, conflict incidents, coverage history, and whether the limits remain appropriate; performance is recorded on schedule whether or not anyone calls a vote.
 
 **14.4** When the mandate ends, by suspension or revocation:
 
@@ -921,21 +921,21 @@ The recurring point of block producer control is **funding, not authority**. Fun
 | Payment still in its delay window | Cancelled |
 | Decided but no signed agreement | Cannot proceed |
 
-**14.5 Someone must still be able to sign.** Paying the surviving agreements needs 4 signatures. The resolution that ends the mandate must either keep the Committee permission alive for those payments only, or instruct block producers to build a replacement permission. Ending the mandate without doing one of these leaves the Network owing money it cannot pay.
+**14.5 Existing obligations must remain payable.** A Resolution ending the mandate must retain the Committee permission for surviving agreements only or instruct block producers to build a replacement permission, since those payments still require 4 signatures and the Network must be able to meet its obligations.
 
-**14.6 Unspent funds** do not carry into the next funding period. At the end of a funding period, the balance remaining after all contracted obligations are met is returned or swept through the owner permission as MSIG directs. Nothing is swept at the end of an individual cycle — the quarterly top-up assumes a carried balance.
+**14.6** Unspent funds must not carry into the next funding period; at the end of the funding period, after all contracted obligations are met, the remaining balance is returned or swept through the owner permission as MSIG directs; there is no sweep at individual cycle ends because carried balances reduce the next quarterly top-up.
 
 ## 15. Relationship with the Trustee and VS LLC
 
-**15.1 The Trustee** acts only as an executor and has **no role in the RFP program**. No program funds pass through the Trust.
+**15.1** The Trustee acts only as executor and **has no role in the RFP program**; no program funds pass through the Trust.
 
-**15.2 VS LLC** does the program's contracting and administration: it contracts with awardees, Managers, Reviewers, and Committee members using the standard Independent Contractor Agreement, and runs the Portal.
+**15.2** VS LLC administers the program and runs the Portal, contracting with awardees, Managers, Reviewers, and Committee members under the standard Independent Contractor Agreement.
 
 **Funds sit outside the Trust; work product sits inside it.** Program money is Network money in `rfp.vst`, not Trust Property. But **work product vests in the VST** under section 9 of that agreement. This is deliberate rather than inconsistent: holding intellectual property for the Network is an express purpose of the Trust, while allocating Network funds is not.
 
 **What "work product" *is* depends on the award's shape** (section 20.2a) — but it always vests. A Deliverable award vests what was built. An Embedded award vests the named deliverable and carves out the awardee's identified pre-existing IP. A Service award vests the **operational handover set**, which is what a successor provider needs to take the service over. The shape narrows the definition; it never disapplies section 9.
 
-VS LLC does not choose awardees, does not vote, and does not control the Program Account. The Committee does not manage VS LLC.
+**VS LLC neither chooses awardees, votes, nor controls the Program Account**, and the Committee does not manage VS LLC.
 
 **15.2a The RFP platform belongs to the Network, through the VST.** The Portal and the RFP system's code are **VST-owned work product** — the same rule as any Deliverable award (20.2a), applied to the program's own tooling. VS LLC **operates** it; it does not own it. Where the code was written before this Framework it was **not** written under an agreement that vests it — there was no Independent Contractor Agreement and so no section 9. **Moving a repository is not an assignment of copyright.** Two things therefore complete the transfer: a **written assignment of copyright** from every party that authored it in favour of the VST — or, failing that, a perpetual, irrevocable, sublicensable licence — and **transfer to a VST-controlled repository**. EOS Rio has committed to both. They matter because the VST cannot release the code under 20.2a's default licence unless it holds the rights to release, and because an assignment is what still shows chain of title years later, when the people who agreed it have moved on.
 
@@ -953,7 +953,7 @@ This matters for the same reason section 25.1 refuses a link to an awardee's rep
 
 Every such award is flagged as **self-referential in the cycle report** — not because it is improper, but because a program that spends steadily on itself should have to look at that number each cycle.
 
-**15.3 VS LLC must refuse to contract** on a Committee decision that is plainly outside the mandate, above the Cycle Ceiling or Per-Award Limit, or missing a complete record. This is a check on authority, not on quality. VS LLC tells the Committee and MSIG in writing why it refused.
+**15.3** VS LLC must **refuse to contract** on a Committee decision plainly outside the mandate, above the Cycle Ceiling or Per-Award Limit, or missing a complete record; this checks authority rather than quality, and VS LLC must explain its refusal to the Committee and MSIG in writing.
 
 **15.4 Block producers** set the limits, seat and remove members, decide escalated matters, hold the owner permission, and may cancel any payment at the Threshold during its delay. They do not vote on individual awards.
 
@@ -961,7 +961,7 @@ Every such award is flagged as **self-referential in the cycle report** — not 
 
 **16.1** The Committee publishes a written self-review **9 months after the funding date**, covering RFP throughput, results, conflict incidents, and whether five seats is working.
 
-**16.2** This Framework may be amended by MSIG. The Committee may propose amendments by two-thirds, minimum 3. **Part 2 may be amended without reopening Part 1.**
+**16.2** The Framework may be amended by MSIG; the Committee may propose amendments by two-thirds, minimum 3; and **Part 2 may be amended without reopening Part 1**.
 
 ---
 
@@ -1050,15 +1050,15 @@ This is an RFP program, not a grants program. In a grants program, applicants pr
 
 **A Service award declares no licence mode.** Its work product is the operational handover set, which **vests outright** — the Network owns it and may modify it and give it to a successor (20.2a, 23.3a). There is nothing to licence, and the default licences do not apply to it.
 
-**Who decides what.** The **Committee decides the mode and, in Required mode, the licence** — at the publication threshold, in the RFP, not later and not by the awardee. Where the Committee opens the choice, it still decides the **permitted set**; a proposer never picks from the whole universe of licences.
+**Who decides what.** The **Committee sets the licence mode and, in Required mode, the licence at the publication threshold, in the RFP**; in Proposer's choice mode it sets the **permitted set**, so the awardee chooses only from that set.
 
 **The set is decided per RFP. There is no standing list.** It is named in the RFP at scoping, alongside the mode, because the right set depends on the work: a library other teams will embed argues for permissive licences only, while a standalone end-user tool can tolerate copyleft without spreading the obligation. A single published list would have to be drawn wide enough for the loosest case and would then be too wide for the tightest.
 
 **Stating the set is part of publishing in this mode.** An RFP in Proposer's choice mode that names no set is defective. Where one is nonetheless published, the set falls back to **permissive licences only**: for code, **Apache-2.0, MIT, or BSD-3-Clause**; for non-code, **CC-BY-4.0 or CC0-1.0** — the proposer selecting from the branch matching the deliverable. That is a backstop against a drafting slip, not an alternative to naming the set. A copyleft obligation on Network infrastructure is a decision the Committee should take deliberately, not inherit from a proposal.
 
-**What locks when.** The **mode, the permitted set, and — in Required mode — the licence named** all **lock at publication**, like the shape and the Reviewer field. Teams price against them. In Proposer's choice mode the **licence itself is fixed at the award decision** and recorded in the agreement; there is nothing to lock at publication because there is nothing yet to lock.
+**The mode, permitted set, and Required licence lock at publication** because teams price against them; in Proposer's choice mode, the **chosen licence locks at the award decision and is recorded in the agreement**, since there is no selected licence to lock at publication.
 
-**Licence as a scoring factor.** In Proposer's choice mode the Committee may treat the licence offered as an evaluation criterion, **but only if "licence offered" is published as a criterion in its own right, with its own weight, before submissions open** (22.1). Where it is not, the licence may not influence scoring — otherwise the choice is a trap.
+**Licence as a scoring factor.** In Proposer's choice mode, the licence may be scored **only if it is published as a separate criterion with its own weight before submissions open** (22.1); otherwise it must not affect scoring, since teams chose from a permitted set.
 
 **The standing "ecosystem fit, openness, maintainability" criterion in 22.1 does not by itself permit the licence to be scored.** It is too easy to read openness as covering the licence, mark a proposal down for choosing the least open option in a set the Committee itself published as acceptable, and call that a published criterion. To score the licence, name it and re-publish the weights.
 
@@ -1153,7 +1153,7 @@ In every case a written assessment against published criteria must exist before 
 
 **Pre-existing IP and the licence back apply to every shape, not only Embedded.** An awardee on any shape may bring existing material into the work — a Service awardee almost always does, since the handover set configures software they own and keep.
 
-**Pre-existing IP** means anything the awardee owned or was licensed to use before the award, or developed independently of it. It is identified **in the Schedule A at contracting**, not asserted afterwards — an unlisted item is not pre-existing IP.
+**Pre-existing IP** is material the awardee owned or was licensed to use before the award, or developed independently of the award; it must be identified **in Schedule A at contracting**, and unlisted items do not qualify.
 
 **Where pre-existing IP is embedded in the work product, the awardee grants the VST an irrevocable licence back**, surviving termination, sufficient for the Network to use, modify, and have third parties operate the work product. Without it the Network owns something it cannot lawfully run — and on a Service award the handover set would be worthless to the successor it exists to serve.
 
