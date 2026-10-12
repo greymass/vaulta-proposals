@@ -112,11 +112,6 @@ FURTHER RESOLVED, that every rule in this Part applies **per seat, rather than p
 
 FURTHER RESOLVED, that block producers may support multiple candidates by approving multiple proposals, and if more than one proposal for a seat reaches the Threshold, the appointment whose **execution transaction has the earliest block time** fills it.
 
-FURTHER RESOLVED, that the following rules apply once a seat is filled:
-
-1. every other pending proposal for that seat is **void as to that seat**. Proposers should cancel them and block producers should withdraw approvals. A multi-seat proposal marked seat by seat remains live for its other seats;
-2. if such a proposal is nonetheless executed afterwards, it **has no effect for that seat** and does not displace the seated member. Displacing a seated member requires removal by MSIG Resolution.
-
 FURTHER RESOLVED, that **VS LLC must maintain a published seat register on the Portal**; VS LLC must record, for each seat, the member's **name and on-chain account**, proposal name, execution transaction, **link to their network vision statement**, and the proposal's **resolution mode**; VS LLC must record **any seat named but not filled, and why**; and the register is the canonical record of what was executed.
 
 FURTHER RESOLVED, that the register **does not determine eligibility**; if VS LLC records a seat as unfilled for any reason other than an earlier execution, it must **publish its reasons and refer the matter to MSIG**; the seat remains **vacant until MSIG decides the matter**; and VS LLC has no authority to decide eligibility.
