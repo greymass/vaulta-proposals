@@ -75,9 +75,7 @@ FURTHER RESOLVED, that the Oversight Committee is renamed the **Vaulta Network S
 
 **Appointments**
 
-FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by this Resolution** and must be filled by **separate MSIG Resolutions at the Threshold using Exhibit E**, with **candidates considered on their own merits** and the Community seat selected under Part F.
-
-**What makes an Exhibit E proposal complete**
+FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by this Resolution**; Committee members must be appointed by **separate MSIG Resolutions at the Threshold**, with each appointment proposal **meeting the requirements in Exhibit E**; and **candidates must be considered on their own merits**, with the Community seat selected under Part F.
 
 FURTHER RESOLVED, that an incomplete proposal that executes is **not void**, but **pay and signing weight begin only after all required items are filed, the engagement contract is signed, and the signing key is registered**.
 
