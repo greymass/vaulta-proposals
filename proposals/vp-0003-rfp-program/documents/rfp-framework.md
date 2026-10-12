@@ -19,13 +19,13 @@ Part 2 may be amended by MSIG without reopening Part 1. **Part 1 governs where t
 
 ## 1. What the Committee is
 
-**1.1** The Oversight Committee is renamed the **Vaulta Network Steering Committee**; the same body continues, with its existing members, records, and indemnification rights.
+**1.1** The Oversight Committee is renamed the **Vaulta Network Steering Committee**; the same body continues, with its records and indemnification rights.
 
-**Francis Sangkuan** (1DEX) is the only carry-over **into a Steering Committee seat**, holding the Community seat on an interim basis (section 4).
+**All five Steering Committee seats remain unfilled by MSIG #5** and must be filled by **future MSIG Resolutions at the Threshold using Exhibit E**, with the Community seat selected under section 4.
 
-**Dafeng Guo** (Vaulta Treasury) and **Ross Dold** (EOSphere) continue to serve temporarily, in the capacity of the original Oversight Committee, until the four remaining seats are filled. During that time the three of them exercise **only the Trust oversight responsibilities** in this Part — **the mandate in section 8 is not exercised, no RFP is published, and no award is made.** When the four seats are filled they cease to serve. Ross Dold may be separately appointed to a seat; Dafeng Guo may not while affiliated with the Vaulta Treasury (section 2.4a).
+**Dafeng Guo** (Vaulta Treasury), **Ross Dold** (EOSphere), and **Francis Sangkuan** (1DEX) continue temporarily **in the original Oversight Committee’s capacity until all five Steering Committee seats are filled by future MSIG Resolutions**; during that transition, they exercise **only Trust oversight responsibilities**, and **the mandate in section 8 is not exercised, no RFP is published, and no award is made**; their service in that capacity then ends. Ross Dold may be separately appointed to a seat; Dafeng Guo may not while affiliated with the Vaulta Treasury (section 2.4a).
 
-No date is set for filling the four seats — that rests with block producers. The program supplies its own pressure, because nothing operates until they are filled.
+No date is set for filling the five seats — that rests with block producers. The program supplies its own pressure, because nothing operates until they are filled.
 
 **The Program Account is not funded and the Committee permission is not activated until all five seats are filled** and every member has signed their contract, filed their declaration, and registered a key. The permission needs four of five signatures; a three-member body cannot operate it.
 
@@ -70,7 +70,7 @@ The Treasury has stated that it will not participate in allocation decisions aft
 
 **Eligibility applies throughout service.** A member, Manager, or Reviewer who becomes Treasury-affiliated must disclose it within **10 business days**; their signing weight, if any, is suspended immediately and the matter goes to MSIG, which may waive the exclusion or remove them.
 
-The transition arrangement in section 1.1 is unaffected. Dafeng Guo's service there is in the Trust oversight capacity only, does not touch the RFP mandate, and ends when the four seats are filled.
+The transition arrangement in section 1.1 is unaffected. Dafeng Guo's service there is in the Trust oversight capacity only, does not touch the RFP mandate, and ends when all five Steering Committee seats are filled.
 
 **2.5** Members are **not Trust employees** and must each sign a written contract with VS LLC.
 
@@ -126,7 +126,7 @@ The vstcreation MSIG appointed the initial members "effective upon formation of 
 
 **3.3 Continuation.** Each appointment allows the member to continue month to month after their term ends and **keep their signing key** until a successor is seated or MSIG replaces them, so the Committee does not fall below four signers and stop payments.
 
-**3.4 Staggering.** Initial terms for the **Core Development, Marketing, Business Development, and General (At-Large) seats start when the Program Account receives funds**, rather than when their appointment Resolutions execute; a **Community member appointed by MSIG**, whether an ECF winner under 4.2 or an appointment under 4.6 or 4.7, serves **one year from execution of that appointment Resolution**.
+**3.4 Staggering.** Initial terms for the **Core Development, Marketing, Business Development, and General (At-Large) seats start when the Program Account receives funds**, rather than when their appointment Resolutions execute; a **Community member appointed by MSIG**, whether an ECF winner under 4.2 or an appointment under 4.7, serves **one year from execution of that appointment Resolution**.
 
 The four seats may be filled by Resolutions executing at different times. If each term ran from its own execution the stagger would drift, and could collapse entirely — a Business Development member seated six months after Core Development would finish an 8-month term at the same moment Core Development finished a 14-month one. One anchor keeps the spacing, stops a member's term running down while the Committee is incomplete, and matches the cycle and pay clocks.
 
@@ -170,13 +170,9 @@ Any stipend or engagement from ECF is also a **Part 2 disclosure** under 6.3a �
 
 **4.3** Block producers should refuse to appoint an ECF winner only for **disqualifying cause**: a proven conflict of interest, a legal bar, a serious failure in the vote, or conduct that would be Cause under the Trust Agreement; anyone refusing for another reason should publish it, although this document cannot enforce that commitment.
 
-**4.4** If MSIG refuses to seat the winner, ECF seats the runner-up if its process has one. If not, ECF runs the vote again.
+**4.4** If MSIG refuses to appoint the winner, ECF nominates the runner-up if its process provides one; otherwise ECF runs the vote again.
 
-**4.5 Interim holder.** Francis Sangkuan holds this seat until the first ECF winner is seated, or until **9 months from the execution of MSIG #5**, whichever comes first. The interim holder has full voting rights, full signing weight, and full pay.
-
-This period runs from execution rather than from funding, so ECF is not held up waiting for the program to be funded — its process runs in parallel. MSIG may extend it once, at the Threshold, on ECF's request.
-
-**4.6** If the outer date passes with no ECF winner, MSIG fills the seat at the Threshold. Leaving it empty would stop payments (section 3.8).
+**4.5 Initial appointment.** MSIG #5 appoints **no interim Community seat holder**; the seat must be filled by a **future MSIG Resolution at the Threshold using Exhibit E**, following the selection process in this section.
 
 **4.7** If ECF **stops running the process or ceases to exist**, MSIG may name another administrator or **fill the Community seat at the Threshold** like any other seat.
 
@@ -184,7 +180,7 @@ This period runs from execution rather than from funding, so ECF is not held up 
 
 **The seat retains its Community portfolio, category assignments under section 2.1, vote, signing weight, and pay** regardless of how it is filled; only the selection method changes, and an MSIG-appointed seat has the same status.
 
-**4.8** Every MSIG appointment to the Community seat, whether seating an ECF winner under 4.2 or filling it under 4.6 or 4.7, must use **Exhibit E** and follow **section 3.1**: resolution modes, first execution by block time, the five conditions, and the row-order tie-break; the term runs **one year from execution** under section 3.4.
+**4.8** Every MSIG appointment to the Community seat, whether seating an ECF winner under 4.2 or filling it under 4.7, must use **Exhibit E** and follow **section 3.1**: resolution modes, first execution by block time, the five conditions, and the row-order tie-break; the term runs **one year from execution** under section 3.4.
 
 **The vision statement requirement in 3.1a applies too.** Where ECF's own process already produced a candidate statement covering the ground in 3.1a, that statement satisfies it and is filed with the proposal — there is no need to write a second one for the same purpose.
 
@@ -743,7 +739,7 @@ The reason the second ceiling exists as a single line with two caps inside it is
 
 **Block producers may change any amount, cycle length, or limit at any time by MSIG Resolution**, and may stop, reduce, or re-time an instalment; authorizing a year does not bind them to fund the whole year.
 
-**The first cycle starts when the Program Account receives funds**, rather than when MSIG #5 passes; Committee pay accrues from contract signature or that funding date, whichever is later; the Committee must publish the funding date on the Portal because it starts the cycle, pay period, and initial terms of the four MSIG-appointed seats (3.4).
+**The first cycle starts when the Program Account receives funds**, rather than when MSIG #5 passes; Committee pay accrues from contract signature or that funding date, whichever is later; the Committee must publish the funding date on the Portal because it starts the cycle, pay period, and initial terms of the four staggered seats (3.4).
 
 **13.2 Reservation.** An award **reserves** its full **USD** amount against the Cycle Ceiling from the moment of decision, through publication, contracting, the delay window, and any MSIG confirmation. Reservation is not payment. No money moves until an agreement exists and the delay ends. But the amount is unavailable to other awards in the meantime.
 
@@ -1321,7 +1317,7 @@ These are set in MSIG #5, not here, so they can change without amending this Fra
 
 **Blocking items are marked.** A blocking item stops something specific from happening until it is resolved.
 
-**What is not here.** This list holds only what the program itself is waiting on. Work the VST and VS LLC administer off-chain — candidate sourcing for the four seats, counsel's conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover — is tracked in the **Program Administration Register**, which is not part of this Framework and is not approved by MSIG.
+**What is not here.** This list holds only what the program itself is waiting on. Work the VST and VS LLC administer off-chain — candidate sourcing for the four staggered seats, counsel's conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover — is tracked in the **Program Administration Register**, which is not part of this Framework and is not approved by MSIG.
 
 **Numbers are stable.** When an item is closed it is deleted from this list and the surviving numbers do not move. Gaps in the sequence are therefore deliberate, and every reference to an item number elsewhere in the package keeps pointing at the same item. Numbers here are **independent of** the numbering in MSIG #5's *Blanks to fill*: the same subject may be item 11 here and blank 12 there.
 

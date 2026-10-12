@@ -43,7 +43,7 @@ This proposal covers **[N] seat(s)**. Block producers may approve more than one 
 | [General (At-Large)] | [NAME] | [`account`] | [ORG or None] | [Must be None] | 8 months |
 | [Community] | [NAME] | [`account`] | [ORG or None] | [Must be None] | 12 months |
 
-*Delete the rows this proposal does not cover, and put the remaining rows in **priority order** — where two candidates in this proposal conflict with each other, the earlier row wins. Terms for the four staggered seats run from the date funds are received in the Program Account (Framework 3.4); the Community seat, wherever MSIG seats it — an ECF winner under Framework 4.2, or a seat filled under 4.6 or 4.7 — runs 12 months from execution of this Resolution.*
+*Delete the rows this proposal does not cover, and put the remaining rows in **priority order** — where two candidates in this proposal conflict with each other, the earlier row wins. Terms for the four staggered seats run from the date funds are received in the Program Account (Framework 3.4); the Community seat, wherever MSIG seats it — an ECF winner under Framework 4.2, or a seat filled under 4.7 — runs 12 months from execution of this Resolution.*
 
 **For each candidate:**
 
