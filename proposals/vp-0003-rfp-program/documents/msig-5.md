@@ -114,7 +114,7 @@ FURTHER RESOLVED, that block producers may support multiple candidates by approv
 
 FURTHER RESOLVED, that **VS LLC must maintain a published seat register on the Portal**; VS LLC must record, for each seat, the member's **name and on-chain account**, proposal name, execution transaction, **link to their network vision statement**, and the proposal's **resolution mode**; VS LLC must record **any seat named but not filled, and why**; and the register is the canonical record of what was executed.
 
-FURTHER RESOLVED, that the register **does not determine eligibility**; if VS LLC records a seat as unfilled for any reason other than an earlier execution, it must **publish its reasons and refer the matter to MSIG**; the seat remains **vacant until MSIG decides the matter**; and VS LLC has no authority to decide eligibility.
+FURTHER RESOLVED, that **VS LLC cannot decide candidate eligibility**; if it records a seat as unfilled for any reason other than **another appointment to that seat executing first**, it must **publish its reasons and ask MSIG to decide**, and the seat remains **vacant until that decision**.
 
 FURTHER RESOLVED, that a further MSIG Resolution may correct an appointment executed in error.
 
