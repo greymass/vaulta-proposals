@@ -91,20 +91,20 @@ FURTHER RESOLVED, that **no two seats may be occupied by the same person or by p
 
 ### Part C — The Mandate
 
-FURTHER RESOLVED, that the separate authorization MSIG #4 required before anyone could award funds, select vendors, or create payment obligations is granted.
+FURTHER RESOLVED, that the Committee is authorized to **award funds, select vendors, and create payment obligations on behalf of the Network**, subject to the **Framework's rules and limits**, as required by MSIG #4.
 
 ### Part D — Limits and denomination
 
-FURTHER RESOLVED, that these limits apply to **each cycle**:
+FURTHER RESOLVED, that the following limits apply:
 
-| Limit | Amount | Unit |
+| Limit | Amount (USD) | Applies to |
 |---|---|---|
-| **Cycle Ceiling** — most the Committee may commit in **awards** | **150,000** | **USD** |
-| **Per-Award Limit** — largest single award without coming back to MSIG, measured on **total contract value** | **100,000** | **USD** |
-| **Program Costs** — everything the program spends on itself | **77,500** | **USD** |
-| — of which **Committee pay**, 5 members × 3 months at USD 2,500 | **37,500** | **USD** |
-| — of which **Manager and Reviewer fees, Portal, and administration** | **40,000** | **USD** |
-| **Total Program Spend for the cycle** | **227,500** | **USD** |
+| **Cycle Ceiling** — most the Committee may commit in **awards** | **150,000** | Each cycle |
+| **Per-Award Limit** — largest single award without coming back to MSIG | **100,000** | **Total contract value across all cycles** |
+| **Program Costs** — everything the program spends on itself | **77,500** | Each cycle |
+| — of which **Committee pay**, 5 members × 3 months at USD 2,500 | **37,500** | Each cycle |
+| — of which **Manager and Reviewer fees, Portal, and administration** | **40,000** | Each cycle |
+| **Total Program Spend for the cycle** | **227,500** | Each cycle |
 
 FURTHER RESOLVED, that **Award Commitments** are amounts committed to awardees, limited by the **Cycle Ceiling**; **Program Costs** are Committee pay, Manager and Reviewer fees, Portal costs, and administration, limited to **USD 77,500 per cycle**; and **Total Program Spend** is their sum, used to determine the funding request in Part I.
 
