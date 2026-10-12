@@ -118,16 +118,6 @@ FURTHER RESOLVED, that **VS LLC cannot decide candidate eligibility**; if it rec
 
 FURTHER RESOLVED, that a further MSIG Resolution may correct an appointment executed in error.
 
-FURTHER RESOLVED, that the seats and staggered initial terms are established as follows:
-
-| Seat | How filled | Initial term |
-|---|---|---|
-| Core Development | Exhibit E MSIG — alone, as a slate, or in a subset | 14 months |
-| Marketing | Exhibit E MSIG — alone, as a slate, or in a subset | 14 months |
-| Business Development | Exhibit E MSIG — alone, as a slate, or in a subset | 8 months |
-| General (At-Large) | Exhibit E MSIG — alone, as a slate, or in a subset | 8 months |
-| Community | ECF nomination, then a separate Exhibit E MSIG under Part F | See Part F |
-
 **Transition until all five seats are filled**
 
 FURTHER RESOLVED, that the temporary service of **Dafeng Guo (Vaulta Treasury)** and **Ross Dold (EOSphere)** continues alongside Francis Sangkuan **in the original Oversight Committee's capacity**, until all five Steering Committee seats are filled by separate MSIG Resolutions.
