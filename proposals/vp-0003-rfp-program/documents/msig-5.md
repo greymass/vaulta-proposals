@@ -195,9 +195,9 @@ FURTHER RESOLVED, that earlier MSIGs are **overridden only where they directly c
 
 FURTHER RESOLVED, that the **Trust Agreement amendments** needed to reflect the Committee's new name, size, and dual capacity **are authorized**, and the Trustee must execute the text prepared by Trust counsel, **without attaching or voting on that text here**.
 
-FURTHER RESOLVED, that drafting, execution, and any conforming changes to VS LLC's operating procedures are assigned to the VST and VS LLC off-chain, and **block producers approve the direction to bring the documents into conformity**.
+FURTHER RESOLVED, that the **VST and VS LLC are responsible off-chain for drafting, execution, and any conforming changes to VS LLC's operating procedures**.
 
-FURTHER RESOLVED, that this Resolution takes effect **on execution**, and **the Program Account must not be funded until the Exhibit D configuration under Part E is published**.
+FURTHER RESOLVED, that this Resolution takes effect **on execution**.
 
 ---
 
@@ -225,7 +225,7 @@ The MSIG takes effect on execution, so there is no effective date to fill. **Eve
 |---|---|---|
 | 2 | Source account holding the REX yield and Year 1 pools | I |
 | 4 | ECF process publication and first vote dates | F |
-| 5 | **Exhibit D** — the account and register configuration. Drafted as a specification; the **deployment values remain** (its Part 10 and item **D1**; the member keys at **D6** are recorded as they arrive and do not hold publication). *Exhibit B is complete: its figures are confirmed and the concurrent-engagement cap is set at 3.* **Blocking — the Program Account is not funded until Exhibit D is published with its deployment record complete (Part J)** | Attachments |
+| 5 | **Exhibit D** — the account and register configuration. Drafted as a specification; the **deployment values remain** (its Part 10 and item **D1**; the member keys at **D6** are recorded as they arrive and do not hold publication). *Exhibit B is complete: its figures are confirmed and the concurrent-engagement cap is set at 3.* **Blocking — the Program Account is not funded until Exhibit D is published with its deployment record complete (Part E)** | Attachments |
 | 8 | The **disclosure questionnaire instrument** (Framework 6.3a). **Drafted as version `VQ1`** — text, coded-answer schema and position bands complete. What remains is **publication by VS LLC with the register open for filing**, with **no open questions** remaining in it. **Blocking — the Program Account is not funded until every member has filed, and nobody can file until the register is open** | E |
 | 9 | The **`disc.vst` register** — account, all three registers (**disclosures**, **decisions** and **publications**; three tables, one contract or more), both schemas, RAM provisioning (**settled: 16 MB at launch, provisioned and topped up by the VST and VS LLC — Exhibit D 8.6**), upgrade authority, and the writing authority, to be covered in Exhibit D (Framework 6.3b, 7.6a). **To be built and serviced by the EOS Rio team; VS LLC remains accountable.** **Blocking — the Program Account is not funded until Exhibit D is published** | E |
 | 11 | **Counsel confirmation that section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A. **Blocking — until confirmed, no Service or Embedded RFP may be published and no award may be contracted with a populated pre-existing-IP schedule** (Framework 23.3a) | Framework 23.3a; F |

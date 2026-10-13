@@ -9,7 +9,7 @@
 
 ## What this is, and what publishing it does
 
-MSIG #5 Part E directs VS LLC to develop and configure the Program Account and the Committee Permission, and to **publish that configuration as this Exhibit before the Program Account is funded**. Part J makes the same point from the other side: the MSIG takes effect on execution, but **no money arrives until this document is published**.
+MSIG #5 Part E directs VS LLC to develop and configure the Program Account and the Committee Permission, and to **publish that configuration as this Exhibit before the Program Account is funded**. The MSIG takes effect on execution under Part J, but **no money arrives until this document is published under Part E**.
 
 So this is not a design note. It is the thing block producers look at to decide whether what was built matches what they voted for, and it is a funding gate.
 
@@ -478,5 +478,5 @@ MSIG #5 Part E: *if any element cannot be built as specified, VS LLC must publis
 
 | # | Item | Blocking? |
 |---|---|---|
-| D1 | Every *(to confirm on deployment)* value above — **other than the member keys at 2.2**, which are recorded as they arrive. What remains is chain-derived: account and transaction ids, the permission names, CPU/NET, the ABI and code hash, the write authority, and the two cancellation rehearsals recorded at Part 10 | **Yes** — the Program Account is not funded until this Exhibit is published, and it cannot be published with the deployment record empty (MSIG #5 Part J) |
+| D1 | Every *(to confirm on deployment)* value above — **other than the member keys at 2.2**, which are recorded as they arrive. What remains is chain-derived: account and transaction ids, the permission names, CPU/NET, the ABI and code hash, the write authority, and the two cancellation rehearsals recorded at Part 10 | **Yes** — the Program Account is not funded until this Exhibit is published, and it cannot be published with the deployment record empty (MSIG #5 Part E) |
 | D6 | **The five member public keys** (2.2). Recorded as they arrive; **this Exhibit is not held for them** | — The permission is not activated, and the Program Account is not funded, until all five are in — but that gate is in Framework 1.1, not here |
