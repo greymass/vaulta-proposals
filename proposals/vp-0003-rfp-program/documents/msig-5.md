@@ -121,24 +121,19 @@ FURTHER RESOLVED, that payments must use these delay windows:
 
 FURTHER RESOLVED, that **VS LLC must develop and configure the Program Account, Committee Permission, and the disclosure, decisions, and publications registers on `disc.vst`**, and **publish Exhibit D before funding**, identifying the account names, permission structure and thresholds, delay mechanism and values, cancellation path and exact action and authority required, account resources, `eosusd` pair and `quoted_precision`, a worked payment calculation, register contracts and ABIs, deployment, upgrade and writing authorities, schemas and versions, questionnaire version, and register RAM provisioning.
 
-FURTHER RESOLVED, that the configuration must record **each member's delivered public key**; the permission must use those keys and **may be activated only after all five are delivered**.
-
 **If the protocol cannot enforce the delay**
 
-FURTHER RESOLVED, that the delay must be **enforced on-chain**; if VS LLC finds that the current protocol cannot enforce transaction-level delays, the fallback is a **held multisignature proposal**; the Committee proposes disbursement, keeps it **unexecuted and publicly visible** for the full window, and executes it only afterwards; the proposal identifier must be published with the award; and block producers retain the cancellation route through the owner permission.
+FURTHER RESOLVED, that payment delays must be **enforced on-chain**, with the **held-multisignature fallback in Exhibit D Part 3.3 authorized only if the protocol cannot enforce them**.
 
-FURTHER RESOLVED, that VS LLC must state **which delay mechanism is used** in Exhibit D **before the Program Account is funded**, and if an element cannot be built as described, VS LLC must explain the limitation and propose the nearest workable alternative.
+FURTHER RESOLVED, that if any element cannot be built as specified, **VS LLC must publish the limitation and propose the nearest workable alternative in Exhibit D**.
 
 ### Part F — The Community seat
 
-FURTHER RESOLVED, that ECF is asked to publish its process by **[___]** and complete the first vote by **[___]**; and a Community member **appointed by MSIG**, whether an ECF winner or a member appointed under Framework 4.7, serves **one year from execution of their appointment Resolution**.
+FURTHER RESOLVED, that ECF is asked to publish its process by **[___]** and complete the first vote by **[___]**.
 
 ### Part G — Program roles and VS LLC
 
-FURTHER RESOLVED, that two contractor roles are established, selected by the Committee and contracted by VS LLC under **Exhibit B's rate card**:
-
-1. **RFP Program Managers**, engaged as a pool, with **exactly one Manager of record for each RFP**, who runs it and **approves its milestones for payment**. A Manager may hold several RFPs. The Committee may reassign an RFP by majority, publishing the change, with a written handover.
-2. **Technical Reviewers**, engaged **where the RFP's own published statement says a Reviewer is engaged** — the Committee must decide at scoping whether a Reviewer is needed based on whether the work is technical, including for a Service award, and fix that decision at publication without reopening it at signing — whose written assessments inform evaluation and milestone approval.
+FURTHER RESOLVED, that the Committee must decide **at scoping whether a Technical Reviewer is needed**, based on whether the work is technical, **including Service awards**.
 
 FURTHER RESOLVED, that **the RFP platform and Portal code are VST-owned work product**, operated by VS LLC, and before the program relies on that code, the program must obtain **a written assignment to the VST from every author**, or a perpetual, irrevocable, sublicensable licence if assignment is unavailable, **and transfer the code to a VST-controlled repository**.
 

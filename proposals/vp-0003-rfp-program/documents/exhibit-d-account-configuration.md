@@ -446,7 +446,7 @@ Everything the program publishes, other than minutes, proposals and the backlog 
 
 ## Part 9 — Departures from the specification
 
-MSIG #5 Part E: *where any element cannot be built as described, VS LLC is to say so and propose the nearest workable alternative rather than proceed on an assumption.*
+MSIG #5 Part E: *if any element cannot be built as specified, VS LLC must publish the limitation and propose the nearest workable alternative in Exhibit D.*
 
 | Element | What was specified | What was built | Why | Proposed alternative |
 |---|---|---|---|---|
