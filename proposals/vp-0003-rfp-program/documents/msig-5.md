@@ -110,12 +110,6 @@ FURTHER RESOLVED, that the **post-award review threshold under Framework 25.2 is
 
 **Everything is denominated in USD. Everything is paid in A.**
 
-**Funding instruments**
-
-FURTHER RESOLVED, that the Committee may use **only three funding instruments**: a **directed RFP**, an **open call** for unsolicited proposals (Framework 26), or a **bounty** (Framework 26a), and "**grants**" means the **open call**, not a fourth instrument.
-
-FURTHER RESOLVED, that a bounty must reserve its price at publication and lapse at its closing date or cycle end, and all other award rules apply: contract first, signature, delay, objection bands, conflict checks, the ban register, and the prohibition on splitting work that should be an RFP.
-
 ### Part E — The Program Account and how payments work
 
 FURTHER RESOLVED, that **`rfp.vst`**, a subaccount of `vst`, is established as the **Program Account**, and all program funds must be held there.

@@ -414,6 +414,8 @@ The Portal **reads the register and renders it**. It does not hold its own copy 
 
 **8.3 The Committee decides:** which needs become RFPs; their scopes, deliverables, criteria, budgets, and timelines; **awardees and award terms**; Managers of record and Technical Reviewers; and whether to withhold payment or terminate an engagement.
 
+**Funding instruments.** The Committee may use **only three funding instruments**: a **directed RFP** (sections 18–25), an **open call** for unsolicited proposals (section 26), or a **bounty** (section 26a); "**grants**" means the **open call**, not a fourth instrument.
+
 **8.4 What the Committee may not do:**
 
 1. reserve or commit more in a cycle than the **Cycle Ceiling**;
