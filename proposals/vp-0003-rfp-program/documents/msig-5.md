@@ -145,23 +145,21 @@ FURTHER RESOLVED, that **VS LLC's RFP administration costs are charged to Progra
 
 ### Part H — Committee pay
 
-FURTHER RESOLVED, that VS LLC is authorized to contract with each Committee member, and members have **no status as Trust employees**.
+FURTHER RESOLVED, that each of the **five Committee members** has a **fixed USD 2,500 monthly retainer**, **paid in arrears** in A at the Reference Rate under Framework 13.4 on the payment date; and **no per-meeting fees, success fees, or payments tied to an award's size, number, or outcome** are authorized.
 
-FURTHER RESOLVED, that each member has a **fixed USD 2,500 monthly retainer**, **paid in arrears** in A at the Reference Rate under Framework 13.4 and Part D on the payment date; the same retainer applies to all five seats, including the Community seat; and **no per-meeting fees, success fees, or payments tied to an award's size, number, or outcome** are authorized.
-
-FURTHER RESOLVED, that the limit is **3 concurrent Technical Reviewer engagements per member**, and **no member may be engaged until that cap is set**.
+FURTHER RESOLVED, that the cap under Framework 12.6 is **3 concurrent Technical Reviewer engagements per member**.
 
 FURTHER RESOLVED, that each member's contract must cover:
 
 - The retainer.
 - **Assignment of all work product to the VST** under section 9 of the standard Independent Contractor Agreement.
-- Confidentiality and the Framework's conflict and recusal duties, including the **6-month bar on bidding after leaving**.
-- **Key custody**: secure handling, no sharing or delegation, and surrender on removal or replacement.
+- The confidentiality, conflict, recusal, and post-service bidding restrictions in **Framework section 6**.
+- **Secure key handling** and the custody duties in **Framework 7.4**.
 - **Automatic suspension of pay** if the member is referred to MSIG for removal or misses 3 consecutive meetings without excuse.
-- **Suspension of payment under Framework 13.4a**, with entitlement continuing to accrue and paid on resumption at the then-current rate.
+- The payment suspension, accrual, and resumption rules in **Framework 13.4a**.
 - Termination on removal or when the term ends.
 
-FURTHER RESOLVED, that reasonable, pre-approved expenses are reimbursable; total Committee pay of **USD 12,500 per month** is authorized, funded through each cycle's transfer; and pay continues only while block producers continue funding it.
+FURTHER RESOLVED, that reasonable, pre-approved expenses are reimbursable; Committee pay is funded through each cycle's transfer and continues only while block producers continue funding it.
 
 ### Part I — Funding
 
