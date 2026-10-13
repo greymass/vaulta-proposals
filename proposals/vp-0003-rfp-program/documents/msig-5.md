@@ -135,15 +135,13 @@ FURTHER RESOLVED, that ECF is asked to publish its process by **[___]** and comp
 
 FURTHER RESOLVED, that the Committee must decide **at scoping whether a Technical Reviewer is needed**, based on whether the work is technical, **including Service awards**.
 
-FURTHER RESOLVED, that **the RFP platform and Portal code are VST-owned work product**, operated by VS LLC, and before the program relies on that code, the program must obtain **a written assignment to the VST from every author**, or a perpetual, irrevocable, sublicensable licence if assignment is unavailable, **and transfer the code to a VST-controlled repository**.
+FURTHER RESOLVED, that **the program must not rely on the RFP platform or Portal code until the rights and repository requirements in Framework 15.2a are met**.
 
-FURTHER RESOLVED, that **VS LLC and connected entities must not bid on this work**, and if no other capable provider exists, the award is a **reserved matter**.
+FURTHER RESOLVED, that a **material conflict-of-interest breach** requires **immediate suspension of the person's role, signing weight, and pay, and referral to MSIG**.
 
-FURTHER RESOLVED, that a **material conflict-of-interest breach** requires **immediate suspension of the person's role, signing weight, and pay, and referral to MSIG**, and breaches include self-dealing, an undisclosed interest in a proposer or awardee, payment from a proposer or awardee, private use of proposal information, breaching confidentiality, or signing a matter from which the person was recused.
+FURTHER RESOLVED, that **any departure from the default licence must be published in the RFP with reasons**.
 
-FURTHER RESOLVED, that a proposed licence may be scored **only if it is published as a separate criterion with its own weight before submissions open**; the standing openness criterion is insufficient; **any departure must be published in the RFP with reasons**; if a deliverable cannot be released as usable open source, the RFP must state this at publication and explain what the Network receives instead; and **open source is required where an RFP is silent**.
-
-FURTHER RESOLVED, that VS LLC's costs for this role are charged to **Program Costs within Part D's USD 40,000 cap**, separately from the CY2026 VST operating funding under MSIG #3.
+FURTHER RESOLVED, that **VS LLC's RFP administration costs are charged to Program Costs, separately from the CY2026 VST operating funding under MSIG #3**.
 
 ### Part H — Committee pay
 
