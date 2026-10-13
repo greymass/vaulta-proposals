@@ -112,8 +112,6 @@ FURTHER RESOLVED, that the **post-award review threshold under Framework 25.2 is
 
 ### Part E — The Program Account and how payments work
 
-FURTHER RESOLVED, that **`rfp.vst`**, a subaccount of `vst`, is established as the **Program Account**, and all program funds must be held there.
-
 FURTHER RESOLVED, that **block producers, rather than whoever publishes the configuration, name the account holding program funds**.
 
 FURTHER RESOLVED, that the Committee Permission must use these settings:
