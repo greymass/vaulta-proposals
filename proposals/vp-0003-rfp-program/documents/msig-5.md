@@ -112,24 +112,14 @@ FURTHER RESOLVED, that the **post-award review threshold under Framework 25.2 is
 
 ### Part E — The Program Account and how payments work
 
-FURTHER RESOLVED, that **block producers, rather than whoever publishes the configuration, name the account holding program funds**.
-
-FURTHER RESOLVED, that the Committee Permission must use these settings:
+FURTHER RESOLVED, that payments must use these delay windows:
 
 | Setting | Value |
 |---|---|
-| Weight per seated member | 1 unit, 5 units total |
-| To move funds | **4 of 5** |
-| For administrative actions that move no funds, including cancelling a payment | **3 of 5** |
-| Owner permission | **`eosio.prods`** |
 | Delay before a payment executes | **168** hours (7 days) |
 | Shorter delay for urgent awards | **72** hours (3 days) |
 
-FURTHER RESOLVED, that **VS LLC must develop and configure the Program Account and Committee Permission**, and **publish Exhibit D before funding**, with Exhibit D covering the account name, permission structure and thresholds, delay mechanism and values, cancellation path and exact action and authority required, account resources, `eosusd` pair and `quoted_precision`, and a worked payment calculation.
-
-FURTHER RESOLVED, that **VS LLC must establish the on-chain disclosure register** under Framework 6.3b on a **separate account, `disc.vst`**, and Exhibit D must identify the account, append-only contract and ABI, deployment and writing authorities, coded-answer schema, and questionnaire version.
-
-FURTHER RESOLVED, that a separate decisions table on the same append-only register account as the disclosure questionnaires must hold **full on-chain records** of award decisions, milestone approvals, payment signatures, and Committee resolutions with an external effect under Framework 7.6a; **a digest of an off-chain copy is insufficient**; and Exhibit D must specify the decisions schema and version, writing authority, **deployment and upgrade authority**, and **RAM provisioning**.
+FURTHER RESOLVED, that **VS LLC must develop and configure the Program Account, Committee Permission, and the disclosure, decisions, and publications registers on `disc.vst`**, and **publish Exhibit D before funding**, identifying the account names, permission structure and thresholds, delay mechanism and values, cancellation path and exact action and authority required, account resources, `eosusd` pair and `quoted_precision`, a worked payment calculation, register contracts and ABIs, deployment, upgrade and writing authorities, schemas and versions, questionnaire version, and register RAM provisioning.
 
 FURTHER RESOLVED, that the configuration must record **each member's delivered public key**; the permission must use those keys and **may be activated only after all five are delivered**.
 

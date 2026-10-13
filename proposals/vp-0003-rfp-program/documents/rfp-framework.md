@@ -331,6 +331,8 @@ Records are **append-only**. An update files a new record referencing the previo
 
 **7.1** All program funds must be held in the on-chain **Program Account, `rfp.vst`**, and nowhere else.
 
+**Block producers, rather than whoever publishes the configuration, name the account holding program funds.**
+
 The name reads as belonging to the VST, but it confers no authority. A parent account has no standing control over a subaccount once created, and the permissions in 7.2 govern: the owner permission sits with `eosio.prods` and moving funds needs 4 of 5 Committee signatures. **The VST cannot move program funds.**
 
 **7.2** The account carries a Committee permission:
@@ -1297,18 +1299,18 @@ That is why rules 3a and 14 exist rather than a size cap. A **minimum open perio
 
 ## Appendix B — Numbers set elsewhere
 
-Except for the initial staggered terms in section 3.4 and the minimum coverage margin in section 13.4, these are set in MSIG #5 and can change without amending this Framework.
+The table identifies where each setting is defined. Settings in MSIG #5 can change without amending this Framework.
 
 | Item | Where |
 |---|---|
 | Cycle Ceiling and Per-Award Limit (in **USD**) | MSIG #5 |
 | **Program Cost Ceiling** and its two internal caps — Committee pay, and Manager and Reviewer fees with Portal and administration (section 13.1) | MSIG #5, Part D |
-| Delay window length, normal and urgent | MSIG #5 |
+| Delay window length, normal and urgent | MSIG #5, Part E |
 | Cycle ceilings and the funding period | MSIG #5 |
 | Committee pay (in **USD**, paid in A) | MSIG #5 |
 | Initial staggered terms | Framework section 3.4 |
 | ECF process publication and first vote dates | MSIG #5 |
-| Program Account (`rfp.vst`) permission settings | MSIG #5. Developed, configured, and published by **VS LLC** |
+| Program Account (`rfp.vst`) permission weights, signature thresholds, and owner | Framework section 7.2. Developed, configured, and published by **VS LLC** under MSIG #5 Part E |
 | Manager and Reviewer rate card | MSIG #5, Exhibit B |
 | Schedule A terms for every paid role | MSIG #5, Exhibit F |
 | Minimum coverage margin (10%) | Framework section 13.4 |
