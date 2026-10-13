@@ -110,15 +110,6 @@ FURTHER RESOLVED, that the **post-award review threshold under Framework 25.2 is
 
 **Everything is denominated in USD. Everything is paid in A.**
 
-**Coverage: the program must hold enough A to meet its USD commitments**
-
-FURTHER RESOLVED, that the Committee must:
-
-1. **Test coverage before every award.** Confirm that the account's A balance, valued at the Reference Rate, covers all outstanding Award Commitments and Program Costs **falling due before the next scheduled instalment**, plus the proposed award, with **at least a 10% margin**. An award that fails this test may not be made and is a reserved matter.
-2. **Report coverage every cycle**, showing outstanding USD commitments, the A balance, the rate used, and the resulting coverage percentage.
-3. **Stop and escalate if coverage falls below the 10% floor.** The Committee shall make no further awards, shall notify MSIG within **5 business days**, and shall request a top-up transfer. Milestones under existing agreements continue to be paid while funds allow.
-4. **Report a surplus.** If the price of A rises and the account holds more than the cycle requires, the surplus is reported. It is not swept at cycle end — surpluses reduce the next quarterly instalment, and any final balance is returned at the end of the funding period under Part I.
-
 **Funding instruments**
 
 FURTHER RESOLVED, that the Committee may use **only three funding instruments**: a **directed RFP**, an **open call** for unsolicited proposals (Framework 26), or a **bounty** (Framework 26a), and "**grants**" means the **open call**, not a fourth instrument.
@@ -326,7 +317,7 @@ It keeps **no price history**. Only 21 rows exist per pair and the oldest is ove
 
 This is the better allocation. Awardees are teams and individuals who budget in fiat, and asking them to absorb the movement of A over a multi-month engagement would have shown up as padded bids, shorter engagements, or good teams declining to bid at all.
 
-The cost is that the program's purchasing power now moves with A. That is what the coverage test and the 25% buffer in Part D exist to manage. Two consequences block producers should understand before voting:
+The cost is that the program's purchasing power now moves with A. That is what the coverage test in Framework 13.4 and the 25% funding margin in Part I exist to manage. Two consequences block producers should understand before voting:
 
 - **A sustained fall in A can force the program to stop awarding mid-cycle.** The coverage rules say so plainly rather than leaving it to be discovered.
 - **The Treasury may be asked for a top-up** if coverage falls to the 10% floor. That is a reserved matter and comes back to block producers.

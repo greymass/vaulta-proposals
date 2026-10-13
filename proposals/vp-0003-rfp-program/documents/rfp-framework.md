@@ -1295,7 +1295,7 @@ That is why rules 3a and 14 exist rather than a size cap. A **minimum open perio
 
 ## Appendix B — Numbers set elsewhere
 
-Except for the initial staggered terms in section 3.4, these are set in MSIG #5 and can change without amending this Framework.
+Except for the initial staggered terms in section 3.4 and the minimum coverage margin in section 13.4, these are set in MSIG #5 and can change without amending this Framework.
 
 | Item | Where |
 |---|---|
@@ -1309,7 +1309,7 @@ Except for the initial staggered terms in section 3.4, these are set in MSIG #5 
 | Program Account (`rfp.vst`) permission settings | MSIG #5. Developed, configured, and published by **VS LLC** |
 | Manager and Reviewer rate card | MSIG #5, Exhibit B |
 | Schedule A terms for every paid role | MSIG #5, Exhibit F |
-| The coverage margin | MSIG #5 |
+| Minimum coverage margin (10%) | Framework section 13.4 |
 | Cap on concurrent member-Reviewer engagements (section 12.6) | MSIG #5, Part H |
 | Post-award review threshold (section 25.2), set as a share of the Per-Award Limit | MSIG #5, Part D |
 
