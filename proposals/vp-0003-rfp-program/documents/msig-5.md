@@ -163,15 +163,13 @@ FURTHER RESOLVED, that reasonable, pre-approved expenses are reimbursable; Commi
 
 ### Part I — Funding
 
-FURTHER RESOLVED, that the transfer of **A worth USD 284,375**, calculated at the **Reference Rate on the transfer date** as **125% of the first cycle's USD 227,500 Total Program Spend**, to the Program Account as the first quarterly instalment is requested on behalf of the active block producers, from the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
+FURTHER RESOLVED, that the active block producers request a **first quarterly instalment of A worth USD 284,375** to the Program Account, calculated at the **Reference Rate on the transfer date** under **Framework 13.1**, from the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
 
 FURTHER RESOLVED, that the program does not begin if the request is **declined, delayed, or only partly met**: the Program Account is not funded, no cycle starts, no term runs, and no pay accrues; the Committee must report this publicly; MSIG may re-scope the program to available funds.
 
-FURTHER RESOLVED, that the transfer is a **one-way contribution of Network funds**, which neither pass through nor remain held by the VST, and if the VST or VS LLC currently holds any of the source pools, transferring them releases Network funds and is not a Trust activity.
+FURTHER RESOLVED, that the transfer is a **one-way contribution of Network funds**, and any source pools held by the VST or VS LLC are released as Network funds, not as a Trust activity.
 
-FURTHER RESOLVED, that **four quarterly cycles, covering one year, are authorized**, and **another MSIG Resolution is required for the next four cycles**.
-
-FURTHER RESOLVED, that **USD 910,000 is authorized for the first four-cycle funding period**, comprising:
+FURTHER RESOLVED, that **USD 910,000 is authorized for the first four quarterly cycles, covering one year**, with **another MSIG Resolution required for the next four cycles**, comprising:
 
 | Component | Per cycle | Four cycles |
 |---|---|---|
@@ -181,17 +179,15 @@ FURTHER RESOLVED, that **USD 910,000 is authorized for the first four-cycle fund
 | — Manager and Reviewer fees, Portal, administration | 40,000 | 160,000 |
 | **Total Program Spend** | **227,500** | **910,000** |
 
-FURTHER RESOLVED, that there is **no spending authority against the 25% margin**, and **the Committee must not commit against the margin**.
+FURTHER RESOLVED, that the **25% funding margin provides no authority to spend or commit funds**.
 
-FURTHER RESOLVED, that later instalments are authorized **without a further vote**, and block producers may **stop, reduce, or re-time any instalment by MSIG Resolution at the Threshold at any time**.
+FURTHER RESOLVED, that later instalments within the first four-cycle funding period are authorized **without a further vote**, subject to **Framework 13.1**.
 
 **No authority to create an entity**
 
-FURTHER RESOLVED, that the Steering Committee is the Network's decision-making body **for RFP funding only**; the Committee, VST, and VS LLC are **not** authorized to **form, register, incorporate, or become a member or director of any company, foundation, association, trust, or other entity** on the Network's behalf; and **a separate MSIG Resolution at the Threshold is required to create any such entity**.
+FURTHER RESOLVED, that the Committee, VST, and VS LLC may not **form, register, incorporate, or become a member or director of any company, foundation, association, trust, or other entity** on the Network's behalf, directly or through an agent, adviser, or affiliate, whether or not it would hold funds; and **a separate MSIG Resolution at the Threshold is required to create any such entity**.
 
-FURTHER RESOLVED, that this restriction applies to direct action and action through an agent, adviser, or affiliate, whether or not the entity would hold funds.
-
-FURTHER RESOLVED, that management of the REX yield and Year 1 pools is addressed **only for the RFP program**, their wider management is not settled here, and the Committee does not represent the Network for other funds.
+FURTHER RESOLVED, that this Resolution **does not settle the wider management of the REX yield and Year 1 pools**, and the Committee does not represent the Network for other funds.
 
 ### Part J — Effect
 
