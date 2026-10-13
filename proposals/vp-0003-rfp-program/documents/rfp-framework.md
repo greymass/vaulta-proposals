@@ -826,7 +826,7 @@ The timestamp of the newest datapoint is **recorded and published with every app
 
 A halt would be the wrong response to a quiet oracle: awardees would go unpaid for something entirely outside their control. The fallback keeps payments moving at a rate nobody in the transaction chose, and escalation, where even the fallback is unavailable, forces a conscious decision instead, on the record.
 
-**The fallback rate.** If the newest `eosusd` datapoint is more than **24 hours** old at a read, or the pair or `delphioracle` contract is unavailable, renamed, or deprecated, use the **midpoint of CoinMarketCap's published daily high and low USD prices for Vaulta (A), ID 36462**, for the **UTC calendar day before the read**; add the high and low and divide by two; MSIG #5 sets this source in advance so no party to the transaction supplies the rate.
+**The fallback rate.** If the newest `eosusd` datapoint is more than **24 hours** old at a read, or the pair or `delphioracle` contract is unavailable, renamed, or deprecated, use the **midpoint of CoinMarketCap's published daily high and low USD prices for Vaulta (A), ID 36462**, for the **UTC calendar day before the read**; add the high and low and divide by two; this Framework sets the source in advance so no party to the transaction supplies the rate.
 
 | | |
 |---|---|

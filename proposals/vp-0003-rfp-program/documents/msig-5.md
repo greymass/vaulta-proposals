@@ -24,7 +24,7 @@ If you read nothing else, read this page.
 | 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
 | 11a | Allow Committee members to earn **separate Technical Reviewer fees** | Rate-card fees under Framework 12.6, **outside the retainer** — see Part H. Limited to **3 concurrent engagements**, not by total fees. Not available until that cap is set |
 | 12 | **Authorize USD 910,000 over four quarterly cycles**, first instalment A worth USD 284,375 | Gross transferred up to USD 966,875 — see note 3 |
-| 13 | Allow **fallback pricing when the oracle is stale or unavailable** | Use the **CoinMarketCap fallback** set in this Resolution; if it also fails, **all payments stop and no new awards may be made**. **Only block producers** may name a permanent replacement rate source. Part D; Framework 13.4, 13.4a |
+| 13 | Allow **fallback pricing when the oracle is stale or unavailable** | Use the **CoinMarketCap fallback** set in Framework 13.4; if it also fails, **all payments stop and no new awards may be made**. **Only block producers** may name a permanent replacement rate source. Framework 13.4, 13.4a |
 
 **What you keep.** Setting every limit above. **Funding the program a year at a time** — the program cannot spend what you have not authorized, and you may change any amount or cycle length at 15/21 at any time. Seating and removing members. Deciding anything above the limits. Cancelling any payment. Suspending or revoking the mandate at any time, without cause.
 
@@ -53,7 +53,7 @@ It also reconstitutes the Oversight Committee as the Steering Committee, gives t
 **Mandate** — the authority granted in Part C.
 **Threshold** — approval by not fewer than 15 of the 21 active block producers.
 **Business day** — Monday to Friday in UTC, including public holidays.
-**Reference Rate** — the rate used to convert USD amounts into A at the time of the relevant action, using the Delphi Oracle or the CoinMarketCap fallback under Framework 13.4 and Part D.
+**Reference Rate** — the rate used to convert USD amounts into A at the time of the relevant action, using the Delphi Oracle or the CoinMarketCap fallback under Framework 13.4.
 **Award Commitments** — amounts committed to awardees, constrained by the Cycle Ceiling.
 **Program Costs** — Committee pay, Manager and Reviewer fees, Portal and administration costs.
 **Total Program Spend** — Award Commitments plus Program Costs.
@@ -109,8 +109,6 @@ FURTHER RESOLVED, that the following limits apply:
 FURTHER RESOLVED, that the **post-award review threshold under Framework 25.2 is USD 25,000**, or **25% of the Per-Award Limit**; the threshold must be reset to a quarter of that Limit whenever the Limit changes; and **reviews must be summarized in the next cycle report**.
 
 **Everything is denominated in USD. Everything is paid in A.**
-
-FURTHER RESOLVED, that **CoinMarketCap's Vaulta (A) listing, ID 36462, is designated as the fallback rate source** under Framework 13.4.
 
 **Coverage: the program must hold enough A to meet its USD commitments**
 

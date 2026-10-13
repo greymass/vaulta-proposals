@@ -177,7 +177,7 @@ The 72-hour delay may be used **only** where the Committee has voted to declare 
 
 ## Part 6 — The reference rate
 
-MSIG #5 Part E requires this Exhibit to confirm the pair, its precision, and a worked example. MSIG #5 Part D adds a worked example of the CoinMarketCap fallback rate (6.5).
+MSIG #5 Part E requires this Exhibit to confirm the pair, its precision, and a worked example. Framework 13.4 requires a worked example of the CoinMarketCap fallback rate (6.5).
 
 | | |
 |---|---|
