@@ -46,15 +46,15 @@ Until all five seats are filled, **the RFP mandate must not be exercised, no RFP
 
 ## 2. Seats
 
-**2.1** Five seats. Each carries a portfolio. Every member also shares the oversight duties equally.
+**2.1** The Committee has **five seats**, each with a portfolio listed below; all members share **Trust oversight duties equally**.
 
 | Seat | Portfolio | RFP categories (from MSIG #4) |
 |---|---|---|
-| **Core Development** | Protocol, node software, tooling, security, technical roadmap | Core network infrastructure (APIs, history nodes, snapshots); core and supplemental development |
+| **Core Development** | Protocol, node software, tools, security, technical roadmap | Core network infrastructure (APIs, history nodes, snapshots); core and supplemental development |
 | **Marketing** | Brand, communications, content, events | Core and supplemental marketing services |
 | **Business Development** | Integrations, partnerships, exchanges, adoption | Business and project incubation grants |
 | **Community** | Builders, holders, user-facing programs | Educational initiatives; community engagement and advocacy |
-| **General (At-Large)** | Cross-cutting matters, process integrity; chairs the Committee | Any category, and matters spanning categories |
+| **General (At-Large)** | Chairs the Committee; cross-category work and process integrity | Any category, and matters spanning categories |
 
 **2.2** Each portfolio determines who **leads** work in that category, but gives no authority to approve, block, or award alone.
 
