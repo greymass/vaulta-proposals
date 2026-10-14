@@ -42,7 +42,7 @@ Until all five seats are filled, **the RFP mandate must not be exercised, no RFP
 
 **1.4** Every decision and record must state whether it relates to **Trust oversight** or the **Network RFP program**.
 
-**1.5** The Committee must not use one job as leverage in the other. It may suspend the Trustee under the Trust Agreement. It depends on VS LLC for program contracting. Neither may be used to influence the other. Any communication touching both must be written and recorded in the minutes.
+**1.5** The Committee must not use **Trust oversight** to pressure decisions in the **Network RFP program**, or vice versa; any communication involving both roles must be written and recorded in the minutes.
 
 ## 2. Seats
 
