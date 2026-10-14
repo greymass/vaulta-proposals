@@ -1,29 +1,29 @@
 # Seat Appointment MSIG — Template
 
 **Exhibit E to MSIG #5**
-**Status: TEMPLATE v2.2 — copy, fill the bracketed fields, propose on-chain**
+**Status: TEMPLATE v2.3**
 
 ---
 
 ## How to use this template
 
-Keep only the Candidates table rows for the seats covered, put them in **deliberate priority order**, and complete the candidate details and vision statements. **Incomplete proposals should not be approved.**
+Complete the candidate rows, details, and vision statements for the seats being filled. List candidates in **priority order** under Framework 3.1. **Incomplete proposals should not be approved.**
 
-Appointment rules are in **Framework sections 3 and 4**; the contract, disclosure, and signing-key requirements are in **MSIG #5 Part B**.
-
-**Proposal name suggestion:** `sc` plus the seats covered — for example, `scdevalice`, `scslate1`, or `scbdmkt`.
+Follow **Framework sections 3 and 4** for appointments and **MSIG #5 Part B** for contracts, disclosures, and signing keys.
 
 ---
 
-## Proposal Title
+## Proposal title
 
 Steering Committee Appointment — [SEAT NAME(S)]
 
 ## Purpose
 
-To appoint the candidates below to **[N] Steering Committee seat(s)** under **MSIG #5 Parts B and F** and the **Vaulta Network RFP Framework**.
+Appoint the candidates below to **[N] Steering Committee seat(s)** under **MSIG #5 Parts B and F** and the **Framework**.
 
-**Resolution mode:** [**Seat by seat** — default: evaluate each seat independently / **All or nothing** — no appointments take effect if any named seat cannot be filled under Framework 3.1]
+**Resolution mode:** [**Seat by seat** (default) / **All or nothing**]
+
+Seat by seat considers each seat independently; all or nothing appoints no one if any listed seat cannot be filled under Framework 3.1.
 
 ## Candidates
 
@@ -35,41 +35,41 @@ To appoint the candidates below to **[N] Steering Committee seat(s)** under **MS
 | [General (At-Large)] | [NAME] | [`account`] | [ORG or None] | [None, or affiliation and waiver MSIG] | 8 months |
 | [Community] | [NAME] | [`account`] | [ORG or None] | [None, or affiliation and waiver MSIG] | 12 months |
 
-*Initial terms are set in MSIG #5 Part B; their start dates are governed by Framework 3.4. Any Treasury affiliation requires an express waiver at the Threshold under Framework 2.4a.*
+*Initial terms and start dates follow **Framework 3.4**. Treasury-affiliated candidates need an express MSIG waiver at the Threshold under **Framework 2.4a**.*
 
-**Eligibility confirmation:** [Confirm that no candidate already holds a seat, that no appointment would breach the one-person-per-seat or affiliation rules against a sitting member or another candidate, and that no candidate appears on the published register of bans.]
+**Eligibility confirmation:** [Confirm that no candidate already holds a seat, no appointment breaches **Framework 2.4** against a sitting member or another candidate, and no candidate is on the published ban register under **Framework 6.6**.]
 
 **For each candidate:**
 
-- **Relevant background** — [2–4 lines explaining their suitability for the seat]
-- **Declared conflicts** — [Known connections to likely proposers, or "None declared"]
+- **Relevant background** — [2–4 lines about suitability for the seat]
+- **Declared conflicts** — [Connections to likely proposers, or "None declared"]
 - **Contact** — [___]
 
 ## Network vision statement — one per candidate
 
-Each candidate writes about **their seat's portfolio**, following **Framework 3.1a**: **about 300 to 800 words in plain language**, with a translation where helpful. An existing ECF candidate statement that meets these requirements may be used.
+Each candidate writes **about 300–800 words in plain language** about their seat's portfolio under **Framework 3.1a**, with a translation where helpful. An ECF statement meeting these requirements may be used.
 
 **[CANDIDATE NAME] — [SEAT]**
 
-1. **What the Network needs in this portfolio during the term** — [___]
-2. **What I would prioritize funding, and what I would decline** — [___]
-3. **How I would judge the program's success by the end of the term** — [___]
-4. **Positions or commitments block producers should know about** — [___]
+1. **The Network's needs in this portfolio during my term** — [___]
+2. **My funding priorities and what I would decline** — [___]
+3. **How I would measure success by the end of my term** — [___]
+4. **Positions or commitments block producers should know** — [___]
 
-*Declare interests in the disclosure questionnaire under Framework 6.3a; the vision statement does not replace it. Repeat this statement section for each candidate.*
+*Declare interests separately in the disclosure questionnaire under Framework 6.3a. Repeat this section for each candidate.*
 
-**Optional slate note** — [Why these candidates were put forward together; this does not replace their individual statements.]
+**Optional slate note** — [Why these candidates are proposed together; individual statements are still required.]
 
 ## Resolved clauses
 
-RESOLVED, that each candidate in the Candidates table is appointed to the listed Steering Committee seat and initial term, **subject to the resolution mode stated above and the table's priority order**, under **MSIG #5 Parts B and F and Framework sections 3 and 4**.
+RESOLVED, that each candidate in the table is appointed to the listed seat and initial term under **MSIG #5 Parts B and F and Framework sections 3 and 4**, subject to the **resolution mode and row priority** stated above.
 
-FURTHER RESOLVED, that each appointee accepts the **Framework's obligations** and acknowledges its **rules on material conflict breaches and permanent bans in section 6.6**.
+FURTHER RESOLVED, that each appointee accepts the **Framework's obligations** and acknowledges the **rules on material conflict breaches and permanent bans in section 6.6**.
 
-FURTHER RESOLVED, that an appointee who does not complete the **contract, on-chain disclosure questionnaire, and signing key requirements in MSIG #5 Part B by its 30-day deadline** may be replaced by a further MSIG Resolution.
+FURTHER RESOLVED, that an appointee who misses the **30-day deadline in MSIG #5 Part B** for the **signed contract, on-chain disclosure questionnaire, and registered signing key** may be replaced by a further MSIG Resolution.
 
 ---
 
 ## Before execution
 
-Block producers should **check the published seat register before executing** and cancel proposals for seats already filled; appointments take effect only as provided in Framework 3.1.
+Block producers should **check the published seat register** and cancel proposals for filled seats before execution; **Framework 3.1** determines whether appointments take effect.
