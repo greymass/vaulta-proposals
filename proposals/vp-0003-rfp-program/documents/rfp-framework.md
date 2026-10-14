@@ -60,7 +60,7 @@ Until all five seats are filled, **the RFP mandate must not be exercised, no RFP
 
 **2.3** Members **cannot do the work the program funds**, except as **Technical Reviewers under section 12.6**; their Reviewer fees count as **Program Costs rather than awards**.
 
-**2.4** No two seats may be occupied by the same person or by people connected to the same block producer, company, or corporate group; members must be individuals who serve personally and must not send substitutes.
+**2.4** Each person may hold **only one seat**; no two members may be connected to the same **block producer, company, or corporate group**; and members must **serve personally, without substitutes**.
 
 **2.4a The Vaulta Treasury is excluded.** A person **affiliated with the Vaulta Treasury may not** hold a Steering Committee seat, serve as an RFP Program Manager, or serve as a Technical Reviewer.
 
