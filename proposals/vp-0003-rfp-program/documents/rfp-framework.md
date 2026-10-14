@@ -29,14 +29,14 @@ Until all five seats are filled, **the RFP mandate must not be exercised, no RFP
 
 **The Program Account must not be funded and the Committee permission must not be activated** until all five seats are filled and every member has signed their contract, filed their declaration, and registered a signing key.
 
-**1.2** The Committee has **two separate jobs**:
+**1.2** The Committee oversees the Trust and makes RFP funding decisions for the Network under separate rules:
 
-| | **Trust oversight** | **Network RFP program** |
+| | **Trust oversight** | **Network RFP funding** |
 |---|---|---|
-| Authority comes from | The Trust Agreement | MSIG #5 |
-| Assets involved | Trust Property | Network funds in the Program Account |
-| What the Committee does | Monitors and reports | Decides what is funded and to whom |
-| Accountability | Trust Agreement records | Publication, delay window, reporting, four-cycle funding authorization |
+| Authority | Trust Agreement | MSIG #5 |
+| Assets | Trust Property | Network funds in the Program Account |
+| Role | Monitors and reports | Decides who receives funding |
+| Accountability | Records required by the Trust Agreement | Publication, payment delays, reports, and funding approval every four cycles |
 
 **1.3** Program funds are **not Trust Property**, the RFP program is not a Trust activity, and the Trustee has no role in it.
 
