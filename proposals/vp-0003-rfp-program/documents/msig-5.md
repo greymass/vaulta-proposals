@@ -20,7 +20,7 @@ If you read nothing else, read this page.
 | 7 | **Hold program funds on-chain**, moved only by 4 of 5 Committee signatures | Owner permission stays with `eosio.prods` |
 | 8 | **Every payment waits 7 days** before it executes, in public | You may cancel any payment at 15/21 during that wait |
 | 9 | **Objection rule**: 4–6 block producers objecting sends an award back to you; 7 or more ends it | Part E |
-| 10 | **Recognize ECF** to run the community vote for the Community seat | Francis Sangkuan holds it in the meantime |
+| 10 | **Recognize ECF** to run the community vote for the Community seat | **All five seats require future MSIG appointments**; Francis continues **Trust oversight only** until they are filled |
 | 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
 | 11a | Allow Committee members to earn **separate Technical Reviewer fees** | Rate-card fees under Framework 12.6, **outside the retainer** — see Part H. Limited to **3 concurrent engagements**, not by total fees. Not available until that cap is set |
 | 12 | **Authorize USD 910,000 over four quarterly cycles**, first instalment A worth USD 284,375 | Gross transferred up to USD 966,875 — see note 3 |
@@ -83,7 +83,7 @@ FURTHER RESOLVED, that a further MSIG Resolution may correct an appointment exec
 
 **Transition until all five seats are filled**
 
-FURTHER RESOLVED, that the temporary service of **Dafeng Guo (Vaulta Treasury)** and **Ross Dold (EOSphere)** continues alongside Francis Sangkuan **in the original Oversight Committee's capacity**, until all five Steering Committee seats are filled by separate MSIG Resolutions.
+FURTHER RESOLVED, that **Dafeng Guo (Vaulta Treasury)**, **Ross Dold (EOSphere)**, and **Francis Sangkuan (1DEX)** continue serving **in the original Oversight Committee's capacity** until all five Steering Committee seats are filled by future MSIG Resolutions, when their transition service ends.
 
 FURTHER RESOLVED, that their transition service is limited to **the former Oversight Committee's Trust oversight responsibilities**, and **the RFP mandate cannot be exercised, no RFP may be published, and no award may be made** until the Committee is constituted.
 
