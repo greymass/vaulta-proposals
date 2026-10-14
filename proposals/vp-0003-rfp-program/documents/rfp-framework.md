@@ -19,15 +19,15 @@ Part 2 may be amended by MSIG without reopening Part 1. **Part 1 governs where t
 
 ## 1. What the Committee is
 
-**1.1** The Oversight Committee is renamed the **Vaulta Network Steering Committee**; the same body continues, with its records and indemnification rights.
+**1.1** The Oversight Committee is renamed the **Vaulta Network Steering Committee**, retaining its records and indemnification rights.
 
-**All five Steering Committee seats remain unfilled by MSIG #5** and must be filled by **future MSIG Resolutions at the Threshold using Exhibit E**, with the Community seat selected under section 4.
+MSIG #5 fills **none of the five seats**; all members must be appointed by **future MSIG Resolutions at the Threshold using Exhibit E**, with the Community seat selected under section 4; block producers decide when to fill the seats.
 
-**Dafeng Guo** (Vaulta Treasury), **Ross Dold** (EOSphere), and **Francis Sangkuan** (1DEX) continue temporarily **in the original Oversight Committee’s capacity until all five Steering Committee seats are filled by future MSIG Resolutions**; during that transition, they exercise **only Trust oversight responsibilities**, and **the mandate in section 8 is not exercised, no RFP is published, and no award is made**; their service in that capacity then ends. Ross Dold may be separately appointed to a seat; Dafeng Guo may not while affiliated with the Vaulta Treasury (section 2.4a).
+**Dafeng Guo, Ross Dold, and Francis Sangkuan** continue performing **Trust oversight only** until all five seats are filled, when their transition service ends; Ross may be separately appointed, while Dafeng remains subject to the Treasury exclusion in section 2.4a.
 
-No date is set for filling the five seats — that rests with block producers. The program supplies its own pressure, because nothing operates until they are filled.
+Until all five seats are filled, **the RFP mandate must not be exercised, no RFP may be published, and no award may be made**.
 
-**The Program Account is not funded and the Committee permission is not activated until all five seats are filled** and every member has signed their contract, filed their declaration, and registered a key. The permission needs four of five signatures; a three-member body cannot operate it.
+**The Program Account must not be funded and the Committee permission must not be activated** until all five seats are filled and every member has signed their contract, filed their declaration, and registered a signing key.
 
 **1.2** The Committee has **two separate jobs**:
 
