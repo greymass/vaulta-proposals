@@ -56,7 +56,7 @@ Until all five seats are filled, **the RFP mandate must not be exercised, no RFP
 | **Community** | Builders, holders, user-facing programs | Educational initiatives; community engagement and advocacy |
 | **General (At-Large)** | Chairs the Committee; cross-category work and process integrity | Any category, and matters spanning categories |
 
-**2.2** Each portfolio determines who **leads** work in that category, but gives no authority to approve, block, or award alone.
+**2.2** Each member leads work in their portfolio but **cannot make funding decisions on their own**.
 
 **2.3** Members set direction and evaluate, but must not deliver funded work except as Technical Reviewers under section 12.6, whose fees are Program Costs rather than awards.
 
