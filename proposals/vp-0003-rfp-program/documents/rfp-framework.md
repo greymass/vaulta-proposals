@@ -58,7 +58,7 @@ Until all five seats are filled, **the RFP mandate must not be exercised, no RFP
 
 **2.2** Each member leads work in their portfolio but **cannot make funding decisions on their own**.
 
-**2.3** Members set direction and evaluate, but must not deliver funded work except as Technical Reviewers under section 12.6, whose fees are Program Costs rather than awards.
+**2.3** Members **cannot do the work the program funds**, except as **Technical Reviewers under section 12.6**; their Reviewer fees count as **Program Costs rather than awards**.
 
 **2.4** No two seats may be occupied by the same person or by people connected to the same block producer, company, or corporate group; members must be individuals who serve personally and must not send substitutes.
 
