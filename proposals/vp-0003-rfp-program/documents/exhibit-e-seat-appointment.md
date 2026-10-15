@@ -7,6 +7,8 @@
 
 ## How to use this template
 
+In this template, **Framework** means the **Vaulta Network RFP Framework (Exhibit A to MSIG #5)**.
+
 Complete the candidate rows, details, and vision statements for the seats being filled. List candidates in **priority order** under Framework 3.1. **Incomplete proposals should not be approved.**
 
 Follow **Framework sections 3 and 4** for appointments and **MSIG #5 Part B** for contracts, disclosures, and signing keys.
