@@ -27,33 +27,24 @@ The **Framework (Exhibit A)** defines each role’s powers and limits; the **con
 
 Fees pay for **determinations**, whether the work is accepted or rejected. An engagement ending early may earn a **no-award fee** under the rules below; post-award reviews and reassignment read-ins are paid separately as specified in this rate card.
 
-### The no-award fee, and when it applies
+### The no-award fee
 
-**It is the fee for the determination that ends an engagement without a further milestone.** It is paid **once per engagement**, at one milestone's rate, and it **replaces the milestone fee for that determination** rather than being paid alongside it. Four situations reach it:
+Each role earns **one no-award fee per engagement**, equal to its milestone fee, in these situations:
 
-| Situation | What happened |
+| Situation | Reference |
 |---|---|
-| **An RFP closes without an award** | Published, evaluated, and nothing was good enough. No milestone ever ran |
-| **An award is terminated mid-schedule** | Under Framework 11.10 or on a recommendation under 11.10a. The milestones already determined were paid as they fell; the terminating determination is paid at the no-award rate; the milestones that will now never run are not paid |
-| **An award decision expires before contracting** | The 60-day window in Framework 10.10 runs out and the decision expires |
-| **A bounty lapses unclaimed** | Framework 26a rule 5. The bounty was published and nobody delivered, so the acceptance determination the bounty fee turns on never happens |
+| An RFP closes without an award. | — |
+| An award is terminated before all milestones are completed. | Framework 11.10 and 11.10a |
+| An award decision expires after 60 days without a contract. | Framework 10.10 |
+| A bounty expires unclaimed. | Framework 26a, rule 5 |
 
-**The worked case.** A six-milestone award. The Manager determines milestone 1 is met and is paid for it. At milestone 2 the work is materially below standard, so the Manager determines against it and recommends termination under Framework 11.10a. The Committee terminates.
+The fee **replaces any milestone fee for the same determination**; both cannot be paid. Fees for earlier determinations remain payable, but no fees are paid for milestones never determined.
 
-| | USD |
-|---|---|
-| Milestone 1 — determination made and paid | 350 |
-| Milestone 2 — the determination that ended the engagement, paid as the no-award fee **instead of** a milestone fee | 350 |
-| Milestones 3 to 6 — never determined | 0 |
-| **Manager total** | **700** |
+**Recovery plans.** If the Committee continues the award under a recovery plan instead of terminating it, the ordinary milestone fee applies and includes reassessment of the corrected work (Framework 11.9).
 
-**Never both.** Where a single determination both rejects a milestone and ends the engagement, it earns one fee, not two. Where the Committee **declines** to terminate and directs a recovery plan under Framework 11.9 instead, the engagement continues: that determination was an ordinary milestone determination, it earns the ordinary milestone fee, and the reassessment of the remediated work is covered by the same fee.
+**Evaluation work.** There is no separate evaluation fee; milestone fees cover scoping support, publication, public Q&A, intake, compliance checks, evaluation logistics, and scoring.
 
-**The name is narrower than the rule.** Three of the four situations above involve an award that was in fact made. "No-award fee" is kept because it is what the working group has called it, and because the common thread is the same in every case — an engagement that stops without producing the thing it was paid to produce.
-
-**There is no evaluation fee.** Neither role is paid for running or scoring an evaluation round as such. Scoping support, publication, the public Q&A channel, intake, the compliance screen, evaluation logistics, and the scoring itself are **covered by the milestone fees of the award that follows**. The program pays for work that produced something, not for the process of choosing.
-
-**Fees are USD, paid in A.** Every figure here is a USD amount, converted to A at the Reference Rate on the date of payment under Framework 13.4, and paid through the published Program Cost schedule under Framework 13.3a. Where payments are suspended under Framework 13.4a, fees continue to accrue and are paid on resumption at the rate then current.
+**Payment.** Fees are denominated in USD and paid in A at the Reference Rate on the payment date, through the published Program Cost schedule (Framework 13.4 and 13.3a); during a payment suspension under 13.4a, fees accrue and are paid when payments resume, using the rate then current.
 
 ### How this sits with Framework 12.5
 
