@@ -135,7 +135,7 @@ All later terms are **12 months**.
 
 **3.5 Removal.** An MSIG Resolution may remove a member at any time, with or without cause; their **signing weight ends immediately on removal**. The Committee may refer members to MSIG for removal but **cannot remove them itself**.
 
-**3.6 Resignation.** A member may resign on written notice to the Chair and to block producers. Resignation takes effect on the date stated in the notice or, if none, on delivery. **Key weight is surrendered immediately**, and the seat becomes vacant.
+**3.6 Resignation.** A member may resign by giving written notice to the Chair and block producers, effective on the date stated or, if none, on delivery. Their **signing weight ends and their seat becomes vacant when the resignation takes effect**.
 
 **3.7 Vacancies.** A vacancy — by removal, resignation, incapacity, or death — is filled for the rest of the term by the process for that seat.
 
