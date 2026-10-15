@@ -8,19 +8,13 @@
 
 ## What this is
 
-The published rate card required by **Framework 12.1**. No RFP Program Manager and no Technical Reviewer may be contracted until it exists, and no Committee member may be engaged as a Technical Reviewer until the concurrent-engagement cap in Part 4 is set.
+This rate card sets **Manager and Technical Reviewer fees and the work those fees cover**, as required by **Framework 12.1**; neither role may be contracted before the rate card is published.
 
-**Both gates are now cleared.** The figures in Parts 2 and 3 are confirmed, and the cap in Part 4 is set at **3**. The figures change only by MSIG at the Threshold, and a change does not reprice a live engagement.
+**Parts 2 and 3 set the fees**, and **Part 4 sets the cap at three concurrent Reviewer engagements per Committee member**, as required before members may be engaged as Reviewers under MSIG #5 Part H.
 
-It does two things. It states **what each role is paid**, and it states **what that payment buys** — the scope, in enough detail that a Manager knows when they have finished and the Committee knows what it is entitled to ask for.
+Fees may change only by **MSIG at the Threshold**; changes do not affect existing engagements.
 
-**How it fits the other documents.**
-
-| Document | What it does | What it leaves to this one |
-|---|---|---|
-| **Framework (Exhibit A)** | Defines the roles, their powers, and their limits | Every figure, and the boundary of each engagement |
-| **Schedule A templates (Exhibit F)** | The contract a Manager or Reviewer signs | The fee and the rate-card scope it incorporates by reference |
-| **MSIG #5 Part H** | Sets the concurrent-engagement cap in Part 4 below | Everything else |
+The **Framework (Exhibit A)** defines each role’s powers and limits; the **contract templates (Exhibit F)** incorporate this rate card’s fees and scope.
 
 ---
 
