@@ -62,15 +62,15 @@ Until all five seats are filled, **the RFP mandate must not be exercised, no RFP
 
 **2.4** Each person may hold **only one seat**; no two members may be connected to the same **block producer, company, or corporate group**; and members must **serve personally, without substitutes**.
 
-**2.4a The Vaulta Treasury is excluded.** A person **affiliated with the Vaulta Treasury may not** hold a Steering Committee seat, serve as an RFP Program Manager, or serve as a Technical Reviewer.
+**2.4a — Treasury affiliation**
 
-"Affiliated with the Vaulta Treasury" means being its employee, officer, or director; providing services to it under contract; holding authority over Treasury funds; or otherwise acting under its direction on treasury functions.
+Anyone affiliated with the Vaulta Treasury may not serve as a **Committee member, RFP Program Manager, or Technical Reviewer**, unless MSIG grants a waiver **at the Threshold, with published reasons**.
 
-The Treasury has stated that it will not participate in allocation decisions after transferring funds to the Network; this **default exclusion** protects the Treasury and the program from the appearance of Treasury direction, and **MSIG may expressly waive it at the Threshold, with published reasons**.
+Affiliation includes employment, an officer or director role, contracted services, control over Treasury funds, or acting under the Treasury’s direction on treasury functions.
 
-**Eligibility applies throughout service.** A member, Manager, or Reviewer who becomes Treasury-affiliated must disclose it within **10 business days**; their signing weight, if any, is suspended immediately and the matter goes to MSIG, which may waive the exclusion or remove them.
+Anyone serving in these roles who becomes Treasury-affiliated must disclose it within **10 business days**; their signing weight, if any, is **suspended immediately**, and the matter goes to MSIG for a waiver or removal.
 
-The transition arrangement in section 1.1 is unaffected. Dafeng Guo's service there is in the Trust oversight capacity only, does not touch the RFP mandate, and ends when all five Steering Committee seats are filled.
+Under section 1.1, Dafeng Guo may continue **Trust oversight only** until all five Steering Committee seats are filled.
 
 **2.5** Members are **not Trust employees** and must each sign a written contract with VS LLC.
 

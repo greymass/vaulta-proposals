@@ -13,7 +13,7 @@ Follow **Framework sections 3 and 4** for appointments and **MSIG #5 Part B** fo
 
 ---
 
-## Proposal title
+## Proposal Title
 
 Steering Committee Appointment — [SEAT NAME(S)]
 
