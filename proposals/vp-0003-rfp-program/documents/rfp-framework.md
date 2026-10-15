@@ -95,26 +95,28 @@ An appointment has **no effect** if, at execution:
 
 If candidates in the same proposal conflict under the one-seat or affiliation rules, **Candidates table order sets priority**: the first appointment takes effect, and conflicting later appointments have no effect, subject to the chosen resolution mode.
 
-**3.1a Network vision statements.** Every appointment proposal must include a **candidate-written network vision statement for each candidate**; a name and background describe who they are, while the statement explains what they would do with the seat, which is what block producers are voting on.
+**3.1a Network vision statements.** Every appointment proposal must include a statement **written by each candidate about their seat’s portfolio**; a joint statement may supplement, but cannot replace, individual statements.
 
-**Each candidate writes their own statement**, rather than the proposer, about **their seat's portfolio** — for example, a Core Development candidate writes about core development; a slate may add a collective note explaining why the candidates were put forward together, but this does not replace the individual statements.
+Each statement must explain:
 
-**What it covers,** in the candidate's own words:
+1. The Network’s needs in that portfolio during the term.
+2. What the candidate would prioritize funding and decline.
+3. How they would measure the program’s success.
+4. Any position or commitment block producers should know about.
 
-1. **What the Network needs in this portfolio** over the term ahead;
-2. **What they would prioritize funding, and what they would decline** — the second is more informative than the first, and most statements skip it;
-3. **How they would judge whether the program succeeded** by the end of their term;
-4. **Any position or commitment block producers should know about.** This is about *direction*, not *interest* — interests belong in the disclosure questionnaire under 6.3a, and this does not replace it.
+Interests must be declared separately in the **disclosure questionnaire under section 6.3a**.
 
-**Length and language.** Aim for **300 to 800 words in plain language**, with a translation where helpful; the statement should be long enough to explain the candidate’s views but short enough for block producers to read several candidates’ statements, including those who do not read English as their first language.
+Aim for **300–800 words in plain language**, with a translation where helpful.
 
-**A proposal missing a statement is incomplete and should not be proposed or approved.** The omission does not void an appointment: it is the proposer’s failure, and voiding it would punish the candidate and leave the Committee short. VS LLC must record the omission in the seat register, and if the proposal executes, the member must **file their statement before pay and signing weight begin**, alongside the contract, questionnaire, and signing key required by MSIG #5 Part B.
+**Publication.** Each statement must be written to the **`publications` register** (7.6a), displayed on the Portal with the proposal, and linked from the seat register throughout the term.
 
-**Publication and reappointment.** Each statement must be **written to the `publications` register** (7.6a), displayed on the Portal with the proposal, and **linked from the seat register throughout the term**; it is **non-binding**, so members can respond to changing Network circumstances, but informs reappointment, and members seeking another term should expect to explain how their year compared with it.
+**Missing statements.** A proposal missing a statement is **incomplete and should not be submitted or approved**; if it executes, the appointment is **not void**, but VS LLC must record the omission and the member must file the statement **before pay and signing weight begin**, alongside the contract, questionnaire, and signing key required by MSIG #5 Part B.
 
-VS LLC maintains a **seat register written to the `publications` table** (7.6a) and rendered on the Portal, recording who holds each seat **by name and on-chain account** — the name being the Part 1 identity under 6.3a, so the register and the questionnaire cannot diverge — the proposal name, the execution transaction, the resolution mode, a **link to each member's network vision statement** under 3.1a, and any seat a proposal named but did not fill together with the reason.
+**Reappointment.** Statements are **non-binding** but inform reappointment; candidates seeking another term should explain how their year compared with their statement.
 
-The register is the canonical **record of what was executed** and of any condition VS LLC has identified. It is **not a determination of eligibility.** Where VS LLC records a seat as unfilled on any ground other than an earlier execution, it publishes its reasons and refers the matter to MSIG, and the seat is treated as vacant until MSIG resolves it. VS LLC does not decide who is eligible; MSIG does.
+**Seat register.** VS LLC must maintain the register in the **`publications` table** (7.6a) and display it on the Portal, recording each member’s name and on-chain account from their disclosure questionnaire (6.3a), proposal name, execution transaction, resolution mode, vision-statement link, and any proposed seat left unfilled with the reason.
+
+The register records executions and conditions, **not eligibility decisions**; if VS LLC records a seat as unfilled for a reason other than an earlier execution, it must publish its reasons and refer the matter to MSIG; the seat remains vacant until MSIG decides.
 
 **3.2** Members serve a **one-year term** and may be reappointed without limit.
 
