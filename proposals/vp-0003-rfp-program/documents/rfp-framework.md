@@ -119,7 +119,7 @@ The register is the **official record of executed appointments and any condition
 
 **3.2** Members serve a **one-year term** and may be reappointed without limit.
 
-**3.3 Continuation.** Each appointment allows the member to continue month to month after their term ends and **keep their signing key** until a successor is seated or MSIG replaces them, so the Committee does not fall below four signers and stop payments.
+**3.3 Continuation.** Members continue month to month after their term ends and **keep their signing key** until a successor is seated or MSIG replaces them.
 
 **3.4 Staggering.** Initial terms for the **Core Development, Marketing, Business Development, and General (At-Large) seats start when the Program Account receives funds**, rather than when their appointment Resolutions execute; a **Community member appointed by MSIG**, whether an ECF winner under 4.2 or an appointment under 4.7, serves **one year from execution of that appointment Resolution**.
 
