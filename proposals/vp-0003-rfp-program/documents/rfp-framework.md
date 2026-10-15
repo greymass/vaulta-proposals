@@ -76,24 +76,24 @@ Anyone in these roles who becomes Treasury-affiliated must disclose it within **
 
 ## 3. Choosing members and terms
 
-**3.1** The **Core Development, Marketing, Business Development, and General (At-Large) seats** are filled by **MSIG Resolutions at the Threshold using Exhibit E to MSIG #5**; each Resolution may cover **one, several, or all four seats**.
+**3.1** The **Core Development, Marketing, Business Development, and General (At-Large) seats** must be filled by MSIG Resolutions at the Threshold using **Exhibit E to MSIG #5**; each proposal may cover **one or more seats**.
 
-Rules apply **per seat**; block producers may approve multiple proposals for a seat, but the **first appointment executed by block time** fills it, subject to the eligibility checks below, and later executions have no effect for that seat.
+Block producers may approve competing proposals for a seat, but the **first appointment executed by block time** fills it; later executions have no effect for that seat.
 
 Each proposal must state its **resolution mode**:
 
-- **Seat by seat** (default) — each appointment takes effect independently.
-- **All or nothing** — no appointment takes effect if any proposed appointment fails the checks below.
+- **Seat by seat** (default): Each appointment is considered independently; an appointment that cannot take effect does not affect the others.
+- **All or nothing**: No appointments take effect if any listed appointment cannot take effect.
 
 An appointment has **no effect** if, at execution:
 
-1. The seat is already filled by an earlier executed appointment.
-2. The candidate already holds another seat, including under the same Resolution.
-3. The appointment would breach the affiliation rule in section 2.4.
+1. The seat is already filled.
+2. The candidate already holds another seat, including one filled by the same Resolution.
+3. The appointment would breach the affiliation rule in **section 2.4**.
 4. The candidate is Treasury-affiliated without an express waiver at the Threshold.
-5. The candidate appears on the register of bans under section 6.6.
+5. The candidate is on the ban register under **section 6.6**.
 
-If the same proposal names a person for multiple seats or candidates whose affiliations conflict, assess appointments in **Candidates table order**; the first appointment takes effect, and later conflicting appointments have no effect.
+If candidates in the same proposal conflict under the one-seat or affiliation rules, **Candidates table order sets priority**: the first appointment takes effect, and conflicting later appointments have no effect, subject to the chosen resolution mode.
 
 **3.1a Network vision statements.** Every appointment proposal must include a **candidate-written network vision statement for each candidate**; a name and background describe who they are, while the statement explains what they would do with the seat, which is what block producers are voting on.
 
