@@ -18,16 +18,14 @@ The **Framework (Exhibit A)** defines each role’s powers and limits; the **con
 
 ---
 
-## The shape of the fee
+## How fees are calculated
 
-**Two structures, one for each instrument.**
-
-| Instrument | How the fee is paid |
+| Instrument | Manager and Reviewer fees |
 |---|---|
-| **RFP** — directed, or awarded from the open call | **Per milestone.** Both roles are paid a fixed amount for each milestone under the award. Framework 11.1a puts a floor of **two milestones** on every RFP award, so the smallest RFP engagement is two units, not one |
-| **Bounty** | **A single one-time fee, equal to one milestone.** A bounty is published, delivered, determined once, and paid once — so it is one determination, and it is priced as one |
+| **RFP** — directed or open call | A fixed fee per milestone; every RFP award must have **at least two milestones** (Framework 11.1a). |
+| **Bounty** | One fee, equal to the applicable milestone fee. |
 
-**One determination, one unit of pay.** That is the whole card. A milestone is a determination, a bounty is a determination, and **the determination that ends an engagement early is a determination too** — that is the no-award fee. Everything else — the post-award review, a reassignment read-in — is a named addition to it.
+Fees pay for **determinations**, whether the work is accepted or rejected. An engagement ending early may earn a **no-award fee** under the rules below; post-award reviews and reassignment read-ins are paid separately as specified in this rate card.
 
 ### The no-award fee, and when it applies
 
