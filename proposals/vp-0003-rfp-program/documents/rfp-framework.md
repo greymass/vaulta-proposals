@@ -70,7 +70,7 @@ Until all five seats are filled, **the RFP mandate must not be exercised, no RFP
 
 Anyone in these roles who becomes Treasury-affiliated must disclose it within **10 business days**; their signing weight, if any, is **suspended immediately**, and the matter goes to MSIG, which may waive the exclusion or remove them.
 
-**2.5** Members are **not Trust employees** and must each sign a written contract with VS LLC.
+**2.5** Each member must sign a contract with **VS LLC** and is **not a Trust employee**.
 
 **2.6** Each member holds one unit of signing weight on the Program Account (section 7) and must be able to keep their signing key secure.
 
