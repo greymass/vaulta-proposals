@@ -76,26 +76,24 @@ Anyone in these roles who becomes Treasury-affiliated must disclose it within **
 
 ## 3. Choosing members and terms
 
-**3.1** The **Core Development, Marketing, Business Development, and General (At-Large) seats** are filled by MSIG Resolutions at the Threshold using **Exhibit E to MSIG #5**; each Resolution may name **one candidate for one seat, all four candidates, or any subset**, according to how the candidates were put forward.
+**3.1** The **Core Development, Marketing, Business Development, and General (At-Large) seats** are filled by **MSIG Resolutions at the Threshold using Exhibit E to MSIG #5**; each Resolution may cover **one, several, or all four seats**.
 
-Every rule below applies **per seat, rather than per proposal**.
+Rules apply **per seat**; block producers may approve multiple proposals for a seat, but the **first appointment executed by block time** fills it, subject to the eligibility checks below, and later executions have no effect for that seat.
 
-Block producers may approve multiple proposals for the same seat; if more than one reaches the Threshold, the appointment **executed first by block time** fills it, and later executions have no effect for that seat.
+Each proposal must state its **resolution mode**:
 
-Each Exhibit E proposal states a **resolution mode**:
+- **Seat by seat** (default) — each appointment takes effect independently.
+- **All or nothing** — no appointment takes effect if any proposed appointment fails the checks below.
 
-- **Seat by seat** (default) — each seat named is treated independently. A slate executing when one of its seats is already filled seats the others and has no effect for the filled one.
-- **All or nothing** — the Resolution has no effect for **any** seat if any seat it names would not be filled by it, **for any of the reasons below** and not only because the seat is already taken. Used where the candidates were chosen to balance each other, so a partial slate is worse than none.
+An appointment has **no effect** if, at execution:
 
-An appointment has no effect for a given seat if, at the moment of execution:
+1. The seat is already filled by an earlier executed appointment.
+2. The candidate already holds another seat, including under the same Resolution.
+3. The appointment would breach the affiliation rule in section 2.4.
+4. The candidate is Treasury-affiliated without an express waiver at the Threshold.
+5. The candidate appears on the register of bans under section 6.6.
 
-1. that seat is already filled by an earlier executed appointment;
-2. the named individual already holds another seat, including under the same Resolution;
-3. seating them would breach the one-member-per-affiliation rule in section 2.4;
-4. they are affiliated with the Vaulta Treasury absent an express waiver at the Threshold;
-5. they appear on the register of bans under section 6.6.
-
-**Internal conflicts resolve in Candidates table order.** If a Resolution names the same person for multiple seats or candidates who breach the affiliation rule against each other, test the seats in the table's row order; the first appointment takes effect and the later one has no effect, so proposers should set that priority deliberately.
+If the same proposal names a person for multiple seats or candidates whose affiliations conflict, assess appointments in **Candidates table order**; the first appointment takes effect, and later conflicting appointments have no effect.
 
 **3.1a Network vision statements.** Every appointment proposal must include a **candidate-written network vision statement for each candidate**; a name and background describe who they are, while the statement explains what they would do with the seat, which is what block producers are voting on.
 
