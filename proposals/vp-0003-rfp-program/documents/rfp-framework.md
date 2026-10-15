@@ -121,11 +121,7 @@ The register is the **official record of executed appointments and any condition
 
 **3.3 Continuation.** Members continue month to month after their term ends and **keep their signing key** until a successor is seated or MSIG replaces them.
 
-**3.4 Staggering.** Initial terms for the **Core Development, Marketing, Business Development, and General (At-Large) seats start when the Program Account receives funds**, rather than when their appointment Resolutions execute; a **Community member appointed by MSIG**, whether an ECF winner under 4.2 or an appointment under 4.7, serves **one year from execution of that appointment Resolution**.
-
-The four seats may be filled by Resolutions executing at different times. If each term ran from its own execution the stagger would drift, and could collapse entirely — a Business Development member seated six months after Core Development would finish an 8-month term at the same moment Core Development finished a 14-month one. One anchor keeps the spacing, stops a member's term running down while the Committee is incomplete, and matches the cycle and pay clocks.
-
-Initial terms are staggered so all five seats do not end together:
+**3.4 Staggering.** Initial terms for the **Core Development, Marketing, Business Development, and General (At-Large) seats begin when the Program Account receives funds**; a **Community member appointed by MSIG** under 4.2 or 4.7 serves **one year from execution of their appointment Resolution**.
 
 | Seat | Initial term |
 |---|---|
@@ -135,7 +131,7 @@ Initial terms are staggered so all five seats do not end together:
 | General (At-Large) | 8 months |
 | Community | See section 4 |
 
-All later terms run the full 12 months.
+All later terms are **12 months**.
 
 **3.5 Removal.** A member may be removed at any time, with or without cause, by an MSIG Resolution, and removal ends their signing weight immediately; the Committee may refer a member to MSIG for removal but cannot remove members itself.
 
