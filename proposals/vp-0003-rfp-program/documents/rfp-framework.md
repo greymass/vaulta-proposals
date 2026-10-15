@@ -95,28 +95,27 @@ An appointment has **no effect** if, at execution:
 
 If candidates in the same proposal conflict under the one-seat or affiliation rules, **Candidates table order sets priority**: the first appointment takes effect, and conflicting later appointments have no effect, subject to the chosen resolution mode.
 
-**3.1a Network vision statements.** Every appointment proposal must include a statement **written by each candidate about their seat’s portfolio**; a joint statement may supplement, but cannot replace, individual statements.
+**3.1a Network vision statements.** Every appointment proposal must include a statement **written by each candidate about their seat’s portfolio**, covering:
 
-Each statement must explain:
+1. The Network’s needs during the term.
+2. What they would prioritize funding and what they would decline.
+3. How they would measure the program’s success by the end of their term.
+4. Positions or commitments block producers should know about.
 
-1. The Network’s needs in that portfolio during the term.
-2. What the candidate would prioritize funding and decline.
-3. How they would measure the program’s success.
-4. Any position or commitment block producers should know about.
+Aim for **300–800 words in plain language**, with a translation where helpful; declare interests separately in the disclosure questionnaire under **6.3a**. A slate may include a shared statement, but each candidate must still provide their own.
 
-Interests must be declared separately in the **disclosure questionnaire under section 6.3a**.
+**Missing statements.** A proposal missing a statement is incomplete and should not be proposed or approved; if it executes, the appointment remains valid, but VS LLC must record the omission in the seat register, and **pay and signing weight cannot begin until the statement and the contract, questionnaire, and signing key required by MSIG #5 Part B are complete**.
 
-Aim for **300–800 words in plain language**, with a translation where helpful.
+**Publication and reappointment.** Statements must be recorded in the **`publications` register (7.6a)**, displayed on the Portal with the proposal, and linked from the seat register throughout the term; they are **non-binding** but inform reappointment, and members seeking another term should explain how their year compared with their statement.
 
-**Publication.** Each statement must be written to the **`publications` register** (7.6a), displayed on the Portal with the proposal, and linked from the seat register throughout the term.
+**Seat register.** VS LLC must maintain a seat register in the **`publications` table (7.6a)** and display it on the Portal, recording:
 
-**Missing statements.** A proposal missing a statement is **incomplete and should not be submitted or approved**; if it executes, the appointment is **not void**, but VS LLC must record the omission and the member must file the statement **before pay and signing weight begin**, alongside the contract, questionnaire, and signing key required by MSIG #5 Part B.
+- Each member’s name and on-chain account, matching their identity under **6.3a**.
+- The proposal name, execution transaction, and resolution mode.
+- A link to each member’s vision statement.
+- Any proposed seat left unfilled and the reason.
 
-**Reappointment.** Statements are **non-binding** but inform reappointment; candidates seeking another term should explain how their year compared with their statement.
-
-**Seat register.** VS LLC must maintain the register in the **`publications` table** (7.6a) and display it on the Portal, recording each member’s name and on-chain account from their disclosure questionnaire (6.3a), proposal name, execution transaction, resolution mode, vision-statement link, and any proposed seat left unfilled with the reason.
-
-The register records executions and conditions, **not eligibility decisions**; if VS LLC records a seat as unfilled for a reason other than an earlier execution, it must publish its reasons and refer the matter to MSIG; the seat remains vacant until MSIG decides.
+The register is the **official record of executed appointments and any conditions identified by VS LLC**; eligibility is decided by **MSIG**. If VS LLC records a seat as unfilled for any reason other than an earlier execution, it must publish its reasons and refer the matter to MSIG; the seat remains vacant until MSIG decides.
 
 **3.2** Members serve a **one-year term** and may be reappointed without limit.
 
