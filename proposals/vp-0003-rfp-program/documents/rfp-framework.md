@@ -72,7 +72,7 @@ Anyone in these roles who becomes Treasury-affiliated must disclose it within **
 
 **2.5** Each member must sign a contract with **VS LLC** and is **not a Trust employee**.
 
-**2.6** Each member has **equal signing weight of one unit** on the Program Account (section 7) and **must keep their signing key secure**.
+**2.6** Each member has **one unit of signing weight** on the Program Account (section 7) and must keep their signing key secure.
 
 ## 3. Choosing members and terms
 
