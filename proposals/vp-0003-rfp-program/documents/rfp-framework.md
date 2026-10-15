@@ -133,7 +133,7 @@ The register is the **official record of executed appointments and any condition
 
 All later terms are **12 months**.
 
-**3.5 Removal.** A member may be removed at any time, with or without cause, by an MSIG Resolution, and removal ends their signing weight immediately; the Committee may refer a member to MSIG for removal but cannot remove members itself.
+**3.5 Removal.** An MSIG Resolution may remove a member at any time, with or without cause; their **signing weight ends immediately on removal**. The Committee may refer members to MSIG for removal but **cannot remove them itself**.
 
 **3.6 Resignation.** A member may resign on written notice to the Chair and to block producers. Resignation takes effect on the date stated in the notice or, if none, on delivery. **Key weight is surrendered immediately**, and the seat becomes vacant.
 
