@@ -62,15 +62,13 @@ Until all five seats are filled, **the RFP mandate must not be exercised, no RFP
 
 **2.4** Each person may hold **only one seat**; no two members may be connected to the same **block producer, company, or corporate group**; and members must **serve personally, without substitutes**.
 
-**2.4a — Treasury affiliation**
+**2.4a Treasury exclusion.** Anyone affiliated with the Vaulta Treasury may not serve as a **Steering Committee member, RFP Program Manager, or Technical Reviewer**.
 
-Anyone affiliated with the Vaulta Treasury may not serve as a **Committee member, RFP Program Manager, or Technical Reviewer**, unless MSIG grants a waiver **at the Threshold, with published reasons**.
+**Affiliation** means being a Treasury employee, officer, or director; providing services under contract; controlling Treasury funds; or acting under its direction on treasury functions.
 
-Affiliation includes employment, an officer or director role, contracted services, control over Treasury funds, or acting under the Treasury’s direction on treasury functions.
+**MSIG may waive the exclusion at the Threshold, with published reasons.**
 
-Anyone serving in these roles who becomes Treasury-affiliated must disclose it within **10 business days**; their signing weight, if any, is **suspended immediately**, and the matter goes to MSIG for a waiver or removal.
-
-Under section 1.1, Dafeng Guo may continue **Trust oversight only** until all five Steering Committee seats are filled.
+Anyone in these roles who becomes Treasury-affiliated must disclose it within **10 business days**; their signing weight, if any, is **suspended immediately**, and the matter goes to MSIG, which may waive the exclusion or remove them.
 
 **2.5** Members are **not Trust employees** and must each sign a written contract with VS LLC.
 
