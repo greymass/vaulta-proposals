@@ -129,7 +129,7 @@ Where candidates in the same proposal conflict under the one-seat or affiliation
 
 **3.1b Onboarding.** An incomplete appointment proposal that executes is **not void**. Each appointee must sign their contract, **file the standard on-chain disclosure questionnaire under 6.3a–6.3b**, and register their signing key **within 30 days of appointment execution or VS LLC announcing that the register is open, whichever is later**. **Pay and signing weight begin only after all required items are filed and the contract and key requirements are complete**.
 
-**3.2** Members serve a **one-year term** and may be reappointed without limit.
+**3.2** Members serve **one-year terms**, except for the initial terms in **3.4** and vacancy appointments in **3.7**, and may be reappointed without limit.
 
 **3.3 Continuation.** Members continue month to month after their term ends and **keep their signing key** until a successor is seated or MSIG replaces them.
 
