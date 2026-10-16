@@ -66,7 +66,7 @@ The main agreement applies to every schedule:
 
 **3. Pay:**
 
-- **USD [2,500] monthly**, invoiced and paid **monthly in arrears in A** at the Reference Rate on the payment date: use the conversion rules in **Framework 13.4 and Exhibit D, Part 6**, including the **24-hour staleness check and CoinMarketCap fallback**.
+- **USD [2,500] monthly**, invoiced and paid **monthly in arrears in A** at the Reference Rate on the payment date: use the conversion rules in **Framework 13.4 and Exhibit D, section 3 and Appendix A**, including the **24-hour staleness check and CoinMarketCap fallback**.
 - Pay starts on the **later of contract signature and receipt of funds in the Program Account**.
 - During a rate-source payment suspension under Framework 13.4a, entitlement **accrues** and is paid on resumption at the rate then current.
 
@@ -113,7 +113,7 @@ The main agreement applies to every schedule:
 
 **3. Pay:** **Exhibit B’s rates and payment rules form part of this Schedule A, including its Common payment rules and sections 1 and 2.2**, including payment triggers, no-award fees, evaluation work, recovery-plan reassessment, reassignment, post-award reviews, and accrual during rate-source suspensions.
 
-Fees are **fixed, not hourly or a percentage of an award**, and do not depend on milestone approval. They are denominated in **USD and paid in A at the Reference Rate on the payment date**, under Framework 13.4 and the calculation rules in Exhibit D, Part 6.
+Fees are **fixed, not hourly or a percentage of an award**, and do not depend on milestone approval. They are denominated in **USD and paid in A at the Reference Rate on the payment date**, under Framework 13.4 and the calculation rules in Exhibit D, section 3 and Appendix A.
 
 **4. Expenses:** Pre-approved and documented only.
 
@@ -147,7 +147,7 @@ Fees are **fixed, not hourly or a percentage of an award**, and do not depend on
 
 **3. Pay:** **Exhibit B’s rates and payment rules form part of this Schedule A, including its Common payment rules and sections 1 and 3.2**, including payment triggers, no-award fees, evaluation work, recovery-plan reassessment, substitute-Reviewer fees, and accrual during rate-source suspensions.
 
-Fees are **fixed, not hourly or a percentage of an award**, and do not depend on the assessment’s conclusion. They are denominated in **USD and paid in A at the Reference Rate on the payment date**, under Framework 13.4 and the calculation rules in Exhibit D, Part 6.
+Fees are **fixed, not hourly or a percentage of an award**, and do not depend on the assessment’s conclusion. They are denominated in **USD and paid in A at the Reference Rate on the payment date**, under Framework 13.4 and the calculation rules in Exhibit D, section 3 and Appendix A.
 
 **4. Expenses:** Pre-approved and documented only.
 
@@ -188,7 +188,7 @@ The Reviewer role gives **no award vote, signing key, or authority to approve mi
 **3. Pay:**
 
 - **Total award: USD [___]**, fixed at the award decision; paid in **A** at the Reference Rate on **each milestone’s payment-approval date**.
-- Use the oracle or fallback rate required by **Framework 13.4**, with the conversion calculations in **Exhibit D, Part 6**.
+- Use the oracle or fallback rate required by **Framework 13.4**, with the conversion calculations in **Exhibit D, section 3 and Appendix A**.
 - **At least two enumerated milestones** are required (Framework 11.1a); the table must **exactly match the published decision**, and unlisted milestones are not payable.
 
 | # | Deliverable | Acceptance criteria | Amount (USD) | Due |

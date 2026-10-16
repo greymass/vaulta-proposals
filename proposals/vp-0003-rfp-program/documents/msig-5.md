@@ -117,7 +117,7 @@ FURTHER RESOLVED, that **VS LLC must develop and configure the Program Account, 
 
 **If the protocol cannot enforce the delay**
 
-FURTHER RESOLVED, that payment delays must be **enforced on-chain**, with the **held-multisignature fallback in Exhibit D Part 3.3 authorized only if the protocol cannot enforce them**.
+FURTHER RESOLVED, that payment delays must be **enforced on-chain**, with the **held-multisignature fallback in Exhibit D section 2.3 authorized only if the protocol cannot enforce them**.
 
 FURTHER RESOLVED, that if any element cannot be built as specified, **VS LLC must publish the limitation and propose the nearest workable alternative in Exhibit D**.
 
@@ -225,9 +225,9 @@ Off-chain candidate sourcing, counsel’s amendments and operating-procedure cha
 |---|---|---|
 | 2 | Source account holding the REX yield and Year 1 pools | I |
 | 4 | ECF process publication and first vote dates | F |
-| 5 | **Publish Exhibit D with its required deployment record complete** (Part 10; D1). Member keys at **D6** may be recorded as they arrive and do not block publication. **Blocking — no Program Account funding before publication** (Part E). | Attachments |
+| 5 | **Publish Exhibit D with its required deployment record complete** (Exhibit D 6.1; D1). Member keys at **D6** may be recorded as they arrive and do not block publication. **Blocking — no Program Account funding before publication** (Part E). | Attachments |
 | 8 | **VS LLC must publish questionnaire `VQ1` and open the register for filing**, with no unresolved questionnaire items (Framework 6.3a). Its text, coded-answer schema, and bands are complete. **Blocking — no Program Account funding until every member has filed.** | E |
-| 9 | **Configure all three `disc.vst` registers under Exhibit D** (Framework 6.3b, 7.6a), including schemas, authorities, and **16 MB launch RAM provisioned and topped up by the VST and VS LLC** (Exhibit D 8.6). **EOS Rio builds and services them; VS LLC remains accountable. Blocking — no Program Account funding before Exhibit D publication.** | E |
+| 9 | **Configure all three `disc.vst` registers under Exhibit D** (Framework 6.3b, 7.6a), including schemas, authorities, and **16 MB launch RAM provisioned and topped up by the VST and VS LLC** (Exhibit D section 5 and Appendix B). **EOS Rio builds and services them; VS LLC remains accountable. Blocking — no Program Account funding before Exhibit D publication.** | E |
 | 11 | **Counsel confirmation that section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A. **Blocking — until confirmed, no Service or Embedded RFP may be published and no award may be contracted with a populated pre-existing-IP schedule** (Framework 23.3a) | Framework 23.3a; F |
 
 ## Review notes

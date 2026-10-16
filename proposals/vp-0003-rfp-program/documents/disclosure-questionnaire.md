@@ -192,7 +192,7 @@ VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 | `R`*m* | Recusal intended on *m* of the organizations named at 5.1 |
 | `X` | **Not answered.** Invalid in a filed questionnaire |
 
-**None and unanswered are different:** `N` declares nothing; any `X` means the questionnaire is **unfiled** under Framework 6.3c and Exhibit D 7.3.
+**None and unanswered are different:** `N` declares nothing; any `X` means the questionnaire is **unfiled** under Framework 6.3c and Exhibit D 4.3.
 
 ### Rules a validator enforces
 
