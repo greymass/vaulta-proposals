@@ -2,8 +2,6 @@
 
 **Governing framework:** Vaulta Network RFP Framework, Exhibit A to MSIG #5.
 
-**Exhibit E — Seat Appointment MSIG Template**
-
 **Version:** 2.3\
 **Status:** Template
 
