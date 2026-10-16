@@ -15,7 +15,7 @@ Complete the sections below for each candidate and list candidates in **priority
 
 Appointments follow **MSIG #5 Parts B and F and Framework sections 3 and 4**; contracts, disclosures, and signing keys follow **MSIG #5 Part B**.
 
-**Before execution**, block producers should **check the published seat register and cancel proposals for filled seats**; **Framework 3.1** determines whether appointments take effect.
+Before approving or executing an appointment proposal, block producers should **check the published seat register**; proposers should **cancel proposals that can no longer fill any seat under Framework 3.1**.
 
 ---
 
