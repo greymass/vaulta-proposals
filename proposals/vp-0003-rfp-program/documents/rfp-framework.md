@@ -246,7 +246,13 @@ A recused member **must not sign the payment**. Awards with fewer than four avai
 
 This covers the member’s employer, companies they work for, companies under common control, and companies in which they hold a material interest. The member **must not help set the budget or criteria** for an RFP their connected company later bids on.
 
-**6.3 Declarations.** Every member, Manager, and Technical Reviewer must declare connections, employment, **Vaulta-ecosystem positions other than A**, and any **Vaulta Treasury connection** within **30 days of appointment**; members’ deadline runs under 6.3c. Declarations must be updated within **10 business days** of a change and refiled annually.
+**6.3 Declarations.** Every member, Manager, and Technical Reviewer must declare connections, employment, **Vaulta-ecosystem positions other than A**, and any **Vaulta Treasury connection**.
+
+| Filing | Deadline |
+|---|---|
+| **Initial declaration** | Within **30 days of appointment**; Committee members’ deadline is calculated under **6.3c**. |
+| **Update after a change** | Within **10 business days of the change**, subject to the pre-engagement filing requirement in **6.3c**. |
+| **Refiling** | Annually. |
 
 **6.3a The disclosure questionnaire.** Use the **standard questionnaire, with its questions in their stated order**; free-form declarations do not qualify.
 
@@ -342,7 +348,9 @@ Records are **append-only**: updates must reference the previous record; nothing
 
 **7.3** Block producers retain the owner permission and may replace a removed member's key, rebuild the Committee permission, or recover the account.
 
-**7.4 Keys are personal.** Members must not share or delegate their key, let an employer hold it, or sign for another member, including a recused member; keys must be registered on appointment and surrendered on removal or replacement, but retained during authorized month-to-month continuation under section 3.3.
+**7.4 Personal keys.** Members must not share or delegate their key, let an employer hold it, or sign for another member, including a recused member.
+
+Keys must be **registered on appointment** and **surrendered on removal or replacement**. Members retain them during authorized month-to-month continuation under **3.3**.
 
 **7.5 Lost or compromised keys.** A member must tell the Chair and block producers **immediately**, and must not sign until the key is replaced. The Committee proposes no payments in the meantime.
 
@@ -922,7 +930,13 @@ The **Committee**, not VS LLC, must classify the work by **recorded majority vot
 
 Flag every RFP-system award as **self-referential in the cycle report**.
 
-**15.3** VS LLC must **refuse to contract** on a Committee decision plainly outside the mandate, above the Cycle Ceiling or Per-Award Limit, or missing a complete record; this checks authority rather than quality, and VS LLC must explain its refusal to the Committee and MSIG in writing.
+**15.3** VS LLC must **refuse to contract** on a Committee decision that:
+
+- Is plainly outside the mandate;
+- Exceeds the **Cycle Ceiling or Per-Award Limit**; or
+- Lacks a complete record.
+
+This checks **authority rather than quality**. VS LLC must explain its refusal **in writing to the Committee and MSIG**.
 
 **15.4 Block producers** set limits, appoint and remove members, decide escalations, hold the owner permission, and may cancel payments at the Threshold during the delay. They do not vote on individual awards within the mandate.
 
@@ -1070,9 +1084,11 @@ Weights may differ by category, but the version used must be published with the 
 
 **22.3 Scoring.** *On an unsolicited proposal, "the published statement" and "the published criteria" mean those fixed at categorization under 26.1.*
 
-- **RFPs whose published statement says a Reviewer is engaged:** Technical Reviewers score independently and in writing. They do not see each other's scores before submitting. They may discuss afterwards to resolve large differences, and the discussion is recorded.
-- **RFPs whose published statement says one is not:** the Manager of record writes the assessment, in the same format, against the same published criteria.
-- **Where the only engaged Reviewer is a Committee member** (section 12.6): the **Manager of record writes the scored assessment** against the published criteria, informed by but not bound by the member's written note. The note is published alongside it.
+| Published Reviewer setting | Who scores and how |
+|---|---|
+| **Reviewer engaged**, unless the only engaged Reviewer is a Committee member | Technical Reviewers score **independently and in writing**, without seeing each other’s scores before submitting. Afterwards, they may discuss large differences to resolve them; record the discussion. |
+| **No Reviewer engaged** | The Manager of record writes the assessment **in the same format, against the same published criteria**. |
+| **Only engaged Reviewer is a Committee member (12.6)** | The **Manager of record writes the scored assessment against the published criteria**, informed by but not bound by the member’s written note. **Publish the note alongside the assessment**. |
 
 In every case a written assessment against published criteria must exist before any award.
 
@@ -1109,7 +1125,9 @@ In every case a written assessment against published criteria must exist before 
 - allow termination for non-delivery and for cause, with a period to fix problems;
 - include a **recovery clause** for money paid against milestones later found undelivered or misrepresented, enforced by VS LLC;
 - require disclosure of any other Network funding for the same work;
-- state the award value in **USD**, the **verified receiving account** for payment in A, and that each milestone is paid in A calculated at the reference rate on the date of **approval for payment**, which is the date of the Manager's determination except where payments are suspended under 13.4a or the approval is referred to the Committee under 13.4;
+- state the award value in **USD** and the **verified receiving account** for payment in A;
+- require each milestone to be paid in A, converted at the **Reference Rate on the date of approval for payment**;
+- use the **Manager’s determination date** as the approval-for-payment date, except where **payments are suspended under 13.4a** or **approval is referred to the Committee under 13.4**;
 - confirm the awardee is an independent contractor, not an agent of the Network, the Trust, or VS LLC.
 
 **23.3a Contract requirements by award shape (20.2a).**
