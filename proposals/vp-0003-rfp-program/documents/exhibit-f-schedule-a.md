@@ -1,6 +1,6 @@
-# Schedule A Templates — RFP Program Roles
+# Contract details by role (Schedule A)
 
-**Exhibit F — Schedule A Templates**
+**Exhibit F — Contract details by role (Schedule A)**
 
 **Version:** 1.8\
 **Status:** Draft
