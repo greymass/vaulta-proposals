@@ -61,7 +61,7 @@ FURTHER RESOLVED, that the Oversight Committee is renamed the **Vaulta Network S
 
 **Appointments**
 
-FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by this Resolution**; Committee members must be appointed by **separate MSIG Resolutions at the Threshold**, with each appointment proposal **meeting the requirements in Exhibit E**; and **candidates must be considered on their own merits**, with the Community seat selected under **Framework section 4**.
+FURTHER RESOLVED, that **this Resolution fills none of the five Steering Committee seats**; members must be appointed **on their own merits by separate MSIG Resolutions at the Threshold meeting Exhibit E’s requirements**, with Community-seat selection under **Framework section 4**.
 
 FURTHER RESOLVED, that a further MSIG Resolution may correct an appointment executed in error.
 
@@ -86,7 +86,7 @@ FURTHER RESOLVED, that the following limits apply:
 | — of which **Manager and Reviewer fees, Portal, and administration** | **40,000** | Each cycle |
 | **Total Program Spend for the cycle** | **227,500** | Each cycle |
 
-FURTHER RESOLVED, that the **post-award review threshold under Framework 25.2 is USD 25,000**, or **25% of the Per-Award Limit**; the threshold must be reset to a quarter of that Limit whenever the Limit changes; and **reviews must be summarized in the next cycle report**.
+FURTHER RESOLVED, that the post-award review threshold under Framework 25.2 is **25% of the Per-Award Limit, currently USD 25,000**, and must be reset when that Limit changes; **reviews must be summarized in the next cycle report**.
 
 **Everything is denominated in USD. Everything is paid in A.**
 
@@ -171,7 +171,7 @@ FURTHER RESOLVED, that this Resolution takes effect **on execution**.
 
 ## Blanks to fill
 
-**The figures are set; only the items below remain open.** MSIG takes effect on execution; amounts, cycle length, and limits may change under Framework 13.1.
+**The figures are set; only the items below remain open.**
 
 Off-chain candidate sourcing, counsel’s amendments and operating-procedure changes, and the EOS Rio rights and repository handover remain in the **Program Administration Register**, outside this Resolution’s attachments and approval.
 
