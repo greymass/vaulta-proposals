@@ -14,7 +14,7 @@ This rate card sets **Manager and Technical Reviewer fees and responsibilities**
 
 ---
 
-## Common payment rules
+## Payment rules
 
 Managers and Reviewers are paid for **assessing work**. The assessment fee is the same whether they **accept, accept with conditions, or reject** the work; it does not depend on approving payment, the award’s value, or its outcome (Framework 12.5).
 
