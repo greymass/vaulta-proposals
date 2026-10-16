@@ -17,7 +17,11 @@
 
 **These Common terms form part of each Schedule A below and must accompany the signed schedule.** Role-specific requirements apply only to the roles named.
 
-**Framework** means the **Vaulta Network RFP Framework (Exhibit A to MSIG #5)**.
+**Framework** means the **Vaulta Network RFP Framework (Exhibit A to MSIG #5)**. Its requirements for Contractor’s role, and the MSIG #5 terms and Exhibits B and D cited below, **form part of this Schedule A**.
+
+**Framework version: [___]. Approval and immutable document-set reference: [___].** Complete these fields and attach the identified documents when signing.
+
+Later governance amendments apply to role eligibility and decision-making and signing authority. Changes to the contracted work, pay, or contract protections require the main agreement’s amendment process; a governance amendment does not by itself amend those contract terms.
 
 The main agreement applies to every schedule:
 
@@ -33,19 +37,9 @@ The main agreement applies to every schedule:
 | **§13** | Contractor indemnifies, without removing indemnification available under the Trust Agreement or an MSIG-approved agreement for authorized governance roles. |
 | **§15** | VS LLC holds legal names for tax and banking; public handles are permitted, and contractors must not disclose each other’s legal names. |
 
-**Conflicts.** Committee members, Managers, and Reviewers must follow the Framework’s conflict and recusal rules. For Managers and Reviewers, **Framework 6.4 applies 6.1 and 6.2**, including interests disclosed in questionnaire Parts **3, 5, and 7**; role-specific Treasury and bidding restrictions remain in each schedule.
+**Conduct and disclosure.** Committee members, Managers, and Reviewers must follow **Framework 2.4a and section 6** for eligibility, conflicts, bidding restrictions, recusals, and disclosures, including the filing gates in **6.3c**. They acknowledge the breach procedure and consequences in **6.6**. The Awardee’s acknowledgment and ban-register warranty remain in its clause 6.
 
-**Disclosure and annual filing:**
-
-| Applies to | Requirement |
-|---|---|
-| **Committee members, Managers, and Reviewers** | File the standard **on-chain disclosure questionnaire** under Framework 6.3a; update within **10 business days** of a change and refile annually. It is the conflict declaration, not an additional document. |
-| **Managers and Reviewers** | Filing must precede recording as Manager of record or assignment as Reviewer; overdue annual refiling **bars new assignments until filed**. |
-| **Committee members** | File within the **30-day period in Committee Schedule A, clause 7**; annual refiling more than **30 days overdue suspends pay until filed**. A member’s Reviewer engagement also requires the advance update in Reviewer Schedule A, clause 6. |
-
-**Material conflict breaches.** Committee members, Managers, and Reviewers acknowledge that a material breach carries a **permanent ban from every program role and payment**, confirmed and lifted only at **15/21** (Framework 6.6). Examples include self-dealing, undisclosed interests, payment from a proposer, misuse of proposal information, confidentiality breaches, and signing while recused. Minor or procedural lapses are corrected and recorded, not banned. The Awardee’s acknowledgment and ban-register warranty are in its clause 6.
-
-**Public identity.** Use **one stable public identity** for the term so votes, recusals, and approvals remain attributable; anonymous or changing identities do not satisfy this requirement.
+**Public identity.** Use **one stable public identity** for the term; identify votes, recusals, and approvals under **Framework 6.3a and 11.3a**.
 
 ---
 
@@ -66,30 +60,25 @@ The main agreement applies to every schedule:
 
 **3. Pay:**
 
-- **USD [2,500] monthly**, invoiced and paid **monthly in arrears in A** at the Reference Rate on the payment date: use the conversion rules in **Framework 13.4 and Exhibit D, section 3 and Appendix A**, including the **24-hour staleness check and CoinMarketCap fallback**.
+- **USD [2,500] monthly**, invoiced and paid **monthly in arrears in A** at the Reference Rate on the payment date, under **Framework 13.4 and Exhibit D, section 3 and Appendix A**.
 - Pay starts on the **later of contract signature and receipt of funds in the Program Account**.
 - During a rate-source payment suspension under Framework 13.4a, entitlement **accrues** and is paid on resumption at the rate then current.
 
 **4. Expenses:** Reasonable, documented, **pre-approved** travel to Network events and role-specific tooling.
 
-**5. Records and reporting:** Record attendance and votes in published minutes; follow the **Common terms’ disclosure and annual-filing requirements**.
+**5. Records and reporting:** Record attendance and votes in published minutes; disclosures follow the **Common terms**.
 
 **6. Limits:**
 
-- Contractor holds **one of five signing units** on `rfp.vst`; moving funds requires **four signatures**, with no unilateral account authority.
-- Keys must not be shared, delegated, held by an employer or affiliate, or used to sign for another member, including a recused member.
-- Contractor **cannot approve milestones or serve as Manager of record on any RFP**, without exception (Framework 12.2a).
-- Technical Reviewer work requires a **separate engagement and signed Technical Reviewer Schedule A**, subject to **Framework 12.6 and all conditions in that schedule’s clause 6**.
-- Contractor must not bid on **any Vaulta RFP during the term or for 6 months afterwards**, directly or through an entity in which they hold a material interest.
-- Contractor must not be Treasury-affiliated; disclose any change within **10 business days**, with signing weight **suspended immediately** and referral to MSIG.
+- Signing authority, personal key custody, and lost-key procedures follow **Framework 7.2–7.5**; no employer or affiliate may hold Contractor’s key.
+- Milestone approval and separation from the Manager role follow **Framework 5.5, 11.4–11.5, and 12.2a**.
+- Technical Reviewer work requires a **separate engagement and signed Technical Reviewer Schedule A**, subject to **all of Framework 12.6**; its fees are additional to the Committee retainer.
 
 **7. Additional terms:**
 
-- For a material-conflict allegation under Framework 6.6, provide Contractor the allegation in writing and **10 business days to respond before MSIG votes**; the Common terms’ ban acknowledgment applies.
-- **Suspend pay automatically** on referral to MSIG for removal or three consecutive unexcused missed meetings, pending resolution; a material-conflict referral immediately suspends **role, signing weight, and pay**.
-- Signing weight and pay begin only after the contract is signed, the questionnaire is filed on-chain, and a signing key is registered; the **30-day deadline** runs from the **later of appointment execution and VS LLC publishing that the disclosure register is open**.
-- Surrender key weight on removal or replacement; retain it during authorized month-to-month continuation.
-- Report key loss or suspected compromise **immediately to the Chair and block producers**, and stop signing until replacement.
+- **Suspend pay automatically** on referral to MSIG for removal or three consecutive unexcused missed meetings, pending resolution (**MSIG #5 Part H**); conflict-related suspension follows **Framework 6.6**.
+- Signing weight and pay begin only after the contract is signed, all required items are filed, and a signing key is registered; the filing deadline and gates follow **MSIG #5 Part B and Framework 6.3c**.
+- Continuation, removal, and surrender of signing weight follow **Framework 3.3, 3.5–3.6, and 7.4**.
 
 ---
 
@@ -117,17 +106,13 @@ Fees are **fixed, not hourly or a percentage of an award**, and do not depend on
 
 **4. Expenses:** Pre-approved and documented only.
 
-**5. Records and reporting:** Report status, milestone approval records, qualifying post-award reviews, and concurrent RFP workload for cycle reports; follow the **Common terms’ disclosure and annual-filing requirements**.
+**5. Records and reporting:** Report status, milestone approval records, qualifying post-award reviews, and concurrent RFP workload for cycle reports; disclosures follow the **Common terms**.
 
 **6. Limits:**
 
-- Contractor cannot be a seated Committee member; **no availability exception or waiver applies**. Committee appointment **automatically ends this engagement for every RFP**, which must be reassigned within **5 business days** (Framework 12.2a).
-- Contractor has **no award vote or signing key**; milestone approval alone does not authorize payment, which requires **four Committee signatures and the on-chain delay**.
-- Contractor must not approve or assess conflicted milestones and must notify the Committee for reassignment; the **Treasury affiliation bar in Framework 2.4a applies separately and absolutely**.
-- Contractor must not bid on RFPs they work on **during the engagement or for 6 months afterwards**, or be Treasury-affiliated.
-- Refer approval to the Committee if the oracle is more than **24 hours stale and the CoinMarketCap fallback is unavailable**, or the rate differs by more than **15% from the previous payment under that award**; Contractor cannot approve alone.
-- A termination recommendation **does not terminate the award**: Contractor must not stop work, withhold delivered Work Product, suspend services, refuse a data export, or tell an awardee the engagement has ended. Only the Committee terminates, at **two-thirds, minimum 3**; the Committee cancels pending payments at **3 of 5 within 2 business days**, not automatically on filing.
-- Contractor must not file a termination recommendation if conflicted or no longer engaged on the RFP; notify the Committee instead. The Committee may **strike an improper recommendation by simple majority**.
+- Committee appointment **automatically ends this engagement for every RFP**; the role restriction and reassignment process follow **Framework 12.2a–12.3**.
+- Contractor has **no award vote or signing key**. Milestone authority, conflicts, and rate-check referrals follow **Framework 5.5, 6.4, 11.1–11.5, and 13.4**; approval does not itself execute payment under **7.2 and 10.1**.
+- File termination recommendations only as allowed by **Framework 11.10a**, which governs cancellation, decisions, and improper filings. A recommendation **does not terminate the award** or permit Contractor to stop work, withhold Work Product, suspend services, refuse a data export, or tell an awardee the engagement has ended.
 - A **good-faith termination recommendation must not be grounds for ending or declining to renew this engagement**; the fee is unaffected by whether the Committee acts.
 
 ---
@@ -151,27 +136,16 @@ Fees are **fixed, not hourly or a percentage of an award**, and do not depend on
 
 **4. Expenses:** Pre-approved and documented only.
 
-**5. Records and reporting:** Provide written scores with reasons, subject to the Committee-member exception, and written milestone assessments; follow the **Common terms’ disclosure and annual-filing requirements**.
+**5. Records and reporting:** Provide written scores with reasons, subject to the Committee-member exception, and written milestone assessments; disclosures follow the **Common terms**.
 
 **6. Limits:**
 
-The Reviewer role gives **no award vote, signing key, or authority to approve milestone payments**; the Manager approves. A Reviewer who also holds a Committee seat retains that seat’s authority, subject to every condition below (Framework 12.6).
+The Reviewer role gives **no award vote, signing key, or authority to approve milestone payments**; the Manager approves subject to **Framework 5.5 and 11.1–11.4**. A Reviewer who also holds a Committee seat retains that seat’s authority only as allowed by **12.6**.
 
-| Condition | Requirement |
-|---|---|
-| **Eligibility** | MSIG must first set the concurrent-engagement cap; the engagement must stay within it. There is **no cap on total Reviewer fees**. The Committee must publish a finding that **no suitable unconflicted external Reviewer is available**; Contractor recuses from that finding and the engagement vote. |
-| **Full Committee** | All **five seats must be filled**; a vacancy suspends the Reviewer engagement. If Contractor is the only Reviewer, engage a substitute; without one, the Manager writes the scored assessment before award, and a live award’s milestone goes to MSIG. If a substitute is engaged, resumption after the vacancy is filled requires a Committee decision; fees are prorated to work performed. |
-| **One member per RFP** | No more than **one Committee member** may review the same RFP. |
-| **Evaluation** | Contractor must not draft acceptance criteria or the milestone schedule, score proposals, or reconcile scores; submit a written note instead. If Contractor is the only Reviewer, the **Manager writes the scored assessment** (Framework 22.3). |
-| **Award decisions** | Contractor retains the seat’s **award vote and signing key**, including signing milestone payments; the Reviewer role gives **no authority to approve milestones** and never permits serving as Manager of record (Framework 12.2a). |
-| **Termination votes** | Contractor must recuse from **every termination recommendation, recovery plan, and strike decision** on an award they reviewed, whoever filed it, including after the Reviewer engagement ends or is suspended. |
-| **Own fees** | Recuse from the fee’s schedule line and signing its payment; pay **each member-Reviewer separately**, never combined with another member’s fee. Use **Exhibit B rates**, which the Committee cannot vary; Reviewer fees are **Program Costs, not Committee pay**. |
-| **Disclosure and reporting** | File a questionnaire update **before the engagement begins**, without the usual 10-business-day window (Framework 6.3c). Report each engagement and fee **by member and RFP**, cumulative cycle fees, and engagement count against the cap. |
+A Committee member’s Reviewer engagement must comply with **all of Framework 12.6**, including eligibility, recusals, substitution, suspension and resumption, fee limits, and reporting. Disclosure and payment of their own fees follow **6.3c and 13.3a**; fees are prorated to work performed where required by **12.6.1**.
 
-- A termination recommendation **does not terminate the award**: Contractor must not stop work, withhold delivered Work Product, suspend services, refuse a data export, or tell an awardee the engagement has ended. Only the Committee terminates, at **two-thirds, minimum 3**; the Committee cancels pending payments at **3 of 5 within 2 business days**, not automatically on filing.
-- Contractor must not file a termination recommendation if conflicted or no longer engaged on the RFP; notify the Committee instead. The Committee may **strike an improper recommendation by simple majority**.
+- File termination recommendations only as allowed by **Framework 11.10a**, which governs cancellation, decisions, and improper filings. A recommendation **does not terminate the award** or permit Contractor to stop work, withhold Work Product, suspend services, refuse a data export, or tell an awardee the engagement has ended.
 - A **good-faith termination recommendation must not be grounds for ending or declining to renew this engagement**; the fee is unaffected by whether the Committee acts.
-- Contractor must not bid on an RFP they review **during the engagement or for 6 months afterwards**, or be Treasury-affiliated.
 
 ---
 
@@ -295,3 +269,4 @@ If the deliverable cannot be released as usable open source, record the **licenc
 6. Review the **Trustee Compensation and Indemnification Acknowledgment** and resolve available governance-role indemnification **before MSIG #5 Part H is final**; it remains unreviewed.
 7. Confirm that **§5’s general for-cause and without-cause terms apply to awardees**; its automatic-termination provision addresses MSIG-appointed roles.
 8. Confirm that **§9 permits the 7.2 Pre-Existing IP carve-out and 7.3a licence back through Schedule A**; the blocking restrictions remain in Awardee section 7. Defining Work Product by award shape does not itself narrow §9.
+9. Confirm the **incorporation and version references** in the Common terms, including the distinction between later governance amendments and changes to contractual work, pay, or protections under the main agreement’s amendment process.
