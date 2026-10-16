@@ -17,7 +17,7 @@
 | 6 | **Set funding limits** | **USD 150,000 per cycle** in awards; **USD 100,000 total contract value per award**. Larger awards return to MSIG. The mandate continues until block producers cancel it. |
 | 7 | **Hold program funds on-chain**, moved only by 4 of 5 Committee signatures | Owner permission stays with `eosio.prods` |
 | 8 | **Require a public 7-day payment delay** | Urgent awards use a **3-day delay**; block producers may cancel at **15/21** during either wait. Part E. |
-| 9 | **Require MSIG confirmation for 4–6 block producer objections; end awards at 7 or more** | The Committee cancels payment in both cases. Only the **4–6 band** allows a new payment proposal after MSIG confirmation. Framework 10.5. |
+| 9 | **Send awards back for MSIG approval after 4–6 objections; cancel awards after 7 or more** | Block producer objections during the payment delay. The Committee cancels payment in both cases. Only the **4–6 band** allows a new payment proposal after MSIG confirmation. Framework 10.5. |
 | 10 | **Recognize ECF** to run the community vote for the Community seat | **All five seats require future MSIG appointments**; Francis continues **Trust oversight only** until they are filled |
 | 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
 | 11a | Allow Committee members to earn **separate Technical Reviewer fees** | Rate-card fees under Framework 12.6, **outside the retainer** — see Part H. Limited to **3 concurrent engagements**, not by total fees. Not available until that cap is set |
