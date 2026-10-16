@@ -92,39 +92,40 @@ Anyone in these roles who becomes Treasury-affiliated must disclose it within **
 
 ## 3. Member appointments and terms
 
-**3.1** Committee appointments must be approved by **MSIG Resolution at the Threshold**, with appointment proposals meeting **all requirements in Exhibit E to MSIG #5**; the Community seat also follows section 4. Each proposal may cover **one or more seats**.
+**3.1** Members must be appointed by **an MSIG Resolution approved at the Threshold that follows Exhibit E to MSIG #5**. Each proposal may cover one or more seats; the Community seat also follows section 4.
 
-Block producers may approve competing proposals for a seat, but the **first appointment executed by block time** fills it; later executions have no effect for that seat.
+Competing proposals may be approved, but the **first appointment executed by block time fills the seat**; later executions have no effect for that seat.
 
-The **resolution mode selected under Exhibit E** has these effects:
+The resolution mode selected under Exhibit E determines the outcome:
 
-- **Seat by seat** (default): Each appointment is considered independently; an appointment that cannot take effect does not affect the others.
-- **All or nothing**: No appointments take effect if any listed appointment cannot take effect.
+- **Seat by seat** (default): Appointments stand independently; one failing does not affect the others.
+- **All or nothing**: No appointment takes effect unless all can.
 
 An appointment has **no effect** if, at execution:
 
-1. The seat is already filled.
-2. The candidate already holds another seat, including one filled by the same Resolution.
-3. The appointment would breach the affiliation rule in **section 2.4**.
+1. The seat is filled.
+2. The candidate holds another seat, including one filled by the same Resolution.
+3. It breaches the affiliation rule in **2.4**.
 4. The candidate is Treasury-affiliated without an express waiver at the Threshold.
-5. The candidate is on the ban register under **section 6.6**.
+5. The candidate is on the ban register under **6.6**.
 
-If candidates in the same proposal conflict under the one-seat or affiliation rules, **Candidates table order sets priority**: the first appointment takes effect, and conflicting later appointments have no effect, subject to the chosen resolution mode.
+Where candidates in the same proposal conflict under the one-seat or affiliation rules, **Candidates table order sets priority**: the first appointment takes effect and conflicting later appointments do not, subject to the resolution mode.
 
-**3.1a Network vision statements.** Every appointment proposal must include a **candidate-written network vision statement meeting Exhibit E’s requirements**.
+**3.1a Network vision statements.** Each candidate must provide their own **network vision statement meeting Exhibit E’s requirements**, included with the appointment proposal.
 
-**Missing statements.** A proposal missing a statement is incomplete and should not be proposed or approved; if it executes, the appointment remains valid, but VS LLC must record the omission in the seat register, and **pay and signing weight cannot begin until the statement and the contract, questionnaire, and signing key required by MSIG #5 Part B are complete**.
+**Missing statements.** A proposal missing a statement is incomplete and should not be submitted or approved. If it executes anyway, the appointment remains valid, but VS LLC must record the omission in the seat register. **Pay and signing weight must wait until the statement, contract, questionnaire, and signing-key requirements in MSIG #5 Part B are complete.**
 
-**Publication and reappointment.** Statements must be recorded in the **`publications` register (7.6a)**, displayed on the Portal with the proposal, and linked from the seat register throughout the term; they are **non-binding** but inform reappointment, and members seeking another term should explain how their year compared with their statement.
+**Publication and reappointment.** Record statements in the **`publications` register (7.6a)**, display them with the proposal on the Portal, and keep them linked from the seat register throughout the term. Statements are **non-binding** but inform reappointment; members seeking another term should explain how their year compared with their statement.
 
-**Seat register.** VS LLC must maintain a seat register in the **`publications` table (7.6a)** and display it on the Portal, recording:
+**Seat register.** VS LLC must maintain the **official record of executed appointments** in the **`publications` table (7.6a)** and display it on the Portal, recording:
 
-- Each member’s name and on-chain account, matching their identity under **6.3a**.
+- Each member’s name and on-chain account, matching **6.3a**.
 - The proposal name, execution transaction, and resolution mode.
-- A link to each member’s vision statement.
-- Any proposed seat left unfilled and the reason.
+- Each member’s vision-statement link.
+- Any proposed seat left unfilled and why.
+- Any appointment conditions identified by VS LLC.
 
-The register is the **official record of executed appointments and any conditions identified by VS LLC**; eligibility is decided by **MSIG**. If VS LLC records a seat as unfilled for any reason other than an earlier execution, it must publish its reasons and refer the matter to MSIG; the seat remains vacant until MSIG decides.
+**MSIG decides eligibility.** If VS LLC records a seat as unfilled for any reason other than an earlier execution, it must publish its reasons and refer the matter to MSIG. The seat remains vacant until MSIG decides.
 
 **3.2** Members serve a **one-year term** and may be reappointed without limit.
 
