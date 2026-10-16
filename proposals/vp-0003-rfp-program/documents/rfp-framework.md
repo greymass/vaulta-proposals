@@ -187,7 +187,7 @@ The **vision statement requirement in 3.1a** applies. An ECF statement satisfies
 
 ## 5. Meetings and voting
 
-**5.1 Meetings.** At least monthly, and whenever the Chair or any two members call one. At least twice monthly while an RFP solicitation is open for submissions or under evaluation.
+**5.1 Meetings.** The Committee must meet **at least monthly**, **at least twice monthly while an RFP is open for submissions or under evaluation**, and whenever the Chair or any two members call a meeting.
 
 **5.2 Quorum.** Decisions require **at least three filled seats and three non-recused members present**; payment signatures follow **7.2**.
 
@@ -585,7 +585,11 @@ During a suspension under **13.4a**, publish the determination, its date, and th
 
 **11.4a Initial disbursement.** Before proposing payment, signers check only that the decision record is complete, the signed agreement matches it, the amount is within the limits, and no termination recommendation under **11.10a** is open. **Execution**, rather than proposal, requires the completed delay and objection clearance under **10.7**.
 
-**11.5 Refusing to sign.** Members must sign even if they voted against the award, unless a required administrative check fails or there is credible evidence of misrepresentation or a conflict-rule breach; written reasons must be minuted. They **must not rejudge the work, disagree with the Manager’s judgment, or reopen the published Reviewer setting** as grounds for refusal.
+**11.5 Refusing to sign.** Members must sign even if they voted against the award.
+
+They may refuse only if a **required administrative check fails** or there is **credible evidence of misrepresentation or a conflict-rule breach**. Written reasons must be recorded in the minutes.
+
+**Rejudging the work, disagreeing with the Manager’s judgment, or reopening the published Reviewer setting are not grounds for refusal.**
 
 **11.6** Milestone payments carry the normal delay but **no objection process**.
 
@@ -660,7 +664,13 @@ File a **written recommendation** stating the grounds and attaching the mileston
 
 A Manager appointed to a Committee seat **ceases to be Manager of record on appointment execution**; the appointment remains valid. Within **5 business days**, the Committee must reassign their RFPs under 12.3 and terminate their Manager engagement for those RFPs.
 
-**12.3 Reassignment.** The Committee assigns a Manager when approving an RFP for publication and may reassign it by majority at any time; the change must be published, the outgoing Manager must hand over the approval history, correspondence, and open items in writing, and the incoming Manager must have no conflict on that RFP.
+**12.3 Reassignment.** The Committee assigns a Manager when approving an RFP for publication and may reassign it **by majority at any time**.
+
+On reassignment:
+
+- Publish the change.
+- The outgoing Manager must hand over the **approval history, correspondence, and open items in writing**.
+- The incoming Manager must have **no conflict on that RFP**.
 
 **No unconflicted Manager.** Record and publish the shortage and **escalate under 9.1**. MSIG may direct engagement of a named Manager or another basis of approval; **the bar in 12.2a still applies**.
 
@@ -708,15 +718,17 @@ A Manager appointed to a Committee seat **ceases to be Manager of record on appo
 
 ## 13. Budget limits and reporting
 
-**13.1 Limits and funding periods.** MSIG sets the **Cycle Ceiling**, **Per-Award Limit**, **Program Cost Ceiling**, **cycle length**, and **program scope**; ceilings are maxima rather than targets, and unspent allocations do not carry over.
+**13.1 Limits and funding periods.**
 
-**Award and operating caps.** The **Cycle Ceiling** caps commitments to awardees. The **Program Cost Ceiling** caps program operations, with separate internal caps for **Committee pay** and **Manager and Reviewer fees, Portal, and administration**. Underspend in one must not raise the other; exceeding either is reserved to MSIG under **9.1**. Amounts are set in **MSIG #5 Part D** (Appendix B).
+**Limits.** MSIG sets the **Cycle Ceiling**, **Per-Award Limit**, **Program Cost Ceiling**, **cycle length**, and **program scope**. Ceilings are maxima, not targets; unspent allocations do not carry over.
 
-**Funding is authorized four cycles at a time**, covering one year — the **authorized funding period**. Funds are transferred quarterly under that single authorization, each instalment topping the Program Account up to **125% of the coming cycle's Total Program Spend**. Forward commitments are included within that cycle’s Cycle Ceiling, not added to the top-up.
+The **Cycle Ceiling** caps commitments to awardees. The **Program Cost Ceiling** caps program operations, with separate internal caps for **Committee pay** and **Manager and Reviewer fees, Portal, and administration**. Underspend in one must not raise the other; exceeding either is reserved to MSIG under **9.1**. Amounts are set in **MSIG #5 Part D** (Appendix B).
 
-**Block producers may change any amount, cycle length, or limit at any time by MSIG Resolution**, and may stop, reduce, or re-time an instalment; authorizing a year does not bind them to fund the whole year.
+**Quarterly funding.** Funding is authorized **four cycles at a time, covering one year** — the **authorized funding period**. Funds are transferred quarterly under that single authorization, topping the Program Account up to **125% of the coming cycle’s Total Program Spend**. Forward commitments count within that cycle’s Cycle Ceiling and do not increase the top-up.
 
-**The first cycle starts when the Program Account receives funds**, rather than when MSIG #5 passes; Committee pay accrues from contract signature or that funding date, whichever is later; the Committee must publish the funding date on the Portal. It also starts the **four staggered seats’ initial terms** under 3.4.
+**Block-producer control.** Block producers may change any amount, cycle length, or limit at any time by **MSIG Resolution**, and may stop, reduce, or re-time an instalment. A year’s authorization does not oblige them to fund the whole year.
+
+**Start dates.** The first cycle starts **when the Program Account receives funds**, not when MSIG #5 passes. That date also starts the **four staggered seats’ initial terms under 3.4**. Committee pay accrues from **contract signature or the funding date, whichever is later**. The Committee must publish the funding date on the Portal.
 
 **13.2 Reservation.** Reserve an award’s full **USD** value against the Cycle Ceiling from the decision through publication, contracting, the delay, and any MSIG confirmation; that amount is unavailable for other awards. **No payment may move before an agreement exists and the delay ends.** Multi-cycle awards follow the allocation below.
 
@@ -1161,13 +1173,13 @@ Categorize each proposal on arrival under **2.1** and assign its portfolio holde
 
 **26.1 Terms fixed at categorization.** Before assessment starts, the portfolio holder must settle and publish:
 
-| What is fixed | On the same footing as |
+| What is fixed | Applicable rules |
 |---|---|
-| The **award shape** — Deliverable, Service, or Embedded | 20.2a, and fixed from that moment exactly as a published declaration is |
-| The **licence mode** and, in Proposer's-choice mode, the **permitted set** | 20.2a |
-| **Whether a Technical Reviewer is engaged** | 20.2; governs for the award’s life under 11.2, 11.4, and 22.3 |
-| The **evaluation criteria and weights** | 22.1, which 22.3 requires an assessment to be written against |
-| The **scope as accepted**, and any **budget ceiling** the Committee applies to it | 20.2 |
+| **Award shape** — Deliverable, Service, or Embedded | 20.2a; locks at publication |
+| **Licence mode** and, in Proposer's-choice mode, the **permitted set** | 20.2a |
+| **Whether a Technical Reviewer is engaged** | 20.2; applies throughout the award under 11.2, 11.4, and 22.3 |
+| **Evaluation criteria and weights** | 22.1; the written assessment under 22.3 must use them |
+| **Scope as accepted** and any **budget ceiling** set by the Committee | 20.2 |
 
 Publish these terms on the **Portal and in the `publications` register (7.6a) before assessment begins**; they lock at publication on the same basis as directed-RFP terms.
 
