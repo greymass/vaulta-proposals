@@ -45,15 +45,15 @@ This Exhibit specifies the deployed accounts, permissions, registers, and checks
 
 | Setting | Value |
 |---|---|
-| Permission name | `committee` *(to confirm on deployment)* |
-| Parent permission | `active` |
+| Fund-transfer authority | *(to confirm on deployment — identify the actual permission and enforcement mechanism)* |
+| Administrative cancellation authority | *(to confirm on deployment — identify a distinct route that cannot move funds)* |
 | Weight per seated member | 1, five members, 5 units total |
 | Fund transfers | **4 of 5** signatures |
 | Administrative actions, including cancellation | **3 of 5** signatures |
 | Owner permission | `eosio.prods` |
 | Active permission | *(to confirm on deployment)* |
 
-Apply these thresholds to the deployed action permissions; the cancellation routes are specified in **2.6**.
+**A named permission has one threshold.** Record the actual permission hierarchy, action links, contract checks if used, and any code authority in **6.1**; do not assign both thresholds to one permission. The **three-signature administrative route must not satisfy fund-transfer authority**, directly or through a parent or delegated authority. Owner recovery and cancellation remain with block producers at the Threshold. Verify both routes under **2.6** before funding.
 
 ### 1.3 Member-key register
 
@@ -96,8 +96,8 @@ This Exhibit must identify the mechanism before funding (MSIG #5 Part E).
 
 | | |
 |---|---|
-| **Mechanism in use** | ☑ **Protocol-enforced transaction delay** ☐ ~~Held multisignature proposal (fallback)~~ |
-| **Determination** | **Transaction-level delays are available on the current protocol version.** The chain enforces the wait; no party to the payment can shorten it |
+| **Mechanism** | **Not yet verified.** Record the selected mechanism and deployed configuration in **6.1** before publication and funding. |
+| **Required proof** | Demonstrate both the full delay and the **Framework 10.7 execution guard**, including that Committee signers cannot execute early or bypass an objection outcome. Native protocol support must be checked on the target chain, not assumed. |
 
 ### 2.2 Protocol-enforced delay
 
@@ -106,19 +106,21 @@ This Exhibit must identify the mechanism before funding (MSIG #5 Part E).
 | Ordinary | **168 hours (7 days)** |
 | Urgent | **72 hours (3 days)** |
 
-The permission’s `delay_sec` is **604,800 seconds** for ordinary payments and **259,200 seconds** for urgent payments; transactions cannot execute before the delay ends, and **the Committee cannot waive it**.
+**`delay_sec` is a transaction field, not a permission field.** If native delayed transactions are selected, record that field and the authority’s actual `waits` and weights, where used, and prove the configuration enforces **604,800 seconds** ordinarily and **259,200 seconds** for urgent payments. If another on-chain mechanism is needed, record its contract, actions, authorities, and execution checks. **The Committee must not be able to waive or bypass the delay.**
 
-### 2.3 Held-multisignature fallback — not in use
+**Initial award payments must also remain blocked after the delay until the final objection count is published and permits execution under Framework 10.7.** A count of four or more must block execution throughout the cancellation and any MSIG-confirmation process. Later milestone and Program Cost payments have no objection banding but retain their delay and cancellation rights.
+
+### 2.3 Held-multisignature fallback — conditional
 
 This fallback is authorized **only if the protocol cannot enforce transaction delays** (MSIG #5 Part E); VS LLC must republish this Exhibit identifying the change before using it.
 
-The Committee proposes the disbursement and keeps the proposal **unexecuted and publicly visible for the full delay window** before execution.
+The Committee proposes the disbursement and keeps the proposal **unexecuted and publicly visible for the full delay window**. Execution must also wait for the **final objection count and clearance under Framework 10.7**; the two-business-day cancellation period never permits executing a blocked award payment.
 
 | Requirement | Rule |
 |---|---|
 | **Publication** | Publish the proposal identifier with the award so anyone can monitor it. |
-| **Block producer cancellation** | Through the owner permission, as above. |
-| **Early execution** | VS LLC must not execute the proposal before the full window ends. |
+| **Block producer cancellation** | Record and verify the actual route that permits cancellation at the Threshold before execution. Do not assume a delayed-transaction cancellation action cancels an unexecuted multisignature proposal. |
+| **Early execution** | Neither VS LLC nor the Committee may execute before the full window and required objection clearance. Publish how the selected fallback observes this restriction; it is **procedural**, not proof of an on-chain timelock. |
 
 ### 2.4 Urgent payments
 
@@ -132,14 +134,12 @@ Use the **72-hour** delay only after the urgency vote and reasons have been publ
 
 | Who | Authority | When |
 |---|---|---|
-| **Block producers** | **`eosio.prods`**, through `rfp.vst@owner`, at **15 of 21**. | Any payment during its delay window. |
-| **Committee** | `rfp.vst@committee`, at **3 of 5**. | Before execution; mandatory cancellation follows **Framework 9.1 and 10.5–10.7**. |
+| **Block producers** | **`eosio.prods`**, through the owner-controlled route, at **15 of 21**. | Any payment during its delay window. |
+| **Committee** | The separate administrative route, at **3 of 5**. | Before execution; mandatory cancellation follows **Framework 9.1 and 10.5–10.7**. |
 
-Under the selected protocol delay, cancel a pending transaction with **`eosio::canceldelay`**, supplying the **canceling authority** and delayed transaction’s **`trx_id`**.
+For the selected mechanism, record the **exact cancellation action, parameters, and authorization** for each route in **6.1**. Use **`eosio::canceldelay`** only for an actual native delayed transaction where the target chain supports it and the canceling authority qualifies; an unexecuted multisignature proposal requires its own verified cancellation path.
 
-The canceling authority must authorize the delayed transaction; `rfp.vst@committee` does so directly, while `rfp.vst@owner` satisfies it through the account’s permission hierarchy.
-
-**Rehearse both routes on testnet before funding** and record both transaction IDs in **6.1**, verifying the deployed permission names, thresholds, and parameters.
+**Rehearse both routes on testnet before funding.** Prove that **four members can authorize payment**, **three can cancel that payment but cannot transfer funds**, and **block producers can cancel at the Threshold**. Also prove that the full delay and final-count execution guard cannot be bypassed. A design that cannot demonstrate these properties **blocks funding and permission activation**; publish the limitation under **6.2 and MSIG #5 Part E**.
 
 Apply the objection outcomes and cancellation duties in **Framework 10.5–10.7**, including the unavailable-signers procedure in **Framework 9.1**.
 
@@ -247,7 +247,7 @@ Use the append-only correction mechanism in **this section**. Complete the scree
 | `qversion` | The **questionnaire version** the filing was made on, so a later version never reinterprets an earlier row |
 | `filed_at` | Filing date |
 | `answers` | The **coded answers to Parts 2 to 8** of the questionnaire (Framework 6.3a) |
-| `text` | **The full text of the filing** — organizations named in Part 5, the nature of each connection, and every reason and explanation given |
+| `text` | **The full public filing**, including the filer’s chosen public identity, organizations named in Part 5, connections, reasons, and explanations; **exclude legal identification collected privately by VS LLC** |
 | `prior` | Transaction id of the row this one supersedes, where it is an update or correction |
 | `reason` | Why, where `prior` is set |
 
@@ -259,7 +259,7 @@ Preserve **`N` (None declared)** and **`X` (not answered)** as distinct codes. A
 
 | Field | Contents |
 |---|---|
-| `kind` | `award` \| `milestone` \| `signature` \| `resolution` |
+| `kind` | `award` \| `milestone` \| `signature` \| `resolution` \| `termrec` \| `awardreview` |
 | `ref` | RFP reference, award reference, proposal id, or minute reference |
 | `sversion` | The **decisions-schema version** |
 | `recorded_at` | Date |
@@ -273,10 +273,12 @@ Preserve **`N` (None declared)** and **`X` (not answered)** as distinct codes. A
 
 | Kind | Payload |
 |---|---|
-| **Award decision** | RFP reference, awardee, USD amount, vote counts, and members voting for, against, and recused **by name and account** |
+| **Award decision** | The **complete Framework 23.2 record**, including award shape, the applicable licence or Service handover and pre-existing-IP terms, milestone schedule or bounty substitute, vote counts and identities, reasons, and **oracle or fallback evidence under 3.5**, according to the source used |
 | **Milestone approval** | Award reference, milestone, the **Manager of record and any Technical Reviewer by name and account**, amount, and rate evidence under **3.5**, according to the source used |
 | **Payment signature** | The proposal, and **each signing member by name and account** |
 | **Committee resolution with an external effect** | Terminations, recovery plans, strikes, engagements, and reserved-matter escalations, with vote counts |
+| **Termination recommendation (`termrec`)** | The filing, grounds, linked milestone determination, filer’s name and account, awardee response, and outcome, including decline, deemed decline, or strike, under **Framework 7.6a and 11.10a** |
+| **Post-award review (`awardreview`)** | The full review and any awardee response under **Framework 25.2**, screened before writing under **4.2** |
 
 ### 4.5 Publications table
 
@@ -322,20 +324,26 @@ Classify the **initial platform build, including both contracts on `disc.vst`**,
 **Complete before publication:**
 
 - **D1 — Deployment record:** Fill every deployment-confirmation field: accounts and transaction IDs, permission names, CPU/NET, ABI and code hash, and writing authority.
-- Deploy to **testnet first**, verify the deployed ABI and all three table schemas, and rehearse **both cancellation routes** in **2.6**, checking authorities, thresholds, and parameters; record the evidence below before mainnet.
+- **D2 — Authority and delay design:** Record the selected mechanism, chain capability checks, permission hierarchy, action links, contract checks and code authority if used, transaction-delay fields, and exact cancellation actions and parameters.
+- **D3 — Testnet first:** Verify the deployed ABI and all three table schemas, then rehearse **both cancellation routes** in **2.6** before mainnet.
+- **D4 — Rejection tests:** Record tests proving that three members cannot transfer funds, payment cannot execute early, and an initial award payment cannot execute with an unpublished final count or four or more objections.
+- **D5 — Execution tests:** Record a valid four-signature payment after the complete delay and, where applicable, final objection clearance; verify the urgent path and both cancellation routes. **Missing or failing proof blocks funding and activation.**
 - Publish the completed Exhibit **before funding** (MSIG #5 Part E).
 - **D6 — Member keys:** Add keys as they arrive in **1.3**, without delaying publication; funding and permission activation still require all five keys and the other **Framework 1.1** conditions.
 
 | | |
 |---|---|
 | `rfp.vst` creation transaction | [___] |
-| `committee` permission transaction | [___] |
+| Fund-transfer and administrative authority configuration transactions | [___] |
+| Selected delay mechanism and target-chain capability evidence | [___] |
+| Permission hierarchy, action links, contract/code authority, and exact cancellation parameters | [___] |
+| Delay, three-signature transfer rejection, final-count guard, and urgent-path test evidence | [___] |
 | `disc.vst` creation transaction | [___] |
 | `disc.vst` `setcode` transaction and code hash | [___] |
 | Published ABI | [___] |
 | Testnet deployment reference | [___] |
-| **Testnet rehearsal — Committee cancellation** (`canceldelay` at `rfp.vst@committee`) | [___] |
-| **Testnet rehearsal — block producer cancellation** (`canceldelay` at `rfp.vst@owner`) | [___] |
+| **Testnet rehearsal — three-signature Committee cancellation** (selected mechanism’s exact route) | [___] |
+| **Testnet rehearsal — block producer cancellation at the Threshold** (selected mechanism’s exact route) | [___] |
 | Date published | [___] |
 
 ### 6.2 Departures from the specification

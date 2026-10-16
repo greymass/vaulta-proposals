@@ -45,6 +45,9 @@ revisions:
     - version: 6
       date: 2026-10-16
       summary: Shortens MSIG #5 and separates its review notes while retaining operative requirements.
+    - version: 7
+      date: 2026-10-16
+      summary: Aligns payment, appointment, contract, and disclosure rules; consolidates duplicates and requires payment-control verification.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding
@@ -54,7 +57,7 @@ revisions:
 
 This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as an expanded Network Steering Committee with a mandate to decide RFP funding, and authorize an on-chain program fund under limits that block producers keep. The resolution, exhibits, and supporting reference documents are provided here for VST and block producer review.
 
-The resolution itself states everything being voted on, in full context: read [MSIG #5](documents/msig-5.md).
+Read [MSIG #5](documents/msig-5.md) for the approvals, together with the Framework and exhibits it incorporates for the detailed rules.
 
 ## Documents
 
@@ -68,17 +71,17 @@ Read in full:
 
 Skim for specific points:
 
-- [Exhibit D: Program Account, Permission, and Register Configuration](documents/exhibit-d-account-configuration.md) (about 5 minutes): a technical specification, published by VS LLC before the Program Account is funded. Voters should check the permission design: 4 of 5 Committee signatures to pay and 3 of 5 to cancel, a 7-day delay on payments (3 days if urgent), and owner control kept by block producers at 15 of 21. It also carries worked examples for the oracle rate and the CoinMarketCap fallback rate. Its stated status is DRAFT v2.4; its deployment values are filled before publication.
-- [Exhibit F: Schedule A Templates](documents/exhibit-f-schedule-a.md) (about 10 minutes): contract schedules for Committee members, Program Managers, Technical Reviewers, and awardees under VS LLC's Independent Contractor Agreement, with VS LLC as the contracting party. Most of it is standard contract text. Check four points: Committee pay of USD 2,500 a month, matching MSIG #5; work product vesting in the VST, with a carve-out for pre-existing IP that awaits counsel's confirmation and until then blocks Service and Embedded RFPs; an awardee's right to exit once payments have been suspended for 30 business days, on 10 business days' notice that lapses if payments resume; and the permanent program-wide ban for a material conflict breach, confirmed and lifted only at 15 of 21. Its stated status is DRAFT v1.8.
+- [Exhibit D: Program Account, Permission, and Register Configuration](documents/exhibit-d-account-configuration.md) (about 5 minutes): a technical specification, published by VS LLC before the Program Account is funded. Voters should check the permission design: 4 of 5 Committee signatures to pay and 3 of 5 to cancel, a 7-day delay on payments (3 days if urgent), and owner control kept by block producers at 15 of 21. It also carries worked examples for the oracle rate and the CoinMarketCap fallback rate. Its stated status is DRAFT v2.4. The actual authority and delay mechanism remain to be verified; publication and funding require deployment evidence proving the thresholds, full delay, cancellation routes, and final-objection-count execution guard.
+- [Exhibit F: Schedule A Templates](documents/exhibit-f-schedule-a.md) (about 10 minutes): contract schedules for Committee members, Program Managers, Technical Reviewers, and awardees under VS LLC's Independent Contractor Agreement, with VS LLC as the contracting party. Most of it is standard contract text. Check four points: Committee pay of USD 2,500 a month, matching MSIG #5; work product vesting in the VST, with a carve-out for pre-existing IP that awaits counsel's confirmation and until then blocks Service and Embedded RFPs; an awardee's right to exit after more than 30 business days of payment suspension, on 10 business days' notice that lapses if payments resume; and the permanent program-wide ban for a material conflict breach, confirmed and lifted only at 15 of 21. Its stated status is DRAFT v1.8.
 
-Reference only:
+Templates and reserved exhibits:
 
 - [Exhibit E: Seat Appointment MSIG Template](documents/exhibit-e-seat-appointment.md): the required format for the later resolutions that fill Committee seats, each voted on separately. Every candidate needs a network vision statement of 300 to 800 words and declared conflicts.
 - [Exhibit C: Trust Agreement Conforming Amendments](documents/exhibit-c-trust-agreement-amendments.md): a placeholder, with nothing to review. MSIG #5 attaches Exhibits A, B, D, E, and F and has no Exhibit C: the Trust Agreement amendments once attached under that letter are administered off-chain, and the remaining letters are kept so that existing citations stay correct.
 
 Supporting reference documents, published alongside the resolution and not approved by it:
 
-- [Disclosure Questionnaire, Version 1](documents/disclosure-questionnaire.md) (skim the disclosure rules, about 5 minutes): the conflict-of-interest form every decision-maker files before taking up a role, published by VS LLC alongside Exhibit D, questionnaire version `VQ1`. The full text of each filing is written permanently to `disc.vst`. Positions are reported only as USD bands, never exact figures; holdings of A are not asked for; and individuals are never named. The Program Account is not funded until every Committee member has filed. Its stated status is DRAFT v1.4, settled.
+- [Disclosure Questionnaire, Version 1](documents/disclosure-questionnaire.md) (skim the disclosure rules, about 5 minutes): the conflict-of-interest form every decision-maker files before taking up a role, published by VS LLC alongside Exhibit D, questionnaire version `VQ1`. The full text of each filing is written permanently to `disc.vst`. Positions are reported only as USD bands, never exact figures; holdings of A are not asked for; the filer uses a stable public identity, and third-party individuals are not named. VS LLC collects any required private legal identification separately; it is excluded from the public filing. The Program Account is not funded until every Committee member has filed. Its stated status is DRAFT v1.4, settled.
 
 - [MSIG #5 — Review Notes](documents/msig-5-review-notes.md): the historical, financial, and technical background moved out of the resolution. These notes preserve the draft’s reasoning and dated figures; they add no rules or approvals.
 

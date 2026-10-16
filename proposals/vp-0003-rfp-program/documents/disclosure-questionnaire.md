@@ -27,7 +27,7 @@ This is the **standard conflict-of-interest declaration** required by the **Vaul
 
 ## How to complete this questionnaire
 
-1. Answer every question in order. Write **“None”** where nothing applies; blanks make the filing incomplete.
+1. Complete **1.1 privately with VS LLC**; include the other answers in order in the public filing. Write **“None”** where nothing applies; blank public answers make the filing incomplete.
 2. Report positions using the listed **USD bands**, not exact amounts.
 3. Name organizations where requested. For relatives, colleagues, and counterparties, describe the relationship **without naming the person**.
 4. Declare connections even if you think they are immaterial. If unsure, disclose them and explain.
@@ -57,11 +57,11 @@ An annual refiling more than **30 days overdue** suspends Committee pay and bloc
 
 ## Part 1 — Identity and role
 
-*Not coded; recorded in the register’s identity and role fields.*
+*Not coded. The public identity, role, account, date, and filing type are recorded on-chain. Any private legal identification requested at 1.1 is collected separately by VS LLC and must not be included in the public filing.*
 
 | # | Question |
 |---|---|
-| 1.1 | Full legal name |
+| 1.1 | Legal identification required by VS LLC for tax and banking — **provide privately, not in this public filing** |
 | 1.2 | **The public identity you will be attributed under — required.** Your legal name or a stable handle, your choice, but **one identity for the term**: it may not be anonymous, and it may not rotate. Every vote, recusal, approval and assessment you make is published against it (Framework 11.3a), and it is what a reader uses to follow your decisions across a year |
 | 1.3 | Role: **Committee member** / **RFP Program Manager** / **Technical Reviewer** / **other decision right** — state which |
 | 1.4 | Seat, or the RFPs this filing covers |
@@ -110,7 +110,7 @@ Treasury-affiliated people cannot serve as Committee members, Managers, or Revie
 | `V0` | None |
 | `V1` | Under 10,000 |
 | `V2` | 10,000 – 50,000 |
-| `V3` | 50,001 – 250,000 |
+| `V3` | More than 50,000, up to and including 250,000 |
 | `V4` | More than 250,000 |
 
 **Do not report A holdings** (Framework 6.3a). Question **4.3 asks about intent to profit from A falling**, not ordinary exposure from dollars, stablecoins, or a diversified portfolio underweight A; if unsure, declare the position and explain why you think it does not qualify.
@@ -190,7 +190,7 @@ VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 | Code | Meaning |
 |---|---|
 | `N` | **None declared.** An explicit answer, not an absence |
-| `Y`*n* | **Yes**, with *n* items set out in the full submission. *n* ≥ 1 |
+| `Y`*n* | **Yes**, with *n* items set out in the full submission. *n* ≥ 1, except **`V0/Y0` at 4.1** |
 | `V0`–`V4` | Position band (4.1) |
 | `R`*m* | Recusal intended on *m* of the organizations named at 5.1 |
 | `X` | **Not answered.** Invalid in a filed questionnaire |
@@ -199,7 +199,7 @@ VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 
 ### Rules a validator enforces
 
-1. Every question in Parts 2 to 8 appears exactly once, in order.
+1. Every **coded question** in Parts 2 to 8 appears exactly once, in order; **5.2 is narrative-only** and must appear in the full submission, not the coded string.
 2. No `X` in a filed questionnaire.
 3. `5.3` is `N` if and only if `5.1` is `N`; otherwise `R`*m* with **0 ≤ *m* ≤ *n*** from `5.1`.
 4. `4.1` carries both a band and a count: `V0` implies `Y0`, and any band above `V0` implies *n* ≥ 1.
@@ -210,11 +210,11 @@ VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 
 | | |
 |---|---|
-| **On-chain**, in the `disclosures` table on `disc.vst` | Everything: filer account, role, questionnaire version (`VQ1`), filing date, the coded string above, **the full text of your answers** — organizations named, the nature of each connection, every reason and explanation — and, on an update, the transaction id of the filing it supersedes and the reason |
+| **On-chain**, in the `disclosures` table on `disc.vst` | The **public filing only**: chosen public identity, filer account, role, questionnaire version (`VQ1`), filing date, the coded string above, and **full public answers**, excluding private identification at **1.1** — organizations named, the nature of each connection, every reason and explanation — and, on an update, the transaction id of the filing it supersedes and the reason |
 | **On the Portal** | Nothing separately. The Portal **reads the register** and renders it |
-| **Nowhere, ever** | Exact position figures, and the **names of individuals** |
+| **Excluded from the public filing** | Exact position figures; **third-party individuals’ names**; private legal identification collected separately by VS LLC. The filer’s chosen public identity under **1.2** remains public. |
 
-**Review before signing: filings cannot be edited, redacted, or withdrawn.** VS LLC must return, rather than publish, a filing naming individuals or giving exact position figures where bands were requested; this is a **mechanical screen, not a review of substance**.
+**Review before signing: filings cannot be edited, redacted, or withdrawn.** VS LLC must return, rather than publish, a filing naming third-party individuals, containing separately collected private legal identification, or giving exact position figures where bands were requested; this is a **mechanical screen, not a review of substance**.
 
 ---
 
@@ -223,7 +223,7 @@ VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 | | |
 |---|---|
 | **This version** | `VQ1` |
-| **Changed by** | VS LLC republishing the instrument, with the Committee's approval recorded by vote |
+| **Changed by** | VS LLC republishing the instrument, with the Committee’s approval recorded by vote; any change to the Framework’s requirements also needs an **MSIG amendment under 16.2** |
 | **Effect of a change** | A new version applies only to **later filings**; it does not reinterpret or invalidate earlier filings, which retain their recorded version |
 | **When a version changes** | Filers are not required to refile early. The next annual refiling uses the current version |
 

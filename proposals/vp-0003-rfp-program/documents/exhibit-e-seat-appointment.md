@@ -34,7 +34,7 @@ Steering Committee Appointment — [SEAT NAME(S)]
 | [General (At-Large)] | [NAME] | [`account`] | [ORG or None] | [None, or affiliation and waiver MSIG] | 8 months |
 | [Community] | [NAME] | [`account`] | [ORG or None] | [None, or affiliation and waiver MSIG] | 12 months |
 
-*Initial terms and start dates follow **Framework 3.4**.*
+*The example terms above apply to the **first appointments** under **Framework 3.4**. For later appointments, use **12 months under 3.2**, or the **remaining term for a vacancy under 3.7**; record the applicable start date. The Community seat follows **3.4 and section 4**.*
 
 **Eligibility checklist — confirm for all candidates:**
 

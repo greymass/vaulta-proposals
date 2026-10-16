@@ -32,9 +32,9 @@ Managers and Reviewers are paid for **assessing work**. The assessment fee is th
 
 **How fees are paid**
 
-Fees are **set in USD and paid in A**, using the Reference Rate on the payment date, through the published Program Cost schedule (Framework 13.4 and 13.3a).
+Fees are **set in USD and paid in A**, using the Reference Rate **when payment is proposed**, through the published Program Cost schedule (Framework 13.4 and 13.3a).
 
-Fees continue to accrue during a suspension under Framework 13.4a. They are paid when payments resume, using the Reference Rate at that time.
+Fees continue to accrue during a suspension under Framework 13.4a. On resumption, use the Reference Rate when the resumed payment is proposed, retaining the accrual-cycle allocation and MSIG escalation rules in **Framework 13.4a**.
 
 ### The no-award fee
 
@@ -44,7 +44,7 @@ Each role earns **one no-award fee per engagement**, equal to its milestone fee,
 |---|---|
 | An RFP closes without an award. | — |
 | An award is terminated before all milestones are completed. | Framework 11.10 and 11.10a |
-| An award decision expires after 60 days without a contract. | Framework 10.10 |
+| An award decision expires under **Framework 10.10**, including its cycle-close cut-off and any applicable clock extensions. | Framework 10.10 |
 | A bounty expires unclaimed. | Framework 26a, rule 5 |
 
 The fee **replaces any milestone fee for the same determination**; both cannot be paid. Fees for earlier determinations remain payable, but no fees are paid for milestones never determined. Role-specific amounts and payment triggers are in **2.2 and 3.2**.
@@ -94,13 +94,7 @@ Whether a Reviewer is needed is decided at scoping based on whether the work is 
 
 ### 2.3 Post-award review
 
-The Manager must publish a review for any award whose **total contract value** meets or exceeds the review threshold in MSIG #5 Part D, within **20 business days** of:
-
-- Final acceptance;
-- Publication of a termination decision; or
-- The acceptance determination on a bounty.
-
-The award cannot close until the review is published (Framework 25.1 and 25.2); the review fee is separate from milestone fees.
+The Manager must publish a review for any award whose **total contract value** meets or exceeds the review threshold in **MSIG #5 Part D**. Follow **all triggers, deadlines, substitute-author rules, awardee-response rights, redaction limits, and publication and closure requirements in Framework 25.2**, including its **20-business-day** deadline and bounty and ended-award rules. The **USD 375 review fee** is separate from milestone fees.
 
 ### 2.4 Workload
 

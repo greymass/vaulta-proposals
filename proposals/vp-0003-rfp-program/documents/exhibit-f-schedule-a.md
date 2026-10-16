@@ -39,7 +39,9 @@ The main agreement applies to every schedule:
 
 **Conduct and disclosure.** Committee members, Managers, and Reviewers must follow **Framework 2.4a and section 6** for eligibility, conflicts, bidding restrictions, recusals, and disclosures, including the filing gates in **6.3c**. They acknowledge the breach procedure and consequences in **6.6**. The Awardee’s acknowledgment and ban-register warranty remain in its clause 6.
 
-**Public identity.** Use **one stable public identity** for the term; identify votes, recusals, and approvals under **Framework 6.3a and 11.3a**.
+**Public identity.** Use **one stable public identity** for the term; identify votes, recusals, and approvals under **Framework 6.3a and 11.3a**. Legal identification collected privately by VS LLC for tax and banking is **not part of the public questionnaire**.
+
+**Termination recommendations — Managers and Reviewers.** Follow **Framework 11.10a**, including who may file, cancellation, decision thresholds and clocks, escalation, improper filings, and resumption. A recommendation **does not terminate the award** or authorize stopping work, withholding Work Product, suspending services, refusing a data export, or telling the awardee the engagement has ended. A **good-faith recommendation must not be grounds for ending or declining to renew the engagement**, and the fee is unaffected by whether the Committee acts.
 
 ---
 
@@ -60,9 +62,9 @@ The main agreement applies to every schedule:
 
 **3. Pay:**
 
-- **USD [2,500] monthly**, invoiced and paid **monthly in arrears in A** at the Reference Rate on the payment date, under **Framework 13.4 and Exhibit D, section 3 and Appendix A**.
-- Pay starts on the **later of contract signature and receipt of funds in the Program Account**.
-- During a rate-source payment suspension under Framework 13.4a, entitlement **accrues** and is paid on resumption at the rate then current.
+- **USD [2,500] monthly**, invoiced and paid **monthly in arrears in A** at the Reference Rate **when payment is proposed**, subject to **Framework 13.4–13.4a and Exhibit D, section 3 and Appendix A**.
+- Pay starts on the **later of contract signature and receipt of funds in the Program Account**, subject to the **filing and signing-key gates in clause 7**.
+- During a rate-source payment suspension, entitlement **accrues**; resumption, conversion, and allocation to the accrual cycle follow **Framework 13.4a**.
 
 **4. Expenses:** Reasonable, documented, **pre-approved** travel to Network events and role-specific tooling.
 
@@ -78,7 +80,7 @@ The main agreement applies to every schedule:
 
 - **Suspend pay automatically** on referral to MSIG for removal or three consecutive unexcused missed meetings, pending resolution (**MSIG #5 Part H**); conflict-related suspension follows **Framework 6.6**.
 - Signing weight and pay begin only after the contract is signed, all required items are filed, and a signing key is registered; the filing deadline and gates follow **MSIG #5 Part B and Framework 6.3c**.
-- Continuation, removal, and surrender of signing weight follow **Framework 3.3, 3.5–3.6, and 7.4**.
+- The engagement continues during **authorized month-to-month service under Framework 3.3**; it ends on removal, replacement, or effective resignation, or at term-end if no authorized continuation applies. Surrender of signing weight follows **3.5–3.6 and 7.4**.
 
 ---
 
@@ -97,12 +99,12 @@ The main agreement applies to every schedule:
 - Coordinate with awardees, including check-ins **at least every two weeks** during active work.
 - Determine milestones and approve payment, recording the milestone, criteria, determination and reasons, Reviewer assessment if any, amount, and **verified receiving account**.
 - **Recommend termination in writing when required by Framework 11.10a**, including for materially inadequate work or service and persistent failure to meet published service levels.
-- For awards meeting the review threshold in MSIG #5 Part D, measured on **total contract value**, publish a short post-award review **within 20 business days** of final acceptance, publication of termination, or the bounty acceptance determination; cover whether the need was met, the budget was right, and the Network would repeat the award. Give the awardee **5 business days before publication to respond**, and publish the review and any response on the Portal; **the award cannot close before publication** (Framework 25.2). Fees follow Exhibit B.
+- Publish qualifying post-award reviews under **all of Framework 25.2**, including its triggers, **20-business-day** deadline, review scope, substitute-author rules, **5-business-day awardee-response window**, redaction limits, publication, and closure requirements. Fees follow Exhibit B.
 - Provide a written handover of approval history and open items on reassignment.
 
 **3. Pay:** **Exhibit B’s rates and payment rules form part of this Schedule A, including its Common payment rules and sections 1 and 2.2**, including payment triggers, no-award fees, evaluation work, recovery-plan reassessment, reassignment, post-award reviews, and accrual during rate-source suspensions.
 
-Fees are **fixed, not hourly or a percentage of an award**, and do not depend on milestone approval. They are denominated in **USD and paid in A at the Reference Rate on the payment date**, under Framework 13.4 and the calculation rules in Exhibit D, section 3 and Appendix A.
+Fees are **fixed, not hourly or a percentage of an award**, and do not depend on milestone approval. They are denominated in **USD and paid in A at the Reference Rate when payment is proposed**, subject to Framework 13.4–13.4a and the calculation rules in Exhibit D, section 3 and Appendix A.
 
 **4. Expenses:** Pre-approved and documented only.
 
@@ -112,8 +114,7 @@ Fees are **fixed, not hourly or a percentage of an award**, and do not depend on
 
 - Committee appointment **automatically ends this engagement for every RFP**; the role restriction and reassignment process follow **Framework 12.2a–12.3**.
 - Contractor has **no award vote or signing key**. Milestone authority, conflicts, and rate-check referrals follow **Framework 5.5, 6.4, 11.1–11.5, and 13.4**; approval does not itself execute payment under **7.2 and 10.1**.
-- File termination recommendations only as allowed by **Framework 11.10a**, which governs cancellation, decisions, and improper filings. A recommendation **does not terminate the award** or permit Contractor to stop work, withhold Work Product, suspend services, refuse a data export, or tell an awardee the engagement has ended.
-- A **good-faith termination recommendation must not be grounds for ending or declining to renew this engagement**; the fee is unaffected by whether the Committee acts.
+- Termination recommendations and good-faith protections follow the **Common terms and Framework 11.10a**.
 
 ---
 
@@ -132,7 +133,7 @@ Fees are **fixed, not hourly or a percentage of an award**, and do not depend on
 
 **3. Pay:** **Exhibit B’s rates and payment rules form part of this Schedule A, including its Common payment rules and sections 1 and 3.2**, including payment triggers, no-award fees, evaluation work, recovery-plan reassessment, substitute-Reviewer fees, and accrual during rate-source suspensions.
 
-Fees are **fixed, not hourly or a percentage of an award**, and do not depend on the assessment’s conclusion. They are denominated in **USD and paid in A at the Reference Rate on the payment date**, under Framework 13.4 and the calculation rules in Exhibit D, section 3 and Appendix A.
+Fees are **fixed, not hourly or a percentage of an award**, and do not depend on the assessment’s conclusion. They are denominated in **USD and paid in A at the Reference Rate when payment is proposed**, subject to Framework 13.4–13.4a and the calculation rules in Exhibit D, section 3 and Appendix A.
 
 **4. Expenses:** Pre-approved and documented only.
 
@@ -144,8 +145,7 @@ The Reviewer role gives **no award vote, signing key, or authority to approve mi
 
 A Committee member’s Reviewer engagement must comply with **all of Framework 12.6**, including eligibility, recusals, substitution, suspension and resumption, fee limits, and reporting. Disclosure and payment of their own fees follow **6.3c and 13.3a**; fees are prorated to work performed where required by **12.6.1**.
 
-- File termination recommendations only as allowed by **Framework 11.10a**, which governs cancellation, decisions, and improper filings. A recommendation **does not terminate the award** or permit Contractor to stop work, withhold Work Product, suspend services, refuse a data export, or tell an awardee the engagement has ended.
-- A **good-faith termination recommendation must not be grounds for ending or declining to renew this engagement**; the fee is unaffected by whether the Committee acts.
+- Termination recommendations and good-faith protections follow the **Common terms and Framework 11.10a**.
 
 ---
 
@@ -163,7 +163,8 @@ A Committee member’s Reviewer engagement must comply with **all of Framework 1
 
 - **Total award: USD [___]**, fixed at the award decision; paid in **A** at the Reference Rate on **each milestone’s payment-approval date**.
 - Use the oracle or fallback rate required by **Framework 13.4**, with the conversion calculations in **Exhibit D, section 3 and Appendix A**.
-- **At least two enumerated milestones** are required (Framework 11.1a); the table must **exactly match the published decision**, and unlisted milestones are not payable.
+- **Directed and open-call awards:** at least **two enumerated milestones** are required under Framework 11.1a; the table must **exactly match the published decision**, and unlisted milestones are not payable.
+- **Bounties:** replace the milestone table with the **published fixed price and acceptance criteria** under **Framework 26a**; no two-milestone minimum applies, and payment requires the Manager’s written acceptance and any required Reviewer assessment.
 
 | # | Deliverable | Acceptance criteria | Amount (USD) | Due |
 |---|---|---|---|---|
@@ -171,7 +172,7 @@ A Committee member’s Reviewer engagement must comply with **all of Framework 1
 | 2 | [___] | [___] | [___] | [___] |
 | [add rows as awarded] | | | | |
 
-The schedule is proposed by Contractor and settled with the Committee **before award**; later changes require **Committee approval, a contract amendment, and publication** under Framework 11.8, and cannot reduce the count below two.
+For directed and open-call awards, Contractor proposes the schedule and settles it with the Committee **before award**; later changes require **Committee approval, a contract amendment, and publication** under Framework 11.8, keeping at least two milestones. For a bounty, the **publication vote is its award decision**, and the **fixed price and acceptance criteria** replace the schedule and proposer’s agreement under **26a**.
 
 - **Verified receiving account: [___].**
 - A mobilization advance requires demonstrated inability to self-finance the first milestone and is capped at **15% of the total award**.
@@ -182,7 +183,9 @@ The schedule is proposed by Contractor and settled with the Committee **before a
 
 **6. Limits and award terms:**
 
-**Disbursement condition.** This Agreement depends on the corresponding on-chain disbursement clearing its delay; cancellation by block producers or by the Committee following objections **terminates the Agreement without liability on either side**.
+**Disbursement condition.** The **initial award disbursement** must clear its delay and objection process under **Framework 10**. Cancellation of that initial disbursement by block producers or following objections **terminates this Agreement without liability on either side**, subject to the **fresh agreement on identical terms after MSIG confirmation under 10.9**.
+
+Cancellation of a **later milestone payment** does not by itself terminate this Agreement or extinguish payment for accepted work; termination and surviving obligations follow **11.8–11.10a and 14.4–14.5**. Cancellation during a **termination-recommendation freeze** or **mandate suspension or revocation** does not itself terminate a signed Agreement, even if the cancelled payment was the initial disbursement; resumption and surviving obligations follow **Framework 10.9, 11.10a, and 14.4–14.5**.
 
 **Clawback and other funding.** Contractor must repay amounts for milestones later found undelivered or misrepresented; this is a contractual remedy, because on-chain transfers cannot be reversed. Disclose any **other Network funding for the same work**.
 
@@ -198,7 +201,7 @@ The schedule is proposed by Contractor and settled with the Committee **before a
 
 **Termination consequences.** Section 5 of the Agreement governs termination for non-delivery or cause; accepted milestones are paid, unearned amounts are not proposed, and delivered Work Product remains with the VST under §9. **Service handover materials and the data export become due on termination; the Embedded licence back in 7.3a survives.**
 
-**Rate-source failure (Framework 13.4a).** If the **`eosusd` pair or `delphioracle` contract** is unavailable, renamed, or deprecated, use the CoinMarketCap fallback; **suspend payment only if that is also unavailable**, until it returns or MSIG designates a replacement source:
+**Rate-source failure (Framework 13.4a).** If the **`eosusd` pair or `delphioracle` contract** is unavailable, renamed, or deprecated, use the CoinMarketCap fallback; **suspend payment only if that is also unavailable**. Resume under **Framework 13.4a**, including when the original oracle meets its **7-consecutive-day recovery requirement**:
 
 - Suspension is **not a breach by either party**. Continue recording milestone determinations; approve payment on resumption at the rate then current.
 - Extend delivery dates and any **60-day contracting period** by the suspension’s length.
@@ -239,7 +242,7 @@ If §9 does not permit the carve-out, **amend the main agreement**; Schedule A c
 
 **7.4 Deliverable awards.** Release Work Product under **[___]**, exactly matching the award decision and the RFP’s licence mode: the required licence, Contractor’s accepted choice from the permitted set, or the default **Apache-2.0 for code / CC-BY-4.0 for non-code** (Framework 20.2a).
 
-For code, deliver a **tagged source copy into a Network-controlled repository**, not a link to Contractor’s repository; for other work, deliver final files and working materials into a **Network-controlled store**. Include credentials, domains, and documentation; the award closes on delivery (Framework 25.1).
+For code, deliver a **tagged source copy into a Network-controlled repository**, not a link to Contractor’s repository; for other work, deliver final files and working materials into a **Network-controlled store**. Include credentials, domains, and documentation; close the award only when **all requirements in Framework 25.1–25.2** are met, including the applicable termination exceptions.
 
 **7.5 Service awards.** The running service is performed rather than handed over; **Work Product is only the Operational Handover Set**, which vests in the VST under §9.
 
@@ -249,7 +252,7 @@ The Network may **use, modify, reproduce, and give the Handover Set to a success
 
 Contractor warrants that a **competent successor can deploy and operate the service** using the Handover Set plus commodity or open-source components, without another Contractor licence beyond 7.3a.
 
-There is **no exclusivity**; the Network may re-compete the service or use another provider. **Service levels and term: [___]**, matching the published RFP. Close the award only after delivery of the Handover Set and confirmation of Network data export (Framework 25.1).
+There is **no exclusivity**; the Network may re-compete the service or use another provider. **Service levels and term: [___]**, matching the published RFP. Delivery of the Handover Set and confirmation of Network data export are required for closure, together with **all other applicable requirements in Framework 25.1–25.2**.
 
 **7.6 Embedded awards.** Work Product built inside Contractor’s existing software vests in the **VST**; listed Pre-Existing IP does not, and the **7.3a licence back applies**.
 

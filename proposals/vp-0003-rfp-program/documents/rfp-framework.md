@@ -169,7 +169,7 @@ An award goes to **MSIG** if fewer than four members can sign (section 9).
 
 **4.1** The **EOS Community Foundation (ECF)** runs the Community seat vote and sets candidate and voter eligibility, the voting method, and how results are published.
 
-**4.1a** ECF is **independent of the program**; neither ECF nor its members receive funding under this Framework or MSIG #5. ECF must seek funding through **its own MSIG**, decided by block producers, rather than a Committee award.
+**4.1a** ECF is **independent of the program**. Funding for **administering the Community seat vote** requires ECF’s own MSIG, decided by block producers; it cannot be a Committee award. This does not bar ECF from bidding under **4.1b**, or its members from otherwise eligible program roles or awards, subject to the conflict rules.
 
 **4.1b ECF may bid.** ECF is a **connected organization** under 6.2 whenever the Community member is engaged by, receives a stipend from, or holds a position in ECF. The member must declare the connection **in writing before the RFP is published**, recuse from scoping, drafting, evaluation, scoring, discussion, and voting, and must not help set its budget or criteria. The connection and recusal must be minuted and published.
 
@@ -280,7 +280,7 @@ Parts 2 to 8 each require an explicit **"None"** where there is nothing to decla
 
 **Where it is written.** Disclosures go to **`disc.vst`**, a separate account with an append-only disclosure contract deployed and controlled by VS LLC. VS LLC must configure and publish it under the **Exhibit D process and MSIG #5 Part E**. Its key has no authority over the Program Account.
 
-**What is written.** For each filing: the filer's account, role, questionnaire version, filing date, the **coded answers** to Parts 2 to 8, and the **full text of the filing** — the organizations named in Part 5, the nature of each connection, and every reason and explanation given. The filer signs their own submission; **VS LLC writes the record and cannot alter its content.**
+**What is written.** Record the filer’s **chosen public identity**, account, role, questionnaire version, filing date, **coded answers** to Parts 2 to 8, and **full public filing**, including organizations named in Part 5, connections, reasons, and explanations. **Exclude legal identification collected privately by VS LLC.** The filer signs their own submission; **VS LLC writes the record and cannot alter its content.**
 
 **No hash is kept**; the full filing is held on-chain.
 
@@ -338,7 +338,7 @@ Records are **append-only**: updates must reference the previous record; nothing
 
 **7.1** All program funds must be held **only in `rfp.vst`, the Program Account**; only block producers may name that account. The VST has no authority over its funds; the permissions in **7.2** govern.
 
-**7.2** The account carries a Committee permission:
+**7.2** The Program Account must enforce the following authorization requirements; **Exhibit D must identify and verify the separate payment and administrative authority routes**. A three-signature cancellation route must not authorize a fund transfer.
 
 | Setting | Value |
 |---|---|
@@ -487,7 +487,7 @@ An action outside these limits is **void**; VS LLC must not contract on it, and 
 3  VS LLC signs the agreement          nothing moves before this
 4  Committee proposes payment on-chain 4 of 5 signatures
 5  Delay window runs                   block producers may object or cancel
-6  Payment executes
+6  Payment executes after the delay and objection clearance under 10.7
 7  Later milestones repeat steps 4-6, one proposal each
 ```
 
@@ -520,6 +520,8 @@ Withdrawals reducing the count below seven before it closes move the award into 
 
 **10.7 Cancellation** is a **3-of-5 on-chain administrative action** and is **mandatory** in the 4-to-6 and 7-or-more objection bands; the Committee must cancel within **2 business days** of the count closing, and failure to do so is an express ground for referral to MSIG for removal.
 
+**Execution guard.** An initial award payment must remain blocked until the full delay has ended, the Manager has published the final objection count, and the outcome permits execution. A count of **4 or more blocks execution**, even during the two-business-day cancellation period. A **4-to-6** outcome requires cancellation and the confirmation and re-proposal process in **10.9**; a **7-or-more** outcome ends the award. Exhibit D must demonstrate this guard before funding; its authorized held-multisignature fallback must observe the same rule. Later milestone and Program Cost payments have no objection banding.
+
 Block producers may also cancel through the owner permission.
 
 **10.8** Block producers may cancel **any payment at the Threshold during its delay**, regardless of the objection count.
@@ -527,6 +529,8 @@ Block producers may also cancel through the owner permission.
 **10.9** After cancellation in the 4-to-6 band, the Committee must submit the record and a draft confirming Resolution to MSIG within **10 business days**; if MSIG does not confirm within **30 days of submission**, the award ends and its reservation is released.
 
 **MSIG confirmation restores the award decision, not the agreement**; cancellation terminated the agreement, so VS LLC must sign a **fresh agreement on identical terms** before proposing disbursement again, within the 60 days in section 10.10 measured from confirmation.
+
+**Other cancellations and contracts.** Cancellation of an **initial award disbursement** under **10.5 or 10.8** terminates the agreement without liability on either side; a **4-to-6-band confirmation** requires the fresh agreement described above. Cancellation of a **later milestone payment** does not by itself terminate the agreement or extinguish amounts due for accepted work. Cancellation under a **termination-recommendation freeze (11.10a)** or **mandate suspension or revocation (14.4–14.5)** does not itself terminate a signed agreement, even if the cancelled payment was the initial disbursement; those sections govern resumption and surviving obligations.
 
 **10.10 Unused award decisions.** Sign the agreement within **60 days** of the award decision, or MSIG confirmation following a 4-to-6-band cancellation, and **before the cycle closes**. Otherwise the decision expires and the Committee must vote again.
 
@@ -564,13 +568,7 @@ After award, changes to milestone **scope or dates** follow **11.8**: Committee 
 
 During a suspension under **13.4a**, publish the determination, its date, and the required details **when made, excluding the amount payable**; add the rate data and amount, then republish, on resumption.
 
-**11.3a Named decision-makers.** Publish each person’s **name and on-chain account** in the following records and write both to the register under 7.6a:
-
-| Record | Who is named |
-|---|---|
-| Milestone approval | The **Manager of record**, and the **Technical Reviewer** where one gave an assessment — **by name and on-chain account** |
-| Payment signature | **Each Committee member who signed**, by **name and on-chain account** — both, not the account alone |
-| Award decision | Every member voting for, against, and recused, **by name and account** (sections 10.3, 13.5, 23.2) |
+**11.3a Named decision-makers.** Record each decision-maker’s **name and on-chain account** as required by **7.6a**.
 
 **Name and account** must match questionnaire Part 1 (6.3a) and the seat register. The name must be a **legal name or registered handle, unchanged during the term**; neither name nor account may be redacted under 5.9.
 
@@ -582,7 +580,7 @@ During a suspension under **13.4a**, publish the determination, its date, and th
 4. The payment is within the award; and
 5. No termination recommendation under **11.10a** is open on the award.
 
-**11.4a Initial disbursement.** After the award vote and signed agreement, signers check only that the decision record is complete, the agreement matches it, the amount is within the limits, the delay has run, and no termination recommendation under 11.10a is open.
+**11.4a Initial disbursement.** Before proposing payment, signers check only that the decision record is complete, the signed agreement matches it, the amount is within the limits, and no termination recommendation under **11.10a** is open. **Execution**, rather than proposal, requires the completed delay and objection clearance under **10.7**.
 
 **11.5 Refusing to sign.** Members must sign even if they voted against the award, unless a required administrative check fails or there is credible evidence of misrepresentation or a conflict-rule breach; written reasons must be minuted. They **must not rejudge the work, disagree with the Manager’s judgment, or reopen the published Reviewer setting** as grounds for refusal.
 
@@ -731,7 +729,7 @@ For such an award, only the amount **payable in the current cycle** is reserved 
 
 Recurring infrastructure services must use **Service awards under 20.2a**, with a **fixed term followed by re-competition** and a contracted operational handover set.
 
-A service renewal is a **new award**, requiring a fresh RFP, award-threshold decision, and reservation; it is not an extension of the old agreement. The incumbent may bid. The bar on increases under **11.8** still applies to the old award.
+A service renewal is a **new award**, requiring a fresh RFP, award-threshold decision, and reservation; it is not an extension of the old agreement. The incumbent may bid. Any increase to the old award remains subject to **11.8** and the limits in **13.2**; it cannot replace the required fresh RFP for a renewal.
 
 **13.3 Release.** Release a reservation when:
 
@@ -774,7 +772,7 @@ The Reference Rate is the **`median` field of `delphioracle`’s `datapoints` ta
 
 **Oracle precision.** The Committee should note any material effect of the oracle’s fixed **USD 0.0001 price increments** in the cycle report.
 
-**Oracle evidence.** Every approval record must capture the **oracle value, block number, and transaction ID** of the read.
+**Rate evidence.** For an oracle read, every approval record must capture the **oracle value, block number, transaction ID, and newest-datapoint timestamp**; for a fallback read, use the replacement evidence in the fallback table below.
 
 **Rate checks.** Use the **fallback** for a stale rate. A collar breach, or staleness when the fallback is unavailable, requires a Committee decision at the ordinary milestone threshold: approve with the issue recorded, or defer. Neither check automatically blocks payment.
 
@@ -818,7 +816,7 @@ If **`eosusd` or `delphioracle` becomes unavailable, renamed, or deprecated**, u
 
 The **Chair must record and publish the failure within 2 business days** of any member or VS LLC becoming aware; the affected award’s Manager is the alternate. Escalate to **MSIG within 5 business days of that record** under 9.2, requesting a replacement source. **The Committee cannot choose a substitute.**
 
-**How payments resume.** Suspended payments resume only when the fallback returns or MSIG designates a source, for **payment approvals made after resumption**; completed payments are not reopened. The designation amends the **Reference Rate definition under 16.2** and is not subject to deemed decline under 9.2.
+**How payments resume.** Suspended payments resume when the fallback returns, the original oracle satisfies the **7-consecutive-day recovery requirement in 13.4**, or MSIG designates a replacement source. Apply the restored source to **payment approvals made after resumption**; completed payments are not reopened. The designation amends the **Reference Rate definition under 16.2** and is not subject to deemed decline under 9.2.
 
 **What stops and what continues**
 
@@ -830,7 +828,7 @@ The **Chair must record and publish the failure within 2 business days** of any 
 | **Reservations** | Suspension alone does not release them; the **13.3** release triggers still apply, including termination, downward variation under 11.8, and awardee termination under the Exhibit F long-stop. |
 | **Deadlines** | Extend the **10.10 60-day clock**, **26a rule 5 bounty closing date**, and any cycle-close contracting cut-off by the suspension’s length. Do not shorten awardee deadlines or count suspended time against them. |
 | **Carried awards** | Reservations crossing a cycle end become forward commitments against the **resumption cycle’s Ceiling**. Escalate under **9.1** if these plus that cycle’s awards exceed it, or an extension exceeds the authorized funding period. |
-| **Program Costs** | Suspend Committee pay and Manager and Reviewer fees too. They accrue and are paid on resumption at the then-current rate, charged to their **accrual cycle**; that allocation survives despite 13.1. Escalate any shortfall above that cycle’s allocation under 9.1. |
+| **Program Costs** | Suspend Committee pay and Manager and Reviewer fees too. They accrue and are paid on resumption, using the rate when the resumed payment is proposed under **13.4**, charged to their **accrual cycle**; that allocation survives despite 13.1. Escalate any shortfall above that cycle’s allocation under 9.1. |
 | **Essential operations** | Only **Portal hosting and essential administration** continue, using the **last rate read before failure**, recorded and published with each payment; no other payment may use this exception. |
 | **Reporting** | Include the suspension details required by **13.5 in every cycle report until resolved**. |
 
@@ -1006,13 +1004,11 @@ The Committee identifies Network needs, publishes RFPs, invites competing propos
 - Each RFP sets its own permitted set at scoping; there is no standing list. If Proposer’s choice omits it, the fallback set is **Apache-2.0, MIT, or BSD-3-Clause for code; CC-BY-4.0 or CC0-1.0 for non-code**.
 - **Mode, permitted set, and Required licence lock at publication**; the proposer’s chosen licence locks at award and must appear in the agreement.
 - Score a Proposer’s-choice licence only under a **separate criterion and weight published before submissions open** (22.1); the standing openness criterion alone does not allow it.
-- Explain any Required-mode departure from default licences in the RFP.
+- Explain any **departure from default licences** in the RFP: name and justify the licence in **Required mode**, or publish and justify the permitted alternatives in **Proposer’s choice mode**. The proposer’s actual choice is recorded at award under **23.2**.
 
 **Closed-source deliverables.** At publication, state that usable open-source release is impossible and specify the Network’s alternative: a licence, service commitment, source escrow, or combination. Use **Required mode** and name the alternative licence; Default and Proposer’s choice are unavailable. Silence means open-source release.
 
 **Publication locks.** The **award shape and Reviewer setting cannot change** at contracting, signing, or under 11.8; correct an unsuitable setting in the next RFP. The Reviewer setting governs every assessment throughout the award under **11.2 and 11.4**.
-
-**20.3** Publish the **budget ceiling in USD**.
 
 **20.4 Approval to publish.** Majority, minimum 3. Before publishing, the Committee confirms the expected award fits within the Per-Award Limit and the remaining Cycle Ceiling. If an escalation to MSIG will be needed, get it before publishing, not after proposals arrive.
 
@@ -1069,11 +1065,11 @@ In every case a written assessment against published criteria must exist before 
 **23.2 The decision record must include:**
 
 - Awardee, scope, **award shape (20.2a)**, and total amount.
-- The **licence named by the RFP in Required mode**, the proposer’s offered licence in Proposer’s choice mode, or the applicable Default licence stated expressly.
+- For **Deliverable and Embedded** awards, state the **Required licence**, the proposer’s offered licence in Proposer’s choice mode, or the applicable Default licence. For **Service** awards, record **no licence mode**, the operational handover set, and any pre-existing-IP licence back under **23.3a**.
 - The awarded **schedule of at least two milestones and their amounts**, any changes from the submitted schedule, and the proposer’s agreement under **11.1a**.
 - Every member’s **vote — for, against, or recused — by name and on-chain account**.
 - Reasons for departing from the scores.
-- The **oracle median, block number, transaction ID, and newest-datapoint timestamp** read at the decision.
+- The **rate evidence at the decision** under **13.4**: oracle median, block number, transaction ID, and newest-datapoint timestamp, or the fallback’s replacement evidence where it applies.
 
 **An incomplete record cannot go to contracting.**
 
@@ -1081,7 +1077,7 @@ In every case a written assessment against published criteria must exist before 
 
 - be the standard **VS LLC Independent Contractor Agreement** with an award-specific Schedule A, under which **work product — as defined for the award's shape under 20.2a — vests in the VST** (section 9);
 - **enumerate the milestone schedule** — each milestone numbered, with its deliverable, acceptance criteria, amount, and date, **at least two of them** (11.1a) — **matching the published decision exactly**. Nothing is paid against a milestone the agreement does not enumerate;
-- **depend on the on-chain payment clearing its delay**, with no liability on either side if it is cancelled;
+- make the **initial award disbursement conditional on clearing the delay and objection process**, with the **cancellation consequences and exceptions in 10.9**, including no liability on either side where the agreement terminates under that section;
 - allow termination for non-delivery and for cause, with a period to fix problems;
 - include a **recovery clause** for money paid against milestones later found undelivered or misrepresented, enforced by VS LLC;
 - require disclosure of any other Network funding for the same work;
@@ -1110,7 +1106,7 @@ In every case a written assessment against published criteria must exist before 
 
 If section 9 does not permit the carve-out, **amend the agreement first**; neither Schedule A nor defining work product by shape may narrow its vesting clause.
 
-**23.4 Publication of award.** Published within **2 business days** of the decision, per section 10.3. Unsuccessful proposers may request their own scores and a short written explanation.
+**23.4 Unsuccessful proposals.** Unsuccessful proposers may request their own scores and a short written explanation; award publication follows **10.3**.
 
 ## 24. Stage 7 — Delivery
 

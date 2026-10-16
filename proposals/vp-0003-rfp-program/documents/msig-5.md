@@ -131,15 +131,13 @@ FURTHER RESOLVED, that the Committee must decide **at scoping whether a Technica
 
 FURTHER RESOLVED, that **the program must not rely on the RFP platform or Portal code until the rights and repository requirements in Framework 15.2a are met**.
 
-FURTHER RESOLVED, that a **material conflict-of-interest breach** requires **immediate suspension of the person's role, signing weight, and pay, and referral to MSIG**.
-
-FURTHER RESOLVED, that **any departure from the default licence must be published in the RFP with reasons**.
+FURTHER RESOLVED, that **departures from default licences must be published with reasons under Framework 20.2a**, with the awarded licence recorded under **23.2**.
 
 FURTHER RESOLVED, that **VS LLC's RFP administration costs are charged to Program Costs, separately from the CY2026 VST operating funding under MSIG #3**.
 
 ### Part H — Committee pay
 
-FURTHER RESOLVED, that each of the **five Committee members** has a **fixed USD 2,500 monthly retainer**, **paid in arrears** in A at the Reference Rate under Framework 13.4 on the payment date; and **no per-meeting fees, success fees, or payments tied to an award's size, number, or outcome** are authorized.
+FURTHER RESOLVED, that each of the **five Committee members** has a **fixed USD 2,500 monthly retainer**, **paid in arrears** in A using the Reference Rate **when payment is proposed**, subject to **Framework 13.4–13.4a**; and **no per-meeting fees, success fees, or payments tied to an award's size, number, or outcome** are authorized.
 
 FURTHER RESOLVED, that the cap under Framework 12.6 is **3 concurrent Technical Reviewer engagements per member**.
 
@@ -153,7 +151,7 @@ FURTHER RESOLVED, that each member's contract must cover:
 - **Secure key handling** and the custody duties in **Framework 7.4**.
 - **Automatic suspension of pay** if the member is referred to MSIG for removal or misses 3 consecutive meetings without excuse.
 - The payment suspension, accrual, and resumption rules in **Framework 13.4a**.
-- Termination on removal or when the term ends.
+- Termination on removal or replacement, or at the term’s end **unless month-to-month continuation applies under Framework 3.3**.
 
 FURTHER RESOLVED, that reasonable, pre-approved expenses are reimbursable; Committee pay is funded through each cycle's transfer and continues only while block producers continue funding it.
 
@@ -161,7 +159,7 @@ FURTHER RESOLVED, that reasonable, pre-approved expenses are reimbursable; Commi
 
 FURTHER RESOLVED, that the active block producers request a **first quarterly instalment of A worth USD 284,375** to the Program Account, calculated at the **Reference Rate on the transfer date** under **Framework 13.1**, from the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
 
-FURTHER RESOLVED, that the program does not begin if the request is **declined, delayed, or only partly met**: the Program Account is not funded, no cycle starts, no term runs, and no pay accrues; the Committee must report this publicly; MSIG may re-scope the program to available funds.
+FURTHER RESOLVED, that the program does not begin if the request is **declined, delayed, or only partly met**: the Program Account is not funded, no cycle starts, the **four funding-anchored initial terms under Framework 3.4** do not begin, and no pay accrues; the **Community term still runs from appointment execution** under that section; the Committee must report this publicly; MSIG may re-scope the program to available funds.
 
 FURTHER RESOLVED, that the transfer is a **one-way contribution of Network funds**, and any source pools held by the VST or VS LLC are released as Network funds, not as a Trust activity.
 
