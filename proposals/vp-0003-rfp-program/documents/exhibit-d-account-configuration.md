@@ -86,16 +86,23 @@ The following requirements apply when an MSIG proposal changes the contract on `
 
 Check native delay support on the target chain, and verify that Committee signers cannot execute payments before the full delay ends or bypass the objection rules in **Framework 10.7**.
 
-### 2.2 Protocol-enforced delay
+### 2.2 Payment delays
 
 | Payment | Delay |
 |---|---|
-| Ordinary | **168 hours (7 days)** |
-| Urgent | **72 hours (3 days)** |
+| Ordinary | **7 days** |
+| Urgent | **3 days** |
 
-**`delay_sec` is a transaction field, not a permission field.** If native delayed transactions are selected, record that field and the authority’s actual `waits` and weights, where used, and prove the configuration enforces **604,800 seconds** ordinarily and **259,200 seconds** for urgent payments. If another on-chain mechanism is needed, record its contract, actions, authorities, and execution checks. **The Committee must not be able to waive or bypass the delay.**
+Record the enforcement configuration in **6.1**:
 
-**Initial award payments must also remain blocked after the delay until the final objection count is published and permits execution under Framework 10.7.** A count of four or more must block execution throughout the cancellation and any MSIG-confirmation process. Later milestone and Program Cost payments have no objection banding but retain their delay and cancellation rights.
+- **Native delays:** the transaction’s `delay_sec` and any authority `waits` and weights.
+- **Other on-chain mechanisms:** the contract, actions, authorities, and execution checks.
+
+**The Committee must not be able to waive or bypass the delay.**
+
+Initial award payments also require a published final objection count and clearance under **Framework 10.7**. Four or more objections must keep execution blocked throughout cancellation and any MSIG-confirmation process.
+
+Later milestone and Program Cost payments retain their delay and cancellation rights, without objection banding.
 
 ### 2.3 Held-multisignature fallback — conditional
 
@@ -316,6 +323,8 @@ Classify the **initial platform build, including both contracts on `disc.vst`**,
 - **D4 — Rejection tests:** Record tests proving that three members cannot transfer funds, payment cannot execute early, and an initial award payment cannot execute with an unpublished final count or four or more objections.
 - **D5 — Execution tests:** Record a valid four-signature payment after the complete delay and, where applicable, final objection clearance; verify the urgent path and both cancellation routes. **Missing or failing proof blocks funding and activation.**
 - Publish the completed Exhibit **before funding** (MSIG #5 Part E).
+
+**Delay configuration:** Verify that the deployed mechanism enforces **604,800 seconds for ordinary payments** and **259,200 seconds for urgent payments**. For native delays, `delay_sec` is a **transaction field, not a permission field**; record it and the authority’s actual `waits` and weights, where used.
 
 | | |
 |---|---|
