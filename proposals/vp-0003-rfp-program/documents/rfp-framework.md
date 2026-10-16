@@ -305,7 +305,7 @@ Records are **append-only**: updates must reference the previous record; nothing
 
 **Manager and Reviewer conflicts.** Sections **6.1 and 6.2** apply as if references to a member referred to the Manager or Reviewer. They are also conflicted on an awardee that is, or is connected to, anyone or any organization declared in **questionnaire Parts 3, 5, or 7**. The normal remedy is reassignment under **12.3**; the **Treasury exclusion in 2.4a** also applies.
 
-**6.5 Confidentiality.** Proposal contents, prices, and evaluation discussions remain confidential until the award is announced, and members must not share them with competitors or use information from them for their own benefit or that of a connected company.
+**6.5 Confidentiality.** Proposal contents, prices, and evaluation discussions remain confidential until the award is announced. Members must not share them with competitors or use the information to benefit themselves or a connected company.
 
 **6.6 Consequences.**
 
@@ -1062,7 +1062,7 @@ The Committee identifies Network needs, publishes RFPs, invites competing propos
 
 **21.2 Questions.** All questions go to the Manager of record through the published channel. **All questions and answers are published to everyone**, without naming who asked, and are **written to the `publications` register within 2 business days of the answer** (7.6a). No private guidance of any kind.
 
-**21.3 Changes.** Material changes to scope, budget, or deadline are published as numbered amendments, and the deadline extends by at least 7 days.
+**21.3 Changes.** Publish material changes to scope, budget, or deadline as **numbered amendments**, and extend the deadline by **at least 7 days**.
 
 **21.4 Late submissions** are rejected, with no exception unless the submission channel itself failed and that is documented.
 
@@ -1092,7 +1092,7 @@ Weights may differ by category, but the version used must be published with the 
 
 In every case a written assessment against published criteria must exist before any award.
 
-**22.4 Committee discussion.** The Committee receives the scores and reasoning, discusses, records recusals, and may interview shortlisted proposers — provided every shortlisted proposer gets the same opportunity and the same questions.
+**22.4 Committee discussion.** The Committee receives and discusses the scores and reasoning, and records recusals. It may interview shortlisted proposers only if **all receive the same opportunity and questions**.
 
 **22.5 Departing from the scores.** The Committee may award to a proposal that did not score highest, but must publish a written reason.
 
