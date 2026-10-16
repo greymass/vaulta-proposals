@@ -195,7 +195,7 @@ The **vision statement requirement in 3.1a** applies. A statement produced throu
 
 **5.1 Meetings.** At least monthly, and whenever the Chair or any two members call one. At least twice monthly while an RFP solicitation is open for submissions or under evaluation.
 
-**5.2 Quorum.** Three filled seats, and at least three members present who are not recused. Quorum allows decisions. It does **not** allow payment, which needs four signers.
+**5.2 Quorum.** Decisions require **at least three filled seats and three non-recused members present**; payments still require four signers.
 
 **5.3 Thresholds.** Counted on **filled seats, minus recusals**.
 
@@ -224,7 +224,7 @@ The **vision statement requirement in 3.1a** applies. A statement produced throu
 
 **Rate-check referrals.** If the collar check in 13.4 triggers, or the rate is stale and the fallback is unavailable, the Committee may approve payment at **simple majority, minimum 3**; it does not reopen the Manager’s determination.
 
-**5.6 Recusal.** Where a member has a conflict, recusal is required, not optional. A recused member is excluded from the materials, the quorum, and the count.
+**5.6 Recusal.** A conflicted member must recuse and is excluded from materials, quorum, and the vote count.
 
 A recused member **must not sign the payment**. Awards with fewer than four available signers go to MSIG under section 9.
 
@@ -254,7 +254,7 @@ This covers the member’s employer, companies they work for, companies under co
 
 **6.3 Declarations.** Every member, Manager, and Technical Reviewer must declare connections, employment, **Vaulta-ecosystem positions other than A**, and any **Vaulta Treasury connection** within **30 days of appointment**; members’ deadline runs under 6.3c. Declarations must be updated within **10 business days** of a change and refiled annually.
 
-**6.3a The disclosure questionnaire.** All declarations must use the **same standard questionnaire, with the same questions in the same order**; free-form declarations do not qualify.
+**6.3a The disclosure questionnaire.** Use the **standard questionnaire, with its questions in their stated order**; free-form declarations do not qualify.
 
 **Who files:** every Steering Committee member, every RFP Program Manager, and every Technical Reviewer. Any other person given a decision or approval right in the program files the same questionnaire before that right takes effect.
 
@@ -288,7 +288,7 @@ Records are **append-only**: updates must reference the previous record; nothing
 
 **Pre-write screening.** VS LLC must return filings that name other individuals or give figures where bands are required. This is a mechanical screen, not a review of substance.
 
-**6.3c Filing gates.** The questionnaire **is the conflict-of-interest declaration** required by appointment and engagement documents, rather than an additional item.
+**6.3c Filing gates.** The questionnaire satisfies the **conflict-of-interest declaration** required by appointment and engagement documents.
 
 | Who | Gate |
 |---|---|
@@ -411,7 +411,12 @@ The Portal **reads and displays the register without keeping a separate copy**.
 
 **8.1** MSIG grants the Committee a **standing mandate to allocate Program Account funds on behalf of the Network**; block producers do not vote on individual RFPs or awards, and a Committee decision within the limits below is the Network's decision.
 
-**8.3 The Committee decides:** which needs become RFPs; their scopes, deliverables, criteria, budgets, and timelines; **awardees and award terms**; Managers of record and Technical Reviewers; and whether to withhold payment or terminate an engagement.
+**8.3 The Committee decides:**
+
+- Which needs become RFPs and their scope, deliverables, criteria, budgets, and timelines;
+- Awardees and award terms;
+- Managers of record and Technical Reviewers; and
+- Whether to withhold payment or terminate an engagement.
 
 **Funding instruments.** The Committee may use **only three funding instruments**: a **directed RFP** (sections 18–25), an **open call** for unsolicited proposals (section 26), or a **bounty** (section 26a); "**grants**" means the **open call**, not a fourth instrument.
 
@@ -484,9 +489,18 @@ An action outside these limits is **void**; VS LLC must not contract on it, and 
 7  Later milestones repeat steps 4-6, one proposal each
 ```
 
-**10.3 Publication happens in two stages.** Within 2 business days, publish the awardee, scope, **award shape**, **licence**, amount, milestone schedule, **each member's vote — for, against, or recused — by name and on-chain account**, and any reason for departing from the reviewers' scores; add the **on-chain transaction reference** when payment is proposed.
+**10.3 Publication.** Within **2 business days**, publish:
 
-**10.4 The delay window** starts when publication is complete and **cannot be waived**; incomplete or corrected publication requires cancellation and a new proposal, restarting the delay; the shorter urgent delay requires a Committee urgency vote **at the award threshold — two-thirds of filled non-recused seats, minimum 3** — with the reason recorded and publication complete before proposing payment.
+- Awardee, scope, award shape, licence, amount, and milestone schedule;
+- Each member’s vote — for, against, or recused — **by name and on-chain account**; and
+- Any reason for departing from Reviewer scores.
+
+Add the **on-chain transaction reference** when payment is proposed.
+
+**10.4 The delay window** starts when publication is complete and **cannot be waived**.
+
+- Incomplete or corrected publication requires cancellation and a new proposal, restarting the delay.
+- The urgent delay requires a Committee urgency vote of **two-thirds of filled non-recused seats, minimum 3**, with the urgency reason recorded and publication complete **before payment is proposed**.
 
 **10.5 Objections.** Block producers may object during the delay. Objections are **written to the `publications` register as they are received** (7.6a) and recorded in a public register on the Portal, are attributed to the block producer who made them, and may be withdrawn.
 
@@ -556,7 +570,7 @@ During a suspension under **13.4a**, publish the determination, its date, and th
 | Payment signature | **Each Committee member who signed**, by **name and on-chain account** — both, not the account alone |
 | Award decision | Every member voting for, against, and recused, **by name and account** (sections 10.3, 13.5, 23.2) |
 
-**Name and account** must match Part 1 of the disclosure questionnaire (6.3a). The name is a **single stable public identity — a legal name or registered handle — that does not change during the term**; the seat register must carry the same pair. Neither may be redacted under 5.9.
+**Name and account** must match questionnaire Part 1 (6.3a) and the seat register. The name must be a **legal name or registered handle, unchanged during the term**; neither name nor account may be redacted under 5.9.
 
 **11.4 Administrative signatures.** Four members must sign after checking only that:
 
@@ -629,7 +643,7 @@ Where any recusals leave **fewer than four non-recused seats**, the recommendati
 
 **Striking an improper filing.** The Committee may, at simple majority with a minimum of 3, **strike a recommendation** filed by someone who was conflicted or who was not the Manager of record or an engaged Reviewer when they filed. Striking lifts the freeze immediately and is published with reasons. Nothing in this section limits the Committee's power to reassign an RFP under 12.3, and reassignment does not by itself withdraw a filed recommendation.
 
-**Getting back to payment where the Committee declines.** A proposal cancelled under this section may be **re-proposed without a further award vote** once the freeze lifts. It carries a fresh delay window and, being a milestone or a previously decided disbursement, no new objection banding. Any 60-day clock under 10.10 is **extended by the length of the freeze**.
+**Resuming payment.** Once the freeze lifts, cancelled payments may be **re-proposed without another award vote**, with a fresh delay and no new objection banding. Extend the **60-day clock in 10.10 by the freeze’s length**.
 
 **A recommendation is not a termination.** Only the Committee terminates. Neither the Manager nor the Reviewer may stop work, withhold delivered work product, **suspend the service, refuse a data export,** or tell the awardee the engagement is over.
 
@@ -732,7 +746,7 @@ Do **not** release while MSIG confirmation is pending or merely because a termin
 
 A payment outside an approved schedule requires fresh Committee approval at the same threshold and its own published record.
 
-**Reviewer fees payable to a Committee member** under section 12.6 are approved as a separate line and **paid on a separate payment** from the rest of the schedule — **one payment per member-Reviewer**, never a combined one. Each is signed by the other four. The member recuses from their own schedule line and from signing their own payment only.
+**Member-Reviewer fees (12.6)** require a separate schedule line and **one separate payment per member**, signed by the other four. The recipient recuses from their own line and payment only; members’ Reviewer fees must not be combined.
 
 **Committee retainer.** All five members may vote on and sign their own **USD 2,500 retainer** line, as set equally by MSIG #5 Part H.
 
@@ -756,7 +770,7 @@ The Reference Rate is the **`median` field of `delphioracle`’s `datapoints` ta
 
 **Oracle evidence.** Every approval record must capture the **oracle value, block number, and transaction ID** of the read.
 
-**Two checks on the rate.** Neither blocks a payment outright. A stale rate is replaced by the **fallback rate** below. A rate outside the collar, or a stale rate when the fallback is unavailable too, moves the decision from the Manager of record to the Committee, which may approve at the ordinary milestone threshold with the fact recorded, or defer.
+**Rate checks.** Use the **fallback** for a stale rate. A collar breach, or staleness when the fallback is unavailable, requires a Committee decision at the ordinary milestone threshold: approve with the issue recorded, or defer. Neither check automatically blocks payment.
 
 | Check | Trigger |
 |---|---|
@@ -765,7 +779,7 @@ The Reference Rate is the **`median` field of `delphioracle`’s `datapoints` ta
 
 Record and publish the **newest-datapoint timestamp with every approval**, whether or not it triggers a check.
 
-**The fallback rate.** If the newest `eosusd` datapoint is more than **24 hours** old at a read, or the pair or `delphioracle` contract is unavailable, renamed, or deprecated, use the **midpoint of CoinMarketCap's published daily high and low USD prices for Vaulta (A), ID 36462**, for the **UTC calendar day before the read**; add the high and low and divide by two.
+**The fallback rate.** If the newest `eosusd` datapoint is more than **24 hours** old, or the pair or `delphioracle` is unavailable, renamed, or deprecated, use **(daily high + daily low) ÷ 2** from CoinMarketCap’s published **Vaulta (A), ID 36462**, USD prices for the **UTC day before the read**.
 
 | | |
 |---|---|
@@ -855,7 +869,7 @@ Funding remains subject to **four-cycle authorization**; block producers may dec
 
 **14.5 Existing obligations must remain payable.** A Resolution ending the mandate must retain the Committee permission for surviving agreements only or instruct block producers to build a replacement permission.
 
-**14.6** Unspent funds must not carry into the next funding period; at the end of the funding period, after all contracted obligations are met, the remaining balance is returned or swept through the owner permission as MSIG directs; there is no sweep at individual cycle ends because carried balances reduce the next quarterly top-up.
+**14.6** After a funding period ends and all contracted obligations are met, return or sweep the remaining balance through the owner permission as MSIG directs. **Do not carry it into the next funding period**; within a period, balances reduce quarterly top-ups rather than being swept each cycle.
 
 ## 15. Relationship with the Trustee and VS LLC
 
@@ -1034,7 +1048,7 @@ In every case a written assessment against published criteria must exist before 
 
 **22.7 No good proposals.** The Committee may decline to award, change the scope, and republish.
 
-**22.8 Negotiation.** Limited clarification with the preferred proposer is allowed **before** the award decision, and what is agreed goes into the decision record. **Clarification may not change the licence offered** under a Proposer's choice RFP — the licence named in the proposal is the one that becomes a term of the award. Changes after the decision follow section 11.8.
+**22.8 Negotiation.** Limited clarification with the preferred proposer is allowed **before the award decision** and must be recorded. In Proposer’s choice mode, **the offered licence cannot change** and becomes an award term; later changes follow **11.8**.
 
 ## 23. Stage 6 — Award and contracting
 
@@ -1074,9 +1088,13 @@ In every case a written assessment against published criteria must exist before 
 
 **Where pre-existing IP is embedded in the work product, the awardee grants the VST an irrevocable licence back**, surviving termination, sufficient for the Network to use, modify, and have third parties operate the work product.
 
-***Blocking. Counsel must confirm that section 9 of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and the licence back by Schedule A.*** *Until that confirmation is recorded: no **Service** or **Embedded** RFP may be published, since both rely on the carve-out by their nature; and no award of any shape may be contracted with a populated pre-existing-IP schedule. A **Deliverable** award whose schedule is empty carves nothing out and may proceed.*
+**Blocking — counsel confirmation.** Before using a Schedule A pre-existing-IP carve-out and licence back, record counsel’s confirmation that **section 9 of the standard Independent Contractor Agreement permits them**. Until then:
 
-*If counsel finds section 9 does not permit the carve-out, amend the agreement itself before using it; Schedule A cannot narrow its vesting clause. Defining work product by shape does not itself narrow section 9.*
+- Do not publish **Service or Embedded RFPs**.
+- Do not contract any award with a **populated pre-existing-IP schedule**.
+- A **Deliverable** award with an empty schedule may proceed.
+
+If section 9 does not permit the carve-out, **amend the agreement first**; neither Schedule A nor defining work product by shape may narrow its vesting clause.
 
 **23.4 Publication of award.** Published within **2 business days** of the decision, per section 10.3. Unsuccessful proposers may request their own scores and a short written explanation.
 
@@ -1096,7 +1114,7 @@ In every case a written assessment against published criteria must exist before 
 | **Service** | Delivery of the **operational handover set** and confirmation that any **Network data has been exported**. The checklist must not ask for a deliverable handover; there is none |
 | **Embedded** | A **tagged source copy of the deliverable** in a Network-controlled repository where it is open source; where it is not, written confirmation that the licence or other alternative named in the RFP is in force, plus any escrow deposit made |
 
-**A terminated award closes on its shape's handover items, and, where 25.2 applies, that review.** Final acceptance and final payment are not required where the award ended under 11.10. On a terminated **Deliverable** or **Embedded** award the handover items are those covering **work accepted before termination**; where nothing was accepted, the award closes on the published termination record alone.
+**Terminated awards** require their shape’s handover and any review due under **25.2**. Final acceptance and final payment are not required after termination under **11.10**. For **Deliverable and Embedded** awards, hand over only work accepted before termination; if none was accepted, close on the published termination record alone.
 
 **25.2 Review after large awards.** For awards at or above the **MSIG #5 Part D threshold (Appendix B)**, measured on **total contract value (13.2)**, review whether the need was met, the budget was appropriate, and the Network would fund the work again.
 
@@ -1157,7 +1175,7 @@ The **two-milestone minimum in 11.1a does not apply**. For **23.2 and 23.3**, su
 13. **no bounty may be split** out of work that should have been an RFP (rule 5 of section 27 applies unchanged);
 14. If the Committee expects **only one realistic deliverer**, record the expectation and reasons at publication, identify it as **sole-source**, and list it separately in the cycle report. This does not bar the bounty;
 
-**Evaluation rules.** Sections **21.2, 22.1, 22.4, and 22.5 do not apply**. Under **22.2**, the Manager must check each delivery’s completeness, eligibility, conflicts, and ban-register status in receipt order **before acceptance assessment**; the milestone-schedule and licence-mode checks do not apply. The Manager’s **written acceptance determination against published criteria satisfies 22.3**; no scoring, weights, or reconciliation apply.
+**Evaluation rules.** Sections **21.2, 22.1, 22.4, and 22.5 do not apply**. Before acceptance assessment, the Manager checks each delivery’s completeness, eligibility, conflicts, and ban status **in receipt order** under **22.2**; omit milestone-schedule and licence-mode checks. A **written acceptance determination against published criteria satisfies 22.3**; no scoring, weights, or reconciliation apply.
 
 Use a **directed RFP where competitive evaluation would add value**, such as comparing capable teams, approaches, or prices; the Committee records that judgment under rule 14. This is not a bounty size limit.
 
@@ -1226,5 +1244,5 @@ The table identifies where each setting is defined. Settings in MSIG #5 can chan
 | 5 | Technical Reviewer roster for technical categories | — |
 | 6 | Portal readiness to host the backlog, award records, and objection register | — |
 | 7 | The **disclosure questionnaire instrument** — **drafted as version `VQ1`**; text, coded-answer schema and position bands complete (section 6.3a). What remains is publication with the register open for filing | **Yes** — the Program Account is not funded until every member has filed, and nobody can file until the register is open |
-| 8 | The **`disc.vst` account and its three registers** — **disclosures** (6.3b), **decisions** and **publications** (7.6a), as three tables in one contract or more: deployment, ABI, both schemas, RAM provisioning (**estimated and settled at Exhibit D 8.6 — 16 MB at launch, VST and VS LLC provisioning and topping up**), the upgrade path, and who signs the writes. **Specified at Exhibit D Parts 7 and 8; to be built and serviced by the EOS Rio team, with VS LLC accountable** and covers it in the Exhibit D configuration under MSIG #5 Part E (PRD section 7.2) | **Yes** — the Program Account is not funded until Exhibit D is published |
+| 8 | Deploy **`disc.vst`** with the **disclosures (6.3b), decisions, and publications (7.6a)** tables in one or more contracts; publish the ABI, both schemas, write authority, upgrade path, and RAM provision. **Exhibit D Parts 7 and 8** specify the design, including **16 MB at launch**, provisioned and topped up by VST and VS LLC (**8.6**). The **EOS Rio team** builds and services it; **VS LLC remains accountable** and records it in Exhibit D under MSIG #5 Part E (PRD 7.2). | **Yes** — no funding before Exhibit D publication |
 | 10 | **Counsel to confirm section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A (section 23.3a) | **Yes** — until confirmed, no Service or Embedded RFP may be published, and no award may be contracted with a populated pre-existing-IP schedule |
