@@ -1,4 +1,4 @@
-# Disclosure Questionnaire — Version 1
+# Disclosure Questionnaire
 
 **Version:** 1.4\
 **Status:** Draft\
@@ -17,7 +17,7 @@ This questionnaire is the **conflict-of-interest declaration** required by the *
 
 | Who | When |
 |---|---|
-| **Steering Committee member** | Within **30 days**, running from the later of the execution of their appointment Resolution and the date VS LLC publishes the register as open for filing. **Signing weight and pay do not begin until it is filed** |
+| **Steering Committee member** | Within **30 days** after appointment execution or VS LLC announcing the register is open, **whichever is later**. Pay and signing weight begin only after filing. |
 | **RFP Program Manager** | Before being recorded as **Manager of record** on any RFP |
 | **Technical Reviewer** | Before being **assigned to any RFP** |
 | **A member taking a Reviewer engagement** under Framework 12.6 | An **update**, filed **before the engagement begins**. The 10-business-day change window does not apply to it |
@@ -35,7 +35,7 @@ This questionnaire is the **conflict-of-interest declaration** required by the *
 
 ## Keep it current
 
-Update within **10 business days** of a change and **refile annually**. Committee members taking a Reviewer engagement must file an update **before it begins**.
+Update within **10 business days** of a change and **refile annually**.
 
 An annual refiling more than **30 days overdue** suspends Committee pay and blocks new Manager or Reviewer assignments until filed; **existing assignments continue** (Framework 6.6).
 
@@ -57,7 +57,7 @@ An annual refiling more than **30 days overdue** suspends Committee pay and bloc
 
 ## Part 1 — Identity and role
 
-*Not coded. The public identity, role, account, date, and filing type are recorded on-chain. Any private legal identification requested at 1.1 is collected separately by VS LLC and must not be included in the public filing.*
+*Not coded. Provide 1.1 privately to VS LLC; record answers 1.2–1.7 on-chain.*
 
 | # | Question |
 |---|---|
@@ -125,7 +125,7 @@ Treasury-affiliated people cannot serve as Committee members, Managers, or Revie
 
 **Name the organizations**, not individuals. Managers and Reviewers are conflicted where an awardee is, or is connected to, an organization declared here (Framework 6.4).
 
-If **m < n**, explain in the full submission why you would not recuse on every declared organization; a non-recusal requires a stated reason.
+For every listed organization you would not recuse on, **explain why in your full answers**.
 
 ---
 
