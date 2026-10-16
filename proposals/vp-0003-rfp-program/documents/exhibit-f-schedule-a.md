@@ -13,9 +13,9 @@
 
 **VS LLC** engages Committee members, Program Managers, Technical Reviewers, and awardees under its **standard Independent Contractor Agreement**; use the Schedule A for the role.
 
-## Common terms
+## Shared contract conditions
 
-**These Common terms form part of each Schedule A below and must accompany the signed schedule.** Role-specific requirements apply only to the roles named.
+**These shared contract conditions form part of each Schedule A below and must accompany the signed schedule.** Role-specific requirements apply only to the roles named.
 
 **Framework** means the **Vaulta Network RFP Framework (Exhibit A to MSIG #5)**. Its requirements for Contractor’s role, and the MSIG #5 terms and Exhibits B and D cited below, **form part of this Schedule A**.
 
@@ -49,7 +49,7 @@ The main agreement applies to every schedule:
 
 **1. Role:** Vaulta Network Steering Committee Member — [Core Development / Marketing / Business Development / General (At-Large) / Community] seat.
 
-**The Common terms above are incorporated into this Schedule A and must accompany it when signed.**
+**The shared contract conditions above are incorporated into this Schedule A and must accompany it when signed.**
 
 **2. Work:**
 
@@ -68,7 +68,7 @@ The main agreement applies to every schedule:
 
 **4. Expenses:** Reasonable, documented, **pre-approved** travel to Network events and role-specific tooling.
 
-**5. Records and reporting:** Record attendance and votes in published minutes; disclosures follow the **Common terms**.
+**5. Records and reporting:** Record attendance and votes in published minutes; disclosures follow the **shared contract conditions**.
 
 **6. Limits:**
 
@@ -88,7 +88,7 @@ The main agreement applies to every schedule:
 
 **1. Role:** RFP Program Manager; Contractor **must not be a seated Committee member** (Framework 12.2a).
 
-**The Common terms above are incorporated into this Schedule A and must accompany it when signed.**
+**The shared contract conditions above are incorporated into this Schedule A and must accompany it when signed.**
 
 **2. Work:** For each RFP or bounty managed:
 
@@ -108,13 +108,13 @@ Fees are **fixed, not hourly or a percentage of an award**, and do not depend on
 
 **4. Expenses:** Pre-approved and documented only.
 
-**5. Records and reporting:** Report status, milestone approval records, qualifying post-award reviews, and concurrent RFP workload for cycle reports; disclosures follow the **Common terms**.
+**5. Records and reporting:** Report status, milestone approval records, qualifying post-award reviews, and concurrent RFP workload for cycle reports; disclosures follow the **shared contract conditions**.
 
 **6. Limits:**
 
 - Committee appointment **automatically ends this engagement for every RFP**; the role restriction and reassignment process follow **Framework 12.2a–12.3**.
 - Contractor has **no award vote or signing key**. Milestone authority, conflicts, and rate-check referrals follow **Framework 5.5, 6.4, 11.1–11.5, and 13.4**; approval does not itself execute payment under **7.2 and 10.1**.
-- Termination recommendations and good-faith protections follow the **Common terms and Framework 11.10a**.
+- Termination recommendations and good-faith protections follow the **shared contract conditions and Framework 11.10a**.
 
 ---
 
@@ -122,7 +122,7 @@ Fees are **fixed, not hourly or a percentage of an award**, and do not depend on
 
 **1. Role:** Technical Reviewer — [RFP reference].
 
-**The Common terms above are incorporated into this Schedule A and must accompany it when signed.**
+**The shared contract conditions above are incorporated into this Schedule A and must accompany it when signed.**
 
 **2. Work:** The Committee decides at scoping whether the work is technical and needs a Reviewer, including for **Service awards**; the published Reviewer-engaged setting applies throughout the award (Framework 20.2).
 
@@ -137,7 +137,7 @@ Fees are **fixed, not hourly or a percentage of an award**, and do not depend on
 
 **4. Expenses:** Pre-approved and documented only.
 
-**5. Records and reporting:** Provide written scores with reasons, subject to the Committee-member exception, and written milestone assessments; disclosures follow the **Common terms**.
+**5. Records and reporting:** Provide written scores with reasons, subject to the Committee-member exception, and written milestone assessments; disclosures follow the **shared contract conditions**.
 
 **6. Limits:**
 
@@ -145,7 +145,7 @@ The Reviewer role gives **no award vote, signing key, or authority to approve mi
 
 A Committee member’s Reviewer engagement must comply with **all of Framework 12.6**, including eligibility, recusals, substitution, suspension and resumption, fee limits, and reporting. Disclosure and payment of their own fees follow **6.3c and 13.3a**; fees are prorated to work performed where required by **12.6.1**.
 
-- Termination recommendations and good-faith protections follow the **Common terms and Framework 11.10a**.
+- Termination recommendations and good-faith protections follow the **shared contract conditions and Framework 11.10a**.
 
 ---
 
@@ -153,7 +153,7 @@ A Committee member’s Reviewer engagement must comply with **all of Framework 1
 
 **1. Role:** RFP Awardee — [RFP reference and title].
 
-**The Common terms above are incorporated into this Schedule A and must accompany it when signed.**
+**The shared contract conditions above are incorporated into this Schedule A and must accompany it when signed.**
 
 **2. Work:** The scope, deliverables, and acceptance criteria must **exactly match the published RFP and award decision**.
 
@@ -272,4 +272,4 @@ If the deliverable cannot be released as usable open source, record the **licenc
 6. Review the **Trustee Compensation and Indemnification Acknowledgment** and resolve available governance-role indemnification **before MSIG #5 Part H is final**; it remains unreviewed.
 7. Confirm that **§5’s general for-cause and without-cause terms apply to awardees**; its automatic-termination provision addresses MSIG-appointed roles.
 8. Confirm that **§9 permits the 7.2 Pre-Existing IP carve-out and 7.3a licence back through Schedule A**; the blocking restrictions remain in Awardee section 7. Defining Work Product by award shape does not itself narrow §9.
-9. Confirm the **incorporation and version references** in the Common terms, including the distinction between later governance amendments and changes to contractual work, pay, or protections under the main agreement’s amendment process.
+9. Confirm the **incorporation and version references** in the shared contract conditions, including the distinction between later governance amendments and changes to contractual work, pay, or protections under the main agreement’s amendment process.
