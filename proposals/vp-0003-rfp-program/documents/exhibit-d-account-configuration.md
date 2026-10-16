@@ -394,9 +394,10 @@ An empty table confirms that the deployment matches this specification.
 
 **Complete before publication:**
 
-- Fill every deployment-confirmation field: accounts and transaction IDs, permission names, CPU/NET, ABI and code hash, and writing authority.
+- **D1 — Deployment record:** Fill every deployment-confirmation field: accounts and transaction IDs, permission names, CPU/NET, ABI and code hash, and writing authority.
 - Deploy to **testnet first**, verify the deployed ABI and all three table schemas, and rehearse **both cancellation routes** in Part 4, checking authorities, thresholds, and parameters; record the evidence below before mainnet.
-- Publish the completed Exhibit **before funding** (MSIG #5 Part E). Member keys may be added as they arrive in **2.2**; funding and permission activation still require all five keys and the other **Framework 1.1** conditions.
+- Publish the completed Exhibit **before funding** (MSIG #5 Part E).
+- **D6 — Member keys:** Add keys as they arrive in **2.2**, without delaying publication; funding and permission activation still require all five keys and the other **Framework 1.1** conditions.
 
 | | |
 |---|---|
