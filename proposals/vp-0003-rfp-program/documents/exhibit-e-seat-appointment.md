@@ -62,7 +62,7 @@ Each candidate writes **about 300–800 words in plain language** about their se
 
 *Declare interests separately in the disclosure questionnaire (**Framework 6.3a**).*
 
-## Optional slate note
+## Optional note
 
 A slate may include a shared vision statement, but **each candidate must still provide their own**.
 
