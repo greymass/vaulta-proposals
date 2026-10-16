@@ -67,7 +67,7 @@ An annual refiling more than **30 days overdue** suspends Committee pay and bloc
 | 1.4 | Seat, or the RFPs this filing covers |
 | 1.5 | On-chain account |
 | 1.6 | Date |
-| 1.7 | Filing type: **initial** / **update** / **annual refiling**. For an update or refiling, the **transaction id of the filing it supersedes** |
+| 1.7 | Filing type: **initial, update, or annual refiling**. For updates and refilings, give the **transaction ID of the filing being replaced**. |
 
 ---
 
@@ -87,7 +87,7 @@ An annual refiling more than **30 days overdue** suspends Committee pay and bloc
 
 | # | Question | Coded as |
 |---|---|---|
-| 3.1 | Any **employment, contract, consulting, advisory, board, or equity relationship** with the Vaulta Treasury or any entity it controls — **now, or in the previous 12 months** | `N` or `Y`*n* |
+| 3.1 | List any employment, contracts, consulting, advisory or board roles, or equity interests with the **Vaulta Treasury or entities it controls**, **now or in the past 12 months**. | `N` or `Y`*n* |
 
 Treasury-affiliated people cannot serve as Committee members, Managers, or Reviewers without an **express MSIG waiver at the Threshold, with published reasons** (Framework 2.4a); disclose the affiliation so the waiver can be considered.
 
@@ -97,9 +97,9 @@ Treasury-affiliated people cannot serve as Committee members, Managers, or Revie
 
 | # | Question | Coded as |
 |---|---|---|
-| 4.1 | Any **Vaulta-ecosystem token, equity, or option position other than A**, by aggregate band | `V0`–`V4`, plus `Y`*n* for the number of positions |
-| 4.2 | Any position **held on behalf of another person** | `N` or `Y`*n* |
-| 4.3 | Any position **deliberately taken to profit from a fall in the price of A** — a short sale, a put option, or an inverse product | `N` or `Y`*n* |
+| 4.1 | List your Vaulta-ecosystem token, equity, and option positions, **excluding A**, and give their **aggregate USD band**. | `V0`–`V4`, plus `Y`*n* for the number of positions |
+| 4.2 | List positions you hold **on behalf of someone else**. | `N` or `Y`*n* |
+| 4.3 | List positions deliberately taken to **profit if A’s price falls**, such as short sales, put options, or inverse products. | `N` or `Y`*n* |
 
 **Aggregate USD bands at the filing date:**
 
@@ -119,9 +119,9 @@ Treasury-affiliated people cannot serve as Committee members, Managers, or Revie
 
 | # | Question | Coded as |
 |---|---|---|
-| 5.1 | **Named organizations** you are connected to that plausibly bid | `N` or `Y`*n* |
-| 5.2 | The **nature of each connection** — employment, ownership, contract, advisory, family, or other | Not coded; in the full submission |
-| 5.3 | For each organization named, **would you recuse** on an RFP it bids on? | `N`, or `R`*m* where *m* is the number you would recuse on, out of *n* |
+| 5.1 | Name organizations connected to you that **plausibly bid**. | `N` or `Y`*n* |
+| 5.2 | Describe each connection: employment, ownership, contract, advisory, family, or other. | Not coded; in the full submission |
+| 5.3 | For each organization, state whether you would **recuse yourself from an RFP it bids on**. | `N`, or `R`*m* where *m* is the number you would recuse on, out of *n* |
 
 **Name the organizations**, not individuals. Managers and Reviewers are conflicted where an awardee is, or is connected to, an organization declared here (Framework 6.4).
 
@@ -133,7 +133,7 @@ If **m < n**, explain in the full submission why you would not recuse on every d
 
 | # | Question | Coded as |
 |---|---|---|
-| 6.1 | Any role in **another grant, funding, or treasury body** — in this ecosystem or any other, paid or unpaid, current or in the previous 12 months | `N` or `Y`*n* |
+| 6.1 | List roles in other grant, funding, or treasury bodies—**paid or unpaid, in any ecosystem, now or in the past 12 months**. | `N` or `Y`*n* |
 
 ---
 
@@ -141,7 +141,7 @@ If **m < n**, explain in the full submission why you would not recuse on every d
 
 | # | Question | Coded as |
 |---|---|---|
-| 7.1 | Any connection of the kind covered by **Parts 2 to 5** held by an **immediate family member or household member** | `N` or `Y`*n* |
+| 7.1 | List connections covered by **Parts 2–5** involving your **immediate family or household members**. | `N` or `Y`*n* |
 
 **Do not name the person.** Give only the relationship and connection, for example “a household member is employed by [organization]”; the organization may be named.
 
@@ -151,7 +151,7 @@ If **m < n**, explain in the full submission why you would not recuse on every d
 
 | # | Question | Coded as |
 |---|---|---|
-| 8.1 | Any prior **removal, ban, or sanction** from a funding, governance, or treasury role, anywhere, at any time | `N` or `Y`*n* |
+| 8.1 | List any removal, ban, or sanction from a funding, governance, or treasury role, **anywhere, at any time**. | `N` or `Y`*n* |
 
 ---
 
