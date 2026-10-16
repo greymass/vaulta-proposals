@@ -588,15 +588,14 @@ During a suspension under **13.4a**, publish the determination, its date, and th
 
 **Name and account** must match questionnaire Part 1 (6.3a) and the seat register. The name must be a **legal name or registered handle, unchanged during the term**; neither name nor account may be redacted under 5.9.
 
-**11.4 Administrative signatures.** Members must sign under **7.2** after checking only that:
+**11.4 Administrative signatures.** Members must sign under **7.2** after checking **only the relevant row below**:
 
-1. A complete approval record exists;
-2. The amount matches the published milestone schedule;
-3. The Reviewer assessment required by **11.2** is present;
-4. The payment is within the award; and
-5. No termination recommendation under **11.10a** is open on the award.
+| Payment | Required checks |
+|---|---|
+| **Milestone payment** | A complete approval record exists; the amount matches the published milestone schedule; the Reviewer assessment required by **11.2** is present; the payment is within the award; and no termination recommendation under **11.10a** is open on the award. |
+| **Initial disbursement (11.4a)** | The decision record is complete; the signed agreement matches it; the amount is within the limits; and no termination recommendation under **11.10a** is open. |
 
-**11.4a Initial disbursement.** Before proposing payment, signers check only that the decision record is complete, the signed agreement matches it, the amount is within the limits, and no termination recommendation under **11.10a** is open. **Execution**, rather than proposal, requires the completed delay and objection clearance under **10.7**.
+**11.4a Initial disbursement.** Apply the initial-disbursement checks above **before proposing payment**. **Execution, rather than proposal, requires the completed delay and objection clearance under 10.7**.
 
 **11.5 Refusing to sign.** Members must sign even if they voted against the award.
 
@@ -801,7 +800,13 @@ Do **not** release while MSIG confirmation is pending or merely because a termin
 
 **All amounts are denominated in USD and paid in A**: the Cycle Ceiling, Per-Award Limit, Program Cost Ceiling and internal caps, awards, reservations, and Committee pay; the Program Account holds A.
 
-**Milestone payments convert to A when approved for payment**, using the block-producer-operated **Delphi Oracle (`delphioracle`)**.
+**Conversion timing.** Use the block-producer-operated **Delphi Oracle (`delphioracle`)**, subject to the fallback and suspension rules in **13.4–13.4a**.
+
+| Payment type | When the rate is read | Conditions and exceptions |
+|---|---|---|
+| **Milestone payment** | When **approved for payment** | Normally the **Manager’s determination date**; for suspension or referral to the Committee, follow **13.4a** or **13.4**, respectively (**23.3**). |
+| **Advance** | When **payment is proposed** | The same **24-hour staleness check and fallback** as milestones apply; suspension follows **13.4a**. |
+| **Program Costs** | When **payment is proposed** | The same **24-hour staleness check and fallback** as milestones apply. Suspension, accrual, essential-operation exceptions, and resumed payments follow **13.4a**. |
 
 The Reference Rate is the **`median` field of `delphioracle`’s `datapoints` table for `eosusd`**, based on the last 21 qualified submissions; **neither the Committee, VS LLC, nor the awardee supplies it**.
 
@@ -810,8 +815,6 @@ The Reference Rate is the **`median` field of `delphioracle`’s `datapoints` ta
 **The calculation is done in integer arithmetic and truncated:**
 
 **A-units = ⌊ USD-cents × 10^6 ÷ median ⌋**, where one A-unit is 0.0001 A.
-
-**Advances and Program Costs** convert at the **rate read when payment is proposed**, subject to the same 24-hour staleness check and fallback as milestones.
 
 **Oracle precision.** The Committee should note any material effect of the oracle’s fixed **USD 0.0001 price increments** in the cycle report.
 
@@ -1199,12 +1202,23 @@ If section 9 does not permit the carve-out, **amend the agreement first**; neith
 
 **25.2 Review after large awards.** For awards at or above the **MSIG #5 Part D threshold (Appendix B)**, measured on **total contract value (13.2)**, review whether the need was met, the budget was appropriate, and the Network would fund the work again.
 
-- **Deadline:** publish within **20 business days** of final acceptance or publication of the ending record: termination under 11.10, termination or variation by agreement under 11.8, awardee termination under the suspension long-stop, or expiry under 10.10. For bounties, count from the Manager’s **written acceptance determination under 26a rule 2**.
-- **Author:** the Manager of record. If none is available, their engagement ended, or they recommended termination, the Committee appoints another Manager from the pool at **majority, minimum 3**, recording why. If no unconflicted Manager is available, follow 9.1 and 12.3.
-- **Scope and fee:** reviews are within the Manager’s **Exhibit B scope** and paid separately. Include terminated awards and bounties meeting the threshold; for terminations, explain why the award ended and what the program would change.
-- **Awardee response:** provide the review **5 business days before publication**; the awardee may respond within that window and the response is published with it. Publish even without a response.
-- **Redaction:** only confidential commercial information of the awardee, legal advice, or personal data may be removed. **Program decision-makers’ names, roles, seats, and accounts remain public under 5.9.** Decide redactions at **majority, minimum 3**, record the decision, and finish before writing to the register (7.6a). Redaction must not alter conclusions or be based on disagreement with the Manager’s judgment (11.5).
-- **Publication and closure:** publish on the Portal, link the review from the next cycle report (13.5), and do not close an award requiring a review until it is published.
+**Review publication deadlines:**
+
+| Trigger | Deadline |
+|---|---|
+| **Final acceptance** | Publish within **20 business days**. |
+| **Publication of the ending record** — termination under **11.10**, termination or variation by agreement under **11.8**, awardee termination under the **suspension long-stop**, or expiry under **10.10** | Publish within **20 business days**. |
+| **Bounties — instead of the triggers above** | Publish within **20 business days** of the Manager’s **written acceptance determination under 26a rule 2**. |
+
+**Review requirements:**
+
+| Area | Requirement |
+|---|---|
+| **Author** | the Manager of record. If none is available, their engagement ended, or they recommended termination, the Committee appoints another Manager from the pool at **majority, minimum 3**, recording why. If no unconflicted Manager is available, follow 9.1 and 12.3. |
+| **Scope and fee** | reviews are within the Manager’s **Exhibit B scope** and paid separately. Include terminated awards and bounties meeting the threshold; for terminations, explain why the award ended and what the program would change. |
+| **Awardee response** | provide the review **5 business days before publication**; the awardee may respond within that window and the response is published with it. Publish even without a response. |
+| **Redaction** | only confidential commercial information of the awardee, legal advice, or personal data may be removed. **Program decision-makers’ names, roles, seats, and accounts remain public under 5.9.** Decide redactions at **majority, minimum 3**, record the decision, and finish before writing to the register (7.6a). Redaction must not alter conclusions or be based on disagreement with the Manager’s judgment (11.5). |
+| **Publication and closure** | publish on the Portal, link the review from the next cycle report (13.5), and do not close an award requiring a review until it is published. |
 
 **25.3 Cycle report and annual review** follow **Part 1, sections 13.5, 14.3 and 16.1**.
 
