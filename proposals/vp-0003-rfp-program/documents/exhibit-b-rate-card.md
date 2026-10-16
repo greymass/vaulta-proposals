@@ -46,18 +46,13 @@ The fee **replaces any milestone fee for the same determination**; both cannot b
 
 **Payment.** Fees are denominated in USD and paid in A at the Reference Rate on the payment date, through the published Program Cost schedule (Framework 13.4 and 13.3a); during a payment suspension under 13.4a, fees accrue and are paid when payments resume, using the rate then current.
 
-### How this sits with Framework 12.5
+### Fees and independent decisions
 
-Framework 12.5: *neither role's pay may depend on milestone approval, or on the size, number, or outcome of any award.* Paying per milestone runs close enough to that line to need answering directly.
-
-| Question | Answer |
-|---|---|
-| **Does the fee depend on milestone approval?** | **No.** The fee falls due on the **determination** — the Manager's decision that a milestone has been met or has not, and the Reviewer's written assessment — **not on the approval for payment that may follow**. It is identical whether the determination is accept, accept with conditions, or reject. A Manager who rejects a milestone is paid the same as one who approves it |
-| **Does rejecting pay more?** | **No.** A reassessment of remediated work under a recovery plan (Framework 11.9) is **covered by the original milestone fee** and is not separately payable, for either role. Without that rule, rejecting would generate a second fee, which is exactly the contingency 12.5 exists to prevent |
-| **Does the fee depend on the size of the award?** | **No.** It varies with the **number of milestones**, which measures how much work the engagement asks for. A USD 90,000 award with two milestones pays less than a USD 20,000 award with six |
-| **Does it depend on whether an award is made, or on whether it survives?** | **It must not, and this is the hard case.** Under pure per-milestone pay a Manager earns nothing for an RFP that closes without an award, and stops earning the moment an award is terminated — so the two outcomes the program most needs a Manager to be willing to reach would both cost them money. Framework 11.10a makes the termination recommendation a **duty**, not a discretion, and pay that punishes a duty is pay depending on outcome. The **no-award fee** is the answer, and it is the only payment here not tied to a milestone |
-| **Does it fully remove that?** | **No, and the residual is accepted deliberately.** A Manager who recommends termination at milestone 2 of 6 is paid for the terminating determination but still forgoes four milestone fees they would have earned by carrying a failing engagement to term. The no-award fee makes the honest determination **paid** rather than **free**; it does not make it **as lucrative** as looking away, and it should not — a card that paid out the remaining schedule on termination would pay people to terminate, which is a worse failure than the one it cures. What carries the rest of the weight is **Framework 11.10a**: making the recommendation is a duty, a good-faith recommendation is not a ground for ending or not renewing the engagement, and the fee is unaffected by whether the Committee acts on it |
-| **Does anything vary at the Committee's discretion?** | **No.** There is no loading, no uplift the Committee may grant, and no rate to negotiate. Framework 12.6.5 says the rate card is set by MSIG and is **not within the Committee's gift** — which is what makes it safe for the Committee to engage its own members as Reviewers. Every figure here is fixed by MSIG and changes only by MSIG |
+- **Pay is for the determination or assessment**, whether the result is accept, accept with conditions, or reject; it does not depend on approving payment.
+- **Reassessment under a recovery plan earns no additional fee** (Framework 11.9).
+- **Fees vary with the number of milestones, not the award’s value**; engagements ending early follow the no-award fee rules above, with no payment for future undetermined milestones.
+- **Managers must recommend termination when required by Framework 11.10a**; a good-faith recommendation must not be grounds for ending or declining to renew their engagement, and their fee is unaffected by whether the Committee acts on it.
+- **The Committee cannot negotiate rates or add premiums**; rates are fixed by MSIG under Framework 12.6.5.
 
 ---
 
