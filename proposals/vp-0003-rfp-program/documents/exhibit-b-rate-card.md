@@ -56,14 +56,11 @@ The fee **replaces any milestone fee for the same determination**; both cannot b
 
 ---
 
-## 1. Who sets and changes this
+## 1. Setting and reviewing rates
 
-| | |
-|---|---|
-| **Set by** | MSIG. This Exhibit is published under MSIG #5 and the figures are not within the Committee's gift (Framework 12.6.5) |
-| **Why not the Committee** | The Committee engages Managers and Reviewers, including, under Framework 12.6, its own members. A body that sets the rate it pays itself has a conflict no recusal fixes, because there is no version of the decision the interested party is absent from |
-| **Changed by** | MSIG at the Threshold. A change takes effect for engagements entered into after it, and does not reprice a live engagement |
-| **Reviewed** | At the annual review under Framework 14.3, against what the cycle reports show the work actually took |
+Rates are set by **MSIG #5** and may change only by **MSIG at the Threshold**; changes apply only to new engagements.
+
+Rates are reviewed annually under **Framework 14.3**, using cycle reports to assess the work required.
 
 ---
 
