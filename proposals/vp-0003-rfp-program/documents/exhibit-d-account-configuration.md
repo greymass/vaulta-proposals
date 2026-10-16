@@ -120,11 +120,9 @@ Pending payment MSIGs may be cancelled through the following authorities. Commit
 | **Block producers** | **`eosio.prods`**, through the owner-controlled route, at **15 of 21**. | Any payment during its delay window. |
 | **Committee** | The separate administrative route, at **3 of 5**. | Before execution; mandatory cancellation follows **Framework 9.1 and 10.5–10.7**. |
 
-Use **`eosio.msig::cancel`** for an unexecuted multisignature proposal. Before the proposal expires, cancellation requires the **proposer account’s authority**. Record the proposer account, exact action parameters, and the permissions through which the Committee and block producers authorize cancellation in **6.1**.
+Cancel pending proposals with **`eosio.msig::cancel`**. Before expiry, cancellation requires the **proposer account’s authority**. Record the proposer account, action parameters, and permissions for both cancellation routes in **6.1**.
 
-The three-signature cancellation route must not grant authority to transfer funds. Record any configuration limitation in **6.2**.
-
-Apply the objection outcomes and cancellation duties in **Framework 10.5–10.7**, including the unavailable-signers procedure in **Framework 9.1**.
+The **3-signature cancellation route must not allow fund transfers**. Record any configuration limitations in **6.2**.
 
 ---
 
