@@ -73,7 +73,7 @@ Skim for specific points:
 
 Reference only:
 
-- [Exhibit E: Seat Appointment MSIG Template](documents/exhibit-e-seat-appointment.md): the required format for the later resolutions that fill Committee seats, each voted on separately. Every candidate needs a network vision statement of 300 to 800 words and declared conflicts. Its stated status is TEMPLATE v2.1.
+- [Exhibit E: Seat Appointment MSIG Template](documents/exhibit-e-seat-appointment.md): the required format for the later resolutions that fill Committee seats, each voted on separately. Every candidate needs a network vision statement of 300 to 800 words and declared conflicts.
 - [Exhibit C: Trust Agreement Conforming Amendments](documents/exhibit-c-trust-agreement-amendments.md): a placeholder, with nothing to review. MSIG #5 attaches Exhibits A, B, D, E, and F and has no Exhibit C: the Trust Agreement amendments once attached under that letter are administered off-chain, and the remaining letters are kept so that existing citations stay correct.
 
 Supporting reference documents, published alongside the resolution and not approved by it:

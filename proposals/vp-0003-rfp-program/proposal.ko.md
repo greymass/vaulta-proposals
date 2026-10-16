@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: 8e70e76fef7dfb9d1e8ff39e9c0142a9dfef0c2e
+source: 6f5d235a39c675732640480f2e6522c101464e9a
 revisions:
     - version: 1
       date: 2026-09-01
@@ -48,7 +48,7 @@ revisions:
 
 참고용:
 
-- [Exhibit E: 좌석 임명 MSIG 템플릿](documents/exhibit-e-seat-appointment.md): 위원회 좌석을 채우는 이후 결의안의 필수 형식이며, 각 결의안은 별도로 표결됩니다. 모든 후보자는 300~800단어의 네트워크 비전 선언문과 이해충돌 신고가 필요합니다. 명시된 상태는 TEMPLATE v2.1입니다.
+- [Exhibit E: 좌석 임명 MSIG 템플릿](documents/exhibit-e-seat-appointment.md): 위원회 좌석을 채우는 이후 결의안의 필수 형식이며, 각 결의안은 별도로 표결됩니다. 모든 후보자는 300~800단어의 네트워크 비전 선언문과 이해충돌 신고가 필요합니다.
 - [Exhibit C: 신탁 계약 정합 개정안](documents/exhibit-c-trust-agreement-amendments.md): 검토할 내용이 없는 자리표시자입니다. MSIG #5에는 Exhibit A, B, D, E, F가 첨부되어 있으며 Exhibit C는 없습니다. 과거 그 문자로 첨부되었던 신탁 계약 개정안은 오프체인에서 관리되며, 기존 인용이 정확하게 유지되도록 나머지 문자는 그대로 유지됩니다.
 
 결의안과 함께 공개되지만 결의안의 승인 대상은 아닌 지원 문서:

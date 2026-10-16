@@ -2,9 +2,6 @@
 
 **Governing framework:** Vaulta Network RFP Framework, Exhibit A to MSIG #5.
 
-**Version:** 2.3\
-**Status:** Template
-
 ---
 
 ## How to use this template

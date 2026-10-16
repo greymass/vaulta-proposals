@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: 8e70e76fef7dfb9d1e8ff39e9c0142a9dfef0c2e
+source: 6f5d235a39c675732640480f2e6522c101464e9a
 revisions:
     - version: 1
       date: 2026-09-01
@@ -48,7 +48,7 @@ revisions:
 
 仅供参考：
 
-- [附件 E：席位任命 MSIG 模板](documents/exhibit-e-seat-appointment.md)：日后填补委员会席位之决议的必需格式，每项决议单独表决。每位候选人须提交 300 至 800 词的网络愿景陈述并申报利益冲突。其自述状态为 TEMPLATE v2.1。
+- [附件 E：席位任命 MSIG 模板](documents/exhibit-e-seat-appointment.md)：日后填补委员会席位之决议的必需格式，每项决议单独表决。每位候选人须提交 300 至 800 词的网络愿景陈述并申报利益冲突。
 - [附件 C：信托协议配套修订](documents/exhibit-c-trust-agreement-amendments.md)：占位文件，无需审阅。MSIG #5 附有附件 A、B、D、E、F，并无附件 C：曾以该字母附上的信托协议修订在链下管理，其余字母保持不变，以确保现有引用依然准确。
 
 随决议一同发布、但不由决议批准的支持文件：
