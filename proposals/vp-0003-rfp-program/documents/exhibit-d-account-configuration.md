@@ -53,7 +53,7 @@ This Exhibit specifies the deployed accounts, permissions, registers, and checks
 | Owner permission | `eosio.prods` |
 | Active permission | *(to confirm on deployment)* |
 
-**A named permission has one threshold.** Record the actual permission hierarchy, action links, contract checks if used, and any code authority in **6.1**; do not assign both thresholds to one permission. The **three-signature administrative route must not satisfy fund-transfer authority**, directly or through a parent or delegated authority. Owner recovery and cancellation remain with block producers at the Threshold. Record both cancellation routes under **2.6**.
+Use separate authorities for fund transfers and administration; **each named permission has one threshold**. Record the actual permission hierarchy, action links, contract checks if used, and any code authority in **6.1**. The **three-signature administrative route must not satisfy fund-transfer authority**, directly or through a parent or delegated authority. Owner recovery and cancellation remain with block producers at the Threshold. Record both cancellation routes under **2.6**.
 
 ### 1.3 Block producer authority
 
@@ -95,7 +95,7 @@ With the `eosio.msig` delay, the timer starts when sufficient approvals are coll
 
 Under either option, **neither VS LLC nor the Committee may waive the wait**. Initial award payments also require a published final objection count and clearance under **Framework 10.7**; four or more objections prohibit execution throughout cancellation and any MSIG-confirmation process.
 
-Later milestone and Program Cost payments retain their delay and cancellation rights, without objection banding.
+Later milestone and Program Cost payments still require the delay and allow cancellation, but the objection thresholds do not apply.
 
 ### 2.3 Held-multisignature fallback
 
@@ -185,7 +185,7 @@ Apply **Framework 13.4–13.4a** to source failure, payment suspension, exceptio
 | **Publication** | The **Manager of record or Chair** records and publishes the failure on the Portal **within 1 business day of the alert**; the **5-business-day escalation clock starts from that record** (Framework 9.2 and 13.4a). |
 | **No response** | If no record is published within 1 business day, VS LLC publishes the alert itself and notifies every member; VS LLC cannot make the Framework 9.2 submission. |
 
-Alert on uncertainty; treat an unreadable table as a failure until a later check clears it, and **log cleared alerts rather than deleting them**.
+Raise an alert when a check is inconclusive. Treat an unreadable table as a failure until a later check clears it. **Retain cleared alerts**.
 
 ### 3.5 Rate evidence
 
@@ -276,7 +276,7 @@ Store program publications other than **minutes, proposals, and the backlog** he
 | `ref` | RFP reference, award reference, seat, cycle, or the row this one amends or answers |
 | `sversion` | Schema version |
 | `published_at` | Publication date; objections must also include the time used for counting under Framework 10.6 |
-| `parties` | Where the record names anyone acting in the program — a block producer objecting, a seat holder, a banned person — **by name and on-chain account** |
+| `parties` | **Name and on-chain account** of anyone identified as acting in the program, including objecting block producers, seat holders, and banned people |
 | `body` | Full record, not a reference to it |
 | `prior` | Transaction id of the row this one supersedes or amends |
 | `reason` | Why, where `prior` is set |
