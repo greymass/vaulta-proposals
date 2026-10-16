@@ -133,15 +133,15 @@ Where candidates in the same proposal conflict under the one-seat or affiliation
 
 **3.3 Continuation.** Members continue month to month after their term ends and **keep their signing key** until a successor is seated or MSIG replaces them.
 
-**3.4 Staggering.** Initial terms for the **Core Development, Marketing, Business Development, and General (At-Large) seats begin when the Program Account receives funds**; a **Community member appointed by MSIG** under 4.2 or 4.7 serves **one year from execution of their appointment Resolution**.
+**3.4 Initial terms.**
 
-| Seat | Initial term |
-|---|---|
-| Core Development | 14 months |
-| Marketing | 14 months |
-| Business Development | 8 months |
-| General (At-Large) | 8 months |
-| Community | See section 4 |
+| Seat | Initial term | Starts when |
+|---|---|---|
+| Core Development | 14 months | The Program Account receives funds |
+| Marketing | 14 months | The Program Account receives funds |
+| Business Development | 8 months | The Program Account receives funds |
+| General (At-Large) | 8 months | The Program Account receives funds |
+| Community, appointed by MSIG under 4.2 or 4.7 | 12 months | The appointment Resolution executes |
 
 All later terms are **12 months**.
 
