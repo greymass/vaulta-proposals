@@ -8,7 +8,7 @@
 
 Published by **Vaulta Stewardship LLC** under **MSIG #5 Part E**.
 
-Before publication, fill values marked *(to confirm on deployment)* from the actual deployment. Record member keys in **section 1.3** as they arrive; funding and permission activation must wait for **all five keys and the other Framework 1.2 requirements**.
+**VS LLC fills in the deployment details in this published Exhibit after deployment and before funding** (6.1). After members are appointed by separate MSIGs, it records their names, public keys, and delivery dates in **6.3**. These details need not be known when MSIG #5 is approved; member keys do not delay publication, but funding and permission activation wait for all five keys and the other **Framework 1.2** requirements. Retain dated published versions so later updates remain traceable.
 
 ---
 
@@ -32,7 +32,7 @@ This Exhibit specifies the deployed accounts, permissions, registers, and checks
 | Account | Purpose | Operating authority | Owner |
 |---|---|---|---|
 | **`rfp.vst`** | Holds program funds. | Committee payments require **4 of 5** signatures; no routine record-writing key. | **`eosio.prods`** |
-| **`disc.vst`** | Holds disclosure, decision, and publication records, **not program funds**. | One named VS LLC writing permission; see 1.5. | **`eosio.prods`** |
+| **`disc.vst`** | Holds disclosure, decision, and publication records, **not program funds**. | One named VS LLC writing permission; see 1.4. | **`eosio.prods`** |
 
 | Item | Details |
 |---|---|
@@ -55,23 +55,11 @@ This Exhibit specifies the deployed accounts, permissions, registers, and checks
 
 **A named permission has one threshold.** Record the actual permission hierarchy, action links, contract checks if used, and any code authority in **6.1**; do not assign both thresholds to one permission. The **three-signature administrative route must not satisfy fund-transfer authority**, directly or through a parent or delegated authority. Owner recovery and cancellation remain with block producers at the Threshold. Verify both routes under **2.6** before funding.
 
-### 1.3 Member-key register
-
-Configure the permission with each member’s delivered public key. **VS LLC maintains the register below**, recording keys as they arrive and retaining superseded keys in dated rows. Key handling follows **Framework 7.4–7.5**; replacements use the owner permission. Publication need not wait for member keys, but funding and permission activation remain subject to **Framework 1.2**.
-
-| Seat | Member | Public key | Delivered | Superseded |
-|---|---|---|---|---|
-| Core Development | [___] | [___] | [___] | — |
-| Marketing | [___] | [___] | [___] | — |
-| Business Development | [___] | [___] | [___] | — |
-| General (At-Large) | [___] | [___] | [___] | — |
-| Community | [___] | [___] | [___] | — |
-
-### 1.4 Block producer authority
+### 1.3 Block producer authority
 
 Configure **`eosio.prods`** as owner for account and key recovery under **Framework 7.3**, and payment cancellation under **Framework 10.8**.
 
-### 1.5 Register writing and upgrades
+### 1.4 Register writing and upgrades
 
 | Authority | Who | Notes |
 |---|---|---|
@@ -321,7 +309,7 @@ Classify the **initial platform build, including both contracts on `disc.vst`**,
 
 ### 6.1 Checklist and evidence
 
-**Complete before publication:**
+**Deployment evidence — complete after deployment and before publication:**
 
 - **D1 — Deployment record:** Fill every deployment-confirmation field: accounts and transaction IDs, permission names, CPU/NET, ABI and code hash, and writing authority.
 - **D2 — Authority and delay design:** Record the selected mechanism, chain capability checks, permission hierarchy, action links, contract checks and code authority if used, transaction-delay fields, and exact cancellation actions and parameters.
@@ -329,7 +317,6 @@ Classify the **initial platform build, including both contracts on `disc.vst`**,
 - **D4 — Rejection tests:** Record tests proving that three members cannot transfer funds, payment cannot execute early, and an initial award payment cannot execute with an unpublished final count or four or more objections.
 - **D5 — Execution tests:** Record a valid four-signature payment after the complete delay and, where applicable, final objection clearance; verify the urgent path and both cancellation routes. **Missing or failing proof blocks funding and activation.**
 - Publish the completed Exhibit **before funding** (MSIG #5 Part E).
-- **D6 — Member keys:** Add keys as they arrive in **1.3**, without delaying publication; funding and permission activation still require all five keys and the other **Framework 1.2** conditions.
 
 | | |
 |---|---|
@@ -355,6 +342,24 @@ If anything cannot be built as specified, VS LLC must publish the limitation and
 | *(none recorded)* | | | | |
 
 An empty table confirms that the deployment matches this specification.
+
+### 6.3 Member-key register
+
+**D6 — Member keys: Complete after appointments and before funding or permission activation.**
+
+After each appointment MSIG executes, the member provides their public key to VS LLC. **VS LLC fills in the member’s name, public key, and delivery date in the table below in the published Exhibit D**, and updates it when keys are replaced or surrendered. Retain superseded keys in dated rows.
+
+Configure the on-chain signing permissions on **`rfp.vst`** with the delivered keys; this table documents the configuration and does not itself grant signing authority. Key handling follows **Framework 7.4–7.5**; replacements use the owner permission.
+
+This Exhibit may be published before member keys arrive, but funding and permission activation remain subject to **Framework 1.2**.
+
+| Seat | Member | Public key | Delivered | Superseded |
+|---|---|---|---|---|
+| Core Development | [___] | [___] | [___] | — |
+| Marketing | [___] | [___] | [___] | — |
+| Business Development | [___] | [___] | [___] | — |
+| General (At-Large) | [___] | [___] | [___] | — |
+| Community | [___] | [___] | [___] | — |
 
 ---
 
