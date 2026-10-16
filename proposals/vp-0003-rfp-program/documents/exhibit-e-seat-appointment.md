@@ -64,7 +64,9 @@ Each candidate writes **about 300–800 words in plain language** about their se
 
 ## Optional slate note
 
-[Why these candidates are proposed together; each still needs an individual statement.]
+A slate may include a shared vision statement, but **each candidate must still provide their own**.
+
+[Why these candidates are proposed together.]
 
 ## Resolved clauses
 

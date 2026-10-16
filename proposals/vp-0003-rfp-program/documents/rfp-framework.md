@@ -92,11 +92,11 @@ Anyone in these roles who becomes Treasury-affiliated must disclose it within **
 
 ## 3. Member appointments and terms
 
-**3.1** The **Core Development, Marketing, Business Development, and General (At-Large) seats** must be filled by MSIG Resolutions at the Threshold using **Exhibit E to MSIG #5**; each proposal may cover **one or more seats**.
+**3.1** Committee appointments must be approved by **MSIG Resolution at the Threshold**, with appointment proposals meeting **all requirements in Exhibit E to MSIG #5**; the Community seat also follows section 4. Each proposal may cover **one or more seats**.
 
 Block producers may approve competing proposals for a seat, but the **first appointment executed by block time** fills it; later executions have no effect for that seat.
 
-Each proposal must state its **resolution mode**:
+The **resolution mode selected under Exhibit E** has these effects:
 
 - **Seat by seat** (default): Each appointment is considered independently; an appointment that cannot take effect does not affect the others.
 - **All or nothing**: No appointments take effect if any listed appointment cannot take effect.
@@ -111,14 +111,7 @@ An appointment has **no effect** if, at execution:
 
 If candidates in the same proposal conflict under the one-seat or affiliation rules, **Candidates table order sets priority**: the first appointment takes effect, and conflicting later appointments have no effect, subject to the chosen resolution mode.
 
-**3.1a Network vision statements.** Every appointment proposal must include a statement **written by each candidate about their seat’s portfolio**, covering:
-
-1. The Network’s needs during the term.
-2. What they would prioritize funding and what they would decline.
-3. How they would measure the program’s success by the end of their term.
-4. Positions or commitments block producers should know about.
-
-Aim for **300–800 words in plain language**, with a translation where helpful; declare interests separately in the disclosure questionnaire under **6.3a**. A slate may include a shared statement, but each candidate must still provide their own.
+**3.1a Network vision statements.** Every appointment proposal must include a **candidate-written network vision statement meeting Exhibit E’s requirements**.
 
 **Missing statements.** A proposal missing a statement is incomplete and should not be proposed or approved; if it executes, the appointment remains valid, but VS LLC must record the omission in the seat register, and **pay and signing weight cannot begin until the statement and the contract, questionnaire, and signing key required by MSIG #5 Part B are complete**.
 
