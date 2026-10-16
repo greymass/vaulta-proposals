@@ -113,6 +113,8 @@ Use the **3-day urgent delay** only after publishing the Committee’s urgency v
 
 ### 2.6 Cancellation
 
+Pending payment MSIGs may be cancelled through the following authorities. Committee cancellation is mandatory when required by the Framework’s objection rules.
+
 | Who | Authority | When |
 |---|---|---|
 | **Block producers** | **`eosio.prods`**, through the owner-controlled route, at **15 of 21**. | Any payment during its delay window. |
