@@ -105,7 +105,7 @@ Before using the fallback, VS LLC must **republish Exhibit D**, recording the pr
 
 ### 2.4 Urgent payments
 
-Use the **72-hour** delay only after the urgency vote and reasons have been published under **Framework 10.4**.
+Use the **3-day urgent delay** only after publishing the Committee’s urgency vote and reasons, as required by **Framework 10.4**.
 
 ### 2.5 Contract before payment
 
