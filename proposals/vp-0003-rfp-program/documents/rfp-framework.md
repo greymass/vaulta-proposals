@@ -752,11 +752,11 @@ The **Cycle Ceiling** caps commitments to awardees. The **Program Cost Ceiling**
 
 **Start dates.** The first cycle starts **when the Program Account receives funds**, not when MSIG #5 passes. That date also starts the **four staggered seats’ initial terms under 3.4**. Committee pay accrues from **contract signature or the funding date, whichever is later**. The Committee must publish the funding date on the Portal.
 
-**13.2 Reservation.** Reserve an award’s full **USD** value against the Cycle Ceiling from the decision through publication, contracting, the delay, and any MSIG confirmation; that amount is unavailable for other awards. **No payment may move before an agreement exists and the delay ends.** Multi-cycle awards follow the allocation below.
+**13.2 Reservation.** Reserve an award’s full **USD** value against the Cycle Ceiling from the decision through publication, contracting, the delay, and any MSIG confirmation; reserved amounts are unavailable for other awards. For a multi-cycle award, reserve only the amount **payable in the current cycle** against its Cycle Ceiling; allocate the rest to future cycles as **forward commitments**. **No payment may move before an agreement exists and the delay ends.**
 
 **Multi-cycle awards.** The **Per-Award Limit applies to total contract value over the full term**, not each cycle’s payments.
 
-For such an award, only the amount **payable in the current cycle** is reserved against the current Cycle Ceiling. The rest becomes a **forward commitment**, which:
+Each forward commitment:
 
 - automatically reduces the available ceiling in each future cycle it falls into;
 - is listed in every cycle report, by award, showing the amount landing in each future cycle;
@@ -792,13 +792,14 @@ Do **not** release while MSIG confirmation is pending or merely because a termin
 
 | Payment type | Additional requirements or exception |
 |---|---|
-| **Ordinary Program Costs** | Follow the shared rules above. |
 | **Member-Reviewer fees (12.6)** | Require a **separate schedule line and one separate payment per member**, signed by the **other four**. The recipient recuses from their **own line and payment only**; members’ Reviewer fees **must not be combined**. |
 | **Committee retainer** | **All five members may vote on and sign their own USD 2,500 retainer line**, as set equally by **MSIG #5 Part H**. |
 
 **13.4 Denomination and price movement.**
 
 **All amounts are denominated in USD and paid in A**: the Cycle Ceiling, Per-Award Limit, Program Cost Ceiling and internal caps, awards, reservations, and Committee pay; the Program Account holds A.
+
+Awardees receive the contracted **USD value at each milestone**, converted to A under this section. State RFP budgets, award decisions, and approval records in **USD**; record the A amount and rate at each payment.
 
 **Conversion timing.** Use the block-producer-operated **Delphi Oracle (`delphioracle`)**, subject to the fallback and suspension rules in **13.4–13.4a**.
 
@@ -818,7 +819,7 @@ The Reference Rate is the **`median` field of `delphioracle`’s `datapoints` ta
 
 **Oracle precision.** The Committee should note any material effect of the oracle’s fixed **USD 0.0001 price increments** in the cycle report.
 
-**Rate evidence.** For an oracle read, every approval record must capture the **oracle value, block number, transaction ID, and newest-datapoint timestamp**; for a fallback read, use the replacement evidence in the fallback table below.
+**Rate evidence.** For an oracle read, every approval record must capture the **oracle value, block number, transaction ID, and newest-datapoint timestamp**. Record and publish the timestamp with every approval, whether or not a check is triggered; for fallback reads, use the replacement evidence below.
 
 **Rate checks.** Use the **fallback** for a stale rate. A collar breach, or staleness when the fallback is unavailable, requires a Committee decision at the ordinary milestone threshold: approve with the issue recorded, or defer. Neither check automatically blocks payment.
 
@@ -826,8 +827,6 @@ The Reference Rate is the **`median` field of `delphioracle`’s `datapoints` ta
 |---|---|
 | **Staleness** | Newest datapoint older than **24 hours** |
 | **Collar** | Approval rate differs by more than **15%** from the previous payment’s rate under that award, or from the award-decision rate for the first payment |
-
-Record and publish the **newest-datapoint timestamp with every approval**, whether or not it triggers a check.
 
 **The fallback rate.** If the newest `eosusd` datapoint is more than **24 hours** old, or the pair or `delphioracle` is unavailable, renamed, or deprecated, use **(daily high + daily low) ÷ 2** from CoinMarketCap’s published **Vaulta (A), ID 36462**, USD prices for the **UTC day before the read**.
 
@@ -839,11 +838,7 @@ Record and publish the **newest-datapoint timestamp with every approval**, wheth
 | **The collar still applies** | A fallback rate is measured against the rate used at the previous payment under that award, like any other |
 | **If the fallback is unavailable too** | Where CoinMarketCap publishes no high and low for that day, a stale but readable oracle goes to the Committee under the staleness check above, and a missing pair or contract suspends payments under 13.4a |
 
-The Exhibit D configuration published by VS LLC under MSIG #5 confirms the pair, precision, and worked examples for the oracle and the fallback rate. The pair is `eosusd` and its `quoted_precision` is 4.
-
-RFP budgets, award decisions, and approval records are stated in **USD**. The A amount and the rate used are recorded at each payment.
-
-**USD entitlement.** Awardees receive the contracted **USD value at each milestone**, converted to A under this section.
+The Exhibit D configuration published by VS LLC under MSIG #5 confirms the pair, precision, and worked examples for the oracle and the fallback rate.
 
 **Coverage requirements:**
 
@@ -858,7 +853,7 @@ RFP budgets, award decisions, and approval records are stated in **USD**. The A 
 
 **13.4a Rate-source failure.**
 
-If **`eosusd` or `delphioracle` becomes unavailable, renamed, or deprecated**, use the **13.4 fallback**; suspend payments only if that is unavailable too.
+For source failures covered by **13.4**, use its fallback; suspend payments only if neither source is available.
 
 The **Chair must record and publish the failure within 2 business days** of any member or VS LLC becoming aware; the affected award’s Manager is the alternate. Escalate to **MSIG within 5 business days of that record** under 9.2, requesting a replacement source. **The Committee cannot choose a substitute.**
 
@@ -889,7 +884,7 @@ The **Chair must record and publish the failure within 2 business days** of any 
 
 If an awardee cannot reasonably continue unpaid, use **variation or termination by agreement under 11.8**; do not substitute a rate or increase the award during suspension.
 
-**13.5 Cycle report.** Each cycle, write the report to the **`publications` register (7.6a)**, display it on the Portal, and send it to MSIG. Include:
+**13.5 Cycle report.** The Program Account must remain **publicly auditable on-chain**. Each cycle, publish a report explaining and reconciling its activity in the **`publications` register (7.6a)**, display it on the Portal, and send it to MSIG. Include:
 
 | Area | Required information |
 |---|---|
@@ -902,8 +897,6 @@ If an awardee cannot reasonably continue unpaid, use **variation or termination 
 | **Escalations** | Matters submitted to MSIG and outcomes. |
 | **Managers and member-Reviewers** | Each Manager’s RFP load and reassignments; every Committee-member Reviewer engagement and fee paid **by member and RFP**, cumulative cycle fees, and engagement count against the concurrent cap (12.6). |
 | **Disclosures** | Questionnaires filed, updated, or overdue, with the on-chain transaction for each. |
-
-**13.6** The Program Account must remain **publicly auditable on-chain**; cycle reports must explain and reconcile its activity.
 
 ## 14. Expiry, suspension, revocation
 
