@@ -69,7 +69,7 @@ FURTHER RESOLVED, that the working group established under MSIG #4 is discharged
 
 ### Part B — The Steering Committee
 
-FURTHER RESOLVED, that the Oversight Committee is renamed the **Vaulta Network Steering Committee**; the same Committee body continues; and the new name applies to references in the Trust Agreement, prior MSIGs, the VS LLC Operating Agreement, and other Trust documents.
+FURTHER RESOLVED, that the Oversight Committee is renamed the **Vaulta Network Steering Committee**; the same Committee body continues, **retaining its records and indemnification rights**; and the new name applies to references in the Trust Agreement, prior MSIGs, the VS LLC Operating Agreement, and other Trust documents.
 
 **Appointments**
 
@@ -81,7 +81,7 @@ FURTHER RESOLVED, that a further MSIG Resolution may correct an appointment exec
 
 **Transition until all five seats are filled**
 
-FURTHER RESOLVED, that **Dafeng Guo (Vaulta Treasury), Ross Dold (EOSphere), and Francis Sangkuan (1DEX)** continue **the former Oversight Committee’s Trust oversight duties only** until all five Steering Committee seats are filled, when their transition service ends; and until then **the RFP mandate must not be exercised, no RFP may be published, and no award may be made**.
+FURTHER RESOLVED, that **Dafeng Guo (Vaulta Treasury), Ross Dold (EOSphere), and Francis Sangkuan (1DEX)** continue **the former Oversight Committee’s Trust oversight duties only** until all five Steering Committee seats are filled, when their transition service ends; Ross Dold may be separately appointed, while Dafeng Guo remains subject to the Treasury exclusion in **Framework 2.4a**; and until then **the RFP mandate must not be exercised, no RFP may be published, and no award may be made**.
 
 ### Part C — The Mandate
 

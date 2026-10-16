@@ -39,17 +39,7 @@ These definitions form part of Part 1.
 
 ## 1. Steering Committee
 
-**1.1** The Oversight Committee is renamed the **Vaulta Network Steering Committee**, retaining its records and indemnification rights.
-
-MSIG #5 fills **none of the five seats**; all members must be appointed by **future MSIG Resolutions at the Threshold using Exhibit E**, with the Community seat selected under section 4; block producers decide when to fill the seats.
-
-**Dafeng Guo, Ross Dold, and Francis Sangkuan** continue performing **Trust oversight only** until all five seats are filled, when their transition service ends; Ross may be separately appointed, while Dafeng remains subject to the Treasury exclusion in section 2.4a.
-
-Until all five seats are filled, **the RFP mandate must not be exercised, no RFP may be published, and no award may be made**.
-
-**The Program Account must not be funded and the Committee permission must not be activated** until all five seats are filled and every member has signed their contract, filed their declaration, and registered a signing key.
-
-**1.2** The Committee oversees the Trust and makes RFP funding decisions for the Network under separate rules:
+**1.1** The Committee oversees the Trust and makes RFP funding decisions for the Network under separate rules:
 
 | | **Trust oversight** | **Network RFP funding** |
 |---|---|---|
@@ -57,6 +47,12 @@ Until all five seats are filled, **the RFP mandate must not be exercised, no RFP
 | Assets | Trust Property | Network funds in the Program Account |
 | Role | Monitors and reports | Decides who receives funding |
 | Accountability | Records required by the Trust Agreement | Publication, payment delays, reports, and funding approval every four cycles |
+
+**1.2** Committee members must be appointed by **MSIG Resolutions at the Threshold using Exhibit E**, with the Community seat selected under section 4; block producers decide when to fill the seats.
+
+Until all five seats are filled, **the RFP mandate must not be exercised, no RFP may be published, and no award may be made**.
+
+**The Program Account must not be funded and the Committee permission must not be activated** until all five seats are filled and every member has signed their contract, filed their declaration, and registered a signing key.
 
 **1.3** Program funds are **not Trust Property**, the RFP program is not a Trust activity, and the Trustee has no role in it.
 

@@ -8,7 +8,7 @@
 
 Published by **Vaulta Stewardship LLC** under **MSIG #5 Part E**.
 
-Before publication, fill values marked *(to confirm on deployment)* from the actual deployment. Record member keys in **section 1.3** as they arrive; funding and permission activation must wait for **all five keys and the other Framework 1.1 requirements**.
+Before publication, fill values marked *(to confirm on deployment)* from the actual deployment. Record member keys in **section 1.3** as they arrive; funding and permission activation must wait for **all five keys and the other Framework 1.2 requirements**.
 
 ---
 
@@ -57,7 +57,7 @@ This Exhibit specifies the deployed accounts, permissions, registers, and checks
 
 ### 1.3 Member-key register
 
-Configure the permission with each member’s delivered public key. **VS LLC maintains the register below**, recording keys as they arrive and retaining superseded keys in dated rows. Key handling follows **Framework 7.4–7.5**; replacements use the owner permission. Publication need not wait for member keys, but funding and permission activation remain subject to **Framework 1.1**.
+Configure the permission with each member’s delivered public key. **VS LLC maintains the register below**, recording keys as they arrive and retaining superseded keys in dated rows. Key handling follows **Framework 7.4–7.5**; replacements use the owner permission. Publication need not wait for member keys, but funding and permission activation remain subject to **Framework 1.2**.
 
 | Seat | Member | Public key | Delivered | Superseded |
 |---|---|---|---|---|
@@ -329,7 +329,7 @@ Classify the **initial platform build, including both contracts on `disc.vst`**,
 - **D4 — Rejection tests:** Record tests proving that three members cannot transfer funds, payment cannot execute early, and an initial award payment cannot execute with an unpublished final count or four or more objections.
 - **D5 — Execution tests:** Record a valid four-signature payment after the complete delay and, where applicable, final objection clearance; verify the urgent path and both cancellation routes. **Missing or failing proof blocks funding and activation.**
 - Publish the completed Exhibit **before funding** (MSIG #5 Part E).
-- **D6 — Member keys:** Add keys as they arrive in **1.3**, without delaying publication; funding and permission activation still require all five keys and the other **Framework 1.1** conditions.
+- **D6 — Member keys:** Add keys as they arrive in **1.3**, without delaying publication; funding and permission activation still require all five keys and the other **Framework 1.2** conditions.
 
 | | |
 |---|---|
