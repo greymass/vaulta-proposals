@@ -10,7 +10,7 @@ Complete the sections below for each candidate and list candidates in **priority
 
 Appointments follow **MSIG #5 Parts B and F and Framework sections 3 and 4**; contracts, disclosures, and signing keys follow **Framework 3.1b**.
 
-Before approving or executing an appointment proposal, block producers should **check the published seat register**; proposers should **cancel proposals that can no longer fill any seat under Framework 3.1**.
+Block producers should **check the published seat register before approving or executing a proposal**; proposers should **cancel proposals that can no longer fill any seat** (Framework 3.1).
 
 ---
 
@@ -36,7 +36,7 @@ Steering Committee Appointment — [SEAT NAME(S)]
 | [General (At-Large)] | [NAME] | [`account`] | [ORG or None] | [None, or affiliation and waiver MSIG] | 8 months |
 | [Community] | [NAME] | [`account`] | [ORG or None] | [None, or affiliation and waiver MSIG] | 12 months |
 
-*The example terms above apply to the **first appointments** under **Framework 3.4**. For later appointments, use **12 months under 3.2**, or the **remaining term for a vacancy under 3.7**; record the applicable start date. The Community seat follows **3.4 and section 4**.*
+*For first appointments, use the terms above (Framework 3.4). For later appointments, use **12 months** (3.2), or the **remaining term when filling a vacancy** (3.7). Record the applicable start date. Community seat appointments also follow section 4.*
 
 **Eligibility checklist — confirm for all candidates:**
 
