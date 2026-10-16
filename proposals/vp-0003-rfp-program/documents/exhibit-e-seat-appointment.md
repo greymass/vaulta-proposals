@@ -1,5 +1,7 @@
 # Seat Appointment MSIG — Template
 
+**Governing framework:** Vaulta Network RFP Framework, Exhibit A to MSIG #5.
+
 **Exhibit E — Seat Appointment MSIG Template**
 
 **Version:** 2.3\
@@ -8,8 +10,6 @@
 ---
 
 ## How to use this template
-
-**Framework** means the **Vaulta Network RFP Framework (Exhibit A to MSIG #5)**.
 
 Complete the sections below for each candidate and list candidates in **priority order** (Framework 3.1). **Incomplete proposals should not be approved.**
 
