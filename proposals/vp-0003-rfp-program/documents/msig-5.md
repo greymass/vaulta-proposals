@@ -24,7 +24,6 @@
 | 12 | **Authorize program funding** | **USD 910,000 over four quarterly cycles**; first instalment: A worth **USD 284,375**. Gross transfer at full spend and a steady A price: **USD 966,875**. Review Notes, note 3. |
 | 13 | Allow **fallback pricing when the oracle is stale or unavailable** | Use the **CoinMarketCap fallback**; Committee approvals, suspensions, and essential operating payments follow **Framework 13.4–13.4a**. **Only block producers** may name a permanent replacement rate source |
 | 14 | **Retain block producer control** | Block producers retain control of limits, yearly funding, appointments, removals, reserved matters, payment cancellation, and suspension or revocation of the mandate without cause; amounts, cycle length, and limits may change at **15/21 at any time**. The program cannot spend unauthorized funds. |
-| 15 | **Require a separate MSIG to create an entity** | Part I. |
 
 ---
 
@@ -158,10 +157,6 @@ FURTHER RESOLVED, that **USD 910,000 is authorized for the first four quarterly 
 FURTHER RESOLVED, that the **25% funding margin provides no authority to spend or commit funds**.
 
 FURTHER RESOLVED, that later instalments within the first four-cycle funding period are authorized **without a further vote**, subject to **Framework 13.1**.
-
-**No authority to create an entity**
-
-FURTHER RESOLVED, that the Committee, VST, and VS LLC may not **form, register, incorporate, or become a member or director of any company, foundation, association, trust, or other entity** on the Network's behalf, directly or through an agent, adviser, or affiliate, whether or not it would hold funds; and **a separate MSIG Resolution at the Threshold is required to create any such entity**.
 
 FURTHER RESOLVED, that this Resolution **does not settle the wider management of the REX yield and Year 1 pools**, and the Committee does not represent the Network for other funds.
 
