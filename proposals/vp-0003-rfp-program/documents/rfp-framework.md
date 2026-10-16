@@ -309,14 +309,18 @@ Records are **append-only**: updates must reference the previous record; nothing
 
 **6.6 Consequences.**
 
-**A minor or procedural breach** — a disclosure filed late, an update missed — is corrected, recorded in the minutes, and reported in the cycle report.
+**Breach descriptions:**
 
-**A material breach** — self-dealing, an undisclosed interest in a proposer or awardee, taking any payment from a proposer or awardee, using proposal information for private advantage, breaching confidentiality, or signing on a matter the person was recused from — carries:
+- **Minor or procedural breach** — a disclosure filed late, an update missed.
+- **Material breach** — self-dealing, an undisclosed interest in a proposer or awardee, taking any payment from a proposer or awardee, using proposal information for private advantage, breaching confidentiality, or signing on a matter the person was recused from.
 
-1. **immediate suspension** of the person's role, signing weight, and pay, on a Committee vote at simple majority with a minimum of 3;
-2. **referral to MSIG**, with the evidence published on the Portal;
-3. **loss of unpaid compensation** under the engagement contract, and **loss of indemnification** for the conduct;
-4. a **permanent ban**, if MSIG confirms it at the Threshold.
+| Breach/action | Required consequence |
+|---|---|
+| **Minor or procedural breach** | Correct it, record it in the minutes, and report it in the cycle report. |
+| **Material breach — suspension** | **Immediately suspend** the person’s role, signing weight, and pay on a **Committee vote at simple majority, minimum 3**. |
+| **Material breach — referral** | **Refer to MSIG**, with the evidence published on the Portal. |
+| **Material breach — compensation and indemnification** | **Loss of unpaid compensation** under the engagement contract and **loss of indemnification** for the conduct. |
+| **Material breach — permanent ban** | A **permanent ban** if MSIG confirms it at the **Threshold**, subject to the scope and protections below. |
 
 **The permanent ban.** On confirmation by not fewer than 15 of the 21 active block producers, the person is **permanently barred** from:
 
@@ -636,10 +640,12 @@ File a **written recommendation** stating the grounds and attaching the mileston
 
 **Effect of filing:**
 
-1. **Within 2 business days of filing**, the Committee must cancel pending payment proposals on that award using the **3-of-5 administrative permission (7.2)**; the filer cannot cancel them. Failure is a removal-referral ground under 10.7, subject to 9.1. Members may withhold signatures while the recommendation is open (11.4).
-2. Freeze further milestone payment approvals until a decision.
-3. Give the awardee the recommendation and **10 business days** to respond in writing; publish their response with it.
-4. Within **15 business days after that response window closes**, the Committee must decide and publish its reasons, including if it declines to terminate.
+| Step | Timing | Required action and effect |
+|---|---|---|
+| **1 — Cancel pending payments** | **Within 2 business days of filing** | The Committee must cancel pending payment proposals on that award using the **3-of-5 administrative permission (7.2)**; the filer cannot cancel them. Failure is a removal-referral ground under **10.7**, subject to **9.1**. Members may withhold signatures while the recommendation is open (**11.4**). |
+| **2 — Freeze approvals** | Until a decision | Freeze further milestone payment approvals. |
+| **3 — Awardee response** | **10 business days** to respond | Give the awardee the recommendation and time to respond **in writing**; publish their response with it. |
+| **4 — Committee decision** | **Within 15 business days after the response window closes** | The Committee must decide and publish its reasons, including if it declines to terminate. |
 
 **The three outcomes and their thresholds:**
 
@@ -649,15 +655,15 @@ File a **written recommendation** stating the grounds and attaching the mileston
 | **Direct a recovery plan** under 11.9, setting the date it is reassessed | Simple majority, minimum 3 |
 | **Decline** | Simple majority, minimum 3 |
 
-**Escalation.** On escalation under 12.6.1(3) or 9.1, suspend the **15-business-day decision clock and deemed decline** from the escalation date; the payment freeze continues. If MSIG does not act within **30 days** under 9.2, the recommendation is deemed declined and the freeze lifts.
+**Exceptions and resumption:**
 
-**If nothing carries.** If no outcome reaches its threshold within the 15 business days, the recommendation is **deemed declined**, the freeze in points 1 and 2 lifts, and the Committee publishes the vote counts and any reasons given. The awardee remains contractually obliged to deliver and the reservation stands.
-
-**Member-Reviewer recusal.** Apply **12.6.3**, including its continuing recusal after the engagement ends or is suspended. If any recusals leave **fewer than four non-recused seats**, refer the recommendation to **MSIG under 9.1**.
-
-**Striking an improper filing.** The Committee may, at simple majority with a minimum of 3, **strike a recommendation** filed by someone who was conflicted or who was not the Manager of record or an engaged Reviewer when they filed. Striking lifts the freeze immediately and is published with reasons. Nothing in this section limits the Committee's power to reassign an RFP under 12.3, and reassignment does not by itself withdraw a filed recommendation.
-
-**Resuming payment.** Once the freeze lifts, cancelled payments may be **re-proposed without another award vote**, with a fresh delay and no new objection banding. Extend the **60-day clock in 10.10 by the freeze’s length**.
+| Situation | Required action and effect |
+|---|---|
+| **Escalation** | On escalation under 12.6.1(3) or 9.1, suspend the **15-business-day decision clock and deemed decline** from the escalation date; the payment freeze continues. If MSIG does not act within **30 days** under 9.2, the recommendation is deemed declined and the freeze lifts. |
+| **No outcome reaches its threshold** | If no outcome reaches its threshold within the 15 business days, the recommendation is **deemed declined**, the freeze in points 1 and 2 lifts, and the Committee publishes the vote counts and any reasons given. The awardee remains contractually obliged to deliver and the reservation stands. |
+| **Member-Reviewer recusal** | Apply **12.6.3**, including its continuing recusal after the engagement ends or is suspended. If any recusals leave **fewer than four non-recused seats**, refer the recommendation to **MSIG under 9.1**. |
+| **Improper filing** | The Committee may, at simple majority with a minimum of 3, **strike a recommendation** filed by someone who was conflicted or who was not the Manager of record or an engaged Reviewer when they filed. Striking lifts the freeze immediately and is published with reasons. Nothing in this section limits the Committee's power to reassign an RFP under 12.3, and reassignment does not by itself withdraw a filed recommendation. |
+| **Resuming payment** | Once the freeze lifts, cancelled payments may be **re-proposed without another award vote**, with a fresh delay and no new objection banding. Extend the **60-day clock in 10.10 by the freeze’s length**. |
 
 **A recommendation is not a termination.** Only the Committee terminates. Neither the Manager nor the Reviewer may stop work, withhold delivered work product, **suspend the service, refuse a data export,** or tell the awardee the engagement is over.
 
@@ -689,16 +695,24 @@ On reassignment:
 
 **12.6 Committee members as Technical Reviewers.** Members may serve as paid Technical Reviewers only on the following terms.
 
-**12.6.1 Preconditions.** A member may serve as Technical Reviewer only if:
+**12.6.1 Preconditions.** A member may serve as Technical Reviewer only if **all four requirements** are met:
 
-1. **MSIG has set a concurrent-engagement cap** (**MSIG #5 Part H: 3**); no engagement may begin before it is set.
-2. The Committee has recorded that **no suitable unconflicted external Reviewer was available**, and minuted and published that finding with the engagement.
-3. **All five seats are filled.** Suspend the engagement during **any vacancy or suspension of the member’s role or signing weight**, including under **6.6 or 2.4a**. A suspended member does not count as an engaged Reviewer under **9.1, 11.2, or 11.4**.
-4. **No other Committee member reviews that RFP**, and the member is **within the concurrent-engagement cap**.
+| Rule | Requirement |
+|---|---|
+| **1** | **MSIG has set a concurrent-engagement cap** (**MSIG #5 Part H: 3**); no engagement may begin before it is set. |
+| **2** | The Committee has recorded that **no suitable unconflicted external Reviewer was available**, and minuted and published that finding with the engagement. |
+| **3** | **All five seats are filled.** Suspend the engagement during **any vacancy or suspension of the member’s role or signing weight**, including under **6.6 or 2.4a**. A suspended member does not count as an engaged Reviewer under **9.1, 11.2, or 11.4**. |
+| **4** | **No other Committee member reviews that RFP**, and the member is **within the concurrent-engagement cap**. |
 
-**Substitution.** If the suspended member is the only Reviewer on a published RFP or live award, the Committee must engage a substitute at the threshold in **5.3**; a substitute satisfies the Reviewer setting in **20.2**. If none is engaged, the **Manager writes the scored assessment for an unawarded RFP under 22.3**, and an affected **milestone under a live award goes to MSIG under 9.1**.
+**Suspension, substitution, and resumption:**
 
-**Resumption.** When the seat is refilled, the engagement resumes unless a substitute was engaged. If so, resumption requires a Committee decision at the threshold in **5.3**; otherwise the substitute remains and the member’s fee is prorated to work performed.
+| Situation | Required action |
+|---|---|
+| **Suspended member is the only Reviewer on a published RFP or live award** | The Committee must engage a substitute at the threshold in **5.3**; the substitute satisfies the Reviewer setting in **20.2**. |
+| **Suspended member was the only Reviewer; no substitute engaged — unawarded RFP** | The **Manager writes the scored assessment under 22.3**. |
+| **Suspended member was the only Reviewer; no substitute engaged — milestone under a live award** | The affected milestone goes to **MSIG under 9.1**. |
+| **Seat refilled — no substitute engaged** | The engagement resumes. |
+| **Seat refilled — substitute engaged** | Resumption requires a Committee decision at the threshold in **5.3**; otherwise the substitute remains and the member’s fee is prorated to work performed. |
 
 **12.6.2 Recusal.** The member must recuse from both the availability finding and the vote engaging them. Both require a **simple majority of non-recused seats, minimum 3** (5.3).
 
@@ -765,18 +779,23 @@ A service renewal is a **new award**, requiring a fresh RFP, award-threshold dec
 
 Do **not** release while MSIG confirmation is pending or merely because a termination recommendation is filed under 11.10a; termination itself is required. Released amounts return to the ceiling of the **cycle of release**, not the original reservation cycle.
 
-**13.3a Paying Program Costs.** Committee pay, Manager and Reviewer fees, Portal and administration costs are paid from the Program Account like this:
+**13.3a Paying Program Costs.** Committee pay, Manager and Reviewer fees, Portal and administration costs are paid from the **Program Account** under these shared rules:
 
-1. the Committee approves a **published payment schedule** once per cycle — simple majority, minimum 3 — listing each recipient, amount, and cadence;
-2. individual payments use the **fund-moving signatures in 7.2** and the **same delay** as any other disbursement;
-3. **no objection banding applies**;
-4. every payment appears in the cycle report, with cumulative Program Costs against the **Program Cost Ceiling** and against **each of its two internal caps**.
+| Area | Requirement |
+|---|---|
+| **Payment schedule** | The Committee approves a **published payment schedule once per cycle**, at **simple majority, minimum 3**, listing each recipient, amount, and cadence. |
+| **Individual payments** | Use the **fund-moving signatures in 7.2** and the **same delay** as any other disbursement. |
+| **Objections** | **No objection banding applies**. |
+| **Reporting** | Every payment appears in the cycle report, with cumulative Program Costs against the **Program Cost Ceiling** and **each of its two internal caps**. |
+| **Payment outside the approved schedule** | Requires fresh Committee approval at the **same threshold** and its own published record. |
 
-A payment outside an approved schedule requires fresh Committee approval at the same threshold and its own published record.
+**Rules by payment type:**
 
-**Member-Reviewer fees (12.6)** require a separate schedule line and **one separate payment per member**, signed by the other four. The recipient recuses from their own line and payment only; members’ Reviewer fees must not be combined.
-
-**Committee retainer.** All five members may vote on and sign their own **USD 2,500 retainer** line, as set equally by MSIG #5 Part H.
+| Payment type | Additional requirements or exception |
+|---|---|
+| **Ordinary Program Costs** | Follow the shared rules above. |
+| **Member-Reviewer fees (12.6)** | Require a **separate schedule line and one separate payment per member**, signed by the **other four**. The recipient recuses from their **own line and payment only**; members’ Reviewer fees **must not be combined**. |
+| **Committee retainer** | **All five members may vote on and sign their own USD 2,500 retainer line**, as set equally by **MSIG #5 Part H**. |
 
 **13.4 Denomination and price movement.**
 
