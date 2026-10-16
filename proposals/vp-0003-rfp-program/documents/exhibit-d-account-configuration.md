@@ -311,6 +311,8 @@ Classify the **initial platform build, including both contracts on `disc.vst`**,
 
 VS LLC must complete every deployment-confirmation field in this Exhibit and the record below **after deployment and before publication**, then publish the completed Exhibit **before funding** (MSIG #5 Part E).
 
+**Testnet deployment and rehearsals are required before mainnet deployment.** Using the deployed ABI and schemas, verify fund-transfer and administrative thresholds, both cancellation routes, the full ordinary and urgent delays, and the initial-payment final-objection-count guard under **Framework 7.2 and 10.7**. Record the testnet deployment, test actions, transaction IDs, and results below; configuration descriptions alone do not satisfy this requirement.
+
 | Record | Required details | Deployed value |
 |---|---|---|
 | Accounts | Account names and creation transaction IDs for `rfp.vst` and `disc.vst` | [___] |
@@ -326,6 +328,11 @@ VS LLC must complete every deployment-confirmation field in this Exhibit and the
 | Register contract | `disc.vst` `setcode` transaction and code hash | [___] |
 | ABI | Published ABI matching the deployed code | [___] |
 | Table schemas | Deployed schemas for `disclosures`, `decisions`, and `publications` | [___] |
+| Testnet deployment | Accounts, deployed code hashes, ABI, and schemas used for the rehearsals | [___] |
+| Threshold rehearsals | Successful authorized transfers and cancellations; rejected insufficient signatures and three-signature fund transfers | [___] |
+| Delay and objection rehearsals | Ordinary and urgent delays; rejection of premature execution and initial-payment execution without a published final count or with four or more objections; permitted execution after clearance | [___] |
+| Committee cancellation rehearsal | Test proposal, proposer authority, three-signature cancellation transaction, and result | [___] |
+| Block producer cancellation rehearsal | Test proposal, owner-controlled cancellation transaction at the Threshold, and result | [___] |
 | CPU / NET | Deployed resources for both accounts | [___] |
 | Publication | Date published | [___] |
 

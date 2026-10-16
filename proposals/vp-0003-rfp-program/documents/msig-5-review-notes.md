@@ -8,7 +8,7 @@ These notes preserve the draft’s historical, financial, and technical reasonin
 
 **1. What the vstcreation MSIG says.** The full text has now been reviewed. Four points.
 
-**No Committee term exists.** vstcreation establishes the Oversight Committee "with three (3) initial members ... effective upon formation of the Trust" and stops there. No duration, no renewal, no selection process for later appointments. Framework 3.2 **sets** a one-year term rather than extending one, and supersedes MSIG #2's reference to "the remainder of Dario Cesaro's Initial Term", which has nothing to anchor to.
+**No Committee term exists.** vstcreation establishes the Oversight Committee "with three (3) initial members ... effective upon formation of the Trust" and stops there. No duration, no renewal, no selection process for later appointments. Framework **3.2–3.4** now sets ordinary and staggered initial terms; MSIG #5 Part B ends the former members’ transition service when all five seats are filled. MSIG #2’s reference to "the remainder of Dario Cesaro’s Initial Term" did not itself specify a duration.
 
 **The likely source of the confusion.** The Trust was formed on 13 February 2026. The Committee has been serving for roughly six months. That is an elapsed period, not a term — and it is easy to hear one as the other. The only six-month *term* anywhere is the Trustee's Initial Interim Term under Trust Agreement section 5(b).
 
@@ -99,7 +99,7 @@ This also fixes the awkward interaction with long awards. The constraint on a mu
 
 *Alternatives to a seat differential.* Scarce technical expertise can be bought per engagement through the **Technical Reviewer budget**, where it is needed and at a rate that reflects it, rather than embedded permanently in a retainer. Drafting and category diligence can sit with the **Program Manager pool**, with the portfolio lead sponsoring and directing rather than producing.
 
-**10. Read Part I narrowly.** The Treasury has said the open question is who represents the Network to receive and manage these funds. The Steering Committee serves that purpose **for the RFP program only**. Part I now states expressly that creating any new entity or foundation requires a separate MSIG.
+**10. Read Part I narrowly.** The Treasury has said the open question is who represents the Network to receive and manage these funds. The Steering Committee serves that purpose **for the RFP program only**. **Framework 8.4** requires a separate MSIG Resolution before the Committee, VST, or VS LLC may form or join an entity on behalf of the Network.
 
 *Drafted to match the structure of MSIGs #2 to #4. Part E requires VST confirmation. Contract terms require review by counsel.*
 

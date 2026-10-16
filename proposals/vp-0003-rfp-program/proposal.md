@@ -48,6 +48,9 @@ revisions:
     - version: 7
       date: 2026-10-16
       summary: Aligns payment, appointment, contract, and disclosure rules; consolidates duplicates and requires payment-control verification.
+    - version: 8
+      date: 2026-10-16
+      summary: Aligns Schedule A exceptions and references, restores testnet rehearsals and safeguards, and clarifies pricing summaries.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding
@@ -65,7 +68,7 @@ The documents are listed in the order a voter should read them, each with a sugg
 
 Read in full:
 
-- [MSIG #5 resolution](documents/msig-5.md): the resolution block producers would approve. It continues the Oversight Committee as a five-seat Network Steering Committee, gives it a standing mandate to allocate funds from the `rfp.vst` Program Account, and requests a first transfer of A worth USD 284,375. No funds move until all five seats are filled, every member has signed their contract, filed their disclosure, and registered a signing key, and Exhibit D is published complete. If the Delphi Oracle price goes stale for 24 hours or disappears, payments are priced from a CoinMarketCap fallback (Vaulta, ID 36462: the average of the previous UTC day's high and low), and payments stop only if both sources fail. Its stated status is DRAFT v6.14, for VST and block producer review.
+- [MSIG #5 resolution](documents/msig-5.md): the resolution block producers would approve. It continues the Oversight Committee as a five-seat Network Steering Committee, gives it a standing mandate to allocate funds from the `rfp.vst` Program Account, and requests a first transfer of A worth USD 284,375. No funds move until all five seats are filled, every member has signed their contract, filed their disclosure, and registered a signing key, and Exhibit D is published complete. If the Delphi Oracle price goes stale for 24 hours or disappears, payments are priced from a CoinMarketCap fallback (Vaulta, ID 36462: the average of the previous UTC day's high and low), with rate-check referrals, suspensions, and essential-operation exceptions governed by Framework 13.4–13.4a. Its stated status is DRAFT v6.14, for VST and block producer review.
 - [Exhibit A: Vaulta Network RFP Framework](documents/rfp-framework.md) (Part 1, about 85 minutes): the framework the resolution's first decision approves. Part 1 (sections 1 to 16) is the governance rulebook: seats, voting, conflicts, signing, the mandate, spending limits, and suspension, and it is the part to read. Part 2 (sections 17 to 27) is the step-by-step RFP process, and MSIG may amend it later without reopening Part 1; Part 1 governs where the two disagree. Its stated status is DRAFT v5.4.
 - [Exhibit B: Manager and Reviewer Rate Card and Scope](documents/exhibit-b-rate-card.md) (scan the fee tables, about 5 minutes): fees for RFP Program Managers (USD 350 a milestone, or 600 on the assessment variant) and Technical Reviewers (USD 450 a milestone). Committee members serving as Reviewers are capped at 3 concurrent engagements. The figures change only by MSIG. Committee members' own pay is set in MSIG #5, not here. Its stated status is DRAFT v3.4, settled.
 

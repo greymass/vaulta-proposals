@@ -432,7 +432,7 @@ The Portal **reads and displays the register without keeping a separate copy**.
 4. change the funding source, extend the cycle, or widen the program's scope;
 5. split, stage, combine, or later top up awards to get around points 1 to 4;
 6. act after the mandate is suspended or revoked;
-7. **form, register, or join any company, foundation, association, trust, or other entity** on behalf of the Network. That requires a separate MSIG Resolution.
+7. **form, register, incorporate, or join any company, foundation, association, trust, or other entity**, or become its member or director, on behalf of the Network. **The VST and VS LLC are subject to this same restriction.** Any such action requires a separate MSIG Resolution at the Threshold.
 
 An action outside these limits is **void**; VS LLC must not contract on it, and block producers should cancel any related payment during its delay window.
 
@@ -1287,7 +1287,7 @@ Use a **directed RFP where competitive evaluation would add value**, such as com
 ## 27. General rules
 
 1. **Published criteria, weights, budgets, and results.** Every judgment is written down and attributable.
-2. **Questions and answers** follow **21.2**.
+2. **All questions and answers are public; no private guidance is permitted**, including for bounties. The RFP question process follows **21.2**.
 3. **Recusal is required, automatic, and published.** Thresholds recalculate on non-recused seats.
 4. **Nobody scores, approves, or is paid on an RFP they could bid on.** The one exception is a Committee member engaged as Technical Reviewer under 12.6 — they are paid on an RFP they are barred from bidding on, and 12.6's guards apply in place of this rule. Material breaches follow **6.6**.
 5. **No splitting or staging** to stay under the Per-Award Limit, and no topping up past it later.
