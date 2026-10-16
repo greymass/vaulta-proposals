@@ -99,7 +99,7 @@ Later milestone and Program Cost payments retain their delay and cancellation ri
 
 ### 2.3 Held-multisignature fallback
 
-If the `eosio.msig` delay is unavailable, publish the proposal ID with the award and keep the proposal **public and unexecuted for the full delay window**. VS LLC must republish this Exhibit identifying the change before switching to the fallback.
+If the `eosio.msig` delay is unavailable, publish the proposal ID with the award and keep the proposal **public, with Committee approvals withheld for the full delay window**. VS LLC must republish this Exhibit identifying the change before switching to the fallback.
 
 Neither VS LLC nor the Committee may execute before the delay ends and the final objection count permits execution under **Framework 10.7**. The cancellation period does not permit executing a blocked payment.
 
