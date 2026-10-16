@@ -20,14 +20,13 @@ Managers and Reviewers are paid for **assessing work**. The assessment fee is th
 
 | Award type | How fees are calculated |
 |---|---|
-| **RFP — directed or open call** | A fixed fee for each milestone. Every RFP award must have **at least two milestones** (Framework 11.1a). |
+| **RFP — directed or open call** | A fixed fee for each milestone. |
 | **Bounty** | One fee, equal to the applicable milestone fee. |
 
 **What the fees cover**
 
 - **Preparation and administration:** Milestone fees include scoping support, publication, public Q&A, intake, compliance checks, evaluation logistics, and scoring. These activities earn no separate fee.
 - **Recovery plans:** The ordinary milestone fee includes reassessing corrected work under a recovery plan. Neither role earns an extra fee (Framework 11.9).
-- **Additional work:** Separate fees apply to **post-award reviews** and **preparation when taking over an existing engagement**, as specified in this rate card.
 
 **How fees are paid**
 
@@ -73,7 +72,7 @@ Each engagement covers **one RFP or bounty, from publication to closing**; a Man
 | **Delivery** | Coordinate with the awardee, with check-ins **at least every two weeks** during active work. |
 | **Milestones** | Determine whether milestones are met and approve payments with the records required by Framework 11.3; during payment suspensions, publish determinations when made and complete the records when payments resume (13.4a). |
 | **Escalation** | **Recommend termination in writing** when delivered work or services fall materially below the RFP’s requirements (Framework 11.10a). |
-| **Closing** | Complete the applicable closing checklist (Framework 25.1) and publish a post-award review under 2.3 for awards at or above the review threshold. |
+| **Closing** | Complete the closing requirements in **Framework 25.1** and any required post-award review under **Framework 25.2**. |
 | **Handover** | On reassignment, provide a written handover of approval history, correspondence, and outstanding items (Framework 12.3). |
 
 A **good-faith termination recommendation** must not be grounds for ending or declining to renew the Manager’s engagement; their fee is unaffected by whether the Committee acts on it (Framework 11.10a).
@@ -87,13 +86,9 @@ A **good-faith termination recommendation** must not be grounds for ending or de
 | **Bounty — one-time** | **350** | On the Manager’s written acceptance determination (Framework 26a). |
 | **No-award fee** | **350**, or **600** if the Manager wrote the scored assessment | When the Committee records an event listed under *The no-award fee* above. |
 | **Reassignment to a live RFP** | **500** | On assignment, for the incoming Manager’s preparation; the outgoing Manager keeps earned milestone fees and earns no further fees for that engagement. |
-| **Post-award review** | **375** | On publication, for awards at or above the review threshold in MSIG #5 Part D; see 2.3. |
+| **Post-award review** | **375** | On publication of a review required under **Framework 25.2**. |
 
 Whether a Reviewer is needed is decided at scoping based on whether the work is technical (Framework 20.2), fixed at publication, and not changed later to reduce fees.
-
-### 2.3 Post-award review
-
-Post-award reviews must follow **Framework 25.2**. The separate review fee is listed in **section 2.2**.
 
 ### 2.4 Workload
 
@@ -127,12 +122,6 @@ Reviewers also assess ongoing services, even when there is no separate deliverab
 ### 3.3 Committee members serving as Reviewers
 
 Committee members receive the rates in **section 3.2** and must follow **Framework 12.6**, including its disclosure, recusal, and separate-payment requirements under **6.3c and 13.3a**.
-
----
-
-## 4. Committee-member Reviewer cap
-
-Each Committee member may hold **up to three concurrent Reviewer engagements**, as set by MSIG #5 Part H (Framework 12.6.1(1)). There is **no separate limit on their total Reviewer fees per cycle**. Members cannot be engaged until the concurrent-engagement cap is set.
 
 ---
 
