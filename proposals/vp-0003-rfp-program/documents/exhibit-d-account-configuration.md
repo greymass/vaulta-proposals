@@ -82,12 +82,9 @@ The following requirements apply when an MSIG proposal changes the contract on `
 
 ### 2.1 Selected mechanism
 
-This Exhibit must identify the mechanism before funding (MSIG #5 Part E).
+**Not yet verified.** Record the selected delay mechanism and deployed configuration in **6.1 before publication and funding**.
 
-| | |
-|---|---|
-| **Mechanism** | **Not yet verified.** Record the selected mechanism and deployed configuration in **6.1** before publication and funding. |
-| **Required proof** | Demonstrate both the full delay and the **Framework 10.7 execution guard**, including that Committee signers cannot execute early or bypass an objection outcome. Native protocol support must be checked on the target chain, not assumed. |
+Check native delay support on the target chain, and verify that Committee signers cannot execute payments before the full delay ends or bypass the objection rules in **Framework 10.7**.
 
 ### 2.2 Protocol-enforced delay
 
