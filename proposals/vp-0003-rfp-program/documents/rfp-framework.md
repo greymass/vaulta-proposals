@@ -37,7 +37,7 @@ These definitions form part of Part 1.
 
 # PART 1 — THE STEERING COMMITTEE AND THE MANDATE
 
-## 1. What the Committee is
+## 1. Steering Committee
 
 **1.1** The Oversight Committee is renamed the **Vaulta Network Steering Committee**, retaining its records and indemnification rights.
 
