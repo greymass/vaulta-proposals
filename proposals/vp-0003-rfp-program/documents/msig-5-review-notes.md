@@ -102,3 +102,7 @@ This also fixes the awkward interaction with long awards. The constraint on a mu
 **10. Read Part I narrowly.** The Treasury has said the open question is who represents the Network to receive and manage these funds. The Steering Committee serves that purpose **for the RFP program only**. Part I now states expressly that creating any new entity or foundation requires a separate MSIG.
 
 *Drafted to match the structure of MSIGs #2 to #4. Part E requires VST confirmation. Contract terms require review by counsel.*
+
+## Framework launch recommendation
+
+**Recommendation:** do not run the open call in cycle 1 (Framework section 26). This is non-binding advice, not a program rule.

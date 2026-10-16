@@ -157,7 +157,7 @@ All later terms are **12 months**.
 
 **3.7 Vacancies.** A vacant seat is filled for the rest of the term using the process for that seat.
 
-**3.8 Signing requirements.** Payments require **4 of 5 signatures**, with one unit of signing weight per seated member.
+**3.8 Signing requirements.** Payments follow the **Committee permission in 7.2**.
 
 With fewer than four members, **no payment can execute**; the Committee may still meet, decide, publish, and escalate, but MSIG must fill a seat or change the permission.
 
@@ -195,7 +195,7 @@ The **vision statement requirement in 3.1a** applies. A statement produced throu
 
 **5.1 Meetings.** At least monthly, and whenever the Chair or any two members call one. At least twice monthly while an RFP solicitation is open for submissions or under evaluation.
 
-**5.2 Quorum.** Decisions require **at least three filled seats and three non-recused members present**; payments still require four signers.
+**5.2 Quorum.** Decisions require **at least three filled seats and three non-recused members present**; payment signatures follow **7.2**.
 
 **5.3 Thresholds.** Counted on **filled seats, minus recusals**.
 
@@ -211,14 +211,14 @@ The **vision statement requirement in 3.1a** applies. A statement produced throu
 | Decline a termination recommendation (11.10a) | Simple majority, minimum 3 |
 | Direct a recovery plan under 11.9 | Simple majority, minimum 3 |
 | Strike a termination recommendation as improperly filed (11.10a) | Simple majority, minimum 3 |
-| Cancel a payment proposal on-chain | **3 signatures.** See sections 7 and 10.7 |
+| Cancel a payment proposal on-chain | Administrative signatures under **7.2**; cancellation rules in **10.7** |
 | Refer a member to MSIG for removal | Simple majority, minimum 3 |
 | Escalate a matter to MSIG | Simple majority, minimum 3 |
 | Reassign an RFP to another Manager | Simple majority, minimum 3 |
 | Engage a Manager or Technical Reviewer | Simple majority, minimum 3 |
 | Record that no unconflicted external reviewer was available (12.6.1) | Simple majority, minimum 3 |
 | Recommend a Framework amendment | Two-thirds, rounded up, minimum 3 |
-| **Sign a payment on-chain** | **4 signatures.** See section 7 |
+| **Sign a payment on-chain** | Fund-moving signatures under **7.2** |
 
 **5.5** The **Manager of record approves milestones**, not the Committee, except for the rate-check referrals below (section 11).
 
@@ -572,7 +572,7 @@ During a suspension under **13.4a**, publish the determination, its date, and th
 
 **Name and account** must match questionnaire Part 1 (6.3a) and the seat register. The name must be a **legal name or registered handle, unchanged during the term**; neither name nor account may be redacted under 5.9.
 
-**11.4 Administrative signatures.** Four members must sign after checking only that:
+**11.4 Administrative signatures.** Members must sign under **7.2** after checking only that:
 
 1. A complete approval record exists;
 2. The amount matches the published milestone schedule;
@@ -637,9 +637,7 @@ File a **written recommendation** stating the grounds and attaching the mileston
 
 **If nothing carries.** If no outcome reaches its threshold within the 15 business days, the recommendation is **deemed declined**, the freeze in points 1 and 2 lifts, and the Committee publishes the vote counts and any reasons given. The awardee remains contractually obliged to deliver and the reservation stands.
 
-**Member-Reviewer recusal.** A member must recuse from every termination, recovery-plan, or strike vote concerning an award they **are or were engaged to review**, whoever filed the recommendation and whether their engagement has ended or been suspended.
-
-Where any recusals leave **fewer than four non-recused seats**, the recommendation goes to **MSIG** under 12.6.1(3) and 9.1.
+**Member-Reviewer recusal.** Apply **12.6.3**, including its continuing recusal after the engagement ends or is suspended. If any recusals leave **fewer than four non-recused seats**, refer the recommendation to **MSIG under 9.1**.
 
 **Striking an improper filing.** The Committee may, at simple majority with a minimum of 3, **strike a recommendation** filed by someone who was conflicted or who was not the Manager of record or an engaged Reviewer when they filed. Striking lifts the freeze immediately and is published with reasons. Nothing in this section limits the Committee's power to reassign an RFP under 12.3, and reassignment does not by itself withdraw a filed recommendation.
 
@@ -671,7 +669,7 @@ A Manager appointed to a Committee seat **ceases to be Manager of record on appo
 
 **12.6.1 Preconditions.** A member may serve as Technical Reviewer only if:
 
-1. **MSIG has set a concurrent-engagement cap** (**MSIG #5 Part H: 3**); no engagement may begin before it is set. There is **no per-member fee cap**; all fees share the **Program Cost Ceiling and internal cap in 13.1**, and exceeding either is reserved to MSIG under **9.1**. Fees use the **MSIG-set Exhibit B rate card** and must be reported under **13.5**; block producers may change the cap or rate card or remove the member.
+1. **MSIG has set a concurrent-engagement cap** (**MSIG #5 Part H: 3**); no engagement may begin before it is set.
 2. The Committee has recorded that **no suitable unconflicted external Reviewer was available**, and minuted and published that finding with the engagement.
 3. **All five seats are filled.** Suspend the engagement during **any vacancy or suspension of the member’s role or signing weight**, including under **6.6 or 2.4a**. A suspended member does not count as an engaged Reviewer under **9.1, 11.2, or 11.4**.
 4. **No other Committee member reviews that RFP**, and the member is **within the concurrent-engagement cap**.
@@ -679,8 +677,6 @@ A Manager appointed to a Committee seat **ceases to be Manager of record on appo
 **Substitution.** If the suspended member is the only Reviewer on a published RFP or live award, the Committee must engage a substitute at the threshold in **5.3**; a substitute satisfies the Reviewer setting in **20.2**. If none is engaged, the **Manager writes the scored assessment for an unawarded RFP under 22.3**, and an affected **milestone under a live award goes to MSIG under 9.1**.
 
 **Resumption.** When the seat is refilled, the engagement resumes unless a substitute was engaged. If so, resumption requires a Committee decision at the threshold in **5.3**; otherwise the substitute remains and the member’s fee is prorated to work performed.
-
-**Recusals.** These rules assume **five filled seats**. The recusal in **11.10a** continues after suspension or the end of the engagement; if fewer than four non-recused seats remain, the termination recommendation goes to **MSIG under 9.1**.
 
 **12.6.2 The member recuses from both the availability finding and the vote engaging them**, since they benefit from the decision; both require a simple majority of non-recused seats, minimum 3, under section 5.3.
 
@@ -690,12 +686,20 @@ A Manager appointed to a Committee seat **ceases to be Manager of record on appo
 |---|---|
 | **Must not draft acceptance criteria or the milestone schedule** | The Manager of record or At-Large member drafts them; the member may advise on the record |
 | **Must not score proposals or reconcile divergent scores** | Give a written note, not a score. If the member is the only engaged Reviewer, the Manager writes the scored assessment under 22.3 |
-| **Must not vote on termination recommendations, recovery plans, or strike decisions** | Applies to that award whether the member or Manager filed the recommendation (11.10a) |
+| **Must not vote on termination recommendations, recovery plans, or strike decisions** | Applies to that award whoever filed the recommendation, even after the engagement ends or is suspended. If fewer than four non-recused seats remain, refer the recommendation to **MSIG under 9.1** (11.10a) |
 | **Must not vote on or sign payment of their own Reviewer fee** | Follow 13.3a |
 
 **12.6.4** A member-Reviewer **keeps their award vote** and **may sign milestone payments** on the award, subject to the checks in 11.4.
 
-**12.6.5 Pay and disclosure.** Member-Reviewer fees must use the **MSIG-set Exhibit B rate card**; the Committee cannot negotiate or vary them. Report every engagement and fee **by member and RFP** under 13.5. The member must **update their questionnaire before the engagement begins** under 6.3c; the usual 10-business-day window does not apply.
+**12.6.5 Pay and disclosure.**
+
+| Requirement | Rule |
+|---|---|
+| **Rates** | Use the **MSIG-set Exhibit B rate card**; the Committee cannot negotiate or vary it. |
+| **Limits** | There is **no per-member fee cap**. All fees share the **Program Cost Ceiling and internal cap in 13.1**; exceeding either is reserved to **MSIG under 9.1**. |
+| **Reporting** | Report every engagement and fee **by member and RFP** under **13.5**. |
+| **Disclosure** | Update the member’s questionnaire **before engagement begins** under **6.3c**; the usual 10-business-day window does not apply. |
+| **Block-producer control** | Block producers may change the concurrent-engagement cap or rate card, or remove the member. |
 
 **12.6.6 Reviewer pay.** Reviewer fees are **additional to the Committee retainer**, subject to **12.6.1 and 12.6.5**.
 
@@ -740,7 +744,7 @@ Do **not** release while MSIG confirmation is pending or merely because a termin
 **13.3a Paying Program Costs.** Committee pay, Manager and Reviewer fees, Portal and administration costs are paid from the Program Account like this:
 
 1. the Committee approves a **published payment schedule** once per cycle — simple majority, minimum 3 — listing each recipient, amount, and cadence;
-2. individual payments under it are signed **4 of 5** and carry the **same delay** as any other disbursement;
+2. individual payments use the **fund-moving signatures in 7.2** and the **same delay** as any other disbursement;
 3. **no objection banding applies**;
 4. every payment appears in the cycle report, with cumulative Program Costs against the **Program Cost Ceiling** and against **each of its two internal caps**.
 
@@ -812,24 +816,30 @@ If **`eosusd` or `delphioracle` becomes unavailable, renamed, or deprecated**, u
 
 The **Chair must record and publish the failure within 2 business days** of any member or VS LLC becoming aware; the affected award’s Manager is the alternate. Escalate to **MSIG within 5 business days of that record** under 9.2, requesting a replacement source. **The Committee cannot choose a substitute.**
 
-Suspended payments resume only when the fallback returns or MSIG designates a source, for **payment approvals made after resumption**; completed payments are not reopened. The designation amends the **Reference Rate definition under 16.2** and is not subject to deemed decline under 9.2.
+**How payments resume.** Suspended payments resume only when the fallback returns or MSIG designates a source, for **payment approvals made after resumption**; completed payments are not reopened. The designation amends the **Reference Rate definition under 16.2** and is not subject to deemed decline under 9.2.
 
-**During suspension, payments and new awards stop**, except as follows; work, review, scoping, publication, questions, evaluation, and scoring may continue.
+**What stops and what continues**
 
-- **Milestones:** submission and written determinations continue, and the **11.9 and 11.10a clocks** run from the determination. Publish its date and all **11.3** information except the amount payable when made; complete payment approval using the rate on resumption and republish.
-- **Reservations:** suspension alone does not release them; the **13.3** release triggers still apply, including termination, downward variation under 11.8, and awardee termination under the Exhibit F long-stop.
-- **Deadlines:** extend the **10.10 60-day clock**, **26a rule 5 bounty closing date**, and any cycle-close contracting cut-off by the suspension’s length. Do not shorten awardee deadlines or count suspended time against them.
-- **Carried awards:** reservations crossing a cycle end become forward commitments against the **resumption cycle’s Ceiling**. Escalate under **9.1** if these plus that cycle’s awards exceed it, or an extension exceeds the authorized funding period.
-- **Program Costs:** suspend Committee pay and Manager and Reviewer fees too. They accrue and are paid on resumption at the then-current rate, charged to their **accrual cycle**; that allocation survives despite 13.1. Escalate any shortfall above that cycle’s allocation under 9.1.
-- **Essential operations:** only **Portal hosting and essential administration** continue, using the **last rate read before failure**, recorded and published with each payment; no other payment may use this exception.
-- **Reporting:** include the suspension details required by **13.5 in every cycle report until resolved**.
+| Activity | During suspension |
+|---|---|
+| **Payments and new awards** | Stop, except for the essential operations below. |
+| **Work and evaluation** | Work, review, scoping, publication, questions, evaluation, and scoring may continue. |
+| **Milestones** | Submission and written determinations continue, and the **11.9 and 11.10a clocks** run from the determination. Publish its date and all **11.3** information except the amount payable when made; complete payment approval using the rate on resumption and republish. |
+| **Reservations** | Suspension alone does not release them; the **13.3** release triggers still apply, including termination, downward variation under 11.8, and awardee termination under the Exhibit F long-stop. |
+| **Deadlines** | Extend the **10.10 60-day clock**, **26a rule 5 bounty closing date**, and any cycle-close contracting cut-off by the suspension’s length. Do not shorten awardee deadlines or count suspended time against them. |
+| **Carried awards** | Reservations crossing a cycle end become forward commitments against the **resumption cycle’s Ceiling**. Escalate under **9.1** if these plus that cycle’s awards exceed it, or an extension exceeds the authorized funding period. |
+| **Program Costs** | Suspend Committee pay and Manager and Reviewer fees too. They accrue and are paid on resumption at the then-current rate, charged to their **accrual cycle**; that allocation survives despite 13.1. Escalate any shortfall above that cycle’s allocation under 9.1. |
+| **Essential operations** | Only **Portal hosting and essential administration** continue, using the **last rate read before failure**, recorded and published with each payment; no other payment may use this exception. |
+| **Reporting** | Include the suspension details required by **13.5 in every cycle report until resolved**. |
 
-**Additional suspension rules:**
+**Timing and replacement-source requirements**
 
-- A quarterly instalment into the Program Account due during suspension must be **sized at the Reference Rate and transferred on resumption**, not skipped (MSIG #5 Part I).
-- Overlapping freezes under **11.10a** and suspensions under this section extend a clock **once, not twice**.
-- An already-published bounty may be delivered, determined, and contracted, but **not paid until resumption**; its award decision was the publication vote.
-- A replacement source designated by MSIG must support the **staleness and collar checks**; the designation must state the field, precision, equivalent newest-datapoint timestamp, and how the checks apply.
+| Area | Rule |
+|---|---|
+| **Quarterly funding** | A quarterly instalment into the Program Account due during suspension must be **sized at the Reference Rate and transferred on resumption**, not skipped (MSIG #5 Part I). |
+| **Overlapping freezes** | Overlapping freezes under **11.10a** and suspensions under this section extend a clock **once, not twice**. |
+| **Published bounties** | An already-published bounty may be delivered, determined, and contracted, but **not paid until resumption**; its award decision was the publication vote. |
+| **Replacement-source requirements** | A replacement source designated by MSIG must support the **staleness and collar checks**; the designation must state the field, precision, equivalent newest-datapoint timestamp, and how the checks apply. |
 
 If an awardee cannot reasonably continue unpaid, use **variation or termination by agreement under 11.8**; do not substitute a rate or increase the award during suspension.
 
@@ -968,7 +978,7 @@ The Committee identifies Network needs, publishes RFPs, invites competing propos
 
 **20.2a Award shape, work product, and licence.** Every RFP must declare its **award shape at publication**; unsolicited proposals do so at **categorization under 26.1**. The declaration is fixed and governs the agreement (23.3a) and closing (25.1).
 
-| Shape | What it is | What the work product is |
+| Shape | What is funded | Work product |
 |---|---|---|
 | **Deliverable** | New code, designs, research, or content built for the Network | **What was built**, released under the licence recorded in the award decision under 23.2 — the one the RFP required, the one the awardee offered from the permitted set, or the applicable default under 20.2a |
 | **Service** | A hosted or operated service — history APIs, snapshots, indexers, monitoring | **The operational handover set, and nothing else**: configuration, deployment tooling, runbooks and operating documentation, and an export of any Network data the service holds, in a documented format. The running service itself is performed, not delivered |
@@ -1076,11 +1086,13 @@ In every case a written assessment against published criteria must exist before 
 - state the award value in **USD**, the **verified receiving account** for payment in A, and that each milestone is paid in A calculated at the reference rate on the date of **approval for payment**, which is the date of the Manager's determination except where payments are suspended under 13.4a or the approval is referred to the Committee under 13.4;
 - confirm the awardee is an independent contractor, not an agent of the Network, the Trust, or VS LLC.
 
-**23.3a Additional contract terms by award shape (20.2a):**
+**23.3a Contract requirements by award shape (20.2a).**
 
-- **Deliverable:** vest work product in the VST and release it under the **23.2 licence**; deliver code to a **Network-controlled repository**, or non-code final files and working materials to a **Network-controlled store**.
-- **Service:** state **service levels and term**; vest the operational handover set in the VST and deliver it at term-end or termination, whichever is earlier. The Network may modify it and give it to a successor. Identify retained service software as pre-existing IP with the licence back required below; warrant that a successor can deploy using only the vested materials plus commodity or open-source components. Require **no exclusivity or restriction on re-competition**, and Network-data export **on request at any time**.
-- **Embedded:** vest the named deliverable in the VST, identify and carve out pre-existing IP, and provide the irrevocable licence back below, surviving termination. Deliver open-source code to a **Network-controlled repository under the 23.2 licence**; for closed-source work, provide the RFP’s stated alternative.
+| Shape | Required contract terms |
+|---|---|
+| **Deliverable** | Vest work product in the VST and release it under the **23.2 licence**; deliver code to a **Network-controlled repository**, or non-code final files and working materials to a **Network-controlled store**. |
+| **Service** | State **service levels and term**; vest the operational handover set in the VST and deliver it at term-end or termination, whichever is earlier. The Network may modify it and give it to a successor. Identify retained service software as pre-existing IP with the licence back required below; warrant that a successor can deploy using only the vested materials plus commodity or open-source components. Require **no exclusivity or restriction on re-competition**, and Network-data export **on request at any time**. |
+| **Embedded** | Vest the named deliverable in the VST, identify and carve out pre-existing IP, and provide the irrevocable licence back below, surviving termination. Deliver open-source code to a **Network-controlled repository under the 23.2 licence**; for closed-source work, provide the RFP’s stated alternative. |
 
 **Pre-existing-IP rules apply to every award shape.**
 
@@ -1108,7 +1120,7 @@ If section 9 does not permit the carve-out, **amend the agreement first**; neith
 
 **25.1 Closing an award.** Require **final acceptance, final payment, a short public completion note**, the shape-specific handover below, and the **published review under 25.2**, where required. Confirm actual completion.
 
-| Shape | Closes on |
+| Shape | Required handover at closing |
 |---|---|
 | **Deliverable** | **Code:** a tagged source copy in a **Network-controlled repository**. **Other deliverables:** final files and working materials in a **Network-controlled store**. Both require the **23.2 licence**, credentials, domains, and documentation; a link to the awardee’s repository is insufficient |
 | **Service** | Delivery of the **operational handover set** and confirmation that any **Network data has been exported**. The checklist must not ask for a deliverable handover; there is none |
@@ -1149,8 +1161,6 @@ Publish these terms on the **Portal and in the `publications` register (7.6a) be
 
 The Committee must **not re-scope the work**; it settles only the terms needed to evaluate and contract.
 
-**Recommendation:** do not run the open call in cycle 1.
-
 ## 26a. Bounties
 
 **A bounty** is a **published fixed-price task, open to anyone, paid for the first acceptable delivery**. No evaluation or scoring round applies.
@@ -1189,7 +1199,7 @@ Use a **directed RFP where competitive evaluation would add value**, such as com
 6. **Departing from the scores requires a written reason.**
 7. **Payment follows delivery**, except for capped, justified advances.
 8. **Every award is published before money moves**, is contracted before it is proposed on-chain, and waits out its full delay.
-9. **Keys are personal.** No sharing, no delegation, no signing for a recused member.
+9. **Personal-key restrictions** follow **7.4**.
 10. **Every proposal is categorized**, directed or unsolicited, so it reaches the right portfolio holder.
 11. **Everything the community submits gets a status**, and a reason if declined.
 
@@ -1202,7 +1212,7 @@ This is a role guide; the cited sections contain the full rules and exceptions.
 | Role | Responsibilities | Limits |
 |---|---|---|
 | **Block producers (MSIG)** | Grant, suspend, or revoke the mandate; authorize four-cycle funding periods; set limits; appoint and remove members; decide escalations; cancel payments at the Threshold. | Do not vote on individual RFPs or awards within the mandate (8–9). |
-| **Steering Committee** | Select RFPs, scopes, budgets, and awardees; withhold or terminate; classify RFP-system work (15.2b); sign payments **4 of 5**. | No milestone approval except **13.4 rate referrals**; no serving as Manager of record (12.2a) or managing funds outside the Program Account. |
+| **Steering Committee** | Select RFPs, scopes, budgets, and awardees; withhold or terminate; classify RFP-system work (15.2b); sign payments under **7.2**. | No milestone approval except **13.4 rate referrals**; no serving as Manager of record (12.2a) or managing funds outside the Program Account. |
 | **Manager of record** | Run the RFP, approve milestones, keep the objection register, and recommend termination under 11.10a. | Cannot be a Committee member, vote on awards, bid on their RFP, terminate awards, or sign or disburse payments. |
 | **Technical Reviewer** | Provide written scores and milestone assessments when engaged, including for technical Service awards; submit termination recommendations directly to the Committee. | Cannot work where the Reviewer setting says none is engaged, approve milestones, or terminate awards. No vote except as a **member-Reviewer under 12.6**, who keeps their seat’s award vote and may sign milestone payments, subject to that section’s scoring, reconciliation, termination/recovery/strike-vote, and own-fee restrictions. |
 | **VS LLC** | Contract with awardees and role-holders; operate the Portal and write the `disc.vst` registers; configure and publish the Program Account; refuse contracts outside the mandate. Work product vests in the **VST** by award shape (20.2a). | Cannot choose awardees, control the Program Account, or own the platform (15.2a); VS LLC and connected entities may not bid on RFP-system work except under **15.2b**. |
