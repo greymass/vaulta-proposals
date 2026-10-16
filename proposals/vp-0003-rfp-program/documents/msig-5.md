@@ -75,7 +75,7 @@ FURTHER RESOLVED, that the Oversight Committee is renamed the **Vaulta Network S
 
 FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by this Resolution**; Committee members must be appointed by **separate MSIG Resolutions at the Threshold**, with each appointment proposal **meeting the requirements in Exhibit E**; and **candidates must be considered on their own merits**, with the Community seat selected under Part F.
 
-FURTHER RESOLVED, that an incomplete appointment proposal that executes is **not void**; each appointee must sign their contract, **file the standard on-chain disclosure questionnaire under Framework 6.3a–6.3b**, and register their signing key **within 30 days of appointment execution or VS LLC announcing that the register is open, whichever is later**; and **pay and signing weight begin only after all required items are filed and the contract and key requirements are complete**.
+FURTHER RESOLVED, that appointees must meet the **onboarding requirements in Framework 3.1b**.
 
 FURTHER RESOLVED, that a further MSIG Resolution may correct an appointment executed in error.
 
@@ -119,19 +119,13 @@ FURTHER RESOLVED, that **VS LLC must develop and configure the Program Account, 
 
 FURTHER RESOLVED, that payment delays must be **enforced on-chain**, with the **held-multisignature fallback in Exhibit D section 2.3 authorized only if the protocol cannot enforce them**.
 
-FURTHER RESOLVED, that if any element cannot be built as specified, **VS LLC must publish the limitation and propose the nearest workable alternative in Exhibit D**.
-
 ### Part F — The Community seat
 
 FURTHER RESOLVED, that ECF is asked to publish its process by **[___]** and complete the first vote by **[___]**.
 
 ### Part G — Program roles and VS LLC
 
-FURTHER RESOLVED, that the Committee must decide **at scoping whether a Technical Reviewer is needed**, based on whether the work is technical, **including Service awards**.
-
 FURTHER RESOLVED, that **the program must not rely on the RFP platform or Portal code until the rights and repository requirements in Framework 15.2a are met**.
-
-FURTHER RESOLVED, that **departures from default licences must be published with reasons under Framework 20.2a**, with the awarded licence recorded under **23.2**.
 
 FURTHER RESOLVED, that **VS LLC's RFP administration costs are charged to Program Costs, separately from the CY2026 VST operating funding under MSIG #3**.
 
@@ -143,15 +137,7 @@ FURTHER RESOLVED, that the cap under Framework 12.6 is **3 concurrent Technical 
 
 FURTHER RESOLVED, that **Committee pay must be revisited at the annual review under Framework 14.3**.
 
-FURTHER RESOLVED, that each member's contract must cover:
-
-- The retainer.
-- **Assignment of all work product to the VST** under section 9 of the standard Independent Contractor Agreement.
-- The confidentiality, conflict, recusal, and post-service bidding restrictions in **Framework section 6**.
-- **Secure key handling** and the custody duties in **Framework 7.4**.
-- **Automatic suspension of pay** if the member is referred to MSIG for removal or misses 3 consecutive meetings without excuse.
-- The payment suspension, accrual, and resumption rules in **Framework 13.4a**.
-- Termination on removal or replacement, or at the term’s end **unless month-to-month continuation applies under Framework 3.3**.
+FURTHER RESOLVED, that each member must use the **Committee contract template in Exhibit F**.
 
 FURTHER RESOLVED, that reasonable, pre-approved expenses are reimbursable; Committee pay is funded through each cycle's transfer and continues only while block producers continue funding it.
 

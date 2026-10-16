@@ -8,7 +8,7 @@
 
 Complete the sections below for each candidate and list candidates in **priority order** (Framework 3.1). **Incomplete proposals should not be approved.**
 
-Appointments follow **MSIG #5 Parts B and F and Framework sections 3 and 4**; contracts, disclosures, and signing keys follow **MSIG #5 Part B**.
+Appointments follow **MSIG #5 Parts B and F and Framework sections 3 and 4**; contracts, disclosures, and signing keys follow **Framework 3.1b**.
 
 Before approving or executing an appointment proposal, block producers should **check the published seat register**; proposers should **cancel proposals that can no longer fill any seat under Framework 3.1**.
 
@@ -74,4 +74,4 @@ RESOLVED, that each candidate is appointed to the **seat and initial term listed
 
 FURTHER RESOLVED, that each appointee accepts the **Framework’s obligations** and acknowledges the **material conflict breach and permanent ban rules in section 6.6**.
 
-FURTHER RESOLVED, that an appointee may be replaced by a further MSIG Resolution if they miss the **30-day deadline under MSIG #5 Part B** for their **signed contract, on-chain disclosure questionnaire, or registered signing key**.
+FURTHER RESOLVED, that an appointee may be replaced by a further MSIG Resolution if they miss the **30-day deadline under Framework 3.1b** for their **signed contract, on-chain disclosure questionnaire, or registered signing key**.

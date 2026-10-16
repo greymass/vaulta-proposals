@@ -45,7 +45,7 @@ The main agreement already handles the things each role would otherwise need dra
 
 **3. Payment Structure:**
 
-- **USD [2,500] per month**, paid in arrears, **in A** at the Reference Rate on the date of payment, calculated as A-units = ⌊USD-cents × 10^6 ÷ median⌋. The same 24-hour staleness check and CoinMarketCap fallback rate apply as to any other conversion (MSIG #5 Part D).
+- **USD [2,500] per month**, paid in arrears, **in A** at the Reference Rate **when payment is proposed**, calculated as A-units = ⌊USD-cents × 10^6 ÷ median⌋. The same 24-hour staleness check and CoinMarketCap fallback rate apply as to any other conversion (**Framework 13.4–13.4a**).
 - Start date for payments: the **later of** the date this Agreement is signed and the date funds are received in the Program Account.
 - Payment frequency: monthly. Invoice cadence: monthly, in arrears.
 - **If the rate source fails**, payment is suspended under Framework 13.4a along with every other payment from the Program Account. Entitlement **continues to accrue** and is paid on resumption at the rate then current.
@@ -66,9 +66,12 @@ The main agreement already handles the things each role would otherwise need dra
 
 **7. Additional terms:**
 
+- The contract must assign **all work product to the VST under section 9** of the standard Independent Contractor Agreement and include the **confidentiality, conflict, recusal, and post-service bidding restrictions in Framework section 6**, and the **secure key handling and custody duties in Framework 7.4**.
+- The contract must apply the **payment suspension, accrual, and resumption rules in Framework 13.4a**.
+- The contract terminates on **removal or replacement**, or at the **term’s end unless month-to-month continuation applies under Framework 3.3**.
 - Contractor acknowledges that a **material breach of the conflict rules carries a permanent ban** from every role in and every payment from the RFP program, confirmed at 15/21 and liftable only at 15/21 (Framework 6.6), and that Contractor will be given the allegation in writing and 10 business days to respond before MSIG votes.
 - **Pay is suspended automatically** if Contractor is referred to MSIG for removal, or misses three consecutive meetings without excuse, pending resolution. Role, signing weight, and pay are suspended immediately on referral for a material conflict breach.
-- Signing weight and pay commence only when this Agreement is signed, the **disclosure questionnaire is filed on-chain**, and a signing key is registered. The 30-day period for those items runs from the later of the appointment Resolution's execution and the date VS LLC publishes the disclosure register as open for filing.
+- Signing weight and pay commence only when **all required items are filed**, this Agreement is signed, and a signing key is registered, under **Framework 3.1b**, including the **on-chain disclosure questionnaire**. The 30-day period for the contract, questionnaire, and key runs from the later of the appointment Resolution's execution and the date VS LLC publishes the disclosure register as open for filing.
 - Key weight is surrendered on removal or replacement, but **retained** during authorized month-to-month continuation after a term ends.
 - Loss or suspected compromise of a key must be reported to the Chair and block producers immediately, and Contractor must not sign until it is replaced.
 

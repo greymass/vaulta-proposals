@@ -348,7 +348,7 @@ Classify the **initial platform build, including both contracts on `disc.vst`**,
 
 ### 6.2 Departures from the specification
 
-If anything cannot be built as specified, VS LLC must publish the limitation and propose the nearest workable alternative here (MSIG #5 Part E).
+If anything cannot be built as specified, VS LLC must publish the limitation and propose the nearest workable alternative here.
 
 | Element | What was specified | What was built | Why | Proposed alternative |
 |---|---|---|---|---|

@@ -113,7 +113,7 @@ Where candidates in the same proposal conflict under the one-seat or affiliation
 
 **3.1a Network vision statements.** Each candidate must provide their own **network vision statement meeting Exhibit E’s requirements**, included with the appointment proposal.
 
-**Missing statements.** A proposal missing a statement is incomplete and should not be submitted or approved. If it executes anyway, the appointment remains valid, but VS LLC must record the omission in the seat register. **Pay and signing weight must wait until the statement, contract, questionnaire, and signing-key requirements in MSIG #5 Part B are complete.**
+**Missing statements.** A proposal missing a statement is incomplete and should not be submitted or approved. If it executes anyway, the appointment remains valid, but VS LLC must record the omission in the seat register. **Pay and signing weight must wait until the statement, contract, questionnaire, and signing-key requirements in 3.1b are complete.**
 
 **Publication and reappointment.** Record statements in the **`publications` register (7.6a)**, display them with the proposal on the Portal, and keep them linked from the seat register throughout the term. Statements are **non-binding** but inform reappointment; members seeking another term should explain how their year compared with their statement.
 
@@ -126,6 +126,8 @@ Where candidates in the same proposal conflict under the one-seat or affiliation
 - Any appointment conditions identified by VS LLC.
 
 **MSIG decides eligibility.** If VS LLC records a seat as unfilled for any reason other than an earlier execution, it must publish its reasons and refer the matter to MSIG. The seat remains vacant until MSIG decides.
+
+**3.1b Onboarding.** An incomplete appointment proposal that executes is **not void**. Each appointee must sign their contract, **file the standard on-chain disclosure questionnaire under 6.3a–6.3b**, and register their signing key **within 30 days of appointment execution or VS LLC announcing that the register is open, whichever is later**. **Pay and signing weight begin only after all required items are filed and the contract and key requirements are complete**.
 
 **3.2** Members serve a **one-year term** and may be reappointed without limit.
 
@@ -944,7 +946,7 @@ The Committee identifies Network needs, publishes RFPs, invites competing propos
 
 ## 20. Stage 3 — Writing and publishing an RFP
 
-**20.1** The portfolio holder sponsors the draft; a member engaged as its Reviewer follows **12.6.3**, with someone else drafting acceptance criteria and the milestone schedule. Assign a Manager of record when publication is approved, or earlier for drafting. Technical Reviewers may advise on feasibility and budgets for technical RFPs.
+**20.1** The portfolio holder sponsors the draft; a member engaged as its Reviewer follows **12.6.3**, with someone else drafting acceptance criteria and the milestone schedule. Assign a Manager of record when publication is approved, or earlier for drafting. Technical Reviewers may advise on feasibility and budgets for technical RFPs. **At scoping, the Committee must decide whether a Technical Reviewer is needed**, based on whether the work is technical, **including Service awards**.
 
 **20.2 Every published RFP must contain:**
 
