@@ -483,17 +483,18 @@ The existing-awardee exception **does not cover Program Costs referred for excee
 
 ## 10. Award approval and payment
 
-**10.1 The sequence.** Each step must finish before the next begins.
+**10.1 Award and payment sequence.** Each step must finish before the next begins.
 
-```
-1  Committee votes to award            two-thirds, minimum 3
-2  Publish on the Portal               within 2 business days
-3  VS LLC signs the agreement          nothing moves before this
-4  Committee proposes payment on-chain 4 of 5 signatures
-5  Delay window runs                   block producers may object or cancel
-6  Payment executes after the delay and objection clearance under 10.7
-7  Later milestones repeat steps 4-6, one proposal each
-```
+| Step | Action | Requirement |
+|---|---|---|
+| 1 | Committee approves the award | Two-thirds, minimum 3 votes |
+| 2 | Publish the award on the Portal | Within 2 business days |
+| 3 | VS LLC signs the agreement | No funds move before signing |
+| 4 | Committee proposes payment on-chain | 4 of 5 signatures |
+| 5 | Wait through the delay window | Block producers may object or cancel, as applicable |
+| 6 | Execute payment | The delay must end and objection clearance under 10.7 must be complete |
+
+**Later milestones:** Repeat steps 4–6, with a separate proposal for each payment. The normal delay applies, but there is **no objection process** (11.6); block producers retain their cancellation right under 10.8.
 
 **10.3 Publication.** Within **2 business days**, publish:
 
