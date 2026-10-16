@@ -9,20 +9,20 @@
 
 | # | Decision | Detail |
 |---|---|---|
-| 1 | **Approve the RFP Framework** required by MSIG #4 | Exhibit A |
-| 2 | **Rename** the Oversight Committee the Network Steering Committee | Same body, continued |
-| 3 | **Grow it from 3 seats to 5**, each with a subject area | Core Development, Marketing, Business Development, Community, At-Large |
-| 4 | **Set a 1-year term** for members, staggered at the start | Part B; Framework 3.2–3.4 |
-| 5 | **Give the Committee a mandate to decide RFP funding** on behalf of the Network | Block producers stop voting on individual awards |
-| 6 | **Cap that mandate**: Cycle Ceiling **USD 150,000 per cycle**, Per-Award Limit **USD 100,000 total contract value**. The mandate **runs until you cancel it** | Anything larger comes back to you |
-| 7 | **Hold program funds on-chain**, moved only by 4 of 5 Committee signatures | Owner permission stays with `eosio.prods` |
-| 8 | **Every payment waits 7 days** before it executes, in public | You may cancel any payment at 15/21 during that wait |
-| 9 | **Objection rule**: 4–6 block producers objecting sends an award back to you; 7 or more ends it | Part E |
-| 10 | **Recognize ECF** to run the community vote for the Community seat | **All five seats require future MSIG appointments**; Francis continues **Trust oversight only** until they are filled |
-| 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
-| 11a | Allow Committee members to earn **separate Technical Reviewer fees** | Rate-card fees under Framework 12.6, **outside the retainer** — see Part H. Limited to **3 concurrent engagements**, not by total fees. Not available until that cap is set |
-| 12 | **Authorize USD 910,000 over four quarterly cycles**, first instalment A worth USD 284,375 | Gross transfer at full spend and a steady A price: USD 966,875; see **Review Notes, note 3** |
-| 13 | Allow **fallback pricing when the oracle is stale or unavailable** | Use the **CoinMarketCap fallback**; Committee approvals, suspensions, and essential operating payments follow **Framework 13.4–13.4a**. **Only block producers** may name a permanent replacement rate source |
+| 1 | **Approve the Framework** | The RFP Framework required by MSIG #4, in Exhibit A. |
+| 2 | **Rename the Committee** | Continue the Oversight Committee as the **Vaulta Network Steering Committee**. |
+| 3 | **Expand to five seats** | Up from three: Core Development, Marketing, Business Development, Community, and At-Large, each with a portfolio. |
+| 4 | **Set member terms** | **One year**, staggered initially. Framework 3.2–3.4. |
+| 5 | **Authorize RFP funding decisions** | The Committee decides on behalf of the Network within its mandate; block producers stop voting on individual awards. |
+| 6 | **Set funding limits** | **USD 150,000 per cycle** in awards; **USD 100,000 total contract value per award**. Larger awards return to MSIG. The mandate continues until block producers cancel it. |
+| 7 | **Hold funds on-chain** | **4 of 5 Committee signatures** move funds; owner authority stays with `eosio.prods`. |
+| 8 | **Require payment delays** | Public wait: **7 days normally, 3 days for urgent awards**. Block producers may cancel at **15/21** during the wait. Part E. |
+| 9 | **Set objection rules** | **4–6 block producer objections** send an award back to MSIG; **7 or more** end it. Framework 10.5. |
+| 10 | **Recognize ECF** | Runs the Community seat vote. **All five seats require future MSIG appointments**; Francis continues **Trust oversight only** until they are filled. |
+| 11 | **Set Committee pay** | **USD 2,500 per member per month**, contracted through VS LLC; no success fees or per-award pay. |
+| 11a | **Allow member-Reviewer fees** | Separate Technical Reviewer fees **outside the retainer**, under Framework 12.6 and Part H. **3 concurrent engagements per member**, available only once that cap is set; no per-member total-fee cap. |
+| 12 | **Authorize program funding** | **USD 910,000 over four quarterly cycles**; first instalment: A worth **USD 284,375**. Gross transfer at full spend and a steady A price: **USD 966,875**. Review Notes, note 3. |
+| 13 | **Allow fallback pricing** | Use **CoinMarketCap** when the oracle is stale or unavailable; Committee approvals, suspensions, and essential operating payments follow **Framework 13.4–13.4a**. **Only block producers** may name a permanent replacement rate source. |
 
 **Block producers retain control** of limits, yearly funding, appointments, removals, reserved matters, payment cancellation, and suspension or revocation of the mandate without cause; amounts, cycle length, and limits may change at **15/21 at any time**. The program cannot spend unauthorized funds.
 
