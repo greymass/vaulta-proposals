@@ -34,7 +34,7 @@ This Exhibit specifies the deployed accounts, permissions, registers, and checks
 | **`rfp.vst`** | Holds program funds. | Committee payments require **4 of 5** signatures; no routine record-writing key. | **`eosio.prods`** |
 | **`disc.vst`** | Holds disclosure, decision, and publication records, **not program funds**. | One named VS LLC writing permission; see 1.5. | **`eosio.prods`** |
 
-| Item | Requirement |
+| Item | Details |
 |---|---|
 | **Account** | **`rfp.vst`**, a subaccount of `vst`. |
 | **Created by** | *(to confirm on deployment — creating account and transaction id)* |
