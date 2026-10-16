@@ -48,8 +48,8 @@ This Exhibit specifies the deployed accounts, permissions, registers, and checks
 | Permission name | **`committee`** *(to confirm on deployment)* |
 | Parent permission | `active` |
 | Weight per seated member | **1**, five members, **5 units total** |
-| **Fund transfers** — awards, milestones, and Program Costs under the published schedule | **4 of 5** signatures |
-| **Non-fund administrative actions**, including payment cancellation | **3 of 5** signatures |
+| **Fund transfers** | **4 of 5** signatures |
+| **Administrative actions, including cancellation** | **3 of 5** signatures |
 | Owner permission | **`eosio.prods`** |
 | Active permission | *(to confirm on deployment)* |
 
