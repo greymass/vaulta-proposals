@@ -13,17 +13,17 @@ Complete the sections below for each candidate and list candidates in **priority
 
 Appointments follow **MSIG #5 Parts B and F and Framework sections 3 and 4**; contracts, disclosures, and signing keys follow **MSIG #5 Part B**.
 
+**Before execution**, block producers should **check the published seat register and cancel proposals for filled seats**; **Framework 3.1** determines whether appointments take effect.
+
 ---
 
 ## Proposal Title
 
 Steering Committee Appointment — [SEAT NAME(S)]
 
-## Purpose
+## Resolution mode
 
-Appoint the candidates below to **[N] Steering Committee seat(s)**.
-
-**Resolution mode:** [**Seat by seat** (default) / **All or nothing**]
+[**Seat by seat** (default) / **All or nothing**]
 
 Seat by seat considers each appointment independently; all or nothing appoints no one if any listed appointment cannot take effect (Framework 3.1).
 
@@ -74,9 +74,3 @@ RESOLVED, that each candidate is appointed to the **seat and initial term listed
 FURTHER RESOLVED, that each appointee accepts the **Framework’s obligations** and acknowledges the **material conflict breach and permanent ban rules in section 6.6**.
 
 FURTHER RESOLVED, that an appointee who misses the **30-day deadline under MSIG #5 Part B** for their **signed contract, on-chain disclosure questionnaire, and registered signing key** may be replaced by a further MSIG Resolution.
-
----
-
-## Before execution
-
-Block producers should **check the published seat register and cancel proposals for filled seats before execution**; **Framework 3.1** determines whether appointments take effect.
