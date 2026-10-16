@@ -11,9 +11,9 @@ This RFP Framework is required by MSIG #4 and has two parts.
 - **Part 1 — The Steering Committee and the Mandate.** Who decides, how they are chosen, how they vote, and how money moves.
 - **Part 2 — Running an RFP.** How a single RFP goes from an idea to a paid deliverable.
 
-Part 2 may be amended by MSIG without reopening Part 1. **Part 1 governs any conflict**, and Part 2 may vary a Part 1 rule **only where Part 1 expressly permits it**. *Terms used throughout* forms part of Part 1.
+Part 2 may be amended by MSIG without reopening Part 1. **Part 1 governs any conflict**, and Part 2 may vary a Part 1 rule **only where Part 1 expressly permits it**. *Definitions* forms part of Part 1.
 
-## Terms used throughout
+## Definitions
 
 These definitions form part of Part 1.
 
@@ -94,7 +94,7 @@ Anyone in these roles who becomes Treasury-affiliated must disclose it within **
 
 **2.6** Each member has **one unit of signing weight** on the Program Account (section 7) and must keep their signing key secure.
 
-## 3. Choosing members and terms
+## 3. Member appointments and terms
 
 **3.1** The **Core Development, Marketing, Business Development, and General (At-Large) seats** must be filled by MSIG Resolutions at the Threshold using **Exhibit E to MSIG #5**; each proposal may cover **one or more seats**.
 
@@ -165,7 +165,7 @@ With fewer than four members, **no payment can execute**; the Committee may stil
 
 An award goes to **MSIG** if fewer than four members can sign (section 9).
 
-## 4. The Community seat
+## 4. Community seat
 
 **4.1** The **EOS Community Foundation (ECF)** runs the Community seat vote and sets candidate and voter eligibility, the voting method, and how results are published.
 
@@ -334,7 +334,7 @@ Records are **append-only**: updates must reference the previous record; nothing
 
 **6.7** A Committee member may hold a paid Technical Reviewer engagement **only under section 12.6**, including its preconditions and recusals.
 
-## 7. The Program Account and signing
+## 7. Program Account and signing
 
 **7.1** All program funds must be held **only in `rfp.vst`, the Program Account**; only block producers may name that account. The VST has no authority over its funds; the permissions in **7.2** govern.
 
@@ -409,7 +409,7 @@ The Portal **reads and displays the register without keeping a separate copy**.
 
 **Write each record within 2 business days of its decision**, using the `disc.vst` key in 7.6. Publication means writing to this register; the delay in 10.4 starts from that publication.
 
-## 8. The mandate
+## 8. Committee mandate
 
 **8.1** MSIG grants the Committee a **standing mandate to allocate Program Account funds on behalf of the Network**; block producers do not vote on individual RFPs or awards, and a Committee decision within the limits below is the Network's decision.
 
@@ -446,7 +446,7 @@ An action outside these limits is **void**; VS LLC must not contract on it, and 
 | Owner permission with block producers | Block producers can rebuild the permission or recover the account |
 | Funding is authorized a year at a time | The Committee can only ever spend what block producers have authorized, and any instalment can be stopped at the Threshold |
 
-## 9. Matters that go to MSIG instead
+## 9. Matters requiring MSIG
 
 **9.1 Reserved matters.** The following require MSIG rather than a Committee decision:
 
@@ -477,7 +477,7 @@ An action outside these limits is **void**; VS LLC must not contract on it, and 
 
 **Automatic escalation.** A matter falling under 9.1 without a vote to escalate needs no Committee vote for submission; the Chair, or any member if there is no Chair, must submit it.
 
-## 10. How an award gets paid
+## 10. Award approval and payment
 
 **10.1 The sequence.** Each step must finish before the next begins.
 
@@ -703,7 +703,7 @@ A Manager appointed to a Committee seat **ceases to be Manager of record on appo
 
 **12.6.6 Reviewer pay.** Reviewer fees are **additional to the Committee retainer**, subject to **12.6.1 and 12.6.5**.
 
-## 13. Money: ceiling, reservation, reporting
+## 13. Budget limits and reporting
 
 **13.1 Limits and funding periods.** MSIG sets the **Cycle Ceiling**, **Per-Award Limit**, **Program Cost Ceiling**, **cycle length**, and **program scope**; ceilings are maxima rather than targets, and unspent allocations do not carry over.
 
@@ -881,7 +881,7 @@ Funding remains subject to **four-cycle authorization**; block producers may dec
 
 **14.6** After a funding period ends and all contracted obligations are met, return or sweep the remaining balance through the owner permission as MSIG directs. **Do not carry it into the next funding period**; within a period, balances reduce quarterly top-ups rather than being swept each cycle.
 
-## 15. Relationship with the Trustee and VS LLC
+## 15. Trustee and VS LLC roles
 
 **15.1** The Trustee acts only as executor and **has no RFP-program role**; no program funds pass through the Trust (1.3).
 
@@ -911,7 +911,7 @@ Flag every RFP-system award as **self-referential in the cycle report**.
 
 **15.4 Block producers** set limits, appoint and remove members, decide escalations, hold the owner permission, and may cancel payments at the Threshold during the delay. They do not vote on individual awards within the mandate.
 
-## 16. Reviews and amendment
+## 16. Reviews and amendments
 
 **16.1** The Committee publishes a written self-review **9 months after the funding date**, covering RFP throughput, results, conflict incidents, and whether five seats is working.
 
@@ -921,7 +921,7 @@ Flag every RFP-system award as **self-referential in the cycle report**.
 
 # PART 2 — RUNNING AN RFP
 
-## 17. What the program does
+## 17. Program overview
 
 The Committee identifies Network needs, publishes RFPs, invites competing proposals, awards against published criteria, and pays against delivered milestones. Open calls and bounties follow sections **26 and 26a**.
 
@@ -1187,7 +1187,7 @@ The **two-milestone minimum in 11.1a does not apply**. For **23.2 and 23.3**, su
 
 Use a **directed RFP where competitive evaluation would add value**, such as comparing capable teams, approaches, or prices; the Committee records that judgment under rule 14. This is not a bounty size limit.
 
-## 27. Rules that apply throughout
+## 27. General rules
 
 1. **Published criteria, weights, budgets, and results.** Every judgment is written down and attributable.
 2. **All questions and answers are public.** No private guidance to any proposer.
@@ -1203,7 +1203,7 @@ Use a **directed RFP where competitive evaluation would add value**, such as com
 
 ---
 
-## Appendix A — Who does what
+## Appendix A — Roles and responsibilities
 
 This is a role guide; the cited sections contain the full rules and exceptions.
 
@@ -1216,7 +1216,7 @@ This is a role guide; the cited sections contain the full rules and exceptions.
 | **VS LLC** | Contract with awardees and role-holders; operate the Portal and write the `disc.vst` registers; configure and publish the Program Account; refuse contracts outside the mandate. Work product vests in the **VST** by award shape (20.2a). | Cannot choose awardees, control the Program Account, or own the platform (15.2a); VS LLC and connected entities may not bid on RFP-system work except under **15.2b**. |
 | **Trustee** | No RFP-program role (1.3 and 15.1). | — |
 
-## Appendix B — Numbers set elsewhere
+## Appendix B — Program settings
 
 The table identifies where each setting is defined. Settings in MSIG #5 can change without amending this Framework.
 
@@ -1236,7 +1236,7 @@ The table identifies where each setting is defined. Settings in MSIG #5 can chan
 | Cap on concurrent member-Reviewer engagements (section 12.6) | MSIG #5, Part H |
 | Post-award review threshold (section 25.2), set as a share of the Per-Award Limit | MSIG #5, Part D |
 
-## Appendix C — Still to confirm
+## Appendix C — Outstanding items
 
 **Blocking items are marked.** A blocking item stops something specific from happening until it is resolved.
 
