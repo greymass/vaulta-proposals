@@ -1287,13 +1287,13 @@ Use a **directed RFP where competitive evaluation would add value**, such as com
 ## 27. General rules
 
 1. **Published criteria, weights, budgets, and results.** Every judgment is written down and attributable.
-2. **All questions and answers are public.** No private guidance to any proposer.
+2. **Questions and answers** follow **21.2**.
 3. **Recusal is required, automatic, and published.** Thresholds recalculate on non-recused seats.
 4. **Nobody scores, approves, or is paid on an RFP they could bid on.** The one exception is a Committee member engaged as Technical Reviewer under 12.6 — they are paid on an RFP they are barred from bidding on, and 12.6's guards apply in place of this rule. Material breaches follow **6.6**.
 5. **No splitting or staging** to stay under the Per-Award Limit, and no topping up past it later.
-6. **Departing from the scores requires a written reason.**
-7. **Payment follows delivery**, except for capped, justified advances.
-8. **Every award is published before money moves**, is contracted before it is proposed on-chain, and waits out its full delay.
+6. **Departures from scores** follow **22.5**.
+7. **Pay after delivery**, except for advances under **11.7**.
+8. **Publication, contracting, and payment** follow **10.1–10.4**.
 9. **Personal-key restrictions** follow **7.4**.
 10. **Every proposal is categorized**, directed or unsolicited, so it reaches the right portfolio holder.
 11. **Everything the community submits gets a status**, and a reason if declined.
