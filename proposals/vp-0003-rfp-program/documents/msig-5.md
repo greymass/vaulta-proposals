@@ -61,7 +61,7 @@ FURTHER RESOLVED, that the Oversight Committee is renamed the **Vaulta Network S
 
 **Appointments**
 
-FURTHER RESOLVED, that **this Resolution fills none of the five Steering Committee seats**; members must be appointed **on their own merits by separate MSIG Resolutions at the Threshold meeting Exhibit E’s requirements**, with Community-seat selection under **Framework section 4**.
+FURTHER RESOLVED, that **this Resolution fills none of the five Steering Committee seats**; members must be appointed **on their own merits by separate MSIG Resolutions that meet Exhibit E’s requirements and are approved at the Threshold**, with Community-seat selection under **Framework section 4**.
 
 FURTHER RESOLVED, that a further MSIG Resolution may correct an appointment executed in error.
 
@@ -71,7 +71,7 @@ FURTHER RESOLVED, that **Dafeng Guo (Vaulta Treasury), Ross Dold (EOSphere), and
 
 ### Part C — The Mandate
 
-FURTHER RESOLVED, that the Committee is authorized to **award funds, select vendors, and create payment obligations on behalf of the Network**, subject to the **Framework's rules and limits**, as required by MSIG #4.
+FURTHER RESOLVED, that the Committee is authorized to **award funds, select vendors, and create payment obligations on behalf of the Network**, subject to the **Framework's rules and limits**.
 
 ### Part D — Limits and denomination
 
@@ -100,8 +100,6 @@ FURTHER RESOLVED, that payments must use these delay windows:
 | Shorter delay for urgent awards | **72** hours (3 days) |
 
 FURTHER RESOLVED, that **VS LLC must develop and configure the Program Account, Committee Permission, and the disclosure, decisions, and publications registers on `disc.vst` according to Exhibit D**, and **publish Exhibit D with its required configuration and completed deployment record before funding**.
-
-**If the protocol cannot enforce the delay**
 
 FURTHER RESOLVED, that payment delays must be **enforced on-chain**, with the **held-multisignature fallback in Exhibit D section 2.3 authorized only if the protocol cannot enforce them**.
 
