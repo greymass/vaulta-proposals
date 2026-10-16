@@ -8,17 +8,11 @@
 
 ## What this is
 
-This rate card sets **Manager and Technical Reviewer fees and the work those fees cover**, as required by **Framework 12.1**; neither role may be contracted before the rate card is published.
-
-**Parts 2 and 3 set the fees**, and **Part 4 sets the cap at three concurrent Reviewer engagements per Committee member**, as required before members may be engaged as Reviewers under MSIG #5 Part H.
-
-Fees may change only by **MSIG at the Threshold**; changes do not affect existing engagements.
-
-The **Framework (Exhibit A)** defines each role’s powers and limits; the **contract templates (Exhibit F)** incorporate this rate card’s fees and scope.
+This rate card sets **Manager and Technical Reviewer fees and scope** under **Framework 12.1**; neither role may be contracted before it is published. The **Framework (Exhibit A)** defines their powers and limits, and the **contract templates (Exhibit F)** incorporate this rate card.
 
 ---
 
-## How fees are calculated
+## Common payment rules
 
 | Instrument | Manager and Reviewer fees |
 |---|---|
@@ -31,6 +25,11 @@ If an engagement ends early, a **no-award fee** may apply under the rules below.
 
 Separate fees cover **post-award reviews** and **preparation when taking over an existing engagement**, as specified in this rate card.
 
+- **Independent decisions.** The applicable assessment fee is the same for accept, accept with conditions, or reject; it does not depend on approving payment or on the award’s value or outcome (Framework 12.5). Fees vary with the number of milestones.
+- **Work before milestones.** Milestone fees cover all scoping support, publication, public Q&A, intake, compliance checks, evaluation logistics, and scoring; none earns a separate fee.
+- **Recovery plans.** If an award continues under a recovery plan, the ordinary milestone fee includes reassessment of corrected work; neither role earns an additional fee (Framework 11.9).
+- **Payment.** Fees are denominated in USD and paid in A at the Reference Rate on the payment date through the published Program Cost schedule (Framework 13.4 and 13.3a); fees accrue during a suspension under 13.4a and are paid on resumption at the rate then current.
+
 ### The no-award fee
 
 Each role earns **one no-award fee per engagement**, equal to its milestone fee, in these situations:
@@ -42,27 +41,13 @@ Each role earns **one no-award fee per engagement**, equal to its milestone fee,
 | An award decision expires after 60 days without a contract. | Framework 10.10 |
 | A bounty expires unclaimed. | Framework 26a, rule 5 |
 
-The fee **replaces any milestone fee for the same determination**; both cannot be paid. Fees for earlier determinations remain payable, but no fees are paid for milestones never determined.
-
-**Recovery plans.** If the Committee continues the award under a recovery plan instead of terminating it, the ordinary milestone fee applies and includes reassessment of the corrected work (Framework 11.9).
-
-**Evaluation work.** There is no separate evaluation fee; milestone fees cover scoping support, publication, public Q&A, intake, compliance checks, evaluation logistics, and scoring.
-
-**Payment.** Fees are denominated in USD and paid in A at the Reference Rate on the payment date, through the published Program Cost schedule (Framework 13.4 and 13.3a); during a payment suspension under 13.4a, fees accrue and are paid when payments resume, using the rate then current.
-
-### Fees and independent decisions
-
-- **Pay is for the determination or assessment**, whether the result is accept, accept with conditions, or reject; it does not depend on approving payment.
-- **Reassessment under a recovery plan earns no additional fee** (Framework 11.9).
-- **Fees vary with the number of milestones, not the award’s value**; engagements ending early follow the no-award fee rules above, with no payment for future undetermined milestones.
-- **Managers must recommend termination when required by Framework 11.10a**; a good-faith recommendation must not be grounds for ending or declining to renew their engagement, and their fee is unaffected by whether the Committee acts on it.
-- **The Committee cannot negotiate rates or add premiums**; rates are fixed by MSIG under Framework 12.6.5.
+The fee **replaces any milestone fee for the same determination**; both cannot be paid. Fees for earlier determinations remain payable, but no fees are paid for milestones never determined. Role-specific amounts and payment triggers are in **2.2 and 3.2**.
 
 ---
 
 ## 1. Setting and reviewing rates
 
-Rates are set by **MSIG #5** and may change only by **MSIG at the Threshold**; changes apply only to new engagements.
+Rates are set by **MSIG #5** and may change only by **MSIG at the Threshold**; changes apply only to new engagements. The Committee cannot negotiate rates or add premiums (Framework 12.6.5).
 
 Rates are reviewed annually under **Framework 14.3**, using cycle reports to assess the work required.
 
@@ -86,7 +71,7 @@ Each engagement covers **one RFP or bounty, from publication to closing**; a Man
 | **Closing** | Complete the applicable closing checklist (Framework 25.1) and publish a post-award review under 2.3 for awards at or above the review threshold. |
 | **Handover** | On reassignment, provide a written handover of approval history, correspondence, and outstanding items (Framework 12.3). |
 
-Milestone fees cover **all work before the first milestone**, including scoping, publication, Q&A, intake, and evaluation; none earns a separate fee.
+A **good-faith termination recommendation** must not be grounds for ending or declining to renew the Manager’s engagement; their fee is unaffected by whether the Committee acts on it (Framework 11.10a).
 
 ### 2.2 Fees
 
@@ -95,7 +80,7 @@ Milestone fees cover **all work before the first milestone**, including scoping,
 | **RFP — each milestone** | **350** | On the Manager’s determination: accept, accept with conditions, or reject. |
 | **RFP — each milestone with scored assessment** | **600** | On each milestone determination, where the Manager also wrote the scored assessment under Framework 22.3; the **250** assessment addition applies to every milestone and tracks the Reviewer rate. |
 | **Bounty — one-time** | **350** | On the Manager’s written acceptance determination (Framework 26a). |
-| **No-award fee** | **350**, or **600** if the Manager wrote the scored assessment | Once the Committee records one of the four events in *The no-award fee* above; paid once per engagement instead of a milestone fee for the same determination. |
+| **No-award fee** | **350**, or **600** if the Manager wrote the scored assessment | When the Committee records an event listed under *The no-award fee* above. |
 | **Reassignment to a live RFP** | **500** | On assignment, for the incoming Manager’s preparation; the outgoing Manager keeps earned milestone fees and earns no further fees for that engagement. |
 | **Post-award review** | **375** | On publication, for awards at or above the review threshold in MSIG #5 Part D; see 2.3. |
 
@@ -129,7 +114,7 @@ Each engagement covers **one RFP or bounty** whose published statement says a Re
 | **Milestones** | Provide a written assessment at **every milestone**: accept, accept with conditions, or reject with stated fixes. |
 | **Escalation** | Recommend termination **in writing directly to the Committee** when delivered work or services fall materially below the required standard (Framework 11.10a). |
 
-Service awards are included, even where nothing is handed over. The Committee decides whether a Reviewer is needed at scoping, not at each milestone. Evaluation scoring is included in milestone fees.
+Service awards are included, even where nothing is handed over.
 
 ### 3.2 Fees
 
@@ -137,10 +122,8 @@ Service awards are included, even where nothing is handed over. The Committee de
 |---|---|---|
 | **RFP — each milestone** | **450** | On the written assessment, whatever its conclusion. |
 | **Bounty — one-time** | **450** | On the written assessment of the delivery. |
-| **No-award fee** | **450** | Once per engagement in the four situations listed above, instead of a milestone fee for the same assessment; payable whether or not the Reviewer filed the termination recommendation. |
+| **No-award fee** | **450** | Under *The no-award fee* above, whether or not the Reviewer filed the termination recommendation. |
 | **Substitute Reviewer during an award** | **450 per remaining milestone, plus 375** | Milestone assessments at the normal rate, plus **375** for reading earlier assessments (Framework 12.6.1(3)). |
-
-Reassessment of corrected work under a recovery plan earns **no additional fee** (Framework 11.9).
 
 ### 3.3 Committee members serving as Reviewers
 
@@ -156,11 +139,9 @@ Committee members receive **the same rates in 3.2**, with no premium, discount, 
 
 The cap required by Framework 12.6.1(1) is **three concurrent Reviewer engagements per Committee member**, as set by MSIG #5 Part H; members may not be engaged before the cap is set.
 
-### 4.1 Total fees and reporting
+### 4.1 Total fees
 
 There is **no separate per-cycle cap on a member’s total Reviewer fees**; the concurrent-engagement cap and fixed rates apply.
-
-Every member-Reviewer engagement and fee must appear in the cycle report **by member and RFP**, including each member’s **total fees for the cycle and engagement count against the cap** (Framework 13.5).
 
 ### 4.2 Committee pay and role limits
 
@@ -176,13 +157,12 @@ A Committee member **may never serve as Manager of record on any RFP**, and **no
 |---|---|
 | **Contract** | Sign the standard **VS LLC Independent Contractor Agreement** with the role’s **Schedule A in Exhibit F** before performing the role. |
 | **Disclosure** | File the standard questionnaire **on-chain** under Framework 6.3a before being recorded as Manager of record or assigned as Reviewer; overdue annual refiling bars new assignments until filed. |
-| **Independent pay** | Pay must not depend on milestone approval, the determination reached, or the award’s size or outcome (Framework 12.5). |
 | **Conflicts** | Follow the Framework’s conflict rules and ban register; Committee members must also meet the one-member-per-affiliation rule. |
 | **Publication** | Report every engagement and fee in the cycle report; for member-Reviewers, include the member, RFP, cumulative cycle fees, and engagement count against the cap (Framework 13.5). |
 
 ---
 
-## 6. Example cycle
+## Appendix — Example cycle
 
 Six RFPs are published, four with Reviewers and two using the Manager assessment variant without Reviewers. One Reviewer-engaged RFP closes without an award; the other five have four milestones each, and three require post-award reviews.
 
