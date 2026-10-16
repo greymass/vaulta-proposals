@@ -12,7 +12,7 @@
 | 1 | **Approve the RFP Framework** required by MSIG #4 | Exhibit A |
 | 2 | **Rename** the Oversight Committee the Network Steering Committee | Same body, continued |
 | 3 | **Grow it from 3 seats to 5**, each with a subject area | Core Development, Marketing, Business Development, Community, At-Large |
-| 4 | **Set a 1-year term** for members, staggered at the start | Part B; Framework 3.2–3.4 |
+| 4 | **Set member terms** | Initial terms: **14 months** for Core Development and Marketing; **8 months** for Business Development and At-Large; **12 months** for Community. Later terms are **12 months**; vacancy appointments cover the remaining term. Framework 3.2–3.4, 3.7. |
 | 5 | **Authorize RFP funding decisions** | The Committee decides on behalf of the Network; within the mandate, block producers no longer vote on individual RFPs or awards. |
 | 6 | **Set funding limits** | **USD 150,000 per cycle** in awards; **USD 100,000 total contract value per award**. Larger awards return to MSIG. The mandate continues until block producers cancel it. |
 | 7 | **Hold program funds on-chain**, moved only by 4 of 5 Committee signatures | Owner permission stays with `eosio.prods` |
@@ -20,7 +20,7 @@
 | 9 | **Send awards back for MSIG approval after 4–6 objections; cancel awards after 7 or more** | Block producer objections during the payment delay. The Committee cancels payment in both cases. Only the **4–6 band** allows a new payment proposal after MSIG confirmation. Framework 10.5. |
 | 10 | **Recognize ECF** to run the community vote for the Community seat | **All five seats require future MSIG appointments**; Francis continues **Trust oversight only** until they are filled |
 | 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
-| 11a | Allow Committee members to earn **separate Technical Reviewer fees** | Rate-card fees under Framework 12.6, **outside the retainer** — see Part H. Limited to **3 concurrent engagements**, not by total fees. Not available until that cap is set |
+| 11a | Allow Committee members to earn **separate Technical Reviewer fees** | Rate-card fees under Framework 12.6, **outside the retainer** — see Part H. Limited to **3 concurrent engagements**, not by total fees. |
 | 12 | **Authorize program funding** | **USD 910,000 over four quarterly cycles**; first instalment: A worth **USD 284,375**. Gross transfer at full spend and a steady A price: **USD 966,875**. Review Notes, note 3. |
 | 13 | Allow **fallback pricing when the oracle is stale or unavailable** | Use the **CoinMarketCap fallback**; Committee approvals, suspensions, and essential operating payments follow **Framework 13.4–13.4a**. **Only block producers** may name a permanent replacement rate source |
 
@@ -65,9 +65,7 @@ FURTHER RESOLVED, that the Oversight Committee is renamed the **Vaulta Network S
 
 **Appointments**
 
-FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by this Resolution**; Committee members must be appointed by **separate MSIG Resolutions at the Threshold**, with each appointment proposal **meeting the requirements in Exhibit E**; and **candidates must be considered on their own merits**, with the Community seat selected under Part F.
-
-FURTHER RESOLVED, that appointees must meet the **onboarding requirements in Framework 3.1b**.
+FURTHER RESOLVED, that **all five Steering Committee seats remain unfilled by this Resolution**; Committee members must be appointed by **separate MSIG Resolutions at the Threshold**, with each appointment proposal **meeting the requirements in Exhibit E**; and **candidates must be considered on their own merits**, with the Community seat selected under **Framework section 4**.
 
 FURTHER RESOLVED, that a further MSIG Resolution may correct an appointment executed in error.
 
