@@ -10,7 +10,7 @@
 
 ## Purpose
 
-This rate card sets **Manager and Technical Reviewer fees and scope** under **Framework 12.1**; neither role may be contracted before it is published. The **Framework (Exhibit A)** defines their powers and limits, and the **contract templates (Exhibit F)** incorporate this rate card.
+This rate card sets **Manager and Technical Reviewer fees and responsibilities** under **Framework 12.1**. It must be published before either role is contracted. The **Framework (Exhibit A)** defines their authority, and the **contracts in Exhibit F** incorporate this rate card.
 
 ---
 
@@ -84,7 +84,7 @@ A **good-faith termination recommendation** must not be grounds for ending or de
 | Item | Fee (USD) | When payable |
 |---|---|---|
 | **RFP — each milestone** | **350** | On the Manager’s determination: accept, accept with conditions, or reject. |
-| **RFP — each milestone with scored assessment** | **600** | On each milestone determination, where the Manager also wrote the scored assessment under Framework 22.3; the **250** assessment addition applies to every milestone and tracks the Reviewer rate. |
+| **RFP — each milestone with scored assessment** | **600** | On each milestone determination. When the Manager writes the scored assessment under Framework 22.3, each milestone fee includes an additional **USD 250**, bringing it to **USD 600**. |
 | **Bounty — one-time** | **350** | On the Manager’s written acceptance determination (Framework 26a). |
 | **No-award fee** | **350**, or **600** if the Manager wrote the scored assessment | When the Committee records an event listed under *The no-award fee* above. |
 | **Reassignment to a live RFP** | **500** | On assignment, for the incoming Manager’s preparation; the outgoing Manager keeps earned milestone fees and earns no further fees for that engagement. |
@@ -98,7 +98,7 @@ The Manager must publish a review for any award whose **total contract value** m
 
 ### 2.4 Workload
 
-The Committee must track and report each Manager’s RFP workload under Framework 12.4. **Four concurrent engagements** is a planning assumption, **not a contractual cap**; actual workload must be published in the cycle report.
+The Committee must publish each Manager’s workload in the cycle report (Framework 12.4). **Four concurrent engagements is a planning estimate, not a limit.**
 
 ---
 
@@ -114,7 +114,7 @@ Each engagement covers **one RFP or bounty** whose published statement says a Re
 | **Milestones** | Provide a written assessment at **every milestone**: accept, accept with conditions, or reject with stated fixes. |
 | **Escalation** | Recommend termination **in writing directly to the Committee** when delivered work or services fall materially below the required standard (Framework 11.10a). |
 
-Service awards are included, even where nothing is handed over.
+Reviewers also assess ongoing services, even when there is no separate deliverable.
 
 ### 3.2 Fees
 
@@ -137,11 +137,7 @@ Committee members receive **the same rates in 3.2**, with no premium, discount, 
 
 ## 4. Committee-member Reviewer cap
 
-The cap required by Framework 12.6.1(1) is **three concurrent Reviewer engagements per Committee member**, as set by MSIG #5 Part H; members may not be engaged before the cap is set.
-
-### 4.1 Total fees
-
-There is **no separate per-cycle cap on a member’s total Reviewer fees**; the concurrent-engagement cap and fixed rates apply.
+Each Committee member may hold **up to three concurrent Reviewer engagements**, as set by MSIG #5 Part H (Framework 12.6.1(1)). There is **no separate limit on their total Reviewer fees per cycle**. Members cannot be engaged until the concurrent-engagement cap is set.
 
 ### 4.2 Committee pay and role limits
 
