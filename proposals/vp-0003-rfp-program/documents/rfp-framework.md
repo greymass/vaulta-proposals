@@ -39,7 +39,7 @@ These definitions form part of Part 1.
 
 ## 1. Steering Committee
 
-**1.1** The Committee oversees the Trust and makes RFP funding decisions for the Network under separate rules:
+**1.1** The Committee has two roles, governed by separate rules: **Trust oversight** and **Network RFP funding**.
 
 | | **Trust oversight** | **Network RFP funding** |
 |---|---|---|
@@ -48,17 +48,17 @@ These definitions form part of Part 1.
 | Role | Monitors and reports | Decides who receives funding |
 | Accountability | Records required by the Trust Agreement | Publication, payment delays, reports, and funding approval every four cycles |
 
-**1.2** Committee members must be appointed by **MSIG Resolutions at the Threshold using Exhibit E**, with the Community seat selected under section 4; block producers decide when to fill the seats.
+**1.2** Members must be appointed by **MSIG Resolutions at the Threshold using Exhibit E**; the Community seat follows section 4, and block producers decide when seats are filled.
 
-Until all five seats are filled, **the RFP mandate must not be exercised, no RFP may be published, and no award may be made**.
+Until all five seats are filled, **the Committee must not exercise the RFP mandate, publish RFPs, or make awards**.
 
-**The Program Account must not be funded and the Committee permission must not be activated** until all five seats are filled and every member has signed their contract, filed their declaration, and registered a signing key.
+**Program Account funding and Committee permission activation must wait until all five seats are filled** and every member has signed their contract, filed their declaration, and registered a signing key.
 
-**1.3** Program funds are **not Trust Property**, the RFP program is not a Trust activity, and the Trustee has no role in it.
+**1.3** The RFP program is **not a Trust activity**, its funds are **not Trust Property**, and the Trustee has no role in it.
 
-**1.4** Every decision and record must state whether it relates to **Trust oversight** or the **Network RFP program**.
+**1.4** Every decision and record must identify whether it concerns **Trust oversight** or the **Network RFP program**.
 
-**1.5** The Committee must not use **Trust oversight** to pressure decisions in the **Network RFP program**, or vice versa; any communication involving both roles must be written and recorded in the minutes.
+**1.5** The Committee must not use either role to pressure decisions in the other; communications involving both roles must be written and recorded in the minutes.
 
 ## 2. Seats
 
