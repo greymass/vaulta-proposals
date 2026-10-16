@@ -148,26 +148,26 @@ Use **integer arithmetic with truncation, never floating point**; the published 
 
 ### 3.2 Fallback settings and conversion
 
-Configure the fallback under **Framework 13.4** as follows; that section governs when it starts and when the oracle resumes.
+Use the following fallback settings; **Framework 13.4** governs when the fallback starts and the oracle resumes.
 
-| | |
+| Setting | Value |
 |---|---|
-| **Source** | **CoinMarketCap**, Vaulta (A), **CoinMarketCap ID 36462** |
-| **Figure** | The **midpoint of the published daily high and low USD prices** |
-| **Day** | The **UTC calendar day before the date of the read** |
-| **Form** | An integer in millionths of a dollar: fallback = ⌊ (high + low) ÷ 2 × 10^6 ⌋, computed in exact decimal arithmetic from the published figures |
-| **Oracle resumption check** | At least one new `eosusd` datapoint in every 24-hour period for **7 consecutive days**; retain the start and resumption records required by Framework 13.4 |
+| Source | CoinMarketCap, Vaulta (A), ID 36462 |
+| Price | Midpoint of the published daily high and low USD prices |
+| Day | UTC calendar day before the read |
+| Stored value | Integer in millionths of a dollar |
+| Oracle resumption | At least one new `eosusd` datapoint in every 24-hour period for **7 consecutive days**; retain the start and resumption records required by Framework 13.4. |
 
-**A-units = ⌊ USD-cents × 10^8 ÷ fallback ⌋**.
+**fallback = ⌊ (high + low) ÷ 2 × 10^6 ⌋**, using the published figures and **exact decimal arithmetic**.
 
-Use **exact decimal arithmetic** to form the six-decimal fallback integer, then **integer division with truncation** for payment conversion.
+**A-units = ⌊ USD-cents × 10^8 ÷ fallback ⌋**, using **integer division with truncation**.
 
 ### 3.3 Staleness and collar checks
 
 | Check | Configured trigger |
 |---|---|
 | **Staleness** | Newest datapoint older than **24 hours** |
-| **Collar** | Approval rate differs by more than **15%** from the previous payment’s rate under that award, or the award-decision rate for the first payment |
+| **Rate-change threshold (collar)** | Approval rate changes by more than **15%** from the previous payment’s rate under the same award, or the award-decision rate for the first payment |
 
 Apply **Framework 13.4** to triggered checks, including fallback use and Committee approval when required.
 
@@ -179,8 +179,8 @@ Apply **Framework 13.4–13.4a** to source failure, payment suspension, exceptio
 
 | Monitoring | Requirement |
 |---|---|
-| **Operator and cadence** | **VS LLC, hourly**, independently of payment approvals. |
-| **Checks** | Confirm that `delphioracle`’s `datapoints` table is readable, the **`eosusd` pair exists**, and the **code hash is unchanged**; a code-hash change is a warning, not itself a failure. |
+| **Operator and cadence** | **VS LLC, hourly**. |
+| **Checks** | Check that `delphioracle`’s `datapoints` table is readable, `eosusd` exists, and the code hash is unchanged; a changed hash triggers a warning, not a failure by itself. |
 | **Alerts** | Notify **VS LLC and the Chair simultaneously**. |
 | **Publication** | The **Manager of record or Chair** records and publishes the failure on the Portal **within 1 business day of the alert**; the **5-business-day escalation clock starts from that record** (Framework 9.2 and 13.4a). |
 | **No response** | If no record is published within 1 business day, VS LLC publishes the alert itself and notifies every member; VS LLC cannot make the Framework 9.2 submission. |
@@ -215,7 +215,7 @@ The contract must have **no modify action, erase action, or administrative editi
 
 Store the **full record on-chain**; the Portal reads and renders it. Keep **no hash field**.
 
-Use the append-only correction mechanism in **this section**. Complete the screening and redaction required by **Framework 5.9, 6.3b, 7.6a, and 25.2 before writing**; minutes remain off-chain and program decision-makers remain identifiable.
+Screen and redact records **before writing**, under **Framework 5.9, 6.3b, 7.6a, and 25.2**; minutes stay off-chain and program decision-makers must remain identifiable.
 
 **All three tables must be publicly readable through standard chain APIs**, without permission or dependence on the Portal.
 
@@ -302,28 +302,25 @@ Classify the **initial platform build, including both contracts on `disc.vst`**,
 
 ### 6.1 Checklist and evidence
 
-**Deployment evidence — complete after deployment and before publication:**
+VS LLC must complete every deployment-confirmation field in this Exhibit and the record below **after deployment and before publication**, then publish the completed Exhibit **before funding** (MSIG #5 Part E).
 
-- **D1 — Deployment record:** Fill every deployment-confirmation field: accounts and transaction IDs, permission names, CPU/NET, ABI and code hash, and writing authority.
-- **D2 — Authority and delay design:** Record the selected option, the `eosio.msig` and proposer accounts, permission hierarchy, action links, any code authority, delay settings, and exact cancellation actions and parameters.
-- **D3 — Register configuration:** Record the deployed ABI and all three table schemas.
-- Publish the completed Exhibit **before funding** (MSIG #5 Part E).
-
-**Delay settings:** Use **604,800 seconds for ordinary payments** and **259,200 seconds for urgent payments**. With the `eosio.msig` delay, record the proposed transaction’s `delay_sec` and how the earliest execution time is calculated from sufficient approvals. With the held-proposal fallback, record how publication sets the earliest permitted execution time.
-
-| | |
-|---|---|
-| `rfp.vst` creation transaction | [___] |
-| Fund-transfer and administrative authority configuration transactions | [___] |
-| Selected option: `eosio.msig` delay or held-proposal fallback | [___] |
-| Permission hierarchy, action links, contract/code authority, and exact cancellation parameters | [___] |
-| Delay settings, timer start rule, and earliest execution time calculation | [___] |
-| `disc.vst` creation transaction | [___] |
-| `disc.vst` `setcode` transaction and code hash | [___] |
-| Published ABI | [___] |
-| Proposer account and three-signature Committee cancellation authority | [___] |
-| Block producer cancellation authority at the Threshold | [___] |
-| Date published | [___] |
+| Record | Required details | Deployed value |
+|---|---|---|
+| Accounts | Account names and creation transaction IDs for `rfp.vst` and `disc.vst` | [___] |
+| Authority setup | Fund-transfer and administrative authority configuration transaction IDs | [___] |
+| Permissions | Fund-transfer, administrative, and active permission names; hierarchy, weights, thresholds, action links, contract checks if used, and any code authority | [___] |
+| Writing authority | Named VS LLC permission for register writes | [___] |
+| Payment mechanism | Selected option: `eosio.msig` delay or held-proposal fallback; identify the `eosio.msig` account and record the fallback procedure if used | [___] |
+| Ordinary delay | 604,800 seconds (7 days) | [___] |
+| Urgent delay | 259,200 seconds (3 days) | [___] |
+| Execution timing | With the `eosio.msig` delay, record the proposed transaction’s `delay_sec` and how the earliest execution time is calculated from sufficient approvals; with the fallback, record how publication sets the earliest permitted execution time | [___] |
+| Committee cancellation | Proposer account, three-signature cancellation authority, and exact cancellation actions and parameters | [___] |
+| Block producer cancellation | Authority at the Threshold, and exact cancellation actions and parameters | [___] |
+| Register contract | `disc.vst` `setcode` transaction and code hash | [___] |
+| ABI | Published ABI matching the deployed code | [___] |
+| Table schemas | Deployed schemas for `disclosures`, `decisions`, and `publications` | [___] |
+| CPU / NET | Deployed resources for both accounts | [___] |
+| Publication | Date published | [___] |
 
 ### 6.2 Departures from the specification
 
@@ -337,13 +334,11 @@ An empty table confirms that the deployment matches this specification.
 
 ### 6.3 Member-key register
 
-**D6 — Member keys: Complete after appointments and before funding or permission activation.**
+Exhibit D may be published before member keys arrive, but this register must be complete **before funding or permission activation**, along with the other **Framework 1.2** requirements.
 
-After each appointment MSIG executes, the member provides their public key to VS LLC. **VS LLC fills in the member’s name, public key, and delivery date in the table below in the published Exhibit D**, and updates it when keys are replaced or surrendered. Retain superseded keys in dated rows.
+After each appointment MSIG executes, the member provides their public key to VS LLC, which records their **name, public key, and delivery date in this table in the published Exhibit D**. Update it when keys are replaced or surrendered, retaining superseded keys in dated rows.
 
-Configure the on-chain signing permissions on **`rfp.vst`** with the delivered keys; this table documents the configuration and does not itself grant signing authority. Key handling follows **Framework 7.4–7.5**; replacements use the owner permission.
-
-This Exhibit may be published before member keys arrive, but funding and permission activation remain subject to **Framework 1.2**.
+Configure `rfp.vst`’s on-chain signing permissions with the delivered keys; this table records the configuration and **does not grant signing authority**. Follow **Framework 7.4–7.5** for key handling; replacements use the owner permission.
 
 | Seat | Member | Public key | Delivered | Superseded |
 |---|---|---|---|---|
