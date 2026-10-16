@@ -11,7 +11,7 @@ Published by **Vaulta Stewardship LLC** alongside **Exhibit D** under **MSIG #5 
 
 ## Purpose
 
-This is the **standard conflict-of-interest declaration** required by the **Vaulta Network RFP Framework (Exhibit A to MSIG #5), sections 6.3a and 6.3c**, not an additional document. Everyone with a decision or approval right must answer the same questions **in the stated order**.
+This questionnaire is the **conflict-of-interest declaration** required by the **Vaulta Network RFP Framework (Exhibit A to MSIG #5), sections 6.3a and 6.3c**.
 
 **Who files and when:**
 
@@ -45,7 +45,7 @@ An annual refiling more than **30 days overdue** suspends Committee pay and bloc
 
 | Term | Meaning |
 |---|---|
-| **Material interest** | **5% or more** of an entity's equity, units, or voting rights *(settled)*; **or** any officer, director, or general-partner role; **or** any holding or arrangement that a reasonable person would expect to affect your judgment, whatever its size |
+| **Material interest** | **5% or more** of an entity's equity, units, or voting rights; **or** any officer, director, or general-partner role; **or** any holding or arrangement that a reasonable person would expect to affect your judgment, whatever its size |
 | **Connected company** | Your employer; a company you work for; one under common control with one of those; or one you hold a material interest in (Framework 6.2) |
 | **Vaulta ecosystem** | Vaulta and the wider Antelope ecosystem — block producers, infrastructure providers, wallets, exchanges listing A, and projects building on either |
 | **Vaulta Treasury** | The Vaulta Treasury and any entity it controls. Affiliation means employed by it, an officer or director of it, under contract to provide services to it, holding authority over its funds, or otherwise acting under its direction in respect of its treasury functions (Framework 2.4a) |
@@ -62,7 +62,7 @@ An annual refiling more than **30 days overdue** suspends Committee pay and bloc
 | # | Question |
 |---|---|
 | 1.1 | Legal identification required by VS LLC for tax and banking — **provide privately, not in this public filing** |
-| 1.2 | **The public identity you will be attributed under — required.** Your legal name or a stable handle, your choice, but **one identity for the term**: it may not be anonymous, and it may not rotate. Every vote, recusal, approval and assessment you make is published against it (Framework 11.3a), and it is what a reader uses to follow your decisions across a year |
+| 1.2 | Your **public identity**: your legal name or a stable handle, fixed for the term and not anonymous. All votes, recusals, approvals, and assessments are published under it (Framework 11.3a). |
 | 1.3 | Role: **Committee member** / **RFP Program Manager** / **Technical Reviewer** / **other decision right** — state which |
 | 1.4 | Seat, or the RFPs this filing covers |
 | 1.5 | On-chain account |
@@ -80,8 +80,6 @@ An annual refiling more than **30 days overdue** suspends Committee pay and bloc
 | 2.3 | Any **Technical Reviewer or Program Manager engagement in this program**, listed **by RFP** | `N` or `Y`*n* |
 | 2.4 | Any **block producer affiliation** — employment, ownership, operation, or a paid role | `N` or `Y`*n* |
 | 2.5 | Any **board, officer, or advisory position**, paid or unpaid | `N` or `Y`*n* |
-
-For **2.3**, list engagements **by RFP** so cycle reports can check the concurrent cap (Framework 12.6); Committee members must update their filing **before a Reviewer engagement begins**.
 
 ---
 
@@ -114,8 +112,6 @@ Treasury-affiliated people cannot serve as Committee members, Managers, or Revie
 | `V4` | More than 250,000 |
 
 **Do not report A holdings** (Framework 6.3a). Question **4.3 asks about intent to profit from A falling**, not ordinary exposure from dollars, stablecoins, or a diversified portfolio underweight A; if unsure, declare the position and explain why you think it does not qualify.
-
-Report a change to another band **within 10 business days**; a filing’s band records its value on that filing date.
 
 ---
 
@@ -175,7 +171,7 @@ If **m < n**, explain in the full submission why you would not recuse on every d
 
 ## The coded-answer schema
 
-Store the **coded answers and full filing text in the same on-chain row**; the Portal reads and renders the register rather than keeping a separate copy. **Everything submitted is written permanently to the chain.**
+Store the **coded answers and full public filing in the same on-chain row**.
 
 ### Form
 
@@ -222,7 +218,6 @@ VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 
 | | |
 |---|---|
-| **This version** | `VQ1` |
 | **Changed by** | VS LLC republishing the instrument, with the Committee’s approval recorded by vote; any change to the Framework’s requirements also needs an **MSIG amendment under 16.2** |
 | **Effect of a change** | A new version applies only to **later filings**; it does not reinterpret or invalidate earlier filings, which retain their recorded version |
 | **When a version changes** | Filers are not required to refile early. The next annual refiling uses the current version |
