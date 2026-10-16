@@ -101,7 +101,7 @@ FURTHER RESOLVED, that payments must use these delay windows:
 
 FURTHER RESOLVED, that **VS LLC must develop and configure the Program Account, Committee Permission, and the disclosure, decisions, and publications registers on `disc.vst` according to Exhibit D**, and **publish Exhibit D with its required configuration and completed deployment record before funding**.
 
-FURTHER RESOLVED, that payment delays must be **enforced on-chain**, with the **held-multisignature fallback in Exhibit D section 2.3 authorized only if the protocol cannot enforce them**.
+FURTHER RESOLVED, that payments must use the **`eosio.msig` execution delay if available**, or otherwise the **held-multisignature fallback in Exhibit D section 2.3**, observing the same delay windows and objection rules.
 
 ### Part F — The Community seat
 

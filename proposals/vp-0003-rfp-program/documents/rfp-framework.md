@@ -31,7 +31,7 @@ These definitions form part of Part 1.
 | *Manager of record* | the RFP Program Manager assigned to one RFP. |
 | *Portal* | the RFP portal. |
 | *VS LLC* | Vaulta Stewardship LLC. |
-| *Delay window* | the on-chain waiting period before a payment executes. |
+| *Delay window* | the required waiting period before a payment executes. |
 
 ---
 
@@ -516,7 +516,7 @@ Withdrawals reducing the count below seven before it closes move the award into 
 
 **10.7 Cancellation** is a **3-of-5 on-chain administrative action** and is **mandatory** in the 4-to-6 and 7-or-more objection bands; the Committee must cancel within **2 business days** of the count closing, and failure to do so is an express ground for referral to MSIG for removal.
 
-**Execution guard.** An initial award payment must remain blocked until the full delay has ended, the Manager has published the final objection count, and the outcome permits execution. A count of **4 or more blocks execution**, even during the two-business-day cancellation period. A **4-to-6** outcome requires cancellation and the confirmation and re-proposal process in **10.9**; a **7-or-more** outcome ends the award. Exhibit D must demonstrate this guard before funding; its authorized held-multisignature fallback must observe the same rule. Later milestone and Program Cost payments have no objection banding.
+**Execution guard.** An initial award payment must remain blocked until the full delay has ended, the Manager has published the final objection count, and the outcome permits execution. A count of **4 or more blocks execution**, even during the two-business-day cancellation period. A **4-to-6** outcome requires cancellation and the confirmation and re-proposal process in **10.9**; a **7-or-more** outcome ends the award. These execution restrictions apply to both the `eosio.msig` delay and the held-multisignature fallback in Exhibit D; under the fallback, participants must observe the wait and objection rules. Later milestone and Program Cost payments have no objection banding.
 
 Block producers may also cancel through the owner permission.
 

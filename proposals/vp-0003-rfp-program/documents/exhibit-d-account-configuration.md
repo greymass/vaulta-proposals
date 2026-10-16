@@ -53,7 +53,7 @@ This Exhibit specifies the deployed accounts, permissions, registers, and checks
 | Owner permission | `eosio.prods` |
 | Active permission | *(to confirm on deployment)* |
 
-**A named permission has one threshold.** Record the actual permission hierarchy, action links, contract checks if used, and any code authority in **6.1**; do not assign both thresholds to one permission. The **three-signature administrative route must not satisfy fund-transfer authority**, directly or through a parent or delegated authority. Owner recovery and cancellation remain with block producers at the Threshold. Verify both routes under **2.6** before funding.
+**A named permission has one threshold.** Record the actual permission hierarchy, action links, contract checks if used, and any code authority in **6.1**; do not assign both thresholds to one permission. The **three-signature administrative route must not satisfy fund-transfer authority**, directly or through a parent or delegated authority. Owner recovery and cancellation remain with block producers at the Threshold. Record both cancellation routes under **2.6**.
 
 ### 1.3 Block producer authority
 
@@ -82,9 +82,7 @@ The following requirements apply when an MSIG proposal changes the contract on `
 
 ### 2.1 Selected mechanism
 
-**Not yet verified.** Record the selected delay mechanism and deployed configuration in **6.1 before publication and funding**.
-
-Check native delay support on the target chain, and verify that Committee signers cannot execute payments before the full delay ends or bypass the objection rules in **Framework 10.7**.
+Use the **`eosio.msig` execution delay if available**; otherwise use the **held-multisignature fallback in 2.3**. VS LLC records the selected option and configuration in **6.1 before publication and funding**.
 
 ### 2.2 Payment delays
 
@@ -93,28 +91,19 @@ Check native delay support on the target chain, and verify that Committee signer
 | Ordinary | **7 days** |
 | Urgent | **3 days** |
 
-Record the enforcement configuration in **6.1**:
+With the `eosio.msig` delay, the timer starts when sufficient approvals are collected. Execution must wait until **both that timer and the publication-based delay window have ended**.
 
-- **Native delays:** the transaction’s `delay_sec` and any authority `waits` and weights.
-- **Other on-chain mechanisms:** the contract, actions, authorities, and execution checks.
-
-**The Committee must not be able to waive or bypass the delay.**
-
-Initial award payments also require a published final objection count and clearance under **Framework 10.7**. Four or more objections must keep execution blocked throughout cancellation and any MSIG-confirmation process.
+Under either option, **neither VS LLC nor the Committee may waive the wait**. Initial award payments also require a published final objection count and clearance under **Framework 10.7**; four or more objections prohibit execution throughout cancellation and any MSIG-confirmation process.
 
 Later milestone and Program Cost payments retain their delay and cancellation rights, without objection banding.
 
-### 2.3 Held-multisignature fallback — conditional
+### 2.3 Held-multisignature fallback
 
-This fallback is authorized **only if the protocol cannot enforce transaction delays** (MSIG #5 Part E); VS LLC must republish this Exhibit identifying the change before using it.
+If the `eosio.msig` delay is unavailable, publish the proposal ID with the award and keep the proposal **public and unexecuted for the full delay window**. VS LLC must republish this Exhibit identifying the change before switching to the fallback.
 
-The Committee proposes the disbursement and keeps the proposal **unexecuted and publicly visible for the full delay window**. Execution must also wait for the **final objection count and clearance under Framework 10.7**; the two-business-day cancellation period never permits executing a blocked award payment.
+Neither VS LLC nor the Committee may execute before the delay ends and the final objection count permits execution under **Framework 10.7**. The cancellation period does not permit executing a blocked payment.
 
-| Requirement | Rule |
-|---|---|
-| **Publication** | Publish the proposal identifier with the award so anyone can monitor it. |
-| **Block producer cancellation** | Record and verify the actual route that permits cancellation at the Threshold before execution. Do not assume a delayed-transaction cancellation action cancels an unexecuted multisignature proposal. |
-| **Early execution** | Neither VS LLC nor the Committee may execute before the full window and required objection clearance. Publish how the selected fallback observes this restriction; it is **procedural**, not proof of an on-chain timelock. |
+The waiting period is **observed by the participants rather than enforced by a timer**. Record the procedure and cancellation authorities in **6.1**.
 
 ### 2.4 Urgent payments
 
@@ -131,9 +120,9 @@ Use the **72-hour** delay only after the urgency vote and reasons have been publ
 | **Block producers** | **`eosio.prods`**, through the owner-controlled route, at **15 of 21**. | Any payment during its delay window. |
 | **Committee** | The separate administrative route, at **3 of 5**. | Before execution; mandatory cancellation follows **Framework 9.1 and 10.5–10.7**. |
 
-For the selected mechanism, record the **exact cancellation action, parameters, and authorization** for each route in **6.1**. Use **`eosio::canceldelay`** only for an actual native delayed transaction where the target chain supports it and the canceling authority qualifies; an unexecuted multisignature proposal requires its own verified cancellation path.
+Use **`eosio.msig::cancel`** for an unexecuted multisignature proposal. Before the proposal expires, cancellation requires the **proposer account’s authority**. Record the proposer account, exact action parameters, and the permissions through which the Committee and block producers authorize cancellation in **6.1**.
 
-**Rehearse both routes on testnet before funding.** Prove that **four members can authorize payment**, **three can cancel that payment but cannot transfer funds**, and **block producers can cancel at the Threshold**. Also prove that the full delay and final-count execution guard cannot be bypassed. A design that cannot demonstrate these properties **blocks funding and permission activation**; publish the limitation under **6.2 and MSIG #5 Part E**.
+The three-signature cancellation route must not grant authority to transfer funds. Record any configuration limitation in **6.2**.
 
 Apply the objection outcomes and cancellation duties in **Framework 10.5–10.7**, including the unavailable-signers procedure in **Framework 9.1**.
 
@@ -226,7 +215,7 @@ Alert on uncertainty; treat an unreadable table as a failure until a later check
 
 The contract must have **no modify action, erase action, or administrative editing path**; platform-only protection is insufficient. A correction must append a new row referencing the prior row’s transaction ID and stating a reason, without changing the prior row.
 
-Store the **full record on-chain**; the Portal reads and renders it. Keep **no hash field**; no digest-specific serialization or test vectors are required.
+Store the **full record on-chain**; the Portal reads and renders it. Keep **no hash field**.
 
 Use the append-only correction mechanism in **this section**. Complete the screening and redaction required by **Framework 5.9, 6.3b, 7.6a, and 25.2 before writing**; minutes remain off-chain and program decision-makers remain identifiable.
 
@@ -318,27 +307,24 @@ Classify the **initial platform build, including both contracts on `disc.vst`**,
 **Deployment evidence — complete after deployment and before publication:**
 
 - **D1 — Deployment record:** Fill every deployment-confirmation field: accounts and transaction IDs, permission names, CPU/NET, ABI and code hash, and writing authority.
-- **D2 — Authority and delay design:** Record the selected mechanism, chain capability checks, permission hierarchy, action links, contract checks and code authority if used, transaction-delay fields, and exact cancellation actions and parameters.
-- **D3 — Testnet first:** Verify the deployed ABI and all three table schemas, then rehearse **both cancellation routes** in **2.6** before mainnet.
-- **D4 — Rejection tests:** Record tests proving that three members cannot transfer funds, payment cannot execute early, and an initial award payment cannot execute with an unpublished final count or four or more objections.
-- **D5 — Execution tests:** Record a valid four-signature payment after the complete delay and, where applicable, final objection clearance; verify the urgent path and both cancellation routes. **Missing or failing proof blocks funding and activation.**
+- **D2 — Authority and delay design:** Record the selected option, the `eosio.msig` and proposer accounts, permission hierarchy, action links, any code authority, delay settings, and exact cancellation actions and parameters.
+- **D3 — Register configuration:** Record the deployed ABI and all three table schemas.
 - Publish the completed Exhibit **before funding** (MSIG #5 Part E).
 
-**Delay configuration:** Verify that the deployed mechanism enforces **604,800 seconds for ordinary payments** and **259,200 seconds for urgent payments**. For native delays, `delay_sec` is a **transaction field, not a permission field**; record it and the authority’s actual `waits` and weights, where used.
+**Delay settings:** Use **604,800 seconds for ordinary payments** and **259,200 seconds for urgent payments**. With the `eosio.msig` delay, record the proposed transaction’s `delay_sec` and how the earliest execution time is calculated from sufficient approvals. With the held-proposal fallback, record how publication sets the earliest permitted execution time.
 
 | | |
 |---|---|
 | `rfp.vst` creation transaction | [___] |
 | Fund-transfer and administrative authority configuration transactions | [___] |
-| Selected delay mechanism and target-chain capability evidence | [___] |
+| Selected option: `eosio.msig` delay or held-proposal fallback | [___] |
 | Permission hierarchy, action links, contract/code authority, and exact cancellation parameters | [___] |
-| Delay, three-signature transfer rejection, final-count guard, and urgent-path test evidence | [___] |
+| Delay settings, timer start rule, and earliest execution time calculation | [___] |
 | `disc.vst` creation transaction | [___] |
 | `disc.vst` `setcode` transaction and code hash | [___] |
 | Published ABI | [___] |
-| Testnet deployment reference | [___] |
-| **Testnet rehearsal — three-signature Committee cancellation** (selected mechanism’s exact route) | [___] |
-| **Testnet rehearsal — block producer cancellation at the Threshold** (selected mechanism’s exact route) | [___] |
+| Proposer account and three-signature Committee cancellation authority | [___] |
+| Block producer cancellation authority at the Threshold | [___] |
 | Date published | [___] |
 
 ### 6.2 Departures from the specification
