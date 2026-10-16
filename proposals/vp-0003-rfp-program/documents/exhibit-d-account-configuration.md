@@ -45,12 +45,12 @@ This Exhibit specifies the deployed accounts, permissions, registers, and checks
 
 | Setting | Value |
 |---|---|
-| Permission name | **`committee`** *(to confirm on deployment)* |
+| Permission name | `committee` *(to confirm on deployment)* |
 | Parent permission | `active` |
-| Weight per seated member | **1**, five members, **5 units total** |
-| **Fund transfers** | **4 of 5** signatures |
-| **Administrative actions, including cancellation** | **3 of 5** signatures |
-| Owner permission | **`eosio.prods`** |
+| Weight per seated member | 1, five members, 5 units total |
+| Fund transfers | **4 of 5** signatures |
+| Administrative actions, including cancellation | **3 of 5** signatures |
+| Owner permission | `eosio.prods` |
 | Active permission | *(to confirm on deployment)* |
 
 Apply these thresholds to the deployed action permissions; the cancellation routes are specified in **2.6**.
