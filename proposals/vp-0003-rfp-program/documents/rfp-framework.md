@@ -352,7 +352,7 @@ Records are **append-only**: updates must reference the previous record; nothing
 
 Keys must be **registered on appointment** and **surrendered on removal or replacement**. Members retain them during authorized month-to-month continuation under **3.3**.
 
-**7.5 Lost or compromised keys.** A member must tell the Chair and block producers **immediately**, and must not sign until the key is replaced. The Committee proposes no payments in the meantime.
+**7.5 Lost or compromised keys.** A member must **immediately notify the Chair and block producers** and stop signing until the key is replaced. The Committee must not propose payments until then.
 
 **7.6** The platform must not hold **any key with Program Account authority or any member’s signing key**; members sign with their own wallets. VS LLC’s `disc.vst` writing key has no Program Account authority and cannot move funds (6.3b).
 
@@ -1104,7 +1104,7 @@ In every case a written assessment against published criteria must exist before 
 
 ## 23. Stage 6 — Award and contracting
 
-**23.1** The award decision, publication, contracting, on-chain proposal, delay window, and payment follow **Part 1, sections 10 and 11**. That sequence is not repeated here.
+**23.1** The award decision, publication, contracting, on-chain proposal, delay window, and payment follow **Part 1, sections 10 and 11**.
 
 **23.2 The decision record must include:**
 
@@ -1156,7 +1156,12 @@ If section 9 does not permit the carve-out, **amend the agreement first**; neith
 
 ## 24. Stage 7 — Delivery
 
-**24.1** The Manager of record is the awardee's contact: check-ins at least every two weeks on active work, status reports to the Committee, early warning of delays, and handling change requests.
+**24.1** The Manager of record is the awardee’s contact and must:
+
+- Hold check-ins **at least every two weeks during active work**.
+- Report status to the Committee.
+- Flag delays early.
+- Handle change requests.
 
 **24.2** Milestone approval and payment follow **Part 1, section 11**.
 
