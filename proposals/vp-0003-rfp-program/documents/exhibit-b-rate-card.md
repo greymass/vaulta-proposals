@@ -25,7 +25,11 @@ The **Framework (Exhibit A)** defines each role’s powers and limits; the **con
 | **RFP** — directed or open call | A fixed fee per milestone; every RFP award must have **at least two milestones** (Framework 11.1a). |
 | **Bounty** | One fee, equal to the applicable milestone fee. |
 
-Fees pay for **determinations**, whether the work is accepted or rejected. An engagement ending early may earn a **no-award fee** under the rules below; post-award reviews and reassignment read-ins are paid separately as specified in this rate card.
+Managers and Reviewers are paid for **assessing the work**, whether they accept or reject it.
+
+If an engagement ends early, a **no-award fee** may apply under the rules below.
+
+Separate fees cover **post-award reviews** and **preparation when taking over an existing engagement**, as specified in this rate card.
 
 ### The no-award fee
 
