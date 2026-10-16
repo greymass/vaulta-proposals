@@ -25,6 +25,7 @@ documents:
     - documents/exhibit-e-seat-appointment.md
     - documents/exhibit-f-schedule-a.md
     - documents/disclosure-questionnaire.md
+    - documents/msig-5-review-notes.md
 revisions:
     - version: 1
       date: 2026-09-01
@@ -41,6 +42,9 @@ revisions:
     - version: 5
       date: 2026-10-06
       summary: Ingests MSIG #5 v6.14, Framework v5.4, Exhibit D v2.4 and Exhibit F v1.8: a CoinMarketCap fallback rate and a 30/10-day long-stop.
+    - version: 6
+      date: 2026-10-16
+      summary: Shortens MSIG #5 and separates its review notes while retaining operative requirements.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding
@@ -48,7 +52,7 @@ revisions:
 
 ## Summary
 
-This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as an expanded Network Steering Committee with a mandate to decide RFP funding, and authorize an on-chain program fund under limits that block producers keep. Its seven documents, distributed for review by the VST and block producers, are carried here verbatim, alongside a placeholder explaining the unused Exhibit C.
+This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as an expanded Network Steering Committee with a mandate to decide RFP funding, and authorize an on-chain program fund under limits that block producers keep. The resolution, exhibits, and supporting reference documents are provided here for VST and block producer review.
 
 The resolution itself states everything being voted on, in full context: read [MSIG #5](documents/msig-5.md).
 
@@ -58,7 +62,7 @@ The documents are listed in the order a voter should read them, each with a sugg
 
 Read in full:
 
-- [MSIG #5 resolution](documents/msig-5.md) (about 67 minutes): the resolution block producers would approve. It continues the Oversight Committee as a five-seat Network Steering Committee, gives it a standing mandate to allocate funds from the `rfp.vst` Program Account, and requests a first transfer of A worth USD 284,375. No funds move until all five seats are filled, every member has signed their contract, filed their disclosure, and registered a signing key, and Exhibit D is published complete. If the Delphi Oracle price goes stale for 24 hours or disappears, payments are priced from a CoinMarketCap fallback (Vaulta, ID 36462: the average of the previous UTC day's high and low), and payments stop only if both sources fail. Its stated status is DRAFT v6.14, for VST and block producer review.
+- [MSIG #5 resolution](documents/msig-5.md): the resolution block producers would approve. It continues the Oversight Committee as a five-seat Network Steering Committee, gives it a standing mandate to allocate funds from the `rfp.vst` Program Account, and requests a first transfer of A worth USD 284,375. No funds move until all five seats are filled, every member has signed their contract, filed their disclosure, and registered a signing key, and Exhibit D is published complete. If the Delphi Oracle price goes stale for 24 hours or disappears, payments are priced from a CoinMarketCap fallback (Vaulta, ID 36462: the average of the previous UTC day's high and low), and payments stop only if both sources fail. Its stated status is DRAFT v6.14, for VST and block producer review.
 - [Exhibit A: Vaulta Network RFP Framework](documents/rfp-framework.md) (Part 1, about 85 minutes): the framework the resolution's first decision approves. Part 1 (sections 1 to 16) is the governance rulebook: seats, voting, conflicts, signing, the mandate, spending limits, and suspension, and it is the part to read. Part 2 (sections 17 to 27) is the step-by-step RFP process, and MSIG may amend it later without reopening Part 1; Part 1 governs where the two disagree. Its stated status is DRAFT v5.4.
 - [Exhibit B: Manager and Reviewer Rate Card and Scope](documents/exhibit-b-rate-card.md) (scan the fee tables, about 5 minutes): fees for RFP Program Managers (USD 350 a milestone, or 600 on the assessment variant) and Technical Reviewers (USD 450 a milestone). Committee members serving as Reviewers are capped at 3 concurrent engagements. The figures change only by MSIG. Committee members' own pay is set in MSIG #5, not here. Its stated status is DRAFT v3.4, settled.
 
@@ -72,11 +76,13 @@ Reference only:
 - [Exhibit E: Seat Appointment MSIG Template](documents/exhibit-e-seat-appointment.md): the required format for the later resolutions that fill Committee seats, each voted on separately. Every candidate needs a network vision statement of 300 to 800 words and declared conflicts. Its stated status is TEMPLATE v2.1.
 - [Exhibit C: Trust Agreement Conforming Amendments](documents/exhibit-c-trust-agreement-amendments.md): a placeholder, with nothing to review. MSIG #5 attaches Exhibits A, B, D, E, and F and has no Exhibit C: the Trust Agreement amendments once attached under that letter are administered off-chain, and the remaining letters are kept so that existing citations stay correct.
 
-A supporting document, published alongside the resolution and not approved by it:
+Supporting reference documents, published alongside the resolution and not approved by it:
 
 - [Disclosure Questionnaire, Version 1](documents/disclosure-questionnaire.md) (skim the disclosure rules, about 5 minutes): the conflict-of-interest form every decision-maker files before taking up a role, published by VS LLC alongside Exhibit D, questionnaire version `VQ1`. The full text of each filing is written permanently to `disc.vst`. Positions are reported only as USD bands, never exact figures; holdings of A are not asked for; and individuals are never named. The Program Account is not funded until every Committee member has filed. Its stated status is DRAFT v1.4, settled.
 
-The `[___]` blanks and draft version lines throughout are the documents as distributed; every distributed document is carried verbatim, and the Exhibit C placeholder is the only document written for this repository.
+- [MSIG #5 — Review Notes](documents/msig-5-review-notes.md): the historical, financial, and technical background moved out of the resolution. These notes preserve the draft’s reasoning and dated figures; they add no rules or approvals.
+
+The documents remain drafts; outstanding blanks are tracked in MSIG #5.
 
 ## Open Questions
 
@@ -84,4 +90,4 @@ The open items of this proposal are tracked inside the resolution itself: MSIG #
 
 ## Next Steps
 
-This proposal is a draft and is open for review: feedback from block producers and all community members is welcome. The documents carry the status each states for itself and remain drafts under their own versioning. Revised versions replace the current ones verbatim as they are distributed, with a `revisions` entry recording each ingestion. Advancing beyond Draft follows the VPS-1 lifecycle and is not scheduled by this document; the resolution takes effect only if block producers execute it.
+This proposal is a draft and is open for review: feedback from block producers and all community members is welcome. The documents carry the status each states for itself and remain drafts under their own versioning. Document updates are recorded in a `revisions` entry. Advancing beyond Draft follows the VPS-1 lifecycle and is not scheduled by this document; the resolution takes effect only if block producers execute it.
