@@ -38,7 +38,7 @@ This Exhibit specifies the deployed accounts, permissions, registers, and checks
 |---|---|
 | **Account** | **`rfp.vst`**, a subaccount of `vst`. |
 | **Created by** | *(to confirm on deployment — creating account and transaction id)* |
-| **Naming** | The `vst` name was secured, so no alternative was needed; any alternative requires MSIG confirmation before funding. Block producers name the funds account. |
+| **Naming** | Block producers name the Program Account; any alternative to `rfp.vst` requires MSIG confirmation before funding. |
 | **Control** | The parent name gives the VST **no control over program funds**; control follows the permissions below. |
 
 ### 1.2 Committee permission
