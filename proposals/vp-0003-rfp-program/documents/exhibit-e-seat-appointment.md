@@ -1,7 +1,9 @@
 # Seat Appointment MSIG — Template
 
-**Exhibit E to MSIG #5**
-**Status: TEMPLATE v2.3**
+**Exhibit E — Seat Appointment MSIG Template**
+
+**Version:** 2.3\
+**Status:** Template
 
 ---
 

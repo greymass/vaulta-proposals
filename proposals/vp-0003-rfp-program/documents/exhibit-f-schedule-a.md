@@ -1,8 +1,11 @@
 # Schedule A Templates — RFP Program Roles
 
-- **Exhibit:** F to MSIG #5
-- **Agreement:** Vaulta Stewardship LLC Independent Contractor Agreement
-- **Status:** Draft v1.8
+**Exhibit F — Schedule A Templates**
+
+**Version:** 1.8\
+**Status:** Draft
+
+**Agreement:** Vaulta Stewardship LLC Independent Contractor Agreement
 
 ---
 

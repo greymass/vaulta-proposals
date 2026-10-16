@@ -1,10 +1,12 @@
 # Vaulta Network RFP Framework
 
-**Exhibit A to MSIG #5**
-**Status: DRAFT v5.4**
-**Date: [___]**
+**Exhibit A — Vaulta Network RFP Framework**
 
-This is the final RFP Framework required by MSIG #4. It has two parts.
+**Version:** 5.4\
+**Status:** Draft\
+**Date:** [___]
+
+This RFP Framework is required by MSIG #4 and has two parts.
 
 - **Part 1 — The Steering Committee and the Mandate.** Who decides, how they are chosen, how they vote, and how money moves.
 - **Part 2 — Running an RFP.** How a single RFP goes from an idea to a paid deliverable.

@@ -1,7 +1,9 @@
 # Trust Agreement Conforming Amendments
 
-**Exhibit C to MSIG #5 — reserved; intentionally not attached**
-**Status: PLACEHOLDER — nothing to review**
+**Exhibit C — Trust Agreement Conforming Amendments**
+
+**Status:** Placeholder\
+**Attachment:** Reserved; not attached to MSIG #5
 
 ---
 
