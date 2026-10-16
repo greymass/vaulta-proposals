@@ -130,21 +130,21 @@ The **3-signature cancellation route must not allow fund transfers**. Record any
 
 ### 3.1 Oracle settings and conversion
 
-Confirm the oracle pair, precision, and both worked examples in **Appendix A** before publication (MSIG #5 Part E and Framework 13.4).
+Before publication, confirm the pair, precision, and both worked examples in **Appendix A** (MSIG #5 Part E and Framework 13.4).
 
-| | |
+| Setting | Value |
 |---|---|
-| **Oracle contract** | **`delphioracle`** |
-| **Pair** | **`eosusd`** |
-| **Table** | `datapoints`, scoped to the pair |
-| **Field** | **`median`** |
-| **`quoted_precision`** | **4** — the stored integer is in ten-thousandths of a dollar |
-| **How the median is formed** | The median of the last **21 submissions** from qualified oracles. The window is 21 *submissions*, not one per oracle, so a high-frequency writer occupies more of it than a low-frequency one |
-| **History** | **None.** 21 rows exist per pair and the oldest is overwritten on each submission. A rate read today cannot be re-read from the table later |
+| Oracle contract | `delphioracle` |
+| Pair | `eosusd` |
+| Table | `datapoints`, scoped to the pair |
+| Field | `median` |
+| `quoted_precision` | 4 — the stored integer is in ten-thousandths of a dollar |
+| Median calculation | Median of the latest 21 submissions from qualified oracles; one oracle may contribute several submissions. |
+| History | Only the latest 21 submissions are kept; each new submission replaces the oldest. Past rate readings cannot be retrieved from the table. |
 
 **A-units = ⌊ USD-cents × 10^6 ÷ median ⌋**, where one A-unit is 0.0001 A.
 
-Use **integer arithmetic with truncation, never floating point**, throughout the payment path; the published amount and on-chain transfer must match exactly.
+Use **integer arithmetic with truncation, never floating point**; the published amount must match the on-chain transfer exactly.
 
 ### 3.2 Fallback settings and conversion
 
