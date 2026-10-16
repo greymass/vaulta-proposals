@@ -16,21 +16,25 @@ This rate card sets **Manager and Technical Reviewer fees and scope** under **Fr
 
 ## Common payment rules
 
-| Instrument | Manager and Reviewer fees |
+Managers and Reviewers are paid for **assessing work**. The assessment fee is the same whether they **accept, accept with conditions, or reject** the work; it does not depend on approving payment, the award’s value, or its outcome (Framework 12.5).
+
+| Award type | How fees are calculated |
 |---|---|
-| **RFP** — directed or open call | A fixed fee per milestone; every RFP award must have **at least two milestones** (Framework 11.1a). |
+| **RFP — directed or open call** | A fixed fee for each milestone. Every RFP award must have **at least two milestones** (Framework 11.1a). |
 | **Bounty** | One fee, equal to the applicable milestone fee. |
 
-Managers and Reviewers are paid for **assessing the work**, whether they accept or reject it.
+**What the fees cover**
 
-If an engagement ends early, a **no-award fee** may apply under the rules below.
+- **Preparation and administration:** Milestone fees include scoping support, publication, public Q&A, intake, compliance checks, evaluation logistics, and scoring. These activities earn no separate fee.
+- **Recovery plans:** The ordinary milestone fee includes reassessing corrected work under a recovery plan. Neither role earns an extra fee (Framework 11.9).
+- **Early endings:** A **no-award fee** may apply if an engagement ends early, under the rules below.
+- **Additional work:** Separate fees apply to **post-award reviews** and **preparation when taking over an existing engagement**, as specified in this rate card.
 
-Separate fees cover **post-award reviews** and **preparation when taking over an existing engagement**, as specified in this rate card.
+**How fees are paid**
 
-- **Independent decisions.** The applicable assessment fee is the same for accept, accept with conditions, or reject; it does not depend on approving payment or on the award’s value or outcome (Framework 12.5). Fees vary with the number of milestones.
-- **Work before milestones.** Milestone fees cover all scoping support, publication, public Q&A, intake, compliance checks, evaluation logistics, and scoring; none earns a separate fee.
-- **Recovery plans.** If an award continues under a recovery plan, the ordinary milestone fee includes reassessment of corrected work; neither role earns an additional fee (Framework 11.9).
-- **Payment.** Fees are denominated in USD and paid in A at the Reference Rate on the payment date through the published Program Cost schedule (Framework 13.4 and 13.3a); fees accrue during a suspension under 13.4a and are paid on resumption at the rate then current.
+Fees are **set in USD and paid in A**, using the Reference Rate on the payment date, through the published Program Cost schedule (Framework 13.4 and 13.3a).
+
+Fees continue to accrue during a suspension under Framework 13.4a. They are paid when payments resume, using the Reference Rate at that time.
 
 ### The no-award fee
 
