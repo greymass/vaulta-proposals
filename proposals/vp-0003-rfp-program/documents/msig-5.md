@@ -38,18 +38,18 @@ It also reconstitutes the Oversight Committee as the Steering Committee, gives t
 
 ## Definitions
 
-**Committee** — the Vaulta Network Steering Committee.
-**Framework** — the Vaulta Network RFP Framework, Exhibit A.
-**Program Account** — the on-chain account holding program funds.
-**Committee Permission** — the multisignature permission through which the Committee moves those funds.
-**Mandate** — the authority granted in Part C.
-**Threshold** — approval by not fewer than 15 of the 21 active block producers.
-**Business day** — Monday to Friday in UTC, including public holidays.
-**Reference Rate** — the rate used to convert USD amounts into A at the time of the relevant action, using the Delphi Oracle or the CoinMarketCap fallback under Framework 13.4.
-**Award Commitments** — amounts committed to awardees, constrained by the Cycle Ceiling.
-**Program Costs** — Committee pay, Manager and Reviewer fees, Portal and administration costs.
-**Total Program Spend** — Award Commitments plus Program Costs.
-**Portal** — the RFP portal authorized under MSIG #4.
+- **Committee** — the Vaulta Network Steering Committee.
+- **Framework** — the Vaulta Network RFP Framework, Exhibit A.
+- **Program Account** — the on-chain account holding program funds.
+- **Committee Permission** — the multisignature permission through which the Committee moves those funds.
+- **Mandate** — the authority granted in Part C.
+- **Threshold** — approval by not fewer than 15 of the 21 active block producers.
+- **Business day** — Monday to Friday in UTC, including public holidays.
+- **Reference Rate** — the rate used to convert USD amounts into A at the time of the relevant action, using the Delphi Oracle or the CoinMarketCap fallback under Framework 13.4.
+- **Award Commitments** — amounts committed to awardees, constrained by the Cycle Ceiling.
+- **Program Costs** — Committee pay, Manager and Reviewer fees, Portal and administration costs.
+- **Total Program Spend** — Award Commitments plus Program Costs.
+- **Portal** — the RFP portal authorized under MSIG #4.
 
 ---
 
