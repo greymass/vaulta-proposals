@@ -213,8 +213,6 @@ VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 
 ## Version and change control
 
-| | |
-|---|---|
-| **Changed by** | VS LLC republishing the instrument, with the Committee’s approval recorded by vote; any change to the Framework’s requirements also needs an **MSIG amendment under 16.2** |
-| **Effect of a change** | A new version applies only to **later filings**; it does not reinterpret or invalidate earlier filings, which retain their recorded version |
-| **When a version changes** | Filers are not required to refile early. The next annual refiling uses the current version |
+- **Approval:** VS LLC may publish a new version after the Committee approves it by recorded vote. Changes to Framework requirements also need an **MSIG amendment under 16.2**.
+- **Existing filings:** New versions apply only to later filings. They do not change earlier filings’ recorded version, interpretation, or validity.
+- **Refiling:** No early refiling is required. Use the current version at your next annual refiling.
