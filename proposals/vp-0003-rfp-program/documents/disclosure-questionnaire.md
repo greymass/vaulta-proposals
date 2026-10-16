@@ -226,9 +226,3 @@ VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 | **Changed by** | VS LLC republishing the instrument, with the Committee’s approval recorded by vote; any change to the Framework’s requirements also needs an **MSIG amendment under 16.2** |
 | **Effect of a change** | A new version applies only to **later filings**; it does not reinterpret or invalidate earlier filings, which retain their recorded version |
 | **When a version changes** | Filers are not required to refile early. The next annual refiling uses the current version |
-
----
-
-## Still to settle
-
-**No questionnaire items remain unresolved.** VS LLC must publish **`VQ1`** and open the register under **MSIG #5 blank 8 and Framework Appendix C item 7**; Program Account funding waits until every Committee member has filed.
