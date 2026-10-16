@@ -139,11 +139,11 @@ All later terms are **12 months**.
 
 **3.7 Vacancies.** A vacant seat is filled for the rest of the term using the process for that seat.
 
-**3.8 Below four filled seats the Committee cannot pay anyone.** The signing permission is fixed at 4 of 5, one unit per seated member.
+**3.8 Signing requirements.** Payments require **4 of 5 signatures**, with one unit of signing weight per seated member.
 
-**With three filled seats no payment can execute.** The Committee may still meet, decide, publish, and escalate, but nothing can be signed. MSIG must fill a seat or change the permission.
+With fewer than four members, **no payment can execute**; the Committee may still meet, decide, publish, and escalate, but MSIG must fill a seat or change the permission.
 
-**With four filled seats payments can execute, but all four must sign** — there is no margin for a recusal, an absence, or a lost key. Any award where fewer than four members are able to sign goes to MSIG instead (section 9).
+An award goes to **MSIG** if fewer than four members can sign (section 9).
 
 ## 4. The Community seat
 
