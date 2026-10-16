@@ -1,9 +1,11 @@
 # Program Account, Permission, and Register Configuration
 
-**Exhibit D to MSIG #5**
-**Published by Vaulta Stewardship LLC under MSIG #5 Part E**
-**Status: DRAFT v2.4 — specification. Values marked *(to confirm on deployment)* are filled from what is actually deployed before publication; the member keys at 2.2 are recorded as they arrive**
-**Date: [___]**
+- **Exhibit:** D to MSIG #5, Part E
+- **Publisher:** Vaulta Stewardship LLC
+- **Status:** Draft specification, v2.4
+- **Date:** [___]
+
+Before publication, fill values marked *(to confirm on deployment)* from the actual deployment. Record member keys in **section 2.2** as they arrive; funding and permission activation must wait for **all five keys and the other Framework 1.1 requirements**.
 
 ---
 
