@@ -11,7 +11,7 @@ This RFP Framework is required by MSIG #4 and has two parts.
 - **Part 1 — The Steering Committee and the Mandate.** Who decides, how they are chosen, how they vote, and how money moves.
 - **Part 2 — Running an RFP.** How a single RFP goes from an idea to a paid deliverable.
 
-Part 2 may be amended by MSIG without reopening Part 1. **Part 1 governs any conflict**, and Part 2 may vary a Part 1 rule **only where Part 1 expressly permits it**. *Definitions* forms part of Part 1.
+Part 2 may be amended by MSIG without reopening Part 1. **Part 1 governs any conflict**, and Part 2 may vary a Part 1 rule **only where Part 1 expressly permits it**.
 
 ## Definitions
 
@@ -224,7 +224,7 @@ A recused member **must not sign the payment**. Awards with fewer than four avai
 
 **5.7 No substitutes.** Members vote personally. Written or cryptographically signed consent counts as a vote.
 
-**5.8 Chair.** The At-Large member chairs unless the Committee elects otherwise. The Chair sets agendas and is the contact point for the Trustee, VS LLC, and MSIG. The Chair has no extra vote and no casting vote.
+**5.8 Chair.** The At-Large member chairs unless the Committee elects otherwise. The Chair sets agendas and is the contact point for the Trustee, VS LLC, and MSIG. The Chair has no extra or casting vote.
 
 **5.9 Minutes.** Every meeting is minuted with attendance, decisions, vote counts, and recusals. Minutes are published within 10 business days. Only three things may be removed: confidential proposal content before award, legal advice, and personal data. **Vote counts and recusals are never removed.**
 
@@ -508,7 +508,7 @@ Add the **on-chain transaction reference** when payment is proposed.
 - Incomplete or corrected publication requires cancellation and a new proposal, restarting the delay.
 - The urgent delay requires a Committee urgency vote of **two-thirds of filled non-recused seats, minimum 3**, with the urgency reason recorded and publication complete **before payment is proposed**.
 
-**10.5 Objections.** Block producers may object during the delay. Objections are **written to the `publications` register as they are received** (7.6a) and recorded in a public register on the Portal, are attributed to the block producer who made them, and may be withdrawn.
+**10.5 Objections.** Block producers may object during the delay and withdraw their objections. Record each objection as received in the **`publications` register (7.6a)** and the public Portal register, attributed to the block producer who made it.
 
 | Objections | Result |
 |---|---|
@@ -631,7 +631,7 @@ They may refuse only if a **required administrative check fails** or there is **
 
 File a **written recommendation** stating the grounds and attaching the milestone determination in the **`decisions` register (7.6a)**. A Reviewer files directly with the Committee; the Manager must not withhold it. Publish both positions if they disagree. Retention and correction follow **7.6a**, including decline, deemed decline, or a strike recorded alongside the recommendation.
 
-**Who may not file.** A Manager or Reviewer who is **conflicted on that award** (section 6.4) may not file a recommendation, and shall notify the Committee instead. A person who is no longer Manager of record, or whose Reviewer engagement on that RFP has ended, may not file on it.
+**Who may not file.** A Manager or Reviewer conflicted on the award (6.4) must notify the Committee instead of filing. Only the current Manager of record or a currently engaged Reviewer on that RFP may file.
 
 **Effect of filing:**
 
@@ -699,7 +699,7 @@ On reassignment:
 
 **Resumption.** When the seat is refilled, the engagement resumes unless a substitute was engaged. If so, resumption requires a Committee decision at the threshold in **5.3**; otherwise the substitute remains and the member’s fee is prorated to work performed.
 
-**12.6.2 The member recuses from both the availability finding and the vote engaging them**, since they benefit from the decision; both require a simple majority of non-recused seats, minimum 3, under section 5.3.
+**12.6.2 Recusal.** The member must recuse from both the availability finding and the vote engaging them. Both require a **simple majority of non-recused seats, minimum 3** (5.3).
 
 **12.6.3 Member-Reviewer restrictions on that RFP.**
 
@@ -1064,11 +1064,11 @@ The Committee identifies Network needs, publishes RFPs, invites competing propos
 
 **21.3 Changes.** Publish material changes to scope, budget, or deadline as **numbered amendments**, and extend the deadline by **at least 7 days**.
 
-**21.4 Late submissions** are rejected, with no exception unless the submission channel itself failed and that is documented.
+**21.4 Late submissions.** Reject late submissions unless a failure of the submission channel itself is documented.
 
 ## 22. Stage 5 — Evaluation
 
-**22.1 Criteria and weights are fixed before submissions open** and cannot change afterwards. On an **unsolicited proposal** they are fixed at categorization under 26.1, there being no submissions window to open. Default weights:
+**22.1 Criteria and weights are fixed before submissions open** and cannot change afterwards. On an **unsolicited proposal** they are fixed at categorization under 26.1. Default weights:
 
 | Criterion | Weight |
 |---|---|
@@ -1311,7 +1311,7 @@ The table identifies where each setting is defined. Settings in MSIG #5 can chan
 
 ## Appendix C — Outstanding items
 
-**Blocking items are marked.** A blocking item stops something specific from happening until it is resolved.
+A marked blocking item prevents the specified action until resolved.
 
 **Scope.** The **Program Administration Register** tracks off-chain candidate sourcing, counsel’s conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover. It is **not part of this Framework or approved by MSIG**.
 
