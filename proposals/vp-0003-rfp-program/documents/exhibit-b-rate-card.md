@@ -88,7 +88,7 @@ Each engagement covers **one RFP or bounty, from publication to closing**; a Man
 
 Whether a Reviewer is needed is decided at scoping based on whether the work is technical (Framework 20.2), fixed at publication, and not changed later to reduce fees.
 
-### 2.4 Workload
+### 2.3 Workload
 
 The Committee must publish each Manager’s workload in the cycle report (Framework 12.4). **Four concurrent engagements is a planning estimate, not a limit.**
 
@@ -123,7 +123,7 @@ Committee members receive the rates in **section 3.2** and must follow **Framewo
 
 ---
 
-## 5. Requirements for every engagement
+## 4. Requirements for every engagement
 
 | Requirement | Rule |
 |---|---|
