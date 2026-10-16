@@ -48,7 +48,7 @@ These definitions form part of Part 1.
 | Role | Monitors and reports | Decides who receives funding |
 | Accountability | Records required by the Trust Agreement | Publication, payment delays, reports, and funding approval every four cycles |
 
-**1.2** Members must be appointed by **MSIG Resolutions at the Threshold using Exhibit E**; the Community seat follows section 4, and block producers decide when seats are filled.
+**1.2** Appointments follow **section 3**, with the Community seat also following **section 4**; block producers decide when seats are filled.
 
 Until all five seats are filled, **the Committee must not exercise the RFP mandate, publish RFPs, or make awards**.
 
@@ -1076,7 +1076,7 @@ The Committee identifies Network needs, publishes RFPs, invites competing propos
 
 **21.1** The RFP is published on the **Portal**, which is the canonical venue. Anything published elsewhere mirrors the Portal. The Marketing portfolio holder is responsible for reach.
 
-**21.2 Questions.** All questions go to the Manager of record through the published channel. **All questions and answers are published to everyone**, without naming who asked, and are **written to the `publications` register within 2 business days of the answer** (7.6a). No private guidance of any kind.
+**21.2 Questions.** All questions must go through the published channel to the Manager of record. Publish every question and answer, without identifying the questioner, in the **`publications` register within 2 business days of the answer** (7.6a). No private guidance is permitted.
 
 **21.3 Changes.** Publish material changes to scope, budget, or deadline as **numbered amendments**, and extend the deadline by **at least 7 days**.
 
@@ -1142,8 +1142,7 @@ In every case a written assessment against published criteria must exist before 
 - include a **recovery clause** for money paid against milestones later found undelivered or misrepresented, enforced by VS LLC;
 - require disclosure of any other Network funding for the same work;
 - state the award value in **USD** and the **verified receiving account** for payment in A;
-- require each milestone to be paid in A, converted at the **Reference Rate on the date of approval for payment**;
-- use the **Manager’s determination date** as the approval-for-payment date, except where **payments are suspended under 13.4a** or **approval is referred to the Committee under 13.4**;
+- require milestone payments in **A at the Reference Rate on the approval-for-payment date**, normally the **Manager’s determination date**, with exceptions for suspension under **13.4a** and Committee referral under **13.4**;
 - confirm the awardee is an independent contractor, not an agent of the Network, the Trust, or VS LLC.
 
 **23.3a Contract requirements by award shape (20.2a).**
