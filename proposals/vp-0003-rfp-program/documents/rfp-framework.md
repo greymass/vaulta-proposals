@@ -1082,7 +1082,7 @@ Weights may differ by category, but the version used must be published with the 
 
 **22.2 Compliance check.** The Manager checks completeness, eligibility, conflicts, licence compliance under **20.2a**, and the **11.1a** schedule: at least two milestones, each with a deliverable, acceptance criteria, amount, and date. Reject non-compliant submissions with written reasons; score schedule quality under **22.1**, rather than at the compliance screen.
 
-**22.3 Scoring.** *On an unsolicited proposal, "the published statement" and "the published criteria" mean those fixed at categorization under 26.1.*
+**22.3 Scoring.** For unsolicited proposals, use the Reviewer setting and evaluation criteria fixed at categorization (26.1).
 
 | Published Reviewer setting | Who scores and how |
 |---|---|
