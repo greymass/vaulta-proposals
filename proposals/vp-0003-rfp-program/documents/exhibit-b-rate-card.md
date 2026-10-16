@@ -27,7 +27,6 @@ Managers and Reviewers are paid for **assessing work**. The assessment fee is th
 
 - **Preparation and administration:** Milestone fees include scoping support, publication, public Q&A, intake, compliance checks, evaluation logistics, and scoring. These activities earn no separate fee.
 - **Recovery plans:** The ordinary milestone fee includes reassessing corrected work under a recovery plan. Neither role earns an extra fee (Framework 11.9).
-- **Early endings:** A **no-award fee** may apply if an engagement ends early, under the rules below.
 - **Additional work:** Separate fees apply to **post-award reviews** and **preparation when taking over an existing engagement**, as specified in this rate card.
 
 **How fees are paid**
@@ -94,7 +93,7 @@ Whether a Reviewer is needed is decided at scoping based on whether the work is 
 
 ### 2.3 Post-award review
 
-The Manager must publish a review for any award whose **total contract value** meets or exceeds the review threshold in **MSIG #5 Part D**. Follow **all triggers, deadlines, substitute-author rules, awardee-response rights, redaction limits, and publication and closure requirements in Framework 25.2**, including its **20-business-day** deadline and bounty and ended-award rules. The **USD 375 review fee** is separate from milestone fees.
+Post-award reviews must follow **Framework 25.2**. The separate review fee is listed in **section 2.2**.
 
 ### 2.4 Workload
 
@@ -127,23 +126,13 @@ Reviewers also assess ongoing services, even when there is no separate deliverab
 
 ### 3.3 Committee members serving as Reviewers
 
-Committee members receive **the same rates in 3.2**, with no premium, discount, or negotiated rate (Framework 12.6.5), and must:
-
-- Have their fee listed separately on the Program Cost schedule and paid in **a separate payment for each member-Reviewer**, never combined with another member’s payment (Framework 13.3a).
-- **Recuse** from their own schedule line, signing their own payment, and both the availability finding and the vote to engage them (Framework 12.6.2).
-- File a disclosure questionnaire update **before the engagement begins**; the usual 10-business-day update window does not apply (Framework 6.3c).
+Committee members receive the rates in **section 3.2** and must follow **Framework 12.6**, including its disclosure, recusal, and separate-payment requirements under **6.3c and 13.3a**.
 
 ---
 
 ## 4. Committee-member Reviewer cap
 
 Each Committee member may hold **up to three concurrent Reviewer engagements**, as set by MSIG #5 Part H (Framework 12.6.1(1)). There is **no separate limit on their total Reviewer fees per cycle**. Members cannot be engaged until the concurrent-engagement cap is set.
-
-### 4.2 Committee pay and role limits
-
-Reviewer fees are **additional to the equal Committee retainer** under MSIG #5 Part H; members’ total pay may therefore differ. Block producers may change the cap or rates, or remove a member.
-
-A Committee member **may never serve as Manager of record on any RFP**, and **no MSIG waiver is available** under Framework 12.2a; the Reviewer cap does not change that rule.
 
 ---
 
@@ -172,4 +161,4 @@ Six RFPs are published, four with Reviewers and two using the Manager assessment
 | Cycle cap for these fees, Portal, and administration (MSIG #5 Part D) | 40,000 |
 | **Remaining for Portal, hosting, and administration** | **23,675** |
 
-This example does not price Portal, hosting, or administration; those costs must also fit within the **40,000** cap. Rates are reviewed annually under section 1.
+This example does not price Portal, hosting, or administration; those costs must also fit within the **40,000** cap.
