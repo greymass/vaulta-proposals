@@ -159,11 +159,11 @@ If **m < n**, explain in the full submission why you would not recuse on every d
 
 *Not coded. Signed by the filer.*
 
-> I confirm that the answers above are **complete and true** as at the date of filing.
+> I confirm that my answers are **complete and true on the filing date**.
 >
-> I understand that I must **update this declaration within 10 business days** of any change, **refile it annually**, and — where I am a Committee member taking a Technical Reviewer engagement under Framework 12.6 — **file an update before that engagement begins**.
+> I must **update this declaration within 10 business days** of any change and **refile annually**. If I am a Committee member taking a Technical Reviewer engagement, I must also **file an update before it begins** (Framework 12.6).
 >
-> I have read **Framework section 6.6** and I understand that a material breach — self-dealing, an undisclosed interest in a proposer or awardee, taking any payment from a proposer or awardee, using proposal information for private advantage, breaching confidentiality, or acting on a matter I was recused from — carries **immediate suspension, referral to MSIG, loss of unpaid compensation and of indemnification, and a permanent ban** from every role in and every payment from this program if confirmed at 15 of 21.
+> I have read **Framework 6.6** and understand that a material breach carries **immediate suspension, referral to MSIG, and loss of unpaid compensation and indemnification**. A **permanent ban from all program roles and payments** applies if confirmed by at least **15 of the 21 active block producers**, as set out in that section.
 >
 > Signed: ______________________  Date: ____________
 
