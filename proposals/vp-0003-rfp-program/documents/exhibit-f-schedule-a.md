@@ -1,8 +1,8 @@
 # Schedule A Templates — RFP Program Roles
 
-**Exhibit F to MSIG #5**
-**For use with the Vaulta Stewardship LLC Independent Contractor Agreement**
-**Status: DRAFT v1.8**
+- **Exhibit:** F to MSIG #5
+- **Agreement:** Vaulta Stewardship LLC Independent Contractor Agreement
+- **Status:** Draft v1.8
 
 ---
 
@@ -246,7 +246,7 @@ An empty table means **no Pre-Existing IP** is included in this award.
 
 **7.3 Vesting.** Work Product vests in the **VST** under §9; listed Pre-Existing IP remains Contractor’s and does not vest.
 
-**7.3a Licence back.** For listed Pre-Existing IP embedded in Work Product, Contractor grants the VST an **irrevocable, perpetual, royalty-free, worldwide licence** sufficient for the Network to **use, modify, and have third parties operate the Work Product**, surviving termination; this applies to **every award shape**.
+**7.3a Licence back.** For listed Pre-Existing IP embedded in Work Product, Contractor grants the VST an **irrevocable, perpetual, royalty-free, worldwide licence** over that IP **as embedded in the Work Product**, sufficient for the Network to **use, modify, and have third parties operate the Work Product**, surviving termination; this applies to **every award shape**.
 
 **Blocking counsel confirmation.** Counsel must confirm that §9 permits the **7.2 carve-out and 7.3a licence back** through Schedule A. Until then:
 
