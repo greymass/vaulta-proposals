@@ -1,44 +1,43 @@
-# Disclosure Questionnaire — Version 1
+# Disclosure Questionnaire
 
-**The standard instrument required by Framework 6.3a**
-**Published by Vaulta Stewardship LLC alongside Exhibit D under MSIG #5 Part E**
-**Status: DRAFT v1.4 — questionnaire version `VQ1`; settled**
-**Date: [___]**
+**Version:** 1.4\
+**Status:** Draft\
+**Questionnaire version:** `VQ1`\
+**Date:** [___]
+
+Published by **Vaulta Stewardship LLC** alongside **Exhibit D** under **MSIG #5 Part E**.
 
 ---
 
-## What this is
+## Purpose
 
-The **single standard questionnaire** every person with a decision or approval right in the Vaulta RFP program files. Everyone answers the same questions in the same order, so that answers can be compared across people and across years, and **so that a missing answer shows up as a gap rather than as an omission nobody noticed**.
+This questionnaire is the **conflict-of-interest declaration** required by the **Vaulta Network RFP Framework (Exhibit A to MSIG #5), sections 6.3a and 6.3c**.
 
-It is **not an additional item**. Framework 6.3c: this questionnaire **is** the conflict-of-interest declaration referred to in the appointment and engagement documents.
-
-**Who files**
+**Who files and when:**
 
 | Who | When |
 |---|---|
-| **Steering Committee member** | Within **30 days**, running from the later of the execution of their appointment Resolution and the date VS LLC publishes the register as open for filing. **Signing weight and pay do not begin until it is filed** |
+| **Steering Committee member** | Within **30 days** after appointment execution or VS LLC announcing the register is open, **whichever is later**. Pay and signing weight begin only after filing. |
 | **RFP Program Manager** | Before being recorded as **Manager of record** on any RFP |
 | **Technical Reviewer** | Before being **assigned to any RFP** |
-| **A member taking a Reviewer engagement** under Framework 12.6 | An **update**, filed **before the engagement begins**. The 10-business-day change window does not apply to it |
+| **A member taking a Reviewer engagement** under Framework 12.6 | File an **update before the engagement begins**. |
 | **Anyone else given a decision or approval right** | Before that right takes effect |
-
-**And after that:** update within **10 business days** of any change, and **refile every year**. An annual refiling more than 30 days overdue suspends a member's pay, and bars a Manager or Reviewer from new assignments, until filed — but work already assigned continues, because a lapsed refiling is a procedural breach under 6.6, not a material one.
 
 ---
 
-## How to answer
+## How to complete this questionnaire
 
-Six rules, and they are the reason the instrument works at all.
+1. Complete **1.1 privately with VS LLC**; include the other answers in order in the public filing. Write **“None”** where nothing applies; blank public answers make the filing incomplete.
+2. Report positions using the listed **USD bands**, not exact amounts.
+3. Name organizations where requested. For relatives, colleagues, and counterparties, describe the relationship **without naming the person**.
+4. Declare connections even if you think they are immaterial. If unsure, disclose them and explain.
+5. Review and sign your answers. **The filing is public and permanent**, and VS LLC cannot change its content.
 
-| | |
-|---|---|
-| **"None" is an answer. Blank is not** | Parts 2 to 8 each require an explicit **None** where there is nothing to declare. **A blank is treated as an unfiled questionnaire** — which means the filing gates above have not been met |
-| **Positions by band, never by figure** | Part 4 asks which band, not how much. The register is permanent and public; an exact figure is a standing invitation that a band is not |
-| **Do not name third parties** beyond the organizations you name in Part 5 | Name organizations where the question asks for them. Do **not** name individuals — not family members, not colleagues, not counterparties. Describe the relationship instead |
-| **Answer the question you are asked, not the one you would prefer** | Where a question asks whether something exists, "it is not material" is not an answer. Declare it and say why you think it is immaterial; that judgment belongs to the Committee and to anyone reading later |
-| **If you are unsure, declare it** | A declared connection that turns out to be irrelevant costs a line in a register. An undeclared one that turns out to be relevant is a **material breach** under Framework 6.6 |
-| **You sign your own submission** | VS LLC writes the record to the register and **cannot alter its content** (Framework 6.3b) |
+## Keep it current
+
+Update within **10 business days** of a change and **refile annually**.
+
+An annual refiling more than **30 days overdue** suspends Committee pay and blocks new Manager or Reviewer assignments until filed; **existing assignments continue** (Framework 6.6).
 
 ---
 
@@ -46,29 +45,29 @@ Six rules, and they are the reason the instrument works at all.
 
 | Term | Meaning |
 |---|---|
-| **Material interest** | **5% or more** of an entity's equity, units, or voting rights *(settled)*; **or** any officer, director, or general-partner role; **or** any holding or arrangement that a reasonable person would expect to affect your judgment, whatever its size |
-| **Connected company** | Your employer; a company you work for; one under common control with one of those; or one you hold a material interest in (Framework 6.2) |
-| **Vaulta ecosystem** | Vaulta and the wider Antelope ecosystem — block producers, infrastructure providers, wallets, exchanges listing A, and projects building on either |
-| **Vaulta Treasury** | The Vaulta Treasury and any entity it controls. Affiliation means employed by it, an officer or director of it, under contract to provide services to it, holding authority over its funds, or otherwise acting under its direction in respect of its treasury functions (Framework 2.4a) |
-| **Immediate family** | Spouse or partner, parent, child, or sibling |
-| **Household member** | Anyone sharing your household, whether or not related |
-| **Plausibly bid** | An organization that has bid, has said it intends to bid, or does work of the kind this program funds. **Err towards including** |
+| **Material interest** | **5% or more** of an entity’s equity, units, or voting rights; any officer, director, or general-partner role; or any holding or arrangement a reasonable person would expect to affect your judgment, regardless of size. |
+| **Connected company** | Your employer, a company you work for, a company under common control with either, or a company in which you hold a material interest (Framework 6.2). |
+| **Vaulta ecosystem** | Vaulta and the wider Antelope ecosystem, including block producers, infrastructure providers, wallets, exchanges listing A, and projects building on either. |
+| **Vaulta Treasury** | The Treasury and entities it controls. You are affiliated if you are employed by it, serve as an officer or director, provide services under contract, have authority over its funds, or act under its direction on treasury matters (Framework 2.4a). |
+| **Immediate family** | Your spouse or partner, parents, children, and siblings. |
+| **Household member** | Anyone who shares your household, related or not. |
+| **Plausibly bid** | An organization that has bid, says it intends to bid, or does the kind of work this program funds. **If unsure, include it.** |
 
 ---
 
 ## Part 1 — Identity and role
 
-*Not coded. These become the register row's own fields.*
+*Not coded. Provide 1.1 privately to VS LLC; record answers 1.2–1.7 on-chain.*
 
 | # | Question |
 |---|---|
-| 1.1 | Full legal name |
-| 1.2 | **The public identity you will be attributed under — required.** Your legal name or a stable handle, your choice, but **one identity for the term**: it may not be anonymous, and it may not rotate. Every vote, recusal, approval and assessment you make is published against it (Framework 11.3a), and it is what a reader uses to follow your decisions across a year |
+| 1.1 | Legal identification required by VS LLC for tax and banking — **provide privately, not in this public filing** |
+| 1.2 | Your **public identity**: your legal name or a stable handle, fixed for the term and not anonymous. All votes, recusals, approvals, and assessments are published under it (Framework 11.3a). |
 | 1.3 | Role: **Committee member** / **RFP Program Manager** / **Technical Reviewer** / **other decision right** — state which |
 | 1.4 | Seat, or the RFPs this filing covers |
 | 1.5 | On-chain account |
 | 1.6 | Date |
-| 1.7 | Filing type: **initial** / **update** / **annual refiling**. For an update or refiling, the **transaction id of the filing it supersedes** |
+| 1.7 | Filing type: **initial, update, or annual refiling**. For updates and refilings, give the **transaction ID of the filing being replaced**. |
 
 ---
 
@@ -82,17 +81,15 @@ Six rules, and they are the reason the instrument works at all.
 | 2.4 | Any **block producer affiliation** — employment, ownership, operation, or a paid role | `N` or `Y`*n* |
 | 2.5 | Any **board, officer, or advisory position**, paid or unpaid | `N` or `Y`*n* |
 
-*2.3 is how the cycle report reconciles member-Reviewer engagements against the concurrent cap in Framework 12.6. A member taking an engagement files this update before it begins.*
-
 ---
 
 ## Part 3 — Vaulta Treasury
 
 | # | Question | Coded as |
 |---|---|---|
-| 3.1 | Any **employment, contract, consulting, advisory, board, or equity relationship** with the Vaulta Treasury or any entity it controls — **now, or in the previous 12 months** | `N` or `Y`*n* |
+| 3.1 | List any employment, contracts, consulting, advisory or board roles, or equity interests with the **Vaulta Treasury or entities it controls**, **now or in the past 12 months**. | `N` or `Y`*n* |
 
-**A person affiliated with the Vaulta Treasury is not eligible** to hold a Committee seat, to serve as Program Manager, or to serve as Technical Reviewer, absent an express MSIG waiver at the Threshold with published reasons (Framework 2.4a). A `Y` answer here is not a disqualification to conceal — it is the answer that has to be given so that the waiver question can be asked.
+Treasury-affiliated people need an **express MSIG waiver at the Threshold, with published reasons**, to serve as Committee members, Managers, or Reviewers (Framework 2.4a).
 
 ---
 
@@ -100,25 +97,21 @@ Six rules, and they are the reason the instrument works at all.
 
 | # | Question | Coded as |
 |---|---|---|
-| 4.1 | Any **Vaulta-ecosystem token, equity, or option position other than A**, by aggregate band | `V0`–`V4`, plus `Y`*n* for the number of positions |
-| 4.2 | Any position **held on behalf of another person** | `N` or `Y`*n* |
-| 4.3 | Any position **deliberately taken to profit from a fall in the price of A** — a short sale, a put option, or an inverse product | `N` or `Y`*n* |
+| 4.1 | List your Vaulta-ecosystem token, equity, and option positions, **excluding A**, and give their **aggregate USD band**. | `V0`–`V4`, plus `Y`*n* for the number of positions |
+| 4.2 | List positions you hold **on behalf of someone else**. | `N` or `Y`*n* |
+| 4.3 | List positions deliberately taken to **profit if A’s price falls**, such as short sales, put options, or inverse products. | `N` or `Y`*n* |
 
-**The position bands**, aggregate value in USD at the date of filing
+**Aggregate USD bands at the filing date:**
 
 | Code | Band |
 |---|---|
 | `V0` | None |
 | `V1` | Under 10,000 |
 | `V2` | 10,000 – 50,000 |
-| `V3` | 50,001 – 250,000 |
+| `V3` | More than 50,000, up to and including 250,000 |
 | `V4` | More than 250,000 |
 
-**This Part does not ask for your A holdings, and that is deliberate** (Framework 6.3a). Everyone who files is paid in A, so holding it distinguishes nobody, and every award is denominated in USD, so no decision here moves the price in a way anyone could act on. The three questions above are the ones that are actually conflicts: a position in an organization that might **bid**, a position held for **someone else**, and a position **deliberately taken against A** — the only one pointed against the program, and the only one nothing else in this questionnaire would surface.
-
-**4.3 asks about intent, not exposure.** Holding dollars, stablecoins, or a diversified portfolio underweight A all gain in some sense when A falls, and none of them is what this question is about. It asks whether you **took a position in order to profit from A falling**. If you have, you know it; if you are unsure whether something counts, it almost certainly does not — but declare it and say why you think it does not.
-
-*Bands are aggregate USD at the date of filing, so a position's band is a statement about that date rather than a running figure. A change that moves you into a different band is a change to declare within 10 business days.*
+**Do not report A holdings** (Framework 6.3a). Question **4.3 asks about intent to profit from A falling**, not ordinary exposure from dollars, stablecoins, or a diversified portfolio underweight A; if unsure, declare the position and explain why you think it does not qualify.
 
 ---
 
@@ -126,13 +119,13 @@ Six rules, and they are the reason the instrument works at all.
 
 | # | Question | Coded as |
 |---|---|---|
-| 5.1 | **Named organizations** you are connected to that plausibly bid | `N` or `Y`*n* |
-| 5.2 | The **nature of each connection** — employment, ownership, contract, advisory, family, or other | Not coded; in the full submission |
-| 5.3 | For each organization named, **would you recuse** on an RFP it bids on? | `N`, or `R`*m* where *m* is the number you would recuse on, out of *n* |
+| 5.1 | Name organizations connected to you that **plausibly bid**. | `N` or `Y`*n* |
+| 5.2 | Describe each connection: employment, ownership, contract, advisory, family, or other. | Not coded; in the full submission |
+| 5.3 | For each organization, state whether you would **recuse yourself from an RFP it bids on**. | `N`, or `R`*m* where *m* is the number you would recuse on, out of *n* |
 
-**Name the organizations.** This is the one place the questionnaire asks for names, and it is the answer the recusal rules run on. Framework 6.4 makes a Manager or Reviewer conflicted on any awardee that is, or is connected to, an organization declared here.
+**Name the organizations**, not individuals. Managers and Reviewers are conflicted where an awardee is, or is connected to, an organization declared here (Framework 6.4).
 
-**Where *m* is less than *n*, say why in the full submission.** Declaring a connection and then not recusing is permitted; doing it without a stated reason is not.
+For every listed organization you would not recuse on, **explain why in your full answers**.
 
 ---
 
@@ -140,7 +133,7 @@ Six rules, and they are the reason the instrument works at all.
 
 | # | Question | Coded as |
 |---|---|---|
-| 6.1 | Any role in **another grant, funding, or treasury body** — in this ecosystem or any other, paid or unpaid, current or in the previous 12 months | `N` or `Y`*n* |
+| 6.1 | List roles in other grant, funding, or treasury bodies—**paid or unpaid, in any ecosystem, now or in the past 12 months**. | `N` or `Y`*n* |
 
 ---
 
@@ -148,9 +141,9 @@ Six rules, and they are the reason the instrument works at all.
 
 | # | Question | Coded as |
 |---|---|---|
-| 7.1 | Any connection of the kind covered by **Parts 2 to 5** held by an **immediate family member or household member** | `N` or `Y`*n* |
+| 7.1 | List connections covered by **Parts 2–5** involving your **immediate family or household members**. | `N` or `Y`*n* |
 
-**Do not name the person.** State the relationship and the connection — "a household member is employed by [organization]" — and nothing more. The organization may be named; the individual may not.
+Describe the relationship and connection **without naming the person**, for example: “a household member is employed by [organization].”
 
 ---
 
@@ -158,7 +151,7 @@ Six rules, and they are the reason the instrument works at all.
 
 | # | Question | Coded as |
 |---|---|---|
-| 8.1 | Any prior **removal, ban, or sanction** from a funding, governance, or treasury role, anywhere, at any time | `N` or `Y`*n* |
+| 8.1 | List any removal, ban, or sanction from a funding, governance, or treasury role, **anywhere, at any time**. | `N` or `Y`*n* |
 
 ---
 
@@ -166,11 +159,11 @@ Six rules, and they are the reason the instrument works at all.
 
 *Not coded. Signed by the filer.*
 
-> I confirm that the answers above are **complete and true** as at the date of filing.
+> I confirm that my answers are **complete and true on the filing date**.
 >
-> I understand that I must **update this declaration within 10 business days** of any change, **refile it annually**, and — where I am a Committee member taking a Technical Reviewer engagement under Framework 12.6 — **file an update before that engagement begins**.
+> I must **update this declaration within 10 business days** of any change and **refile annually**. If I am a Committee member taking a Technical Reviewer engagement, I must also **file an update before it begins** (Framework 12.6).
 >
-> I have read **Framework section 6.6** and I understand that a material breach — self-dealing, an undisclosed interest in a proposer or awardee, taking any payment from a proposer or awardee, using proposal information for private advantage, breaching confidentiality, or acting on a matter I was recused from — carries **immediate suspension, referral to MSIG, loss of unpaid compensation and of indemnification, and a permanent ban** from every role in and every payment from this program if confirmed at 15 of 21.
+> I have read **Framework 6.6** and understand that a material breach carries **immediate suspension, referral to MSIG, and loss of unpaid compensation and indemnification**. A **permanent ban from all program roles and payments** applies if confirmed by at least **15 of the 21 active block producers**, as set out in that section.
 >
 > Signed: ______________________  Date: ____________
 
@@ -178,13 +171,13 @@ Six rules, and they are the reason the instrument works at all.
 
 ## The coded-answer schema
 
-The coded string is what makes filings **comparable** — across people, and across years — and what lets a validator see a gap rather than guess at one. It sits alongside the full text of the filing, which is written to the same row. **Everything you write is written to the chain.** The Portal reads the register and renders it; it does not hold a separate copy.
+### Format
 
-### Form
+Store the **coded answers and full public filing in the same on-chain row**.
 
-A single ASCII string, pipe-delimited, version first:
+Use one ASCII string, starting with the questionnaire version. Separate entries with `|`:
 
-```
+```text
 VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.1:N|7.1:Y1|8.1:N
 ```
 
@@ -192,46 +185,34 @@ VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 
 | Code | Meaning |
 |---|---|
-| `N` | **None declared.** An explicit answer, not an absence |
-| `Y`*n* | **Yes**, with *n* items set out in the full submission. *n* ≥ 1 |
-| `V0`–`V4` | Position band (4.1) |
-| `R`*m* | Recusal intended on *m* of the organizations named at 5.1 |
-| `X` | **Not answered.** Invalid in a filed questionnaire |
+| `N` | None declared. |
+| `Y`*n* | Yes, with *n* items listed in the full answers. *n* must be at least 1, except `V0/Y0` at 4.1. |
+| `V0`–`V4` | Position band for 4.1. |
+| `R`*m* | Number of organizations at 5.1 for which you would recuse yourself. |
+| `X` | Unanswered. Any `X` makes the questionnaire **unfiled** (Framework 6.3c; Exhibit D 4.3). |
 
-**`X` exists so that the gap is expressible.** A questionnaire containing any `X` is **not filed** for the purposes of Framework 6.3c, and the platform must be able to say so precisely rather than silently accepting a blank. This is the distinction Exhibit D 7.3 requires the coding to support: **None and not-answered must never collapse into the same value.**
+### Validation
 
-### Rules a validator enforces
+1. Include every coded question in Parts 2–8 **once, in order**. Include **5.2 only in the full answers**.
+2. Every `Y`*n* count must match the number of corresponding entries in the full answers.
+3. If `5.1` is `N`, `5.3` must be `N`. Otherwise, use `R`*m*, where **0 ≤ *m* ≤ *n*** (*n* is the count at 5.1).
+4. For `4.1`, use **`V0/Y0` for no positions**. Other bands require a count of at least 1.
+5. The same answers must produce the same coded string.
 
-1. Every question in Parts 2 to 8 appears exactly once, in order.
-2. No `X` in a filed questionnaire.
-3. `5.3` is `N` if and only if `5.1` is `N`; otherwise `R`*m* with **0 ≤ *m* ≤ *n*** from `5.1`.
-4. `4.1` carries both a band and a count: `V0` implies `Y0`, and any band above `V0` implies *n* ≥ 1.
-5. A `Y`*n* answer requires *n* corresponding entries in the full submission. A mismatch fails validation.
-6. The string is **stable for a given set of answers** — same answers, same string — so two filings can be compared by eye.
+### Publication
 
-### What is written where
-
-| | |
+| Where | What |
 |---|---|
-| **On-chain**, in the `disclosures` table on `disc.vst` | Everything: filer account, role, questionnaire version (`VQ1`), filing date, the coded string above, **the full text of your answers** — organizations named, the nature of each connection, every reason and explanation — and, on an update, the transaction id of the filing it supersedes and the reason |
-| **On the Portal** | Nothing separately. The Portal **reads the register** and renders it |
-| **Nowhere, ever** | Exact position figures, and the **names of individuals** |
+| **On-chain:** `disc.vst`, `disclosures` table | Public identity, account, role, questionnaire version, filing date, coded answers, and full public answers. Updates also include the previous filing’s transaction ID and the reason for updating. |
+| **Portal** | Displays the on-chain register; keeps no separate copy. |
+| **Excluded** | Exact position amounts, third-party individuals’ names, and private identification from 1.1. Your chosen public identity under 1.2 remains public. |
 
-**This is permanent and it cannot be edited, redacted, or withdrawn.** Read your filing before you sign it. VS LLC screens each filing for named individuals and for figures where a band was asked for, and **returns it to you rather than writing it** — that screen is mechanical and is not a review of what you have said. Everything past it is on the chain for as long as the chain exists.
+**Review before signing: filings cannot be edited, redacted, or withdrawn.** VS LLC must return filings containing excluded information rather than publish them. This is a privacy check, not a review of substance.
 
 ---
 
 ## Version and change control
 
-| | |
-|---|---|
-| **This version** | `VQ1` |
-| **Changed by** | VS LLC republishing the instrument, with the Committee's approval recorded by vote |
-| **Effect of a change** | A new version applies to **filings made after it**. It does not reinterpret or invalidate an earlier filing — every row carries the version it was filed under, which is what makes the register comparable across years rather than merely long |
-| **When a version changes** | Filers are not required to refile early. The next annual refiling uses the current version |
-
----
-
-## Still to settle
-
-**Nothing.** The instrument is complete: text, coded-answer schema and position bands. What remains is **publication by VS LLC with the register open for filing**, which is MSIG #5 blank 8 and Framework Appendix C item 7 rather than a question about this document.
+- **Approval:** VS LLC may publish a new version after the Committee approves it by recorded vote. Changes to Framework requirements also need an **MSIG amendment under 16.2**.
+- **Existing filings:** New versions apply only to later filings. They do not change earlier filings’ recorded version, interpretation, or validity.
+- **Refiling:** No early refiling is required. Use the current version at your next annual refiling.
