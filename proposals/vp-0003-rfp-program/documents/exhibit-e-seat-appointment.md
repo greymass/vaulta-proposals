@@ -22,7 +22,9 @@ Steering Committee Appointment — [SEAT NAME(S)]
 
 [**Seat by seat** (default) / **All or nothing**]
 
-**Seat by seat:** appointments stand independently. **All or nothing:** none takes effect unless all can (Framework 3.1).
+**Seat by seat:** Each appointment takes effect independently.
+
+**All or nothing:** All appointments take effect together, or none do (Framework 3.1).
 
 ## Candidates
 
