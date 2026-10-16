@@ -171,13 +171,13 @@ If **m < n**, explain in the full submission why you would not recuse on every d
 
 ## The coded-answer schema
 
+### Format
+
 Store the **coded answers and full public filing in the same on-chain row**.
 
-### Form
+Use one ASCII string, starting with the questionnaire version. Separate entries with `|`:
 
-A single ASCII string, pipe-delimited, version first:
-
-```
+```text
 VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.1:N|7.1:Y1|8.1:N
 ```
 
@@ -185,32 +185,29 @@ VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 
 | Code | Meaning |
 |---|---|
-| `N` | **None declared.** An explicit answer, not an absence |
-| `Y`*n* | **Yes**, with *n* items set out in the full submission. *n* ≥ 1, except **`V0/Y0` at 4.1** |
-| `V0`–`V4` | Position band (4.1) |
-| `R`*m* | Recusal intended on *m* of the organizations named at 5.1 |
-| `X` | **Not answered.** Invalid in a filed questionnaire |
+| `N` | None declared. |
+| `Y`*n* | Yes, with *n* items listed in the full answers. *n* must be at least 1, except `V0/Y0` at 4.1. |
+| `V0`–`V4` | Position band for 4.1. |
+| `R`*m* | Number of organizations at 5.1 for which you would recuse yourself. |
+| `X` | Unanswered. Any `X` makes the questionnaire **unfiled** (Framework 6.3c; Exhibit D 4.3). |
 
-**None and unanswered are different:** `N` declares nothing; any `X` means the questionnaire is **unfiled** under Framework 6.3c and Exhibit D 4.3.
+### Validation
 
-### Rules a validator enforces
+1. Include every coded question in Parts 2–8 **once, in order**. Include **5.2 only in the full answers**.
+2. Every `Y`*n* count must match the number of corresponding entries in the full answers.
+3. If `5.1` is `N`, `5.3` must be `N`. Otherwise, use `R`*m*, where **0 ≤ *m* ≤ *n*** (*n* is the count at 5.1).
+4. For `4.1`, use **`V0/Y0` for no positions**. Other bands require a count of at least 1.
+5. The same answers must produce the same coded string.
 
-1. Every **coded question** in Parts 2 to 8 appears exactly once, in order; **5.2 is narrative-only** and must appear in the full submission, not the coded string.
-2. No `X` in a filed questionnaire.
-3. `5.3` is `N` if and only if `5.1` is `N`; otherwise `R`*m* with **0 ≤ *m* ≤ *n*** from `5.1`.
-4. `4.1` carries both a band and a count: `V0` implies `Y0`, and any band above `V0` implies *n* ≥ 1.
-5. A `Y`*n* answer requires *n* corresponding entries in the full submission. A mismatch fails validation.
-6. The string is **stable for a given set of answers** — same answers, same string — so two filings can be compared by eye.
+### Publication
 
-### What is written where
-
-| | |
+| Where | What |
 |---|---|
-| **On-chain**, in the `disclosures` table on `disc.vst` | The **public filing only**: chosen public identity, filer account, role, questionnaire version (`VQ1`), filing date, the coded string above, and **full public answers**, excluding private identification at **1.1** — organizations named, the nature of each connection, every reason and explanation — and, on an update, the transaction id of the filing it supersedes and the reason |
-| **On the Portal** | Nothing separately. The Portal **reads the register** and renders it |
-| **Excluded from the public filing** | Exact position figures; **third-party individuals’ names**; private legal identification collected separately by VS LLC. The filer’s chosen public identity under **1.2** remains public. |
+| **On-chain:** `disc.vst`, `disclosures` table | Public identity, account, role, questionnaire version, filing date, coded answers, and full public answers. Updates also include the previous filing’s transaction ID and the reason for updating. |
+| **Portal** | Displays the on-chain register; keeps no separate copy. |
+| **Excluded** | Exact position amounts, third-party individuals’ names, and private identification from 1.1. Your chosen public identity under 1.2 remains public. |
 
-**Review before signing: filings cannot be edited, redacted, or withdrawn.** VS LLC must return, rather than publish, a filing naming third-party individuals, containing separately collected private legal identification, or giving exact position figures where bands were requested; this is a **mechanical screen, not a review of substance**.
+**Review before signing: filings cannot be edited, redacted, or withdrawn.** VS LLC must return filings containing excluded information rather than publish them. This is a privacy check, not a review of substance.
 
 ---
 
