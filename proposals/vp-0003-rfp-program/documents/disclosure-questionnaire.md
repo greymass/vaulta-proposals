@@ -45,13 +45,13 @@ An annual refiling more than **30 days overdue** suspends Committee pay and bloc
 
 | Term | Meaning |
 |---|---|
-| **Material interest** | **5% or more** of an entity's equity, units, or voting rights; **or** any officer, director, or general-partner role; **or** any holding or arrangement that a reasonable person would expect to affect your judgment, whatever its size |
-| **Connected company** | Your employer; a company you work for; one under common control with one of those; or one you hold a material interest in (Framework 6.2) |
-| **Vaulta ecosystem** | Vaulta and the wider Antelope ecosystem — block producers, infrastructure providers, wallets, exchanges listing A, and projects building on either |
-| **Vaulta Treasury** | The Vaulta Treasury and any entity it controls. Affiliation means employed by it, an officer or director of it, under contract to provide services to it, holding authority over its funds, or otherwise acting under its direction in respect of its treasury functions (Framework 2.4a) |
-| **Immediate family** | Spouse or partner, parent, child, or sibling |
-| **Household member** | Anyone sharing your household, whether or not related |
-| **Plausibly bid** | An organization that has bid, has said it intends to bid, or does work of the kind this program funds. **Err towards including** |
+| **Material interest** | **5% or more** of an entity’s equity, units, or voting rights; any officer, director, or general-partner role; or any holding or arrangement a reasonable person would expect to affect your judgment, regardless of size. |
+| **Connected company** | Your employer, a company you work for, a company under common control with either, or a company in which you hold a material interest (Framework 6.2). |
+| **Vaulta ecosystem** | Vaulta and the wider Antelope ecosystem, including block producers, infrastructure providers, wallets, exchanges listing A, and projects building on either. |
+| **Vaulta Treasury** | The Treasury and entities it controls. You are affiliated if you are employed by it, serve as an officer or director, provide services under contract, have authority over its funds, or act under its direction on treasury matters (Framework 2.4a). |
+| **Immediate family** | Your spouse or partner, parents, children, and siblings. |
+| **Household member** | Anyone who shares your household, related or not. |
+| **Plausibly bid** | An organization that has bid, says it intends to bid, or does the kind of work this program funds. **If unsure, include it.** |
 
 ---
 
