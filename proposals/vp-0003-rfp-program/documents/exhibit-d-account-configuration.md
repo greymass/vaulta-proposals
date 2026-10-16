@@ -99,11 +99,9 @@ Later milestone and Program Cost payments retain their delay and cancellation ri
 
 ### 2.3 Held-multisignature fallback
 
-If the `eosio.msig` delay is unavailable, publish the proposal ID with the award and keep the proposal **public, with Committee approvals withheld for the full delay window**. VS LLC must republish this Exhibit identifying the change before switching to the fallback.
+If the `eosio.msig` delay is unavailable, publish the proposal ID with the award. Committee members must **withhold approvals until the full delay window ends** and, for initial award payments, the published final objection count permits execution under **Framework 10.7**.
 
-Neither VS LLC nor the Committee may execute before the delay ends and the final objection count permits execution under **Framework 10.7**. The cancellation period does not permit executing a blocked payment.
-
-Under the fallback, Committee members must wait until the full delay window has ended before approving the payment MSIG. For initial award payments, they must also wait for the published final objection count and clearance under **Framework 10.7**. Record the procedure and cancellation authorities in **6.1**.
+Before using the fallback, VS LLC must **republish Exhibit D**, recording the procedure and cancellation authorities in **6.1**.
 
 ### 2.4 Urgent payments
 
