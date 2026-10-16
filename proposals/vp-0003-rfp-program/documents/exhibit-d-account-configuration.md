@@ -8,7 +8,7 @@
 
 Published by **Vaulta Stewardship LLC** under **MSIG #5 Part E**.
 
-**VS LLC fills in the deployment details in this published Exhibit after deployment and before funding** (6.1). After members are appointed by separate MSIGs, it records their names, public keys, and delivery dates in **6.3**. These details need not be known when MSIG #5 is approved; member keys do not delay publication, but funding and permission activation wait for all five keys and the other **Framework 1.2** requirements. Retain dated published versions so later updates remain traceable.
+Deployment details and member keys need not be known when MSIG #5 is approved. **VS LLC completes the deployment record under 6.1 and the member-key register under 6.3**, following their publication, funding, and permission-activation requirements and **Framework 1.2**. Retain dated published versions.
 
 ---
 
@@ -68,7 +68,7 @@ Configure **`eosio.prods`** as owner for account and key recovery under **Framew
 
 **Requirements for register-contract upgrades**
 
-The following requirements apply when an MSIG proposal changes the contract on `disc.vst`. They protect existing records and specify what the proposal and the upgrade record must include.
+Any MSIG proposal to change the `disc.vst` contract must meet these requirements.
 
 | Requirement | Details |
 |---|---|
@@ -189,9 +189,14 @@ Alert on uncertainty; treat an unreadable table as a failure until a later check
 
 ### 3.5 Rate evidence
 
-**Oracle reads.** Record the **oracle value, block number, transaction ID, and newest-datapoint timestamp** at every read; the table keeps no history.
+Record the following evidence **at every read**:
 
-**Fallback reads.** At every fallback read, record **the newest `eosusd` timestamp or the fact that the pair or contract could not be read; the CoinMarketCap date; the published high and low; the resulting integer; and a retrieval record of the figures**, instead of oracle value, block number, and transaction ID.
+| Source | Required evidence |
+|---|---|
+| Oracle | Oracle value, block number, transaction ID, and newest-datapoint timestamp |
+| Fallback | Newest `eosusd` timestamp, or a record that the pair or contract could not be read; CoinMarketCap date; published high and low; resulting integer; and a retrieval record of the figures |
+
+For fallback reads, use the fallback evidence **instead of the oracle value, block number, and transaction ID**.
 
 ---
 
@@ -199,15 +204,15 @@ Alert on uncertainty; treat an unreadable table as a failure until a later check
 
 ### 4.1 Account and contract
 
-| | |
+| Setting | Value |
 |---|---|
-| **Account** | **`disc.vst`** |
-| **Holds** | **No program funds or meaningful token balance**; records only |
-| **Contract** | Append-only; one or more contracts with **three separate tables**: `disclosures`, `decisions`, and `publications` |
-| **Built and serviced by** | **EOS Rio** builds and services the contract; **VS LLC remains accountable** under MSIG #5 Part E and must document the deployed configuration |
-| **Source** | **VST-owned**, in a **VST-controlled repository**, licensed **Apache-2.0** |
-| **ABI** | *(to confirm on deployment — published and matching the deployed code; reproduced at 6.1)* |
-| **Code hash** | *(to confirm on deployment)* |
+| Account | `disc.vst` |
+| Holds | **No program funds or meaningful token balance**; records only |
+| Contract | Append-only; one or more contracts with **three separate tables**: `disclosures`, `decisions`, and `publications` |
+| Built and serviced by | EOS Rio builds and services the contract; **VS LLC remains accountable** under MSIG #5 Part E and must document the deployed configuration |
+| Source | **VST-owned**, in a **VST-controlled repository**, licensed **Apache-2.0** |
+| ABI | *(to confirm on deployment — published and matching the deployed code; reproduced at 6.1)* |
+| Code hash | *(to confirm on deployment)* |
 
 ### 4.2 Shared record requirements
 
@@ -225,7 +230,7 @@ Screen and redact records **before writing**, under **Framework 5.9, 6.3b, 7.6a,
 |---|---|
 | `filer` | The filer's on-chain account |
 | `role` | Committee member and seat, Program Manager, Technical Reviewer, or other decision right |
-| `qversion` | The **questionnaire version** the filing was made on, so a later version never reinterprets an earlier row |
+| `qversion` | Questionnaire version used for the filing; later versions must not reinterpret earlier records |
 | `filed_at` | Filing date |
 | `answers` | The **coded answers to Parts 2 to 8** of the questionnaire (Framework 6.3a) |
 | `text` | **The full public filing**, including the filer’s chosen public identity, organizations named in Part 5, connections, reasons, and explanations; **exclude legal identification collected privately by VS LLC** |
@@ -246,7 +251,7 @@ Preserve **`N` (None declared)** and **`X` (not answered)** as distinct codes. A
 | `recorded_at` | Date |
 | `parties` | Every person exercising a decision right, **by name and on-chain account** |
 | `detail` | The kind-specific payload below |
-| `body` | **The record in full** — the substance, not a reference to it |
+| `body` | Full record, not a reference to it |
 | `prior` | Transaction id of the row this one supersedes |
 | `reason` | Why, where `prior` is set |
 
@@ -270,9 +275,9 @@ Store program publications other than **minutes, proposals, and the backlog** he
 | `kind` | `rfp` \| `amendment` \| `qa` \| `objection` \| `ban` \| `seat` \| `vision` \| `cyclereport` \| `annualreview` |
 | `ref` | RFP reference, award reference, seat, cycle, or the row this one amends or answers |
 | `sversion` | Schema version |
-| `published_at` | Date, and for an objection the **time**, which the Framework 10.6 count turns on |
+| `published_at` | Publication date; objections must also include the time used for counting under Framework 10.6 |
 | `parties` | Where the record names anyone acting in the program — a block producer objecting, a seat holder, a banned person — **by name and on-chain account** |
-| `body` | The record in full |
+| `body` | Full record, not a reference to it |
 | `prior` | Transaction id of the row this one supersedes or amends |
 | `reason` | Why, where `prior` is set |
 
@@ -292,7 +297,9 @@ Store program publications other than **minutes, proposals, and the backlog** he
 | **CPU / NET** | Staked, sized for the payment cadence *(to confirm on deployment)* | Sized for routine writes *(to confirm on deployment)* |
 | **Top-up trigger** | Free RAM below **16 KB**, or any failed resource check | Free RAM below **3 MB**, **or** below 12 months of projected growth, whichever comes first — **topped up without waiting to be asked** |
 
-**The VST and VS LLC must provision and top up both accounts from Program Costs without waiting for a request**, including purchasing `disc.vst` RAM **before its first write**. VS LLC monitors resources **monthly** and reports them in the cycle report. Its operating work is paid from **Program Costs within the USD 40,000 cap** in MSIG #5 Part D. The Committee records this classification in the first cycle’s Program Cost schedule and revisits it only if the work changes.
+- **Provisioning:** The VST and VS LLC must provision and top up both accounts from Program Costs without waiting for a request. Purchase `disc.vst` RAM **before its first write**.
+- **Monitoring:** VS LLC monitors resources **monthly** and reports them in the cycle report.
+- **Operating costs:** Pay VS LLC’s operating work from **Program Costs within the USD 40,000 cap** in MSIG #5 Part D. The Committee records this classification in the first cycle’s Program Cost schedule and revisits it **only if the work changes**.
 
 Classify the **initial platform build, including both contracts on `disc.vst`**, under **Framework 15.2b**; the pre-Committee process is in **Program Administration Register, item 2.5**.
 
@@ -383,30 +390,30 @@ Configure `rfp.vst`’s on-chain signing permissions with the delivered keys; th
 
 Estimate an Antelope `multi_index` row as its serialized payload plus **112 bytes** of table overhead and **144 bytes per secondary index**; assume two secondary indexes for disclosures (filer and date) and decisions (kind and reference).
 
-| Row | Payload, of which text | **Cost per row** |
+| Row | Estimated payload | Estimated RAM per row |
 |---|---|---|
-| **Disclosure** | ~3,300 bytes — ~300 of fields and coded answers, **~3,000 of filing text** | **~3,700 bytes** |
-| **Decision — award** | ~4,300 bytes, **~4,000 of decision record** | **~4,700 bytes** |
-| **Decision — milestone approval** | ~5,300 bytes, **~5,000 of determination and Reviewer assessment** | **~5,700 bytes** |
-| **Decision — payment signature** | ~400 bytes. No narrative — it records who signed what | **~870 bytes** |
-| **Decision — resolution, termination recommendation, or post-award review** | ~2,300–4,300 bytes | **~2,700–4,700 bytes** |
-| **Publication — RFP** | ~8,000 bytes | **~8,400 bytes** |
-| **Publication — cycle report** | ~25,000 bytes; annual review ~30,000 | **~25,400 / ~30,400 bytes** |
-| **Publication — vision statement** | ~5,000 bytes | **~5,400 bytes** |
-| **Publication — Q&A, objection, ban, seat** | ~500–1,000 bytes | **~900–1,400 bytes** |
+| Disclosure | ~3,300 bytes — ~300 of fields and coded answers, ~3,000 of filing text | **~3,700 bytes** |
+| Decision — award | ~4,300 bytes, ~4,000 of decision record | **~4,700 bytes** |
+| Decision — milestone approval | ~5,300 bytes, ~5,000 of determination and Reviewer assessment | **~5,700 bytes** |
+| Decision — payment signature | ~400 bytes. No narrative — it records who signed what | **~870 bytes** |
+| Decision — resolution, termination recommendation, or post-award review | ~2,300–4,300 bytes | **~2,700–4,700 bytes** |
+| Publication — RFP | ~8,000 bytes | **~8,400 bytes** |
+| Publication — cycle report | ~25,000 bytes; annual review ~30,000 | **~25,400 / ~30,400 bytes** |
+| Publication — vision statement | ~5,000 bytes | **~5,400 bytes** |
+| Publication — Q&A, objection, ban, seat | ~500–1,000 bytes | **~900–1,400 bytes** |
 
 **Estimated annual rows:**
 
 | Table | What generates rows | Rows a year |
 |---|---|---|
-| **Disclosures** | 13 or so filers — 5 members, the Manager pool, the Reviewer roster — filing on appointment, refiling annually, updating within 10 business days of any change, and updating before each member-Reviewer engagement begins. Plus new Managers and Reviewers joining | **~100** |
-| **Decisions** | ~15 award decisions; ~60 milestone approvals; ~255 payment-signature rows; ~20 resolutions with an external effect; ~3 termination recommendations with their responses and outcomes; ~6 post-award reviews; plus corrections | **~365** |
-| **Publications** | ~6 RFPs and their amendments; ~120 questions and answers; ~60 objections and their closing counts; a handful of bans and seat changes; ~5 vision statements; 4 cycle reports; 1 annual review | **~210** |
+| Disclosures | 13 or so filers — 5 members, the Manager pool, the Reviewer roster — filing on appointment, refiling annually, updating within 10 business days of any change, and updating before each member-Reviewer engagement begins. Plus new Managers and Reviewers joining | **~100** |
+| Decisions | ~15 award decisions; ~60 milestone approvals; ~255 payment-signature rows; ~20 resolutions with an external effect; ~3 termination recommendations with their responses and outcomes; ~6 post-award reviews; plus corrections | **~365** |
+| Publications | ~6 RFPs and their amendments; ~120 questions and answers; ~60 objections and their closing counts; a handful of bans and seat changes; ~5 vision statements; 4 cycle reports; 1 annual review | **~210** |
 
-| | |
+| Measure | Estimate |
 |---|---|
-| **Estimated bytes per year** | **~1.5 MB** |
-| **Contract code and ABI** | **~250 KB**, one-off |
-| **Planning horizon** | The **16 MB** launch allocation in section 5 allows roughly **10 years** of rows at this cadence, with room for larger rows |
+| Estimated bytes per year | **~1.5 MB** |
+| Contract code and ABI | **~250 KB**, one-off |
+| Planning horizon | The **16 MB** launch allocation in section 5 allows roughly **10 years** of rows at this cadence, with room for larger rows |
 
 Update these estimates using actual row sizes and cadence, including filing and decision text.
