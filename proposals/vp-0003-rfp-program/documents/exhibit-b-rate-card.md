@@ -8,7 +8,7 @@
 
 ---
 
-## What this is
+## Purpose
 
 This rate card sets **Manager and Technical Reviewer fees and scope** under **Framework 12.1**; neither role may be contracted before it is published. The **Framework (Exhibit A)** defines their powers and limits, and the **contract templates (Exhibit F)** incorporate this rate card.
 
