@@ -14,14 +14,14 @@ Before publication, fill values marked *(to confirm on deployment)* from the act
 
 ## Purpose
 
-VS LLC must publish the deployed configuration in this Exhibit **before the Program Account is funded** (MSIG #5 Part E); MSIG #5 itself takes effect on execution under Part J.
+This Exhibit specifies the deployed accounts, permissions, registers, and checks required by **MSIG #5 Part E**; complete the publication checklist in **Part 10** before funding.
 
 | Account | Purpose | Operating authority | Owner |
 |---|---|---|---|
 | **`rfp.vst`** | Holds program funds. | Committee payments require **4 of 5** signatures; no routine record-writing key. | **`eosio.prods`** |
 | **`disc.vst`** | Holds disclosure, decision, and publication records, **not program funds**. | One named VS LLC writing permission; see 8.5. | **`eosio.prods`** |
 
-VS LLC must publish any limitation and propose the nearest workable alternative in **Part 9**; an empty departures table confirms that the deployment matches this specification.
+Record any departures in **Part 9**.
 
 ---
 
@@ -45,8 +45,8 @@ VS LLC must publish any limitation and propose the nearest workable alternative 
 | Permission name | **`committee`** *(to confirm on deployment)* |
 | Parent permission | `active` |
 | Weight per seated member | **1**, five members, **5 units total** |
-| **Threshold to move funds** | **4** of 5 |
-| **Threshold for administrative actions that move no funds**, including cancelling a payment | **3** of 5 |
+| **Fund transfers** — awards, milestones, and Program Costs under the published schedule | **4 of 5** signatures |
+| **Non-fund administrative actions**, including payment cancellation | **3 of 5** signatures |
 | Owner permission | **`eosio.prods`** |
 | Active permission | *(to confirm on deployment — see 2.3)* |
 | Delay, ordinary payment | **168 hours (7 days)** |
@@ -54,9 +54,7 @@ VS LLC must publish any limitation and propose the nearest workable alternative 
 
 ### 2.2 Authorized keys
 
-Configure the permission with each member’s delivered public key. **Do not fund the Program Account or activate the permission** until all five seats are filled and every member has signed their engagement contract, filed the on-chain disclosure questionnaire, and delivered a signing key (Framework 1.1 and MSIG #5 Part B); pay and signing weight also depend on completion of those requirements.
-
-**Publication of this Exhibit does not wait for member keys.** VS LLC updates the register as keys arrive, are replaced after loss or compromise, or are surrendered on removal or replacement (Framework 7.4 and 7.5).
+Configure the permission with each member’s delivered public key. **VS LLC maintains the register below**, recording keys as they arrive and retaining superseded keys in dated rows. Key handling follows **Framework 7.4–7.5**; replacements use the owner permission. Publication need not wait for member keys, but funding and permission activation remain subject to **Framework 1.1**.
 
 | Seat | Member | Public key | Delivered | Superseded |
 |---|---|---|---|---|
@@ -66,24 +64,13 @@ Configure the permission with each member’s delivered public key. **Do not fun
 | General (At-Large) | [___] | [___] | [___] | — |
 | Community | [___] | [___] | [___] | — |
 
-Keep superseded keys in dated rows rather than overwriting them, so historical signatures remain verifiable.
-
-**Keys are personal:** members must not share or delegate them, let an employer hold them, or sign for another member, including a recused member. Register keys on appointment and surrender them on removal or replacement; authorized month-to-month continuation under Framework 3.3 does not require surrender.
-
-**Loss or compromise:** notify the Chair and block producers immediately and stop signing until the key is replaced through the owner permission; the Committee must propose no payments until replacement (Framework 7.5).
-
 ### 2.3 Actions by threshold
 
-| Threshold | Actions |
-|---|---|
-| **4 of 5** | Any transfer from `rfp.vst`: award disbursements, milestone payments, Program Cost payments under the published schedule |
-| **3 of 5** | Cancelling a proposed payment during its delay window; other actions that move no funds |
-
-Cancellation is mandatory within **2 business days** when objections fall in the bands requiring cancellation (Framework 10.7 and Part 4).
+Apply the thresholds in **2.1** to the deployed action permissions; the cancellation routes are specified in **Part 4**.
 
 ### 2.4 Block producer authority
 
-Through **`eosio.prods`** and the owner permission, block producers may replace removed members’ keys, rebuild the permission, recover the account, and cancel any payment during its delay window **at the Threshold**.
+Configure **`eosio.prods`** as owner for account and key recovery under **Framework 7.3**, and payment cancellation under **Framework 10.8**.
 
 ---
 
@@ -116,7 +103,7 @@ The Committee proposes the disbursement and keeps the proposal **unexecuted and 
 
 ### 3.4 Urgent payments
 
-The **72-hour** delay requires an urgency vote at the award threshold — **two-thirds of filled, non-recused seats, minimum 3** — with reasons recorded and publication **completed before the payment is proposed**.
+Use the **72-hour** delay only after the urgency vote and reasons have been published under **Framework 10.4**.
 
 ### 3.5 Contract before payment
 
@@ -129,7 +116,7 @@ The **72-hour** delay requires an urgency vote at the award threshold — **two-
 | Who | Authority | When |
 |---|---|---|
 | **Block producers** | **`eosio.prods`**, through `rfp.vst@owner`, at **15 of 21**. | Any payment during its delay window. |
-| **Committee** | `rfp.vst@committee`, at **3 of 5**. | Before execution; **mandatory within 2 business days** when objections close at **4–6 or 7 or more**. |
+| **Committee** | `rfp.vst@committee`, at **3 of 5**. | Before execution; mandatory cancellation follows **Framework 9.1 and 10.5–10.7**. |
 
 Under the selected protocol delay, cancel a pending transaction with **`eosio::canceldelay`**, supplying the **canceling authority** and delayed transaction’s **`trx_id`**.
 
@@ -137,15 +124,7 @@ The canceling authority must authorize the delayed transaction; `rfp.vst@committ
 
 **Rehearse both routes on testnet before funding** and record both transaction IDs in **Part 10**, verifying the deployed permission names, thresholds, and parameters.
 
-**Objection bands apply only to the initial award disbursement.** Milestone and Program Cost payments still have delays and cancellation rights, but no objection bands.
-
-| Objections | Result |
-|---|---|
-| **0–3** | Payment proceeds when the delay ends. |
-| **4–6** | Committee cancels; the award proceeds only if MSIG confirms it. |
-| **7 or more** | Committee cancels and the award ends; no MSIG confirmation vote is held. |
-
-Failure to make a mandatory cancellation is grounds for referral to MSIG for removal; block producers may cancel through the owner permission.
+Apply the objection outcomes and cancellation duties in **Framework 10.5–10.7**, including the unavailable-signers procedure in **9.1**.
 
 ---
 
@@ -155,13 +134,11 @@ Failure to make a mandatory cancellation is grounds for referral to MSIG for rem
 |---|---|---|
 | **RAM at launch** | **64 KB** — holds a token balance and a permission, no tables | **16 MB** — see Part 8.6. This is the one that grows |
 | **CPU / NET** | Staked, sized for the payment cadence *(to confirm on deployment)* | Sized for routine writes *(to confirm on deployment)* |
-| **Who provisions** | **The VST and VS LLC**, as administrators of the program, from Program Costs | **The VST and VS LLC**, as administrators of the program, from Program Costs |
-| **Who monitors, and how often** | **VS LLC, monthly**, reported in the cycle report | **VS LLC, monthly**, reported in the cycle report |
 | **Top-up trigger** | Free RAM below **16 KB**, or any failed resource check | Free RAM below **3 MB**, **or** below 12 months of projected growth, whichever comes first — **topped up without waiting to be asked** |
 
-**The VST and VS LLC must provision and top up both accounts without waiting for a request.** VS LLC performs the operating work and is paid from **Program Costs within the USD 40,000 cap** in MSIG #5 Part D, rather than through an award. The Committee records this classification when approving the first cycle’s Program Cost schedule and revisits it only if the work changes (Framework 15.2b).
+**The VST and VS LLC must provision and top up both accounts from Program Costs without waiting for a request**, including purchasing `disc.vst` RAM **before its first write**. VS LLC monitors resources **monthly** and reports them in the cycle report. Its operating work is paid from **Program Costs within the USD 40,000 cap** in MSIG #5 Part D. The Committee records this classification in the first cycle’s Program Cost schedule and revisits it only if the work changes.
 
-The **initial platform build**, including both contracts on `disc.vst`, is a **Core Development award** under Framework 15.2b, counts against the **Cycle Ceiling**, and must be **flagged self-referential** in the cycle report; it is outside Program Costs and the USD 40,000 cap. The pre-Committee process is described in **Program Administration Register, item 2.5**.
+Classify the **initial platform build, including both contracts on `disc.vst`**, under **Framework 15.2b**; the pre-Committee process is in **Program Administration Register, item 2.5**.
 
 ---
 
@@ -198,18 +175,18 @@ Record the **oracle value, block number, transaction ID, and newest-datapoint ti
 
 ### 6.3 Staleness and collar checks
 
-| Check | Trigger | Effect |
-|---|---|---|
-| **Staleness** | Newest datapoint older than **24 hours** | The rate moves to the **fallback rate** in 6.5. Only where the fallback is also unavailable does the matter go to the Committee, which may approve at the ordinary milestone threshold with the staleness recorded, or defer |
-| **Collar** | Approval rate differs by more than **15%** from the rate at the previous payment under that award, or from the award decision rate for the first payment | Same — Committee, not Manager alone |
+| Check | Configured trigger |
+|---|---|
+| **Staleness** | Newest datapoint older than **24 hours** |
+| **Collar** | Approval rate differs by more than **15%** from the previous payment’s rate under that award, or the award-decision rate for the first payment |
+
+Apply **Framework 13.4** to triggered checks, including fallback use and Committee approval when required.
 
 A readable oracle can return an old `median`; **record and publish the newest-datapoint timestamp with every approval**, even when neither check is triggered.
 
 ### 6.4 Missing pair or contract
 
-Use the **fallback rate in 6.5** if the pair or oracle contract disappears; if the fallback is also unavailable, **suspend payments and new awards**, except **Portal hosting and essential administration**. This differs from a stale but readable oracle, which follows the Committee approval route in 6.3.
-
-In either case of a missing source, the Committee must escalate to MSIG within **5 business days of the failure being recorded and published** to designate a replacement (Framework 13.4a); **the Committee cannot choose its own replacement source**.
+Apply **Framework 13.4–13.4a** to source failure, payment suspension, exceptions, escalation, and source replacement. Configure the following monitoring independently of payment approvals:
 
 | Monitoring | Requirement |
 |---|---|
@@ -223,7 +200,7 @@ Alert on uncertainty; treat an unreadable table as a failure until a later check
 
 ### 6.5 Fallback rate
 
-**Framework 13.4** sets the fallback for an `eosusd` datapoint more than **24 hours** old, or a pair or `delphioracle` contract that is unavailable, renamed, or deprecated.
+Configure the fallback under **Framework 13.4** as follows; that section governs when it starts and when the oracle resumes.
 
 | | |
 |---|---|
@@ -231,7 +208,7 @@ Alert on uncertainty; treat an unreadable table as a failure until a later check
 | **Figure** | The **midpoint of the published daily high and low USD prices** |
 | **Day** | The **UTC calendar day before the date of the read** |
 | **Form** | An integer in millionths of a dollar: fallback = ⌊ (high + low) ÷ 2 × 10^6 ⌋, computed in exact decimal arithmetic from the published figures |
-| **How long it applies** | To every read until the `eosusd` pair has received at least one new datapoint in every 24-hour period for **7 consecutive days**. The Chair records and publishes the day it began and the day the oracle resumed |
+| **Oracle resumption check** | At least one new `eosusd` datapoint in every 24-hour period for **7 consecutive days**; retain the start and resumption records required by Framework 13.4 |
 
 **Worked example:**
 
@@ -284,9 +261,7 @@ The contract must have **no modify action, erase action, or administrative editi
 
 Use questionnaire version **`VQ1`**, defined in **Disclosure Questionnaire — Version 1**, published alongside this Exhibit; store its pipe-delimited answer string unchanged in `answers`.
 
-**Parts 2–8 require an explicit answer, including “None” where applicable.** Codes must distinguish **`N` (None declared)** from **`X` (not answered)**; blanks or any `X` mean the questionnaire is **unfiled** for Framework 6.3c.
-
-Report positions as **bands, not exact figures**; do not name third parties beyond the organizations in Part 5. **The filer signs their submission; VS LLC writes it without altering its content.**
+Preserve **`N` (None declared)** and **`X` (not answered)** as distinct codes. Apply the filing, signing, and screening requirements in **Framework 6.3a–6.3c**.
 
 ---
 
@@ -321,17 +296,7 @@ Store the **full record on-chain**; the Portal reads and renders it. Keep **no h
 
 ### 8.4 Corrections and redaction
 
-Correct records by **appending a new row referencing the prior row and stating a reason**; prior rows remain unchanged, with **no editing, deletion, or redaction path**.
-
-Complete all required screening and redaction **before writing**:
-
-| | |
-|---|---|
-| **Minutes stay off the register** | Keep minutes on the **Portal**, subject to redaction for pre-award confidential proposal content, legal advice, and personal data (Framework 5.9); put the **resolution**, not deliberations, in the register |
-| **Records with a redaction step complete it first** | Complete the awardee’s redaction process under Framework 25.2 before recording a post-award review **as redacted**; apply the same order to any other record with a redaction right |
-| **Disclosures are screened before writing** | VS LLC must return filings naming an individual or giving exact figures where bands were requested (Framework 6.3b); screening is **mechanical, not a review of substance** |
-
-The **name, role, seat, and on-chain account of anyone exercising a decision right** are not covered by the personal-data redaction ground and remain in the record (Framework 5.9).
+Use the append-only correction mechanism in **7.2**. Complete the screening and redaction required by **Framework 5.9, 6.3b, 7.6a, and 25.2 before writing**; minutes remain off-chain and program decision-makers remain identifiable.
 
 ### 8.5 Authorities
 
@@ -350,7 +315,7 @@ Contract bug fixes and schema changes require **an MSIG Resolution**; neither VS
 
 ### 8.6 RAM and growth
 
-Every filing, correction, decision, signature, and publication remains on-chain; **do not assume deletion or subtract superseded rows from growth estimates**.
+**Planning note.** Size RAM for permanent rows, including corrections; do not subtract superseded rows. The launch allocation, monitoring, and top-up requirements are in **Part 5**.
 
 Estimate an Antelope `multi_index` row as its serialized payload plus **112 bytes** of table overhead and **144 bytes per secondary index**; assume two secondary indexes for disclosures (filer and date) and decisions (kind and reference).
 
@@ -378,11 +343,9 @@ Estimate an Antelope `multi_index` row as its serialized payload plus **112 byte
 |---|---|
 | **Estimated bytes per year** | **~1.5 MB** |
 | **Contract code and ABI** | **~250 KB**, one-off |
-| **RAM provisioned at launch** | **16 MB** — the code plus roughly **10 years** of rows at this cadence, with room for rows that turn out larger than modelled |
-| **Who buys it and tops it up** | **The VST and VS LLC**, as administrator of the program, funded from Program Costs. **The initial purchase is theirs**, made before the first write; so is every top-up after it |
-| **Top-up trigger** | Free RAM below **3 MB**, **or** below 12 months of projected growth, whichever comes first. **Topped up without waiting to be asked**, and reported monthly |
+| **Planning horizon** | The **16 MB** launch allocation in Part 5 allows roughly **10 years** of rows at this cadence, with room for larger rows |
 
-These are planning estimates; update them using actual row sizes and cadence. Longer filing and decision text increases growth; the **top-up trigger applies before RAM is exhausted**.
+Update these estimates using actual row sizes and cadence, including filing and decision text.
 
 ### 8.6a The `publications` table
 
@@ -402,8 +365,8 @@ Store program publications other than **minutes, proposals, and the backlog** he
 | Record | Requirement |
 |---|---|
 | **Objections** | Write each **as received**, with its time and signing block producer; write a closing row fixing the **count at the end of the delay window** (Framework 10.6), which determines the 10.5 objection band. |
-| **Amendments and ban liftings** | Append alongside the original row, never replace it; retain the earlier RFP text and ban history. |
-| **Questions and answers** | Write **within 2 business days of the answer**, without naming the questioner (Framework 21.2). |
+| **Amendments and ban liftings** | Use the append-only mechanism in **7.2**, retaining the original RFP and ban history. |
+| **Questions and answers** | Apply the timing and anonymity requirements in **Framework 7.6a and 21.2**. |
 
 ### 8.7 Public read access
 
@@ -411,7 +374,7 @@ Store program publications other than **minutes, proposals, and the backlog** he
 
 ### 8.8 Before mainnet
 
-Deploy to **testnet first**, verify the deployed ABI and schemas, and rehearse **both cancellation routes** in Part 4.
+Complete the testnet deployment and cancellation checks in **Part 10** before mainnet.
 
 ---
 
@@ -423,13 +386,17 @@ If anything cannot be built as specified, VS LLC must publish the limitation and
 |---|---|---|---|---|
 | *(none recorded)* | | | | |
 
-An empty table confirms that everything was built as specified.
+An empty table confirms that the deployment matches this specification.
 
 ---
 
 ## Part 10 — Deployment record
 
-*(to confirm on deployment — complete immediately before publication)*
+**Complete before publication:**
+
+- Fill every deployment-confirmation field: accounts and transaction IDs, permission names, CPU/NET, ABI and code hash, and writing authority.
+- Deploy to **testnet first**, verify the deployed ABI and all three table schemas, and rehearse **both cancellation routes** in Part 4, checking authorities, thresholds, and parameters; record the evidence below before mainnet.
+- Publish the completed Exhibit **before funding** (MSIG #5 Part E). Member keys may be added as they arrive in **2.2**; funding and permission activation still require all five keys and the other **Framework 1.1** conditions.
 
 | | |
 |---|---|
@@ -442,12 +409,3 @@ An empty table confirms that everything was built as specified.
 | **Testnet rehearsal — Committee cancellation** (`canceldelay` at `rfp.vst@committee`) | [___] |
 | **Testnet rehearsal — block producer cancellation** (`canceldelay` at `rfp.vst@owner`) | [___] |
 | Date published | [___] |
-
----
-
-## Still to settle
-
-| # | Item | Blocking? |
-|---|---|---|
-| D1 | Complete every deployment-confirmation field except member keys: accounts and transaction IDs, permission names, CPU/NET, ABI and code hash, writing authority, and both cancellation rehearsals in Part 10. | **Yes** — publish this Exhibit with a completed deployment record **before funding** (MSIG #5 Part E). |
-| D6 | Record all **five member public keys** in 2.2 as they arrive. | Does **not** delay publication; **funding and permission activation wait for all five keys** and the other Framework 1.1 conditions. |
