@@ -5,7 +5,7 @@
 **Version:** 1.8\
 **Status:** Draft
 
-**Agreement:** Vaulta Stewardship LLC Independent Contractor Agreement
+**Used with:** Vaulta Stewardship LLC Independent Contractor Agreement
 
 ---
 
