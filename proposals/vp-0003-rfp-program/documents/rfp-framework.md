@@ -96,7 +96,7 @@ Anyone in these roles who becomes Treasury-affiliated must disclose it within **
 
 Competing proposals may be approved, but the **first appointment executed by block time fills the seat**; later executions have no effect for that seat.
 
-The resolution mode selected under Exhibit E determines the outcome:
+The resolution mode selected in an MSIG that follows Exhibit E determines the outcome:
 
 - **Seat by seat** (default): Appointments stand independently; one failing does not affect the others.
 - **All or nothing**: No appointment takes effect unless all can.
