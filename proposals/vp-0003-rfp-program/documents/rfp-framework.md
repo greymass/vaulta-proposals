@@ -137,7 +137,7 @@ All later terms are **12 months**.
 
 **3.6 Resignation.** A member may resign by giving written notice to the Chair and block producers, effective on the date stated or, if none, on delivery. Their **signing weight ends and their seat becomes vacant when the resignation takes effect**.
 
-**3.7 Vacancies.** A vacancy — by removal, resignation, incapacity, or death — is filled for the rest of the term by the process for that seat.
+**3.7 Vacancies.** A vacant seat is filled for the rest of the term using the process for that seat.
 
 **3.8 Below four filled seats the Committee cannot pay anyone.** The signing permission is fixed at 4 of 5, one unit per seated member.
 
