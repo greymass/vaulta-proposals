@@ -103,7 +103,7 @@ If the `eosio.msig` delay is unavailable, publish the proposal ID with the award
 
 Neither VS LLC nor the Committee may execute before the delay ends and the final objection count permits execution under **Framework 10.7**. The cancellation period does not permit executing a blocked payment.
 
-The waiting period is **observed by the participants rather than enforced by a timer**. Record the procedure and cancellation authorities in **6.1**.
+Under the fallback, Committee members must wait until the full delay window has ended before approving the payment MSIG. For initial award payments, they must also wait for the published final objection count and clearance under **Framework 10.7**. Record the procedure and cancellation authorities in **6.1**.
 
 ### 2.4 Urgent payments
 
