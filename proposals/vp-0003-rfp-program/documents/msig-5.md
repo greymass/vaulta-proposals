@@ -26,10 +26,6 @@
 
 ---
 
-## Proposal title
-
-Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding
-
 ## Purpose
 
 MSIG #4 authorized a working group to write an RFP Framework, and required that the final Framework be approved by at least 15 of 21 active block producers before it could be used. This MSIG approves that Framework and puts it into effect.
@@ -129,7 +125,7 @@ FURTHER RESOLVED, that **Committee pay must be revisited at the annual review un
 
 FURTHER RESOLVED, that each member must use the **Committee contract template in Exhibit F**.
 
-FURTHER RESOLVED, that reasonable, pre-approved expenses are reimbursable; Committee pay is funded through each cycle's transfer and continues only while block producers continue funding it.
+FURTHER RESOLVED, that Committee pay is funded through each cycle's transfer and continues only while block producers continue funding it.
 
 ### Part I — Funding
 
@@ -139,15 +135,7 @@ FURTHER RESOLVED, that the program does not begin if the request is **declined, 
 
 FURTHER RESOLVED, that the transfer is a **one-way contribution of Network funds**, and any source pools held by the VST or VS LLC are released as Network funds, not as a Trust activity.
 
-FURTHER RESOLVED, that **USD 910,000 is authorized for the first four quarterly cycles, covering one year**, with **another MSIG Resolution required for the next four cycles**, comprising:
-
-| Component | Per cycle | Four cycles |
-|---|---|---|
-| Cycle Ceiling for awards | 150,000 | 600,000 |
-| **Program Costs** | **77,500** | **310,000** |
-| — Committee pay | 37,500 | 150,000 |
-| — Manager and Reviewer fees, Portal, administration | 40,000 | 160,000 |
-| **Total Program Spend** | **227,500** | **910,000** |
+FURTHER RESOLVED, that **USD 910,000 is authorized for the first four quarterly cycles, covering one year**, comprising **USD 600,000 for awards and USD 310,000 for Program Costs**, subject to **Part D’s limits**, with **another MSIG Resolution required for the next four cycles**.
 
 FURTHER RESOLVED, that the **25% funding margin provides no authority to spend or commit funds**.
 
@@ -161,9 +149,7 @@ FURTHER RESOLVED, that approval of this Resolution **does not transfer or re-com
 
 FURTHER RESOLVED, that earlier MSIGs are **overridden only where they directly conflict**, and MSIGs #2, #3, and #4 otherwise remain fully in force.
 
-FURTHER RESOLVED, that the **Trust Agreement amendments** needed to reflect the Committee's new name, size, and dual capacity **are authorized**, and the Trustee must execute the text prepared by Trust counsel, **without attaching or voting on that text here**.
-
-FURTHER RESOLVED, that the **VST and VS LLC are responsible off-chain for drafting, execution, and any conforming changes to VS LLC's operating procedures**.
+FURTHER RESOLVED, that the **Trust Agreement amendments** needed to reflect the Committee's new name, size, and dual capacity **are authorized**; the Trustee must execute the text prepared by Trust counsel, **without attaching or voting on that text here**; and the **VST and VS LLC are responsible off-chain for drafting, execution, and any conforming changes to VS LLC's operating procedures**.
 
 FURTHER RESOLVED, that this Resolution takes effect **on execution**.
 
