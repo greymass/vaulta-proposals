@@ -61,10 +61,20 @@ Configure **`eosio.prods`** as owner for account and key recovery under **Framew
 
 ### 1.4 Register writing and upgrades
 
-| Action | Authority | Requirements |
+| Action | Authority | Limits |
 |---|---|---|
 | Write records | One named VS LLC permission *(to confirm on deployment)* | The contract accepts writes only from this permission, which has **no weight on `rfp.vst`** and cannot move funds. |
-| Deploy or upgrade (`setcode` / `setabi`), including bug fixes and schema changes | An **MSIG Resolution at the Threshold**, through `disc.vst`’s owner permission held by `eosio.prods`; neither VS LLC, its writing key, nor the Committee may upgrade the contract. | **Records:** Do not rewrite, drop, renumber, or reinterpret existing rows; the replacement contract must read them under their existing schemas. Apply new schema versions only to new rows (4.4 `sversion`). **Proposal:** Include the code hash to be deployed, a diff against the running contract, and confirmation that existing rows are unaffected. **Audit:** Record every `setcode` on `disc.vst` in the decisions register as a Committee resolution with an external effect (Framework 7.6a). |
+| Deploy or upgrade (`setcode` / `setabi`) | `disc.vst`’s owner permission, held by `eosio.prods`, at the Threshold | An **MSIG Resolution** is required, including for bug fixes and schema changes. Neither VS LLC, its writing key, nor the Committee may upgrade the contract. |
+
+**Requirements for register-contract upgrades**
+
+The following requirements apply when an MSIG proposal changes the contract on `disc.vst`. They protect existing records and specify what the proposal and the upgrade record must include.
+
+| Requirement | Details |
+|---|---|
+| Preserve existing records | Do not rewrite, drop, renumber, or reinterpret existing rows. The replacement contract must read them under their existing schemas; new schema versions apply only to new rows (4.4 `sversion`). |
+| Document the proposed change | Include the code hash to be deployed, a diff against the running contract, and confirmation that existing rows are unaffected. |
+| Record the upgrade | Record every `setcode` on `disc.vst` in the decisions register as a Committee resolution with an external effect (Framework 7.6a). |
 
 ---
 
