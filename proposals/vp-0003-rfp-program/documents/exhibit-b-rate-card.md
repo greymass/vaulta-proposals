@@ -75,14 +75,12 @@ Each engagement covers **one RFP or bounty, from publication to closing**; a Man
 | **Closing** | Complete the closing requirements in **Framework 25.1** and any required post-award review under **Framework 25.2**. |
 | **Handover** | On reassignment, provide a written handover of approval history, correspondence, and outstanding items (Framework 12.3). |
 
-A **good-faith termination recommendation** must not be grounds for ending or declining to renew the Manager’s engagement; their fee is unaffected by whether the Committee acts on it (Framework 11.10a).
-
 ### 2.2 Fees
 
 | Item | Fee (USD) | When payable |
 |---|---|---|
 | **RFP — each milestone** | **350** | On the Manager’s determination: accept, accept with conditions, or reject. |
-| **RFP — each milestone with scored assessment** | **600** | On each milestone determination. When the Manager writes the scored assessment under Framework 22.3, each milestone fee includes an additional **USD 250**, bringing it to **USD 600**. |
+| **RFP — each milestone with scored assessment** | **600** | On each milestone determination when the Manager wrote the scored assessment under Framework 22.3. Includes the **USD 250 assessment addition**. |
 | **Bounty — one-time** | **350** | On the Manager’s written acceptance determination (Framework 26a). |
 | **No-award fee** | **350**, or **600** if the Manager wrote the scored assessment | When the Committee records an event listed under *The no-award fee* above. |
 | **Reassignment to a live RFP** | **500** | On assignment, for the incoming Manager’s preparation; the outgoing Manager keeps earned milestone fees and earns no further fees for that engagement. |
