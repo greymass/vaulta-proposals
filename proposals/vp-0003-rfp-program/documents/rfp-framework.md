@@ -175,11 +175,9 @@ Any ECF stipend or engagement must also be disclosed on-chain under **Part 2 of 
 
 **4.5 Initial appointment.** MSIG #5 appoints **no interim Community seat holder**; the seat must be filled by a **future MSIG Resolution at the Threshold using Exhibit E**, following the selection process in this section.
 
-**4.7** If ECF **stops running the process or ceases to exist**, MSIG may name another administrator or **fill the Community seat at the Threshold** like any other seat.
+**4.7** If ECF **stops running the process or ceases to exist**, MSIG may name another administrator or **fill the Community seat at the Threshold** using the normal appointment rules, indefinitely if needed. MSIG may restore community selection if a process emerges, but is not required to.
 
-MSIG may continue filling the Community seat under 4.7 indefinitely, or return selection to a community process if one emerges; it is not required to do so.
-
-The seat retains its **Community portfolio, categories under 2.1, vote, signing weight, pay, and status**, however it is filled.
+However filled, the seat retains its **Community portfolio, categories under 2.1, vote, signing weight, pay, and status**.
 
 **4.8** Community appointments must follow **3.1 and Exhibit E**; the **one-year term starts when the appointment Resolution executes** (3.4).
 
@@ -295,7 +293,7 @@ Records are **append-only**: updates must reference the previous record; nothing
 | Committee member | **Signing weight and pay do not begin** until the questionnaire is filed on-chain. This is the "file the conflict declaration" item in the 30-day appointment checklist |
 | Program Manager | Cannot be recorded as **Manager of record** on any RFP before filing |
 | Technical Reviewer | Cannot be **assigned to an RFP** before filing |
-| A member taking a Reviewer engagement (12.6) | Files an **update** under 6.3 **before the engagement begins**. The engagement may not begin until it is filed, and the 10-business-day change window in 6.3 does not apply to it |
+| A member taking a Reviewer engagement (12.6) | File an **update under 6.3 before the Reviewer engagement begins**; the usual **10-business-day** change window does not apply. |
 
 **Member filing deadline.** The 30 days run from **appointment execution or VS LLC announcing that the register is open, whichever is later**; members cannot be replaced for missing a deadline before filing was possible.
 
