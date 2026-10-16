@@ -3,7 +3,7 @@
 **Exhibit B — Manager and Reviewer Rate Card**
 
 **Version:** 3.4\
-**Status:** Draft — settled for inclusion in MSIG #5\
+**Status:** Draft\
 **Date:** [___]
 
 ---
