@@ -203,17 +203,17 @@ The main agreement already handles the things each role would otherwise need dra
 
 **7.1 Work Product** means **the deliverable named in section 2 and in the published RFP**, together with the documentation, configuration, and build tooling needed to use it. It does **not** include Pre-Existing IP.
 
-**7.2 Pre-Existing IP** means anything Contractor owned or was licensed to use before this Agreement, or developed independently of it. **It is listed here, and only what is listed is Pre-Existing IP:**
+**7.2 Pre-Existing IP** means anything Contractor owned or was licensed to use before this Agreement, or developed independently of it. **List it here:**
 
-| # | Item | Owner | How it appears in the deliverable |
+| # | Item | Owner | How it is used in the award |
 |---|---|---|---|
 | 1 | [___] | [___] | [___] |
 
-*If nothing is listed, there is no Pre-Existing IP in this award. An item asserted later, having not been listed here, is not Pre-Existing IP.*
+*For Deliverable and Embedded awards, unlisted items do not qualify as Pre-Existing IP. For Service awards, omission from this list does not transfer ownership of Contractor’s pre-existing software or IP.*
 
 **7.3 Vesting.** Work Product vests in the **VST** under section 9 of the Agreement. Pre-Existing IP does not vest and remains Contractor's.
 
-**7.3a Licence back.** Where any Pre-Existing IP listed in 7.2 is **embedded in the Work Product**, Contractor grants the VST an **irrevocable, perpetual, royalty-free, worldwide licence** over it as so embedded, sufficient for the Network to **use, modify, and have third parties operate** the Work Product, **surviving termination of this Agreement**. This applies on every award shape. Ownership of something the Network cannot lawfully run is worth nothing, which is what this licence is for.
+**7.3a Licence back.** For **Deliverable and Embedded awards**, where any Pre-Existing IP listed in 7.2 is **embedded in the Work Product**, Contractor grants the VST an **irrevocable, perpetual, royalty-free, worldwide licence** over it as so embedded, sufficient for the Network to **use, modify, and have third parties operate** the Work Product, **surviving termination of this Agreement**. For **Service awards**, any licence over Contractor’s pre-existing software or IP must be **expressly agreed in 7.5**.
 
 *(**Blocking.** Counsel to confirm section 9 permits the 7.2 carve-out and the 7.3a licence back by Schedule A. Until confirmed: **no Service or Embedded RFP may be published**, both relying on the carve-out by their nature; and **no award of any shape may be contracted with a populated 7.2**. A Deliverable award with an empty 7.2 carves nothing out and may proceed. If section 9 does not permit it, the Agreement itself requires amendment — a Schedule cannot narrow a clause it is subordinate to. Defining what the Work Product **is** for a shape does not narrow section 9; only the carve-out does.)*
 
@@ -223,17 +223,22 @@ The main agreement already handles the things each role would otherwise need dra
 
 **7.4 Deliverable awards.** The Work Product is released under **[___]**, being — as the published RFP's licence mode requires (Framework 20.2a) — the licence **required by the RFP**, the licence **Contractor offered from the permitted set** and which the award accepted, or the **default** (Apache-2.0 for code, CC-BY-4.0 for non-code). The licence recorded here must match the award decision exactly. **Where the deliverable is code**, Contractor delivers a **tagged source copy into a repository the Network controls** — a link to Contractor's own repository is not delivery, since it can be moved, made private, or deleted. **Otherwise**, Contractor delivers the final files and any working materials into a Network-controlled store. Either way, with credentials, domains, and documentation. The award closes on that delivery (Framework 25.1).
 
-**7.5 Service awards.** This award funds an operated service. The running service is **performed, not delivered**, so there is no built artifact to hand over. **For this award the Work Product in 7.1 is the Operational Handover Set, and nothing else** — that is what vests in the VST under section 9. Section 9 is not disapplied; its subject matter is defined here.
+**7.5 Service awards.** The running service is **performed, not delivered**. The Work Product under 7.1 is the **Operational Handover Set specified below**, excluding Contractor’s pre-existing software and IP; it vests in the VST under section 9. The Network may use, modify, reproduce, and give those handover materials to a successor provider.
 
-The **Operational Handover Set** is: service configuration, deployment tooling, runbooks and operating documentation, and **an export, in a documented format, of any Network data the service holds**. Contractor delivers it at the end of the term, or on termination if earlier, and shall provide the **data export on request at any time**, not only at the end.
+1. **Handover and transition.** The requirements below must match the published RFP, including data exports, deadlines, payment terms, and any material limits on switching providers (Framework 20.2a).
+2. **Pre-existing software and IP.** Contractor retains ownership of its pre-existing software and IP. Any licences must be **expressly agreed below**; this contract does not automatically require Contractor’s existing platform to be operable by a successor.
 
-Because it vests, the Network may **use, modify, reproduce, and give the Operational Handover Set to any successor provider**. That is the point of it: a successor cannot run what it may not copy.
+| Item | Agreed terms from the published RFP |
+|---|---|
+| **Service levels and term** | [___] |
+| **Operational Handover Set** | [Specify the handover materials, including an export of any Network data in a documented format.] |
+| **Transition assistance, deadlines, and payment terms** | [Specify the assistance, any required service overlap, deadlines, and included or separately priced assistance.] |
+| **Material limits on switching providers** | [State the limits published in the RFP, or none.] |
+| **Expressly agreed pre-existing-IP licences** | [State the rights, scope, duration, any fees, and any rights for a successor, or none.] |
 
-**Contractor's own service software is Pre-Existing IP and must be listed in 7.2.** The Handover Set configures software Contractor owns and keeps; without listing it, the wording of 7.1 would sweep Contractor's platform into the Work Product. Listing it keeps the platform Contractor's, and the licence back in 7.3a keeps the Handover Set usable.
+Contractor delivers the Operational Handover Set at **term-end or termination, whichever is earlier**, and provides Network-data export **on request at any time**. Other transition assistance follows the agreed deadlines and payment terms above.
 
-Contractor **warrants that the Handover Set is independently usable**: a competent successor can deploy and operate the service from the vested materials plus commodity or open-source components, without a further licence from Contractor beyond 7.3a.
-
-Contractor grants no exclusivity, and nothing in this Agreement prevents the Network from re-competing the service or engaging another provider. **Service levels and term: [___]**, as published in the RFP. The award closes on delivery of the Operational Handover Set and confirmation that Network data has been exported (Framework 25.1).
+Contractor grants **no exclusivity or restriction on re-competition**. The award closes when the contracted handover and transition requirements are complete and Network-data export is confirmed (Framework 25.1).
 
 **7.6 Embedded awards.** The deliverable is built inside software Contractor already owns. The Work Product in 7.1 vests in the VST; the Pre-Existing IP listed in 7.2 does not.
 

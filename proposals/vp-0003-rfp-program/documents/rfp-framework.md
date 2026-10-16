@@ -961,7 +961,7 @@ The Committee identifies Network needs, publishes RFPs, invites competing propos
 - **evaluation criteria and weights**, published before submissions open;
 - eligibility and conflict rules;
 - **award shape** — Deliverable, Service, or Embedded (section 20.2a);
-- IP and delivery terms (section 20.2a): what vests in the VST, and — on any shape — what is expected to be **carved out as pre-existing IP**; **for Deliverable and Embedded awards**, the **licence mode** — Required (with the licence named), Proposer's choice (with the permitted set), or Default — under 20.2a; **for Service awards**, the **service levels**, the **term**, and the contents of the **operational handover set**;
+- IP and delivery terms (section 20.2a): what vests in the VST, and — on any shape — what is expected to be **carved out as pre-existing IP**; **for Deliverable and Embedded awards**, the **licence mode** — Required (with the licence named), Proposer's choice (with the permitted set), or Default — under 20.2a; **for Service awards**, the **service levels**, **term**, and **handover and transition requirements under 20.2a**;
 - decision timeline: award date, contracting step, delay window, expected first payment;
 - submission format and channel;
 - named **Manager of record** and contact, and **whether a Technical Reviewer is engaged**.
@@ -973,7 +973,7 @@ The Committee identifies Network needs, publishes RFPs, invites competing propos
 | Shape | What is funded | Work product |
 |---|---|---|
 | **Deliverable** | New code, designs, research, or content built for the Network | **What was built**, released under the licence recorded in the award decision under 23.2 — the one the RFP required, the one the awardee offered from the permitted set, or the applicable default under 20.2a |
-| **Service** | A hosted or operated service — history APIs, snapshots, indexers, monitoring | **The operational handover set, and nothing else**: configuration, deployment tooling, runbooks and operating documentation, and an export of any Network data the service holds, in a documented format. The running service itself is performed, not delivered |
+| **Service** | A hosted or operated service — history APIs, snapshots, indexers, monitoring | **The operational handover set specified in the RFP**, including an export of any Network data the service holds in a documented format, and excluding the provider’s pre-existing software and IP. The running service itself is performed, not delivered |
 | **Embedded** | New work built inside software the awardee already owns | **The named deliverable, excluding identified pre-existing IP** — with an **irrevocable licence back, surviving termination**, over any pre-existing IP embedded in it, wide enough for the Network to use, modify, and have others operate the deliverable |
 
 **Every agreement must vest the work product defined for its shape in the VST under section 9**; Schedule A cannot disapply that clause.
@@ -988,7 +988,12 @@ The Committee identifies Network needs, publishes RFPs, invites competing propos
 | **Proposer's choice** | The RFP names a **permitted set** and the proposer picks from it in their proposal. The licence they name becomes a term of the award. A proposal naming a licence **outside the set, or naming none, is non-compliant at the screen** (22.2) |
 | **Default** | Silence. The defaults above apply |
 
-**Service awards have no licence mode**: the handover set vests outright, and the Network may modify it and give it to a successor. Default licences do not apply.
+**Service awards have no licence mode**: the agreed handover materials vest in the VST, and the Network may modify them and give them to a successor. Default licences do not apply.
+
+**Service handover and transition:**
+
+1. Each Service RFP must state the handover and transition requirements—including data exports, deadlines, and payment terms—and any material limits on switching providers; the contract must include those requirements.
+2. Providers retain ownership of their pre-existing software and IP; any licences must be expressly agreed in the contract.
 
 **Licence decisions and locks:**
 
@@ -1057,7 +1062,7 @@ In every case a written assessment against published criteria must exist before 
 **23.2 The decision record must include:**
 
 - Awardee, scope, **award shape (20.2a)**, and total amount.
-- For **Deliverable and Embedded** awards, state the **Required licence**, the proposer’s offered licence in Proposer’s choice mode, or the applicable Default licence. For **Service** awards, record **no licence mode**, the operational handover set, and any pre-existing-IP licence back under **23.3a**.
+- For **Deliverable and Embedded** awards, state the **Required licence**, the proposer’s offered licence in Proposer’s choice mode, or the applicable Default licence. For **Service** awards, record **no licence mode**, the handover and transition requirements, any material limits on switching providers, and any expressly agreed pre-existing-IP licences under **23.3a**.
 - The awarded **schedule of at least two milestones and their amounts**, any changes from the submitted schedule, and the proposer’s agreement under **11.1a**.
 - Every member’s **vote — for, against, or recused — by name and on-chain account**.
 - Reasons for departing from the scores.
@@ -1081,14 +1086,14 @@ In every case a written assessment against published criteria must exist before 
 | Shape | Required contract terms |
 |---|---|
 | **Deliverable** | Vest work product in the VST and release it under the **23.2 licence**; deliver code to a **Network-controlled repository**, or non-code final files and working materials to a **Network-controlled store**. |
-| **Service** | State **service levels and term**; vest the operational handover set in the VST and deliver it at term-end or termination, whichever is earlier. The Network may modify it and give it to a successor. Identify retained service software as pre-existing IP with the licence back required below; warrant that a successor can deploy using only the vested materials plus commodity or open-source components. Require **no exclusivity or restriction on re-competition**, and Network-data export **on request at any time**. |
+| **Service** | State **service levels and term** and include the RFP’s **handover and transition requirements under 20.2a**, including deadlines and payment terms. Vest the agreed handover materials in the VST and deliver them at term-end or termination, whichever is earlier. Record any material limits on switching providers and any expressly agreed pre-existing-IP licences; ownership remains with the provider. Require **no exclusivity or restriction on re-competition**, and Network-data export **on request at any time**. |
 | **Embedded** | Vest the named deliverable in the VST, identify and carve out pre-existing IP, and provide the irrevocable licence back below, surviving termination. Deliver open-source code to a **Network-controlled repository under the 23.2 licence**; for closed-source work, provide the RFP’s stated alternative. |
 
 **Pre-existing-IP rules apply to every award shape.**
 
-**Pre-existing IP** is material the awardee owned or was licensed to use before the award, or developed independently of the award; it must be identified **in Schedule A at contracting**, and unlisted items do not qualify.
+**Pre-existing IP** is material the awardee owned or was licensed to use before the award, or developed independently of the award; it must be identified **in Schedule A at contracting**. For **Deliverable and Embedded awards**, unlisted items do not qualify for the carve-out. For **Service awards**, omission from the list does not transfer ownership of the provider’s pre-existing software or IP.
 
-**Where pre-existing IP is embedded in the work product, the awardee grants the VST an irrevocable licence back**, surviving termination, sufficient for the Network to use, modify, and have third parties operate the work product.
+**For Deliverable and Embedded awards**, where pre-existing IP is embedded in the work product, the awardee grants the VST an **irrevocable licence back**, surviving termination, sufficient for the Network to use, modify, and have third parties operate the work product. **Service-award licences follow the express contract terms under 20.2a**.
 
 **Blocking — counsel confirmation.** Before using a Schedule A pre-existing-IP carve-out and licence back, record counsel’s confirmation that **section 9 of the standard Independent Contractor Agreement permits them**. Until then:
 
@@ -1113,7 +1118,7 @@ If section 9 does not permit the carve-out, **amend the agreement first**; neith
 | Shape | Required handover at closing |
 |---|---|
 | **Deliverable** | **Code:** a tagged source copy in a **Network-controlled repository**. **Other deliverables:** final files and working materials in a **Network-controlled store**. Both require the **23.2 licence**, credentials, domains, and documentation; a link to the awardee’s repository is insufficient |
-| **Service** | Delivery of the **operational handover set** and confirmation that any **Network data has been exported**. The checklist must not ask for a deliverable handover; there is none |
+| **Service** | Complete the **contracted handover and transition requirements** and confirm that any **Network data has been exported**. The checklist must not require handover of the provider’s pre-existing platform |
 | **Embedded** | A **tagged source copy of the deliverable** in a Network-controlled repository where it is open source; where it is not, written confirmation that the licence or other alternative named in the RFP is in force, plus any escrow deposit made |
 
 **Terminated awards** require their shape’s handover and any review due under **25.2**. Final acceptance and final payment are not required after termination under **11.10**. For **Deliverable and Embedded** awards, hand over only work accepted before termination; if none was accepted, close on the published termination record alone.
