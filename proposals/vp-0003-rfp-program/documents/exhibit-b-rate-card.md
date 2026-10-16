@@ -1,8 +1,10 @@
 # Manager and Reviewer Rate Card and Scope
 
-**Exhibit B to MSIG #5**
-**Status: DRAFT v3.4 — settled; to be published as Exhibit B under MSIG #5**
-**Date: [___]**
+**Exhibit B — Manager and Reviewer Rate Card**
+
+**Version:** 3.4\
+**Status:** Draft — settled for inclusion in MSIG #5\
+**Date:** [___]
 
 ---
 
