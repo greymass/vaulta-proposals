@@ -1,9 +1,11 @@
 # Disclosure Questionnaire — Version 1
 
-**The standard instrument required by Framework 6.3a**
-**Published by Vaulta Stewardship LLC alongside Exhibit D under MSIG #5 Part E**
-**Status: DRAFT v1.4 — questionnaire version `VQ1`; settled**
-**Date: [___]**
+**Version:** 1.4\
+**Status:** Draft\
+**Questionnaire version:** `VQ1`\
+**Date:** [___]
+
+Published by **Vaulta Stewardship LLC** alongside **Exhibit D** under **MSIG #5 Part E**.
 
 ---
 
@@ -21,20 +23,21 @@ This is the **standard conflict-of-interest declaration** required by the **Vaul
 | **A member taking a Reviewer engagement** under Framework 12.6 | An **update**, filed **before the engagement begins**. The 10-business-day change window does not apply to it |
 | **Anyone else given a decision or approval right** | Before that right takes effect |
 
-Update within **10 business days** of any change and **refile annually**. An annual refiling more than **30 days overdue** suspends a member’s pay and bars Managers and Reviewers from new assignments until filed; **existing assignments continue** because late refiling is procedural, not a material breach (Framework 6.6).
-
 ---
 
-## How to answer
+## How to complete this questionnaire
 
-| Rule | Requirement |
-|---|---|
-| **Answer every part** | In Parts 2–8, write **None** if there is nothing to declare; **a blank means the questionnaire is unfiled**. |
-| **Use position bands** | Give the Part 4 band, **never an exact figure**. |
-| **Protect third-party identities** | Name organizations where requested, especially in Part 5; **do not name individuals**, including relatives, colleagues, or counterparties. Describe the relationship instead. |
-| **Declare first** | If a connection exists, declare it even if you consider it immaterial, and explain why; the Committee and readers assess materiality. |
-| **When unsure, disclose** | Declare the connection and explain the uncertainty; an undisclosed relevant interest is a **material breach** under Framework 6.6. |
-| **Sign your submission** | VS LLC writes it to the register **without altering its content** (Framework 6.3b). |
+1. Answer every question in order. Write **“None”** where nothing applies; blanks make the filing incomplete.
+2. Report positions using the listed **USD bands**, not exact amounts.
+3. Name organizations where requested. For relatives, colleagues, and counterparties, describe the relationship **without naming the person**.
+4. Declare connections even if you think they are immaterial. If unsure, disclose them and explain.
+5. Review and sign your answers. **The filing is public and permanent**, and VS LLC cannot change its content.
+
+## Keep it current
+
+Update within **10 business days** of a change and **refile annually**. Committee members taking a Reviewer engagement must file an update **before it begins**.
+
+An annual refiling more than **30 days overdue** suspends Committee pay and blocks new Manager or Reviewer assignments until filed; **existing assignments continue** (Framework 6.6).
 
 ---
 
