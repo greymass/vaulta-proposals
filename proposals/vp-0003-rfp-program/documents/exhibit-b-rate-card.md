@@ -66,23 +66,23 @@ Rates are reviewed annually under **Framework 14.3**, using cycle reports to ass
 
 ## 2. RFP Program Manager
 
-### 2.1 Scope — what the fees buy
+### 2.1 Manager responsibilities
 
-One engagement is **one RFP or one bounty**, from publication to closing. A Manager may hold several concurrently; each is a separate engagement.
+Each engagement covers **one RFP or bounty, from publication to closing**; a Manager may handle several engagements at once.
 
-| Stage | What the Manager of record does |
+| Stage | Responsibilities |
 |---|---|
-| **Publication** | Drafting support; publication on the Portal; running the **public Q&A channel** — every question and answer published to every proposer, no private guidance |
-| **Intake** | Submission intake and the **compliance screen** |
-| **Evaluation** | Evaluation logistics. **Where the RFP's published statement says no Reviewer is engaged, or where the only engaged Reviewer is a Committee member under Framework 12.6, the Manager writes the scored assessment** against the published criteria (Framework 22.3). That variant carries the uplift at 2.2 |
-| **Objections** | Maintaining the objection register through the delay window, with the count fixed at its close |
-| **Delivery** | The working relationship with the awardee team, including **check-ins at least fortnightly** on active work |
-| **Milestones** | The **determination** on each milestone and the **approval for payment**, with the full approval record required by Framework 11.3 — and, where payments are suspended under 13.4a, the determination published when made and the record completed on resumption |
-| **Escalation** | **Written recommendation of termination** to the Committee where the work product or the service performed is materially below the standard the RFP required (Framework 11.10a). This is a duty, not a discretion: a Manager is expected to make the recommendation where the grounds are met, and not to carry a failing engagement to term |
-| **Closing** | The closing checklist for the award's shape (Framework 25.1), and, on an award at or above the review threshold, the **post-award review** at 2.3 |
-| **Handover** | Written handover of approval history, correspondence, and open items on reassignment (Framework 12.3) |
+| **Publication** | Help draft and publish the RFP; publish all questions and answers for every proposer, with **no private guidance**. |
+| **Intake** | Receive submissions and check compliance. |
+| **Evaluation** | Coordinate evaluation; write the scored assessment against published criteria if **no Reviewer is engaged or the only Reviewer is a Committee member** (Framework 22.3), earning the additional fee in 2.2. |
+| **Objections** | Maintain the objection register during the delay window and fix the final count when it closes. |
+| **Delivery** | Coordinate with the awardee, with check-ins **at least every two weeks** during active work. |
+| **Milestones** | Determine whether milestones are met and approve payments with the records required by Framework 11.3; during payment suspensions, publish determinations when made and complete the records when payments resume (13.4a). |
+| **Escalation** | **Recommend termination in writing** when delivered work or services fall materially below the RFP’s requirements (Framework 11.10a). |
+| **Closing** | Complete the applicable closing checklist (Framework 25.1) and publish a post-award review under 2.3 for awards at or above the review threshold. |
+| **Handover** | On reassignment, provide a written handover of approval history, correspondence, and outstanding items (Framework 12.3). |
 
-**Everything before the first milestone is covered by the milestone fees.** There is no separate payment for scoping, publication, Q&A, intake, or evaluation.
+Milestone fees cover **all work before the first milestone**, including scoping, publication, Q&A, intake, and evaluation; none earns a separate fee.
 
 ### 2.2 Fees
 
