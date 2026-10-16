@@ -20,7 +20,7 @@ This questionnaire is the **conflict-of-interest declaration** required by the *
 | **Steering Committee member** | Within **30 days** after appointment execution or VS LLC announcing the register is open, **whichever is later**. Pay and signing weight begin only after filing. |
 | **RFP Program Manager** | Before being recorded as **Manager of record** on any RFP |
 | **Technical Reviewer** | Before being **assigned to any RFP** |
-| **A member taking a Reviewer engagement** under Framework 12.6 | An **update**, filed **before the engagement begins**. The 10-business-day change window does not apply to it |
+| **A member taking a Reviewer engagement** under Framework 12.6 | File an **update before the engagement begins**. |
 | **Anyone else given a decision or approval right** | Before that right takes effect |
 
 ---
@@ -89,7 +89,7 @@ An annual refiling more than **30 days overdue** suspends Committee pay and bloc
 |---|---|---|
 | 3.1 | List any employment, contracts, consulting, advisory or board roles, or equity interests with the **Vaulta Treasury or entities it controls**, **now or in the past 12 months**. | `N` or `Y`*n* |
 
-Treasury-affiliated people cannot serve as Committee members, Managers, or Reviewers without an **express MSIG waiver at the Threshold, with published reasons** (Framework 2.4a); disclose the affiliation so the waiver can be considered.
+Treasury-affiliated people need an **express MSIG waiver at the Threshold, with published reasons**, to serve as Committee members, Managers, or Reviewers (Framework 2.4a).
 
 ---
 
@@ -143,7 +143,7 @@ For every listed organization you would not recuse on, **explain why in your ful
 |---|---|---|
 | 7.1 | List connections covered by **Parts 2–5** involving your **immediate family or household members**. | `N` or `Y`*n* |
 
-**Do not name the person.** Give only the relationship and connection, for example “a household member is employed by [organization]”; the organization may be named.
+Describe the relationship and connection **without naming the person**, for example: “a household member is employed by [organization].”
 
 ---
 
