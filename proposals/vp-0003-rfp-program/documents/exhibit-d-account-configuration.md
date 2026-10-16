@@ -109,7 +109,7 @@ Use the **3-day urgent delay** only after publishing the Committee’s urgency v
 
 ### 2.5 Contract before payment
 
-**VS LLC must sign the awardee’s agreement before any payment is proposed on-chain.** The platform must check this at proposal, and the cycle report must reconcile proposals against executed agreements; this is a procedural control, not a chain-enforced one.
+**VS LLC must sign the awardee’s agreement before any payment is proposed on-chain.** The platform must check this before submission, and cycle reports must reconcile payment proposals with signed agreements.
 
 ### 2.6 Cancellation
 
