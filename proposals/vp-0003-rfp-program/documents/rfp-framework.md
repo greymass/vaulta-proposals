@@ -147,7 +147,7 @@ All later terms are **12 months**.
 
 **3.5 Removal.** An MSIG Resolution may remove a member at any time, with or without cause; their **signing weight ends immediately on removal**. The Committee may refer members to MSIG for removal but **cannot remove them itself**.
 
-**3.6 Resignation.** A member may resign by giving written notice to the Chair and block producers, effective on the date stated or, if none, on delivery. Their **signing weight ends and their seat becomes vacant when the resignation takes effect**.
+**3.6 Resignation.** A member may resign by written notice to the Chair and block producers. Resignation takes effect on the stated date, or on delivery if no date is stated; their **seat becomes vacant and signing weight ends at that time**.
 
 **3.7 Vacancies.** A vacant seat is filled for the rest of the term using the process for that seat.
 
@@ -181,9 +181,9 @@ MSIG may continue filling the Community seat under 4.7 indefinitely, or return s
 
 The seat retains its **Community portfolio, categories under 2.1, vote, signing weight, pay, and status**, however it is filled.
 
-**4.8** Every MSIG appointment to the Community seat must use **Exhibit E** and follow **3.1**, including resolution modes, first execution by block time, eligibility conditions, and row-order priority; its term is **one year from execution** under 3.4.
+**4.8** Community appointments must follow **3.1 and Exhibit E**; the **one-year term starts when the appointment Resolution executes** (3.4).
 
-The **vision statement requirement in 3.1a** applies. A statement produced through ECF’s process satisfies it if it covers those requirements and is filed with the proposal.
+The **vision statement requirement in 3.1a** applies. An ECF statement satisfies it if it meets those requirements and is filed with the proposal.
 
 ## 5. Meetings and voting
 
@@ -459,13 +459,17 @@ An action outside these limits is **void**; VS LLC must not contract on it, and 
 | **Program authority** | Changing the mandate, Cycle Ceiling, Per-Award Limit, cycle length, permission, or funding source. |
 | **Voluntary escalation** | Any matter the Committee votes to escalate. |
 
-**9.2 Timing.** Submit the record and a draft Resolution to MSIG within **10 business days**. For a replacement rate source under **13.4a**, submit the failure record and a request for designation, **without choosing a source**, within **5 business days** of the Manager or Chair recording and publishing the failure. Unless an exception below applies, MSIG inaction for **30 days** means the matter is **declined**, the reservation returns to the Cycle Ceiling, and the Committee may rework it.
+**9.2 Timing.**
 
-**Existing awardee obligations.** An escalated **payment or milestone under an executed awardee agreement** remains open if MSIG does not act; reservations under 13.2 remain and the Committee must re-submit. This exception does not cover Program Costs escalated for exceeding their ceiling or internal caps.
+| Matter | Submission to MSIG | If MSIG does not act |
+|---|---|---|
+| **Ordinary referral** | Submit the record and a draft Resolution within **10 business days**. | After **30 days**, the matter is **declined**, its reservation returns to the Cycle Ceiling, and the Committee may rework it, subject to the exceptions below. |
+| **Payment or milestone under an executed awardee agreement** | Submit the record and a draft Resolution within **10 business days**. | The matter stays open, reservations under **13.2** remain, and the Committee must re-submit. |
+| **Replacement rate source under 13.4a** | Submit the failure record and a request for designation, **without choosing a source**, within **5 business days** of the Manager or Chair recording and publishing the failure. | The request stays open, affected reservations remain, and the Committee must re-submit until MSIG acts. |
+
+The existing-awardee exception **does not cover Program Costs referred for exceeding their ceiling or internal caps**; the ordinary-referral rule applies to those costs.
 
 **Payments the Committee cannot sign.** At the Threshold, MSIG may direct payment through the **block producers’ owner permission** or **temporarily rebuild the Committee permission for named payments**; confirmation alone does not execute a payment.
-
-**Replacement rate source.** A designation request under 13.4a remains open, affected reservations continue, and the Committee must re-submit until MSIG acts.
 
 **Automatic escalation.** A matter falling under 9.1 without a vote to escalate needs no Committee vote for submission; the Chair, or any member if there is no Chair, must submit it.
 
@@ -518,11 +522,18 @@ Block producers may also cancel through the owner permission.
 
 **10.8** Block producers may cancel **any payment at the Threshold during its delay**, regardless of the objection count.
 
-**10.9** After cancellation in the 4-to-6 band, the Committee must submit the record and a draft confirming Resolution to MSIG within **10 business days**; if MSIG does not confirm within **30 days of submission**, the award ends and its reservation is released.
+**10.9** After a **4-to-6-band cancellation**, the Committee must submit the record and a draft confirming Resolution to MSIG within **10 business days**. If MSIG does not confirm within **30 days of submission**, the award ends and its reservation is released.
 
-**MSIG confirmation restores the award decision, not the agreement**; cancellation terminated the agreement, so VS LLC must sign a **fresh agreement on identical terms** before proposing disbursement again, within the 60 days in section 10.10 measured from confirmation.
+**MSIG confirmation restores the award decision, not the terminated agreement.** Before proposing disbursement again, VS LLC must sign a **fresh agreement on identical terms**, within the **60 days from confirmation** in **10.10**.
 
-**Other cancellations and contracts.** Cancellation of an **initial award disbursement** under **10.5 or 10.8** terminates the agreement without liability on either side; a **4-to-6-band confirmation** requires the fresh agreement described above. Cancellation of a **later milestone payment** does not by itself terminate the agreement or extinguish amounts due for accepted work. Cancellation under a **termination-recommendation freeze (11.10a)** or **mandate suspension or revocation (14.4–14.5)** does not itself terminate a signed agreement, even if the cancelled payment was the initial disbursement; those sections govern resumption and surviving obligations.
+**Effect of cancellation on contracts:**
+
+| Cancellation | Effect |
+|---|---|
+| **Initial award disbursement under 10.5 or 10.8**, except the freezes, suspensions, and revocations below | The agreement ends **without liability on either side**. A **4-to-6-band confirmation** requires the fresh agreement above. |
+| **Later milestone payment** | Cancellation alone does **not end the agreement or extinguish amounts due for accepted work**. |
+| **Termination-recommendation freeze (11.10a)** | Cancellation does **not itself end a signed agreement**, even for an initial disbursement; **11.10a** governs resumption and surviving obligations. |
+| **Mandate suspension or revocation (14.4–14.5)** | Cancellation does **not itself end a signed agreement**, even for an initial disbursement; **14.4–14.5** govern resumption and surviving obligations. |
 
 **10.10 Unused award decisions.** Sign the agreement within **60 days** of the award decision, or MSIG confirmation following a 4-to-6-band cancellation, and **before the cycle closes**. Otherwise the decision expires and the Committee must vote again.
 
@@ -946,7 +957,15 @@ The Committee identifies Network needs, publishes RFPs, invites competing propos
 
 ## 20. Stage 3 — Writing and publishing an RFP
 
-**20.1** The portfolio holder sponsors the draft; a member engaged as its Reviewer follows **12.6.3**, with someone else drafting acceptance criteria and the milestone schedule. Assign a Manager of record when publication is approved, or earlier for drafting. Technical Reviewers may advise on feasibility and budgets for technical RFPs. **At scoping, the Committee must decide whether a Technical Reviewer is needed**, based on whether the work is technical, **including Service awards**.
+**20.1 Preparing an RFP.**
+
+| Role | Responsibility |
+|---|---|
+| **Portfolio holder** | Sponsors the draft. |
+| **Committee member engaged as its Reviewer** | Follows **12.6.3**; someone else must draft acceptance criteria and the milestone schedule. |
+| **Manager of record** | Must be assigned when publication is approved, or earlier to help draft the RFP. |
+| **Technical Reviewers** | May advise on feasibility and budgets for technical RFPs. |
+| **Committee** | Must decide **at scoping whether a Technical Reviewer is needed**, based on whether the work is technical, **including Service awards**. |
 
 **20.2 Every published RFP must contain:**
 
@@ -1162,25 +1181,47 @@ The Committee must **not re-scope the work**; it settles only the terms needed t
 
 The **two-milestone minimum in 11.1a does not apply**. For **23.2 and 23.3**, substitute the fixed price and published acceptance criteria for the milestone schedule, and the publication vote for the proposer’s agreement. Take the **award-decision oracle read at the publication vote**, providing the 13.4 collar baseline.
 
-**Bounty rules:**
+### Publication and funding
 
-1. **Publish on the Portal** the acceptance criteria, fixed price, award shape, **licence in Required or Default mode only**, Reviewer setting, named Manager of record, and closing date. All lock at publication as under 20.2a; Proposer’s choice is unavailable;
-2. The **publication vote is the award decision**, at **two-thirds, minimum 3**, conditional on acceptable delivery. No second award vote is needed. The **60-day clock in 10.10 starts at the Manager’s written acceptance determination**; the publication vote does not expire while the bounty is open;
-3. The **Per-Award Limit and Cycle Ceiling apply**; there is **no additional per-bounty cap or bounty sub-limit**;
-3a. No delivery may be accepted until the bounty has been open **21 days**, or **10 days** if under **USD 5,000** or with recorded urgency;
-4. **Reserve the fixed price against the Cycle Ceiling at publication** (13.2);
-5. **lapses** at its closing date, or at the end of the cycle in which it was published if earlier, releasing its reservation — **unless a delivery has been accepted by then**. On acceptance the reservation continues under 13.2 through contracting, the delay window, and any MSIG confirmation; any amount payable after cycle end is carried as a **forward commitment** against the following cycle. **The closing date must leave room inside the cycle for acceptance, contracting, and the full delay** — the Cycle Ceiling does not carry over (13.1);
-6. Record deliveries in a **public register with receipt timestamps**. The Manager assesses in **receipt order**, stopping at the first delivery meeting the published criteria. Record later deliveries as unsuccessful with written reasons; “first” means first received;
-7. Make the **10.3 publication on acceptance**, recording the awardee, receipt timestamp, acceptance determination, price, and publication vote by name and account. The **10.4 delay starts from that publication**;
-8. **Contract before payment** and use the normal signatures and delay. Payment is an **initial disbursement under 11.4a**, with **objection bands under 10.5**. If the published Reviewer setting requires one, obtain the Reviewer’s written assessment before the Manager’s acceptance determination;
-9. **where a bounty payment is cancelled**, the Manager **resumes assessment at the next delivery in order of receipt**, provided the bounty has not lapsed; a delivery recorded unsuccessful only because an earlier one was accepted is **reinstated**;
-10. If payment is cancelled, **no work product vests**; the deliverer retains it without restrictions on its use under the agreement;
-11. Apply **all conflict rules**, the **6.1 and 6.4 bidding bars**, the **ban register**, and the **pre-existing-IP schedule at contracting**; unlisted pre-existing IP does not qualify for the carve-out;
-12. work product handled by shape under 20.2a, normally **Deliverable**;
-13. **no bounty may be split** out of work that should have been an RFP (rule 5 of section 27 applies unchanged);
-14. If the Committee expects **only one realistic deliverer**, record the expectation and reasons at publication, identify it as **sole-source**, and list it separately in the cycle report. This does not bar the bounty;
+| Rule | Requirement |
+|---|---|
+| **1** | **Publish on the Portal** the acceptance criteria, fixed price, award shape, **licence in Required or Default mode only**, Reviewer setting, named Manager of record, and closing date. All lock at publication as under 20.2a; Proposer’s choice is unavailable. |
+| **2** | The **publication vote is the award decision**, at **two-thirds, minimum 3**, conditional on acceptable delivery. No second award vote is needed. The **60-day clock in 10.10 starts at the Manager’s written acceptance determination**; the publication vote does not expire while the bounty is open. |
+| **3** | The **Per-Award Limit and Cycle Ceiling apply**; there is **no additional per-bounty cap or bounty sub-limit**. |
+| **3a** | No delivery may be accepted until the bounty has been open **21 days**, or **10 days** if under **USD 5,000** or with recorded urgency. |
+| **4** | **Reserve the fixed price against the Cycle Ceiling at publication** (13.2). |
+| **5** | A bounty **lapses** at its closing date, or at the end of the cycle in which it was published if earlier, releasing its reservation — **unless a delivery has been accepted by then**. On acceptance the reservation continues under 13.2 through contracting, the delay window, and any MSIG confirmation; any amount payable after cycle end is carried as a **forward commitment** against the following cycle. **The closing date must leave room inside the cycle for acceptance, contracting, and the full delay** — the Cycle Ceiling does not carry over (13.1). |
+
+### Assessment
+
+| Rule | Requirement |
+|---|---|
+| **6** | Record deliveries in a **public register with receipt timestamps**. The Manager assesses in **receipt order**, stopping at the first delivery meeting the published criteria. Record later deliveries as unsuccessful with written reasons; “first” means first received. |
 
 **Evaluation rules.** Sections **21.2, 22.1, 22.4, and 22.5 do not apply**. Before acceptance assessment, the Manager checks each delivery’s completeness, eligibility, conflicts, and ban status **in receipt order** under **22.2**; omit milestone-schedule and licence-mode checks. A **written acceptance determination against published criteria satisfies 22.3**; no scoring, weights, or reconciliation apply.
+
+### Acceptance and payment
+
+| Rule | Requirement |
+|---|---|
+| **7** | Make the **10.3 publication on acceptance**, recording the awardee, receipt timestamp, acceptance determination, price, and publication vote by name and account. The **10.4 delay starts from that publication**. |
+| **8** | **Contract before payment** and use the normal signatures and delay. Payment is an **initial disbursement under 11.4a**, with **objection bands under 10.5**. If the published Reviewer setting requires one, obtain the Reviewer’s written assessment before the Manager’s acceptance determination. |
+
+### Cancellation
+
+| Rule | Requirement |
+|---|---|
+| **9** | **If a bounty payment is cancelled**, the Manager **resumes assessment at the next delivery in order of receipt**, provided the bounty has not lapsed; a delivery recorded unsuccessful only because an earlier one was accepted is **reinstated**. |
+| **10** | If payment is cancelled, **no work product vests**; the deliverer retains it without restrictions on its use under the agreement. |
+
+### Safeguards
+
+| Rule | Requirement |
+|---|---|
+| **11** | Apply **all conflict rules**, the **6.1 and 6.4 bidding bars**, the **ban register**, and the **pre-existing-IP schedule at contracting**; unlisted pre-existing IP does not qualify for the carve-out. |
+| **12** | Work product is handled by shape under 20.2a, normally **Deliverable**. |
+| **13** | **No bounty may be split** out of work that should have been an RFP (rule 5 of section 27 applies unchanged). |
+| **14** | If the Committee expects **only one realistic deliverer**, record the expectation and reasons at publication, identify it as **sole-source**, and list it separately in the cycle report. This does not bar the bounty. |
 
 Use a **directed RFP where competitive evaluation would add value**, such as comparing capable teams, approaches, or prices; the Committee records that judgment under rule 14. This is not a bounty size limit.
 
