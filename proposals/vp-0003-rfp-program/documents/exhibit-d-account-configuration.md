@@ -61,18 +61,10 @@ Configure **`eosio.prods`** as owner for account and key recovery under **Framew
 
 ### 1.4 Register writing and upgrades
 
-| Authority | Who | Notes |
+| Action | Authority | Requirements |
 |---|---|---|
-| **Write** | A **single named VS LLC permission** — *(to confirm on deployment)* — with **no weight on `rfp.vst`**. The contract rejects writes from any other authority | This key writes records. It cannot move money |
-| **Deploy and upgrade (`setcode` / `setabi`)** | **`eosio.prods`**, at the Threshold — the owner permission of `disc.vst`. **Not** the writing key, and **not** VS LLC | Separating them means a compromised writing key cannot replace the contract |
-
-Contract bug fixes and schema changes require **an MSIG Resolution**; neither VS LLC nor the Committee may change the register contract.
-
-| | |
-|---|---|
-| **What an upgrade may not do** | Rewrite, drop, renumber, or reinterpret any existing row. A replacement contract must read the existing tables under their existing schema; where a schema changes, the new shape is a **new schema version** (4.4 `sversion`) applied to new rows only |
-| **What a proposal must carry** | The code hash being deployed, a diff against the running contract, and a statement of how existing rows are affected — which, if the rule above is honoured, is *not at all* |
-| **Recorded** | Every `setcode` on `disc.vst` is written to the decisions register as a Committee resolution with an external effect (Framework 7.6a), so the register records its own upgrades |
+| Write records | One named VS LLC permission *(to confirm on deployment)* | The contract accepts writes only from this permission, which has **no weight on `rfp.vst`** and cannot move funds. |
+| Deploy or upgrade (`setcode` / `setabi`), including bug fixes and schema changes | An **MSIG Resolution at the Threshold**, through `disc.vst`’s owner permission held by `eosio.prods`; neither VS LLC, its writing key, nor the Committee may upgrade the contract. | **Records:** Do not rewrite, drop, renumber, or reinterpret existing rows; the replacement contract must read them under their existing schemas. Apply new schema versions only to new rows (4.4 `sversion`). **Proposal:** Include the code hash to be deployed, a diff against the running contract, and confirmation that existing rows are unaffected. **Audit:** Record every `setcode` on `disc.vst` in the decisions register as a Committee resolution with an external effect (Framework 7.6a). |
 
 ---
 
