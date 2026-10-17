@@ -14,6 +14,14 @@ Msig code (`msig/index.ts`) is optional at submission time: a proposal can be di
 
 When a change to a proposal touches a requirement, an account, a threshold, or the proposal's scope, add an entry to `revisions` in the same commit as the change. See the Revisions section of [standard/VPS-1.md](standard/VPS-1.md) for what counts and the entry shape. Typo and formatting fixes do not need an entry.
 
+## Creating an account by msig
+
+When your msig creates a network account, fund its RAM the way producers have approved it before: an `eosio::newaccount` followed by an `eosio::buyrambytes` with `eosio` as payer, both authorized by `eosio@active`. Every account created by msig on mainnet has used this shape, from `eosio.evm` (2023, 8,192 bytes) to `fund.wram` (2024, 4,096 bytes). `buyrambytes` delivers one byte less than requested, and the system adds 1,400 bytes on top.
+
+An msig cannot carry an action authorized by an account that the same msig creates. `eosio.msig` checks every authority in the proposed transaction at `propose` and again at `exec`, and a permission that does not exist yet fails both checks. Put the account's own steps (`setcode`, `setabi`, `updateauth`, `linkauth`, contract actions) in a second msig, and propose it once the first has executed. `eosio.wrap::exec` can run those steps inside the first msig, but most review tools show its inner actions as one opaque action.
+
+`setcode` bills the account ten times the WASM size, so the msig that deploys code needs that much RAM on the account, plus the ABI, before `setcode` runs.
+
 ## Broadcasting an msig
 
 VPS-1 asks the cited SHA to be the latest commit touching the proposal's directory as of the time the citation is made, and the citation is made when the transaction is proposed. That fixes the order:
