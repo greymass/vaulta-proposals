@@ -106,3 +106,21 @@ This also fixes the awkward interaction with long awards. The constraint on a mu
 ## Framework launch recommendation
 
 **Recommendation:** do not run the open call in cycle 1 (Framework section 26). This is non-binding advice, not a program rule.
+
+## Launch checklist
+
+This checklist tracks remaining launch tasks. It adds no rules or approvals; the blocking conditions below are established in **MSIG #5, the Framework, and Exhibit D**. The initial Manager pool requirement is in **Framework 12.2**.
+
+**Scope.** The **Program Administration Register** tracks off-chain candidate sourcing, counsel’s conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover. It is **not part of the Framework or approved by MSIG**.
+
+**Task numbers remain fixed.** Delete resolved tasks without renumbering the rest. These numbers are independent of MSIG #5’s *Blanks to fill*.
+
+| # | Item | Blocking? |
+|---|---|---|
+| 2 | Source account holding the REX yield and Year 1 pools | — |
+| 3 | The **Trustee Compensation and Indemnification Acknowledgment**, approved by vstcreation but not yet reviewed — it may add indemnification terms for compensated governance roles that Committee members should also have | — |
+| 5 | Technical Reviewer roster for technical categories | — |
+| 6 | Portal readiness to host the backlog, award records, and objection register | — |
+| 7 | The **disclosure questionnaire instrument** — **drafted as version `VQ1`**; text, coded-answer schema and position bands complete (Framework 6.3a). What remains is publication with the register open for filing | **Yes** — the Program Account is not funded until every member has filed, and nobody can file until the register is open |
+| 8 | Deploy **`disc.vst`** with the **disclosures (Framework 6.3b), decisions, and publications (Framework 7.6a)** tables in one or more contracts; publish the ABI, all three schemas, write authority, upgrade path, and RAM provision. **Exhibit D sections 1.4 and 4** specify the authorities and register design; **Exhibit D section 5 and Appendix B** specify RAM, including **16 MB at launch**, provisioned and topped up by VST and VS LLC. The **EOS Rio team** builds and services it; **VS LLC remains accountable** and records it in Exhibit D under MSIG #5 Part E (PRD 7.2). | **Yes** — no funding before Exhibit D publication |
+| 10 | **Counsel to confirm section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A (Framework 23.3a) | **Yes** — until confirmed, no Service or Embedded RFP may be published, and no award may be contracted with a populated pre-existing-IP schedule |

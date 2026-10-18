@@ -173,7 +173,7 @@ FURTHER RESOLVED, that this Resolution takes effect **on execution**.
 
 Off-chain candidate sourcing, counsel’s amendments and operating-procedure changes, and the EOS Rio rights and repository handover remain in the **Program Administration Register**, outside this Resolution’s attachments and approval.
 
-**Blank numbers remain fixed** when items are closed and are independent of Framework Appendix C numbering.
+**Blank numbers remain fixed** when items are closed and are independent of the Launch checklist task numbers in **MSIG #5 — Review Notes**.
 
 | # | Item | Part |
 |---|---|---|

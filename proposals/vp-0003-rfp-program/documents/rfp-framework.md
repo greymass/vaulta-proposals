@@ -660,6 +660,8 @@ File a **written recommendation** stating the grounds and attaching the mileston
 
 **12.2** Managers are engaged as a pool, with **exactly one Manager of record named and published for each RFP**; a Manager may run several RFPs at once.
 
+The initial pool must include **at least three Managers, or at least two who are unconflicted on every open RFP**. Committee members cannot fill gaps (**12.2a**).
+
 **12.2a No Committee member may serve as Manager of record.** There is **no MSIG waiver**; changing this rule requires an amendment to **Part 1 under 16.2**.
 
 A Manager appointed to a Committee seat **ceases to be Manager of record on appointment execution**; the appointment remains valid. Within **5 business days**, the Committee must reassign their RFPs under 12.3 and terminate their Manager engagement for those RFPs.
@@ -1320,22 +1322,3 @@ The table identifies where each setting is defined. Settings in MSIG #5 can chan
 | Minimum coverage margin (10%) | Framework section 13.4 |
 | Cap on concurrent member-Reviewer engagements (section 12.6) | MSIG #5, Part H |
 | Post-award review threshold (section 25.2), set as a share of the Per-Award Limit | MSIG #5, Part D |
-
-## Appendix C — Outstanding items
-
-A marked blocking item prevents the specified action until resolved.
-
-**Scope.** The **Program Administration Register** tracks off-chain candidate sourcing, counsel’s conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover. It is **not part of this Framework or approved by MSIG**.
-
-**Item numbers remain fixed.** Delete resolved items without renumbering the rest. These numbers are independent of MSIG #5’s *Blanks to fill*.
-
-| # | Item | Blocking? |
-|---|---|---|
-| 2 | Source account holding the REX yield and Year 1 pools | — |
-| 3 | The **Trustee Compensation and Indemnification Acknowledgment**, approved by vstcreation but not yet reviewed — it may add indemnification terms for compensated governance roles that Committee members should also have | — |
-| 4 | Initial Manager pool — **at least three, or at least two unconflicted on every open RFP**. Committee members cannot fill gaps (12.2a) | — |
-| 5 | Technical Reviewer roster for technical categories | — |
-| 6 | Portal readiness to host the backlog, award records, and objection register | — |
-| 7 | The **disclosure questionnaire instrument** — **drafted as version `VQ1`**; text, coded-answer schema and position bands complete (section 6.3a). What remains is publication with the register open for filing | **Yes** — the Program Account is not funded until every member has filed, and nobody can file until the register is open |
-| 8 | Deploy **`disc.vst`** with the **disclosures (6.3b), decisions, and publications (7.6a)** tables in one or more contracts; publish the ABI, all three schemas, write authority, upgrade path, and RAM provision. **Exhibit D sections 1.4 and 4** specify the authorities and register design; **section 5 and Appendix B** specify RAM, including **16 MB at launch**, provisioned and topped up by VST and VS LLC. The **EOS Rio team** builds and services it; **VS LLC remains accountable** and records it in Exhibit D under MSIG #5 Part E (PRD 7.2). | **Yes** — no funding before Exhibit D publication |
-| 10 | **Counsel to confirm section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A (section 23.3a) | **Yes** — until confirmed, no Service or Embedded RFP may be published, and no award may be contracted with a populated pre-existing-IP schedule |
