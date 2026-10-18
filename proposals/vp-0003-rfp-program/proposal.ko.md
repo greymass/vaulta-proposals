@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: a8bed9c5d95418386feb46bc00e57ca631023961
+source: 8d02a8b72e8fe1f126f3abd180c4a1c30898feb4
 revisions:
     - version: 1
       date: 2026-09-01
@@ -53,6 +53,9 @@ revisions:
     - version: 17
       date: 2026-10-18
       summary: 최초 설문지 승인 예외와 위원회 구성 전 구축 작업의 MSIG 요건을 제거하고 누락된 구축 절차를 검토 항목으로 표시합니다.
+    - version: 18
+      date: 2026-10-18
+      summary: MSIG #5에 MSIG #2의 임기 문구 대체와 vstcreation이 요구하는 신탁 계약 개정 승인을 명시합니다.
 ---
 
 # 네트워크 운영 위원회, RFP 프레임워크 승인 및 온체인 프로그램 자금 조달

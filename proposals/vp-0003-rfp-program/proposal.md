@@ -78,6 +78,9 @@ revisions:
     - version: 17
       date: 2026-10-18
       summary: Removes the initial-questionnaire approval exception and pre-Committee build MSIG requirement; flags the missing build procedure.
+    - version: 18
+      date: 2026-10-18
+      summary: Makes MSIG #2 term supersession and vstcreation's Trust-amendment authorization explicit in MSIG #5.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding

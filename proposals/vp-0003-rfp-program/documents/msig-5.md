@@ -68,7 +68,7 @@ FURTHER RESOLVED, that a further MSIG Resolution may correct an appointment exec
 
 **Transition until all five seats are filled**
 
-FURTHER RESOLVED, that **Dafeng Guo (Vaulta Treasury), Ross Dold (EOSphere), and Francis Sangkuan (1DEX)** continue **the former Oversight Committee’s Trust oversight duties only** until all five Steering Committee seats are filled, when their **unpaid** transition service ends; Ross Dold may be separately appointed, while Dafeng Guo remains subject to the Treasury exclusion in **Framework 2.4a**; and until then **the RFP mandate must not be exercised, no RFP may be published, and no award may be made**.
+FURTHER RESOLVED, that **Dafeng Guo (Vaulta Treasury), Ross Dold (EOSphere), and Francis Sangkuan (1DEX)** continue **the former Oversight Committee’s Trust oversight duties only** until all five Steering Committee seats are filled, when their **unpaid** transition service ends; Ross Dold may be separately appointed, while Dafeng Guo remains subject to the Treasury exclusion in **Framework 2.4a**; and until then **the RFP mandate must not be exercised, no RFP may be published, and no award may be made**. This transition rule supersedes MSIG #2’s reference to “the remainder of Dario Cesaro’s Initial Term”.
 
 ### Part C — The Mandate
 
@@ -148,7 +148,7 @@ FURTHER RESOLVED, that approval of this Resolution **does not transfer or re-com
 
 FURTHER RESOLVED, that earlier MSIGs are **overridden only where they directly conflict**, and MSIGs #2, #3, and #4 otherwise remain fully in force.
 
-FURTHER RESOLVED, that the **Trust Agreement amendments** needed to reflect the Committee's new name, size, and dual capacity **are authorized**; the Trustee must execute the text prepared by Trust counsel, **without attaching or voting on that text here**; and the **VST and VS LLC are responsible off-chain for drafting, execution, and any conforming changes to VS LLC's operating procedures**.
+FURTHER RESOLVED, that the **Trust Agreement amendments** needed to reflect the Committee's new name, size, and dual capacity **are authorized**; the Trustee must execute the text prepared by Trust counsel, **without attaching or voting on that text here**; and the **VST and VS LLC are responsible off-chain for drafting, execution, and any conforming changes to VS LLC's operating procedures**. This Resolution supplies the separate MSIG authorization required by vstcreation for these amendments.
 
 FURTHER RESOLVED, that this Resolution takes effect **on execution**.
 

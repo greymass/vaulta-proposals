@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: a8bed9c5d95418386feb46bc00e57ca631023961
+source: 8d02a8b72e8fe1f126f3abd180c4a1c30898feb4
 revisions:
     - version: 1
       date: 2026-09-01
@@ -53,6 +53,9 @@ revisions:
     - version: 17
       date: 2026-10-18
       summary: 删除首次问卷发布的审批例外和委员会成立前建设工作的MSIG要求，标注缺失的建设程序。
+    - version: 18
+      date: 2026-10-18
+      summary: 在MSIG #5中明确替代MSIG #2的任期表述，并提供vstcreation要求的信托协议修订授权。
 ---
 
 # 网络指导委员会、RFP框架批准及链上计划资金
