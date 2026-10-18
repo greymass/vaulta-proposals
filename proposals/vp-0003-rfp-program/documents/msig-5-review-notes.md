@@ -4,6 +4,10 @@
 **Status:** Reference draft\
 **Date:** 2026-10-18
 
+## Purpose
+
+These notes provide background and review guidance for MSIG #5, including the launch checklist.
+
 **Reference only — not an additional resolution or an exhibit approved by MSIG #5.**
 
 These notes preserve reasoning from **MSIG #5 v6.14, ingested on 6 October 2026**. That is an ingestion date, not a verified market-observation date. Market figures, elapsed-time descriptions, and claims about prior review are historical and **have not been refreshed or independently reverified here**. Operative requirements remain in MSIG #5 and its Framework, including the annual pay review and treatment of existing Treasury contracts.

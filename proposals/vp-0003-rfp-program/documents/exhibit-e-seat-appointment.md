@@ -10,6 +10,10 @@
 
 ---
 
+## Purpose
+
+This template is used to propose candidates for Steering Committee seats under the Vaulta Network RFP Framework.
+
 ## How to use this template
 
 Complete the sections below for each candidate and list candidates in **priority order** (Framework 3.1). **Incomplete proposals should not be approved.**

@@ -8,6 +8,10 @@
 
 ---
 
+## Purpose
+
+These templates set out role-specific services, pay, and obligations for use with VS LLC’s standard Independent Contractor Agreement.
+
 ## How these work
 
 Everyone the program pays — Steering Committee members, RFP Program Managers, Technical Reviewers, and awardees — is engaged by VS LLC on the **standard Independent Contractor Agreement**. Only Schedule A differs.

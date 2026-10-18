@@ -5,7 +5,7 @@
 
 ---
 
-## What this exhibit is for
+## Purpose
 
 Exhibit C is the letter under which counsel's conforming amendments to the Trust Agreement were once attached to MSIG #5. Those amendments bring the Trust Agreement into line with the restructured program: the Oversight Committee continued as the five-seat Network Steering Committee, its standing mandate over the Program Account, and the roles of the Trustee and VS LLC under the Framework.
 
