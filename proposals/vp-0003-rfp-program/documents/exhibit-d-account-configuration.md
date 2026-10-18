@@ -10,7 +10,7 @@ Published by **Vaulta Stewardship LLC** under **MSIG #5 Part E**.
 
 This Exhibit defines the setup for the Vaulta Network RFP program’s accounts, signing permissions, payment controls, exchange-rate sources, on-chain registers, and resources. It also provides the deployment and member-key records in **section 6**, which must be completed **before funding** under **MSIG #5 Part E**.
 
-Deployment details and member keys do not need to be known when MSIG #5 is approved. **VS LLC completes the deployment record under 6.1 and the member-key register under 6.3**, following their publication, funding, and permission-activation requirements and **Framework 1.2**. Retain dated published versions.
+Deployment details and member keys may be added after MSIG #5 is approved. VS LLC must complete both records as required by **6.1, 6.3, and Framework 1.2**, and retain dated published versions.
 
 ---
 
