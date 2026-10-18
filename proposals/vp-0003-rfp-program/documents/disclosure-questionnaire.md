@@ -217,7 +217,7 @@ VQ2|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 
 ## Version and change control
 
-**Proposed version `VQ2`** records the public-identity/private-identification distinction in this revised draft. The answer codes, question order, and position bands are unchanged. Existing `VQ1` records retain their recorded version, interpretation, and validity; this revision does not require early refiling.
+**VQ2 clarifies public identity versus private identification.** The answer codes, question order, and position bands are unchanged.
 
 - **Approval:** VS LLC may publish a new version after the Committee approves it by recorded vote. Changes to Framework requirements also need an **MSIG amendment under 16.2**.
 - **Existing filings:** New versions apply only to later filings. They do not change earlier filings’ recorded version, interpretation, or validity.
