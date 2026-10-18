@@ -262,6 +262,8 @@ This covers the member’s employer, companies they work for, companies under co
 
 **6.3a The disclosure questionnaire.** Use the **standard questionnaire, with its questions in their stated order**; free-form declarations do not qualify.
 
+VS LLC must **publish the complete questionnaire, with no unresolved items, and open the disclosure register for filing**.
+
 **Who files:** every Steering Committee member, every RFP Program Manager, and every Technical Reviewer. Any other person given a decision or approval right in the program files the same questionnaire before that right takes effect.
 
 The required disclosures are set out in the standard Disclosure Questionnaire published with Exhibit D under MSIG #5. All nine parts are mandatory, and changes to the required disclosures require an MSIG amendment.

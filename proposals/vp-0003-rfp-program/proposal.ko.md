@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: 8d02a8b72e8fe1f126f3abd180c4a1c30898feb4
+source: 1be447cc95e24d9dd7c27c358404c295e964c85c
 revisions:
     - version: 1
       date: 2026-09-01
@@ -92,7 +92,7 @@ revisions:
 
 ## 미해결 질문
 
-MSIG #5의 [Blanks to fill](documents/msig-5.md#blanks-to-fill)과 검토 메모의 출범 체크리스트에 남은 작업과 기존 선행 요건이 나와 있습니다. 실제 지급 통제 배포와 리허설은 아직 검증되지 않았습니다. 자금 출처 계정, ECF 일정, 법률 자문 확인 및 완전한 배포·위원 키 기록은 해당 규정에 따라 해결해야 합니다.
+검토 메모의 [출범 체크리스트](documents/msig-5-review-notes.md#launch-checklist)에 남은 작업과 기존 선행 요건이 나와 있습니다. 실제 지급 통제 배포와 리허설은 아직 검증되지 않았습니다. 자금 출처 계정, ECF 일정, 법률 자문 확인 및 완전한 배포·위원 키 기록은 해당 규정에 따라 해결해야 합니다.
 
 ## 다음 단계
 

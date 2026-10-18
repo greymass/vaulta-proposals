@@ -121,22 +121,23 @@ This checklist tracks remaining launch tasks. It adds no rules or approvals; the
 
 **Scope.** This checklist also tracks off-chain candidate sourcing, counsel’s conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover. It replaces references to the separate, unprovided Program Administration Register; these notes are **not part of the Framework or approved by block producers**. The rules cited below remain controlling.
 
-**Task numbers remain fixed.** Delete resolved tasks without renumbering the rest. These numbers are independent of MSIG #5’s *Blanks to fill*.
+**Task numbers remain fixed.** Delete resolved tasks without renumbering the rest.
 
 | # | Item | Blocking? |
 |---|---|---|
-| 2 | Source account holding the REX yield and Year 1 pools | — |
+| 2 | Fill the source-account blank in **MSIG #5 Part I** for the REX yield and Year 1 pools | — |
 | 3 | The **Trustee Compensation and Indemnification Acknowledgment**, approved by vstcreation but not yet reviewed — it may add indemnification terms for compensated governance roles that Committee members should also have | — |
 | 5 | Technical Reviewer roster for technical categories | — |
 | 6 | Portal readiness to host the backlog, award records, and objection register | — |
-| 7 | The **disclosure questionnaire instrument** — **drafted as version `VQ2`**; text, coded-answer schema and position bands complete (Framework 6.3a). What remains is publication with the register open for filing | **Yes** — the Program Account is not funded until every member has filed, and nobody can file until the register is open |
+| 7 | VS LLC must **publish the complete questionnaire `VQ2` and open the register for filing, with no unresolved questionnaire items** (Framework 6.3a). Its text, coded-answer schema, and bands are complete. | **Yes** — the Program Account is not funded until every member has filed, and nobody can file until the register is open |
 | 8 | Deploy **`disc.vst`** with the **disclosures (Framework 6.3b), decisions, and publications (Framework 7.6a)** tables in one or more contracts; publish the ABI, all three schemas, write authority, upgrade path, and RAM provision. **Exhibit D sections 1.4 and 4** specify the authorities and register design; **Exhibit D section 5 and Appendix B** specify RAM, including **16 MB at launch**, provisioned and topped up by VST and VS LLC. The **EOS Rio team** builds and services it; **VS LLC remains accountable** and records it in Exhibit D under MSIG #5 Part E. | **Yes** — no funding before Exhibit D publication |
 | 10 | **Counsel to confirm section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A (Framework 23.3a) | **Yes** — until confirmed, no Service or Embedded RFP may be published, and no award may be contracted with a populated pre-existing-IP schedule |
 | 11 | Off-chain candidate sourcing and community consultation; appointments remain future MSIG decisions following Exhibit E | — |
 | 12 | VST and VS LLC coordinate counsel’s conforming Trust amendments, Trustee execution, and LLC operating-procedure changes under MSIG #5 Part J | — |
 | 13 | Complete EOS Rio’s code, rights, and repository handover to VST under Framework 15.2a | **Yes** — the program must not rely on the platform or Portal code before those requirements are met |
 | 14 | **Clarify the initial platform-build procedure.** The source Exhibit D refers to **Program Administration Register §2.5**, which is not included in this repo. Ask VST how the build is commissioned before the Committee can make awards, including provider selection, contract approval, and payment authorization. | — (review question) |
-| 15 | Test the payment permissions, both pre-expiry cancellation routes, full waits, and final-objection-count guard; publish deployment evidence under Exhibit D 6.1 | **Yes** — no funding or permission activation until the tests pass |
+| 15 | Complete **Exhibit D’s deployment-confirmation fields and deployment record**; test the payment permissions, both pre-expiry cancellation routes, full waits, and final-objection-count guard under **Exhibit D 6.1**. **Publish the completed Exhibit before funding** (MSIG #5 Part E). Member keys may be recorded as they arrive under **Exhibit D 6.3** and do not block publication; the member-key register must still be complete before funding or permission activation under **Framework 1.2**. | **Yes** — no funding before publication; no funding or permission activation until the tests pass and the member-key register is complete |
+| 16 | Fill the **ECF process-publication and first-vote date blanks in MSIG #5 Part F**, subject to the nine-month appointment deadline and fallback in **Framework 4.6** | — |
 
 ## Revision scope and remaining review
 

@@ -117,7 +117,7 @@ Published alongside the resolution as reference documents, **not approved by it*
 
 ## Open Questions
 
-MSIG #5’s [Blanks to fill](documents/msig-5.md#blanks-to-fill) and the Review Notes’ launch checklist identify remaining tasks and their existing gates. Actual payment-control deployment and rehearsals remain unverified. The source account, ECF dates, counsel confirmations, and complete deployment and member-key records must be resolved as the governing clauses require.
+The Review Notes’ [Launch checklist](documents/msig-5-review-notes.md#launch-checklist) identifies remaining tasks and their existing gates. Actual payment-control deployment and rehearsals remain unverified. The source account, ECF dates, counsel confirmations, and complete deployment and member-key records must be resolved as the governing clauses require.
 
 ## Next Steps
 

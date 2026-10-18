@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: 8d02a8b72e8fe1f126f3abd180c4a1c30898feb4
+source: 1be447cc95e24d9dd7c27c358404c295e964c85c
 revisions:
     - version: 1
       date: 2026-09-01
@@ -92,7 +92,7 @@ revisions:
 
 ## 待解决问题
 
-MSIG #5的[Blanks to fill](documents/msig-5.md#blanks-to-fill)及审阅说明中的启动清单列出剩余任务和既有前提条件。实际付款控制的部署与演练尚未验证。资金来源账户、ECF日期、法律顾问确认，以及完整部署和委员密钥记录，须按有关条款解决。
+审阅说明中的[启动清单](documents/msig-5-review-notes.md#launch-checklist)列出剩余任务和既有前提条件。实际付款控制的部署与演练尚未验证。资金来源账户、ECF日期、法律顾问确认，以及完整部署和委员密钥记录，须按有关条款解决。
 
 ## 后续步骤
 
