@@ -309,7 +309,7 @@ Store program publications other than **minutes, proposals, and the backlog** he
 - **Monitoring:** VS LLC monitors resources **monthly** and reports them in the cycle report.
 - **Operating costs:** Pay VS LLC’s operating work from **Program Costs within the USD 40,000 cap** in MSIG #5 Part D. The Committee records this classification in the first cycle’s Program Cost schedule and revisits it **only if the work changes**.
 
-Classify the **initial platform build, including all register contracts on `disc.vst`**, under **Framework 15.2b**. Before the Committee can exercise its mandate, any build contract or funding requires **separate block producer approval by MSIG Resolution at the Threshold**; neither this configuration nor VS LLC’s administration role authorizes a pre-Committee award.
+The **initial platform build, including all register contracts on `disc.vst`, is an award** under **Framework 15.2b**.
 
 ---
 

@@ -75,6 +75,9 @@ revisions:
     - version: 16
       date: 2026-10-18
       summary: Removes added cancellation restrictions and repeated checks while retaining the proposer and block producer cancellation routes.
+    - version: 17
+      date: 2026-10-18
+      summary: Removes the initial-questionnaire approval exception and pre-Committee build MSIG requirement; flags the missing build procedure.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding

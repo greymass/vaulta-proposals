@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: 8355e9eeff4c7e9d1e421d628feab1f984392812
+source: 02972b73ec2ef6aad85037c793645ccf3fada573
 revisions:
     - version: 1
       date: 2026-09-01
@@ -50,6 +50,9 @@ revisions:
     - version: 16
       date: 2026-10-18
       summary: 删除额外取消权限限制及重复检查，保留提案者和区块生产者的取消路径。
+    - version: 17
+      date: 2026-10-18
+      summary: 删除首次问卷发布的审批例外和委员会成立前建设工作的MSIG要求，标注缺失的建设程序。
 ---
 
 # 网络指导委员会、RFP框架批准及链上计划资金

@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: 8355e9eeff4c7e9d1e421d628feab1f984392812
+source: 02972b73ec2ef6aad85037c793645ccf3fada573
 revisions:
     - version: 1
       date: 2026-09-01
@@ -50,6 +50,9 @@ revisions:
     - version: 16
       date: 2026-10-18
       summary: 추가한 취소 권한 제한과 반복 점검을 제거하되 제안자 및 블록 프로듀서의 취소 경로는 유지합니다.
+    - version: 17
+      date: 2026-10-18
+      summary: 최초 설문지 승인 예외와 위원회 구성 전 구축 작업의 MSIG 요건을 제거하고 누락된 구축 절차를 검토 항목으로 표시합니다.
 ---
 
 # 네트워크 운영 위원회, RFP 프레임워크 승인 및 온체인 프로그램 자금 조달
