@@ -78,7 +78,7 @@ A group of candidates may include a shared vision statement, but **each candidat
 
 ## Optional note
 
-[Any additional information about the proposal.]
+[Any additional information about the seat appointment.]
 
 ## Resolved clauses
 
