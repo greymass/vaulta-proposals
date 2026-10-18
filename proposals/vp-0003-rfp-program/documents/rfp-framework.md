@@ -256,19 +256,7 @@ This covers the member’s employer, companies they work for, companies under co
 
 **Who files:** every Steering Committee member, every RFP Program Manager, and every Technical Reviewer. Any other person given a decision or approval right in the program files the same questionnaire before that right takes effect.
 
-**What it asks:**
-
-| Part | Questions |
-|---|---|
-| 1. Identity and role | Name, role, seat or RFPs covered, on-chain account, date |
-| 2. Employment and engagement | Current employer; other paid engagements in the Vaulta or wider Antelope ecosystem — **including any Technical Reviewer or Program Manager engagement in this program, by RFP**; block producer affiliation; board, officer, or advisory positions |
-| 3. Vaulta Treasury | Any employment, contract, consulting, advisory, board, or equity relationship with the Vaulta Treasury or any entity it controls, now or in the previous 12 months |
-| 4. Positions | Any **Vaulta-ecosystem token, equity, or option position other than A**, **by band** and not exact figure; any position held **on behalf of another person**; any position **deliberately taken to profit from a fall in the price of A** — a short sale, a put option, or an inverse product, which asks about **intent, not exposure** |
-| 5. Connections to likely proposers | Named organizations the filer is connected to that plausibly bid; the nature of each connection; whether the filer would recuse |
-| 6. Other funding roles | Roles in any other grant, funding, or treasury body in this ecosystem or another |
-| 7. Family and household | Connections in Parts 2 to 5 held by an immediate family member or household member |
-| 8. History | Any prior removal, ban, or sanction from a funding, governance, or treasury role anywhere |
-| 9. Attestation | That the answers are complete and true; acknowledgment of the update duty and of section 6.6 |
+The required disclosures are set out in the standard Disclosure Questionnaire published with Exhibit D under MSIG #5. All nine parts are mandatory, and changes to the required disclosures require an MSIG amendment.
 
 Parts 2 to 8 each require an explicit **"None"** where there is nothing to declare. A blank is treated as an unfiled questionnaire.
 
