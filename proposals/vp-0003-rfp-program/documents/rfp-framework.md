@@ -264,7 +264,7 @@ Parts 2 to 8 each require an explicit **"None"** where there is nothing to decla
 
 **Where it is written.** Disclosures go to **`disc.vst`**, a separate account with an append-only disclosure contract deployed and controlled by VS LLC. VS LLC must configure and publish it under the **Exhibit D process and MSIG #5 Part E**. Its key has no authority over the Program Account.
 
-**What is written.** Record the filer’s **chosen public identity**, account, role, questionnaire version, filing date, **coded answers** to Parts 2 to 8, and **full public filing**, including organizations named in Part 5, connections, reasons, and explanations. **Exclude legal identification collected privately by VS LLC.** The filer signs their own submission; **VS LLC writes the record and cannot alter its content.**
+**What is written.** Use the disclosure-record fields in **Exhibit D 4.3**. **Exclude legal identification collected privately by VS LLC.** The filer signs their own submission; **VS LLC writes the record and cannot alter its content.**
 
 The full public filing is stored on-chain.
 
@@ -799,15 +799,11 @@ Awardees receive the contracted **USD value at each milestone**, converted to A 
 
 The Reference Rate is the **`median` field of `delphioracle`’s `datapoints` table for `eosusd`**, based on the last 21 qualified submissions; **neither the Committee, VS LLC, nor the awardee supplies it**.
 
-**How the number converts.** The oracle stores integer prices; divide `median` by 10^`quoted_precision` to obtain USD per A, using precision **4** for `eosusd`, which expresses prices in ten-thousandths of a dollar.
-
-**The calculation is done in integer arithmetic and truncated:**
-
-**A-units = ⌊ USD-cents × 10^6 ÷ median ⌋**, where one A-unit is 0.0001 A.
+**Conversion.** Use the formulas, precision, and arithmetic rules in **Exhibit D 3.1–3.2** for oracle and fallback conversions.
 
 **Oracle precision.** The Committee should note any material effect of the oracle’s fixed **USD 0.0001 price increments** in the cycle report.
 
-**Rate evidence.** For an oracle read, every approval record must capture the **oracle value, block number, transaction ID, and newest-datapoint timestamp**. Record and publish the timestamp with every approval, whether or not a check is triggered; for fallback reads, use the replacement evidence below.
+**Rate evidence.** Record and publish the applicable oracle or fallback evidence required by **Exhibit D 3.5** with every approval, whether or not a rate check is triggered.
 
 **Rate checks.** Use the **fallback** for a stale rate. A collar breach, or staleness when the fallback is unavailable, requires a Committee decision at the ordinary milestone threshold: approve with the issue recorded, or defer. Neither check automatically blocks payment.
 
@@ -820,9 +816,7 @@ The Reference Rate is the **`median` field of `delphioracle`’s `datapoints` ta
 
 | Aspect | Requirement |
 |---|---|
-| **How it converts** | fallback = ⌊ (high + low) ÷ 2 × 10^6 ⌋, computed in exact decimal arithmetic from the published figures — an integer in millionths of a dollar. Then **A-units = ⌊ USD-cents × 10^8 ÷ fallback ⌋** |
 | **How long it applies** | Once it applies, it applies to **every read** until the `eosusd` pair has received at least one new datapoint in every 24-hour period for **7 consecutive days**. The Chair records and publishes the day the fallback began and the day the oracle resumed |
-| **What is recorded** | In place of the oracle value, block number, and transaction id: the timestamp of the newest `eosusd` datapoint, or the fact that the pair or contract could not be read; the CoinMarketCap date; the published high and low; the resulting integer; and a retrieval record of the published figures |
 | **The collar still applies** | A fallback rate is measured against the rate used at the previous payment under that award, like any other |
 | **If the fallback is unavailable too** | Where CoinMarketCap publishes no high and low for that day, a stale but readable oracle goes to the Committee under the staleness check above, and a missing pair or contract suspends payments under 13.4a |
 
