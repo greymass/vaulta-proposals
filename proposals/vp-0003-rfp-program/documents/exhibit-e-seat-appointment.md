@@ -67,6 +67,8 @@ Steering Committee Appointment — [SEAT NAME(S)]
 
 Each candidate writes **about 300–800 words in plain language** about their seat’s portfolio, with a translation where helpful (**Framework 3.1a**). An ECF statement meeting these requirements may be used.
 
+A group of candidates may include a shared vision statement, but **each candidate must still provide their own**.
+
 1. **Network needs during my term** — [___]
 2. **Funding priorities and what I would decline** — [___]
 3. **Measures of success by the end of my term** — [___]
@@ -75,8 +77,6 @@ Each candidate writes **about 300–800 words in plain language** about their se
 *Declare interests separately in the disclosure questionnaire (**Framework 6.3a**).*
 
 ## Optional note
-
-A group of candidates may include a shared vision statement, but **each candidate must still provide their own**.
 
 [Why these candidates are proposed together.]
 
