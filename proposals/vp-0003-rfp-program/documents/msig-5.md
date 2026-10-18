@@ -159,7 +159,7 @@ FURTHER RESOLVED, that this Resolution takes effect **on execution**.
 | Exhibit | Document | From |
 |---|---|---|
 | **A** | Vaulta Network RFP Framework | Working group |
-| **B** | Manager and Reviewer rate card and scope | **Complete** — figures confirmed, concurrent cap set at 3 |
+| **B** | Manager and Reviewer rate card and scope | **Complete** — fee figures confirmed; the cap of 3 concurrent member-Reviewer engagements is set in **MSIG #5 Part H** |
 | **D** | Program Account, permission, and `disc.vst` register configuration — **the disclosure, decisions and publications registers** | VS LLC — drafted as a specification; deployment values to be filled before publication |
 | **E** | Seat appointment MSIG template | This Resolution |
 | **F** | Schedule A templates for Committee members, Program Managers, Technical Reviewers, and awardees | This Resolution |

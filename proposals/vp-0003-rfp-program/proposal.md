@@ -118,4 +118,9 @@ MSIG #5’s [Blanks to fill](documents/msig-5.md#blanks-to-fill) and the Review 
 
 ## Next Steps
 
-VST and block producers review the proposed replacement drafts and their disclosed policy changes. Revised upstream versions must be issued and ingested verbatim before these can be treated as updated upstream documents under the repository guidelines. Record that ingestion in revisions and refresh translations. Advancing beyond Draft follows VPS-1; the resolution takes effect only if block producers execute it. This PR does not broadcast transactions or complete deployment or funding.
+1. **VST** reviews the proposed changes and issues the revised source documents with updated versions.
+2. **The PR authors** replace the supporting documents verbatim, record the issued versions in the revision history, update the overview and translations, and run the repository checks.
+3. **Repository maintainers** review the completed package and advance it through the VPS-1 process.
+4. **VS LLC** completes the setup, publication, and verification requirements already specified in MSIG #5 and Exhibit D before funding or activation.
+
+The resolution takes effect only if block producers execute it. This PR does not broadcast transactions or complete deployment or funding.
