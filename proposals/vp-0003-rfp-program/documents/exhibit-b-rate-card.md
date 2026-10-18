@@ -2,9 +2,9 @@
 
 **Exhibit B — Manager and Reviewer Rate Card**
 
-**Version:** 3.5\
+**Version:** 3.4\
 **Status:** Draft\
-**Date:** 2026-10-18
+**Date:** [___]
 
 ---
 

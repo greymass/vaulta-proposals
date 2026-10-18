@@ -69,6 +69,9 @@ revisions:
     - version: 14
       date: 2026-10-18
       summary: Moves launch tasks to review notes, makes administration instructions self-contained and refreshes references and review guidance.
+    - version: 15
+      date: 2026-10-18
+      summary: Restores Exhibit B's prior version and blank date; no rate-card content changed in the review-fix commit.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding
@@ -92,7 +95,7 @@ Read together:
 
 - [MSIG #5 resolution](documents/msig-5.md), **6.15**: approvals, settings, funding and transition. Funding and permission activation wait for all five appointments, each member’s required filings, contract and signing key, and the completed Exhibit D deployment evidence.
 - [Exhibit A: Vaulta Network RFP Framework](documents/rfp-framework.md), **5.5**: the operating rules. Part 1 covers governance and funding; Part 2 covers the RFP process. Part 1 governs conflicts between them; Part 2 may be amended separately but may vary a Part 1 rule only where expressly permitted.
-- [Exhibit B: Manager and Reviewer Rate Card and Scope](documents/exhibit-b-rate-card.md), **3.5**: Manager fees of USD 350 per milestone, or USD 600 for the assessment variant, and Technical Reviewer fees of USD 450 per milestone. Other fees and responsibilities are in the rate card. Only block producers may change the figures by MSIG Resolution. Committee pay of USD 2,500 per month and the cap of three concurrent member-Reviewer engagements are set in **MSIG #5 Part H**, not Exhibit B.
+- [Exhibit B: Manager and Reviewer Rate Card and Scope](documents/exhibit-b-rate-card.md), **3.4**: Manager fees of USD 350 per milestone, or USD 600 for the assessment variant, and Technical Reviewer fees of USD 450 per milestone. Other fees and responsibilities are in the rate card. Only block producers may change the figures by MSIG Resolution. Committee pay of USD 2,500 per month and the cap of three concurrent member-Reviewer engagements are set in **MSIG #5 Part H**, not Exhibit B.
 - [Exhibit D: Program Account, Permission, and Register Configuration](documents/exhibit-d-account-configuration.md), **2.5**: four-of-five payment authority, separate three-of-five cancellation, owner control with block producers at 15/21, seven-day ordinary and three-day urgent waits, rates, registers, and deployment records. Its proposer and cancellation design must be verified against deployed code. A held-proposal procedure is not an automatic timelock; funding and activation require evidence that the execution guards work.
 - [Exhibit E: Seat Appointment MSIG Template](documents/exhibit-e-seat-appointment.md), **2.2**: the required format for future appointments, including each candidate’s own 300–800-word vision statement and conflict disclosures.
 - [Exhibit F: Schedule A Templates](documents/exhibit-f-schedule-a.md), **1.9**: role-specific schedules to VS LLC’s Independent Contractor Agreement. Check pay and onboarding, conflict sanctions, initial-payment cancellation and surviving contract obligations, Service-IP terms, and the suspension long-stop: over 30 business days of suspension permits 10 business days’ notice, which lapses if payments resume. Counsel’s pre-existing-IP confirmation remains a gate for Service and Embedded RFPs and any populated pre-existing-IP schedule.

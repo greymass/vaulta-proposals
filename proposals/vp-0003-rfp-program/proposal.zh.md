@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: 11693b1f9a43ff7660deb363ede1f782f19ba604
+source: 5ddb88fb62685e902b32c47026f30ba662c6b627
 revisions:
     - version: 1
       date: 2026-09-01
@@ -44,6 +44,9 @@ revisions:
     - version: 14
       date: 2026-10-18
       summary: 将启动任务移至审阅说明，使管理指引完整独立，并更新引用和审阅指南。
+    - version: 15
+      date: 2026-10-18
+      summary: 恢复Exhibit B原有版本号及空白日期；审阅修正提交未修改费率表内容。
 ---
 
 # 网络指导委员会、RFP框架批准及链上计划资金
@@ -67,7 +70,7 @@ revisions:
 
 - [MSIG #5决议](documents/msig-5.md)，**6.15**：批准事项、设置、资金与过渡。全部五席任命完成、每位委员的必需提交材料、合同及签名密钥完备，且Exhibit D部署证据完整后，才能注资和启用权限。
 - [Exhibit A：Vaulta网络RFP框架](documents/rfp-framework.md)，**5.5**：运营规则。Part 1涉及治理与资金，Part 2涉及RFP流程。两者冲突时以Part 1为准；Part 2可单独修订，但仅在明确允许时才能偏离Part 1规则。
-- [Exhibit B：经理和审查员费率及职责](documents/exhibit-b-rate-card.md)，**3.5**：经理每里程碑350美元，采用评估变体时为600美元；技术审查员每里程碑450美元。其他费用和职责见费率表。仅区块生产者可通过MSIG决议修改金额。委员每月2,500美元的报酬以及委员兼审查员最多同时承担三项工作的限制，由**MSIG #5 Part H**规定，而非Exhibit B。
+- [Exhibit B：经理和审查员费率及职责](documents/exhibit-b-rate-card.md)，**3.4**：经理每里程碑350美元，采用评估变体时为600美元；技术审查员每里程碑450美元。其他费用和职责见费率表。仅区块生产者可通过MSIG决议修改金额。委员每月2,500美元的报酬以及委员兼审查员最多同时承担三项工作的限制，由**MSIG #5 Part H**规定，而非Exhibit B。
 - [Exhibit D：计划账户、权限及登记配置](documents/exhibit-d-account-configuration.md)，**2.5**：五取四付款权限、独立的五取三取消权限、区块生产者15/21所有者控制、普通七天及紧急三天等待期、汇率、登记和部署记录。其提案者与取消设计须与部署代码核对验证。暂缓批准提案的程序并非自动时间锁；注资和启用权限必须有执行保护有效的证据。
 - [Exhibit E：席位任命MSIG模板](documents/exhibit-e-seat-appointment.md)，**2.2**：未来任命的必需格式，包括每名候选人自行撰写的300–800词愿景陈述及利益冲突披露。
 - [Exhibit F：Schedule A模板](documents/exhibit-f-schedule-a.md)，**1.9**：VS LLC独立承包商协议的角色专用附表。应检查报酬与入职、利益冲突制裁、首笔付款取消及继续有效的合同义务、Service IP条款及暂停的最长等待安排：暂停超过30个工作日后可发出提前10个工作日的终止通知；若恢复付款，通知失效。法律顾问对既有IP安排的确认，仍是发布Service及Embedded RFP以及签订任何列有既有IP项目附表的前提。
