@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: 5ddb88fb62685e902b32c47026f30ba662c6b627
+source: 8355e9eeff4c7e9d1e421d628feab1f984392812
 revisions:
     - version: 1
       date: 2026-09-01
@@ -47,6 +47,9 @@ revisions:
     - version: 15
       date: 2026-10-18
       summary: 恢复Exhibit B原有版本号及空白日期；审阅修正提交未修改费率表内容。
+    - version: 16
+      date: 2026-10-18
+      summary: 删除额外取消权限限制及重复检查，保留提案者和区块生产者的取消路径。
 ---
 
 # 网络指导委员会、RFP框架批准及链上计划资金

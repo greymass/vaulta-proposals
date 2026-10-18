@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: 5ddb88fb62685e902b32c47026f30ba662c6b627
+source: 8355e9eeff4c7e9d1e421d628feab1f984392812
 revisions:
     - version: 1
       date: 2026-09-01
@@ -47,6 +47,9 @@ revisions:
     - version: 15
       date: 2026-10-18
       summary: 검토 수정 커밋은 요율표 내용을 변경하지 않았으므로 Exhibit B의 이전 버전과 빈 날짜를 복원합니다.
+    - version: 16
+      date: 2026-10-18
+      summary: 추가한 취소 권한 제한과 반복 점검을 제거하되 제안자 및 블록 프로듀서의 취소 경로는 유지합니다.
 ---
 
 # 네트워크 운영 위원회, RFP 프레임워크 승인 및 온체인 프로그램 자금 조달

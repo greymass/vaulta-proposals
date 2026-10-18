@@ -52,14 +52,14 @@ Deployment details and member keys may be added after MSIG #5 is approved. VS LL
 | Setting | Value |
 |---|---|
 | Fund-transfer authority | **`rfp.vst@active`**, threshold 4, one unit per registered member key. |
-| Administrative cancellation authority | **`rfp.vst@cancel`**, threshold 3, one unit per registered member key; a child of `active`, linked only to **`eosio.msig::cancel`**. |
+| Administrative cancellation authority | **`rfp.vst@cancel`**, threshold 3, one unit per registered member key; a child of `active`, linked to **`eosio.msig::cancel`**. |
 | Weight per seated member | 1, five members, 5 units total |
 | Fund transfers | **4 of 5** signatures |
 | Administrative actions, including cancellation | **3 of 5** signatures |
 | Owner permission | `eosio.prods` |
 | Active permission | The **4-of-5** fund-transfer authority above. |
 
-Use separate authorities for fund transfers and administration; **each named permission has one threshold**. Record the actual permission hierarchy, action links, contract checks if used, and any code authority in **6.1**. The **three-signature administrative route must not satisfy fund-transfer authority**, directly or through a parent or delegated authority. The cancellation permission must not authorize transfers, payment proposal or approval, permission changes, action-link changes, or code deployment; no three-signature parent, delegation, or code authority may provide a bypass. Owner recovery and cancellation remain with block producers at the Threshold. Record both cancellation routes under **2.6**.
+Use separate authorities for fund transfers and administration; **each named permission has one threshold**. Record the actual permission hierarchy, action links, contract checks if used, and any code authority in **6.1**. The **three-signature administrative route must not satisfy fund-transfer authority**, directly or through a parent or delegated authority. Owner recovery and cancellation remain with block producers at the Threshold. Record both cancellation routes under **2.6**.
 
 ### 1.3 Block producer authority
 
@@ -90,7 +90,7 @@ Any MSIG proposal to change the `disc.vst` contract must meet these requirements
 
 Use the **`eosio.msig` execution delay if available**; otherwise use the **held-multisignature fallback in 2.3**. VS LLC records the selected option and configuration in **6.1 before publication and funding**.
 
-**Payment proposer.** Every payment proposal must be created under **`rfp.vst`**, not a member’s or VS LLC’s account. Proposing and approving a payment require **`rfp.vst@active` (4 of 5)**; request that permission’s approval for the transfer transaction. Assemble the required member-wallet signatures without giving the platform custody of any key. The separate cancellation permission must not authorize `propose` or `approve`.
+**Payment proposer.** Every payment proposal must be created under **`rfp.vst`**, not a member’s or VS LLC’s account. Request **`rfp.vst@active` (4 of 5)** approval for the transfer transaction. Assemble the required member-wallet signatures without giving the platform custody of any key.
 
 ### 2.2 Payment delays
 
@@ -130,7 +130,7 @@ Pending payment MSIGs may be cancelled through the following authorities. Commit
 
 For both routes call **`eosio.msig::cancel`** with **`proposer: rfp.vst`**, the payment’s **`proposal_name`**, and **`canceler: rfp.vst`**. Authorize with the permission in the table above. The proposer and canceler remain the same account even when block producers supply its owner authority, allowing cancellation before expiry. Verify both routes against the deployed contract and ABI and record the transactions in **6.1**.
 
-The **3-signature cancellation route must not allow fund transfers**. Record any configuration limitations in **6.2**.
+Record any configuration limitations in **6.2**.
 
 ---
 
@@ -319,7 +319,7 @@ Classify the **initial platform build, including all register contracts on `disc
 
 VS LLC must complete every deployment-confirmation field in this Exhibit and the record below **after deployment and before publication**, then publish the completed Exhibit **before funding** (MSIG #5 Part E).
 
-**Testnet deployment and rehearsals are required before mainnet deployment.** Using the deployed ABI and schemas, verify fund-transfer and administrative thresholds, both cancellation routes, the full ordinary and urgent delays, and the initial-payment final-objection-count guard under **Framework 7.2 and 10.7**. Record the testnet deployment, test actions, transaction IDs, and results below; configuration descriptions alone do not satisfy this requirement. Verify the deployed `eosio.msig` code and ABI, the fixed proposer and cancellation parameters in **2.6**, and rejection of three-signature payment proposals, approvals, transfers, and permission or action-link changes. Identify and test the guard enforcing the publication-based wait and final count; an approval-holding procedure alone is insufficient. No funding or activation is permitted until these tests pass.
+**Testnet deployment and rehearsals are required before mainnet deployment.** Using the deployed ABI and schemas, verify fund-transfer and administrative thresholds, both cancellation routes, the full ordinary and urgent delays, and the initial-payment final-objection-count guard under **Framework 7.2 and 10.7**. Record the testnet deployment, test actions, transaction IDs, and results below; configuration descriptions alone do not satisfy this requirement. Verify the deployed `eosio.msig` code and ABI and the fixed proposer and cancellation parameters in **2.6**. Identify and test the guard enforcing the publication-based wait and final count; an approval-holding procedure alone is insufficient. No funding or activation is permitted until these tests pass.
 
 | Record | Required details | Deployed value |
 |---|---|---|
@@ -337,7 +337,7 @@ VS LLC must complete every deployment-confirmation field in this Exhibit and the
 | ABI | Published ABI matching the deployed code | [___] |
 | Table schemas | Deployed schemas for `disclosures`, `decisions`, and `publications` | [___] |
 | Testnet deployment | Accounts, deployed code hashes, ABI, and schemas used for the rehearsals | [___] |
-| Threshold rehearsals | Successful authorized transfers and both pre-expiry cancellations; rejected insufficient signatures, three-signature transfers, payment proposals, approvals, permission changes, and action-link changes | [___] |
+| Threshold rehearsals | Successful authorized transfers and both pre-expiry cancellations; rejected insufficient signatures and three-signature fund transfers | [___] |
 | Delay and objection rehearsals | Ordinary and urgent delays; rejection of premature execution and initial-payment execution without a published final count or with four or more objections; permitted execution after clearance | [___] |
 | Committee cancellation rehearsal | Test proposal, proposer authority, three-signature cancellation transaction, and result | [___] |
 | Block producer cancellation rehearsal | Test proposal, owner-controlled cancellation transaction at the Threshold, and result | [___] |

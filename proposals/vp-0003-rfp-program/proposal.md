@@ -72,6 +72,9 @@ revisions:
     - version: 15
       date: 2026-10-18
       summary: Restores Exhibit B's prior version and blank date; no rate-card content changed in the review-fix commit.
+    - version: 16
+      date: 2026-10-18
+      summary: Removes added cancellation restrictions and repeated checks while retaining the proposer and block producer cancellation routes.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding
