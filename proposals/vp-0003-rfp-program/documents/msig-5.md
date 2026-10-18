@@ -76,7 +76,7 @@ FURTHER RESOLVED, that the Committee is authorized to **award funds, select vend
 
 ### Part D — Limits and denomination
 
-FURTHER RESOLVED, that the following limits apply:
+FURTHER RESOLVED, that the Committee’s award commitments and program spending are subject to the following limits:
 
 | Limit | Amount (USD) | Applies to |
 |---|---|---|
