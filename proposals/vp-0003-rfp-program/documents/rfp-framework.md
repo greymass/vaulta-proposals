@@ -266,7 +266,7 @@ Parts 2 to 8 each require an explicit **"None"** where there is nothing to decla
 
 **What is written.** Record the filer’s **chosen public identity**, account, role, questionnaire version, filing date, **coded answers** to Parts 2 to 8, and **full public filing**, including organizations named in Part 5, connections, reasons, and explanations. **Exclude legal identification collected privately by VS LLC.** The filer signs their own submission; **VS LLC writes the record and cannot alter its content.**
 
-**No hash is kept**; the full filing is held on-chain.
+The full public filing is stored on-chain.
 
 Records are **append-only**: updates must reference the previous record; nothing may be edited or removed.
 
