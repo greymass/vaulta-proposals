@@ -93,7 +93,7 @@ FURTHER RESOLVED, that the post-award review threshold under Framework 25.2 is *
 
 ### Part E — The Program Account and how payments work
 
-FURTHER RESOLVED, that payments must use these delay windows:
+FURTHER RESOLVED, that payments from the Program Account must observe the following delays before execution:
 
 | Setting | Value |
 |---|---|
