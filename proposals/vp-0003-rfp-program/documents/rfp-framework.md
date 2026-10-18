@@ -6,7 +6,13 @@
 **Status:** Draft\
 **Date:** [___]
 
-This RFP Framework is required by MSIG #4 and has two parts.
+---
+
+## Purpose
+
+This Framework sets the **Steering Committee’s responsibilities and funding authority** and the rules for **running the Network RFP program**, as required by **MSIG #4**.
+
+It has two parts:
 
 - **Part 1 — The Steering Committee and the Mandate.** Who decides, how they are chosen, how they vote, and how money moves.
 - **Part 2 — Running an RFP.** How a single RFP goes from an idea to a paid deliverable.
