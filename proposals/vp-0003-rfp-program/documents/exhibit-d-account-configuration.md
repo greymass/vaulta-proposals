@@ -2,9 +2,9 @@
 
 **Exhibit D — Program Account, Permission, and Register Configuration**
 
-**Version:** 2.4\
+**Version:** 2.5\
 **Status:** Draft\
-**Date:** [___]
+**Date:** 2026-10-18
 
 Published by **Vaulta Stewardship LLC** under **MSIG #5 Part E**.
 
@@ -51,15 +51,15 @@ Deployment details and member keys may be added after MSIG #5 is approved. VS LL
 
 | Setting | Value |
 |---|---|
-| Fund-transfer authority | *(to confirm on deployment — identify the actual permission and enforcement mechanism)* |
-| Administrative cancellation authority | *(to confirm on deployment — identify a distinct route that cannot move funds)* |
+| Fund-transfer authority | **`rfp.vst@active`**, threshold 4, one unit per registered member key. |
+| Administrative cancellation authority | **`rfp.vst@cancel`**, threshold 3, one unit per registered member key; a child of `active`, linked only to **`eosio.msig::cancel`**. |
 | Weight per seated member | 1, five members, 5 units total |
 | Fund transfers | **4 of 5** signatures |
 | Administrative actions, including cancellation | **3 of 5** signatures |
 | Owner permission | `eosio.prods` |
-| Active permission | *(to confirm on deployment)* |
+| Active permission | The **4-of-5** fund-transfer authority above. |
 
-Use separate authorities for fund transfers and administration; **each named permission has one threshold**. Record the actual permission hierarchy, action links, contract checks if used, and any code authority in **6.1**. The **three-signature administrative route must not satisfy fund-transfer authority**, directly or through a parent or delegated authority. Owner recovery and cancellation remain with block producers at the Threshold. Record both cancellation routes under **2.6**.
+Use separate authorities for fund transfers and administration; **each named permission has one threshold**. Record the actual permission hierarchy, action links, contract checks if used, and any code authority in **6.1**. The **three-signature administrative route must not satisfy fund-transfer authority**, directly or through a parent or delegated authority. The cancellation permission must not authorize transfers, payment proposal or approval, permission changes, action-link changes, or code deployment; no three-signature parent, delegation, or code authority may provide a bypass. Owner recovery and cancellation remain with block producers at the Threshold. Record both cancellation routes under **2.6**.
 
 ### 1.3 Block producer authority
 
@@ -90,6 +90,8 @@ Any MSIG proposal to change the `disc.vst` contract must meet these requirements
 
 Use the **`eosio.msig` execution delay if available**; otherwise use the **held-multisignature fallback in 2.3**. VS LLC records the selected option and configuration in **6.1 before publication and funding**.
 
+**Payment proposer.** Every payment proposal must be created under **`rfp.vst`**, not a member’s or VS LLC’s account. Proposing and approving a payment require **`rfp.vst@active` (4 of 5)**; request that permission’s approval for the transfer transaction. Assemble the required member-wallet signatures without giving the platform custody of any key. The separate cancellation permission must not authorize `propose` or `approve`.
+
 ### 2.2 Payment delays
 
 | Payment | Delay |
@@ -107,7 +109,7 @@ Later milestone and Program Cost payments still require the delay and allow canc
 
 If the `eosio.msig` delay is unavailable, publish the proposal ID with the award. Committee members must **withhold approvals until the full delay window ends** and, for initial award payments, the published final objection count permits execution under **Framework 10.7**.
 
-Before using the fallback, VS LLC must **republish Exhibit D**, recording the procedure and cancellation authorities in **6.1**.
+Withholding approvals is a **procedural control, not an automatic timelock**. Before using the fallback, VS LLC must **republish Exhibit D**, recording the procedure, cancellation authorities, and a **tested guard that rejects premature or objection-blocked execution** under **Framework 10.7 and 6.1 below**. Held approvals alone do not prove that guard. If the guard cannot be demonstrated, do not fund or activate the program; a changed safeguard requires an MSIG amendment, not a configuration waiver.
 
 ### 2.4 Urgent payments
 
@@ -123,10 +125,10 @@ Pending payment MSIGs may be cancelled through the following authorities. Commit
 
 | Who | Authority | When |
 |---|---|---|
-| **Block producers** | **`eosio.prods`**, through the owner-controlled route, at **15 of 21**. | Any payment during its delay window. |
-| **Committee** | The separate administrative route, at **3 of 5**. | Before execution; mandatory cancellation follows **Framework 9.1 and 10.5–10.7**. |
+| **Block producers** | **`rfp.vst@owner`**, satisfied by **`eosio.prods` at 15 of 21**. | Any payment during its delay window, including under the held-proposal fallback. |
+| **Committee** | **`rfp.vst@cancel`**, at **3 of 5**. | Before execution; mandatory cancellation follows **Framework 9.1 and 10.5–10.7**. |
 
-Cancel pending proposals with **`eosio.msig::cancel`**. Before expiry, cancellation requires the **proposer account’s authority**. Record the proposer account, action parameters, and permissions for both cancellation routes in **6.1**.
+For both routes call **`eosio.msig::cancel`** with **`proposer: rfp.vst`**, the payment’s **`proposal_name`**, and **`canceler: rfp.vst`**. Authorize with the permission in the table above. The proposer and canceler remain the same account even when block producers supply its owner authority, allowing cancellation before expiry. Verify both routes against the deployed contract and ABI and record the transactions in **6.1**.
 
 The **3-signature cancellation route must not allow fund transfers**. Record any configuration limitations in **6.2**.
 
@@ -243,7 +245,7 @@ Screen and redact records **before writing**, under **Framework 5.9, 6.3b, 7.6a,
 | `prior` | Transaction id of the row this one supersedes, where it is an update or correction |
 | `reason` | Why, where `prior` is set |
 
-Use questionnaire version **`VQ1`**, defined in **Disclosure Questionnaire — Version 1**, published alongside this Exhibit; store its pipe-delimited answer string unchanged in `answers`.
+Use questionnaire version **`VQ2`**, defined in **Disclosure Questionnaire, document version 1.5**, published alongside this Exhibit; store its pipe-delimited answer string unchanged in `answers`.
 
 Preserve **`N` (None declared)** and **`X` (not answered)** as distinct codes. Apply the filing, signing, and screening requirements in **Framework 6.3a–6.3c**.
 
@@ -307,7 +309,7 @@ Store program publications other than **minutes, proposals, and the backlog** he
 - **Monitoring:** VS LLC monitors resources **monthly** and reports them in the cycle report.
 - **Operating costs:** Pay VS LLC’s operating work from **Program Costs within the USD 40,000 cap** in MSIG #5 Part D. The Committee records this classification in the first cycle’s Program Cost schedule and revisits it **only if the work changes**.
 
-Classify the **initial platform build, including both contracts on `disc.vst`**, under **Framework 15.2b**; the pre-Committee process is in **Program Administration Register, item 2.5**.
+Classify the **initial platform build, including all register contracts on `disc.vst`**, under **Framework 15.2b**. Before the Committee can exercise its mandate, any build contract or funding requires **separate block producer approval by MSIG Resolution at the Threshold**; neither this configuration nor VS LLC’s administration role authorizes a pre-Committee award.
 
 ---
 
@@ -317,7 +319,7 @@ Classify the **initial platform build, including both contracts on `disc.vst`**,
 
 VS LLC must complete every deployment-confirmation field in this Exhibit and the record below **after deployment and before publication**, then publish the completed Exhibit **before funding** (MSIG #5 Part E).
 
-**Testnet deployment and rehearsals are required before mainnet deployment.** Using the deployed ABI and schemas, verify fund-transfer and administrative thresholds, both cancellation routes, the full ordinary and urgent delays, and the initial-payment final-objection-count guard under **Framework 7.2 and 10.7**. Record the testnet deployment, test actions, transaction IDs, and results below; configuration descriptions alone do not satisfy this requirement.
+**Testnet deployment and rehearsals are required before mainnet deployment.** Using the deployed ABI and schemas, verify fund-transfer and administrative thresholds, both cancellation routes, the full ordinary and urgent delays, and the initial-payment final-objection-count guard under **Framework 7.2 and 10.7**. Record the testnet deployment, test actions, transaction IDs, and results below; configuration descriptions alone do not satisfy this requirement. Verify the deployed `eosio.msig` code and ABI, the fixed proposer and cancellation parameters in **2.6**, and rejection of three-signature payment proposals, approvals, transfers, and permission or action-link changes. Identify and test the guard enforcing the publication-based wait and final count; an approval-holding procedure alone is insufficient. No funding or activation is permitted until these tests pass.
 
 | Record | Required details | Deployed value |
 |---|---|---|
@@ -325,7 +327,7 @@ VS LLC must complete every deployment-confirmation field in this Exhibit and the
 | Authority setup | Fund-transfer and administrative authority configuration transaction IDs | [___] |
 | Permissions | Fund-transfer, administrative, and active permission names; hierarchy, weights, thresholds, action links, contract checks if used, and any code authority | [___] |
 | Writing authority | Named VS LLC permission for register writes | [___] |
-| Payment mechanism | Selected option: `eosio.msig` delay or held-proposal fallback; identify the `eosio.msig` account and record the fallback procedure if used | [___] |
+| Payment mechanism | Selected option, deployed `eosio.msig` code hash and ABI; fixed payment proposer `rfp.vst`, requested approval `rfp.vst@active`, and tested wait/count guard; fallback procedure if used | [___] |
 | Ordinary delay | 604,800 seconds (7 days) | [___] |
 | Urgent delay | 259,200 seconds (3 days) | [___] |
 | Execution timing | With the `eosio.msig` delay, record the proposed transaction’s `delay_sec` and how the earliest execution time is calculated from sufficient approvals; with the fallback, record how publication sets the earliest permitted execution time | [___] |
@@ -335,7 +337,7 @@ VS LLC must complete every deployment-confirmation field in this Exhibit and the
 | ABI | Published ABI matching the deployed code | [___] |
 | Table schemas | Deployed schemas for `disclosures`, `decisions`, and `publications` | [___] |
 | Testnet deployment | Accounts, deployed code hashes, ABI, and schemas used for the rehearsals | [___] |
-| Threshold rehearsals | Successful authorized transfers and cancellations; rejected insufficient signatures and three-signature fund transfers | [___] |
+| Threshold rehearsals | Successful authorized transfers and both pre-expiry cancellations; rejected insufficient signatures, three-signature transfers, payment proposals, approvals, permission changes, and action-link changes | [___] |
 | Delay and objection rehearsals | Ordinary and urgent delays; rejection of premature execution and initial-payment execution without a published final count or with four or more objections; permitted execution after clearance | [___] |
 | Committee cancellation rehearsal | Test proposal, proposer authority, three-signature cancellation transaction, and result | [___] |
 | Block producer cancellation rehearsal | Test proposal, owner-controlled cancellation transaction at the Threshold, and result | [___] |
@@ -344,7 +346,7 @@ VS LLC must complete every deployment-confirmation field in this Exhibit and the
 
 ### 6.2 Departures from the specification
 
-If anything cannot be built as specified, VS LLC must publish the limitation and propose the nearest workable alternative here.
+If anything cannot be built as specified, VS LLC must publish the limitation and propose the nearest workable alternative here. Recording a departure **does not authorize it**: any change to the Framework’s rules or protections requires an **MSIG amendment**, and funding and activation must wait until the approved requirements are met.
 
 | Element | What was specified | What was built | Why | Proposed alternative |
 |---|---|---|---|---|

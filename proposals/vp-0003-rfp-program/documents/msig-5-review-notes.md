@@ -1,8 +1,12 @@
 # MSIG #5 — Review Notes
 
+**Version:** 1.0\
+**Status:** Reference draft\
+**Date:** 2026-10-18
+
 **Reference only — not an additional resolution or an exhibit approved by MSIG #5.**
 
-These notes preserve the draft’s historical, financial, and technical reasoning. Market figures and elapsed-time descriptions refer to that draft, not current data. Operative requirements remain in MSIG #5 and its Framework, including the annual pay review and treatment of existing Treasury contracts.
+These notes preserve reasoning from **MSIG #5 v6.14, ingested on 6 October 2026**. That is an ingestion date, not a verified market-observation date. Market figures, elapsed-time descriptions, and claims about prior review are historical and **have not been refreshed or independently reverified here**. Operative requirements remain in MSIG #5 and its Framework, including the annual pay review and treatment of existing Treasury contracts.
 
 ## Notes for review
 
@@ -16,7 +20,7 @@ These notes preserve the draft’s historical, financial, and technical reasonin
 
 **The amendment path is clear.** vstcreation provides that material amendment of the approved governing documents requires a separate MSIG Resolution. Part J relies on that clause.
 
-**2. Where the figures come from.** **These are the figures you are voting on, not proposals** — the working group has confirmed them. Framework 13.1 lets you change any of them at the Threshold at any time, and the reasoning below is kept so that a later change starts from what was actually considered rather than from the number alone. *Market figures as at the date of this draft; the USD denomination of every limit is unaffected by price movement, but the share-of-yield comparison below is not.* A trades at roughly **USD 0.077**, giving a market capitalisation of about USD 127 million on a circulating supply of about 1.66 billion A. The REX yield pool of 18–20M A a year is therefore worth roughly **USD 1.4–1.5 million a year**, or about **USD 350,000–380,000 a quarter**.
+**2. Where the figures come from.** The operative amounts are **proposed in MSIG #5**, not approved by these notes. The source draft said the working group had confirmed them. Framework 13.1 permits changes at the Threshold; the reasoning below is retained as historical context. *The market figures are an undated historical illustration, not current values; USD limits are unaffected by price movement, but the share-of-yield comparison is not.* A trades at roughly **USD 0.077**, giving a market capitalisation of about USD 127 million on a circulating supply of about 1.66 billion A. The REX yield pool of 18–20M A a year is therefore worth roughly **USD 1.4–1.5 million a year**, or about **USD 350,000–380,000 a quarter**.
 
 | Figure | Reasoning |
 |---|---|
@@ -36,7 +40,7 @@ These notes preserve the draft’s historical, financial, and technical reasonin
 | Program Costs, four cycles — 150,000 Committee pay, 160,000 everything else | 310,000 |
 | **Total authorized for one year (Total Program Spend)** | **910,000** |
 | **Gross transferred** — first instalment 284,375, then three top-ups of up to 227,500 | **up to 966,875** |
-| REX yield at today's price of A | ~1,400,000–1,500,000 a year |
+| REX yield at the historical illustrative price of A | ~1,400,000–1,500,000 a year |
 | **Share of the annual yield — committed** | **roughly 61–65%** |
 | **Share of the annual yield — gross transferred** | **roughly 65–69%** |
 
@@ -46,7 +50,7 @@ Gross runs **higher than 966,875 if the price of A falls**, because the top-up r
 
 **That is a large share, and block producers should decide it deliberately.** The REX yield is not reserved for the RFP program — it also has to cover Labs, infrastructure, and anything else the Network funds from it. If the intention is for the RFP program to be one call on the yield among several, the quarterly ceiling should come down. A ceiling of USD 100,000 a cycle brings the annual **Total Program Spend** to **USD 710,000** — 400,000 in awards plus 310,000 of Program Costs — about **49%** of the yield.
 
-The recommendation of USD 150,000 a cycle stands on administrative grounds — five part-time people can run perhaps four to eight RFPs well in a quarter, at USD 15,000 to 30,000 each, plus the in-cycle portion of any recurring infrastructure. But **that is a capacity argument, not an affordability argument**, and the two should be reconciled before this goes to a vote.
+The recommendation of USD 150,000 a cycle stands on administrative grounds — five part-time people can run perhaps four to eight RFPs well in a quarter, at USD 15,000 to 30,000 each, plus the in-cycle portion of any recurring infrastructure. But **that is a capacity argument, not an affordability argument**, and the original draft recommended reconciling them before a vote. This commentary adds no approval condition.
 
 **4. What the Delphi Oracle actually provides.** The contract was reviewed rather than assumed. Three things matter.
 
@@ -111,7 +115,7 @@ This also fixes the awkward interaction with long awards. The constraint on a mu
 
 This checklist tracks remaining launch tasks. It adds no rules or approvals; the blocking conditions below are established in **MSIG #5, the Framework, and Exhibit D**. The initial Manager pool requirement is in **Framework 12.2**.
 
-**Scope.** The **Program Administration Register** tracks off-chain candidate sourcing, counsel’s conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover. It is **not part of the Framework or approved by block producers**.
+**Scope.** This checklist also tracks off-chain candidate sourcing, counsel’s conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover. It replaces references to the separate, unprovided Program Administration Register; these notes are **not part of the Framework or approved by block producers**. The rules cited below remain controlling.
 
 **Task numbers remain fixed.** Delete resolved tasks without renumbering the rest. These numbers are independent of MSIG #5’s *Blanks to fill*.
 
@@ -121,6 +125,23 @@ This checklist tracks remaining launch tasks. It adds no rules or approvals; the
 | 3 | The **Trustee Compensation and Indemnification Acknowledgment**, approved by vstcreation but not yet reviewed — it may add indemnification terms for compensated governance roles that Committee members should also have | — |
 | 5 | Technical Reviewer roster for technical categories | — |
 | 6 | Portal readiness to host the backlog, award records, and objection register | — |
-| 7 | The **disclosure questionnaire instrument** — **drafted as version `VQ1`**; text, coded-answer schema and position bands complete (Framework 6.3a). What remains is publication with the register open for filing | **Yes** — the Program Account is not funded until every member has filed, and nobody can file until the register is open |
-| 8 | Deploy **`disc.vst`** with the **disclosures (Framework 6.3b), decisions, and publications (Framework 7.6a)** tables in one or more contracts; publish the ABI, all three schemas, write authority, upgrade path, and RAM provision. **Exhibit D sections 1.4 and 4** specify the authorities and register design; **Exhibit D section 5 and Appendix B** specify RAM, including **16 MB at launch**, provisioned and topped up by VST and VS LLC. The **EOS Rio team** builds and services it; **VS LLC remains accountable** and records it in Exhibit D under MSIG #5 Part E (PRD 7.2). | **Yes** — no funding before Exhibit D publication |
+| 7 | The **disclosure questionnaire instrument** — **drafted as version `VQ2`**; text, coded-answer schema and position bands complete (Framework 6.3a). What remains is publication with the register open for filing | **Yes** — the Program Account is not funded until every member has filed, and nobody can file until the register is open |
+| 8 | Deploy **`disc.vst`** with the **disclosures (Framework 6.3b), decisions, and publications (Framework 7.6a)** tables in one or more contracts; publish the ABI, all three schemas, write authority, upgrade path, and RAM provision. **Exhibit D sections 1.4 and 4** specify the authorities and register design; **Exhibit D section 5 and Appendix B** specify RAM, including **16 MB at launch**, provisioned and topped up by VST and VS LLC. The **EOS Rio team** builds and services it; **VS LLC remains accountable** and records it in Exhibit D under MSIG #5 Part E. | **Yes** — no funding before Exhibit D publication |
 | 10 | **Counsel to confirm section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A (Framework 23.3a) | **Yes** — until confirmed, no Service or Embedded RFP may be published, and no award may be contracted with a populated pre-existing-IP schedule |
+
+| 11 | Off-chain candidate sourcing and community consultation; appointments remain future MSIG decisions following Exhibit E | — |
+| 12 | VST and VS LLC coordinate counsel’s conforming Trust amendments, Trustee execution, and LLC operating-procedure changes under MSIG #5 Part J | — |
+| 13 | Complete EOS Rio’s code, rights, and repository handover to VST under Framework 15.2a | **Yes** — the program must not rely on the platform or Portal code before those requirements are met |
+| 14 | Obtain separate block producer MSIG approval at the Threshold for any initial platform-build contract or funding before the Committee can exercise its mandate (Exhibit D 5) | **Yes** — this draft does not authorize a pre-Committee award |
+| 15 | Test the payment permissions, both pre-expiry cancellation routes, full waits, and final-objection-count guard; publish deployment evidence under Exhibit D 6.1 | **Yes** — no funding or permission activation until the tests pass |
+
+## Revision scope and remaining review
+
+These are **proposed replacement drafts for VST review**, not versions already issued or approved by VST. The root proposal’s revisions record the changes; earlier comments and citations refer to their original snapshots and are not retroactively updated. VST’s upstream review and issuance remain outstanding before these can be treated as revised upstream source documents.
+
+- **Intentional:** all five seats require future MSIG appointments; the three former members perform unpaid Trust oversight only during transition. The Community term starts at appointment and can run before program funding; the initial ECF route has the nine-month fallback in Framework 4.6.
+- **Intentional Service-IP policy:** providers retain pre-existing IP; licences and handover materials are expressly agreed per RFP and contract, with switching limits published. The automatic embedded-IP licence back applies only to Deliverable and Embedded awards. Network data export, agreed handover rights, and the counsel gate remain.
+- **Contract cancellation:** no-liability termination applies to the initial award disbursement under Framework 10.5 or 10.8, not later accepted work; freezes and mandate suspension/revocation preserve signed-agreement obligations under 10.9, 11.10a, and 14.4–14.5.
+- **Safeguards restored or clarified:** ECF’s own funding MSIG, secure-key eligibility, immediate loss of signing weight on resignation notice, the vision-statement onboarding gate, and Committee-vote suspension of role/signing weight. Automatic contractual pay suspension and Treasury-affiliation suspension remain separate.
+- **Disclosure and recovery:** VQ2 distinguishes public identity from private legal identification without reinterpreting VQ1 records; the seven-day oracle-recovery rule and resumption of suspended quarterly instalments remain explicit.
+- **Technical review:** the proposer/canceler design follows the [Antelope reference MSIG contract](https://github.com/AntelopeIO/reference-contracts/blob/c526479a48370981a1e9f0ac6b3bb0e4f737afa2/contracts/eosio.msig/src/eosio.msig.cpp). This is a design reference, **not verification of Vaulta’s deployed contract**; Exhibit D requires deployed-code checks and testnet rehearsals before mainnet setup and funding.

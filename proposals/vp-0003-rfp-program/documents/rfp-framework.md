@@ -2,9 +2,9 @@
 
 **Exhibit A — Vaulta Network RFP Framework**
 
-**Version:** 5.4\
+**Version:** 5.5\
 **Status:** Draft\
-**Date:** [___]
+**Date:** 2026-10-18
 
 ---
 
@@ -94,7 +94,7 @@ Anyone in these roles who becomes Treasury-affiliated must disclose it within **
 
 **2.5** Each member must sign a contract with **VS LLC** and is **not a Trust employee**.
 
-**2.6** Each member has **one unit of signing weight** on the Program Account (section 7) and must keep their signing key secure.
+**2.6** Each member has **one unit of signing weight** on the Program Account (section 7) and must keep their signing key secure. A person unable to hold a signing key securely **cannot serve**.
 
 ## 3. Member appointments and terms
 
@@ -133,7 +133,7 @@ Where candidates in the same proposal conflict under the one-seat or affiliation
 
 **Block producers decide eligibility.** If VS LLC records a seat as unfilled for any reason other than an earlier execution, it must publish its reasons and refer the matter to block producers. The seat remains vacant until block producers decide.
 
-**3.1b Onboarding.** An incomplete appointment proposal that executes is **not void**. Each appointee must sign their contract, **file the standard on-chain disclosure questionnaire under 6.3a–6.3b**, and register their signing key **within 30 days of appointment execution or VS LLC announcing that the register is open, whichever is later**. **Pay and signing weight begin only after all required items are filed and the contract and key requirements are complete**.
+**3.1b Onboarding.** An incomplete appointment proposal that executes is **not void**. Each appointee must file their **candidate-written vision statement under 3.1a**, sign their contract, **file the standard on-chain disclosure questionnaire under 6.3a–6.3b**, and register their signing key **within 30 days of appointment execution or VS LLC announcing that the register is open, whichever is later**. **Pay and signing weight begin only after all required items are filed and the contract and key requirements are complete**.
 
 **3.2** Members serve **one-year terms**, except for the initial terms in **3.4** and vacancy appointments in **3.7**, and may be reappointed without limit.
 
@@ -147,13 +147,13 @@ Where candidates in the same proposal conflict under the one-seat or affiliation
 | Marketing | 14 months | The Program Account receives funds |
 | Business Development | 8 months | The Program Account receives funds |
 | General (At-Large) | 8 months | The Program Account receives funds |
-| Community, appointed by block producers through MSIG Resolution under 4.2 or 4.7 | 12 months | The appointment Resolution executes |
+| Community, appointed by block producers through MSIG Resolution under section 4 | 12 months | The appointment Resolution executes |
 
 All later terms are **12 months**.
 
 **3.5 Removal.** An MSIG Resolution may remove a member at any time, with or without cause; their **signing weight ends immediately on removal**. The Committee may refer members to block producers for removal but **cannot remove them itself**.
 
-**3.6 Resignation.** A member may resign by written notice to the Chair and block producers. Resignation takes effect on the stated date, or on delivery if no date is stated; their **seat becomes vacant and signing weight ends at that time**.
+**3.6 Resignation.** A member may resign by written notice to the Chair and block producers. The **signing weight ends immediately on delivery of the notice**. The seat becomes vacant on the stated resignation date, or on delivery if no date is stated.
 
 **3.7 Vacancies.** A vacant seat is filled for the rest of the term using the process for that seat.
 
@@ -167,9 +167,9 @@ An award goes to **block producers** if fewer than four members can sign (sectio
 
 **4.1** The **EOS Community Foundation (ECF)** runs the Community seat vote and sets candidate and voter eligibility, the voting method, and how results are published.
 
-**4.1a** ECF is **independent of the program**. Funding for **administering the Community seat vote** requires ECF’s own MSIG, decided by block producers; it cannot be a Committee award. This does not bar ECF from bidding under **4.1b**, or its members from otherwise eligible program roles or awards, subject to the conflict rules.
+**4.1a** ECF is **independent of the program**. **Any funding to ECF itself**, including for administering the Community seat vote, requires ECF’s own MSIG, decided by block producers at the Threshold; it cannot be a Committee award. This does not bar ECF from bidding under **4.1b**, or its members from otherwise eligible program roles or awards, subject to the conflict rules.
 
-**4.1b ECF may bid.** ECF is a **connected organization** under 6.2 whenever the Community member is engaged by, receives a stipend from, or holds a position in ECF. The member must declare the connection **in writing before the RFP is published**, recuse from scoping, drafting, evaluation, scoring, discussion, and voting, and must not help set its budget or criteria. The connection and recusal must be minuted and published.
+**4.1b ECF may bid.** Any resulting funding still requires ECF’s own MSIG under **4.1a**. ECF is a **connected organization** under 6.2 whenever the Community member is engaged by, receives a stipend from, or holds a position in ECF. The member must declare the connection **in writing before the RFP is published**, recuse from scoping, drafting, evaluation, scoring, discussion, and voting, and must not help set its budget or criteria. The connection and recusal must be minuted and published.
 
 Any ECF stipend or engagement must also be disclosed on-chain under **Part 2 of the questionnaire (6.3a)**.
 
@@ -180,6 +180,8 @@ Any ECF stipend or engagement must also be disclosed on-chain under **Part 2 of 
 **4.4** If block producers refuse to appoint the winner, ECF nominates the runner-up if its process provides one; otherwise ECF runs the vote again.
 
 **4.5 Initial appointment.** MSIG #5 appoints **no interim Community seat holder**; the seat must be filled by a **future MSIG Resolution at the Threshold using Exhibit E**, following the selection process in this section.
+
+**4.6 Initial selection deadline.** The initial ECF winner must be seated **within nine months of MSIG #5’s execution**. On ECF’s request, block producers may extend that deadline **once by MSIG Resolution at the Threshold**, stating the new deadline. If no winner is seated by the applicable deadline, block producers must fill the Community seat **by a future MSIG Resolution at the Threshold following Exhibit E**, without an ECF nomination, subject to the normal eligibility rules. A later ECF nomination does not displace a seated member; the normal term, continuation, and vacancy rules apply.
 
 **4.7** If ECF **stops running the process or ceases to exist**, block producers may, by MSIG Resolution, name another administrator or **fill the Community seat at the Threshold** using the normal appointment rules, indefinitely if needed. Block producers may restore community selection if a process emerges, but are not required to.
 
@@ -224,7 +226,7 @@ The **vision statement requirement in 3.1a** applies. An ECF statement satisfies
 
 **5.6 Recusal.** A conflicted member must recuse and is excluded from materials, quorum, and the vote count.
 
-A recused member **must not sign the payment**. Awards with fewer than four available signers go to block producers under section 9.
+A recused member **must not sign the payment**. Signing and objecting afterwards does not satisfy recusal. Awards with fewer than four available signers go to block producers under section 9.
 
 **5.7 No substitutes.** Members vote personally. Written or cryptographically signed consent counts as a vote.
 
@@ -314,6 +316,8 @@ Records are **append-only**: updates must reference the previous record; nothing
 | **Material breach — compensation and indemnification** | **Loss of unpaid compensation** under the engagement contract and **loss of indemnification** for the conduct. |
 | **Material breach — permanent ban** | A **permanent ban** if block producers confirm it at the **Threshold**, subject to the scope and protections below. |
 
+**Contractual pay suspension.** Exhibit F’s automatic pay suspension on a removal referral or three consecutive unexcused absences is separate from a suspension of role or signing weight. A material-breach referral alone does not suspend the role or signing weight: the Committee vote above is required, without limiting the immediate Treasury-affiliation suspension under **2.4a**.
+
 **The permanent ban.** On confirmation by not fewer than 15 of the 21 active block producers, the person is **permanently barred** from:
 
 - holding any Steering Committee seat;
@@ -360,8 +364,8 @@ The Portal **reads and displays the register without keeping a separate copy**.
 
 | What is written | For each |
 |---|---|
-| Award decisions | RFP reference, awardee, USD amount, scope, the milestone schedule as awarded, vote counts, members voting for, against, and recused **by name and account**, any reason for departing from the scores, and the oracle read — **the full decision record required by 23.2** |
-| Milestone approvals | Award reference, milestone, the Manager of record and any Technical Reviewer **by name and account**, the criteria applied, the determination and its reasons, **any Technical Reviewer assessment as screened below**, amount, and the oracle read |
+| Award decisions | RFP reference, awardee, USD amount, scope, the milestone schedule as awarded, vote counts, members voting for, against, and recused **by name and account**, any reason for departing from the scores, and the applicable oracle or fallback evidence — **the full decision record required by 23.2** |
+| Milestone approvals | Award reference, milestone, the Manager of record and any Technical Reviewer **by name and account**, the criteria applied, the determination and its reasons, **any Technical Reviewer assessment as screened below**, amount, and the applicable oracle or fallback evidence |
 | Payment signatures | The proposal, and **each signing member by name and account** |
 | Committee resolutions with an external effect | Terminations, recovery plans, strikes, engagements, and reserved-matter escalations, with vote counts and the substance of the resolution |
 | **Termination recommendations (11.10a)** | The recommendation as filed — the grounds relied on, the milestone determination it arises from, the filer **by name and account** — **the awardee's response**, and the Committee's outcome, including a decision to decline, a deemed decline, or a strike |
@@ -436,7 +440,7 @@ An action outside these limits is **void**; VS LLC must not contract on it, and 
 |---|---|
 | 4-of-5 signing | No two members can move funds |
 | Contract before payment | Money cannot move before a signed agreement exists |
-| Delay window | Every payment is visible before it settles, and the Committee cannot waive the wait |
+| Delay window | Every payment must remain public for the full wait. The held-proposal fallback uses withheld approvals and is a procedural control; deployment must still prove the execution guards in **10.7 and Exhibit D 6.1**. Neither VS LLC nor the Committee may waive the wait. |
 | Block producer cancellation | Block producers can stop any payment at the Threshold during the delay |
 | Public funds | Program Account balances and transactions must remain publicly auditable |
 | Owner permission with block producers | Block producers can rebuild the permission or recover the account |
@@ -455,6 +459,7 @@ An action outside these limits is **void**; VS LLC must not contract on it, and 
 | **Termination recommendation on a member-reviewed award** | Recusals of any kind leave fewer than **four non-recused members**. |
 | **Required Reviewer missing** | A milestone requires a Reviewer under the published setting in 20.2, but no Reviewer or substitute is engaged. |
 | **No unconflicted Manager** | A milestone, evaluation, or post-award review under 25.2 lacks an unconflicted Manager of record (12.3); block producers may direct a named Manager’s engagement or another basis of approval. |
+| **Funding to ECF itself** | Requires ECF’s own MSIG under **4.1a**, even if ECF bids through the program. |
 | **RFP-system work** | The Committee records that no other capable provider exists (15.2b). |
 | **Conflicts or coverage** | An award would otherwise breach the conflict rules or fails the coverage test in 13.4. |
 | **Program Costs** | A cost would exceed the Program Cost Ceiling or either internal cap (13.1); stop publishing RFPs when the Manager and Reviewer budget is exhausted and do not use Committee pay to continue. |
@@ -521,7 +526,7 @@ Withdrawals reducing the count below seven before it closes move the award into 
 
 **10.7 Cancellation** is a **3-of-5 on-chain administrative action** and is **mandatory** in the 4-to-6 and 7-or-more objection bands; the Committee must cancel within **2 business days** of the count closing, and failure to do so is an express ground for referral to block producers for removal.
 
-**Execution guard.** An initial award payment must remain blocked until the full delay has ended, the Manager has published the final objection count, and the outcome permits execution. A count of **4 or more blocks execution**, even during the two-business-day cancellation period. A **4-to-6** outcome requires cancellation and the confirmation and re-proposal process in **10.9**; a **7-or-more** outcome ends the award. These execution restrictions apply to both the `eosio.msig` delay and the held-multisignature fallback in Exhibit D; under the fallback, participants must observe the wait and objection rules. Later milestone and Program Cost payments have no objection banding.
+**Execution guard.** An initial award payment must remain blocked until the full delay has ended, the Manager has published the final objection count, and the outcome permits execution. A count of **4 or more blocks execution**, even during the two-business-day cancellation period. A **4-to-6** outcome requires cancellation and the confirmation and re-proposal process in **10.9**; a **7-or-more** outcome ends the award. These execution restrictions apply to both mechanisms in Exhibit D. Withholding approvals under the held-multisignature fallback is a **procedural control, not an automatic timelock**. It may be used only with a **tested execution guard satisfying Exhibit D 6.1**; if that cannot be demonstrated, funding and activation must wait for a compliant mechanism or an MSIG amendment. Later milestone and Program Cost payments have no objection banding.
 
 Block producers may also cancel through the owner permission.
 

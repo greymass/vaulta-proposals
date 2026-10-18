@@ -1,7 +1,8 @@
 # MSIG #5 — Network Steering Committee, RFP Framework, Program Funding
 
-**Status: DRAFT v6.14 — for VST and block producer review**
-**Date: [___]**
+**Version:** 6.15\
+**Status:** Draft — proposed revision for VST and block producer review\
+**Date:** 2026-10-18
 
 ---
 
@@ -18,7 +19,7 @@
 | 7 | **Hold program funds on-chain**, moved only by 4 of 5 Committee signatures | Owner permission stays with `eosio.prods` |
 | 8 | **Require a public 7-day payment delay** | Urgent awards use a **3-day delay**; block producers may cancel at **15/21** during either wait. Part E. |
 | 9 | **Send awards back for MSIG approval after 4–6 objections; cancel awards after 7 or more** | Block producer objections during the payment delay. The Committee cancels payment in both cases. Only the **4–6 band** allows a new payment proposal after MSIG confirmation. Framework 10.5. |
-| 10 | **Recognize ECF** to run the community vote for the Community seat | **All five seats require future MSIG appointments**; Francis continues **Trust oversight only** until they are filled |
+| 10 | **Recognize ECF** to run the community vote for the Community seat | **All five seats require future MSIG appointments**; Dafeng Guo, Ross Dold, and Francis Sangkuan continue **unpaid Trust oversight only** until they are filled |
 | 11 | **Pay Committee members USD 2,500 per month each**, contracted through VS LLC | No success fees, no per-award pay |
 | 11a | Allow Committee members to earn **separate Technical Reviewer fees** | Rate-card fees under Framework 12.6, **outside the retainer** — see Part H. Limited to **3 concurrent engagements**, not by total fees. |
 | 12 | **Authorize program funding** | **USD 910,000 over four quarterly cycles**; first instalment: A worth **USD 284,375**. Gross transfer at full spend and a steady A price: **USD 966,875**. Review Notes, note 3. |
@@ -67,7 +68,7 @@ FURTHER RESOLVED, that a further MSIG Resolution may correct an appointment exec
 
 **Transition until all five seats are filled**
 
-FURTHER RESOLVED, that **Dafeng Guo (Vaulta Treasury), Ross Dold (EOSphere), and Francis Sangkuan (1DEX)** continue **the former Oversight Committee’s Trust oversight duties only** until all five Steering Committee seats are filled, when their transition service ends; Ross Dold may be separately appointed, while Dafeng Guo remains subject to the Treasury exclusion in **Framework 2.4a**; and until then **the RFP mandate must not be exercised, no RFP may be published, and no award may be made**.
+FURTHER RESOLVED, that **Dafeng Guo (Vaulta Treasury), Ross Dold (EOSphere), and Francis Sangkuan (1DEX)** continue **the former Oversight Committee’s Trust oversight duties only** until all five Steering Committee seats are filled, when their **unpaid** transition service ends; Ross Dold may be separately appointed, while Dafeng Guo remains subject to the Treasury exclusion in **Framework 2.4a**; and until then **the RFP mandate must not be exercised, no RFP may be published, and no award may be made**.
 
 ### Part C — The Mandate
 
@@ -101,11 +102,11 @@ FURTHER RESOLVED, that payments must use these delay windows:
 
 FURTHER RESOLVED, that **VS LLC must develop and configure the Program Account, Committee Permission, and the disclosure, decisions, and publications registers on `disc.vst` according to Exhibit D**, and **publish Exhibit D with its required configuration and completed deployment record before funding**.
 
-FURTHER RESOLVED, that payments must use the **`eosio.msig` execution delay if available**, or otherwise the **held-multisignature fallback in Exhibit D section 2.3**, observing the same delay windows and objection rules.
+FURTHER RESOLVED, that payments must use the **`eosio.msig` execution delay if available**, or otherwise the **held-multisignature fallback in Exhibit D section 2.3**, observing the same delay windows and objection rules and the **verified execution-guard requirement in Framework 10.7**.
 
 ### Part F — The Community seat
 
-FURTHER RESOLVED, that ECF is asked to publish its process by **[___]** and complete the first vote by **[___]**.
+FURTHER RESOLVED, that ECF is asked to publish its process by **[___]** and complete the first vote by **[___]**, subject to the **nine-month appointment deadline and fallback in Framework 4.6**.
 
 ### Part G — Program roles and VS LLC
 
@@ -127,7 +128,7 @@ FURTHER RESOLVED, that Committee pay is funded through each cycle's transfer and
 
 ### Part I — Funding
 
-FURTHER RESOLVED, that the active block producers request a **first quarterly instalment of A worth USD 284,375** to the Program Account, calculated at the **Reference Rate on the transfer date** under **Framework 13.1**, from the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
+FURTHER RESOLVED, that the active block producers request a **first quarterly instalment of A worth USD 284,375** to the Program Account, calculated at the **Reference Rate on the transfer date** under **Framework 13.4**, from the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
 
 FURTHER RESOLVED, that the program does not begin if the request is **declined, delayed, or only partly met**: the Program Account is not funded, no cycle starts, the **four funding-anchored initial terms under Framework 3.4** do not begin, and no pay accrues; the **Community term still runs from appointment execution** under that section; the Committee must report this publicly; block producers may re-scope the program to available funds.
 
@@ -137,7 +138,7 @@ FURTHER RESOLVED, that **USD 910,000 is authorized for the first four quarterly 
 
 FURTHER RESOLVED, that the **25% funding margin provides no authority to spend or commit funds**.
 
-FURTHER RESOLVED, that later instalments within the first four-cycle funding period are authorized **without a further vote**, subject to **Framework 13.1**.
+FURTHER RESOLVED, that later instalments within the first four-cycle funding period are authorized **without a further vote**, subject to **Framework 13.1 and 13.4–13.4a**; an instalment due during a payment suspension must be **sized at the Reference Rate and transferred on resumption**, not skipped.
 
 FURTHER RESOLVED, that this Resolution **does not settle the wider management of the REX yield and Year 1 pools**, and the Committee does not represent the Network for other funds.
 
@@ -171,7 +172,7 @@ FURTHER RESOLVED, that this Resolution takes effect **on execution**.
 
 **The figures are set; only the items below remain open.**
 
-Off-chain candidate sourcing, counsel’s amendments and operating-procedure changes, and the EOS Rio rights and repository handover remain in the **Program Administration Register**, outside this Resolution’s attachments and approval.
+Off-chain candidate sourcing, counsel’s amendments and operating-procedure changes, and the EOS Rio rights and repository handover are tracked in the **Review Notes’ Launch checklist**, outside this Resolution’s attachments and approval. The operative requirements remain in **Part J and Framework 15.2a**.
 
 **Blank numbers remain fixed** when items are closed and are independent of the Launch checklist task numbers in **MSIG #5 — Review Notes**.
 
@@ -180,7 +181,7 @@ Off-chain candidate sourcing, counsel’s amendments and operating-procedure cha
 | 2 | Source account holding the REX yield and Year 1 pools | I |
 | 4 | ECF process publication and first vote dates | F |
 | 5 | **Publish Exhibit D with its required deployment record complete** (Exhibit D 6.1). Member keys at **Exhibit D 6.3** may be recorded as they arrive and do not block publication. **Blocking — no Program Account funding before publication** (Part E). | Attachments |
-| 8 | **VS LLC must publish questionnaire `VQ1` and open the register for filing**, with no unresolved questionnaire items (Framework 6.3a). Its text, coded-answer schema, and bands are complete. **Blocking — no Program Account funding until every member has filed.** | E |
+| 8 | **VS LLC must publish questionnaire `VQ2` and open the register for filing**, with no unresolved questionnaire items (Framework 6.3a). Its text, coded-answer schema, and bands are complete. **Blocking — no Program Account funding until every member has filed.** | E |
 | 9 | **Configure all three `disc.vst` registers under Exhibit D** (Framework 6.3b, 7.6a), including schemas, authorities, and **16 MB launch RAM provisioned and topped up by the VST and VS LLC** (Exhibit D section 5 and Appendix B). **EOS Rio builds and services them; VS LLC remains accountable. Blocking — no Program Account funding before Exhibit D publication.** | E |
 | 11 | **Counsel confirmation that section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A. **Blocking — until confirmed, no Service or Embedded RFP may be published and no award may be contracted with a populated pre-existing-IP schedule** (Framework 23.3a) | Framework 23.3a; F |
 

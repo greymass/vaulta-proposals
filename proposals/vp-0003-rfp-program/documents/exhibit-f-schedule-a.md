@@ -2,7 +2,9 @@
 
 **Exhibit F to MSIG #5**
 **For use with the Vaulta Stewardship LLC Independent Contractor Agreement**
-**Status: DRAFT v1.8**
+**Version:** 1.9\
+**Status:** Draft\
+**Date:** 2026-10-18
 
 ---
 
@@ -46,7 +48,7 @@ The main agreement already handles the things each role would otherwise need dra
 **3. Payment Structure:**
 
 - **USD [2,500] per month**, paid in arrears, **in A** at the Reference Rate **when payment is proposed**, using the conversion, staleness, and CoinMarketCap fallback rules in **Framework 13.4** (MSIG #5 Part H).
-- Start date for payments: the **later of** the date this Agreement is signed and the date funds are received in the Program Account.
+- Start date for payments: the **later of** Program Account funding and completion of **all onboarding requirements in Framework 3.1a–3.1b**, including the vision statement, signed Agreement, on-chain questionnaire, and registered signing key.
 - Payment frequency: monthly. Invoice cadence: monthly, in arrears.
 - **Payment suspension follows Framework 13.4a**. Entitlement **continues to accrue**, charged to its accrual cycle, and is paid on resumption using the rate **when the resumed payment is proposed**; the allocation and escalation rules in that section apply.
 
@@ -67,9 +69,9 @@ The main agreement already handles the things each role would otherwise need dra
 **7. Additional terms:**
 
 - Contractor acknowledges that a **material breach of the conflict rules carries a permanent ban** from every role in and every payment from the RFP program, confirmed at 15/21 and liftable only at 15/21 (Framework 6.6), and that Contractor will be given the allegation in writing and 10 business days to respond before block producers vote.
-- **Pay is suspended automatically** if Contractor is referred to block producers for removal, or misses three consecutive meetings without excuse, pending resolution. Role, signing weight, and pay are suspended immediately on referral for a material conflict breach.
-- Signing weight and pay commence only when this Agreement is signed, the **disclosure questionnaire is filed on-chain**, and a signing key is registered. The 30-day period for those items runs from the later of the appointment Resolution's execution and the date VS LLC publishes the disclosure register as open for filing.
-- Key weight is surrendered on removal or replacement, but **retained** during authorized month-to-month continuation after a term ends.
+- **Pay is suspended automatically** if Contractor is referred to block producers for removal, or misses three consecutive meetings without excuse, pending resolution. Suspension of role and signing weight for a material conflict breach requires the **Committee vote in Framework 6.6**; the immediate Treasury-affiliation suspension under **2.4a** still applies.
+- Signing weight and pay commence only when the **vision statement and all other required items are filed**, this Agreement is signed, the **disclosure questionnaire is filed on-chain**, and a signing key is registered; pay also waits for Program Account funding. The 30-day period for those items runs from the later of the appointment Resolution's execution and the date VS LLC publishes the disclosure register as open for filing.
+- Key weight ends immediately on delivery of resignation notice, removal, or replacement, but is **retained** during authorized month-to-month continuation after a term ends.
 - Loss or suspected compromise of a key must be reported to the Chair and block producers immediately, and Contractor must not sign until it is replaced.
 
 ---
@@ -222,7 +224,7 @@ The main agreement already handles the things each role would otherwise need dra
 
 **7.5 Service awards.** This award funds an operated service. The running service is **performed, not delivered**, so there is no built artifact to hand over. **For this award the Work Product in 7.1 is the Operational Handover Set, and nothing else** — that is what vests in the VST under section 9. Section 9 is not disapplied; its subject matter is defined here.
 
-The **Operational Handover Set** is: service configuration, deployment tooling, runbooks and operating documentation, and **an export, in a documented format, of any Network data the service holds**. Contractor delivers it at the end of the term, or on termination if earlier, and shall provide the **data export on request at any time**, not only at the end.
+The **Operational Handover Set** comprises the handover materials specified in the **published RFP and this Schedule A**, including **an export, in a documented format, of any Network data the service holds**. Configuration, deployment tooling, runbooks, and operating documentation are included only to the extent expressly agreed; Contractor’s pre-existing platform is excluded. Contractor delivers it at the end of the term, or on termination if earlier, and shall provide the **data export on request at any time**, not only at the end.
 
 Because it vests, the Network may **use, modify, reproduce, and give the Operational Handover Set to any successor provider**. That is the point of it: a successor cannot run what it may not copy.
 

@@ -1,9 +1,9 @@
 # Disclosure Questionnaire
 
-**Version:** 1.4\
+**Version:** 1.5\
 **Status:** Draft\
-**Questionnaire version:** `VQ1`\
-**Date:** [___]
+**Questionnaire version:** `VQ2`\
+**Date:** 2026-10-18
 
 Published by **Vaulta Stewardship LLC** alongside **Exhibit D** under **MSIG #5 Part E**.
 
@@ -178,7 +178,7 @@ Store the **coded answers and full public filing in the same on-chain row**.
 Use one ASCII string, starting with the questionnaire version. Separate entries with `|`:
 
 ```text
-VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.1:N|7.1:Y1|8.1:N
+VQ2|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.1:N|7.1:Y1|8.1:N
 ```
 
 ### Codes
@@ -213,6 +213,8 @@ VQ1|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.
 
 ## Version and change control
 
-- **Approval:** VS LLC may publish a new version after the Committee approves it by recorded vote. Changes to Framework requirements also need an **MSIG amendment under 16.2**.
+**Proposed version `VQ2`** records the public-identity/private-identification distinction in this revised draft. The answer codes, question order, and position bands are unchanged. Existing `VQ1` records retain their recorded version, interpretation, and validity; this revision does not require early refiling.
+
+- **Approval:** Initial publication of the proposed `VQ2` instrument follows **MSIG #5 Part E**; it does not require a prior Committee vote. After that initial publication, VS LLC may publish a new version only after the Committee approves it by recorded vote. Changes to Framework requirements also need an **MSIG amendment under 16.2**.
 - **Existing filings:** New versions apply only to later filings. They do not change earlier filings’ recorded version, interpretation, or validity.
 - **Refiling:** No early refiling is required. Use the current version at your next annual refiling.
