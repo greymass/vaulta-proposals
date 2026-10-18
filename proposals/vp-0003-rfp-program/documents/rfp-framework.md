@@ -41,7 +41,7 @@ These definitions form part of Part 1.
 
 **1.1** The Committee has two roles, governed by separate rules: **Trust oversight** and **Network RFP funding**.
 
-| | **Trust oversight** | **Network RFP funding** |
+| Aspect | **Trust oversight** | **Network RFP funding** |
 |---|---|---|
 | Authority | Trust Agreement | MSIG #5 |
 | Assets | Trust Property | Network funds in the Program Account |
@@ -377,7 +377,7 @@ The Portal **reads and displays the register without keeping a separate copy**.
 
 **Off-chain records.**
 
-| | |
+| Record | Storage and publication |
 |---|---|
 | **Minutes** (5.9) | Minutes stay off-chain and may be redacted under 5.9; resolutions go on-chain |
 | **Proposals** | Confidential until the award is announced (6.5); do not write submissions to the register |
@@ -389,7 +389,7 @@ The Portal **reads and displays the register without keeping a separate copy**.
 
 **Additional screening requirements:**
 
-| | |
+| Record | Screening requirement |
 |---|---|
 | **Termination recommendations** (11.10a) | Retain the recommendation whatever the outcome, including decline, deemed decline, or strike; record a strike alongside it |
 | **Questions and answers** (21.2) | Remove the questioner’s identity before publication (21.2) |
@@ -816,7 +816,7 @@ The Reference Rate is the **`median` field of `delphioracle`’s `datapoints` ta
 
 **The fallback rate.** If the newest `eosusd` datapoint is more than **24 hours** old, or the pair or `delphioracle` is unavailable, renamed, or deprecated, use **(daily high + daily low) ÷ 2** from CoinMarketCap’s published **Vaulta (A), ID 36462**, USD prices for the **UTC day before the read**.
 
-| | |
+| Aspect | Requirement |
 |---|---|
 | **How it converts** | fallback = ⌊ (high + low) ÷ 2 × 10^6 ⌋, computed in exact decimal arithmetic from the published figures — an integer in millionths of a dollar. Then **A-units = ⌊ USD-cents × 10^8 ÷ fallback ⌋** |
 | **How long it applies** | Once it applies, it applies to **every read** until the `eosusd` pair has received at least one new datapoint in every 24-hour period for **7 consecutive days**. The Chair records and publishes the day the fallback began and the day the oracle resumed |
@@ -828,7 +828,7 @@ The Exhibit D configuration published by VS LLC under MSIG #5 confirms the pair,
 
 **Coverage requirements:**
 
-| Rule | |
+| Rule | Requirement |
 |---|---|
 | **Before every award** | Confirm the A balance, at the Reference Rate, covers all outstanding Award Commitments and Program Costs **falling due before the next scheduled instalment**, plus the proposed award, **with at least a 10% margin**. An award failing this test cannot be made and is a reserved matter under section 9 |
 | **Every cycle** | Report outstanding USD commitments, the A balance, the rate used, and the resulting coverage percentage |
