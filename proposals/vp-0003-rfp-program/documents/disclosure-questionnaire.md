@@ -33,6 +33,8 @@ This questionnaire is the **conflict-of-interest declaration** required by the *
 4. Declare connections even if you think they are immaterial. If unsure, disclose them and explain.
 5. Review and sign your answers. **The filing is public and permanent**, and VS LLC cannot change its content.
 
+**Reading the answer codes:** In “Coded as”, `N` means **none**. In `Y`*n*, lowercase *n* is a placeholder for **the number of items you disclose**. Replace it with the count: `Y1` for one employer, `Y2` for two paid engagements. **Do not type the letter n.**
+
 ## Keep it current
 
 Update within **10 business days** of a change and **refile annually**.
