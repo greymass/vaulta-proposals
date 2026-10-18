@@ -69,6 +69,48 @@ In “Coded as”, `N` means **none**. In `Y`*n*, lowercase *n* is a placeholder
 
 ---
 
+## The coded-answer schema
+
+### Format
+
+Store the **coded answers and full public filing in the same on-chain row**.
+
+Use one ASCII string, starting with the questionnaire version. Separate entries with `|`:
+
+```text
+VQ2|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.1:N|7.1:Y1|8.1:N
+```
+
+### Validation
+
+1. Include every coded question in Parts 2–8 **once, in order**. Include **5.2 only in the full answers**.
+2. Every `Y`*n* count must match the number of corresponding entries in the full answers.
+3. If `5.1` is `N`, `5.3` must be `N`. Otherwise, use `R`*m*, where **0 ≤ *m* ≤ *n*** (*n* is the count at 5.1).
+4. For `4.1`, use **`V0/Y0` for no positions**. Other bands require a count of at least 1.
+5. The same answers must produce the same coded string.
+
+### Publication
+
+| Where | What |
+|---|---|
+| **On-chain:** `disc.vst`, `disclosures` table | Public identity, account, role, questionnaire version, filing date, coded answers, and full public answers. Updates also include the previous filing’s transaction ID and the reason for updating. |
+| **Portal** | Displays the on-chain register; keeps no separate copy. |
+| **Excluded** | Exact position amounts, third-party individuals’ names, and private identification from 1.1. Your chosen public identity under 1.2 remains public. |
+
+**Review before signing: filings cannot be edited, redacted, or withdrawn.** VS LLC must return filings containing excluded information rather than publish them. This is a privacy check, not a review of substance.
+
+---
+
+## Version and change control
+
+**VQ2 clarifies public identity versus private identification.** The answer codes, question order, and position bands are unchanged.
+
+- **Approval:** VS LLC may publish a new version after the Committee approves it by recorded vote. Changes to Framework requirements also need an **MSIG amendment under 16.2**.
+- **Existing filings:** New versions apply only to later filings. They do not change earlier filings’ recorded version, interpretation, or validity.
+- **Refiling:** No early refiling is required. Use the current version at your next annual refiling.
+
+---
+
 ## Part 1 — Identity and role
 
 *Not coded. Provide 1.1 privately to VS LLC; record answers 1.2–1.7 on-chain.*
@@ -180,45 +222,3 @@ Describe the relationship and connection **without naming the person**, for exam
 > I have read **Framework 6.6** and understand that a material breach carries **immediate suspension, referral to block producers, and loss of unpaid compensation and indemnification**. A **permanent ban from all program roles and payments** applies if confirmed by at least **15 of the 21 active block producers**, as set out in that section.
 >
 > Signed: ______________________  Date: ____________
-
----
-
-## The coded-answer schema
-
-### Format
-
-Store the **coded answers and full public filing in the same on-chain row**.
-
-Use one ASCII string, starting with the questionnaire version. Separate entries with `|`:
-
-```text
-VQ2|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.1:N|7.1:Y1|8.1:N
-```
-
-### Validation
-
-1. Include every coded question in Parts 2–8 **once, in order**. Include **5.2 only in the full answers**.
-2. Every `Y`*n* count must match the number of corresponding entries in the full answers.
-3. If `5.1` is `N`, `5.3` must be `N`. Otherwise, use `R`*m*, where **0 ≤ *m* ≤ *n*** (*n* is the count at 5.1).
-4. For `4.1`, use **`V0/Y0` for no positions**. Other bands require a count of at least 1.
-5. The same answers must produce the same coded string.
-
-### Publication
-
-| Where | What |
-|---|---|
-| **On-chain:** `disc.vst`, `disclosures` table | Public identity, account, role, questionnaire version, filing date, coded answers, and full public answers. Updates also include the previous filing’s transaction ID and the reason for updating. |
-| **Portal** | Displays the on-chain register; keeps no separate copy. |
-| **Excluded** | Exact position amounts, third-party individuals’ names, and private identification from 1.1. Your chosen public identity under 1.2 remains public. |
-
-**Review before signing: filings cannot be edited, redacted, or withdrawn.** VS LLC must return filings containing excluded information rather than publish them. This is a privacy check, not a review of substance.
-
----
-
-## Version and change control
-
-**VQ2 clarifies public identity versus private identification.** The answer codes, question order, and position bands are unchanged.
-
-- **Approval:** VS LLC may publish a new version after the Committee approves it by recorded vote. Changes to Framework requirements also need an **MSIG amendment under 16.2**.
-- **Existing filings:** New versions apply only to later filings. They do not change earlier filings’ recorded version, interpretation, or validity.
-- **Refiling:** No early refiling is required. Use the current version at your next annual refiling.
