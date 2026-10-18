@@ -33,8 +33,6 @@ This questionnaire is the **conflict-of-interest declaration** required by the *
 4. Declare connections even if you think they are immaterial. If unsure, disclose them and explain.
 5. Review and sign your answers. **The filing is public and permanent**, and VS LLC cannot change its content.
 
-**Reading the answer codes:** In “Coded as”, `N` means **none**. In `Y`*n*, lowercase *n* is a placeholder for **the number of items you disclose**. Replace it with the count: `Y1` for one employer, `Y2` for two paid engagements. **Do not type the letter n.**
-
 ## Keep it current
 
 Update within **10 business days** of a change and **refile annually**.
@@ -54,6 +52,20 @@ An annual refiling more than **30 days overdue** suspends Committee pay and bloc
 | **Immediate family** | Your spouse or partner, parents, children, and siblings. |
 | **Household member** | Anyone who shares your household, related or not. |
 | **Plausibly bid** | An organization that has bid, says it intends to bid, or does the kind of work this program funds. **If unsure, include it.** |
+
+---
+
+## Answer codes
+
+In “Coded as”, `N` means **none**. In `Y`*n*, lowercase *n* is a placeholder for **the number of items you disclose**. Replace it with the count: `Y1` for one employer, `Y2` for two paid engagements. **Do not type the letter n.**
+
+| Code | Meaning |
+|---|---|
+| `N` | None declared. |
+| `Y`*n* | Yes, with *n* items listed in the full answers. *n* must be at least 1, except `V0/Y0` at 4.1. |
+| `V0`–`V4` | Position band for 4.1. |
+| `R`*m* | Number of organizations at 5.1 for which you would recuse yourself. |
+| `X` | Unanswered. Any `X` makes the questionnaire **unfiled** (Framework 6.3c; Exhibit D 4.3). |
 
 ---
 
@@ -182,16 +194,6 @@ Use one ASCII string, starting with the questionnaire version. Separate entries 
 ```text
 VQ2|2.1:Y1|2.2:N|2.3:N|2.4:N|2.5:Y2|3.1:N|4.1:V0/Y0|4.2:N|4.3:N|5.1:Y2|5.3:R2|6.1:N|7.1:Y1|8.1:N
 ```
-
-### Codes
-
-| Code | Meaning |
-|---|---|
-| `N` | None declared. |
-| `Y`*n* | Yes, with *n* items listed in the full answers. *n* must be at least 1, except `V0/Y0` at 4.1. |
-| `V0`–`V4` | Position band for 4.1. |
-| `R`*m* | Number of organizations at 5.1 for which you would recuse yourself. |
-| `X` | Unanswered. Any `X` makes the questionnaire **unfiled** (Framework 6.3c; Exhibit D 4.3). |
 
 ### Validation
 
