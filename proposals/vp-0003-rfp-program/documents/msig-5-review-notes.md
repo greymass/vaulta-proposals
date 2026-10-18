@@ -109,7 +109,7 @@ This also fixes the awkward interaction with long awards. The constraint on a mu
 
 **10. Read Part I narrowly.** The Treasury has said the open question is who represents the Network to receive and manage these funds. The Steering Committee serves that purpose **for the RFP program only**. **Framework 8.4** requires a separate MSIG Resolution before the Committee, VST, or VS LLC may form or join an entity on behalf of the Network.
 
-*Drafted to match the structure of MSIGs #2 to #4. Part E requires VST confirmation. Contract terms require review by counsel.*
+*Drafted to match the structure of MSIGs #2 to #4.*
 
 ## Framework launch recommendation
 
@@ -138,6 +138,8 @@ This checklist tracks remaining launch tasks. It adds no rules or approvals; the
 | 14 | **Clarify the initial platform-build procedure.** The source Exhibit D refers to **Program Administration Register §2.5**, which is not included in this repo. Ask VST how the build is commissioned before the Committee can make awards, including provider selection, contract approval, and payment authorization. | — (review question) |
 | 15 | Complete **Exhibit D’s deployment-confirmation fields and deployment record**; test the payment permissions, both pre-expiry cancellation routes, full waits, and final-objection-count guard under **Exhibit D 6.1**. **Publish the completed Exhibit before funding** (MSIG #5 Part E). Member keys may be recorded as they arrive under **Exhibit D 6.3** and do not block publication; the member-key register must still be complete before funding or permission activation under **Framework 1.2**. | **Yes** — no funding before publication; no funding or permission activation until the tests pass and the member-key register is complete |
 | 16 | Fill the **ECF process-publication and first-vote date blanks in MSIG #5 Part F**, subject to the nine-month appointment deadline and fallback in **Framework 4.6** | — |
+| 17 | Obtain **VST confirmation of MSIG #5 Part E**, covering the Program Account and payment setup. | Required review; the existing deployment, publication, and verification gates remain unchanged. |
+| 18 | Obtain **counsel review of the contract terms**, including the Schedule A templates in **Exhibit F**. | Required review; the specific blocking conditions for pre-existing-IP carve-outs and licence back remain in **Framework 23.3a**. |
 
 ## Revision scope and remaining review
 

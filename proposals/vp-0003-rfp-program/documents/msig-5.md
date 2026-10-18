@@ -163,7 +163,3 @@ FURTHER RESOLVED, that this Resolution takes effect **on execution**.
 | **D** | Program Account, permission, and `disc.vst` register configuration — **the disclosure, decisions and publications registers** | VS LLC — drafted as a specification; deployment values to be filled before publication |
 | **E** | Seat appointment MSIG template | This Resolution |
 | **F** | Schedule A templates for Committee members, Program Managers, Technical Reviewers, and awardees | This Resolution |
-
-**There is no Exhibit C**; Trust Agreement amendments are administered off-chain under Part J. Exhibit letters remain unchanged.
-
-**Review requirements.** Part E requires VST confirmation; contract terms require counsel review.
