@@ -111,7 +111,7 @@ This also fixes the awkward interaction with long awards. The constraint on a mu
 
 This checklist tracks remaining launch tasks. It adds no rules or approvals; the blocking conditions below are established in **MSIG #5, the Framework, and Exhibit D**. The initial Manager pool requirement is in **Framework 12.2**.
 
-**Scope.** The **Program Administration Register** tracks off-chain candidate sourcing, counsel’s conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover. It is **not part of the Framework or approved by MSIG**.
+**Scope.** The **Program Administration Register** tracks off-chain candidate sourcing, counsel’s conforming amendments and operating-procedure changes, and the EOS Rio code and rights handover. It is **not part of the Framework or approved by block producers**.
 
 **Task numbers remain fixed.** Delete resolved tasks without renumbering the rest. These numbers are independent of MSIG #5’s *Blanks to fill*.
 

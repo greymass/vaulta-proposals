@@ -17,7 +17,7 @@ It has two parts:
 - **Part 1 — The Steering Committee and the Mandate.** Who decides, how they are chosen, how they vote, and how money moves.
 - **Part 2 — Running an RFP.** How a single RFP goes from an idea to a paid deliverable.
 
-Part 2 may be amended by MSIG without reopening Part 1. **Part 1 governs any conflict**, and Part 2 may vary a Part 1 rule **only where Part 1 expressly permits it**.
+Block producers may amend Part 2 by MSIG Resolution without reopening Part 1. **Part 1 governs any conflict**, and Part 2 may vary a Part 1 rule **only where Part 1 expressly permits it**.
 
 ## Definitions
 
@@ -88,9 +88,9 @@ Until all five seats are filled, **the Committee must not exercise the RFP manda
 
 **Affiliation** means being a Treasury employee, officer, or director; providing services under contract; controlling Treasury funds; or acting under its direction on treasury functions.
 
-**MSIG may waive the exclusion at the Threshold, with published reasons.**
+**Block producers may waive the exclusion by MSIG Resolution at the Threshold, with published reasons.**
 
-Anyone in these roles who becomes Treasury-affiliated must disclose it within **10 business days**; their signing weight, if any, is **suspended immediately**, and the matter goes to MSIG, which may waive the exclusion or remove them.
+Anyone in these roles who becomes Treasury-affiliated must disclose it within **10 business days**; their signing weight, if any, is **suspended immediately**, and the matter goes to block producers, who may waive the exclusion or remove them.
 
 **2.5** Each member must sign a contract with **VS LLC** and is **not a Trust employee**.
 
@@ -131,13 +131,13 @@ Where candidates in the same proposal conflict under the one-seat or affiliation
 - Any proposed seat left unfilled and why.
 - Any appointment conditions identified by VS LLC.
 
-**MSIG decides eligibility.** If VS LLC records a seat as unfilled for any reason other than an earlier execution, it must publish its reasons and refer the matter to MSIG. The seat remains vacant until MSIG decides.
+**Block producers decide eligibility.** If VS LLC records a seat as unfilled for any reason other than an earlier execution, it must publish its reasons and refer the matter to block producers. The seat remains vacant until block producers decide.
 
 **3.1b Onboarding.** An incomplete appointment proposal that executes is **not void**. Each appointee must sign their contract, **file the standard on-chain disclosure questionnaire under 6.3a–6.3b**, and register their signing key **within 30 days of appointment execution or VS LLC announcing that the register is open, whichever is later**. **Pay and signing weight begin only after all required items are filed and the contract and key requirements are complete**.
 
 **3.2** Members serve **one-year terms**, except for the initial terms in **3.4** and vacancy appointments in **3.7**, and may be reappointed without limit.
 
-**3.3 Continuation.** Members continue month to month after their term ends and **keep their signing key** until a successor is seated or MSIG replaces them.
+**3.3 Continuation.** Members continue month to month after their term ends and **keep their signing key** until a successor is seated or block producers replace them.
 
 **3.4 Initial terms.**
 
@@ -147,11 +147,11 @@ Where candidates in the same proposal conflict under the one-seat or affiliation
 | Marketing | 14 months | The Program Account receives funds |
 | Business Development | 8 months | The Program Account receives funds |
 | General (At-Large) | 8 months | The Program Account receives funds |
-| Community, appointed by MSIG under 4.2 or 4.7 | 12 months | The appointment Resolution executes |
+| Community, appointed by block producers through MSIG Resolution under 4.2 or 4.7 | 12 months | The appointment Resolution executes |
 
 All later terms are **12 months**.
 
-**3.5 Removal.** An MSIG Resolution may remove a member at any time, with or without cause; their **signing weight ends immediately on removal**. The Committee may refer members to MSIG for removal but **cannot remove them itself**.
+**3.5 Removal.** An MSIG Resolution may remove a member at any time, with or without cause; their **signing weight ends immediately on removal**. The Committee may refer members to block producers for removal but **cannot remove them itself**.
 
 **3.6 Resignation.** A member may resign by written notice to the Chair and block producers. Resignation takes effect on the stated date, or on delivery if no date is stated; their **seat becomes vacant and signing weight ends at that time**.
 
@@ -159,9 +159,9 @@ All later terms are **12 months**.
 
 **3.8 Signing requirements.** Payments follow the **Committee permission in 7.2**.
 
-With fewer than four members, **no payment can execute**; the Committee may still meet, decide, publish, and escalate, but MSIG must fill a seat or change the permission.
+With fewer than four members, **no payment can execute**; the Committee may still meet, decide, publish, and escalate, but block producers must fill a seat or change the permission.
 
-An award goes to **MSIG** if fewer than four members can sign (section 9).
+An award goes to **block producers** if fewer than four members can sign (section 9).
 
 ## 4. Community seat
 
@@ -173,15 +173,15 @@ An award goes to **MSIG** if fewer than four members can sign (section 9).
 
 Any ECF stipend or engagement must also be disclosed on-chain under **Part 2 of the questionnaire (6.3a)**.
 
-**4.2** The ECF vote nominates a candidate, who must then be appointed by MSIG like every other Committee member.
+**4.2** The ECF vote nominates a candidate, who must then be appointed by block producers through MSIG Resolution like every other Committee member.
 
 **4.3** Block producers should refuse to appoint an ECF winner only for **disqualifying cause**: a proven conflict of interest, a legal bar, a serious failure in the vote, or conduct that would be Cause under the Trust Agreement. Anyone refusing for another reason should publish it; this commitment is not enforceable under this Framework.
 
-**4.4** If MSIG refuses to appoint the winner, ECF nominates the runner-up if its process provides one; otherwise ECF runs the vote again.
+**4.4** If block producers refuse to appoint the winner, ECF nominates the runner-up if its process provides one; otherwise ECF runs the vote again.
 
 **4.5 Initial appointment.** MSIG #5 appoints **no interim Community seat holder**; the seat must be filled by a **future MSIG Resolution at the Threshold using Exhibit E**, following the selection process in this section.
 
-**4.7** If ECF **stops running the process or ceases to exist**, MSIG may name another administrator or **fill the Community seat at the Threshold** using the normal appointment rules, indefinitely if needed. MSIG may restore community selection if a process emerges, but is not required to.
+**4.7** If ECF **stops running the process or ceases to exist**, block producers may, by MSIG Resolution, name another administrator or **fill the Community seat at the Threshold** using the normal appointment rules, indefinitely if needed. Block producers may restore community selection if a process emerges, but are not required to.
 
 However filled, the seat retains its **Community portfolio, categories under 2.1, vote, signing weight, pay, and status**.
 
@@ -210,8 +210,8 @@ The **vision statement requirement in 3.1a** applies. An ECF statement satisfies
 | Direct a recovery plan under 11.9 | Simple majority, minimum 3 |
 | Strike a termination recommendation as improperly filed (11.10a) | Simple majority, minimum 3 |
 | Cancel a payment proposal on-chain | Administrative signatures under **7.2**; cancellation rules in **10.7** |
-| Refer a member to MSIG for removal | Simple majority, minimum 3 |
-| Escalate a matter to MSIG | Simple majority, minimum 3 |
+| Refer a member to block producers for removal | Simple majority, minimum 3 |
+| Escalate a matter to block producers | Simple majority, minimum 3 |
 | Reassign an RFP to another Manager | Simple majority, minimum 3 |
 | Engage a Manager or Technical Reviewer | Simple majority, minimum 3 |
 | Record that no unconflicted external reviewer was available (12.6.1) | Simple majority, minimum 3 |
@@ -224,11 +224,11 @@ The **vision statement requirement in 3.1a** applies. An ECF statement satisfies
 
 **5.6 Recusal.** A conflicted member must recuse and is excluded from materials, quorum, and the vote count.
 
-A recused member **must not sign the payment**. Awards with fewer than four available signers go to MSIG under section 9.
+A recused member **must not sign the payment**. Awards with fewer than four available signers go to block producers under section 9.
 
 **5.7 No substitutes.** Members vote personally. Written or cryptographically signed consent counts as a vote.
 
-**5.8 Chair.** The At-Large member chairs unless the Committee elects otherwise. The Chair sets agendas and is the contact point for the Trustee, VS LLC, and MSIG. The Chair has no extra or casting vote.
+**5.8 Chair.** The At-Large member chairs unless the Committee elects otherwise. The Chair sets agendas and is the contact point for the Trustee, VS LLC, and block producers. The Chair has no extra or casting vote.
 
 **5.9 Minutes.** Every meeting is minuted with attendance, decisions, vote counts, and recusals. Minutes are published within 10 business days. Only three things may be removed: confidential proposal content before award, legal advice, and personal data. **Vote counts and recusals are never removed.**
 
@@ -310,9 +310,9 @@ Records are **append-only**: updates must reference the previous record; nothing
 |---|---|
 | **Minor or procedural breach** | Correct it, record it in the minutes, and report it in the cycle report. |
 | **Material breach — suspension** | **Immediately suspend** the person’s role, signing weight, and pay on a **Committee vote at simple majority, minimum 3**. |
-| **Material breach — referral** | **Refer to MSIG**, with the evidence published on the Portal. |
+| **Material breach — referral** | **Refer to block producers**, with the evidence published on the Portal. |
 | **Material breach — compensation and indemnification** | **Loss of unpaid compensation** under the engagement contract and **loss of indemnification** for the conduct. |
-| **Material breach — permanent ban** | A **permanent ban** if MSIG confirms it at the **Threshold**, subject to the scope and protections below. |
+| **Material breach — permanent ban** | A **permanent ban** if block producers confirm it at the **Threshold**, subject to the scope and protections below. |
 
 **The permanent ban.** On confirmation by not fewer than 15 of the 21 active block producers, the person is **permanently barred** from:
 
@@ -320,9 +320,9 @@ Records are **append-only**: updates must reference the previous record; nothing
 - serving as an RFP Program Manager or Technical Reviewer;
 - submitting or being named on any proposal to the Vaulta RFP program, or receiving any payment from it — directly, or through any entity in which they hold a material interest.
 
-**Only MSIG at the Threshold may lift a ban**; no Committee vote, passage of time, or membership change reduces or expires it.
+**Only block producers may lift a ban, by MSIG Resolution at the Threshold**; no Committee vote, passage of time, or membership change reduces or expires it.
 
-**Before MSIG votes**, the person must receive the allegation in writing and **10 business days** to respond; their response is published with the referral.
+**Before block producers vote**, the person must receive the allegation in writing and **10 business days** to respond; their response is published with the referral.
 
 **The ban register.** VS LLC must maintain the ban register in the **`publications` table (7.6a)** and display it on the Portal, recording the person, date, confirming MSIG transaction, and any named entity. A lifting at the Threshold is added alongside the ban, not substituted for it. The register must be checked at proposal submission and before any role is assigned.
 
@@ -407,7 +407,7 @@ The Portal **reads and displays the register without keeping a separate copy**.
 
 ## 8. Committee mandate
 
-**8.1** MSIG grants the Committee a **standing mandate to allocate Program Account funds on behalf of the Network**; block producers do not vote on individual RFPs or awards, and a Committee decision within the limits below is the Network's decision.
+**8.1** Block producers grant the Committee a **standing mandate to allocate Program Account funds on behalf of the Network** by MSIG Resolution; block producers do not vote on individual RFPs or awards, and a Committee decision within the limits below is the Network's decision.
 
 **8.3 The Committee decides:**
 
@@ -442,9 +442,9 @@ An action outside these limits is **void**; VS LLC must not contract on it, and 
 | Owner permission with block producers | Block producers can rebuild the permission or recover the account |
 | Funding is authorized a year at a time | The Committee can only ever spend what block producers have authorized, and any instalment can be stopped at the Threshold |
 
-## 9. Matters requiring MSIG
+## 9. Matters requiring block producer approval
 
-**9.1 Reserved matters.** The following require MSIG rather than a Committee decision:
+**9.1 Reserved matters.** The following require **block producer approval by MSIG Resolution at the Threshold**, rather than a Committee decision:
 
 | Matter | Trigger or required action |
 |---|---|
@@ -454,7 +454,7 @@ An action outside these limits is **void**; VS LLC must not contract on it, and 
 | **Mandatory administrative action** under 10.7 or 11.10a | Recusals, vacancies, or suspensions leave fewer than **three available signers**; block producers may cancel through the owner permission meanwhile. The removal ground in 10.7 does not apply when three signatures were unavailable. |
 | **Termination recommendation on a member-reviewed award** | Recusals of any kind leave fewer than **four non-recused members**. |
 | **Required Reviewer missing** | A milestone requires a Reviewer under the published setting in 20.2, but no Reviewer or substitute is engaged. |
-| **No unconflicted Manager** | A milestone, evaluation, or post-award review under 25.2 lacks an unconflicted Manager of record (12.3); MSIG may direct a named Manager’s engagement or another basis of approval. |
+| **No unconflicted Manager** | A milestone, evaluation, or post-award review under 25.2 lacks an unconflicted Manager of record (12.3); block producers may direct a named Manager’s engagement or another basis of approval. |
 | **RFP-system work** | The Committee records that no other capable provider exists (15.2b). |
 | **Conflicts or coverage** | An award would otherwise breach the conflict rules or fails the coverage test in 13.4. |
 | **Program Costs** | A cost would exceed the Program Cost Ceiling or either internal cap (13.1); stop publishing RFPs when the Manager and Reviewer budget is exhausted and do not use Committee pay to continue. |
@@ -465,15 +465,15 @@ An action outside these limits is **void**; VS LLC must not contract on it, and 
 
 **9.2 Timing.**
 
-| Matter | Submission to MSIG | If MSIG does not act |
+| Matter | Submission to block producers | If block producers do not act |
 |---|---|---|
 | **Ordinary referral** | Submit the record and a draft Resolution within **10 business days**. | After **30 days**, the matter is **declined**, its reservation returns to the Cycle Ceiling, and the Committee may rework it, subject to the exceptions below. |
 | **Payment or milestone under an executed awardee agreement** | Submit the record and a draft Resolution within **10 business days**. | The matter stays open, reservations under **13.2** remain, and the Committee must re-submit. |
-| **Replacement rate source under 13.4a** | Submit the failure record and a request for designation, **without choosing a source**, within **5 business days** of the Manager or Chair recording and publishing the failure. | The request stays open, affected reservations remain, and the Committee must re-submit until MSIG acts. |
+| **Replacement rate source under 13.4a** | Submit the failure record and a request for designation, **without choosing a source**, within **5 business days** of the Manager or Chair recording and publishing the failure. | The request stays open, affected reservations remain, and the Committee must re-submit until block producers act. |
 
 The existing-awardee exception **does not cover Program Costs referred for exceeding their ceiling or internal caps**; the ordinary-referral rule applies to those costs.
 
-**Payments the Committee cannot sign.** At the Threshold, MSIG may direct payment through the **block producers’ owner permission** or **temporarily rebuild the Committee permission for named payments**; confirmation alone does not execute a payment.
+**Payments the Committee cannot sign.** At the Threshold, block producers may direct payment through the **block producers’ owner permission** or **temporarily rebuild the Committee permission for named payments**; confirmation alone does not execute a payment.
 
 **Automatic escalation.** A matter falling under 9.1 without a vote to escalate needs no Committee vote for submission; the Chair, or any member if there is no Chair, must submit it.
 
@@ -510,8 +510,8 @@ Add the **on-chain transaction reference** when payment is proposed.
 | Objections | Result |
 |---|---|
 | **0 to 3** | Payment goes ahead when the delay ends. Objections are published and answered in the cycle report |
-| **4 to 6** | Committee **cancels** the payment. It may only be proposed again if MSIG confirms the award |
-| **7 or more** | Committee **cancels** and the award **ends**. No MSIG vote is held |
+| **4 to 6** | Committee **cancels** the payment. It may only be proposed again if block producers confirm the award |
+| **7 or more** | Committee **cancels** and the award **ends**. No block producer vote is held |
 
 Withdrawals reducing the count below seven before it closes move the award into the applicable lower band.
 
@@ -519,7 +519,7 @@ Withdrawals reducing the count below seven before it closes move the award into 
 
 **10.6a Signed objections.** Objections and withdrawals must be **signed by the block producer’s on-chain account**. Count only signatures from the **active producer set at signing**; record ineligible signatures without counting them and identify the producer schedule used.
 
-**10.7 Cancellation** is a **3-of-5 on-chain administrative action** and is **mandatory** in the 4-to-6 and 7-or-more objection bands; the Committee must cancel within **2 business days** of the count closing, and failure to do so is an express ground for referral to MSIG for removal.
+**10.7 Cancellation** is a **3-of-5 on-chain administrative action** and is **mandatory** in the 4-to-6 and 7-or-more objection bands; the Committee must cancel within **2 business days** of the count closing, and failure to do so is an express ground for referral to block producers for removal.
 
 **Execution guard.** An initial award payment must remain blocked until the full delay has ended, the Manager has published the final objection count, and the outcome permits execution. A count of **4 or more blocks execution**, even during the two-business-day cancellation period. A **4-to-6** outcome requires cancellation and the confirmation and re-proposal process in **10.9**; a **7-or-more** outcome ends the award. These execution restrictions apply to both the `eosio.msig` delay and the held-multisignature fallback in Exhibit D; under the fallback, participants must observe the wait and objection rules. Later milestone and Program Cost payments have no objection banding.
 
@@ -527,7 +527,7 @@ Block producers may also cancel through the owner permission.
 
 **10.8** Block producers may cancel **any payment at the Threshold during its delay**, regardless of the objection count.
 
-**10.9** After a **4-to-6-band cancellation**, the Committee must submit the record and a draft confirming Resolution to MSIG within **10 business days**. If MSIG does not confirm within **30 days of submission**, the award ends and its reservation is released.
+**10.9** After a **4-to-6-band cancellation**, the Committee must submit the record and a draft confirming Resolution to block producers within **10 business days**. If block producers do not confirm within **30 days of submission**, the award ends and its reservation is released.
 
 **MSIG confirmation restores the award decision, not the terminated agreement.** Before proposing disbursement again, VS LLC must sign a **fresh agreement on identical terms**, within the **60 days from confirmation** in **10.10**.
 
@@ -650,9 +650,9 @@ File a **written recommendation** stating the grounds and attaching the mileston
 
 | Situation | Required action and effect |
 |---|---|
-| **Escalation** | On escalation under 12.6.1(3) or 9.1, suspend the **15-business-day decision clock and deemed decline** from the escalation date; the payment freeze continues. If MSIG does not act within **30 days** under 9.2, the recommendation is deemed declined and the freeze lifts. |
+| **Escalation** | On escalation under 12.6.1(3) or 9.1, suspend the **15-business-day decision clock and deemed decline** from the escalation date; the payment freeze continues. If block producers do not act within **30 days** under 9.2, the recommendation is deemed declined and the freeze lifts. |
 | **No outcome reaches its threshold** | If no outcome reaches its threshold within the 15 business days, the recommendation is **deemed declined**, the freeze in points 1 and 2 lifts, and the Committee publishes the vote counts and any reasons given. The awardee remains contractually obliged to deliver and the reservation stands. |
-| **Member-Reviewer recusal** | Apply **12.6.3**, including its continuing recusal after the engagement ends or is suspended. If any recusals leave **fewer than four non-recused seats**, refer the recommendation to **MSIG under 9.1**. |
+| **Member-Reviewer recusal** | Apply **12.6.3**, including its continuing recusal after the engagement ends or is suspended. If any recusals leave **fewer than four non-recused seats**, refer the recommendation to **block producers under 9.1**. |
 | **Improper filing** | The Committee may, at simple majority with a minimum of 3, **strike a recommendation** filed by someone who was conflicted or who was not the Manager of record or an engaged Reviewer when they filed. Striking lifts the freeze immediately and is published with reasons. Nothing in this section limits the Committee's power to reassign an RFP under 12.3, and reassignment does not by itself withdraw a filed recommendation. |
 | **Resuming payment** | Once the freeze lifts, cancelled payments may be **re-proposed without another award vote**, with a fresh delay and no new objection banding. Extend the **60-day clock in 10.10 by the freeze’s length**. |
 
@@ -680,7 +680,7 @@ On reassignment:
 - The outgoing Manager must hand over the **approval history, correspondence, and open items in writing**.
 - The incoming Manager must have **no conflict on that RFP**.
 
-**No unconflicted Manager.** Record and publish the shortage and **escalate under 9.1**. MSIG may direct engagement of a named Manager or another basis of approval; **the bar in 12.2a still applies**.
+**No unconflicted Manager.** Record and publish the shortage and **escalate under 9.1**. Block producers may direct engagement of a named Manager or another basis of approval; **the bar in 12.2a still applies**.
 
 **12.4 Workload.** The Committee must track and report each Manager’s RFP workload.
 
@@ -692,7 +692,7 @@ On reassignment:
 
 | Rule | Requirement |
 |---|---|
-| **1** | **MSIG has set a concurrent-engagement cap** (**MSIG #5 Part H: 3**); no engagement may begin before it is set. |
+| **1** | **Block producers have set a concurrent-engagement cap** (**MSIG #5 Part H: 3**); no engagement may begin before it is set. |
 | **2** | The Committee has recorded that **no suitable unconflicted external Reviewer was available**, and minuted and published that finding with the engagement. |
 | **3** | **All five seats are filled.** Suspend the engagement during **any vacancy or suspension of the member’s role or signing weight**, including under **6.6 or 2.4a**. A suspended member does not count as an engaged Reviewer under **9.1, 11.2, or 11.4**. |
 | **4** | **No other Committee member reviews that RFP**, and the member is **within the concurrent-engagement cap**. |
@@ -703,7 +703,7 @@ On reassignment:
 |---|---|
 | **Suspended member is the only Reviewer on a published RFP or live award** | The Committee must engage a substitute at the threshold in **5.3**; the substitute satisfies the Reviewer setting in **20.2**. |
 | **Suspended member was the only Reviewer; no substitute engaged — unawarded RFP** | The **Manager writes the scored assessment under 22.3**. |
-| **Suspended member was the only Reviewer; no substitute engaged — milestone under a live award** | The affected milestone goes to **MSIG under 9.1**. |
+| **Suspended member was the only Reviewer; no substitute engaged — milestone under a live award** | The affected milestone goes to **block producers under 9.1**. |
 | **Seat refilled — no substitute engaged** | The engagement resumes. |
 | **Seat refilled — substitute engaged** | Resumption requires a Committee decision at the threshold in **5.3**; otherwise the substitute remains and the member’s fee is prorated to work performed. |
 
@@ -715,7 +715,7 @@ On reassignment:
 |---|---|
 | **Must not draft acceptance criteria or the milestone schedule** | The Manager of record or At-Large member drafts them; the member may advise on the record |
 | **Must not score proposals or reconcile divergent scores** | Give a written note, not a score. If the member is the only engaged Reviewer, the Manager writes the scored assessment under 22.3 |
-| **Must not vote on termination recommendations, recovery plans, or strike decisions** | Applies to that award whoever filed the recommendation, even after the engagement ends or is suspended. If fewer than four non-recused seats remain, refer the recommendation to **MSIG under 9.1** (11.10a) |
+| **Must not vote on termination recommendations, recovery plans, or strike decisions** | Applies to that award whoever filed the recommendation, even after the engagement ends or is suspended. If fewer than four non-recused seats remain, refer the recommendation to **block producers under 9.1** (11.10a) |
 | **Must not vote on or sign payment of their own Reviewer fee** | Follow 13.3a |
 
 **12.6.4** A member-Reviewer **keeps their award vote** and **may sign milestone payments** on the award, subject to the checks in 11.4.
@@ -724,8 +724,8 @@ On reassignment:
 
 | Requirement | Rule |
 |---|---|
-| **Rates** | Use the **MSIG-set Exhibit B rate card**; the Committee cannot negotiate or vary it. |
-| **Limits** | There is **no per-member fee cap**. All fees share the **Program Cost Ceiling and internal cap in 13.1**; exceeding either is reserved to **MSIG under 9.1**. |
+| **Rates** | Use the **Exhibit B rate card set by block producers through MSIG Resolution**; the Committee cannot negotiate or vary it. |
+| **Limits** | There is **no per-member fee cap**. All fees share the **Program Cost Ceiling and internal cap in 13.1**; exceeding either is reserved to **block producers under 9.1**. |
 | **Reporting** | Report every engagement and fee **by member and RFP** under **13.5**. |
 | **Disclosure** | Update the member’s questionnaire **before engagement begins** under **6.3c**; the usual 10-business-day window does not apply. |
 | **Block-producer control** | Block producers may change the concurrent-engagement cap or rate card, or remove the member. |
@@ -736,9 +736,9 @@ On reassignment:
 
 **13.1 Limits and funding periods.**
 
-**Limits.** MSIG sets the **Cycle Ceiling**, **Per-Award Limit**, **Program Cost Ceiling**, **cycle length**, and **program scope**. Ceilings are maxima, not targets; unspent allocations do not carry over.
+**Limits.** Block producers set the **Cycle Ceiling**, **Per-Award Limit**, **Program Cost Ceiling**, **cycle length**, and **program scope** by MSIG Resolution. Ceilings are maxima, not targets; unspent allocations do not carry over.
 
-The **Cycle Ceiling** caps commitments to awardees. The **Program Cost Ceiling** caps program operations, with separate internal caps for **Committee pay** and **Manager and Reviewer fees, Portal, and administration**. Underspend in one must not raise the other; exceeding either is reserved to MSIG under **9.1**. Amounts are set in **MSIG #5 Part D** (Appendix B).
+The **Cycle Ceiling** caps commitments to awardees. The **Program Cost Ceiling** caps program operations, with separate internal caps for **Committee pay** and **Manager and Reviewer fees, Portal, and administration**. Underspend in one must not raise the other; exceeding either is reserved to block producers under **9.1**. Amounts are set in **MSIG #5 Part D** (Appendix B).
 
 **Quarterly funding.** Funding is authorized **four cycles at a time, covering one year** — the **authorized funding period**. Funds are transferred quarterly under that single authorization, topping the Program Account up to **125% of the coming cycle’s Total Program Spend**. Forward commitments count within that cycle’s Cycle Ceiling and do not increase the top-up.
 
@@ -834,7 +834,7 @@ The Exhibit D configuration published by VS LLC under MSIG #5 confirms the pair,
 |---|---|
 | **Before every award** | Confirm the A balance, at the Reference Rate, covers all outstanding Award Commitments and Program Costs **falling due before the next scheduled instalment**, plus the proposed award, **with at least a 10% margin**. An award failing this test cannot be made and is a reserved matter under section 9 |
 | **Every cycle** | Report outstanding USD commitments, the A balance, the rate used, and the resulting coverage percentage |
-| **If coverage falls below the 10% floor** | Stop awarding. Notify MSIG within **5 business days** and request a top-up. Milestones under existing agreements continue to be paid while funds allow |
+| **If coverage falls below the 10% floor** | Stop awarding. Notify block producers within **5 business days** and request a top-up through an MSIG proposal. Milestones under existing agreements continue to be paid while funds allow |
 | **If A rises** | Report the surplus. It is not swept at cycle end — it reduces the next quarterly instalment, and any final balance is returned at the end of the funding period (section 14.6) |
 
 **A change in the A payment amount is not a top-up**: it maintains the USD peg; **an award's USD amount must not exceed the Per-Award Limit**, and any increase requires the award threshold, a contract amendment, publication, and a fresh proposal and delay (11.8).
@@ -843,9 +843,9 @@ The Exhibit D configuration published by VS LLC under MSIG #5 confirms the pair,
 
 For source failures covered by **13.4**, use its fallback; suspend payments only if neither source is available.
 
-The **Chair must record and publish the failure within 2 business days** of any member or VS LLC becoming aware; the affected award’s Manager is the alternate. Escalate to **MSIG within 5 business days of that record** under 9.2, requesting a replacement source. **The Committee cannot choose a substitute.**
+The **Chair must record and publish the failure within 2 business days** of any member or VS LLC becoming aware; the affected award’s Manager is the alternate. Escalate to **block producers within 5 business days of that record** under 9.2, requesting a replacement source. **The Committee cannot choose a substitute.**
 
-**How payments resume.** Suspended payments resume when the fallback returns, the original oracle satisfies the **7-consecutive-day recovery requirement in 13.4**, or MSIG designates a replacement source. Apply the restored source to **payment approvals made after resumption**; completed payments are not reopened. The designation amends the **Reference Rate definition under 16.2** and is not subject to deemed decline under 9.2.
+**How payments resume.** Suspended payments resume when the fallback returns, the original oracle satisfies the **7-consecutive-day recovery requirement in 13.4**, or block producers designate a replacement source. Apply the restored source to **payment approvals made after resumption**; completed payments are not reopened. The designation amends the **Reference Rate definition under 16.2** and is not subject to deemed decline under 9.2.
 
 **What stops and what continues**
 
@@ -868,11 +868,11 @@ The **Chair must record and publish the failure within 2 business days** of any 
 | **Quarterly funding** | A quarterly instalment into the Program Account due during suspension must be **sized at the Reference Rate and transferred on resumption**, not skipped (MSIG #5 Part I). |
 | **Overlapping freezes** | Overlapping freezes under **11.10a** and suspensions under this section extend a clock **once, not twice**. |
 | **Published bounties** | An already-published bounty may be delivered, determined, and contracted, but **not paid until resumption**; its award decision was the publication vote. |
-| **Replacement-source requirements** | A replacement source designated by MSIG must support the **staleness and collar checks**; the designation must state the field, precision, equivalent newest-datapoint timestamp, and how the checks apply. |
+| **Replacement-source requirements** | A replacement source designated by block producers must support the **staleness and collar checks**; the designation must state the field, precision, equivalent newest-datapoint timestamp, and how the checks apply. |
 
 If an awardee cannot reasonably continue unpaid, use **variation or termination by agreement under 11.8**; do not substitute a rate or increase the award during suspension.
 
-**13.5 Cycle report.** The Program Account must remain **publicly auditable on-chain**. Each cycle, publish a report explaining and reconciling its activity in the **`publications` register (7.6a)**, display it on the Portal, and send it to MSIG. Include:
+**13.5 Cycle report.** The Program Account must remain **publicly auditable on-chain**. Each cycle, publish a report explaining and reconciling its activity in the **`publications` register (7.6a)**, display it on the Portal, and send it to block producers. Include:
 
 | Area | Required information |
 |---|---|
@@ -881,18 +881,18 @@ If an awardee cannot reasonably continue unpaid, use **variation or termination 
 | **Funds** | Chain-reconciled opening and closing balances; amounts reserved and committed against the Cycle Ceiling and remaining capacity; committed versus paid; Program Costs used and remaining against the overall ceiling and **both internal caps: Committee pay, and Manager/Reviewer fees with Portal and administration**. |
 | **Objections and cancellations** | Objections by block producer and outcomes; cancelled payments, ended or expired awards, and reasons. |
 | **Delivery** | Approved and rejected milestones, with the approving Manager, any Reviewer, and signing members **by name and account**; terminations; post-award reviews under 25.2 with award references and links. |
-| **Rate events** | Fallback start, oracle-resumption dates, and payments priced using fallback (13.4). For suspensions, report the start, affected amounts, MSIG replacement-source designation date, and resumption date **in every cycle report until resolved** (13.4a). |
-| **Escalations** | Matters submitted to MSIG and outcomes. |
+| **Rate events** | Fallback start, oracle-resumption dates, and payments priced using fallback (13.4). For suspensions, report the start, affected amounts, date block producers designated the replacement source, and resumption date **in every cycle report until resolved** (13.4a). |
+| **Escalations** | Matters submitted to block producers and outcomes. |
 | **Managers and member-Reviewers** | Each Manager’s RFP load and reassignments; every Committee-member Reviewer engagement and fee paid **by member and RFP**, cumulative cycle fees, and engagement count against the concurrent cap (12.6). |
 | **Disclosures** | Questionnaires filed, updated, or overdue, with the on-chain transaction for each. |
 
 ## 14. Expiry, suspension, revocation
 
-**14.1** The mandate continues **until MSIG suspends or revokes it**, with no fixed expiry date.
+**14.1** The mandate continues **until block producers suspend or revoke it**, with no fixed expiry date.
 
 Funding remains subject to **four-cycle authorization**; block producers may decline the next period or stop or reduce an instalment at the Threshold.
 
-**14.2** MSIG may **suspend or revoke the mandate at any time, without cause**, and rebuild the Committee permission through the owner permission.
+**14.2** Block producers may **suspend or revoke the mandate at any time, without cause**, and rebuild the Committee permission through the owner permission.
 
 **14.3 Annual review.** The Committee must publish an annual review in the **`publications` register** (7.6a), covering awards, outcomes, conflict incidents, coverage history, and whether the limits remain appropriate.
 
@@ -906,7 +906,7 @@ Funding remains subject to **four-cycle authorization**; block producers may dec
 
 **14.5 Existing obligations must remain payable.** A Resolution ending the mandate must retain the Committee permission for surviving agreements only or instruct block producers to build a replacement permission.
 
-**14.6** After a funding period ends and all contracted obligations are met, return or sweep the remaining balance through the owner permission as MSIG directs. **Do not carry it into the next funding period**; within a period, balances reduce quarterly top-ups rather than being swept each cycle.
+**14.6** After a funding period ends and all contracted obligations are met, return or sweep the remaining balance through the owner permission as block producers direct. **Do not carry it into the next funding period**; within a period, balances reduce quarterly top-ups rather than being swept each cycle.
 
 ## 15. Trustee and VS LLC roles
 
@@ -924,7 +924,7 @@ Funding remains subject to **four-cycle authorization**; block producers may dec
 
 **15.2b RFP-system awards.** The Committee may fund work on the RFP system through the **ordinary RFP, award, contract, delay, and signature process**; categorize it as **Core Development** and charge it to the **Cycle Ceiling**.
 
-**VS LLC and connected entities must not bid on RFP-system work**. Apply **6.2** as if references to a member referred to VS LLC, including common control and material interests in either direction. **MSIG may waive the bar at the Threshold with published reasons.** If the Committee finds no other capable provider, escalate the award under **section 9**.
+**VS LLC and connected entities must not bid on RFP-system work**. Apply **6.2** as if references to a member referred to VS LLC, including common control and material interests in either direction. **Block producers may waive the bar by MSIG Resolution at the Threshold with published reasons.** If the Committee finds no other capable provider, escalate the award under **section 9**.
 
 **Where the line falls.** Building, extending, or materially reworking the system is an **award**. Keeping the existing system running unchanged — hosting, domains, certificates, monitoring, backups, administration — is an **operating cost** under 13.3a.
 
@@ -940,7 +940,7 @@ Flag every RFP-system award as **self-referential in the cycle report**.
 - Exceeds the **Cycle Ceiling or Per-Award Limit**; or
 - Lacks a complete record.
 
-This checks **authority rather than quality**. VS LLC must explain its refusal **in writing to the Committee and MSIG**.
+This checks **authority rather than quality**. VS LLC must explain its refusal **in writing to the Committee and block producers**.
 
 **15.4 Block producers** set limits, appoint and remove members, decide escalations, hold the owner permission, and may cancel payments at the Threshold during the delay. They do not vote on individual awards within the mandate.
 
@@ -948,7 +948,7 @@ This checks **authority rather than quality**. VS LLC must explain its refusal *
 
 **16.1** The Committee publishes a written self-review **9 months after the funding date**, covering RFP throughput, results, conflict incidents, and whether five seats is working.
 
-**16.2** The Framework may be amended by MSIG; the Committee may propose amendments by two-thirds, minimum 3; and **Part 2 may be amended without reopening Part 1**.
+**16.2** Block producers may amend the Framework by MSIG Resolution; the Committee may propose amendments by two-thirds, minimum 3; and **Part 2 may be amended without reopening Part 1**.
 
 ---
 
@@ -1056,7 +1056,7 @@ The Committee identifies Network needs, publishes RFPs, invites competing propos
 
 **Publication locks.** The **award shape and Reviewer setting cannot change** at contracting, signing, or under 11.8; correct an unsuitable setting in the next RFP. The Reviewer setting governs every assessment throughout the award under **11.2 and 11.4**.
 
-**20.4 Approval to publish.** Majority, minimum 3. Before publishing, the Committee confirms the expected award fits within the Per-Award Limit and the remaining Cycle Ceiling. If an escalation to MSIG will be needed, get it before publishing, not after proposals arrive.
+**20.4 Approval to publish.** Majority, minimum 3. Before publishing, the Committee confirms the expected award fits within the Per-Award Limit and the remaining Cycle Ceiling. If an escalation to block producers will be needed, get it before publishing, not after proposals arrive.
 
 **20.5 Minimum open period.** 21 days normally. 10 days for small or urgent RFPs with a recorded reason.
 
@@ -1100,7 +1100,7 @@ In every case a written assessment against published criteria must exist before 
 
 **22.5 Departing from the scores.** The Committee may award to a proposal that did not score highest, but must publish a written reason.
 
-**22.6 Too many recusals.** If fewer than three non-recused members remain, or fewer than four can sign, the award goes to MSIG with the written scores and a statement of the recusals.
+**22.6 Too many recusals.** If fewer than three non-recused members remain, or fewer than four can sign, the award goes to block producers with the written scores and a statement of the recusals.
 
 **22.7 No good proposals.** The Committee may decline to award, change the scope, and republish.
 
@@ -1296,7 +1296,7 @@ This is a role guide; the cited sections contain the full rules and exceptions.
 
 | Role | Responsibilities | Limits |
 |---|---|---|
-| **Block producers (MSIG)** | Grant, suspend, or revoke the mandate; authorize four-cycle funding periods; set limits; appoint and remove members; decide escalations; cancel payments at the Threshold. | Do not vote on individual RFPs or awards within the mandate (8–9). |
+| **Block producers** | Grant, suspend, or revoke the mandate; authorize four-cycle funding periods; set limits; appoint and remove members; decide escalations; cancel payments at the Threshold. | Do not vote on individual RFPs or awards within the mandate (8–9). |
 | **Steering Committee** | Select RFPs, scopes, budgets, and awardees; withhold or terminate; classify RFP-system work (15.2b); sign payments under **7.2**. | No milestone approval except **13.4 rate referrals**; no serving as Manager of record (12.2a) or managing funds outside the Program Account. |
 | **Manager of record** | Run the RFP, approve milestones, keep the objection register, and recommend termination under 11.10a. | Cannot be a Committee member, vote on awards, bid on their RFP, terminate awards, or sign or disburse payments. |
 | **Technical Reviewer** | Provide written scores and milestone assessments when engaged, including for technical Service awards; submit termination recommendations directly to the Committee. | Cannot work where the Reviewer setting says none is engaged, approve milestones, or terminate awards. No vote except as a **member-Reviewer under 12.6**, who keeps their seat’s award vote and may sign milestone payments, subject to that section’s scoring, reconciliation, termination/recovery/strike-vote, and own-fee restrictions. |

@@ -32,7 +32,7 @@ Managers and Reviewers are paid for **assessing work**. The assessment fee is th
 
 Fees are **set in USD and paid in A**, using the Reference Rate **when payment is proposed**, through the published Program Cost schedule (Framework 13.4 and 13.3a).
 
-Fees continue to accrue during a suspension under Framework 13.4a. On resumption, use the Reference Rate when the resumed payment is proposed, retaining the accrual-cycle allocation and MSIG escalation rules in **Framework 13.4a**.
+Fees continue to accrue during a suspension under Framework 13.4a. On resumption, use the Reference Rate when the resumed payment is proposed, retaining the accrual-cycle allocation and rules for escalation to block producers in **Framework 13.4a**.
 
 ### The no-award fee
 
@@ -51,7 +51,7 @@ The fee **replaces any milestone fee for the same determination**; both cannot b
 
 ## 1. Setting and reviewing rates
 
-Rates are set by **MSIG #5** and may change only by **MSIG at the Threshold**; changes apply only to new engagements. The Committee cannot negotiate rates or add premiums (Framework 12.6.5).
+Rates are set by **MSIG #5** and may change only by **block producers through an MSIG Resolution at the Threshold**; changes apply only to new engagements. The Committee cannot negotiate rates or add premiums (Framework 12.6.5).
 
 Rates are reviewed annually under **Framework 14.3**, using cycle reports to assess the work required.
 

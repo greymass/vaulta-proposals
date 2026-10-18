@@ -14,7 +14,7 @@
 | 3 | **Grow it from 3 seats to 5**, each with a subject area | Core Development, Marketing, Business Development, Community, At-Large |
 | 4 | **Set member terms** | Initial terms: **14 months** for Core Development and Marketing; **8 months** for Business Development and At-Large; **12 months** for Community. Later terms are **12 months**; vacancy appointments cover the remaining term. Framework 3.2–3.4, 3.7. |
 | 5 | **Authorize RFP funding decisions** | The Committee decides on behalf of the Network; within the mandate, block producers no longer vote on individual RFPs or awards. |
-| 6 | **Set funding limits** | **USD 150,000 per cycle** in awards; **USD 100,000 total contract value per award**. Larger awards return to MSIG. The mandate continues until block producers cancel it. |
+| 6 | **Set funding limits** | **USD 150,000 per cycle** in awards; **USD 100,000 total contract value per award**. Larger awards return to block producers. The mandate continues until block producers cancel it. |
 | 7 | **Hold program funds on-chain**, moved only by 4 of 5 Committee signatures | Owner permission stays with `eosio.prods` |
 | 8 | **Require a public 7-day payment delay** | Urgent awards use a **3-day delay**; block producers may cancel at **15/21** during either wait. Part E. |
 | 9 | **Send awards back for MSIG approval after 4–6 objections; cancel awards after 7 or more** | Block producer objections during the payment delay. The Committee cancels payment in both cases. Only the **4–6 band** allows a new payment proposal after MSIG confirmation. Framework 10.5. |
@@ -80,7 +80,7 @@ FURTHER RESOLVED, that the following limits apply:
 | Limit | Amount (USD) | Applies to |
 |---|---|---|
 | **Cycle Ceiling** — most the Committee may commit in **awards** | **150,000** | Each cycle |
-| **Per-Award Limit** — largest single award without coming back to MSIG | **100,000** | **Total contract value across all cycles** |
+| **Per-Award Limit** — largest single award without coming back to block producers | **100,000** | **Total contract value across all cycles** |
 | **Program Costs** — everything the program spends on itself | **77,500** | Each cycle |
 | — of which **Committee pay**, 5 members × 3 months at USD 2,500 | **37,500** | Each cycle |
 | — of which **Manager and Reviewer fees, Portal, and administration** | **40,000** | Each cycle |
@@ -129,7 +129,7 @@ FURTHER RESOLVED, that Committee pay is funded through each cycle's transfer and
 
 FURTHER RESOLVED, that the active block producers request a **first quarterly instalment of A worth USD 284,375** to the Program Account, calculated at the **Reference Rate on the transfer date** under **Framework 13.1**, from the Network's **REX yield pool and Year 1 allocation**, held at **[___]** *(name the source account)*.
 
-FURTHER RESOLVED, that the program does not begin if the request is **declined, delayed, or only partly met**: the Program Account is not funded, no cycle starts, the **four funding-anchored initial terms under Framework 3.4** do not begin, and no pay accrues; the **Community term still runs from appointment execution** under that section; the Committee must report this publicly; MSIG may re-scope the program to available funds.
+FURTHER RESOLVED, that the program does not begin if the request is **declined, delayed, or only partly met**: the Program Account is not funded, no cycle starts, the **four funding-anchored initial terms under Framework 3.4** do not begin, and no pay accrues; the **Community term still runs from appointment execution** under that section; the Committee must report this publicly; block producers may re-scope the program to available funds.
 
 FURTHER RESOLVED, that the transfer is a **one-way contribution of Network funds**, and any source pools held by the VST or VS LLC are released as Network funds, not as a Trust activity.
 

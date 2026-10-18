@@ -163,7 +163,7 @@ Describe the relationship and connection **without naming the person**, for exam
 >
 > I must **update this declaration within 10 business days** of any change and **refile annually**. If I am a Committee member taking a Technical Reviewer engagement, I must also **file an update before it begins** (Framework 12.6).
 >
-> I have read **Framework 6.6** and understand that a material breach carries **immediate suspension, referral to MSIG, and loss of unpaid compensation and indemnification**. A **permanent ban from all program roles and payments** applies if confirmed by at least **15 of the 21 active block producers**, as set out in that section.
+> I have read **Framework 6.6** and understand that a material breach carries **immediate suspension, referral to block producers, and loss of unpaid compensation and indemnification**. A **permanent ban from all program roles and payments** applies if confirmed by at least **15 of the 21 active block producers**, as set out in that section.
 >
 > Signed: ______________________  Date: ____________
 
