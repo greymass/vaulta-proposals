@@ -184,7 +184,3 @@ Off-chain candidate sourcing, counsel’s amendments and operating-procedure cha
 | 8 | **VS LLC must publish questionnaire `VQ2` and open the register for filing**, with no unresolved questionnaire items (Framework 6.3a). Its text, coded-answer schema, and bands are complete. **Blocking — no Program Account funding until every member has filed.** | E |
 | 9 | **Configure all three `disc.vst` registers under Exhibit D** (Framework 6.3b, 7.6a), including schemas, authorities, and **16 MB launch RAM provisioned and topped up by the VST and VS LLC** (Exhibit D section 5 and Appendix B). **EOS Rio builds and services them; VS LLC remains accountable. Blocking — no Program Account funding before Exhibit D publication.** | E |
 | 11 | **Counsel confirmation that section 9** of the standard Independent Contractor Agreement permits the pre-existing-IP carve-out and licence back by Schedule A. **Blocking — until confirmed, no Service or Embedded RFP may be published and no award may be contracted with a populated pre-existing-IP schedule** (Framework 23.3a) | Framework 23.3a; F |
-
-## Review notes
-
-Historical, financial, and technical background is preserved in **MSIG #5 — Review Notes**, a separate reference document published alongside this Resolution; it adds no rules or approvals.
