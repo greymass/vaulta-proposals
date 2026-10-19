@@ -25,6 +25,7 @@ documents:
     - documents/exhibit-e-seat-appointment.md
     - documents/exhibit-f-schedule-a.md
     - documents/disclosure-questionnaire.md
+    - documents/msig-5-review-notes.md
 revisions:
     - version: 1
       date: 2026-09-01
@@ -41,6 +42,48 @@ revisions:
     - version: 5
       date: 2026-10-06
       summary: Ingests MSIG #5 v6.14, Framework v5.4, Exhibit D v2.4 and Exhibit F v1.8: a CoinMarketCap fallback rate and a 30/10-day long-stop.
+    - version: 6
+      date: 2026-10-16
+      summary: Shortens MSIG #5 and separates its review notes while retaining operative requirements.
+    - version: 7
+      date: 2026-10-16
+      summary: Aligns payment, appointment, contract, and disclosure rules; consolidates duplicates and requires payment-control verification.
+    - version: 8
+      date: 2026-10-16
+      summary: Aligns Schedule A exceptions and references, restores testnet rehearsals and safeguards, and clarifies pricing summaries.
+    - version: 9
+      date: 2026-10-18
+      summary: "Proposes revised drafts: MSIG 6.15, Framework 5.5, B 3.5, D 2.5, E 2.2, F 1.9 and questionnaire 1.5/VQ2."
+    - version: 10
+      date: 2026-10-18
+      summary: Requires future MSIGs for all five seats, unpaid oversight transition and a nine-month Community-seat fallback.
+    - version: 11
+      date: 2026-10-18
+      summary: Keeps award-specific Service handovers and express IP licences; providers retain pre-existing IP and disclose switching limits.
+    - version: 12
+      date: 2026-10-18
+      summary: Restores ECF funding and key-security safeguards; aligns resignation, onboarding, suspension, privacy and oracle recovery.
+    - version: 13
+      date: 2026-10-18
+      summary: Defines Committee and BP cancellation routes, distinguishes payment delays and preserves contract-cancellation exceptions.
+    - version: 14
+      date: 2026-10-18
+      summary: Moves launch tasks to review notes, makes administration instructions self-contained and refreshes references and review guidance.
+    - version: 15
+      date: 2026-10-18
+      summary: Restores Exhibit B's prior version and blank date; no rate-card content changed in the review-fix commit.
+    - version: 16
+      date: 2026-10-18
+      summary: Removes added cancellation restrictions and repeated checks while retaining the proposer and block producer cancellation routes.
+    - version: 17
+      date: 2026-10-18
+      summary: Removes the initial-questionnaire approval exception and pre-Committee build MSIG requirement; flags the missing build procedure.
+    - version: 18
+      date: 2026-10-18
+      summary: Makes MSIG #2 term supersession and vstcreation's Trust-amendment authorization explicit in MSIG #5.
+    - version: 19
+      date: 2026-10-19
+      summary: Aligns pay commencement and register authority, preserves Service-IP rules for bounties, and restores unchanged Exhibit C.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding
@@ -48,40 +91,42 @@ revisions:
 
 ## Summary
 
-This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as an expanded Network Steering Committee with a mandate to decide RFP funding, and authorize an on-chain program fund under limits that block producers keep. Its seven documents, distributed for review by the VST and block producers, are carried here verbatim, alongside a placeholder explaining the unused Exhibit C.
+This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as a five-seat Network Steering Committee, and authorize a bounded RFP funding mandate and on-chain program fund. Published decisions, conflict rules, payment delays, and recurring funding approval keep the Committee accountable to the Network.
 
-The resolution itself states everything being voted on, in full context: read [MSIG #5](documents/msig-5.md).
+The proposed limits are **USD 150,000 in awards and USD 77,500 in Program Costs per cycle**, with a **USD 100,000 total-contract-value limit per award**. The first four quarterly cycles authorize **USD 910,000** in spending; the requested first transfer is **A worth USD 284,375**, including a 25% funding margin that creates no spending authority.
+
+All five seats require **future MSIG appointments**. Dafeng Guo, Ross Dold, and Francis Sangkuan continue **unpaid Trust oversight only** until all five are filled. The initial Community selection has the nine-month deadline and fallback in Framework 4.6; its term starts at appointment and can run before funding.
+
+This draft intentionally changes **Service-award IP terms**: providers retain pre-existing IP, while licences, handover materials, and material limits on switching providers must be expressly agreed and published. The automatic embedded-IP licence back applies only to Deliverable and Embedded awards. Network-data export, agreed handover rights, and counsel’s confirmation remain required.
 
 ## Documents
 
-The documents are listed in the order a voter should read them, each with a suggested depth of review. Three need careful reading: MSIG #5, Part 1 of the Framework, and the Exhibit B fee table. The rest can be skimmed for the specific points named below.
+These are **proposed revised drafts for VST and block producer review**, not versions already issued or approved by VST. The root revisions record the proposed replacements and policy changes. VST’s upstream review and issuance remain outstanding; earlier comments and citations still refer to their original snapshots. Exhibit C remains unchanged.
 
-Read in full:
+Read together:
 
-- [MSIG #5 resolution](documents/msig-5.md) (about 67 minutes): the resolution block producers would approve. It continues the Oversight Committee as a five-seat Network Steering Committee, gives it a standing mandate to allocate funds from the `rfp.vst` Program Account, and requests a first transfer of A worth USD 284,375. No funds move until all five seats are filled, every member has signed their contract, filed their disclosure, and registered a signing key, and Exhibit D is published complete. If the Delphi Oracle price goes stale for 24 hours or disappears, payments are priced from a CoinMarketCap fallback (Vaulta, ID 36462: the average of the previous UTC day's high and low), and payments stop only if both sources fail. Its stated status is DRAFT v6.14, for VST and block producer review.
-- [Exhibit A: Vaulta Network RFP Framework](documents/rfp-framework.md) (Part 1, about 85 minutes): the framework the resolution's first decision approves. Part 1 (sections 1 to 16) is the governance rulebook: seats, voting, conflicts, signing, the mandate, spending limits, and suspension, and it is the part to read. Part 2 (sections 17 to 27) is the step-by-step RFP process, and MSIG may amend it later without reopening Part 1; Part 1 governs where the two disagree. Its stated status is DRAFT v5.4.
-- [Exhibit B: Manager and Reviewer Rate Card and Scope](documents/exhibit-b-rate-card.md) (scan the fee tables, about 5 minutes): fees for RFP Program Managers (USD 350 a milestone, or 600 on the assessment variant) and Technical Reviewers (USD 450 a milestone). Committee members serving as Reviewers are capped at 3 concurrent engagements. The figures change only by MSIG. Committee members' own pay is set in MSIG #5, not here. Its stated status is DRAFT v3.4, settled.
+- [MSIG #5 resolution](documents/msig-5.md), **6.15**: approvals, settings, funding and transition. Funding and permission activation wait for all five appointments, each member’s required filings, contract and signing key, and the completed Exhibit D deployment evidence.
+- [Exhibit A: Vaulta Network RFP Framework](documents/rfp-framework.md), **5.5**: the operating rules. Part 1 covers governance and funding; Part 2 covers the RFP process. Part 1 governs conflicts between them; Part 2 may be amended separately but may vary a Part 1 rule only where expressly permitted.
+- [Exhibit B: Manager and Reviewer Rate Card and Scope](documents/exhibit-b-rate-card.md), **3.4**: Manager fees of USD 350 per milestone, or USD 600 for the assessment variant, and Technical Reviewer fees of USD 450 per milestone. Other fees and responsibilities are in the rate card. Only block producers may change the figures by MSIG Resolution. Committee pay of USD 2,500 per month and the cap of three concurrent member-Reviewer engagements are set in **MSIG #5 Part H**, not Exhibit B.
+- [Exhibit D: Program Account, Permission, and Register Configuration](documents/exhibit-d-account-configuration.md), **2.5**: four-of-five payment authority, separate three-of-five cancellation, owner control with block producers at 15/21, seven-day ordinary and three-day urgent waits, rates, registers, and deployment records. Its proposer and cancellation design must be verified against deployed code. A held-proposal procedure is not an automatic timelock; funding and activation require evidence that the execution guards work.
+- [Exhibit E: Seat Appointment MSIG Template](documents/exhibit-e-seat-appointment.md), **2.2**: the required format for future appointments, including each candidate’s own 300–800-word vision statement and conflict disclosures.
+- [Exhibit F: Schedule A Templates](documents/exhibit-f-schedule-a.md), **1.9**: role-specific schedules to VS LLC’s Independent Contractor Agreement. Check pay and onboarding, conflict sanctions, initial-payment cancellation and surviving contract obligations, Service-IP terms, and the suspension long-stop: over 30 business days of suspension permits 10 business days’ notice, which lapses if payments resume. Counsel’s pre-existing-IP confirmation remains a gate for Service and Embedded RFPs and any populated pre-existing-IP schedule.
+- [Exhibit C: Trust Agreement Conforming Amendments](documents/exhibit-c-trust-agreement-amendments.md): unchanged placeholder. MSIG #5 attaches A, B, D, E, and F; counsel’s Trust amendments are handled off-chain under Part J. The lettering is retained for existing citations.
 
-Skim for specific points:
+Published alongside the resolution as reference documents, **not approved by it**:
 
-- [Exhibit D: Program Account, Permission, and Register Configuration](documents/exhibit-d-account-configuration.md) (about 5 minutes): a technical specification, published by VS LLC before the Program Account is funded. Voters should check the permission design: 4 of 5 Committee signatures to pay and 3 of 5 to cancel, a 7-day delay on payments (3 days if urgent), and owner control kept by block producers at 15 of 21. It also carries worked examples for the oracle rate and the CoinMarketCap fallback rate. Its stated status is DRAFT v2.4; its deployment values are filled before publication.
-- [Exhibit F: Schedule A Templates](documents/exhibit-f-schedule-a.md) (about 10 minutes): contract schedules for Committee members, Program Managers, Technical Reviewers, and awardees under VS LLC's Independent Contractor Agreement, with VS LLC as the contracting party. Most of it is standard contract text. Check four points: Committee pay of USD 2,500 a month, matching MSIG #5; work product vesting in the VST, with a carve-out for pre-existing IP that awaits counsel's confirmation and until then blocks Service and Embedded RFPs; an awardee's right to exit once payments have been suspended for 30 business days, on 10 business days' notice that lapses if payments resume; and the permanent program-wide ban for a material conflict breach, confirmed and lifted only at 15 of 21. Its stated status is DRAFT v1.8.
-
-Reference only:
-
-- [Exhibit E: Seat Appointment MSIG Template](documents/exhibit-e-seat-appointment.md): the required format for the later resolutions that fill Committee seats, each voted on separately. Every candidate needs a network vision statement of 300 to 800 words and declared conflicts. Its stated status is TEMPLATE v2.1.
-- [Exhibit C: Trust Agreement Conforming Amendments](documents/exhibit-c-trust-agreement-amendments.md): a placeholder, with nothing to review. MSIG #5 attaches Exhibits A, B, D, E, and F and has no Exhibit C: the Trust Agreement amendments once attached under that letter are administered off-chain, and the remaining letters are kept so that existing citations stay correct.
-
-A supporting document, published alongside the resolution and not approved by it:
-
-- [Disclosure Questionnaire, Version 1](documents/disclosure-questionnaire.md) (skim the disclosure rules, about 5 minutes): the conflict-of-interest form every decision-maker files before taking up a role, published by VS LLC alongside Exhibit D, questionnaire version `VQ1`. The full text of each filing is written permanently to `disc.vst`. Positions are reported only as USD bands, never exact figures; holdings of A are not asked for; and individuals are never named. The Program Account is not funded until every Committee member has filed. Its stated status is DRAFT v1.4, settled.
-
-The `[___]` blanks and draft version lines throughout are the documents as distributed; every distributed document is carried verbatim, and the Exhibit C placeholder is the only document written for this repository.
+- [Disclosure Questionnaire](documents/disclosure-questionnaire.md), **1.5 / VQ2**: required disclosures before decision rights begin. Public filings are permanent on-chain; positions use bands, A holdings are excluded, and legal identification is collected privately. VQ1 records retain their interpretation and validity; no early refiling is required solely for this revision.
+- [MSIG #5 — Review Notes](documents/msig-5-review-notes.md), **1.0**: historical reasoning, disclosed policy changes, and the launch checklist. Market figures are undated historical illustrations, not current evidence. The checklist adds no rules or approvals.
 
 ## Open Questions
 
-The open items of this proposal are tracked inside the resolution itself: MSIG #5's [Blanks to fill](documents/msig-5.md#blanks-to-fill) section lists each remaining decision, several marked blocking, together with the part of the resolution each belongs to.
+The Review Notes’ [Launch checklist](documents/msig-5-review-notes.md#launch-checklist) identifies remaining tasks and their existing gates. Actual payment-control deployment and rehearsals remain unverified. The source account, ECF dates, counsel confirmations, and complete deployment and member-key records must be resolved as the governing clauses require.
 
 ## Next Steps
 
-This proposal is a draft and is open for review: feedback from block producers and all community members is welcome. The documents carry the status each states for itself and remain drafts under their own versioning. Revised versions replace the current ones verbatim as they are distributed, with a `revisions` entry recording each ingestion. Advancing beyond Draft follows the VPS-1 lifecycle and is not scheduled by this document; the resolution takes effect only if block producers execute it.
+1. **VST** reviews the proposed changes and issues the revised source documents with updated versions.
+2. **The PR authors** replace the supporting documents verbatim, record the issued versions in the revision history, update the overview and translations, and run the repository checks.
+3. **Repository maintainers** review the completed package and advance it through the VPS-1 process.
+4. **VS LLC** completes the setup, publication, and verification requirements already specified in MSIG #5 and Exhibit D before funding or activation.
+
+The resolution takes effect only if block producers execute it. This PR does not broadcast transactions or complete deployment or funding.
