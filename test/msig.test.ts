@@ -114,12 +114,12 @@ describe('findMsigBuilder', () => {
 
 describe('createMsigModuleLoader', () => {
     test('constructing a loader for a proposal with no msig directory does not fail', () => {
-        expect(() => createMsigModuleLoader('vp-0001-ram-gifting')).not.toThrow()
+        expect(() => createMsigModuleLoader('vp-0003-rfp-program')).not.toThrow()
     })
     test('asking for a missing module names the file rather than failing to resolve it', async () => {
-        const load = createMsigModuleLoader('vp-0001-ram-gifting')
+        const load = createMsigModuleLoader('vp-0003-rfp-program')
         await expect(load()).rejects.toThrow(
-            'proposals/vp-0001-ram-gifting/msig/index.ts does not exist; an entry naming a proposer and proposal name needs builder code that rebuilds its actions',
+            'proposals/vp-0003-rfp-program/msig/index.ts does not exist; an entry naming a proposer and proposal name needs builder code that rebuilds its actions',
         )
     })
 })
