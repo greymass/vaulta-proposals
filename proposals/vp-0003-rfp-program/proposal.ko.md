@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: 1be447cc95e24d9dd7c27c358404c295e964c85c
+source: 45d14306f5f3e27995290db21633f5cc97769e75
 revisions:
     - version: 1
       date: 2026-09-01
@@ -56,6 +56,9 @@ revisions:
     - version: 18
       date: 2026-10-18
       summary: MSIG #5에 MSIG #2의 임기 문구 대체와 vstcreation이 요구하는 신탁 계약 개정 승인을 명시합니다.
+    - version: 19
+      date: 2026-10-19
+      summary: 보수 발생 시점과 레지스터 권한을 일치시키고 바운티의 Service IP 규칙을 보존하며 Exhibit C를 변경 전 상태로 복원합니다.
 ---
 
 # 네트워크 운영 위원회, RFP 프레임워크 승인 및 온체인 프로그램 자금 조달

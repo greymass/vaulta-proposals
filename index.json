@@ -1,5 +1,5 @@
 {
-    "generated": "2026-10-18T17:18:15.771Z",
+    "generated": "2026-10-19T09:30:31.069Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -140,7 +140,7 @@
             "requires": [],
             "slug": "vp-0003-rfp-program",
             "path": "proposals/vp-0003-rfp-program/proposal.md",
-            "updated": "2026-10-18",
+            "updated": "2026-10-19",
             "excerpt": "This proposal asks block producers to approve the Vaulta Network RFP Framework, continue the Oversight Committee as a five-seat Network Steering Committee, and authorize a bounded RFP funding mandate and on-chain program fund. Published decisions, conflict rules, payment delays, and recurring funding approval keep the Committee accountable to the Network.",
             "translations": [
                 {

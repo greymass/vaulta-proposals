@@ -272,7 +272,7 @@ Parts 2 to 8 each require an explicit **"None"** where there is nothing to decla
 
 **6.3b Publication on-chain.** Questionnaires are published **on-chain in full**, and the Portal displays the register without keeping a separate copy.
 
-**Where it is written.** Disclosures go to **`disc.vst`**, a separate account with an append-only disclosure contract deployed and controlled by VS LLC. VS LLC must configure and publish it under the **Exhibit D process and MSIG #5 Part E**. Its key has no authority over the Program Account.
+**Where it is written.** Disclosures go to **`disc.vst`**, a separate account with an append-only disclosure contract operated by VS LLC under the **writing authority in Exhibit D 1.4**. **Block producers retain owner and contract-upgrade authority at the Threshold**. VS LLC must configure and publish it under the **Exhibit D process and MSIG #5 Part E**. Its key has no authority over the Program Account.
 
 **What is written.** Use the disclosure-record fields in **Exhibit D 4.3**. **Exclude legal identification collected privately by VS LLC.** The filer signs their own submission; **VS LLC writes the record and cannot alter its content.**
 
@@ -751,7 +751,7 @@ The **Cycle Ceiling** caps commitments to awardees. The **Program Cost Ceiling**
 
 **Block-producer control.** Block producers may change any amount, cycle length, or limit at any time by **MSIG Resolution**, and may stop, reduce, or re-time an instalment. A year’s authorization does not oblige them to fund the whole year.
 
-**Start dates.** The first cycle starts **when the Program Account receives funds**, not when MSIG #5 passes. That date also starts the **four staggered seats’ initial terms under 3.4**. Committee pay accrues from **contract signature or the funding date, whichever is later**. The Committee must publish the funding date on the Portal.
+**Start dates.** The first cycle starts **when the Program Account receives funds**, not when MSIG #5 passes. That date also starts the **four staggered seats’ initial terms under 3.4**. Committee pay accrues from **the funding date or completion of all onboarding requirements in 3.1a–3.1b, whichever is later**. The Committee must publish the funding date on the Portal.
 
 **13.2 Reservation.** Reserve an award’s full **USD** value against the Cycle Ceiling from the decision through publication, contracting, the delay, and any MSIG confirmation; reserved amounts are unavailable for other awards. For a multi-cycle award, reserve only the amount **payable in the current cycle** against its Cycle Ceiling; allocate the rest to future cycles as **forward commitments**. **No payment may move before an agreement exists and the delay ends.**
 
@@ -1274,7 +1274,7 @@ The **two-milestone minimum in 11.1a does not apply**. For **23.2 and 23.3**, su
 
 | Rule | Requirement |
 |---|---|
-| **11** | Apply **all conflict rules**, the **6.1 and 6.4 bidding bars**, the **ban register**, and the **pre-existing-IP schedule at contracting**; unlisted pre-existing IP does not qualify for the carve-out. |
+| **11** | Apply **all conflict rules**, the **6.1 and 6.4 bidding bars**, the **ban register**, and the **pre-existing-IP schedule at contracting**, applying the **shape-specific rules in 23.3a**. |
 | **12** | Work product is handled by shape under 20.2a, normally **Deliverable**. |
 | **13** | **No bounty may be split** out of work that should have been an RFP (rule 5 of section 27 applies unchanged). |
 | **14** | If the Committee expects **only one realistic deliverer**, record the expectation and reasons at publication, identify it as **sole-source**, and list it separately in the cycle report. This does not bar the bounty. |

@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: 1be447cc95e24d9dd7c27c358404c295e964c85c
+source: 45d14306f5f3e27995290db21633f5cc97769e75
 revisions:
     - version: 1
       date: 2026-09-01
@@ -56,6 +56,9 @@ revisions:
     - version: 18
       date: 2026-10-18
       summary: 在MSIG #5中明确替代MSIG #2的任期表述，并提供vstcreation要求的信托协议修订授权。
+    - version: 19
+      date: 2026-10-19
+      summary: 统一报酬起算时间和登记合约权限，保留赏金中Service类型的IP规则，并将Exhibit C恢复为未修改状态。
 ---
 
 # 网络指导委员会、RFP框架批准及链上计划资金

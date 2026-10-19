@@ -81,6 +81,9 @@ revisions:
     - version: 18
       date: 2026-10-18
       summary: Makes MSIG #2 term supersession and vstcreation's Trust-amendment authorization explicit in MSIG #5.
+    - version: 19
+      date: 2026-10-19
+      summary: Aligns pay commencement and register authority, preserves Service-IP rules for bounties, and restores unchanged Exhibit C.
 ---
 
 # Network Steering Committee, RFP Framework Approval, and On-Chain Program Funding
