@@ -1,45 +1,110 @@
 {
-    "generated": "2026-10-06T12:06:27.797Z",
+    "generated": "2026-10-20T02:07:53.304Z",
     "proposals": [
         {
             "vp": "VP-0001",
-            "title": "Network RAM Endowment for Account Onboarding",
+            "title": "Network-Funded Account Onboarding",
             "standard": "VPS-1",
-            "status": "Draft",
+            "status": "Review",
             "authors": [
                 "Aaron Cox (Greymass)"
             ],
             "created": "2026-08-02",
             "accounts": [
-                "ram.vaulta",
+                "gift.vaulta",
                 "admin.grants",
-                "fund.wram",
+                "eosio.prods",
                 "eosio.wrap",
                 "eosio"
             ],
-            "msigs": [],
+            "msigs": [
+                {
+                    "status": "planned",
+                    "title": "Create the gift.vaulta account and buy it 4,096 bytes of RAM"
+                },
+                {
+                    "status": "planned",
+                    "title": "Seed gift.vaulta, create and link its halt and suspend permissions, limit its authority changes, deploy the gift contract and enable it"
+                }
+            ],
             "sentiment": [],
             "requires": [],
-            "excerpt": "Approved creators draw on a RAM endowment held by the network-owned account ram.vaulta to gift RAM to accounts they create, onboarding users without carrying the RAM cost. The system launches with no registered creators, and each creator is admitted by its own 15/21 BP MSIG.",
+            "excerpt": "Approved creators draw on a RAM endowment held by the network-owned account gift.vaulta to gift RAM to accounts they create, onboarding users without carrying the RAM cost. The system launches with no registered creators, and each creator is admitted by its own 15/21 BP MSIG.",
             "slug": "vp-0001-ram-gifting",
             "path": "proposals/vp-0001-ram-gifting/proposal.md",
-            "updated": "2026-08-27",
+            "updated": "2026-10-19",
             "translations": [
                 {
                     "lang": "ko",
                     "path": "proposals/vp-0001-ram-gifting/proposal.ko.md",
                     "current": true,
-                    "title": "계정 온보딩을 위한 네트워크 RAM 기금",
-                    "excerpt": "네트워크 소유 계정 ram.vaulta가 RAM 기금을 보유하고, 승인된 생성자가 이 기금으로 신규 생성 계정에 RAM을 기증합니다. 생성자는 RAM 비용을 직접 부담하지 않고 신규 사용자를 온보딩합니다. 기증된 RAM은 RAM 시장에서 영구적으로 격리되며, 유일한 반환 경로는 기증 계정으로의 회수입니다. 시스템은 등록된 생성자가 없는 상태로 출범하며, 각 생성자는 이후 개별 15/21 BP MSIG로 승인됩니다.",
-                    "msigs": []
+                    "title": "네트워크 자금 기반 계정 온보딩",
+                    "excerpt": "승인된 생성자는 네트워크 소유 계정 gift.vaulta가 보유한 RAM 기금을 사용해 자신이 생성하는 계정에 RAM을 기증하며, RAM 비용을 부담하지 않고 사용자를 온보딩합니다. 시스템은 등록된 생성자가 없는 상태로 출범하며, 각 생성자는 개별 15/21 BP MSIG로 승인됩니다.",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "gift.vaulta 계정을 생성하고 이 계정에 4,096바이트의 RAM을 구매"
+                        },
+                        {
+                            "step": 2,
+                            "title": "gift.vaulta에 시드를 이전하고, halt 및 suspend 권한을 생성하여 연결하고, 권한 변경을 제한하고, gift 컨트랙트를 배포하여 활성화"
+                        }
+                    ]
                 },
                 {
                     "lang": "zh",
                     "path": "proposals/vp-0001-ram-gifting/proposal.zh.md",
                     "current": true,
-                    "title": "用于账户引导的网络 RAM 捐赠资金",
-                    "excerpt": "网络所有的账户 ram.vaulta 持有一笔 RAM 捐赠资金，获批的创建者可动用它向自己新创建的账户赠送 RAM，从而无需自行承担 RAM 成本即可为新用户开通账户。被赠送的 RAM 永久性地从 RAM 市场中隔离，唯一的退出方式是返还给赠送账户。系统启动时没有任何已注册的创建者，每个创建者此后通过各自的 15/21 BP MSIG 获得准入。",
-                    "msigs": []
+                    "title": "网络出资的账户开通",
+                    "excerpt": "获批的创建者可动用网络所有的账户 gift.vaulta 持有的 RAM 捐赠资金，向自己创建的账户赠送 RAM，从而无需承担 RAM 成本即可为用户开通账户。系统启动时没有任何已注册的创建者，每个创建者都通过各自的 15/21 BP MSIG 获得准入。",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "创建 gift.vaulta 账户并为其购买 4,096 字节 RAM"
+                        },
+                        {
+                            "step": 2,
+                            "title": "为 gift.vaulta 注资，创建并关联其 halt 与 suspend 权限，限制其权限变更，部署 gift 合约并启用"
+                        }
+                    ]
+                }
+            ],
+            "documents": [
+                {
+                    "path": "proposals/vp-0001-ram-gifting/documents/faq.md",
+                    "heading": "VP-0001 questions and answers",
+                    "translations": [
+                        {
+                            "lang": "ko",
+                            "path": "proposals/vp-0001-ram-gifting/documents/faq.ko.md",
+                            "current": true,
+                            "heading": "VP-0001 질문과 답변"
+                        },
+                        {
+                            "lang": "zh",
+                            "path": "proposals/vp-0001-ram-gifting/documents/faq.zh.md",
+                            "current": true,
+                            "heading": "VP-0001 问答"
+                        }
+                    ]
+                },
+                {
+                    "path": "proposals/vp-0001-ram-gifting/documents/security-review.md",
+                    "heading": "Security review of the gift contract",
+                    "translations": [
+                        {
+                            "lang": "ko",
+                            "path": "proposals/vp-0001-ram-gifting/documents/security-review.ko.md",
+                            "current": true,
+                            "heading": "gift 컨트랙트 보안 검토"
+                        },
+                        {
+                            "lang": "zh",
+                            "path": "proposals/vp-0001-ram-gifting/documents/security-review.zh.md",
+                            "current": true,
+                            "heading": "gift 合约安全审查"
+                        }
+                    ]
                 }
             ]
         },
