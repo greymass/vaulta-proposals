@@ -2,7 +2,7 @@
 vp: VP-0001
 title: Network-Funded Account Onboarding
 standard: VPS-1
-status: Review
+status: Proposed
 authors:
     - Aaron Cox (Greymass)
 created: 2026-08-02
@@ -13,7 +13,10 @@ accounts:
     - eosio.wrap
     - eosio
 msigs:
-    - status: planned
+    - status: active
+      proposer: aaron
+      proposal: vp1create
+      commit: 200ff4b8219aae285285762d1ef4b3e372d79b3d
       title: Create the gift.vaulta account and buy it 4,096 bytes of RAM
     - status: planned
       title: Seed gift.vaulta, create and link its halt and suspend permissions, limit its authority changes, deploy the gift contract and enable it

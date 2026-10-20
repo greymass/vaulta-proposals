@@ -1,11 +1,11 @@
 {
-    "generated": "2026-10-20T02:07:53.304Z",
+    "generated": "2026-10-20T20:24:02.716Z",
     "proposals": [
         {
             "vp": "VP-0001",
             "title": "Network-Funded Account Onboarding",
             "standard": "VPS-1",
-            "status": "Review",
+            "status": "Proposed",
             "authors": [
                 "Aaron Cox (Greymass)"
             ],
@@ -19,7 +19,10 @@
             ],
             "msigs": [
                 {
-                    "status": "planned",
+                    "status": "active",
+                    "proposer": "aaron",
+                    "proposal": "vp1create",
+                    "commit": "200ff4b8219aae285285762d1ef4b3e372d79b3d",
                     "title": "Create the gift.vaulta account and buy it 4,096 bytes of RAM"
                 },
                 {

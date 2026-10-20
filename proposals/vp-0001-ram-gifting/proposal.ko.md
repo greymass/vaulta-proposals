@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: a3ded3e797611d03d9914c411702d5cd6ffca966
+source: 7bfc65b2af3bfd73a44f984849ba031b57bd6e0f
 translator: Claude (agent translation)
 msigs:
     - step: 1

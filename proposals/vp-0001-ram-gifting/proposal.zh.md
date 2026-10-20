@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: a3ded3e797611d03d9914c411702d5cd6ffca966
+source: 7bfc65b2af3bfd73a44f984849ba031b57bd6e0f
 translator: Claude (agent translation)
 excerpt: 获批的创建者可动用网络所有的账户 gift.vaulta 持有的 RAM 捐赠资金，向自己创建的账户赠送 RAM，从而无需承担 RAM 成本即可为用户开通账户。系统启动时没有任何已注册的创建者，每个创建者都通过各自的 15/21 BP MSIG 获得准入。
 revisions:
