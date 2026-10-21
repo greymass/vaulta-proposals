@@ -136,6 +136,7 @@ export interface MsigBuilder {
     citationAuth: PermissionLevelType[] // authorizes the citation action the tooling prepends
     flags?: Record<string, MsigFlag>
     build: (ctx: BuildContext) => Promise<Action[]> // the proposal's own actions, citation excluded
+    check?: (ctx: BuildContext) => Promise<void> // run by `propose` only; throws to refuse a stale build
 }
 
 export interface MsigModule {

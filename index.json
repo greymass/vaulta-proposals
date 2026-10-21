@@ -1,5 +1,5 @@
 {
-    "generated": "2026-10-20T20:24:02.716Z",
+    "generated": "2026-10-21T20:10:45.918Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -268,6 +268,60 @@
                     "path": "proposals/vp-0003-rfp-program/documents/disclosure-questionnaire.md",
                     "heading": "Disclosure Questionnaire — Version 1",
                     "translations": []
+                }
+            ]
+        },
+        {
+            "vp": "VP-0005",
+            "title": "Raise the Inline Action Size Limit",
+            "standard": "VPS-1",
+            "status": "Draft",
+            "authors": [
+                "Aaron Cox (Greymass)"
+            ],
+            "created": "2026-10-20",
+            "accounts": [
+                "eosio",
+                "eosio.msig"
+            ],
+            "msigs": [
+                {
+                    "status": "planned",
+                    "title": "Set max_inline_action_size to 1,048,576 bytes, leaving every other chain parameter at its value"
+                }
+            ],
+            "sentiment": [],
+            "requires": [],
+            "slug": "vp-0005-inline-action-size",
+            "path": "proposals/vp-0005-inline-action-size/proposal.md",
+            "updated": null,
+            "excerpt": "An msig can upgrade a contract only while its code stays under about 512 KB, half the size an account's own keys can deploy. This proposal raises that limit to 1 MB, so contracts that only governance can upgrade, such as the EOS EVM runtime, which sits 16,620 bytes below the current limit, can be upgraded at any size a key holder could deploy.",
+            "translations": [
+                {
+                    "lang": "ko",
+                    "path": "proposals/vp-0005-inline-action-size/proposal.ko.md",
+                    "current": true,
+                    "title": "인라인 액션 크기 제한 상향",
+                    "excerpt": "MSIG는 코드가 약 512 KB 미만일 때에만 컨트랙트를 업그레이드할 수 있으며, 이는 계정 자체의 키로 배포할 수 있는 크기의 절반입니다. 이 제안은 그 제한을 1 MB로 상향합니다. 이를 통해 현재 제한보다 16,620바이트 작은 EOS EVM 런타임처럼 거버넌스만 업그레이드할 수 있는 컨트랙트도 키 보유자가 배포할 수 있는 모든 크기로 업그레이드할 수 있습니다.",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "max_inline_action_size를 1,048,576바이트로 설정하고 나머지 체인 파라미터는 모두 현재 값으로 유지"
+                        }
+                    ]
+                },
+                {
+                    "lang": "zh",
+                    "path": "proposals/vp-0005-inline-action-size/proposal.zh.md",
+                    "current": true,
+                    "title": "提高内联动作大小上限",
+                    "excerpt": "MSIG 只能在合约代码小于约 512 KB 时升级合约，这只是账户自身密钥所能部署大小的一半。本提案将该上限提高到 1 MB，使只能由治理升级的合约（例如比现行上限小 16,620 字节的 EOS EVM 运行时）能够以密钥持有者可部署的任何大小进行升级。",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "将 max_inline_action_size 设为 1,048,576 字节，其余所有链参数保持现值"
+                        }
+                    ]
                 }
             ]
         }

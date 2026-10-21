@@ -52,7 +52,8 @@ root.
 5. **Substance requirements** the linter cannot check:
    - Summary must let a busy reader decide relevance in one paragraph.
    - The proposal answers why the network should support it, in a Rationale section or equivalent. Before drafting, grill the author on the why until every justifying claim is precise and provable against chain state, contract source, or protocol rules; a claim that cannot be proven is cut or moved to Open Questions.
-   - Summary opens with the proposal, not the thing it creates: the first sentence states the governance action ("This proposal creates X and deploys Y to it"), and what X or Y is comes after.
+   - Summary opens with the benefit: one or two plain, professional sentences stating what the network gains, readable without technical background. That paragraph is also the index-card excerpt when frontmatter has no `excerpt`.
+   - The governance action follows directly, as the first sentence of the second paragraph ("Producers are asked to approve one msig, which creates X and deploys Y to it"), and what X or Y is comes after.
    - The proposal references only what it introduces itself. No planning history, no sibling workstreams, no comparisons to anything a reader cannot see from this document and its frontmatter.
    - Authority language distinguishes acting under an authority from assigning one. "Create X with authority Y" reads both ways; write "created by Y" or "owned by Y" as the fact requires, in body prose and in `msigs` entry titles alike.
    - Every on-chain fact (accounts, txids) appears as backticked names or
