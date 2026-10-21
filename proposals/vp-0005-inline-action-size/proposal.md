@@ -2,7 +2,7 @@
 vp: VP-0005
 title: Raise the Inline Action Size Limit
 standard: VPS-1
-status: Draft
+status: Proposed
 authors:
     - Aaron Cox (Greymass)
 created: 2026-10-20
@@ -10,7 +10,10 @@ accounts:
     - eosio
     - eosio.msig
 msigs:
-    - status: planned
+    - status: active
+      proposer: aaron
+      proposal: vp5setparams
+      commit: 718e51bd2fc1877faa57c1c973eff11d74e749eb
       title: Set max_inline_action_size to 1,048,576 bytes, leaving every other chain parameter at its value
 sentiment: []
 requires: []
