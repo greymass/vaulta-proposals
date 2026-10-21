@@ -1,5 +1,5 @@
 {
-    "generated": "2026-10-21T20:22:16.828Z",
+    "generated": "2026-10-21T20:39:11.738Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -268,6 +268,63 @@
                     "path": "proposals/vp-0003-rfp-program/documents/disclosure-questionnaire.md",
                     "heading": "Disclosure Questionnaire — Version 1",
                     "translations": []
+                }
+            ]
+        },
+        {
+            "vp": "VP-0004",
+            "title": "Register gm as a VP-0001 Creator",
+            "standard": "VPS-1",
+            "status": "Review",
+            "authors": [
+                "Aaron Cox (Greymass)"
+            ],
+            "created": "2026-10-18",
+            "accounts": [
+                "gm",
+                "gift.vaulta",
+                "eosio.assert"
+            ],
+            "msigs": [
+                {
+                    "status": "planned",
+                    "title": "Register gm as a creator with a daily quota of 262,144 bytes"
+                }
+            ],
+            "sentiment": [],
+            "requires": [
+                "VP-0001"
+            ],
+            "slug": "vp-0004-gm-creator",
+            "path": "proposals/vp-0004-gm-creator/proposal.md",
+            "updated": null,
+            "excerpt": "This proposal registers gm as a creator under VP-0001 with a daily quota of 256 KiB. Greymass operates gm through Sextant, the account creation service behind Anchor for iOS and Android and Web Authenticator, and uses it to give new users a free account after a Google or Apple sign-in. gm already gifts RAM to every free account it creates; with the endowment, that RAM comes from the network, and Greymass's own RAM covers any account above the quota.",
+            "translations": [
+                {
+                    "lang": "ko",
+                    "path": "proposals/vp-0004-gm-creator/proposal.ko.md",
+                    "current": true,
+                    "title": "gm을 VP-0001 생성자로 등록",
+                    "excerpt": "이 제안은 gm을 VP-0001에 따른 생성자로 등록하고 일일 쿼터 256 KiB를 부여합니다. Greymass는 iOS 및 Android용 Anchor와 Web Authenticator의 계정 생성 서비스인 Sextant를 통해 gm을 운영하며, Google 또는 Apple 로그인 후 신규 사용자에게 무료 계정을 제공하는 데 사용합니다. gm은 이미 자신이 생성하는 모든 무료 계정에 RAM을 기증하고 있으며, 기금이 마련되면 그 RAM은 네트워크에서 나오고, 쿼터를 초과하는 계정은 Greymass 자체 RAM으로 충당합니다.",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "gm을 일일 쿼터 262,144바이트의 생성자로 등록"
+                        }
+                    ]
+                },
+                {
+                    "lang": "zh",
+                    "path": "proposals/vp-0004-gm-creator/proposal.zh.md",
+                    "current": true,
+                    "title": "将 gm 注册为 VP-0001 创建者",
+                    "excerpt": "本提案将 gm 注册为 VP-0001 下的创建者，每日额度为 256 KiB。Greymass 通过 Sextant 运营 gm。Sextant 是 iOS 和 Android 版 Anchor 以及 Web Authenticator 背后的账户创建服务，用于在用户通过 Google 或 Apple 登录后为其提供免费账户。gm 已经为其创建的每个免费账户赠送 RAM；有了捐赠资金后，这部分 RAM 将来自网络，超出额度的账户则由 Greymass 自己的 RAM 承担。",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "将 gm 注册为创建者，每日额度为 262,144 字节"
+                        }
+                    ]
                 }
             ]
         },

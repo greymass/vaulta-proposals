@@ -1,18 +1,13 @@
 import { describe, expect, test } from 'bun:test'
 import { addManifestAction, delManifestAction, manifestId } from '$lib/manifest'
-
-const GUARD_MANIFEST = {
-    account: 'gm',
-    domain: 'https://github.com/greymass/vaulta-proposals',
-    appmeta: 'VP-0004',
-    whitelist: [{ contract: 'gift.vaulta', action: 'addcreator' }],
-}
+import { GUARD_MANIFEST, GUARD_MANIFEST_ID } from '../proposals/vp-0004-gm-creator/msig/index'
 
 const VP4_MANIFEST_ID = '5bebd48fe9fba89943219a6240d5e9481bc78583a9fd9e3cd72451b53ef73e50'
 
 describe('manifestId', () => {
     test("VP-0004's manifest keeps the id its admission msig requires", () => {
         expect(manifestId(GUARD_MANIFEST)).toBe(VP4_MANIFEST_ID)
+        expect(GUARD_MANIFEST_ID).toBe(VP4_MANIFEST_ID)
     })
     test('any field change moves the id', () => {
         expect(manifestId({ ...GUARD_MANIFEST, appmeta: 'VP-0005' })).not.toBe(VP4_MANIFEST_ID)
