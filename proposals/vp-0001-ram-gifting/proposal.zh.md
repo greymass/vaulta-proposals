@@ -1,6 +1,6 @@
 ---
 lang: zh
-source: 7bfc65b2af3bfd73a44f984849ba031b57bd6e0f
+source: 1d0b4f8227e337a3ca6573e5fa9c7fd990408289
 translator: Claude (agent translation)
 excerpt: 获批的创建者可动用网络所有的账户 gift.vaulta 持有的 RAM 捐赠资金，向自己创建的账户赠送 RAM，从而无需承担 RAM 成本即可为用户开通账户。系统启动时没有任何已注册的创建者，每个创建者都通过各自的 15/21 BP MSIG 获得准入。
 revisions:
@@ -32,6 +32,10 @@ msigs:
 
 本提案请求区块生产者批准两个 15/21 MSIG。二者共同创建账户 `gift.vaulta`，从 `admin.grants` 向其转入 1,000,000,000 字节 RAM（按 2026-10-17 的价格约值 338,800 EOS），并部署一个合约，让获批的创建者将这些 RAM 赠送给他们创建的账户。`admin.grants` 是原基金会账户，持有用网络资金购买的 RAM。被赠送的 RAM 永远不会进入市场：接收方既不能出售也不能转让，其唯一的退出途径是返还给 `gift.vaulta`，后者可以再次赠送。针对该合约及其权限的两次[安全审查](documents/security-review.md)均未发现严重或高危问题。计划启动时没有任何创建者。[问答](documents/faq.md)涵盖本计划对 RAM 价格、`fund.wram` 以及账户批量注册（account farming）的影响。
 
+## 合约源代码
+
+您可以在 [greymass/vaulta-contracts 的 `contracts/gift`，提交 `6fad4b0`](https://github.com/greymass/vaulta-contracts/tree/6fad4b08cebfc922b80d09f86cb2590505c22a06/contracts/gift) 阅读 gift 合约的完整源代码。这正是 `vp1deploy` 部署到 `gift.vaulta` 的代码，“实施”一节说明了如何重新构建并核对其哈希值。
+
 ## 理由
 
 - **免费账户**：一个空账户占用 2,996 字节 RAM，其中 1,400 字节免费，因此创建者至少需要购买 1,596 字节，按 2026-10-17 的价格约 0.54 EOS；按本提案建议的 3,000 字节计算约 1.0 EOS。被准入为创建者的钱包或应用可以立即免费为其用户提供账户，费用由 `admin.grants` 中持有的网络所有 RAM 支付。
@@ -47,7 +51,7 @@ msigs:
 
 两者均在 `msigs` 中声明为 `planned` 条目，由本提案的 `msig/index.ts` 构建，并各自以 180 天的有效期提出。
 
-合约为 [`contracts/gift`](https://github.com/greymass/vaulta-contracts/tree/6fad4b08cebfc922b80d09f86cb2590505c22a06/contracts/gift) 处的源代码，提交为 `6fad4b08cebfc922b80d09f86cb2590505c22a06`，该提交与第二次安全审查所读取的提交 `a9a9a59` 之间仅 README 不同。使用 Antelope CDT v4.1.1 通过 `make build/gift/production` 构建该提交，会生成一个 20,977 字节、sha256 为 `27ed7ecee18f1a81ec7e9ed4aeacdd76de6e1431f66eb62d363067480ddd3072` 的 `gift.wasm`，以及一个 sha256 为 `17d1ccd52f99782cee42a619dd02cd75c9567d1f716969334ec7f7cf7fbc07f8` 的 `gift.abi`。`vp1deploy` 设置的正是该代码，其设置的二进制 ABI 的 sha256 为 `4f39f95e9c4d7d0efb65407ea599f4336656b5075d3d72b3447289b8107590ab`，即 `vp1deploy` 执行后链上为 `gift.vaulta` 报告的 ABI 哈希。任何拥有 Docker 和 `make` 的人都可以复现这些字节：在该提交下，`make build/gift/production` 会在一个包含官方 CDT 4.1.1 发布包的容器内构建，并将 `gift.wasm` 和 `gift.abi` 写入 `contracts/gift/build/`。同一构建已在 Jungle 4 测试网的 `gift.gm` 上运行。
+gift 合约的源代码位于 [greymass/vaulta-contracts 的 `contracts/gift`](https://github.com/greymass/vaulta-contracts/tree/6fad4b08cebfc922b80d09f86cb2590505c22a06/contracts/gift)，提交为 `6fad4b08cebfc922b80d09f86cb2590505c22a06`，该提交与第二次安全审查所读取的提交 `a9a9a59` 之间仅 README 不同。使用 Antelope CDT v4.1.1 通过 `make build/gift/production` 构建该提交，会生成一个 20,977 字节、sha256 为 `27ed7ecee18f1a81ec7e9ed4aeacdd76de6e1431f66eb62d363067480ddd3072` 的 `gift.wasm`，以及一个 sha256 为 `17d1ccd52f99782cee42a619dd02cd75c9567d1f716969334ec7f7cf7fbc07f8` 的 `gift.abi`。`vp1deploy` 设置的正是该代码，其设置的二进制 ABI 的 sha256 为 `4f39f95e9c4d7d0efb65407ea599f4336656b5075d3d72b3447289b8107590ab`，即 `vp1deploy` 执行后链上为 `gift.vaulta` 报告的 ABI 哈希。任何拥有 Docker 和 `make` 的人都可以复现这些字节：在该提交下，`make build/gift/production` 会在一个包含官方 CDT 4.1.1 发布包的容器内构建，并将 `gift.wasm` 和 `gift.abi` 写入 `contracts/gift/build/`。同一构建已在 Jungle 4 测试网的 `gift.gm` 上运行。
 
 Greymass 对合约和权限设计进行了两次安全审查，分别针对提交 `a23b756` 和固定的提交。Anthropic 的 Claude Mythos、Fable 和 Opus 发现了这些问题并用测试演示了每一个问题，Fable 和 Opus 重新运行了每项测试，以确认、修正或驳回每项发现。Greymass 编写了合约并主持了两次审查，因此两次审查都不独立于作者。两次审查均未发现严重或高危问题，每项发现都已在本提案的正文、实施步骤或运营规则中关闭，或在说明理由后被接受。[安全审查](documents/security-review.md)列出了全部发现。欢迎区块生产者从网络出资进行进一步审查，任何团队都可以在固定的提交处审查源代码。
 

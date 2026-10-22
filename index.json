@@ -1,5 +1,5 @@
 {
-    "generated": "2026-10-21T20:39:11.738Z",
+    "generated": "2026-10-22T00:15:41.801Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -297,7 +297,7 @@
             ],
             "slug": "vp-0004-gm-creator",
             "path": "proposals/vp-0004-gm-creator/proposal.md",
-            "updated": null,
+            "updated": "2026-10-21",
             "excerpt": "This proposal registers gm as a creator under VP-0001 with a daily quota of 256 KiB. Greymass operates gm through Sextant, the account creation service behind Anchor for iOS and Android and Web Authenticator, and uses it to give new users a free account after a Google or Apple sign-in. gm already gifts RAM to every free account it creates; with the endowment, that RAM comes from the network, and Greymass's own RAM covers any account above the quota.",
             "translations": [
                 {

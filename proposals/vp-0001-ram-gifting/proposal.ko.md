@@ -1,6 +1,6 @@
 ---
 lang: ko
-source: 7bfc65b2af3bfd73a44f984849ba031b57bd6e0f
+source: 1d0b4f8227e337a3ca6573e5fa9c7fd990408289
 translator: Claude (agent translation)
 msigs:
     - step: 1
@@ -32,6 +32,10 @@ excerpt: 승인된 생성자는 네트워크 소유 계정 gift.vaulta가 보유
 
 프로듀서에게 두 건의 15/21 MSIG 승인을 요청합니다. 두 MSIG는 함께 `gift.vaulta` 계정을 생성하고, 1,000,000,000바이트의 RAM(2026-10-17 가격 기준 약 338,800 EOS 상당)을 `admin.grants`에서 이 계정으로 옮기며, 승인된 생성자가 자신이 생성하는 계정에 그 RAM을 기증할 수 있게 하는 컨트랙트를 배포합니다. `admin.grants`는 이전 Foundation 계정으로, 네트워크 자금으로 구매한 RAM을 보유하고 있습니다. 기증된 RAM은 결코 시장에 나오지 않습니다. 수증자는 이를 판매하거나 전송할 수 없으며, 유일한 반출 경로는 `gift.vaulta`로의 반환이고, `gift.vaulta`는 반환된 RAM을 다시 기증할 수 있습니다. 컨트랙트와 그 권한에 대한 두 차례의 [보안 검토](documents/security-review.md)에서 치명적(critical) 또는 높음(high) 등급의 문제는 발견되지 않았습니다. 프로그램은 생성자 없이 출범합니다. [질의응답](documents/faq.md)은 이 프로그램이 RAM 가격에 미치는 영향, `fund.wram`, 계정 파밍을 다룹니다.
 
+## 컨트랙트 소스
+
+gift 컨트랙트의 전체 소스 코드는 [greymass/vaulta-contracts의 `contracts/gift`, 커밋 `6fad4b0`](https://github.com/greymass/vaulta-contracts/tree/6fad4b08cebfc922b80d09f86cb2590505c22a06/contracts/gift)에서 읽을 수 있습니다. 이것은 `vp1deploy`가 `gift.vaulta`에 배포하는 바로 그 코드이며, '시행' 항목에서 이를 다시 빌드하고 해시를 확인하는 방법을 설명합니다.
+
 ## 근거
 
 - **무료 계정**: 최소 구성 계정은 2,996바이트의 RAM을 사용하며 그중 1,400바이트는 무료이므로, 계정을 생성하는 쪽은 최소 1,596바이트(2026-10-17 가격 기준 약 0.54 EOS)를, 본 제안이 권장하는 3,000바이트의 경우 약 1.0 EOS어치를 구매해야 합니다. 생성자로 승인된 지갑이나 앱은 `admin.grants`가 보유한 네트워크 소유 RAM으로 비용을 충당하여 사용자에게 계정을 무료로 즉시 제공합니다.
@@ -47,7 +51,7 @@ excerpt: 승인된 생성자는 네트워크 소유 계정 gift.vaulta가 보유
 
 두 MSIG 모두 `planned` 상태의 `msigs` 항목으로 선언되어 있고 본 제안의 `msig/index.ts`로 빌드되며, 각각 180일의 만료 기간으로 제안됩니다.
 
-컨트랙트는 [`contracts/gift`](https://github.com/greymass/vaulta-contracts/tree/6fad4b08cebfc922b80d09f86cb2590505c22a06/contracts/gift)의 소스, 커밋 `6fad4b08cebfc922b80d09f86cb2590505c22a06`이며, 이 커밋은 두 번째 보안 검토가 읽은 커밋인 `a9a9a59`와 README만 다릅니다. 이 커밋을 Antelope CDT v4.1.1로 `make build/gift/production`을 통해 빌드하면 sha256이 `27ed7ecee18f1a81ec7e9ed4aeacdd76de6e1431f66eb62d363067480ddd3072`인 20,977바이트 `gift.wasm`과 sha256이 `17d1ccd52f99782cee42a619dd02cd75c9567d1f716969334ec7f7cf7fbc07f8`인 `gift.abi`가 생성됩니다. `vp1deploy`는 이 코드를 설정하며, 설정되는 바이너리 ABI의 sha256은 `4f39f95e9c4d7d0efb65407ea599f4336656b5075d3d72b3447289b8107590ab`로, `vp1deploy` 실행 후 체인이 `gift.vaulta`에 대해 보고하는 ABI 해시입니다. Docker와 `make`가 있으면 누구나 이 바이트를 재현할 수 있습니다. 해당 커밋에서 `make build/gift/production`은 공식 CDT 4.1.1 릴리스 패키지를 담은 컨테이너 안에서 빌드를 수행하고 `gift.wasm`과 `gift.abi`를 `contracts/gift/build/`에 기록합니다. 동일한 빌드가 Jungle 4 테스트넷의 `gift.gm`에서 실행되고 있습니다.
+gift 컨트랙트의 소스 코드는 [greymass/vaulta-contracts의 `contracts/gift`](https://github.com/greymass/vaulta-contracts/tree/6fad4b08cebfc922b80d09f86cb2590505c22a06/contracts/gift)이고, 커밋은 `6fad4b08cebfc922b80d09f86cb2590505c22a06`이며, 이 커밋은 두 번째 보안 검토가 읽은 커밋인 `a9a9a59`와 README만 다릅니다. 이 커밋을 Antelope CDT v4.1.1로 `make build/gift/production`을 통해 빌드하면 sha256이 `27ed7ecee18f1a81ec7e9ed4aeacdd76de6e1431f66eb62d363067480ddd3072`인 20,977바이트 `gift.wasm`과 sha256이 `17d1ccd52f99782cee42a619dd02cd75c9567d1f716969334ec7f7cf7fbc07f8`인 `gift.abi`가 생성됩니다. `vp1deploy`는 이 코드를 설정하며, 설정되는 바이너리 ABI의 sha256은 `4f39f95e9c4d7d0efb65407ea599f4336656b5075d3d72b3447289b8107590ab`로, `vp1deploy` 실행 후 체인이 `gift.vaulta`에 대해 보고하는 ABI 해시입니다. Docker와 `make`가 있으면 누구나 이 바이트를 재현할 수 있습니다. 해당 커밋에서 `make build/gift/production`은 공식 CDT 4.1.1 릴리스 패키지를 담은 컨테이너 안에서 빌드를 수행하고 `gift.wasm`과 `gift.abi`를 `contracts/gift/build/`에 기록합니다. 동일한 빌드가 Jungle 4 테스트넷의 `gift.gm`에서 실행되고 있습니다.
 
 Greymass는 커밋 `a23b756`과 고정 커밋에서 컨트랙트와 권한 설계에 대해 두 차례 보안 검토를 수행했습니다. Anthropic의 Claude Mythos, Fable, Opus가 문제를 찾아 각각을 테스트로 입증했고, Fable과 Opus가 모든 테스트를 다시 실행하여 각 발견 사항을 확인, 수정 또는 반박했습니다. 컨트랙트를 작성하고 두 검토를 모두 수행한 것이 Greymass이므로, 어느 검토도 작성자로부터 독립적이지 않습니다. 두 검토 모두 치명적 또는 높음 등급의 문제를 발견하지 않았으며, 모든 발견 사항은 본 제안의 본문, 시행 단계 또는 운영 규칙에서 해소되었거나 그 사유와 함께 수용되었습니다. [보안 검토](documents/security-review.md)에 모든 발견 사항이 나열되어 있습니다. 프로듀서가 네트워크 자금으로 추가 검토를 지원하는 것을 환영하며, 어느 팀이든 고정 커밋의 소스를 검토할 수 있습니다.
 
