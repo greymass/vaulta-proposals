@@ -1,45 +1,113 @@
 {
-    "generated": "2026-10-19T09:30:31.069Z",
+    "generated": "2026-10-27T16:31:29.384Z",
     "proposals": [
         {
             "vp": "VP-0001",
-            "title": "Network RAM Endowment for Account Onboarding",
+            "title": "Network-Funded Account Onboarding",
             "standard": "VPS-1",
-            "status": "Draft",
+            "status": "Proposed",
             "authors": [
                 "Aaron Cox (Greymass)"
             ],
             "created": "2026-08-02",
             "accounts": [
-                "ram.vaulta",
+                "gift.vaulta",
                 "admin.grants",
-                "fund.wram",
+                "eosio.prods",
                 "eosio.wrap",
                 "eosio"
             ],
-            "msigs": [],
+            "msigs": [
+                {
+                    "status": "active",
+                    "proposer": "aaron",
+                    "proposal": "vp1create",
+                    "commit": "200ff4b8219aae285285762d1ef4b3e372d79b3d",
+                    "title": "Create the gift.vaulta account and buy it 4,096 bytes of RAM"
+                },
+                {
+                    "status": "planned",
+                    "title": "Seed gift.vaulta, create and link its halt and suspend permissions, limit its authority changes, deploy the gift contract and enable it"
+                }
+            ],
             "sentiment": [],
             "requires": [],
-            "excerpt": "Approved creators draw on a RAM endowment held by the network-owned account ram.vaulta to gift RAM to accounts they create, onboarding users without carrying the RAM cost. The system launches with no registered creators, and each creator is admitted by its own 15/21 BP MSIG.",
+            "excerpt": "Approved creators draw on a RAM endowment held by the network-owned account gift.vaulta to gift RAM to accounts they create, onboarding users without carrying the RAM cost. The system launches with no registered creators, and each creator is admitted by its own 15/21 BP MSIG.",
             "slug": "vp-0001-ram-gifting",
             "path": "proposals/vp-0001-ram-gifting/proposal.md",
-            "updated": "2026-08-27",
+            "updated": "2026-10-19",
             "translations": [
                 {
                     "lang": "ko",
                     "path": "proposals/vp-0001-ram-gifting/proposal.ko.md",
                     "current": true,
-                    "title": "계정 온보딩을 위한 네트워크 RAM 기금",
-                    "excerpt": "네트워크 소유 계정 ram.vaulta가 RAM 기금을 보유하고, 승인된 생성자가 이 기금으로 신규 생성 계정에 RAM을 기증합니다. 생성자는 RAM 비용을 직접 부담하지 않고 신규 사용자를 온보딩합니다. 기증된 RAM은 RAM 시장에서 영구적으로 격리되며, 유일한 반환 경로는 기증 계정으로의 회수입니다. 시스템은 등록된 생성자가 없는 상태로 출범하며, 각 생성자는 이후 개별 15/21 BP MSIG로 승인됩니다.",
-                    "msigs": []
+                    "title": "네트워크 자금 기반 계정 온보딩",
+                    "excerpt": "승인된 생성자는 네트워크 소유 계정 gift.vaulta가 보유한 RAM 기금을 사용해 자신이 생성하는 계정에 RAM을 기증하며, RAM 비용을 부담하지 않고 사용자를 온보딩합니다. 시스템은 등록된 생성자가 없는 상태로 출범하며, 각 생성자는 개별 15/21 BP MSIG로 승인됩니다.",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "gift.vaulta 계정을 생성하고 이 계정에 4,096바이트의 RAM을 구매"
+                        },
+                        {
+                            "step": 2,
+                            "title": "gift.vaulta에 시드를 이전하고, halt 및 suspend 권한을 생성하여 연결하고, 권한 변경을 제한하고, gift 컨트랙트를 배포하여 활성화"
+                        }
+                    ]
                 },
                 {
                     "lang": "zh",
                     "path": "proposals/vp-0001-ram-gifting/proposal.zh.md",
                     "current": true,
-                    "title": "用于账户引导的网络 RAM 捐赠资金",
-                    "excerpt": "网络所有的账户 ram.vaulta 持有一笔 RAM 捐赠资金，获批的创建者可动用它向自己新创建的账户赠送 RAM，从而无需自行承担 RAM 成本即可为新用户开通账户。被赠送的 RAM 永久性地从 RAM 市场中隔离，唯一的退出方式是返还给赠送账户。系统启动时没有任何已注册的创建者，每个创建者此后通过各自的 15/21 BP MSIG 获得准入。",
-                    "msigs": []
+                    "title": "网络出资的账户开通",
+                    "excerpt": "获批的创建者可动用网络所有的账户 gift.vaulta 持有的 RAM 捐赠资金，向自己创建的账户赠送 RAM，从而无需承担 RAM 成本即可为用户开通账户。系统启动时没有任何已注册的创建者，每个创建者都通过各自的 15/21 BP MSIG 获得准入。",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "创建 gift.vaulta 账户并为其购买 4,096 字节 RAM"
+                        },
+                        {
+                            "step": 2,
+                            "title": "为 gift.vaulta 注资，创建并关联其 halt 与 suspend 权限，限制其权限变更，部署 gift 合约并启用"
+                        }
+                    ]
+                }
+            ],
+            "documents": [
+                {
+                    "path": "proposals/vp-0001-ram-gifting/documents/faq.md",
+                    "heading": "VP-0001 questions and answers",
+                    "translations": [
+                        {
+                            "lang": "ko",
+                            "path": "proposals/vp-0001-ram-gifting/documents/faq.ko.md",
+                            "current": true,
+                            "heading": "VP-0001 질문과 답변"
+                        },
+                        {
+                            "lang": "zh",
+                            "path": "proposals/vp-0001-ram-gifting/documents/faq.zh.md",
+                            "current": true,
+                            "heading": "VP-0001 问答"
+                        }
+                    ]
+                },
+                {
+                    "path": "proposals/vp-0001-ram-gifting/documents/security-review.md",
+                    "heading": "Security review of the gift contract",
+                    "translations": [
+                        {
+                            "lang": "ko",
+                            "path": "proposals/vp-0001-ram-gifting/documents/security-review.ko.md",
+                            "current": true,
+                            "heading": "gift 컨트랙트 보안 검토"
+                        },
+                        {
+                            "lang": "zh",
+                            "path": "proposals/vp-0001-ram-gifting/documents/security-review.zh.md",
+                            "current": true,
+                            "heading": "gift 合约安全审查"
+                        }
+                    ]
                 }
             ]
         },
@@ -205,6 +273,120 @@
                     "path": "proposals/vp-0003-rfp-program/documents/msig-5-review-notes.md",
                     "heading": "MSIG #5 — Review Notes",
                     "translations": []
+                }
+            ]
+        },
+        {
+            "vp": "VP-0004",
+            "title": "Register gm as a VP-0001 Creator",
+            "standard": "VPS-1",
+            "status": "Review",
+            "authors": [
+                "Aaron Cox (Greymass)"
+            ],
+            "created": "2026-10-18",
+            "accounts": [
+                "gm",
+                "gift.vaulta",
+                "eosio.assert"
+            ],
+            "msigs": [
+                {
+                    "status": "planned",
+                    "title": "Register gm as a creator with a daily quota of 262,144 bytes"
+                }
+            ],
+            "sentiment": [],
+            "requires": [
+                "VP-0001"
+            ],
+            "slug": "vp-0004-gm-creator",
+            "path": "proposals/vp-0004-gm-creator/proposal.md",
+            "updated": "2026-10-21",
+            "excerpt": "This proposal registers gm as a creator under VP-0001 with a daily quota of 256 KiB. Greymass operates gm through Sextant, the account creation service behind Anchor for iOS and Android and Web Authenticator, and uses it to give new users a free account after a Google or Apple sign-in. gm already gifts RAM to every free account it creates; with the endowment, that RAM comes from the network, and Greymass's own RAM covers any account above the quota.",
+            "translations": [
+                {
+                    "lang": "ko",
+                    "path": "proposals/vp-0004-gm-creator/proposal.ko.md",
+                    "current": true,
+                    "title": "gm을 VP-0001 생성자로 등록",
+                    "excerpt": "이 제안은 gm을 VP-0001에 따른 생성자로 등록하고 일일 쿼터 256 KiB를 부여합니다. Greymass는 iOS 및 Android용 Anchor와 Web Authenticator의 계정 생성 서비스인 Sextant를 통해 gm을 운영하며, Google 또는 Apple 로그인 후 신규 사용자에게 무료 계정을 제공하는 데 사용합니다. gm은 이미 자신이 생성하는 모든 무료 계정에 RAM을 기증하고 있으며, 기금이 마련되면 그 RAM은 네트워크에서 나오고, 쿼터를 초과하는 계정은 Greymass 자체 RAM으로 충당합니다.",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "gm을 일일 쿼터 262,144바이트의 생성자로 등록"
+                        }
+                    ]
+                },
+                {
+                    "lang": "zh",
+                    "path": "proposals/vp-0004-gm-creator/proposal.zh.md",
+                    "current": true,
+                    "title": "将 gm 注册为 VP-0001 创建者",
+                    "excerpt": "本提案将 gm 注册为 VP-0001 下的创建者，每日额度为 256 KiB。Greymass 通过 Sextant 运营 gm。Sextant 是 iOS 和 Android 版 Anchor 以及 Web Authenticator 背后的账户创建服务，用于在用户通过 Google 或 Apple 登录后为其提供免费账户。gm 已经为其创建的每个免费账户赠送 RAM；有了捐赠资金后，这部分 RAM 将来自网络，超出额度的账户则由 Greymass 自己的 RAM 承担。",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "将 gm 注册为创建者，每日额度为 262,144 字节"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "vp": "VP-0005",
+            "title": "Raise the Inline Action Size Limit",
+            "standard": "VPS-1",
+            "status": "Proposed",
+            "authors": [
+                "Aaron Cox (Greymass)"
+            ],
+            "created": "2026-10-20",
+            "accounts": [
+                "eosio",
+                "eosio.msig"
+            ],
+            "msigs": [
+                {
+                    "status": "active",
+                    "proposer": "aaron",
+                    "proposal": "vp5setparams",
+                    "commit": "718e51bd2fc1877faa57c1c973eff11d74e749eb",
+                    "title": "Set max_inline_action_size to 1,048,576 bytes, leaving every other chain parameter at its value"
+                }
+            ],
+            "sentiment": [],
+            "requires": [],
+            "slug": "vp-0005-inline-action-size",
+            "path": "proposals/vp-0005-inline-action-size/proposal.md",
+            "updated": "2026-10-21",
+            "excerpt": "An msig can upgrade a contract only while its code stays under about 512 KB, half the size an account's own keys can deploy. This proposal raises that limit to 1 MB, so contracts that only governance can upgrade, such as the EOS EVM runtime, which sits 16,620 bytes below the current limit, can be upgraded at any size a key holder could deploy.",
+            "translations": [
+                {
+                    "lang": "ko",
+                    "path": "proposals/vp-0005-inline-action-size/proposal.ko.md",
+                    "current": true,
+                    "title": "인라인 액션 크기 제한 상향",
+                    "excerpt": "MSIG는 코드가 약 512 KB 미만일 때에만 컨트랙트를 업그레이드할 수 있으며, 이는 계정 자체의 키로 배포할 수 있는 크기의 절반입니다. 이 제안은 그 제한을 1 MB로 상향합니다. 이를 통해 현재 제한보다 16,620바이트 작은 EOS EVM 런타임처럼 거버넌스만 업그레이드할 수 있는 컨트랙트도 키 보유자가 배포할 수 있는 모든 크기로 업그레이드할 수 있습니다.",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "max_inline_action_size를 1,048,576바이트로 설정하고 나머지 체인 파라미터는 모두 현재 값으로 유지"
+                        }
+                    ]
+                },
+                {
+                    "lang": "zh",
+                    "path": "proposals/vp-0005-inline-action-size/proposal.zh.md",
+                    "current": true,
+                    "title": "提高内联动作大小上限",
+                    "excerpt": "MSIG 只能在合约代码小于约 512 KB 时升级合约，这只是账户自身密钥所能部署大小的一半。本提案将该上限提高到 1 MB，使只能由治理升级的合约（例如比现行上限小 16,620 字节的 EOS EVM 运行时）能够以密钥持有者可部署的任何大小进行升级。",
+                    "msigs": [
+                        {
+                            "step": 1,
+                            "title": "将 max_inline_action_size 设为 1,048,576 字节，其余所有链参数保持现值"
+                        }
+                    ]
                 }
             ]
         }

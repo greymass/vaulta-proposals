@@ -7,6 +7,8 @@
         "propose": "bun scripts/propose.ts",
         "verify": "bun scripts/verify.ts",
         "hash-msig": "bun scripts/hash-msig.ts",
+        "compute-msig": "bun scripts/compute-msig.ts",
+        "manifest": "bun scripts/manifest.ts",
         "codegen": "bunx @wharfkit/cli generate --json lib/codegen/eosio.abi.json --file lib/codegen/eosio.ts eosio && bunx @wharfkit/cli generate --json lib/codegen/msigmessager.abi.json --file lib/codegen/msigmessager.ts msigmessager",
         "check": "bunx tsc --noEmit && bunx biome check .",
         "test": "bun test"

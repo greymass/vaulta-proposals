@@ -16,7 +16,7 @@ Make each pass separately; do not blend them.
    block producer decide what they are approving and what it costs the
    network? List every question they would have to ask; each one is a gap
    in the document.
-   The Summary's first sentence must state the governance action itself; a Summary that only describes what the proposal would create is a gap even when nothing else is.
+   The Summary must open with one or two plain sentences stating what the network gains, readable without technical background; an opening that leads with mechanism or jargon is a gap. The governance action itself must follow directly, as the first sentence of the second paragraph; a Summary that only describes what the proposal would create is a gap even when nothing else is.
    The document must answer why the network should put its support behind it, and each justifying claim must be provable against chain state, contract source, or protocol rules. No provable why, or a why resting on unproven claims, is a gap.
    A reference to planning history, sibling workstreams, or anything else the document does not itself introduce is also a gap: the proposal stands alone.
 2. **The adversary.** Assume the proposal executes. How could its

@@ -107,6 +107,13 @@ const ctx = {
     commit,
     flags: flagValues(builderFlags),
 }
+try {
+    await builder.check?.(ctx)
+} catch (error) {
+    const message = error instanceof Error ? error.message : String(error)
+    console.error(`checking ${slug} :: ${proposalName} failed: ${message}`)
+    process.exit(1)
+}
 let actions: Action[]
 try {
     actions = prependCitation(proposalName, builder, ctx, await builder.build(ctx))

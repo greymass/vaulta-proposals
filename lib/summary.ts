@@ -1,11 +1,13 @@
 import { createHash } from 'node:crypto'
 import { ABI, type Action, Serializer } from '@wharfkit/antelope'
 import { abi as eosioAbi } from './codegen/eosio'
+import eosioAssertAbi from './codegen/eosio.assert.abi.json'
 import { abi as msigmessagerAbi } from './codegen/msigmessager'
 
 // Checked-in ABIs only, so a summary reads the same with no network as with one.
 const KNOWN_ABIS: Record<string, ABI> = {
     eosio: ABI.from(eosioAbi),
+    'eosio.assert': ABI.from(eosioAssertAbi),
     msigmessager: ABI.from(msigmessagerAbi),
 }
 

@@ -14,6 +14,14 @@ Msig code (`msig/index.ts`) is optional at submission time: a proposal can be di
 
 When a change to a proposal touches a requirement, an account, a threshold, or the proposal's scope, add an entry to `revisions` in the same commit as the change. See the Revisions section of [standard/VPS-1.md](standard/VPS-1.md) for what counts and the entry shape. Typo and formatting fixes do not need an entry.
 
+## Creating an account by msig
+
+When your msig creates a network account, fund its RAM the way producers have approved it before: an `eosio::newaccount` followed by an `eosio::buyrambytes` with `eosio` as payer, both authorized by `eosio@active`. Every account created by msig on mainnet has used this shape, from `eosio.evm` (2023, 8,192 bytes) to `fund.wram` (2024, 4,096 bytes). `buyrambytes` delivers one byte less than requested, and the system adds 1,400 bytes on top.
+
+An msig cannot carry an action authorized by an account that the same msig creates. `eosio.msig` checks every authority in the proposed transaction at `propose` and again at `exec`, and a permission that does not exist yet fails both checks. Put the account's own steps (`setcode`, `setabi`, `updateauth`, `linkauth`, contract actions) in a second msig, and propose it once the first has executed. `eosio.wrap::exec` can run those steps inside the first msig, but most review tools show its inner actions as one opaque action.
+
+`setcode` bills the account ten times the WASM size, so the msig that deploys code needs that much RAM on the account, plus the ABI, before `setcode` runs.
+
 ## Broadcasting an msig
 
 VPS-1 asks the cited SHA to be the latest commit touching the proposal's directory as of the time the citation is made, and the citation is made when the transaction is proposed. That fixes the order:
@@ -25,6 +33,10 @@ VPS-1 asks the cited SHA to be the latest commit touching the proposal's directo
 The cited SHA predates the commit that binds the entry, because the chain assigns the proposer and proposal name only once the transaction is proposed. The recorded `commit` is what lets `bun run verify <vp>` rebuild the entry's actions later and byte-compare them against the chain: the rebuild replays the recorded value rather than reading the citation off the chain, so an entry citing the wrong commit fails verification instead of validating itself.
 
 `bun run hash-msig <vp> <name> [--commit <sha>]` prints a sha256 over the transaction's actions alone, leaving out the expiration that derives from the clock, so the same code and the same flags always give the same value. Use it to confirm that a change to a builder, or to the code beneath it, left an already-proposed transaction's bytes alone. It reads nothing from the network.
+
+`bun run compute-msig <vp> <name> [--commit <sha>]` runs the same actions, citation included, through the node's `compute_transaction` against current chain state and broadcasts nothing. It prints the proposed transaction's size, which is the RAM the proposer's row needs, then either the reason the actions abort or the actions that ran, each account's RAM delta and every token transfer. It needs no signatures, so anyone can run it before a proposal exists or before approving one.
+
+A builder module that guards its msig with `eosio.assert::require` exports the manifest as `GUARD_MANIFEST`. `bun run manifest <vp> [add|del]` prints the `add.manifest` or `del.manifest` action built from that export, the manifest id the guard checks, and whether the manifest is registered on-chain, so the account that owns it signs bytes generated from the same code the msig is built from.
 
 `bun run propose <vp> <name> --summary` prints each action decoded through the ABIs checked into `lib/codegen` instead of the full transaction JSON, so a reviewer reads the citation memo, the authorities and the values rather than hex. A field longer than 128 hex characters, such as a contract's wasm, shows its byte count and its sha256, which is the same digest `get_code_hash` returns for a deployed contract.
 

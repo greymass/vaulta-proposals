@@ -1,0 +1,486 @@
+VP-0005 reproduction: eosio.msig exec of a large setcode under max_inline_action_size
+
+This file reproduces the measurement VP-0005 cites. It holds a Spring unit test, the CMake project that builds it, the commands that fetch its WASM inputs from public chains, the command that runs it, and the output recorded on 2026-10-20.
+
+The test runs in Spring's tester, a full libchain instance. It deploys the live EOS mainnet eosio.system and eosio.msig contracts and sets the 17 chain parameters to their EOS mainnet values. It then proposes a setcode of a 994,058-byte contract through eosio.msig, approves the proposal and calls exec. At max_inline_action_size 524,287 (the EOS mainnet value) exec fails with inline_action_too_big. The test then raises the limit the way VP-0005 does: it proposes, approves and executes through eosio.msig the exact 68-byte eosio::setparams action that VP-0005's msig carries, and checks that max_inline_action_size is 1,048,576 and every other parameter still holds its mainnet value. After that, the same setcode exec succeeds under eos-vm-jit and eos-vm-oc, and the target account's code hash matches the proposed WASM. A second case pads the same WASM to the largest setcode a 1 MiB decompressed propose transaction can hold and repeats the exec.
+
+
+1. Spring version
+
+AntelopeIO/spring v1.2.2, commit 04bdb089e (merge of AntelopeIO/spring#1833, "bump122").
+
+Build it from source with its unit tests, following the Spring README. eos-vm-jit is built only on x86_64, and eos-vm-oc additionally needs Linux, so CPU figures for those two runtimes need an x86_64 Linux host. The recorded run used Ubuntu with gcc 13 on a 4-core x86_64 machine.
+
+
+2. Inputs
+
+Put these files in the test directory next to inline_size_tests.cpp. The test checks each WASM SHA-256 and stops if one differs.
+
+eosio.system.wasm and eosio.system.abi
+  Source: the eosio account on EOS mainnet.
+  WASM SHA-256: 34cbdf2a9c41b0a182f235018753110ca2cdcdd4c274b17dd8b7ea9f444fd043 (409,053 bytes)
+  Fetch: cleos -u $EOS_API get code eosio --wasm -c eosio.system.wasm -a eosio.system.abi
+
+eosio.msig.wasm and eosio.msig.abi
+  Source: the eosio.msig account on EOS mainnet.
+  WASM SHA-256: 9bddf7e0444a3a5f457f88509824ec8c46dcbedbf7b15ffdf6dd03d7f8ec33e8 (34,522 bytes)
+  Fetch: cleos -u $EOS_API get code eosio.msig --wasm -c eosio.msig.wasm -a eosio.msig.abi
+
+$EOS_API is any EOS mainnet API node.
+
+subject.wasm
+  Source: the eon.shipload account on Jungle 4 (the Shipload game server contract), deployed by transaction 13e25df040fff5ca692db70b015582ae84e1fb7dbb48f29a132816f7e509a3df in block 292084194 (2026-10-14T21:52:28Z).
+  WASM SHA-256: e687392df235a1bd582f6ba56143b5a2399b070b45d67df7641fb511d7378c59 (994,058 bytes)
+  Fetch while that code is live: cleos -u $JUNGLE4_API get code eon.shipload --wasm -c subject.wasm
+  $JUNGLE4_API is any Jungle 4 API node. If the account has been redeployed since, the setcode action data of the transaction above, read from any Jungle 4 history node, carries the same bytes as hex.
+
+Any WASM of 524,238 bytes or more serves the first case: its packed inline setcode action, 49 bytes larger than the code, then reaches the current limit. The hashes pin the recorded inputs.
+
+The setparams action data is written into the test as the constant vp5_setparams_hex. It is the data of the eosio::setparams action in VP-0005's msig vp5setparams, as the vaulta-proposals builder prints it with "bun run propose VP-0005 vp5setparams" (a dry run). Compare the two before relying on the result. The 17 starting parameters in mainnet_params() were read from the EOS mainnet eosio global table on 2026-10-20.
+
+
+3. Files
+
+Save each block between its BEGIN and END lines under the name it gives, in one directory with the inputs.
+
+----- BEGIN FILE: CMakeLists.txt -----
+cmake_minimum_required(VERSION 3.5)
+project(spring_vtest)
+find_package(spring)
+if(NOT SPRING_ROOT)
+   message(FATAL_ERROR "pass -DSPRING_ROOT=<spring checkout with a completed build/>")
+endif()
+include_directories(${SPRING_ROOT}/unittests ${SPRING_ROOT}/unittests/contracts ${SPRING_ROOT}/build/unittests/include)
+file(GLOB SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+add_eosio_test_executable(vtest ${SPRING_ROOT}/unittests/main.cpp ${SRCS})
+----- END FILE: CMakeLists.txt -----
+
+----- BEGIN FILE: inline_size_tests.cpp -----
+#include <eosio/testing/tester.hpp>
+#include <eosio/chain/exceptions.hpp>
+#include <eosio/chain/contract_types.hpp>
+#include <eosio/chain/account_object.hpp>
+#include <eosio/chain/global_property_object.hpp>
+#include <boost/test/unit_test.hpp>
+#include <fc/crypto/hex.hpp>
+#include <fc/io/json.hpp>
+#include <fc/io/raw.hpp>
+#include <fc/variant_object.hpp>
+#include <filesystem>
+#include <fstream>
+
+using namespace eosio::chain;
+using namespace eosio::testing;
+using mvo = fc::mutable_variant_object;
+
+struct propose_args {
+   name                          proposer;
+   name                          proposal_name;
+   std::vector<permission_level> requested;
+   transaction                   trx;
+};
+FC_REFLECT(propose_args, (proposer)(proposal_name)(requested)(trx))
+
+struct exec_args {
+   name proposer;
+   name proposal_name;
+   name executer;
+};
+FC_REFLECT(exec_args, (proposer)(proposal_name)(executer))
+
+namespace {
+
+const uint32_t mainnet_inline_limit  = 524'287;
+const uint32_t proposed_inline_limit = 1'048'576;
+const char*    system_wasm_sha256    = "34cbdf2a9c41b0a182f235018753110ca2cdcdd4c274b17dd8b7ea9f444fd043";
+const char*    msig_wasm_sha256      = "9bddf7e0444a3a5f457f88509824ec8c46dcbedbf7b15ffdf6dd03d7f8ec33e8";
+const char*    subject_wasm_sha256   = "e687392df235a1bd582f6ba56143b5a2399b070b45d67df7641fb511d7378c59";
+const char*    vp5_setparams_hex =
+   "000010000000000010270000000008000c000000f40100001400000064000000400d03000a000000f049020064000000100e00005802000080533b00000010000a000a00";
+
+chain_config_v0 mainnet_params() {
+   chain_config_v0 c;
+   c.max_block_net_usage                 = 1'048'576;
+   c.target_block_net_usage_pct          = 10'000;
+   c.max_transaction_net_usage           = 524'288;
+   c.base_per_transaction_net_usage      = 12;
+   c.net_usage_leeway                    = 500;
+   c.context_free_discount_net_usage_num = 20;
+   c.context_free_discount_net_usage_den = 100;
+   c.max_block_cpu_usage                 = 200'000;
+   c.target_block_cpu_usage_pct          = 10;
+   c.max_transaction_cpu_usage           = 150'000;
+   c.min_transaction_cpu_usage           = 100;
+   c.max_transaction_lifetime            = 3'600;
+   c.deferred_trx_expiration_window      = 600;
+   c.max_transaction_delay               = 3'888'000;
+   c.max_inline_action_size              = mainnet_inline_limit;
+   c.max_inline_action_depth             = 10;
+   c.max_authority_depth                 = 10;
+   return c;
+}
+
+std::filesystem::path here() { return std::filesystem::path(__FILE__).parent_path(); }
+
+std::vector<uint8_t> read_bytes(const std::filesystem::path& p) {
+   std::ifstream f(p, std::ios::binary);
+   BOOST_REQUIRE_MESSAGE(f.good(), "missing " << p.string());
+   return std::vector<uint8_t>(std::istreambuf_iterator<char>(f), {});
+}
+
+std::string read_text(const std::filesystem::path& p) {
+   auto b = read_bytes(p);
+   return std::string(b.begin(), b.end());
+}
+
+fc::sha256 hash_of(const std::vector<uint8_t>& b) {
+   return fc::sha256::hash(reinterpret_cast<const char*>(b.data()), b.size());
+}
+
+std::vector<uint8_t> read_pinned(const std::string& file, const char* sha256) {
+   auto b = read_bytes(here() / file);
+   BOOST_REQUIRE_MESSAGE(hash_of(b).str() == sha256, file << " sha256 " << hash_of(b).str() << " != " << sha256);
+   return b;
+}
+
+bytes vp5_setparams_data() {
+   const std::string hex = vp5_setparams_hex;
+   bytes out(hex.size() / 2);
+   BOOST_REQUIRE_EQUAL(fc::from_hex(hex, out.data(), out.size()), out.size());
+   return out;
+}
+
+std::string to_json(const chain_config_v0& c) {
+   fc::variant v;
+   fc::to_variant(c, v);
+   return fc::json::to_string(v, fc::time_point::maximum());
+}
+
+void put_leb(std::vector<uint8_t>& out, uint32_t v) {
+   do { uint8_t b = v & 0x7f; v >>= 7; if (v) b |= 0x80; out.push_back(b); } while (v);
+}
+
+std::vector<uint8_t> pad_with_custom_section(std::vector<uint8_t> wasm, uint32_t payload) {
+   const std::string nm = "pad";
+   std::vector<uint8_t> body;
+   put_leb(body, nm.size());
+   body.insert(body.end(), nm.begin(), nm.end());
+   body.resize(body.size() + payload, 0);
+   wasm.push_back(0);
+   put_leb(wasm, body.size());
+   wasm.insert(wasm.end(), body.begin(), body.end());
+   return wasm;
+}
+
+struct chain_fixture {
+   tester t{setup_policy::full, db_read_mode::HEAD, mainnet_inline_limit};
+   const name eosio = config::system_account_name;
+   const name msig = "eosio.msig"_n;
+   const name proposer = "proposer"_n;
+   const name target = "target"_n;
+   const name direct = "direct"_n;
+
+   chain_fixture() {
+      t.create_accounts({msig, proposer, target, direct});
+      t.produce_block();
+      t.push_action(eosio, "setpriv"_n, eosio, mvo()("account", msig)("is_priv", 1));
+      t.set_code(msig, read_pinned("eosio.msig.wasm", msig_wasm_sha256));
+      t.set_abi(msig, read_text(here() / "eosio.msig.abi").c_str());
+      t.produce_block();
+      t.set_code(eosio, read_pinned("eosio.system.wasm", system_wasm_sha256));
+      t.set_abi(eosio, read_text(here() / "eosio.system.abi").c_str());
+      t.produce_block();
+      fc::variant params;
+      fc::to_variant(mainnet_params(), params);
+      t.push_action(eosio, "setparams"_n, eosio, mvo()("params", params));
+      t.produce_block();
+      require_config(mainnet_params());
+      // first msig execution compiles the module under eos-vm-oc; keep that out of the measured transactions
+      t.push_action(msig, "invalidate"_n, direct, mvo()("account", direct));
+      t.produce_block();
+   }
+
+   chain_config_v0 config() const {
+      return t.control->get_global_properties().configuration;
+   }
+
+   void require_config(const chain_config_v0& want) const {
+      BOOST_REQUIRE_MESSAGE(config() == want, "chain config " << to_json(config()) << " != " << to_json(want));
+   }
+
+   uint32_t inline_limit() const { return config().max_inline_action_size; }
+
+   transaction_trace_ptr push(std::vector<action> acts, name signer, packed_transaction::compression_type c,
+                              size_t* packed_size = nullptr) {
+      signed_transaction trx;
+      trx.actions = std::move(acts);
+      t.set_transaction_headers(trx);
+      trx.sign(t.get_private_key(signer, "active"), t.control->get_chain_id());
+      packed_transaction built(std::move(trx), c);
+      if (packed_size) *packed_size = built.get_packed_transaction().size();
+      // rebuild from wire bytes so zlib decompression and its 1 MiB cap run as on node ingress
+      packed_transaction ptrx(bytes(built.get_packed_transaction()), std::vector<signature_type>(built.get_signatures()),
+                              bytes(built.get_packed_context_free_data()), c);
+      return t.push_transaction(ptrx, fc::time_point::maximum(), 0);
+   }
+
+   action setcode_action(const std::vector<uint8_t>& wasm) {
+      return action({{target, config::active_name}},
+                    setcode{.account = target, .vmtype = 0, .vmversion = 0, .code = bytes(wasm.begin(), wasm.end())});
+   }
+
+   action propose_action(name pname, action inner_action, permission_level requested) {
+      transaction inner;
+      t.set_transaction_headers(inner, 3600);
+      inner.actions.push_back(std::move(inner_action));
+      propose_args a{proposer, pname, {requested}, inner};
+      return action({{proposer, config::active_name}}, msig, "propose"_n, fc::raw::pack(a));
+   }
+
+   action propose_action(name pname, const std::vector<uint8_t>& wasm) {
+      return propose_action(pname, setcode_action(wasm), {target, config::active_name});
+   }
+
+   action exec_action(name pname) {
+      return action({{proposer, config::active_name}}, msig, "exec"_n, fc::raw::pack(exec_args{proposer, pname, proposer}));
+   }
+
+   void approve(name pname, name approver) {
+      t.push_action(msig, "approve"_n, approver,
+                    mvo()("proposer", proposer)("proposal_name", pname)("level", permission_level{approver, config::active_name}));
+   }
+
+   void raise_inline_limit_via_vp5_msig() {
+      const auto data = vp5_setparams_data();
+      BOOST_TEST_MESSAGE("IS vp5setparams data_bytes=" << data.size() << " data_sha256="
+                         << fc::sha256::hash(data.data(), data.size()).str());
+      const name pname = "vp5setparams"_n;
+      push({propose_action(pname, action({{eosio, config::active_name}}, eosio, "setparams"_n, data), {eosio, config::active_name})},
+           proposer, packed_transaction::compression_type::none);
+      approve(pname, eosio);
+      t.produce_block();
+      auto trace = push({exec_action(pname)}, proposer, packed_transaction::compression_type::none);
+      t.produce_block();
+      auto want = mainnet_params();
+      want.max_inline_action_size = proposed_inline_limit;
+      require_config(want);
+      BOOST_TEST_MESSAGE("IS vp5setparams msig exec -> ok cpu_us=" << trace->receipt->cpu_usage_us
+                         << " limit=" << inline_limit() << ", other 16 parameters unchanged");
+   }
+
+   fc::sha256 code_hash(name acct) {
+      return t.control->db().get<account_metadata_object, by_name>(acct).code_hash;
+   }
+};
+
+bool is_inline_too_big(const fc::exception& e) { return e.code() == inline_action_too_big::code_value; }
+bool is_net_exceeded(const fc::exception& e) { return e.code() == tx_net_usage_exceeded::code_value; }
+
+}
+
+BOOST_AUTO_TEST_SUITE(INLINE_SIZE)
+
+BOOST_AUTO_TEST_CASE(msig_setcode_fails_at_mainnet_limit_and_passes_after_vp5) try {
+   chain_fixture f;
+   const auto wasm = read_pinned("subject.wasm", subject_wasm_sha256);
+   const auto wasm_hash = hash_of(wasm);
+   const auto inline_bytes = fc::raw::pack_size(f.setcode_action(wasm));
+   BOOST_TEST_MESSAGE("IS wasm_bytes=" << wasm.size() << " wasm_sha256=" << wasm_hash.str()
+                      << " packed_inline_setcode_bytes=" << inline_bytes << " limit=" << f.inline_limit());
+   BOOST_REQUIRE_EQUAL(f.inline_limit(), mainnet_inline_limit);
+
+   size_t raw_size = 0;
+   BOOST_CHECK_EXCEPTION(f.push({f.propose_action("bigcode"_n, wasm)}, f.proposer, packed_transaction::compression_type::none, &raw_size),
+                         fc::exception, is_net_exceeded);
+   BOOST_TEST_MESSAGE("IS propose_uncompressed packed_trx_bytes=" << raw_size << " -> tx_net_usage_exceeded");
+
+   size_t z_size = 0;
+   auto ptrace = f.push({f.propose_action("bigcode"_n, wasm)}, f.proposer, packed_transaction::compression_type::zlib, &z_size);
+   BOOST_TEST_MESSAGE("IS propose_zlib packed_trx_bytes=" << z_size << " net_usage=" << ptrace->net_usage
+                      << " cpu_us=" << ptrace->receipt->cpu_usage_us << " elapsed_us=" << ptrace->elapsed.count());
+   f.approve("bigcode"_n, f.target);
+   f.t.produce_block();
+
+   try {
+      f.push({f.exec_action("bigcode"_n)}, f.proposer, packed_transaction::compression_type::none);
+      BOOST_FAIL("exec unexpectedly succeeded at the mainnet limit");
+   } catch (const fc::exception& e) {
+      BOOST_REQUIRE_MESSAGE(is_inline_too_big(e), "unexpected exception " << e.name() << ": " << e.top_message());
+      BOOST_TEST_MESSAGE("IS exec at limit=" << f.inline_limit() << " -> " << e.name() << " (" << e.code() << "): " << e.top_message());
+   }
+   BOOST_REQUIRE(f.code_hash(f.target) == fc::sha256());
+
+   f.raise_inline_limit_via_vp5_msig();
+   auto etrace = f.push({f.exec_action("bigcode"_n)}, f.proposer, packed_transaction::compression_type::none);
+   BOOST_TEST_MESSAGE("IS exec at limit=" << f.inline_limit() << " -> ok net_usage=" << etrace->net_usage
+                      << " cpu_us=" << etrace->receipt->cpu_usage_us << " elapsed_us=" << etrace->elapsed.count()
+                      << " action_traces=" << etrace->action_traces.size());
+   BOOST_REQUIRE(f.code_hash(f.target) == wasm_hash);
+   BOOST_TEST_MESSAGE("IS target code_hash=" << f.code_hash(f.target).str() << " matches");
+
+   size_t d_size = 0;
+   auto dtrace = f.push({action({{f.direct, config::active_name}},
+                                setcode{.account = f.direct, .vmtype = 0, .vmversion = 0, .code = bytes(wasm.begin(), wasm.end())})},
+                        f.direct, packed_transaction::compression_type::zlib, &d_size);
+   BOOST_TEST_MESSAGE("IS direct key setcode zlib packed_trx_bytes=" << d_size << " net_usage=" << dtrace->net_usage
+                      << " cpu_us=" << dtrace->receipt->cpu_usage_us);
+} FC_LOG_AND_RETHROW()
+
+BOOST_AUTO_TEST_CASE(msig_setcode_largest_proposable_passes_after_vp5) try {
+   chain_fixture f;
+   const auto base = read_pinned("subject.wasm", subject_wasm_sha256);
+   auto propose_bytes = [&](const std::vector<uint8_t>& w) {
+      signed_transaction trx;
+      trx.actions.push_back(f.propose_action("maxcode"_n, w));
+      f.t.set_transaction_headers(trx);
+      return fc::raw::pack_size(static_cast<const transaction&>(trx));
+   };
+   uint32_t lo = 0, hi = 1'048'576;
+   while (lo < hi) {
+      uint32_t mid = (lo + hi + 1) / 2;
+      if (propose_bytes(pad_with_custom_section(base, mid)) <= 1024 * 1024) lo = mid; else hi = mid - 1;
+   }
+   const auto wasm = pad_with_custom_section(base, lo);
+   const auto wasm_hash = hash_of(wasm);
+   const auto inline_bytes = fc::raw::pack_size(f.setcode_action(wasm));
+   BOOST_TEST_MESSAGE("IS max wasm_bytes=" << wasm.size() << " propose_trx_bytes=" << propose_bytes(wasm)
+                      << " packed_inline_setcode_bytes=" << inline_bytes);
+   BOOST_REQUIRE_LT(inline_bytes, proposed_inline_limit);
+
+   BOOST_CHECK_EXCEPTION(f.push({f.propose_action("maxcode"_n, pad_with_custom_section(base, lo + 1))}, f.proposer,
+                                packed_transaction::compression_type::zlib),
+                         fc::exception, [](const fc::exception& e) {
+                            BOOST_TEST_MESSAGE("IS one byte more -> " << e.name() << ": " << e.top_message());
+                            return e.code() == tx_decompression_error::code_value || e.code() == fc::out_of_range_exception::code_value;
+                         });
+
+   size_t z_size = 0;
+   auto ptrace = f.push({f.propose_action("maxcode"_n, wasm)}, f.proposer, packed_transaction::compression_type::zlib, &z_size);
+   BOOST_TEST_MESSAGE("IS max propose_zlib packed_trx_bytes=" << z_size << " net_usage=" << ptrace->net_usage);
+   f.approve("maxcode"_n, f.target);
+   f.t.produce_block();
+
+   BOOST_CHECK_EXCEPTION(f.push({f.exec_action("maxcode"_n)}, f.proposer, packed_transaction::compression_type::none),
+                         fc::exception, is_inline_too_big);
+   f.raise_inline_limit_via_vp5_msig();
+   auto etrace = f.push({f.exec_action("maxcode"_n)}, f.proposer, packed_transaction::compression_type::none);
+   BOOST_TEST_MESSAGE("IS max exec at limit=" << f.inline_limit() << " -> ok net_usage=" << etrace->net_usage
+                      << " cpu_us=" << etrace->receipt->cpu_usage_us << " elapsed_us=" << etrace->elapsed.count());
+   BOOST_REQUIRE(f.code_hash(f.target) == wasm_hash);
+} FC_LOG_AND_RETHROW()
+
+BOOST_AUTO_TEST_SUITE_END()
+----- END FILE: inline_size_tests.cpp -----
+
+
+4. Build and run
+
+  mkdir build && cd build
+  cmake -Dspring_DIR=$SPRING/build/lib/cmake/spring -DSPRING_ROOT=$SPRING ..
+  make vtest
+  for vm in eos-vm eos-vm-jit eos-vm-oc; do ./vtest --log_level=message -- --$vm; done
+
+$SPRING is the Spring checkout from section 1 with its build/ directory complete.
+
+
+5. Recorded output
+
+Recorded 2026-10-20 on the host in section 1, one run per runtime. Both cases pass under eos-vm-jit and eos-vm-oc. Under the eos-vm interpreter the vp5setparams msig executes, and each setcode exec at 1,048,576 then passes the inline size check and exceeds the 150 ms max_transaction_cpu_usage inside setcode, so that run reports two failures.
+
+Summary, CPU in microseconds:
+
+  case                                       eos-vm      eos-vm-jit   eos-vm-oc
+  propose, zlib, 994,058-byte WASM            50,367       11,379       8,034
+  exec at 524,287                            inline_action_too_big (all runtimes)
+  vp5setparams msig exec (68-byte setparams)     307          113         100
+  exec at 1,048,576, 994,058-byte WASM     >150,000       36,976      20,601
+  exec at 1,048,576, 1,048,426-byte WASM   >150,000       38,397      20,467
+  direct key setcode, zlib, same WASM            n/a       25,393      20,620
+
+The vp5setparams data has SHA-256 0a08486aeca09d1075ecd9b2345132e9b1ddef0aef71d9d55e0f5955b20807f0. After its exec the chain reports max_inline_action_size 1,048,576 and the other 16 parameters at their mainnet values. Every setcode exec bills 120 NET. The zlib propose of the 994,058-byte WASM is 306,567 bytes and bills 306,616 NET; uncompressed it is 994,208 bytes and fails with tx_net_usage_exceeded. Transaction header bytes vary between runs, so compressed sizes can differ by a byte or two.
+
+  --- ./vtest --log_level=message -- --eos-vm
+  Random number generator seeded to 1792531234
+  Running 2 test cases...
+  IS wasm_bytes=994058 wasm_sha256=e687392df235a1bd582f6ba56143b5a2399b070b45d67df7641fb511d7378c59 packed_inline_setcode_bytes=994107 limit=524287
+  IS propose_uncompressed packed_trx_bytes=994208 -> tx_net_usage_exceeded
+  IS propose_zlib packed_trx_bytes=306567 net_usage=306616 cpu_us=50367 elapsed_us=50367
+  IS exec at limit=524287 -> inline_action_too_big (3050009): inline action too big
+  IS vp5setparams data_bytes=68 data_sha256=0a08486aeca09d1075ecd9b2345132e9b1ddef0aef71d9d55e0f5955b20807f0
+  IS vp5setparams msig exec -> ok cpu_us=307 limit=1048576, other 16 parameters unchanged
+  3080004 tx_cpu_usage_exceeded: Transaction exceeded the current CPU usage limit imposed on the transaction
+  transaction d80a52b2ec67fda6ab5fa0e66385d773d6e3c1c3ceccd060ebb69c165152cd1f was executing for too long 155701us reached on chain max_transaction_cpu_usage 150000us
+      {"id":"d80a52b2ec67fda6ab5fa0e66385d773d6e3c1c3ceccd060ebb69c165152cd1f","billing_timer":155701,"subjective":0,"limit":150000}
+      vtest  transaction_context.cpp:530 checktime
+  eosio <= eosio::setcode pending console output: 
+      {"console":"","account":"eosio","action":"setcode","receiver":"eosio"}
+      vtest  apply_context.cpp:134 exec_one
+  transaction_header: {"expiration":"2020-01-01T00:00:14","ref_block_num":18,"ref_block_prefix":1690738921,"max_net_usage_words":0,"max_cpu_usage_ms":0,"delay_sec":0}
+      {"header":{"expiration":"2020-01-01T00:00:14","ref_block_num":18,"ref_block_prefix":1690738921,"max_net_usage_words":0,"max_cpu_usage_ms":0,"delay_sec":0}}
+      vtest  tester.cpp:742 push_transaction
+  rethrow
+      {}
+      vtest  inline_size_tests.cpp:269 test_method
+  unknown location(0): fatal error: in "INLINE_SIZE/msig_setcode_fails_at_mainnet_limit_and_passes_after_vp5": std::runtime_error: Caught Unexpected Exception
+  inline_size_tests.cpp(150): last checkpoint
+  IS max wasm_bytes=1048426 propose_trx_bytes=1048576 packed_inline_setcode_bytes=1048475
+  IS one byte more -> out_of_range_exception: get datastream of length 1048576 over by 1
+  IS max propose_zlib packed_trx_bytes=306860 net_usage=306904
+  IS vp5setparams data_bytes=68 data_sha256=0a08486aeca09d1075ecd9b2345132e9b1ddef0aef71d9d55e0f5955b20807f0
+  IS vp5setparams msig exec -> ok cpu_us=315 limit=1048576, other 16 parameters unchanged
+  3080004 tx_cpu_usage_exceeded: Transaction exceeded the current CPU usage limit imposed on the transaction
+  transaction ca8812d4daaa1470181a21b08933b4419f4aa12e326b894ca80da392cee2189b was executing for too long 158927us reached on chain max_transaction_cpu_usage 150000us
+      {"id":"ca8812d4daaa1470181a21b08933b4419f4aa12e326b894ca80da392cee2189b","billing_timer":158927,"subjective":0,"limit":150000}
+      vtest  transaction_context.cpp:530 checktime
+  eosio <= eosio::setcode pending console output: 
+      {"console":"","account":"eosio","action":"setcode","receiver":"eosio"}
+      vtest  apply_context.cpp:134 exec_one
+  transaction_header: {"expiration":"2020-01-01T00:00:14","ref_block_num":18,"ref_block_prefix":1812255405,"max_net_usage_words":0,"max_cpu_usage_ms":0,"delay_sec":0}
+      {"header":{"expiration":"2020-01-01T00:00:14","ref_block_num":18,"ref_block_prefix":1812255405,"max_net_usage_words":0,"max_cpu_usage_ms":0,"delay_sec":0}}
+      vtest  tester.cpp:742 push_transaction
+  rethrow
+      {}
+      vtest  inline_size_tests.cpp:312 test_method
+  unknown location(0): fatal error: in "INLINE_SIZE/msig_setcode_largest_proposable_passes_after_vp5": std::runtime_error: Caught Unexpected Exception
+  inline_size_tests.cpp(150): last checkpoint
+  *** 2 failures are detected in the test module "Master Test Suite"
+
+  --- ./vtest --log_level=message -- --eos-vm-jit
+  Random number generator seeded to 1792531222
+  Running 2 test cases...
+  IS wasm_bytes=994058 wasm_sha256=e687392df235a1bd582f6ba56143b5a2399b070b45d67df7641fb511d7378c59 packed_inline_setcode_bytes=994107 limit=524287
+  IS propose_uncompressed packed_trx_bytes=994208 -> tx_net_usage_exceeded
+  IS propose_zlib packed_trx_bytes=306567 net_usage=306616 cpu_us=11379 elapsed_us=11379
+  IS exec at limit=524287 -> inline_action_too_big (3050009): inline action too big
+  IS vp5setparams data_bytes=68 data_sha256=0a08486aeca09d1075ecd9b2345132e9b1ddef0aef71d9d55e0f5955b20807f0
+  IS vp5setparams msig exec -> ok cpu_us=113 limit=1048576, other 16 parameters unchanged
+  IS exec at limit=1048576 -> ok net_usage=120 cpu_us=36976 elapsed_us=36976 action_traces=2
+  IS target code_hash=e687392df235a1bd582f6ba56143b5a2399b070b45d67df7641fb511d7378c59 matches
+  IS direct key setcode zlib packed_trx_bytes=306524 net_usage=306568 cpu_us=25393
+  IS max wasm_bytes=1048426 propose_trx_bytes=1048576 packed_inline_setcode_bytes=1048475
+  IS one byte more -> out_of_range_exception: get datastream of length 1048576 over by 1
+  IS max propose_zlib packed_trx_bytes=306860 net_usage=306904
+  IS vp5setparams data_bytes=68 data_sha256=0a08486aeca09d1075ecd9b2345132e9b1ddef0aef71d9d55e0f5955b20807f0
+  IS vp5setparams msig exec -> ok cpu_us=123 limit=1048576, other 16 parameters unchanged
+  IS max exec at limit=1048576 -> ok net_usage=120 cpu_us=38397 elapsed_us=38397
+  *** No errors detected
+
+  --- ./vtest --log_level=message -- --eos-vm-oc
+  Random number generator seeded to 1792531223
+  Running 2 test cases...
+  IS wasm_bytes=994058 wasm_sha256=e687392df235a1bd582f6ba56143b5a2399b070b45d67df7641fb511d7378c59 packed_inline_setcode_bytes=994107 limit=524287
+  IS propose_uncompressed packed_trx_bytes=994208 -> tx_net_usage_exceeded
+  IS propose_zlib packed_trx_bytes=306567 net_usage=306616 cpu_us=8034 elapsed_us=8034
+  IS exec at limit=524287 -> inline_action_too_big (3050009): inline action too big
+  IS vp5setparams data_bytes=68 data_sha256=0a08486aeca09d1075ecd9b2345132e9b1ddef0aef71d9d55e0f5955b20807f0
+  IS vp5setparams msig exec -> ok cpu_us=100 limit=1048576, other 16 parameters unchanged
+  IS exec at limit=1048576 -> ok net_usage=120 cpu_us=20601 elapsed_us=20601 action_traces=2
+  IS target code_hash=e687392df235a1bd582f6ba56143b5a2399b070b45d67df7641fb511d7378c59 matches
+  IS direct key setcode zlib packed_trx_bytes=306528 net_usage=306576 cpu_us=20620
+  IS max wasm_bytes=1048426 propose_trx_bytes=1048576 packed_inline_setcode_bytes=1048475
+  IS one byte more -> out_of_range_exception: get datastream of length 1048576 over by 1
+  IS max propose_zlib packed_trx_bytes=306860 net_usage=306904
+  IS vp5setparams data_bytes=68 data_sha256=0a08486aeca09d1075ecd9b2345132e9b1ddef0aef71d9d55e0f5955b20807f0
+  IS vp5setparams msig exec -> ok cpu_us=100 limit=1048576, other 16 parameters unchanged
+  IS max exec at limit=1048576 -> ok net_usage=120 cpu_us=20467 elapsed_us=20467
+  *** No errors detected

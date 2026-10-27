@@ -35,6 +35,7 @@ The `##` section roster is partially fixed:
 
 - The first `##` section MUST be `Summary`.
 - `Summary`'s first paragraph is the fallback source of the proposal's index-card excerpt, used when frontmatter carries no `excerpt` field: it is extracted as plain text, with inline markdown formatting removed. A proposal that relies on this fallback SHOULD write that paragraph to stand alone as a one-to-two-sentence abstract of the proposal.
+- `Summary` SHOULD open with one or two plain sentences stating what the network gains from the proposal, written so a reader without the technical background understands why it matters. The governance action the proposal asks for SHOULD follow directly, as the first sentence of the next paragraph.
 - The last two `##` sections MUST be `Open Questions` then `Next Steps`, in that order. Nothing may follow `Next Steps`.
 - `Summary`, `Open Questions`, and `Next Steps` are the only required sections. Each MUST contain at least one non-whitespace line; the literal text "None." satisfies this for a section with nothing to say.
 - Any number of free-form `##` sections may appear between `Summary` and `Open Questions`. `Rationale` (why this is needed) and `Mechanics` (how it works on-chain) are suggested but not required, and may be renamed, reordered, split, or omitted to fit the proposal.
