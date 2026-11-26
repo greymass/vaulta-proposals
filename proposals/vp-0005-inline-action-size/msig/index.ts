@@ -39,39 +39,41 @@ export function compareParams(live: Record<string, unknown>) {
     return { rows, drift }
 }
 
-export const msigs: Record<string, MsigBuilder> = {
-    vp5setparams: {
-        entry: 1,
-        citationAuth: [system],
-        check: async () => {
-            const result = await client.v1.chain.get_table_rows({
-                code: 'eosio',
-                scope: 'eosio',
-                table: 'global',
-                json: true,
-            })
-            const { rows, drift } = compareParams(result.rows[0] ?? {})
-            const width = Math.max(...rows.map((row) => row.field.length))
+const setparams: Omit<MsigBuilder, 'entry'> = {
+    citationAuth: [system],
+    check: async () => {
+        const result = await client.v1.chain.get_table_rows({
+            code: 'eosio',
+            scope: 'eosio',
+            table: 'global',
+            json: true,
+        })
+        const { rows, drift } = compareParams(result.rows[0] ?? {})
+        const width = Math.max(...rows.map((row) => row.field.length))
+        console.error(
+            `${'field'.padEnd(width)}  ${'live'.padStart(10)}  ${'proposed'.padStart(10)}`,
+        )
+        for (const row of rows) {
             console.error(
-                `${'field'.padEnd(width)}  ${'live'.padStart(10)}  ${'proposed'.padStart(10)}`,
+                `${row.field.padEnd(width)}  ${String(row.live).padStart(10)}  ${String(row.proposed).padStart(10)}${row.changed ? '  changed' : ''}`,
             )
-            for (const row of rows) {
-                console.error(
-                    `${row.field.padEnd(width)}  ${String(row.live).padStart(10)}  ${String(row.proposed).padStart(10)}${row.changed ? '  changed' : ''}`,
-                )
-            }
-            if (drift.length) {
-                throw new Error(
-                    `live global differs from the pinned values outside ${CHANGED.join(', ')}: ${drift.map((row) => row.field).join(', ')}`,
-                )
-            }
-        },
-        build: async () => [
-            eosio.action(
-                'setparams',
-                { params: Types.blockchain_parameters_v1.from(PARAMS) },
-                { authorization: [system] },
-            ),
-        ],
+        }
+        if (drift.length) {
+            throw new Error(
+                `live global differs from the pinned values outside ${CHANGED.join(', ')}: ${drift.map((row) => row.field).join(', ')}`,
+            )
+        }
     },
+    build: async () => [
+        eosio.action(
+            'setparams',
+            { params: Types.blockchain_parameters_v1.from(PARAMS) },
+            { authorization: [system] },
+        ),
+    ],
+}
+
+export const msigs: Record<string, MsigBuilder> = {
+    vp5setparams: { ...setparams, entry: 1 },
+    vp5setparam2: { ...setparams, entry: 2 },
 }
