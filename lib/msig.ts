@@ -1,10 +1,17 @@
 import { existsSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
-import { type Action, Name, PackedTransaction, Serializer, Transaction } from '@wharfkit/antelope'
+import {
+    type Action,
+    Name,
+    PackedTransaction,
+    Serializer,
+    Transaction,
+    type TransactionType,
+} from '@wharfkit/antelope'
 import { ROOT as root } from './constants'
 import { parseProposal, validateFrontmatter } from './frontmatter'
 import type { BoundMsigRef, MsigBuilder, MsigModule, MsigRef } from './types'
-import { client } from './wharf'
+import { client, historyClient } from './wharf'
 
 export function resolveSlug(vpArg: string): string {
     const normalized = vpArg.toLowerCase().replace(/^vp-?/, '')
@@ -155,9 +162,7 @@ export async function fetchProposalRow(ref: BoundMsigRef) {
         json: true,
     })
     const row = result.rows[0]
-    if (!row) {
-        throw new Error(`msig ${ref.proposer}/${ref.proposal} not found on-chain`)
-    }
+    if (!row) return fetchProposalHistory(ref)
     const transaction = Transaction.from(
         PackedTransaction.from({
             packed_trx: row.packed_transaction,
@@ -180,5 +185,50 @@ export async function fetchProposalRow(ref: BoundMsigRef) {
             provided: approvalsResult.rows[0].provided_approvals?.length ?? 0,
         }
     }
-    return { transaction, approvals }
+    const expired = transaction.expiration.toMilliseconds() < Date.now()
+    const status: ProposalStatus = expired ? 'expired' : 'proposed'
+    return { transaction, approvals, status, trxId: undefined as string | undefined }
+}
+
+export type ProposalStatus = 'proposed' | 'executed' | 'cancelled' | 'expired'
+
+interface ProposalHistoryResponse {
+    status: ProposalStatus
+    transaction: TransactionType
+    requested_approvals?: unknown[]
+    provided_approvals?: unknown[]
+    executed_trx_id?: string | null
+    cancelled_trx_id?: string | null
+}
+
+// The msig history API (`@wharfkit/msigs`) keeps proposals that executed, or were cancelled, after the table drops them.
+async function fetchProposalHistory(ref: BoundMsigRef) {
+    let row: ProposalHistoryResponse
+    try {
+        row = await historyClient.call<ProposalHistoryResponse>({
+            path: '/v1/proposals/get_proposal',
+            params: { proposer: ref.proposer, proposal_name: ref.proposal },
+        })
+    } catch (error) {
+        const message = error instanceof Error ? error.message : String(error)
+        throw new Error(
+            `msig ${ref.proposer}/${ref.proposal} is not in the eosio.msig table, and the msig history API returned: ${message}`,
+        )
+    }
+    return {
+        transaction: Transaction.from(row.transaction),
+        approvals: {
+            requested: row.requested_approvals?.length ?? 0,
+            provided: row.provided_approvals?.length ?? 0,
+        },
+        status: row.status,
+        trxId:
+            (row.status === 'executed' ? row.executed_trx_id : row.cancelled_trx_id) ?? undefined,
+    }
+}
+
+export function expectedProposalStatus(status: string): ProposalStatus | undefined {
+    if (status === 'active') return 'proposed'
+    if (status === 'executed' || status === 'cancelled' || status === 'expired') return status
+    return undefined
 }

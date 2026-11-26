@@ -6,6 +6,8 @@ export const ROOT = new URL('..', import.meta.url).pathname
 
 export const NODEOS_API_URL = process.env.NODEOS_API_URL || 'https://vaulta.greymass.com'
 
+export const MSIG_HISTORY_API_URL = process.env.MSIG_HISTORY_API_URL || 'https://eos.greymass.com'
+
 export const SYSTEM_ACCOUNT = Name.from('eosio')
 
 // Deeper than the 21 in eosio.prods; approve rejects an approver that was not requested up front.

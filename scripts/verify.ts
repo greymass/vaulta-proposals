@@ -5,6 +5,7 @@ import { COMMIT_FLAG, declaredFlags, flagValues, resolveFlags } from '$lib/flags
 import {
     compareActions,
     createMsigModuleLoader,
+    expectedProposalStatus,
     fetchProposalRow,
     findMsigBuilder,
     isBoundMsigRef,
@@ -37,12 +38,6 @@ async function verifyMsigs(frontmatter: ProposalFrontmatter, slug: string): Prom
         const entry = index + 1
         if (!isBoundMsigRef(ref)) {
             console.log(`○ ${ref.title ?? 'planned entry'}: not yet proposed on-chain; skipping`)
-            continue
-        }
-        if (ref.status === 'cancelled' || ref.status === 'expired') {
-            console.log(
-                `○ ${ref.proposer}/${ref.proposal}: ${ref.status}, gone from chain; skipping`,
-            )
             continue
         }
         bound++
@@ -106,6 +101,15 @@ async function verifyMsigs(frontmatter: ProposalFrontmatter, slug: string): Prom
             continue
         }
         const mismatches = compareActions(local, onchain.transaction.actions)
+        const expected = expectedProposalStatus(ref.status)
+        if (onchain.status !== expected) {
+            mismatches.push(
+                `status: frontmatter ${ref.status} expects ${expected}, chain has ${onchain.status}`,
+            )
+        }
+        if (ref.status === 'executed' && onchain.trxId !== ref.txid) {
+            mismatches.push(`txid: frontmatter ${ref.txid} vs executed ${onchain.trxId}`)
+        }
         if (mismatches.length) {
             console.error(`✗ ${proposer}/${proposal}:`)
             for (const mismatch of mismatches) console.error(`    ${mismatch}`)
@@ -114,7 +118,9 @@ async function verifyMsigs(frontmatter: ProposalFrontmatter, slug: string): Prom
             const approvals = onchain.approvals
                 ? ` (approvals: ${onchain.approvals.provided}/${onchain.approvals.requested})`
                 : ''
-            console.log(`✓ ${proposer}/${proposal}: on-chain msig matches local code${approvals}`)
+            console.log(
+                `✓ ${proposer}/${proposal}: ${onchain.status} msig matches local code${approvals}`,
+            )
         }
     }
     if (bound === 0) {

@@ -2,6 +2,7 @@ import { APIClient, PermissionLevel } from '@wharfkit/antelope'
 import { Chains, Session } from '@wharfkit/session'
 import { WalletPluginPrivateKey } from '@wharfkit/wallet-plugin-privatekey'
 import {
+    MSIG_HISTORY_API_URL,
     NODEOS_API_URL,
     proposerKey,
     proposerPermission,
@@ -9,6 +10,8 @@ import {
 } from './constants'
 
 export const client = new APIClient({ url: NODEOS_API_URL })
+
+export const historyClient = new APIClient({ url: MSIG_HISTORY_API_URL })
 
 export const chain = Chains.Vaulta
 
