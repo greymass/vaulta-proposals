@@ -1,5 +1,5 @@
 {
-    "generated": "2026-11-26T19:51:30.820Z",
+    "generated": "2026-11-26T19:54:25.305Z",
     "proposals": [
         {
             "vp": "VP-0001",
@@ -355,7 +355,10 @@
                     "title": "Set max_inline_action_size to 1,048,576 bytes, leaving every other chain parameter at its value"
                 },
                 {
-                    "status": "planned",
+                    "status": "active",
+                    "proposer": "aaron",
+                    "proposal": "vp5setparam2",
+                    "commit": "19f2a547071ff0bfac2f0d7e4b365d4729f5777d",
                     "title": "Set max_inline_action_size to 1,048,576 bytes, leaving every other chain parameter at its value",
                     "supersedes": {
                         "proposer": "aaron",
@@ -367,7 +370,7 @@
             "requires": [],
             "slug": "vp-0005-inline-action-size",
             "path": "proposals/vp-0005-inline-action-size/proposal.md",
-            "updated": "2026-10-21",
+            "updated": "2026-11-26",
             "excerpt": "An msig can upgrade a contract only while its code stays under about 512 KB, half the size an account's own keys can deploy. This proposal raises that limit to 1 MB, so contracts that only governance can upgrade, such as the EOS EVM runtime, which sits 16,620 bytes below the current limit, can be upgraded at any size a key holder could deploy.",
             "translations": [
                 {

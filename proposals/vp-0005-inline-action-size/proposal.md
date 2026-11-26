@@ -15,7 +15,10 @@ msigs:
       proposal: vp5setparams
       commit: 718e51bd2fc1877faa57c1c973eff11d74e749eb
       title: Set max_inline_action_size to 1,048,576 bytes, leaving every other chain parameter at its value
-    - status: planned
+    - status: active
+      proposer: aaron
+      proposal: vp5setparam2
+      commit: 19f2a547071ff0bfac2f0d7e4b365d4729f5777d
       title: Set max_inline_action_size to 1,048,576 bytes, leaving every other chain parameter at its value
       supersedes:
           proposer: aaron
