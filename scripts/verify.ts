@@ -39,6 +39,12 @@ async function verifyMsigs(frontmatter: ProposalFrontmatter, slug: string): Prom
             console.log(`○ ${ref.title ?? 'planned entry'}: not yet proposed on-chain; skipping`)
             continue
         }
+        if (ref.status === 'cancelled' || ref.status === 'expired') {
+            console.log(
+                `○ ${ref.proposer}/${ref.proposal}: ${ref.status}, gone from chain; skipping`,
+            )
+            continue
+        }
         bound++
         const { proposer, proposal } = ref
         let module: MsigModule
